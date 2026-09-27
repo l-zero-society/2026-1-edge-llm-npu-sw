@@ -1,0 +1,133 @@
+{
+  "address_kind": "file offset",
+  "runtime_base_address": null,
+  "compiler_field": "quant_param_addr",
+  "weights": {
+    "model.layers.0.mlp.down_proj.weight": {
+      "module_name": "model.layers.0.mlp.down_proj",
+      "torch_export_parameter_symbol": "p_model_layers_0_mlp_down_proj_weight",
+      "parameter_file_offset": 0,
+      "size_bytes": 8192,
+      "valid_channels": 2048
+    },
+    "model.layers.1.mlp.down_proj.weight": {
+      "module_name": "model.layers.1.mlp.down_proj",
+      "torch_export_parameter_symbol": "p_model_layers_1_mlp_down_proj_weight",
+      "parameter_file_offset": 8192,
+      "size_bytes": 8192,
+      "valid_channels": 2048
+    },
+    "model.layers.10.mlp.down_proj.weight": {
+      "module_name": "model.layers.10.mlp.down_proj",
+      "torch_export_parameter_symbol": "p_model_layers_10_mlp_down_proj_weight",
+      "parameter_file_offset": 16384,
+      "size_bytes": 8192,
+      "valid_channels": 2048
+    },
+    "model.layers.11.mlp.down_proj.weight": {
+      "module_name": "model.layers.11.mlp.down_proj",
+      "torch_export_parameter_symbol": "p_model_layers_11_mlp_down_proj_weight",
+      "parameter_file_offset": 24576,
+      "size_bytes": 8192,
+      "valid_channels": 2048
+    },
+    "model.layers.12.mlp.down_proj.weight": {
+      "module_name": "model.layers.12.mlp.down_proj",
+      "torch_export_parameter_symbol": "p_model_layers_12_mlp_down_proj_weight",
+      "parameter_file_offset": 32768,
+      "size_bytes": 8192,
+      "valid_channels": 2048
+    },
+    "model.layers.13.mlp.down_proj.weight": {
+      "module_name": "model.layers.13.mlp.down_proj",
+      "torch_export_parameter_symbol": "p_model_layers_13_mlp_down_proj_weight",
+      "parameter_file_offset": 40960,
+      "size_bytes": 8192,
+      "valid_channels": 2048
+    },
+    "model.layers.14.mlp.down_proj.weight": {
+      "module_name": "model.layers.14.mlp.down_proj",
+      "torch_export_parameter_symbol": "p_model_layers_14_mlp_down_proj_weight",
+      "parameter_file_offset": 49152,
+      "size_bytes": 8192,
+      "valid_channels": 2048
+    },
+    "model.layers.15.mlp.down_proj.weight": {
+      "module_name": "model.layers.15.mlp.down_proj",
+      "torch_export_parameter_symbol": "p_model_layers_15_mlp_down_proj_weight",
+      "parameter_file_offset": 57344,
+      "size_bytes": 8192,
+      "valid_channels": 2048
+    },
+    "model.layers.16.mlp.down_proj.weight": {
+      "module_name": "model.layers.16.mlp.down_proj",
+      "torch_export_parameter_symbol": "p_model_layers_16_mlp_down_proj_weight",
+      "parameter_file_offset": 65536,
+      "size_bytes": 8192,
+      "valid_channels": 2048
+    },
+    "model.layers.17.mlp.down_proj.weight": {
+      "module_name": "model.layers.17.mlp.down_proj",
+      "torch_export_parameter_symbol": "p_model_layers_17_mlp_down_proj_weight",
+      "parameter_file_offset": 73728,
+      "size_bytes": 8192,
+      "valid_channels": 2048
+    },
+    "model.layers.2.mlp.down_proj.weight": {
+      "module_name": "model.layers.2.mlp.down_proj",
+      "torch_export_parameter_symbol": "p_model_layers_2_mlp_down_proj_weight",
+      "parameter_file_offset": 81920,
+      "size_bytes": 8192,
+      "valid_channels": 2048
+    },
+    "model.layers.3.mlp.down_proj.weight": {
+      "module_name": "model.layers.3.mlp.down_proj",
+      "torch_export_parameter_symbol": "p_model_layers_3_mlp_down_proj_weight",
+      "parameter_file_offset": 90112,
+      "size_bytes": 8192,
+      "valid_channels": 2048
+    },
+    "model.layers.4.mlp.down_proj.weight": {
+      "module_name": "model.layers.4.mlp.down_proj",
+      "torch_export_parameter_symbol": "p_model_layers_4_mlp_down_proj_weight",
+      "parameter_file_offset": 98304,
+      "size_bytes": 8192,
+      "valid_channels": 2048
+    },
+    "model.layers.5.mlp.down_proj.weight": {
+      "module_name": "model.layers.5.mlp.down_proj",
+      "torch_export_parameter_symbol": "p_model_layers_5_mlp_down_proj_weight",
+      "parameter_file_offset": 106496,
+      "size_bytes": 8192,
+      "valid_channels": 2048
+    },
+    "model.layers.6.mlp.down_proj.weight": {
+      "module_name": "model.layers.6.mlp.down_proj",
+      "torch_export_parameter_symbol": "p_model_layers_6_mlp_down_proj_weight",
+      "parameter_file_offset": 114688,
+      "size_bytes": 8192,
+      "valid_channels": 2048
+    },
+    "model.layers.7.mlp.down_proj.weight": {
+      "module_name": "model.layers.7.mlp.down_proj",
+      "torch_export_parameter_symbol": "p_model_layers_7_mlp_down_proj_weight",
+      "parameter_file_offset": 122880,
+      "size_bytes": 8192,
+      "valid_channels": 2048
+    },
+    "model.layers.8.mlp.down_proj.weight": {
+      "module_name": "model.layers.8.mlp.down_proj",
+      "torch_export_parameter_symbol": "p_model_layers_8_mlp_down_proj_weight",
+      "parameter_file_offset": 131072,
+      "size_bytes": 8192,
+      "valid_channels": 2048
+    },
+    "model.layers.9.mlp.down_proj.weight": {
+      "module_name": "model.layers.9.mlp.down_proj",
+      "torch_export_parameter_symbol": "p_model_layers_9_mlp_down_proj_weight",
+      "parameter_file_offset": 139264,
+      "size_bytes": 8192,
+      "valid_channels": 2048
+    }
+  }
+}

@@ -1,0 +1,240 @@
+{
+  "identity": {
+    "source_commit": "f31f9e6e52a65362acd473f27ed0bfc05097335f",
+    "source_hashes": {
+      "scripts/quant_diagnostic_math.py": "6675ce88c98c65e3c591971ef93d0d9bbbb22e5405c7f385fcc9a0dc3af3a0cc",
+      "scripts/quant_diagnostic_source.py": "6e1a93ec2987c2e03872ae7686621ef5b32e2690f9c5389c04a53c0d1aed9f7e",
+      "scripts/diagnose_linear_quant_error.py": "e7fcce80b3ddfb801197907e17039bc128935f4d58a07102d685762731a4136b"
+    },
+    "stored_manifest_sha256": "423c628975784166aa1141ff537c46831b4a399ff032e59335d62aa358e8fdf5",
+    "stored_run_sha256": "cec3255bb36dc3a0d638a840009b34c8fac4d2725e9cc513699288c463479c18",
+    "model_sha256": "dae8a0a75dda3553c06af737adfff0c003ed1b6393932964cce72bb4f0fd41f6",
+    "datasets": {
+      "calibration": "ee1e90fc6b70878574dbb6cfb3fe8c9bf214c4528cc87c7ff6431b4c6bbc6f9e",
+      "validation": "a47228ca6ef1a9023fcff60afe9007ee48e7ced0ab0a82373d949459a3850b40"
+    },
+    "integer_backend": "fp64-exact",
+    "m_chunk": 512,
+    "n_chunk": 512,
+    "threads": 2
+  },
+  "stored_source_commit": "a4a2a1ac26f3291aba1ca1933275598280afc060",
+  "stored_source_dirty": true,
+  "stored_code_sha256": {
+    "checkpoint.py": "3bbac4517c3f14c2460d86cb273d764981ce8bebeb12debfcdb9c649742ff2b6",
+    "gguf_source.py": "216d606b1ff44591cf8560a4c83857ebc380384ade528f54c1443c9eff98f187",
+    "policy.py": "b873d7499ad574340450c6ebdc50f254ddb1406e5c9073807142cb1baded5841",
+    "__init__.py": "5202c67993adf6346f64a6744cfe41c0869b39cab7ead7e8882c4b79c5aea784",
+    "core.py": "655f51a765763a674aa807064d62a48e54aa9f7c019545cc13c442124c11afc2",
+    "export.py": "418a28070b09561efc9207c5b63809f64d3d19bca716f1abaca1d17b4379da6c",
+    "full_run.py": "6520cf52ac196fe645fa2f389b625828cd0a8c65d48afbc5f268334116bf6344",
+    "compiler_adapter.py": "5f5e3c44309f6ee2b0b1ce11b89b6bcc2455b60b4933b38ea11eb718bea991fd",
+    "cli.py": "1d99cd471d8f1f36373c3ecf3dec241ec6a67ff8d20369178d955271cad0494d",
+    "hardware.py": "173a90ceb6742cfe8033e1473f556d8848aa99ce89882f1b9feb003ddfcca206",
+    "gemma.py": "05b465369e5a318919ca3983f8a6a5f9562eb683a437f7accddf3e48dfa5f0ef"
+  },
+  "stored_model": {
+    "file_name": "gemma-2b-it.Q8_0.gguf",
+    "size_bytes": 2669070080,
+    "sha256": "dae8a0a75dda3553c06af737adfff0c003ed1b6393932964cce72bb4f0fd41f6",
+    "architecture": "gemma",
+    "metadata": {
+      "general.architecture": "gemma",
+      "general.name": "models--google--gemma-2b-it",
+      "gemma.context_length": 8192,
+      "gemma.embedding_length": 2048,
+      "gemma.block_count": 18,
+      "gemma.feed_forward_length": 16384,
+      "gemma.attention.head_count": 8,
+      "gemma.attention.head_count_kv": 1,
+      "gemma.attention.layer_norm_rms_epsilon": 9.999999974752427e-07,
+      "gemma.attention.key_length": 256,
+      "gemma.attention.value_length": 256,
+      "general.file_type": 7,
+      "tokenizer.ggml.model": "llama",
+      "tokenizer.ggml.tokens": {
+        "entries": 256000
+      },
+      "tokenizer.ggml.scores": {
+        "entries": 256000
+      },
+      "tokenizer.ggml.token_type": {
+        "entries": 256000
+      },
+      "tokenizer.ggml.bos_token_id": 2,
+      "tokenizer.ggml.eos_token_id": 1,
+      "tokenizer.ggml.unknown_token_id": 3,
+      "tokenizer.ggml.padding_token_id": 0,
+      "tokenizer.ggml.add_bos_token": true,
+      "tokenizer.ggml.add_eos_token": false,
+      "tokenizer.chat_template": "{{ bos_token }}{% if messages[0]['role'] == 'system' %}{{ raise_exception('System role not supported') }}{% endif %}{% for message in messages %}{% if (message['role'] == 'user') != (loop.index0 % 2 == 0) %}{{ raise_exception('Conversation roles must alternate user/assistant/user/assistant/...') }}{% endif %}{% if (message['role'] == 'assistant') %}{% set role = 'model' %}{% else %}{% set role = message['role'] %}{% endif %}{{ '<start_of_turn>' + role + '\n' + message['content'] | trim + '<end_of_turn>\n' }}{% endfor %}{% if add_generation_prompt %}{{'<start_of_turn>model\n'}}{% endif %}",
+      "general.quantization_version": 2
+    },
+    "quantization_type_counts": {
+      "Q8_0": 127,
+      "F32": 37
+    },
+    "mapping_implementation": "original-gemma-gguf-v1",
+    "gguf_version": "0.17.1",
+    "transformers_version": "4.57.6",
+    "converter_source": "https://github.com/ggml-org/llama.cpp/blob/master/conversion/gemma.py",
+    "fp32_tensor_bytes": 10024689664
+  },
+  "stored_datasets": {
+    "calibration": {
+      "file_sha256": "ee1e90fc6b70878574dbb6cfb3fe8c9bf214c4528cc87c7ff6431b4c6bbc6f9e",
+      "selected_texts_sha256": "d7f16b18477ff274d633ce63b7202b96ed05956cd229c9f503658bbf61eb52c5",
+      "requested_samples": 128,
+      "actual_samples": 128,
+      "selection": "first nonempty records in file order",
+      "format": "JSONL text field",
+      "length_distribution": {
+        "min": 53,
+        "max": 512,
+        "mean": 267.3515625,
+        "p50": 221.5,
+        "p95": 512.0,
+        "shorter_than_limit": 99,
+        "at_limit": 29
+      },
+      "valid_tokens": 34221,
+      "token_ids_sha256": "709157b438ffeafa56b7654a98d6839f661357072d1a4a23c5c3c4596b640b13",
+      "preparation_manifest_sha256": "a2981ce5c68cc7edc1d850512dca76914b139e177bbfba8366b5bfbf2563e52f",
+      "preparation": {
+        "source": "OpenAssistant/oasst1",
+        "url": "https://huggingface.co/datasets/OpenAssistant/oasst1/resolve/fdf72ae0827c1cda404aff25b6603abec9e3399b/2023-04-12_oasst_all.messages.jsonl.gz",
+        "revision": "fdf72ae0827c1cda404aff25b6603abec9e3399b",
+        "license": "Apache-2.0",
+        "license_evidence": "SOURCE_README.md",
+        "source_archive_sha256": "2ff4aa8999c911ffec7972ddf70359f220b3da184b731f3649f68b1391e19341",
+        "seed": 42,
+        "split_method": "original message_tree_id SHA256(seed:tree) mod 5; entire tree held out; only one message/tree",
+        "duplicate_method": "casefold + whitespace normalization; globally distinct text and conversation tree",
+        "filters": "human only; not deleted; positive review; en/ko; at least 120 characters",
+        "category_method": "language metadata; code/technical regex heuristic; rest general",
+        "splits": {
+          "calibration": {
+            "samples": 128,
+            "sha256": "ee1e90fc6b70878574dbb6cfb3fe8c9bf214c4528cc87c7ff6431b4c6bbc6f9e",
+            "categories": {
+              "ko": 16,
+              "en_code": 16,
+              "en_technical": 32,
+              "en_general": 64
+            }
+          },
+          "validation": {
+            "samples": 32,
+            "sha256": "a47228ca6ef1a9023fcff60afe9007ee48e7ced0ab0a82373d949459a3850b40",
+            "categories": {
+              "ko": 4,
+              "en_code": 4,
+              "en_technical": 8,
+              "en_general": 16
+            }
+          }
+        }
+      }
+    },
+    "validation": {
+      "file_sha256": "a47228ca6ef1a9023fcff60afe9007ee48e7ced0ab0a82373d949459a3850b40",
+      "selected_texts_sha256": "37790509a69300db2d547fcbf84ffc167f35fd24fe93ce1083e5431ccdd42ad2",
+      "requested_samples": 32,
+      "actual_samples": 32,
+      "selection": "first nonempty records in file order",
+      "format": "JSONL text field",
+      "length_distribution": {
+        "min": 56,
+        "max": 512,
+        "mean": 316.90625,
+        "p50": 337.0,
+        "p95": 512.0,
+        "shorter_than_limit": 21,
+        "at_limit": 11
+      },
+      "valid_tokens": 10141,
+      "token_ids_sha256": "9f50bb0b0103923bc9d355f16f755e73f4056c274b7dc380b2a10761d5b83370",
+      "preparation_manifest_sha256": "a2981ce5c68cc7edc1d850512dca76914b139e177bbfba8366b5bfbf2563e52f",
+      "preparation": {
+        "source": "OpenAssistant/oasst1",
+        "url": "https://huggingface.co/datasets/OpenAssistant/oasst1/resolve/fdf72ae0827c1cda404aff25b6603abec9e3399b/2023-04-12_oasst_all.messages.jsonl.gz",
+        "revision": "fdf72ae0827c1cda404aff25b6603abec9e3399b",
+        "license": "Apache-2.0",
+        "license_evidence": "SOURCE_README.md",
+        "source_archive_sha256": "2ff4aa8999c911ffec7972ddf70359f220b3da184b731f3649f68b1391e19341",
+        "seed": 42,
+        "split_method": "original message_tree_id SHA256(seed:tree) mod 5; entire tree held out; only one message/tree",
+        "duplicate_method": "casefold + whitespace normalization; globally distinct text and conversation tree",
+        "filters": "human only; not deleted; positive review; en/ko; at least 120 characters",
+        "category_method": "language metadata; code/technical regex heuristic; rest general",
+        "splits": {
+          "calibration": {
+            "samples": 128,
+            "sha256": "ee1e90fc6b70878574dbb6cfb3fe8c9bf214c4528cc87c7ff6431b4c6bbc6f9e",
+            "categories": {
+              "ko": 16,
+              "en_code": 16,
+              "en_technical": 32,
+              "en_general": 64
+            }
+          },
+          "validation": {
+            "samples": 32,
+            "sha256": "a47228ca6ef1a9023fcff60afe9007ee48e7ced0ab0a82373d949459a3850b40",
+            "categories": {
+              "ko": 4,
+              "en_code": 4,
+              "en_technical": 8,
+              "en_general": 16
+            }
+          }
+        }
+      }
+    }
+  },
+  "profile": {
+    "name": "generic-rne",
+    "shift_correction": 0,
+    "rounding": "nearest_even",
+    "verification": "unverified",
+    "rtl_bit_exact": false,
+    "source": "src/static_quant/hardware.py; software definition only; no RTL found",
+    "historical_layout_source": "user request, unconfirmed design history",
+    "multiplier": "unsigned 16 bit",
+    "shift": "unsigned 5 bit",
+    "effective_shift": "max(shift - shift_correction, 0)",
+    "zero_point": "signed 8 bit, added AFTER rounded shift; exports use zero",
+    "product": "signed 48 bit exact; INT32 * UInt16 fits; no truncation or wrap",
+    "right_shift": "arithmetic (floor for negatives)",
+    "saturation": "signed INT10 [-512,511], after shift and zero point",
+    "lut_index": "10-bit two's complement: signed_q10 & 1023",
+    "layout": {
+      "zp": [
+        0,
+        7
+      ],
+      "shift": [
+        8,
+        12
+      ],
+      "reserved_zero": [
+        13,
+        15
+      ],
+      "multiplier": [
+        16,
+        31
+      ]
+    },
+    "endian": "little"
+  },
+  "gguf_source_error": "not measured: original checkpoint unavailable",
+  "percentile_method": "exact NumPy linear interpolation over all elements; calibration-only fitting",
+  "input_sweep_output_policy": "hold recorded s_10 fixed; recompute multiplier/shift for diagnostic s_X only",
+  "metrics": {
+    "actual_requant": "HW vs ideal INT10, real units; denominator ideal output energy",
+    "final_local_total": "HW vs same float X@W.T",
+    "all_counterfactual_nmse": "MSE / mean(reference squared)",
+    "requantization_only": "HW vs dequantized INT32, denominator pair energy"
+  }
+}

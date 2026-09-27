@@ -1,0 +1,151 @@
+{
+  "commit": "f31f9e6e52a65362acd473f27ed0bfc05097335f",
+  "model_sha256": "dae8a0a75dda3553c06af737adfff0c003ed1b6393932964cce72bb4f0fd41f6",
+  "manifest_sha256": "423c628975784166aa1141ff537c46831b4a399ff032e59335d62aa358e8fdf5",
+  "source_hashes": {
+    "src/static_quant/__init__.py": "5202c67993adf6346f64a6744cfe41c0869b39cab7ead7e8882c4b79c5aea784",
+    "src/static_quant/core.py": "e1c7f5b7466718b47f0a0f8d18be50b2a3a686f169b42bcb68e5f3355aadf135",
+    "src/static_quant/export.py": "66d869e19005b5d12c89f4fedf02da4d6885f08fc1fb5170b91734606f3b0ffc",
+    "src/static_quant/compiler_adapter.py": "5f5e3c44309f6ee2b0b1ce11b89b6bcc2455b60b4933b38ea11eb718bea991fd",
+    "src/static_quant/cli.py": "3ddc1309e4dbee1fa0c093a4f9e0c32d9af1b7cdaff179b9ef47d4619dd5cd80",
+    "src/static_quant/sampling.py": "6faa5e59efebb638c925096d11b755151801dc765945fe26971393c6cd3679ba",
+    "src/static_quant/hardware.py": "173a90ceb6742cfe8033e1473f556d8848aa99ce89882f1b9feb003ddfcca206",
+    "src/static_quant/search.py": "e73802159e024055dc1848dc25ca28a0b092396b516ac934664f04b9eaf22ba6",
+    "src/static_quant/gemma.py": "810a2da590ce0eacbe5a0830e93b4485bf4097f1438a64e6a26ac277cb9fa329",
+    "scripts/run_bos_aware_calibration.py": "573edc0ca5c8f3abcf912641970c08bcda7edc510a6160ea624a38911783b0c9",
+    "scripts/quant_diagnostic_math.py": "6c580b60896228e9304257871eb6f5a2c3ee3b6150328505753870cc7472e31c",
+    "scripts/quant_diagnostic_reduce.py": "4c47aec6f57cd908c978a3f7f74ebb23c49957f7ffcd19739ac2035da52a088d",
+    "scripts/quant_metric_reduce.c": "c2f0a4ace7311072bb4a26b2a0f5e582863a239d3616d74734d5fb441554ed24",
+    "scripts/quant_diagnostic_source.py": "6e1a93ec2987c2e03872ae7686621ef5b32e2690f9c5389c04a53c0d1aed9f7e"
+  },
+  "seed": 42,
+  "thresholds": "exact full calibration percentiles",
+  "row_counts": [
+    64,
+    128,
+    256
+  ],
+  "bos_quota": 16,
+  "early_quota": 16,
+  "early_limit": 8,
+  "objective": "population-weighted final output MSE",
+  "integer_backend": "bounded fp64-exact with NumPy INT64 oracle checks",
+  "datasets": {
+    "calibration": {
+      "file_sha256": "ee1e90fc6b70878574dbb6cfb3fe8c9bf214c4528cc87c7ff6431b4c6bbc6f9e",
+      "selected_texts_sha256": "d7f16b18477ff274d633ce63b7202b96ed05956cd229c9f503658bbf61eb52c5",
+      "requested_samples": 128,
+      "actual_samples": 128,
+      "selection": "first nonempty records in file order",
+      "format": "JSONL text field",
+      "length_distribution": {
+        "min": 53,
+        "max": 512,
+        "mean": 267.3515625,
+        "p50": 221.5,
+        "p95": 512.0,
+        "shorter_than_limit": 99,
+        "at_limit": 29
+      },
+      "valid_tokens": 34221,
+      "token_ids_sha256": "709157b438ffeafa56b7654a98d6839f661357072d1a4a23c5c3c4596b640b13",
+      "preparation_manifest_sha256": "a2981ce5c68cc7edc1d850512dca76914b139e177bbfba8366b5bfbf2563e52f",
+      "preparation": {
+        "source": "OpenAssistant/oasst1",
+        "url": "https://huggingface.co/datasets/OpenAssistant/oasst1/resolve/fdf72ae0827c1cda404aff25b6603abec9e3399b/2023-04-12_oasst_all.messages.jsonl.gz",
+        "revision": "fdf72ae0827c1cda404aff25b6603abec9e3399b",
+        "license": "Apache-2.0",
+        "license_evidence": "SOURCE_README.md",
+        "source_archive_sha256": "2ff4aa8999c911ffec7972ddf70359f220b3da184b731f3649f68b1391e19341",
+        "seed": 42,
+        "split_method": "original message_tree_id SHA256(seed:tree) mod 5; entire tree held out; only one message/tree",
+        "duplicate_method": "casefold + whitespace normalization; globally distinct text and conversation tree",
+        "filters": "human only; not deleted; positive review; en/ko; at least 120 characters",
+        "category_method": "language metadata; code/technical regex heuristic; rest general",
+        "splits": {
+          "calibration": {
+            "samples": 128,
+            "sha256": "ee1e90fc6b70878574dbb6cfb3fe8c9bf214c4528cc87c7ff6431b4c6bbc6f9e",
+            "categories": {
+              "ko": 16,
+              "en_code": 16,
+              "en_technical": 32,
+              "en_general": 64
+            }
+          },
+          "validation": {
+            "samples": 32,
+            "sha256": "a47228ca6ef1a9023fcff60afe9007ee48e7ced0ab0a82373d949459a3850b40",
+            "categories": {
+              "ko": 4,
+              "en_code": 4,
+              "en_technical": 8,
+              "en_general": 16
+            }
+          }
+        }
+      }
+    },
+    "validation": {
+      "file_sha256": "a47228ca6ef1a9023fcff60afe9007ee48e7ced0ab0a82373d949459a3850b40",
+      "selected_texts_sha256": "37790509a69300db2d547fcbf84ffc167f35fd24fe93ce1083e5431ccdd42ad2",
+      "requested_samples": 32,
+      "actual_samples": 32,
+      "selection": "first nonempty records in file order",
+      "format": "JSONL text field",
+      "length_distribution": {
+        "min": 56,
+        "max": 512,
+        "mean": 316.90625,
+        "p50": 337.0,
+        "p95": 512.0,
+        "shorter_than_limit": 21,
+        "at_limit": 11
+      },
+      "valid_tokens": 10141,
+      "token_ids_sha256": "9f50bb0b0103923bc9d355f16f755e73f4056c274b7dc380b2a10761d5b83370",
+      "preparation_manifest_sha256": "a2981ce5c68cc7edc1d850512dca76914b139e177bbfba8366b5bfbf2563e52f",
+      "preparation": {
+        "source": "OpenAssistant/oasst1",
+        "url": "https://huggingface.co/datasets/OpenAssistant/oasst1/resolve/fdf72ae0827c1cda404aff25b6603abec9e3399b/2023-04-12_oasst_all.messages.jsonl.gz",
+        "revision": "fdf72ae0827c1cda404aff25b6603abec9e3399b",
+        "license": "Apache-2.0",
+        "license_evidence": "SOURCE_README.md",
+        "source_archive_sha256": "2ff4aa8999c911ffec7972ddf70359f220b3da184b731f3649f68b1391e19341",
+        "seed": 42,
+        "split_method": "original message_tree_id SHA256(seed:tree) mod 5; entire tree held out; only one message/tree",
+        "duplicate_method": "casefold + whitespace normalization; globally distinct text and conversation tree",
+        "filters": "human only; not deleted; positive review; en/ko; at least 120 characters",
+        "category_method": "language metadata; code/technical regex heuristic; rest general",
+        "splits": {
+          "calibration": {
+            "samples": 128,
+            "sha256": "ee1e90fc6b70878574dbb6cfb3fe8c9bf214c4528cc87c7ff6431b4c6bbc6f9e",
+            "categories": {
+              "ko": 16,
+              "en_code": 16,
+              "en_technical": 32,
+              "en_general": 64
+            }
+          },
+          "validation": {
+            "samples": 32,
+            "sha256": "a47228ca6ef1a9023fcff60afe9007ee48e7ced0ab0a82373d949459a3850b40",
+            "categories": {
+              "ko": 4,
+              "en_code": 4,
+              "en_technical": 8,
+              "en_general": 16
+            }
+          }
+        }
+      }
+    }
+  },
+  "versions": {
+    "torch": "2.2.2",
+    "transformers": "4.57.6",
+    "numpy": "1.26.4",
+    "gguf": "0.17.1"
+  }
+}

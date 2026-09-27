@@ -43,14 +43,15 @@ class Reservoir:
 
 
 class InputStats:
-    def __init__(self, seed=0, percentile=None, capacity=65536):
+    def __init__(self, seed=0, percentile=None, capacity=65536, search_percentiles=()):
         if percentile is not None and not 0 < percentile <= 100:
             raise ValueError('percentile must be in (0,100]')
         self.percentile = percentile
-        self.sample = Reservoir(capacity, seed) if percentile is not None else None
+        self.search_percentiles = tuple(search_percentiles)
+        self.sample = Reservoir(capacity, seed) if percentile is not None or search_percentiles else None
         self.absmax, self.tokens = 0.0, 0
 
-    def add(self, x):
+    def add(self, x, positions=None):
         x = finite(x, 'Pass A input')
         if not len(x):
             return
@@ -62,15 +63,22 @@ class InputStats:
     def scale(self):
         if not self.tokens:
             raise ValueError('No valid calibration tokens')
-        threshold = self.absmax if self.sample is None else float(np.percentile(self.sample.values, self.percentile))
+        threshold = self.absmax if self.percentile is None else float(np.percentile(self.sample.values, self.percentile))
         return threshold / 127 if threshold > 0 else (self.absmax / 127 if self.absmax > 0 else 1.0)
 
     def metadata(self):
-        return dict(method='absmax' if self.sample is None else 'sampled_percentile',
+        return dict(method='absmax' if self.percentile is None else 'sampled_percentile',
+                    search_percentiles=list(self.search_percentiles),
+                    candidate_estimator='bounded uniform scalar reservoir; linear percentile interpolation' if self.search_percentiles else None,
                     percentile=self.percentile, absmax=self.absmax, valid_tokens=self.tokens,
                     s_X=self.scale(), all_zero=self.absmax == 0,
                     zero_scale_policy='all zero -> 1; zero percentile on nonzero tensor -> absmax/127',
                     sampling=None if self.sample is None else self.sample.metadata())
+
+    def candidates(self):
+        from .search import activation_candidates
+        return activation_candidates(self.absmax, None if self.sample is None else self.sample.values,
+                                     self.search_percentiles)
 
 
 def quantize_input(x, sx):
@@ -116,12 +124,18 @@ class Options:
     fixed_lut_scale: float = None
     thresholds: tuple = (1.0, 0.95, 0.9, 0.8, 0.7, 0.5)
     ratio_tolerance: float = 1e-3
+    bos_search_rows: int = 16
+    early_search_rows: int = 16
+    early_position_limit: int = 8
+    representative_sampling: bool = True
 
     def __post_init__(self):
         if not np.isfinite(self.ratio_tolerance) or self.ratio_tolerance < 0:
             raise ValueError('ratio tolerance must be finite and nonnegative')
         if min(self.m_chunk, self.n_chunk, self.k_chunk, self.search_rows) < 1:
             raise ValueError('chunk sizes and search rows must be positive')
+        if min(self.bos_search_rows, self.early_search_rows, self.early_position_limit) < 0:
+            raise ValueError('sampling quotas and position limit must be nonnegative')
         if self.mode not in ('fixed', 'minmax', 'mse'):
             raise ValueError('mode must be fixed, minmax or mse')
         if self.mode == 'fixed':
@@ -165,7 +179,7 @@ class LinearCalibration:
     Only one operation is calibrated at a time. W storage may stay on the model's
     device; no full float or quantized copy is necessary, including for lm_head.
     """
-    def __init__(self, name, shape, read_weight, sx, profile, options):
+    def __init__(self, name, shape, read_weight, sx, profile, options, activation_thresholds=None):
         self.name, self.n, self.k = name, int(shape[0]), int(shape[1])
         self.read_weight, self.sx, self.profile, self.options = read_weight, positive_scale(sx, 's_X'), profile, options
         self.sw = np.empty(self.n)
@@ -178,7 +192,12 @@ class LinearCalibration:
             w = self.weight(sl)
             _, self.sw[sl] = quantize_weight(w)
             self.zero_channels.extend((np.flatnonzero(np.all(w == 0, axis=1)) + sl.start).tolist())
-        self.sample = Reservoir(options.search_rows, options.seed)
+        from .sampling import RepresentativeRowSampler
+        self.sample = RepresentativeRowSampler(options.search_rows, options.seed,
+            options.bos_search_rows, options.early_search_rows, options.early_position_limit,
+            options.representative_sampling)
+        self.activation_thresholds = activation_thresholds or [dict(method='supplied', percentile=None,
+                                                                     threshold=127*self.sx, s_X=self.sx)]
         self.peaks = np.zeros(self.n)
         self.tokens = 0
         self.params, self.s10 = None, None
@@ -215,11 +234,11 @@ class LinearCalibration:
                 target = xb @ w.T if original else None  # FP64 local float reference, NOT integer reference
                 yield sl, acc, target
 
-    def observe(self, x):
+    def observe(self, x, positions=None):
         if not len(x):
             return
         self.tokens += len(x)
-        self.sample.add(x)
+        self.sample.add(x, positions)
         for sl, acc, _ in self.blocks(x):
             real = acc * (self.sx*self.sw[sl])
             self.peaks[sl] = np.maximum(self.peaks[sl], np.abs(real).max(axis=0))
@@ -229,24 +248,10 @@ class LinearCalibration:
             raise ValueError(f'{self.name}: no valid tokens in Pass B')
         o = self.options
         baseline = float(self.peaks.max()/511) if self.peaks.max() else 1.0
-        scales = [o.s10] if o.mode == 'fixed' else [baseline]
-        if o.mode == 'mse':
-            scales = sorted(set([baseline] + [baseline*t for t in o.thresholds]), reverse=True)
-        parameters = [self.profile.approximate(self.sx*self.sw/s, o.ratio_tolerance) for s in scales]
-        scores = np.zeros(len(scales))
-        count = 0
-        for sl, acc, _ in self.blocks(self.sample.values):
-            target = acc * (self.sx*self.sw[sl])
-            count += acc.size
-            for i, (s, p) in enumerate(zip(scales, parameters)):
-                q = self.profile.apply(acc, p['multiplier'][sl], p['shift'][sl])
-                scores[i] += np.square(q*s-target).sum()
-        index = int(scores.argmin())
-        self.s10, self.params = float(scales[index]), parameters[index]
-        check_lut_scale(self.s10, o.fixed_lut_scale)
-        self.selection = dict(mode=o.mode, minmax_baseline=baseline, objective='profile output vs dequantized INT32',
-                              candidates=[dict(s10=float(s), mse=float(score/count)) for s, score in zip(scales, scores)],
-                              sampling=self.sample.metadata())
+        from .search import joint_scale_search
+        self.sx, self.s10, self.params, self.selection = joint_scale_search(
+            self.read_weight, (self.n, self.k), self.sw, self.sample,
+            self.activation_thresholds, baseline, self.profile, o)
         return self.params
 
     def evaluate(self, replay):
@@ -255,20 +260,40 @@ class LinearCalibration:
         ideal_clipped = np.zeros(self.n, dtype=np.int64)
         tokens, input_clipped, input_elements = 0, 0, 0
         vectors = []
-        def observe(x):
-            nonlocal tokens, input_clipped, input_elements
+        group_sums = {name: [0., 0., 0] for name in ('bos', 'non_bos', 'early', 'general', 'all')}
+        input_zero = 0
+        def observe(x, positions=None):
+            nonlocal tokens, input_clipped, input_elements, input_zero
             if not len(x):
                 return
             tokens += len(x)
             input_clipped += int(np.count_nonzero(np.abs(x/self.sx) > 127))
             input_elements += x.size
+            input_zero += int((quantize_input(x, self.sx) == 0).sum())
+            pos = np.full(len(x), -1) if positions is None else np.asarray(positions)
+            if pos.shape != (len(x),) or (positions is not None and (pos.dtype.kind not in 'iu' or np.any(pos < -1))):
+                raise ValueError('one integer position per evaluation row required')
+            masks = dict(bos=pos == 0, non_bos=pos != 0,
+                         early=(pos > 0) & (pos <= self.options.early_position_limit),
+                         general=(pos > self.options.early_position_limit) | (pos < 0), all=np.ones(len(x), bool))
+            # blocks iterate channels, then M chunks; track the row offset per channel slice.
+            previous_channel, row_start = None, 0
             for sl, acc, original in self.blocks(x, original=True):
+                if sl.start != previous_channel:
+                    previous_channel, row_start = sl.start, 0
                 p = self.params
                 raw = self.profile.apply(acc, p['multiplier'][sl], p['shift'][sl], saturate=False)
                 hw = np.clip(raw, -512, 511).astype(np.int16)
                 ref = ideal(acc, p['ratio'][sl])
                 metrics['requantization'].add(sl, hw*self.s10 - acc*(self.sx*self.sw[sl]))
                 metrics['local_total'].add(sl, hw*self.s10 - original)
+                for group, mask in masks.items():
+                    selected = mask[row_start:row_start+len(acc)]
+                    error = (hw*self.s10-original)[selected]
+                    group_sums[group][0] += float(np.square(error).sum())
+                    group_sums[group][1] += float(np.square(original[selected]).sum())
+                    group_sums[group][2] += error.size
+                row_start += len(acc)
                 metrics['parameter_approximation'].add(sl, hw.astype(np.float64)-ref)
                 clipped[sl] += ((raw < -512) | (raw > 511)).sum(axis=0)
                 rounded_ideal = np.rint(acc*p['ratio'][sl])
@@ -282,6 +307,9 @@ class LinearCalibration:
                                                 expected_int10=int(hw[row,col]), lut_index=int(hw[row,col]) & 1023))
         replay(observe)
         result = {key: value.report() for key, value in metrics.items()}
+        error, energy, count = group_sums['all']
+        result['local_total']['nmse'] = error/energy if energy else (0. if not error else None)
+        result['local_total']['reference_energy'] = energy/count
         result.update(valid_tokens=tokens, int32_overflow=False,
                       overflow_check='INT64 partial sums; for large K conservative absolute-product prefix bound',
                       clipping=dict(definition='rounded result before INT10 saturation outside [-512,511]',
@@ -290,6 +318,10 @@ class LinearCalibration:
                                     ideal_overall=float(ideal_clipped.sum()/(tokens*self.n)),
                                     ideal_per_channel=(ideal_clipped/tokens).tolist()),
                       input_int8_clipping=float(input_clipped/input_elements),
+                      input_int8_zero_rate=float(input_zero/input_elements),
+                      position_metrics={g: dict(mse=e/c if c else None,
+                          nmse=e/v if v else (0. if c and not e else None), output_elements=c)
+                          for g, (e, v, c) in group_sums.items()},
                       worst_channels=np.argsort(-np.asarray(result['local_total']['channel_mse']), kind='stable')[:10].tolist())
         return result, vectors
 

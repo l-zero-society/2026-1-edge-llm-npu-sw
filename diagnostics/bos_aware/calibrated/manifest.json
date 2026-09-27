@@ -1,0 +1,1644 @@
+{
+  "schema_version": 1,
+  "model": "gemma-2b-it.Q8_0.gguf",
+  "source_format": "reconstructed Q8_0 GGUF",
+  "datasets": {
+    "calibration": {
+      "file_sha256": "ee1e90fc6b70878574dbb6cfb3fe8c9bf214c4528cc87c7ff6431b4c6bbc6f9e",
+      "selected_texts_sha256": "d7f16b18477ff274d633ce63b7202b96ed05956cd229c9f503658bbf61eb52c5",
+      "requested_samples": 128,
+      "actual_samples": 128,
+      "selection": "first nonempty records in file order",
+      "format": "JSONL text field",
+      "length_distribution": {
+        "min": 53,
+        "max": 512,
+        "mean": 267.3515625,
+        "p50": 221.5,
+        "p95": 512.0,
+        "shorter_than_limit": 99,
+        "at_limit": 29
+      },
+      "valid_tokens": 34221,
+      "token_ids_sha256": "709157b438ffeafa56b7654a98d6839f661357072d1a4a23c5c3c4596b640b13",
+      "preparation_manifest_sha256": "a2981ce5c68cc7edc1d850512dca76914b139e177bbfba8366b5bfbf2563e52f",
+      "preparation": {
+        "source": "OpenAssistant/oasst1",
+        "url": "https://huggingface.co/datasets/OpenAssistant/oasst1/resolve/fdf72ae0827c1cda404aff25b6603abec9e3399b/2023-04-12_oasst_all.messages.jsonl.gz",
+        "revision": "fdf72ae0827c1cda404aff25b6603abec9e3399b",
+        "license": "Apache-2.0",
+        "license_evidence": "SOURCE_README.md",
+        "source_archive_sha256": "2ff4aa8999c911ffec7972ddf70359f220b3da184b731f3649f68b1391e19341",
+        "seed": 42,
+        "split_method": "original message_tree_id SHA256(seed:tree) mod 5; entire tree held out; only one message/tree",
+        "duplicate_method": "casefold + whitespace normalization; globally distinct text and conversation tree",
+        "filters": "human only; not deleted; positive review; en/ko; at least 120 characters",
+        "category_method": "language metadata; code/technical regex heuristic; rest general",
+        "splits": {
+          "calibration": {
+            "samples": 128,
+            "sha256": "ee1e90fc6b70878574dbb6cfb3fe8c9bf214c4528cc87c7ff6431b4c6bbc6f9e",
+            "categories": {
+              "ko": 16,
+              "en_code": 16,
+              "en_technical": 32,
+              "en_general": 64
+            }
+          },
+          "validation": {
+            "samples": 32,
+            "sha256": "a47228ca6ef1a9023fcff60afe9007ee48e7ced0ab0a82373d949459a3850b40",
+            "categories": {
+              "ko": 4,
+              "en_code": 4,
+              "en_technical": 8,
+              "en_general": 16
+            }
+          }
+        }
+      }
+    },
+    "validation": {
+      "file_sha256": "a47228ca6ef1a9023fcff60afe9007ee48e7ced0ab0a82373d949459a3850b40",
+      "selected_texts_sha256": "37790509a69300db2d547fcbf84ffc167f35fd24fe93ce1083e5431ccdd42ad2",
+      "requested_samples": 32,
+      "actual_samples": 32,
+      "selection": "first nonempty records in file order",
+      "format": "JSONL text field",
+      "length_distribution": {
+        "min": 56,
+        "max": 512,
+        "mean": 316.90625,
+        "p50": 337.0,
+        "p95": 512.0,
+        "shorter_than_limit": 21,
+        "at_limit": 11
+      },
+      "valid_tokens": 10141,
+      "token_ids_sha256": "9f50bb0b0103923bc9d355f16f755e73f4056c274b7dc380b2a10761d5b83370",
+      "preparation_manifest_sha256": "a2981ce5c68cc7edc1d850512dca76914b139e177bbfba8366b5bfbf2563e52f",
+      "preparation": {
+        "source": "OpenAssistant/oasst1",
+        "url": "https://huggingface.co/datasets/OpenAssistant/oasst1/resolve/fdf72ae0827c1cda404aff25b6603abec9e3399b/2023-04-12_oasst_all.messages.jsonl.gz",
+        "revision": "fdf72ae0827c1cda404aff25b6603abec9e3399b",
+        "license": "Apache-2.0",
+        "license_evidence": "SOURCE_README.md",
+        "source_archive_sha256": "2ff4aa8999c911ffec7972ddf70359f220b3da184b731f3649f68b1391e19341",
+        "seed": 42,
+        "split_method": "original message_tree_id SHA256(seed:tree) mod 5; entire tree held out; only one message/tree",
+        "duplicate_method": "casefold + whitespace normalization; globally distinct text and conversation tree",
+        "filters": "human only; not deleted; positive review; en/ko; at least 120 characters",
+        "category_method": "language metadata; code/technical regex heuristic; rest general",
+        "splits": {
+          "calibration": {
+            "samples": 128,
+            "sha256": "ee1e90fc6b70878574dbb6cfb3fe8c9bf214c4528cc87c7ff6431b4c6bbc6f9e",
+            "categories": {
+              "ko": 16,
+              "en_code": 16,
+              "en_technical": 32,
+              "en_general": 64
+            }
+          },
+          "validation": {
+            "samples": 32,
+            "sha256": "a47228ca6ef1a9023fcff60afe9007ee48e7ced0ab0a82373d949459a3850b40",
+            "categories": {
+              "ko": 4,
+              "en_code": 4,
+              "en_technical": 8,
+              "en_general": 16
+            }
+          }
+        }
+      }
+    }
+  },
+  "source_commit": "f31f9e6e52a65362acd473f27ed0bfc05097335f",
+  "source_tree_dirty": true,
+  "calibration_policy": "stratified_64",
+  "diagnostic_provenance": {
+    "commit": "f31f9e6e52a65362acd473f27ed0bfc05097335f",
+    "model_sha256": "dae8a0a75dda3553c06af737adfff0c003ed1b6393932964cce72bb4f0fd41f6",
+    "manifest_sha256": "423c628975784166aa1141ff537c46831b4a399ff032e59335d62aa358e8fdf5",
+    "source_hashes": {
+      "src/static_quant/__init__.py": "5202c67993adf6346f64a6744cfe41c0869b39cab7ead7e8882c4b79c5aea784",
+      "src/static_quant/core.py": "e1c7f5b7466718b47f0a0f8d18be50b2a3a686f169b42bcb68e5f3355aadf135",
+      "src/static_quant/export.py": "66d869e19005b5d12c89f4fedf02da4d6885f08fc1fb5170b91734606f3b0ffc",
+      "src/static_quant/compiler_adapter.py": "5f5e3c44309f6ee2b0b1ce11b89b6bcc2455b60b4933b38ea11eb718bea991fd",
+      "src/static_quant/cli.py": "3ddc1309e4dbee1fa0c093a4f9e0c32d9af1b7cdaff179b9ef47d4619dd5cd80",
+      "src/static_quant/sampling.py": "6faa5e59efebb638c925096d11b755151801dc765945fe26971393c6cd3679ba",
+      "src/static_quant/hardware.py": "173a90ceb6742cfe8033e1473f556d8848aa99ce89882f1b9feb003ddfcca206",
+      "src/static_quant/search.py": "e73802159e024055dc1848dc25ca28a0b092396b516ac934664f04b9eaf22ba6",
+      "src/static_quant/gemma.py": "810a2da590ce0eacbe5a0830e93b4485bf4097f1438a64e6a26ac277cb9fa329",
+      "scripts/run_bos_aware_calibration.py": "573edc0ca5c8f3abcf912641970c08bcda7edc510a6160ea624a38911783b0c9",
+      "scripts/quant_diagnostic_math.py": "6c580b60896228e9304257871eb6f5a2c3ee3b6150328505753870cc7472e31c",
+      "scripts/quant_diagnostic_reduce.py": "4c47aec6f57cd908c978a3f7f74ebb23c49957f7ffcd19739ac2035da52a088d",
+      "scripts/quant_metric_reduce.c": "c2f0a4ace7311072bb4a26b2a0f5e582863a239d3616d74734d5fb441554ed24",
+      "scripts/quant_diagnostic_source.py": "6e1a93ec2987c2e03872ae7686621ef5b32e2690f9c5389c04a53c0d1aed9f7e"
+    },
+    "seed": 42,
+    "thresholds": "exact full calibration percentiles",
+    "row_counts": [
+      64,
+      128,
+      256
+    ],
+    "bos_quota": 16,
+    "early_quota": 16,
+    "early_limit": 8,
+    "objective": "population-weighted final output MSE",
+    "integer_backend": "bounded fp64-exact with NumPy INT64 oracle checks",
+    "datasets": {
+      "calibration": {
+        "file_sha256": "ee1e90fc6b70878574dbb6cfb3fe8c9bf214c4528cc87c7ff6431b4c6bbc6f9e",
+        "selected_texts_sha256": "d7f16b18477ff274d633ce63b7202b96ed05956cd229c9f503658bbf61eb52c5",
+        "requested_samples": 128,
+        "actual_samples": 128,
+        "selection": "first nonempty records in file order",
+        "format": "JSONL text field",
+        "length_distribution": {
+          "min": 53,
+          "max": 512,
+          "mean": 267.3515625,
+          "p50": 221.5,
+          "p95": 512.0,
+          "shorter_than_limit": 99,
+          "at_limit": 29
+        },
+        "valid_tokens": 34221,
+        "token_ids_sha256": "709157b438ffeafa56b7654a98d6839f661357072d1a4a23c5c3c4596b640b13",
+        "preparation_manifest_sha256": "a2981ce5c68cc7edc1d850512dca76914b139e177bbfba8366b5bfbf2563e52f",
+        "preparation": {
+          "source": "OpenAssistant/oasst1",
+          "url": "https://huggingface.co/datasets/OpenAssistant/oasst1/resolve/fdf72ae0827c1cda404aff25b6603abec9e3399b/2023-04-12_oasst_all.messages.jsonl.gz",
+          "revision": "fdf72ae0827c1cda404aff25b6603abec9e3399b",
+          "license": "Apache-2.0",
+          "license_evidence": "SOURCE_README.md",
+          "source_archive_sha256": "2ff4aa8999c911ffec7972ddf70359f220b3da184b731f3649f68b1391e19341",
+          "seed": 42,
+          "split_method": "original message_tree_id SHA256(seed:tree) mod 5; entire tree held out; only one message/tree",
+          "duplicate_method": "casefold + whitespace normalization; globally distinct text and conversation tree",
+          "filters": "human only; not deleted; positive review; en/ko; at least 120 characters",
+          "category_method": "language metadata; code/technical regex heuristic; rest general",
+          "splits": {
+            "calibration": {
+              "samples": 128,
+              "sha256": "ee1e90fc6b70878574dbb6cfb3fe8c9bf214c4528cc87c7ff6431b4c6bbc6f9e",
+              "categories": {
+                "ko": 16,
+                "en_code": 16,
+                "en_technical": 32,
+                "en_general": 64
+              }
+            },
+            "validation": {
+              "samples": 32,
+              "sha256": "a47228ca6ef1a9023fcff60afe9007ee48e7ced0ab0a82373d949459a3850b40",
+              "categories": {
+                "ko": 4,
+                "en_code": 4,
+                "en_technical": 8,
+                "en_general": 16
+              }
+            }
+          }
+        }
+      },
+      "validation": {
+        "file_sha256": "a47228ca6ef1a9023fcff60afe9007ee48e7ced0ab0a82373d949459a3850b40",
+        "selected_texts_sha256": "37790509a69300db2d547fcbf84ffc167f35fd24fe93ce1083e5431ccdd42ad2",
+        "requested_samples": 32,
+        "actual_samples": 32,
+        "selection": "first nonempty records in file order",
+        "format": "JSONL text field",
+        "length_distribution": {
+          "min": 56,
+          "max": 512,
+          "mean": 316.90625,
+          "p50": 337.0,
+          "p95": 512.0,
+          "shorter_than_limit": 21,
+          "at_limit": 11
+        },
+        "valid_tokens": 10141,
+        "token_ids_sha256": "9f50bb0b0103923bc9d355f16f755e73f4056c274b7dc380b2a10761d5b83370",
+        "preparation_manifest_sha256": "a2981ce5c68cc7edc1d850512dca76914b139e177bbfba8366b5bfbf2563e52f",
+        "preparation": {
+          "source": "OpenAssistant/oasst1",
+          "url": "https://huggingface.co/datasets/OpenAssistant/oasst1/resolve/fdf72ae0827c1cda404aff25b6603abec9e3399b/2023-04-12_oasst_all.messages.jsonl.gz",
+          "revision": "fdf72ae0827c1cda404aff25b6603abec9e3399b",
+          "license": "Apache-2.0",
+          "license_evidence": "SOURCE_README.md",
+          "source_archive_sha256": "2ff4aa8999c911ffec7972ddf70359f220b3da184b731f3649f68b1391e19341",
+          "seed": 42,
+          "split_method": "original message_tree_id SHA256(seed:tree) mod 5; entire tree held out; only one message/tree",
+          "duplicate_method": "casefold + whitespace normalization; globally distinct text and conversation tree",
+          "filters": "human only; not deleted; positive review; en/ko; at least 120 characters",
+          "category_method": "language metadata; code/technical regex heuristic; rest general",
+          "splits": {
+            "calibration": {
+              "samples": 128,
+              "sha256": "ee1e90fc6b70878574dbb6cfb3fe8c9bf214c4528cc87c7ff6431b4c6bbc6f9e",
+              "categories": {
+                "ko": 16,
+                "en_code": 16,
+                "en_technical": 32,
+                "en_general": 64
+              }
+            },
+            "validation": {
+              "samples": 32,
+              "sha256": "a47228ca6ef1a9023fcff60afe9007ee48e7ced0ab0a82373d949459a3850b40",
+              "categories": {
+                "ko": 4,
+                "en_code": 4,
+                "en_technical": 8,
+                "en_general": 16
+              }
+            }
+          }
+        }
+      }
+    },
+    "versions": {
+      "torch": "2.2.2",
+      "transformers": "4.57.6",
+      "numpy": "1.26.4",
+      "gguf": "0.17.1"
+    }
+  },
+  "gguf_source_error": "not measured",
+  "selection_split": "calibration",
+  "hardware_profile": {
+    "name": "generic-rne",
+    "shift_correction": 0,
+    "rounding": "nearest_even",
+    "verification": "unverified",
+    "rtl_bit_exact": false,
+    "source": "src/static_quant/hardware.py; software definition only; no RTL found",
+    "historical_layout_source": "user request, unconfirmed design history",
+    "multiplier": "unsigned 16 bit",
+    "shift": "unsigned 5 bit",
+    "effective_shift": "max(shift - shift_correction, 0)",
+    "zero_point": "signed 8 bit, added AFTER rounded shift; exports use zero",
+    "product": "signed 48 bit exact; INT32 * UInt16 fits; no truncation or wrap",
+    "right_shift": "arithmetic (floor for negatives)",
+    "saturation": "signed INT10 [-512,511], after shift and zero point",
+    "lut_index": "10-bit two's complement: signed_q10 & 1023",
+    "layout": {
+      "zp": [
+        0,
+        7
+      ],
+      "shift": [
+        8,
+        12
+      ],
+      "reserved_zero": [
+        13,
+        15
+      ],
+      "multiplier": [
+        16,
+        31
+      ]
+    },
+    "endian": "little"
+  },
+  "axes": {
+    "X": "[M,K]",
+    "W": "[N,K]",
+    "Y": "[M,N]",
+    "channel_axis_W": 0,
+    "channel_axis_Y": 1
+  },
+  "calibration_scope": "prefill-only, original model inputs, local Linear error",
+  "excluded": [
+    "attention QK^T / PV activation matmuls",
+    "decode calibration",
+    "propagated full-model quantization",
+    "perplexity",
+    "RTL equivalence"
+  ],
+  "parameter_storage": {
+    "bytes_per_channel": 4,
+    "qb_channels": 16,
+    "alignment_bytes": 64,
+    "endian": "little",
+    "padding_word": 0,
+    "order": "output channel ascending",
+    "address_kind": "file offset, NOT runtime physical address",
+    "repeated_over_M": false,
+    "repeated_over_K": false
+  },
+  "modules": [
+    {
+      "key": "op0000",
+      "module_name": "model.layers.0.mlp.down_proj",
+      "weight_name": "model.layers.0.mlp.down_proj.weight",
+      "torch_export_parameter_symbol": "p_model_layers_0_mlp_down_proj_weight",
+      "shape": {
+        "M": 34221,
+        "K": 16384,
+        "N": 2048
+      },
+      "M_semantics": "sum of valid calibration tokens, not a parameter axis",
+      "scale_keys": {
+        "s_X": "op0000.s_X",
+        "s_10": "op0000.s_10",
+        "s_W": "op0000.s_W"
+      },
+      "s_X": 0.3282365401739341,
+      "s_10": 0.03950863180028707,
+      "input_group": "model.layers.0.mlp.down_proj.input",
+      "parameter_file_offset": 0,
+      "parameter_size_bytes": 8192,
+      "valid_parameter_bytes": 8192,
+      "valid_channels": 2048,
+      "padded_channels": 0,
+      "final_block_valid_channels": 16,
+      "alignment_bytes": 64,
+      "padding_word": 0,
+      "lut": {
+        "input_scale": 0.03950863180028707,
+        "signed_index_encoding": "10-bit two's complement",
+        "reused_lut_input_scale": null,
+        "existing_gelu_index_scale_compatible": false,
+        "requires_scale_matched_lut": true,
+        "end_to_end_signed_int8_compatible": false,
+        "limitation": "src/LUT.py clips GeLU output to unsigned [0,255]; no signed INT8 contract"
+      },
+      "scale_search": {
+        "file": "scale_search.json",
+        "selected": {
+          "method": "p99.99",
+          "percentile": 99.99,
+          "threshold": 41.68604060208963,
+          "requested_threshold": 41.68604060208963,
+          "zero_percentile_fallback": false,
+          "s_X": 0.3282365401739341,
+          "s10": 0.03950863180028707,
+          "s_10": 0.03950863180028707,
+          "mse": 0.06534432606327341,
+          "activation_clip_rate": 8.959544610351535e-05,
+          "activation_zero_rate": 0.6729633460272404,
+          "int10_clip_rate": 0.0,
+          "bad_ratio_channels": 0,
+          "max_ratio_relative_error": 1.4710392408125748e-05,
+          "bos_mse": 0.006737936105541922,
+          "bos_nmse": 0.05704308452556763,
+          "non_bos_mse": 0.06556436002668495,
+          "non_bos_nmse": 0.025902846633680365,
+          "early_mse": 0.09025247971641712,
+          "early_nmse": 0.031266027741803704,
+          "general_mse": 0.06479987865251925,
+          "general_nmse": 0.02571262495315195,
+          "all_mse": 0.06534432606327341,
+          "all_nmse": 0.025908301626052954
+        },
+        "sampling": {
+          "retained": 64,
+          "bos_rows": 16,
+          "early_rows": 16,
+          "general_rows": 32
+        }
+      }
+    },
+    {
+      "key": "op0001",
+      "module_name": "model.layers.1.mlp.down_proj",
+      "weight_name": "model.layers.1.mlp.down_proj.weight",
+      "torch_export_parameter_symbol": "p_model_layers_1_mlp_down_proj_weight",
+      "shape": {
+        "M": 34221,
+        "K": 16384,
+        "N": 2048
+      },
+      "M_semantics": "sum of valid calibration tokens, not a parameter axis",
+      "scale_keys": {
+        "s_X": "op0001.s_X",
+        "s_10": "op0001.s_10",
+        "s_W": "op0001.s_W"
+      },
+      "s_X": 0.10382454303004575,
+      "s_10": 0.013115626278312096,
+      "input_group": "model.layers.1.mlp.down_proj.input",
+      "parameter_file_offset": 8192,
+      "parameter_size_bytes": 8192,
+      "valid_parameter_bytes": 8192,
+      "valid_channels": 2048,
+      "padded_channels": 0,
+      "final_block_valid_channels": 16,
+      "alignment_bytes": 64,
+      "padding_word": 0,
+      "lut": {
+        "input_scale": 0.013115626278312096,
+        "signed_index_encoding": "10-bit two's complement",
+        "reused_lut_input_scale": null,
+        "existing_gelu_index_scale_compatible": false,
+        "requires_scale_matched_lut": true,
+        "end_to_end_signed_int8_compatible": false,
+        "limitation": "src/LUT.py clips GeLU output to unsigned [0,255]; no signed INT8 contract"
+      },
+      "scale_search": {
+        "file": "scale_search.json",
+        "selected": {
+          "method": "p99.99",
+          "percentile": 99.99,
+          "threshold": 13.18571696481581,
+          "requested_threshold": 13.18571696481581,
+          "zero_percentile_fallback": false,
+          "s_X": 0.10382454303004575,
+          "s10": 0.013115626278312096,
+          "s_10": 0.013115626278312096,
+          "mse": 0.0071405447209274275,
+          "activation_clip_rate": 0.00012024394857141814,
+          "activation_zero_rate": 0.4797538486892157,
+          "int10_clip_rate": 0.0,
+          "bad_ratio_channels": 0,
+          "max_ratio_relative_error": 1.422084705416534e-05,
+          "bos_mse": 0.00042940912125562545,
+          "bos_nmse": 0.08978443394816348,
+          "non_bos_mse": 0.007165741252671715,
+          "non_bos_nmse": 0.01585380737846602,
+          "early_mse": 0.006746941687722,
+          "early_nmse": 0.018498639397734003,
+          "general_mse": 0.007178709614415599,
+          "general_nmse": 0.01578811303156259,
+          "all_mse": 0.0071405447209274275,
+          "all_nmse": 0.015856744314964685
+        },
+        "sampling": {
+          "retained": 64,
+          "bos_rows": 16,
+          "early_rows": 16,
+          "general_rows": 32
+        }
+      }
+    },
+    {
+      "key": "op0002",
+      "module_name": "model.layers.10.mlp.down_proj",
+      "weight_name": "model.layers.10.mlp.down_proj.weight",
+      "torch_export_parameter_symbol": "p_model_layers_10_mlp_down_proj_weight",
+      "shape": {
+        "M": 34221,
+        "K": 16384,
+        "N": 2048
+      },
+      "M_semantics": "sum of valid calibration tokens, not a parameter axis",
+      "scale_keys": {
+        "s_X": "op0002.s_X",
+        "s_10": "op0002.s_10",
+        "s_W": "op0002.s_W"
+      },
+      "s_X": 0.028068215385946754,
+      "s_10": 0.0047048408855794675,
+      "input_group": "model.layers.10.mlp.down_proj.input",
+      "parameter_file_offset": 16384,
+      "parameter_size_bytes": 8192,
+      "valid_parameter_bytes": 8192,
+      "valid_channels": 2048,
+      "padded_channels": 0,
+      "final_block_valid_channels": 16,
+      "alignment_bytes": 64,
+      "padding_word": 0,
+      "lut": {
+        "input_scale": 0.0047048408855794675,
+        "signed_index_encoding": "10-bit two's complement",
+        "reused_lut_input_scale": null,
+        "existing_gelu_index_scale_compatible": false,
+        "requires_scale_matched_lut": true,
+        "end_to_end_signed_int8_compatible": false,
+        "limitation": "src/LUT.py clips GeLU output to unsigned [0,255]; no signed INT8 contract"
+      },
+      "scale_search": {
+        "file": "scale_search.json",
+        "selected": {
+          "method": "p99.99",
+          "percentile": 99.99,
+          "threshold": 3.564663354015238,
+          "requested_threshold": 3.564663354015238,
+          "zero_percentile_fallback": false,
+          "s_X": 0.028068215385946754,
+          "s10": 0.0047048408855794675,
+          "s_10": 0.0047048408855794675,
+          "mse": 0.00021578977430058085,
+          "activation_clip_rate": 0.00011918306566685797,
+          "activation_zero_rate": 0.20224081206470113,
+          "int10_clip_rate": 2.7395458928727974e-06,
+          "bad_ratio_channels": 0,
+          "max_ratio_relative_error": 1.4285919533806965e-05,
+          "bos_mse": 4.869297535165334e-05,
+          "bos_nmse": 0.005145502204636415,
+          "non_bos_mse": 0.00021641712860397046,
+          "non_bos_nmse": 0.014012102929045613,
+          "early_mse": 0.0006427436268452866,
+          "early_nmse": 0.03676031831881557,
+          "general_mse": 0.00020321569117921897,
+          "general_nmse": 0.013211391433829859,
+          "all_mse": 0.00021578977430058085,
+          "all_nmse": 0.013991753405231995
+        },
+        "sampling": {
+          "retained": 64,
+          "bos_rows": 16,
+          "early_rows": 16,
+          "general_rows": 32
+        }
+      }
+    },
+    {
+      "key": "op0003",
+      "module_name": "model.layers.11.mlp.down_proj",
+      "weight_name": "model.layers.11.mlp.down_proj.weight",
+      "torch_export_parameter_symbol": "p_model_layers_11_mlp_down_proj_weight",
+      "shape": {
+        "M": 34221,
+        "K": 16384,
+        "N": 2048
+      },
+      "M_semantics": "sum of valid calibration tokens, not a parameter axis",
+      "scale_keys": {
+        "s_X": "op0003.s_X",
+        "s_10": "op0003.s_10",
+        "s_W": "op0003.s_W"
+      },
+      "s_X": 0.04009637724241954,
+      "s_10": 0.007084301397567825,
+      "input_group": "model.layers.11.mlp.down_proj.input",
+      "parameter_file_offset": 24576,
+      "parameter_size_bytes": 8192,
+      "valid_parameter_bytes": 8192,
+      "valid_channels": 2048,
+      "padded_channels": 0,
+      "final_block_valid_channels": 16,
+      "alignment_bytes": 64,
+      "padding_word": 0,
+      "lut": {
+        "input_scale": 0.007084301397567825,
+        "signed_index_encoding": "10-bit two's complement",
+        "reused_lut_input_scale": null,
+        "existing_gelu_index_scale_compatible": false,
+        "requires_scale_matched_lut": true,
+        "end_to_end_signed_int8_compatible": false,
+        "limitation": "src/LUT.py clips GeLU output to unsigned [0,255]; no signed INT8 contract"
+      },
+      "scale_search": {
+        "file": "scale_search.json",
+        "selected": {
+          "method": "p99.99",
+          "percentile": 99.99,
+          "threshold": 5.092239909787281,
+          "requested_threshold": 5.092239909787281,
+          "zero_percentile_fallback": false,
+          "s_X": 0.04009637724241954,
+          "s10": 0.007084301397567825,
+          "s_10": 0.007084301397567825,
+          "mse": 0.00045867386826919053,
+          "activation_clip_rate": 9.1552734375e-05,
+          "activation_zero_rate": 0.24726270484651208,
+          "int10_clip_rate": 0.0,
+          "bad_ratio_channels": 0,
+          "max_ratio_relative_error": 1.3666398424413835e-05,
+          "bos_mse": 7.214239162558117e-05,
+          "bos_nmse": 0.008863698968557227,
+          "non_bos_mse": 0.0004601250761127473,
+          "non_bos_nmse": 0.01772903680190116,
+          "early_mse": 0.0009549651375812542,
+          "early_nmse": 0.03813674975011918,
+          "general_mse": 0.00044480207804979563,
+          "general_nmse": 0.017119985796825558,
+          "all_mse": 0.00045867386826919053,
+          "all_nmse": 0.017718610896642735
+        },
+        "sampling": {
+          "retained": 64,
+          "bos_rows": 16,
+          "early_rows": 16,
+          "general_rows": 32
+        }
+      }
+    },
+    {
+      "key": "op0004",
+      "module_name": "model.layers.12.mlp.down_proj",
+      "weight_name": "model.layers.12.mlp.down_proj.weight",
+      "torch_export_parameter_symbol": "p_model_layers_12_mlp_down_proj_weight",
+      "shape": {
+        "M": 34221,
+        "K": 16384,
+        "N": 2048
+      },
+      "M_semantics": "sum of valid calibration tokens, not a parameter axis",
+      "scale_keys": {
+        "s_X": "op0004.s_X",
+        "s_10": "op0004.s_10",
+        "s_W": "op0004.s_W"
+      },
+      "s_X": 0.04774677847314069,
+      "s_10": 0.005577903089469502,
+      "input_group": "model.layers.12.mlp.down_proj.input",
+      "parameter_file_offset": 32768,
+      "parameter_size_bytes": 8192,
+      "valid_parameter_bytes": 8192,
+      "valid_channels": 2048,
+      "padded_channels": 0,
+      "final_block_valid_channels": 16,
+      "alignment_bytes": 64,
+      "padding_word": 0,
+      "lut": {
+        "input_scale": 0.005577903089469502,
+        "signed_index_encoding": "10-bit two's complement",
+        "reused_lut_input_scale": null,
+        "existing_gelu_index_scale_compatible": false,
+        "requires_scale_matched_lut": true,
+        "end_to_end_signed_int8_compatible": false,
+        "limitation": "src/LUT.py clips GeLU output to unsigned [0,255]; no signed INT8 contract"
+      },
+      "scale_search": {
+        "file": "scale_search.json",
+        "selected": {
+          "method": "p99.99",
+          "percentile": 99.99,
+          "threshold": 6.063840866088867,
+          "requested_threshold": 6.063840866088867,
+          "zero_percentile_fallback": false,
+          "s_X": 0.04774677847314069,
+          "s10": 0.005577903089469502,
+          "s_10": 0.005577903089469502,
+          "mse": 0.002196815585116796,
+          "activation_clip_rate": 9.351002264648465e-05,
+          "activation_zero_rate": 0.2831710446344545,
+          "int10_clip_rate": 2.7395458928727974e-06,
+          "bad_ratio_channels": 0,
+          "max_ratio_relative_error": 1.2983970042750921e-05,
+          "bos_mse": 0.0001043534925161191,
+          "bos_nmse": 0.014399361802616832,
+          "non_bos_mse": 0.0022046716009515095,
+          "non_bos_nmse": 0.06991258009853935,
+          "early_mse": 0.0008903789679730856,
+          "early_nmse": 0.029805332058048094,
+          "general_mse": 0.002245369404216498,
+          "general_nmse": 0.07108716958333969,
+          "all_mse": 0.002196815585116796,
+          "all_nmse": 0.06986472350662314
+        },
+        "sampling": {
+          "retained": 64,
+          "bos_rows": 16,
+          "early_rows": 16,
+          "general_rows": 32
+        }
+      }
+    },
+    {
+      "key": "op0005",
+      "module_name": "model.layers.13.mlp.down_proj",
+      "weight_name": "model.layers.13.mlp.down_proj.weight",
+      "torch_export_parameter_symbol": "p_model_layers_13_mlp_down_proj_weight",
+      "shape": {
+        "M": 34221,
+        "K": 16384,
+        "N": 2048
+      },
+      "M_semantics": "sum of valid calibration tokens, not a parameter axis",
+      "scale_keys": {
+        "s_X": "op0005.s_X",
+        "s_10": "op0005.s_10",
+        "s_W": "op0005.s_W"
+      },
+      "s_X": 0.07070487266142435,
+      "s_10": 0.00924775857367402,
+      "input_group": "model.layers.13.mlp.down_proj.input",
+      "parameter_file_offset": 40960,
+      "parameter_size_bytes": 8192,
+      "valid_parameter_bytes": 8192,
+      "valid_channels": 2048,
+      "padded_channels": 0,
+      "final_block_valid_channels": 16,
+      "alignment_bytes": 64,
+      "padding_word": 0,
+      "lut": {
+        "input_scale": 0.00924775857367402,
+        "signed_index_encoding": "10-bit two's complement",
+        "reused_lut_input_scale": null,
+        "existing_gelu_index_scale_compatible": false,
+        "requires_scale_matched_lut": true,
+        "end_to_end_signed_int8_compatible": false,
+        "limitation": "src/LUT.py clips GeLU output to unsigned [0,255]; no signed INT8 contract"
+      },
+      "scale_search": {
+        "file": "scale_search.json",
+        "selected": {
+          "method": "p99.99",
+          "percentile": 99.99,
+          "threshold": 8.979518828000892,
+          "requested_threshold": 8.979518828000892,
+          "zero_percentile_fallback": false,
+          "s_X": 0.07070487266142435,
+          "s10": 0.00924775857367402,
+          "s_10": 0.00924775857367402,
+          "mse": 0.0040023238604823,
+          "activation_clip_rate": 0.0001068685973102682,
+          "activation_zero_rate": 0.35565615328743083,
+          "int10_clip_rate": 9.131819642909324e-07,
+          "bad_ratio_channels": 0,
+          "max_ratio_relative_error": 1.3117158601301385e-05,
+          "bos_mse": 0.00021512730895186625,
+          "bos_nmse": 0.012829414426176551,
+          "non_bos_mse": 0.004016542649048748,
+          "non_bos_nmse": 0.06436011467916755,
+          "early_mse": 0.007060373797468169,
+          "early_nmse": 0.09643609299592842,
+          "general_mse": 0.003922288722532025,
+          "general_nmse": 0.063188604416232,
+          "all_mse": 0.0040023238604823,
+          "all_nmse": 0.06430818375589727
+        },
+        "sampling": {
+          "retained": 64,
+          "bos_rows": 16,
+          "early_rows": 16,
+          "general_rows": 32
+        }
+      }
+    },
+    {
+      "key": "op0006",
+      "module_name": "model.layers.14.mlp.down_proj",
+      "weight_name": "model.layers.14.mlp.down_proj.weight",
+      "torch_export_parameter_symbol": "p_model_layers_14_mlp_down_proj_weight",
+      "shape": {
+        "M": 34221,
+        "K": 16384,
+        "N": 2048
+      },
+      "M_semantics": "sum of valid calibration tokens, not a parameter axis",
+      "scale_keys": {
+        "s_X": "op0006.s_X",
+        "s_10": "op0006.s_10",
+        "s_W": "op0006.s_W"
+      },
+      "s_X": 0.8091608483021654,
+      "s_10": 0.00703072449753549,
+      "input_group": "model.layers.14.mlp.down_proj.input",
+      "parameter_file_offset": 49152,
+      "parameter_size_bytes": 8192,
+      "valid_parameter_bytes": 8192,
+      "valid_channels": 2048,
+      "padded_channels": 0,
+      "final_block_valid_channels": 16,
+      "alignment_bytes": 64,
+      "padding_word": 0,
+      "lut": {
+        "input_scale": 0.00703072449753549,
+        "signed_index_encoding": "10-bit two's complement",
+        "reused_lut_input_scale": null,
+        "existing_gelu_index_scale_compatible": false,
+        "requires_scale_matched_lut": true,
+        "end_to_end_signed_int8_compatible": false,
+        "limitation": "src/LUT.py clips GeLU output to unsigned [0,255]; no signed INT8 contract"
+      },
+      "scale_search": {
+        "file": "scale_search.json",
+        "selected": {
+          "method": "absmax",
+          "percentile": null,
+          "threshold": 102.763427734375,
+          "s_X": 0.8091608483021654,
+          "s10": 0.00703072449753549,
+          "s_10": 0.00703072449753549,
+          "mse": 0.01216078277325079,
+          "activation_clip_rate": 0.0,
+          "activation_zero_rate": 0.9574446223493538,
+          "int10_clip_rate": 0.0,
+          "bad_ratio_channels": 0,
+          "max_ratio_relative_error": 1.440590380752762e-05,
+          "bos_mse": 0.006870810103429656,
+          "bos_nmse": 0.2525104568279971,
+          "non_bos_mse": 0.012180643639168634,
+          "non_bos_nmse": 0.09960860508584667,
+          "early_mse": 0.014743846785755296,
+          "early_nmse": 0.09762745362021277,
+          "general_mse": 0.012101272626374032,
+          "general_nmse": 0.09968492429475961,
+          "all_mse": 0.01216078277325079,
+          "all_nmse": 0.09973623428151193
+        },
+        "sampling": {
+          "retained": 64,
+          "bos_rows": 16,
+          "early_rows": 16,
+          "general_rows": 32
+        }
+      }
+    },
+    {
+      "key": "op0007",
+      "module_name": "model.layers.15.mlp.down_proj",
+      "weight_name": "model.layers.15.mlp.down_proj.weight",
+      "torch_export_parameter_symbol": "p_model_layers_15_mlp_down_proj_weight",
+      "shape": {
+        "M": 34221,
+        "K": 16384,
+        "N": 2048
+      },
+      "M_semantics": "sum of valid calibration tokens, not a parameter axis",
+      "scale_keys": {
+        "s_X": "op0007.s_X",
+        "s_10": "op0007.s_10",
+        "s_W": "op0007.s_W"
+      },
+      "s_X": 0.12396700225211163,
+      "s_10": 0.011551249603778284,
+      "input_group": "model.layers.15.mlp.down_proj.input",
+      "parameter_file_offset": 57344,
+      "parameter_size_bytes": 8192,
+      "valid_parameter_bytes": 8192,
+      "valid_channels": 2048,
+      "padded_channels": 0,
+      "final_block_valid_channels": 16,
+      "alignment_bytes": 64,
+      "padding_word": 0,
+      "lut": {
+        "input_scale": 0.011551249603778284,
+        "signed_index_encoding": "10-bit two's complement",
+        "reused_lut_input_scale": null,
+        "existing_gelu_index_scale_compatible": false,
+        "requires_scale_matched_lut": true,
+        "end_to_end_signed_int8_compatible": false,
+        "limitation": "src/LUT.py clips GeLU output to unsigned [0,255]; no signed INT8 contract"
+      },
+      "scale_search": {
+        "file": "scale_search.json",
+        "selected": {
+          "method": "p99.99",
+          "percentile": 99.99,
+          "threshold": 15.743809286018177,
+          "requested_threshold": 15.743809286018177,
+          "zero_percentile_fallback": false,
+          "s_X": 0.12396700225211163,
+          "s10": 0.011551249603778284,
+          "s_10": 0.011551249603778284,
+          "mse": 0.002947831447938389,
+          "activation_clip_rate": 7.657931467634092e-05,
+          "activation_zero_rate": 0.5136201877526554,
+          "int10_clip_rate": 2.7395458928727974e-06,
+          "bad_ratio_channels": 0,
+          "max_ratio_relative_error": 1.3064112919279115e-05,
+          "bos_mse": 0.002028859295686299,
+          "bos_nmse": 0.01269553211218804,
+          "non_bos_mse": 0.0029512816704323984,
+          "non_bos_nmse": 0.019220912386924624,
+          "early_mse": 0.017405330364018378,
+          "early_nmse": 0.08538675566677084,
+          "general_mse": 0.002503704003667996,
+          "general_nmse": 0.016473046973337357,
+          "all_mse": 0.002947831447938389,
+          "all_nmse": 0.019195513119065363
+        },
+        "sampling": {
+          "retained": 64,
+          "bos_rows": 16,
+          "early_rows": 16,
+          "general_rows": 32
+        }
+      }
+    },
+    {
+      "key": "op0008",
+      "module_name": "model.layers.16.mlp.down_proj",
+      "weight_name": "model.layers.16.mlp.down_proj.weight",
+      "torch_export_parameter_symbol": "p_model_layers_16_mlp_down_proj_weight",
+      "shape": {
+        "M": 34221,
+        "K": 16384,
+        "N": 2048
+      },
+      "M_semantics": "sum of valid calibration tokens, not a parameter axis",
+      "scale_keys": {
+        "s_X": "op0008.s_X",
+        "s_10": "op0008.s_10",
+        "s_W": "op0008.s_W"
+      },
+      "s_X": 0.13463173597885658,
+      "s_10": 0.03266129841391674,
+      "input_group": "model.layers.16.mlp.down_proj.input",
+      "parameter_file_offset": 65536,
+      "parameter_size_bytes": 8192,
+      "valid_parameter_bytes": 8192,
+      "valid_channels": 2048,
+      "padded_channels": 0,
+      "final_block_valid_channels": 16,
+      "alignment_bytes": 64,
+      "padding_word": 0,
+      "lut": {
+        "input_scale": 0.03266129841391674,
+        "signed_index_encoding": "10-bit two's complement",
+        "reused_lut_input_scale": null,
+        "existing_gelu_index_scale_compatible": false,
+        "requires_scale_matched_lut": true,
+        "end_to_end_signed_int8_compatible": false,
+        "limitation": "src/LUT.py clips GeLU output to unsigned [0,255]; no signed INT8 contract"
+      },
+      "scale_search": {
+        "file": "scale_search.json",
+        "selected": {
+          "method": "p99.99",
+          "percentile": 99.99,
+          "threshold": 17.098230469314785,
+          "requested_threshold": 17.098230469314785,
+          "zero_percentile_fallback": false,
+          "s_X": 0.13463173597885658,
+          "s10": 0.03266129841391674,
+          "s_10": 0.03266129841391674,
+          "mse": 0.005343011520621839,
+          "activation_clip_rate": 7.116404084403239e-05,
+          "activation_zero_rate": 0.4592237069282745,
+          "int10_clip_rate": 1.8263639285818648e-06,
+          "bad_ratio_channels": 0,
+          "max_ratio_relative_error": 1.4147441907381244e-05,
+          "bos_mse": 0.00856350447814379,
+          "bos_nmse": 0.006782775415320824,
+          "non_bos_mse": 0.005330920384653669,
+          "non_bos_nmse": 0.01800083611989251,
+          "early_mse": 0.020568863655548227,
+          "early_nmse": 0.05851305233831093,
+          "general_mse": 0.00485906898577871,
+          "general_nmse": 0.016503101249157378,
+          "all_mse": 0.005343011520621839,
+          "all_nmse": 0.017824109938890883
+        },
+        "sampling": {
+          "retained": 64,
+          "bos_rows": 16,
+          "early_rows": 16,
+          "general_rows": 32
+        }
+      }
+    },
+    {
+      "key": "op0009",
+      "module_name": "model.layers.17.mlp.down_proj",
+      "weight_name": "model.layers.17.mlp.down_proj.weight",
+      "torch_export_parameter_symbol": "p_model_layers_17_mlp_down_proj_weight",
+      "shape": {
+        "M": 34221,
+        "K": 16384,
+        "N": 2048
+      },
+      "M_semantics": "sum of valid calibration tokens, not a parameter axis",
+      "scale_keys": {
+        "s_X": "op0009.s_X",
+        "s_10": "op0009.s_10",
+        "s_W": "op0009.s_W"
+      },
+      "s_X": 18.486479992002952,
+      "s_10": 0.8360071499177317,
+      "input_group": "model.layers.17.mlp.down_proj.input",
+      "parameter_file_offset": 73728,
+      "parameter_size_bytes": 8192,
+      "valid_parameter_bytes": 8192,
+      "valid_channels": 2048,
+      "padded_channels": 0,
+      "final_block_valid_channels": 16,
+      "alignment_bytes": 64,
+      "padding_word": 0,
+      "lut": {
+        "input_scale": 0.8360071499177317,
+        "signed_index_encoding": "10-bit two's complement",
+        "reused_lut_input_scale": null,
+        "existing_gelu_index_scale_compatible": false,
+        "requires_scale_matched_lut": true,
+        "end_to_end_signed_int8_compatible": false,
+        "limitation": "src/LUT.py clips GeLU output to unsigned [0,255]; no signed INT8 contract"
+      },
+      "scale_search": {
+        "file": "scale_search.json",
+        "selected": {
+          "method": "absmax",
+          "percentile": null,
+          "threshold": 2347.782958984375,
+          "s_X": 18.486479992002952,
+          "s10": 0.8360071499177317,
+          "s_10": 0.8360071499177317,
+          "mse": 0.250597035387909,
+          "activation_clip_rate": 0.0,
+          "activation_zero_rate": 0.9992213917065607,
+          "int10_clip_rate": 0.0,
+          "bad_ratio_channels": 0,
+          "max_ratio_relative_error": 1.3676356142586726e-05,
+          "bos_mse": 2.353577695076324,
+          "bos_nmse": 0.005494803095152129,
+          "non_bos_mse": 0.2427015282621026,
+          "non_bos_nmse": 0.8122112711511018,
+          "early_mse": 0.19468710704738762,
+          "early_nmse": 0.7246138836602612,
+          "general_mse": 0.24418832155261241,
+          "general_nmse": 0.8146425950206311,
+          "all_mse": 0.250597035387909,
+          "all_nmse": 0.13190615590058302
+        },
+        "sampling": {
+          "retained": 64,
+          "bos_rows": 16,
+          "early_rows": 16,
+          "general_rows": 32
+        }
+      }
+    },
+    {
+      "key": "op0010",
+      "module_name": "model.layers.2.mlp.down_proj",
+      "weight_name": "model.layers.2.mlp.down_proj.weight",
+      "torch_export_parameter_symbol": "p_model_layers_2_mlp_down_proj_weight",
+      "shape": {
+        "M": 34221,
+        "K": 16384,
+        "N": 2048
+      },
+      "M_semantics": "sum of valid calibration tokens, not a parameter axis",
+      "scale_keys": {
+        "s_X": "op0010.s_X",
+        "s_10": "op0010.s_10",
+        "s_W": "op0010.s_W"
+      },
+      "s_X": 0.08881361209234713,
+      "s_10": 0.007314705481437474,
+      "input_group": "model.layers.2.mlp.down_proj.input",
+      "parameter_file_offset": 81920,
+      "parameter_size_bytes": 8192,
+      "valid_parameter_bytes": 8192,
+      "valid_channels": 2048,
+      "padded_channels": 0,
+      "final_block_valid_channels": 16,
+      "alignment_bytes": 64,
+      "padding_word": 0,
+      "lut": {
+        "input_scale": 0.007314705481437474,
+        "signed_index_encoding": "10-bit two's complement",
+        "reused_lut_input_scale": null,
+        "existing_gelu_index_scale_compatible": false,
+        "requires_scale_matched_lut": true,
+        "end_to_end_signed_int8_compatible": false,
+        "limitation": "src/LUT.py clips GeLU output to unsigned [0,255]; no signed INT8 contract"
+      },
+      "scale_search": {
+        "file": "scale_search.json",
+        "selected": {
+          "method": "p99.99",
+          "percentile": 99.99,
+          "threshold": 11.279328735728086,
+          "requested_threshold": 11.279328735728086,
+          "zero_percentile_fallback": false,
+          "s_X": 0.08881361209234713,
+          "s10": 0.007314705481437474,
+          "s_10": 0.007314705481437474,
+          "mse": 0.008946008519541061,
+          "activation_clip_rate": 0.00010306816851283523,
+          "activation_zero_rate": 0.43984331064265203,
+          "int10_clip_rate": 0.0,
+          "bad_ratio_channels": 0,
+          "max_ratio_relative_error": 1.458108317473436e-05,
+          "bos_mse": 0.00041863997121715,
+          "bos_nmse": 0.05931592011790604,
+          "non_bos_mse": 0.00897802398236878,
+          "non_bos_nmse": 0.04928774515908758,
+          "early_mse": 0.010064455114151525,
+          "early_nmse": 0.04851788990382368,
+          "general_mse": 0.008944382037376627,
+          "general_nmse": 0.049315010135220994,
+          "all_mse": 0.008946008519541061,
+          "all_nmse": 0.04928920374189727
+        },
+        "sampling": {
+          "retained": 64,
+          "bos_rows": 16,
+          "early_rows": 16,
+          "general_rows": 32
+        }
+      }
+    },
+    {
+      "key": "op0011",
+      "module_name": "model.layers.3.mlp.down_proj",
+      "weight_name": "model.layers.3.mlp.down_proj.weight",
+      "torch_export_parameter_symbol": "p_model_layers_3_mlp_down_proj_weight",
+      "shape": {
+        "M": 34221,
+        "K": 16384,
+        "N": 2048
+      },
+      "M_semantics": "sum of valid calibration tokens, not a parameter axis",
+      "scale_keys": {
+        "s_X": "op0011.s_X",
+        "s_10": "op0011.s_10",
+        "s_W": "op0011.s_W"
+      },
+      "s_X": 0.050720926149982394,
+      "s_10": 0.00584516967319508,
+      "input_group": "model.layers.3.mlp.down_proj.input",
+      "parameter_file_offset": 90112,
+      "parameter_size_bytes": 8192,
+      "valid_parameter_bytes": 8192,
+      "valid_channels": 2048,
+      "padded_channels": 0,
+      "final_block_valid_channels": 16,
+      "alignment_bytes": 64,
+      "padding_word": 0,
+      "lut": {
+        "input_scale": 0.00584516967319508,
+        "signed_index_encoding": "10-bit two's complement",
+        "reused_lut_input_scale": null,
+        "existing_gelu_index_scale_compatible": false,
+        "requires_scale_matched_lut": true,
+        "end_to_end_signed_int8_compatible": false,
+        "limitation": "src/LUT.py clips GeLU output to unsigned [0,255]; no signed INT8 contract"
+      },
+      "scale_search": {
+        "file": "scale_search.json",
+        "selected": {
+          "method": "p99.99",
+          "percentile": 99.99,
+          "threshold": 6.441557621047764,
+          "requested_threshold": 6.441557621047764,
+          "zero_percentile_fallback": false,
+          "s_X": 0.050720926149982394,
+          "s10": 0.00584516967319508,
+          "s_10": 0.00584516967319508,
+          "mse": 0.010021736965816992,
+          "activation_clip_rate": 6.736361204659945e-05,
+          "activation_zero_rate": 0.24716122092385817,
+          "int10_clip_rate": 0.0,
+          "bad_ratio_channels": 0,
+          "max_ratio_relative_error": 1.3885157525392919e-05,
+          "bos_mse": 0.00012065410588138531,
+          "bos_nmse": 0.019195507741668394,
+          "non_bos_mse": 0.010058909951651965,
+          "non_bos_nmse": 0.1505581413475694,
+          "early_mse": 0.01014637963577539,
+          "early_nmse": 0.1384207503316262,
+          "general_mse": 0.010056201404174197,
+          "general_nmse": 0.15097173687649598,
+          "all_mse": 0.010021736965816992,
+          "all_nmse": 0.15051175832448493
+        },
+        "sampling": {
+          "retained": 64,
+          "bos_rows": 16,
+          "early_rows": 16,
+          "general_rows": 32
+        }
+      }
+    },
+    {
+      "key": "op0012",
+      "module_name": "model.layers.4.mlp.down_proj",
+      "weight_name": "model.layers.4.mlp.down_proj.weight",
+      "torch_export_parameter_symbol": "p_model_layers_4_mlp_down_proj_weight",
+      "shape": {
+        "M": 34221,
+        "K": 16384,
+        "N": 2048
+      },
+      "M_semantics": "sum of valid calibration tokens, not a parameter axis",
+      "scale_keys": {
+        "s_X": "op0012.s_X",
+        "s_10": "op0012.s_10",
+        "s_W": "op0012.s_W"
+      },
+      "s_X": 0.038223395864209544,
+      "s_10": 0.0033289869740030973,
+      "input_group": "model.layers.4.mlp.down_proj.input",
+      "parameter_file_offset": 98304,
+      "parameter_size_bytes": 8192,
+      "valid_parameter_bytes": 8192,
+      "valid_channels": 2048,
+      "padded_channels": 0,
+      "final_block_valid_channels": 16,
+      "alignment_bytes": 64,
+      "padding_word": 0,
+      "lut": {
+        "input_scale": 0.0033289869740030973,
+        "signed_index_encoding": "10-bit two's complement",
+        "reused_lut_input_scale": null,
+        "existing_gelu_index_scale_compatible": false,
+        "requires_scale_matched_lut": true,
+        "end_to_end_signed_int8_compatible": false,
+        "limitation": "src/LUT.py clips GeLU output to unsigned [0,255]; no signed INT8 contract"
+      },
+      "scale_search": {
+        "file": "scale_search.json",
+        "selected": {
+          "method": "p99.99",
+          "percentile": 99.99,
+          "threshold": 4.854371274754612,
+          "requested_threshold": 4.854371274754612,
+          "zero_percentile_fallback": false,
+          "s_X": 0.038223395864209544,
+          "s10": 0.0033289869740030973,
+          "s_10": 0.0033289869740030973,
+          "mse": 0.000934480510446767,
+          "activation_clip_rate": 0.00010249742978515341,
+          "activation_zero_rate": 0.227821081839307,
+          "int10_clip_rate": 2.7395458928727974e-06,
+          "bad_ratio_channels": 0,
+          "max_ratio_relative_error": 1.3354939314820674e-05,
+          "bos_mse": 6.850027464850932e-05,
+          "bos_nmse": 0.0104038951479187,
+          "non_bos_mse": 0.0009377317781610244,
+          "non_bos_nmse": 0.03434299157151211,
+          "early_mse": 0.0007825850925208701,
+          "early_nmse": 0.024914856110512428,
+          "general_mse": 0.0009425359816777778,
+          "general_nmse": 0.03468040637677877,
+          "all_mse": 0.000934480510446767,
+          "all_nmse": 0.034321338707689
+        },
+        "sampling": {
+          "retained": 64,
+          "bos_rows": 16,
+          "early_rows": 16,
+          "general_rows": 32
+        }
+      }
+    },
+    {
+      "key": "op0013",
+      "module_name": "model.layers.5.mlp.down_proj",
+      "weight_name": "model.layers.5.mlp.down_proj.weight",
+      "torch_export_parameter_symbol": "p_model_layers_5_mlp_down_proj_weight",
+      "shape": {
+        "M": 34221,
+        "K": 16384,
+        "N": 2048
+      },
+      "M_semantics": "sum of valid calibration tokens, not a parameter axis",
+      "scale_keys": {
+        "s_X": "op0013.s_X",
+        "s_10": "op0013.s_10",
+        "s_W": "op0013.s_W"
+      },
+      "s_X": 0.03359186993170409,
+      "s_10": 0.008364651664054494,
+      "input_group": "model.layers.5.mlp.down_proj.input",
+      "parameter_file_offset": 106496,
+      "parameter_size_bytes": 8192,
+      "valid_parameter_bytes": 8192,
+      "valid_channels": 2048,
+      "padded_channels": 0,
+      "final_block_valid_channels": 16,
+      "alignment_bytes": 64,
+      "padding_word": 0,
+      "lut": {
+        "input_scale": 0.008364651664054494,
+        "signed_index_encoding": "10-bit two's complement",
+        "reused_lut_input_scale": null,
+        "existing_gelu_index_scale_compatible": false,
+        "requires_scale_matched_lut": true,
+        "end_to_end_signed_int8_compatible": false,
+        "limitation": "src/LUT.py clips GeLU output to unsigned [0,255]; no signed INT8 contract"
+      },
+      "scale_search": {
+        "file": "scale_search.json",
+        "selected": {
+          "method": "p99.99",
+          "percentile": 99.99,
+          "threshold": 4.26616748132642,
+          "requested_threshold": 4.26616748132642,
+          "zero_percentile_fallback": false,
+          "s_X": 0.03359186993170409,
+          "s10": 0.008364651664054494,
+          "s_10": 0.008364651664054494,
+          "mse": 0.0008282513396135312,
+          "activation_clip_rate": 8.554994521764323e-05,
+          "activation_zero_rate": 0.22455314564219292,
+          "int10_clip_rate": 0.0,
+          "bad_ratio_channels": 0,
+          "max_ratio_relative_error": 1.4814111078076586e-05,
+          "bos_mse": 5.575985524734228e-05,
+          "bos_nmse": 0.00934307487888287,
+          "non_bos_mse": 0.0008311516097569293,
+          "non_bos_nmse": 0.04395585853543657,
+          "early_mse": 0.002324231331017466,
+          "early_nmse": 0.07863695156022749,
+          "general_mse": 0.0007849175647428441,
+          "general_nmse": 0.04224741569500135,
+          "all_mse": 0.0008282513396135312,
+          "all_nmse": 0.04391489143035347
+        },
+        "sampling": {
+          "retained": 64,
+          "bos_rows": 16,
+          "early_rows": 16,
+          "general_rows": 32
+        }
+      }
+    },
+    {
+      "key": "op0014",
+      "module_name": "model.layers.6.mlp.down_proj",
+      "weight_name": "model.layers.6.mlp.down_proj.weight",
+      "torch_export_parameter_symbol": "p_model_layers_6_mlp_down_proj_weight",
+      "shape": {
+        "M": 34221,
+        "K": 16384,
+        "N": 2048
+      },
+      "M_semantics": "sum of valid calibration tokens, not a parameter axis",
+      "scale_keys": {
+        "s_X": "op0014.s_X",
+        "s_10": "op0014.s_10",
+        "s_W": "op0014.s_W"
+      },
+      "s_X": 0.032511839143118,
+      "s_10": 0.005328721116110415,
+      "input_group": "model.layers.6.mlp.down_proj.input",
+      "parameter_file_offset": 114688,
+      "parameter_size_bytes": 8192,
+      "valid_parameter_bytes": 8192,
+      "valid_channels": 2048,
+      "padded_channels": 0,
+      "final_block_valid_channels": 16,
+      "alignment_bytes": 64,
+      "padding_word": 0,
+      "lut": {
+        "input_scale": 0.005328721116110415,
+        "signed_index_encoding": "10-bit two's complement",
+        "reused_lut_input_scale": null,
+        "existing_gelu_index_scale_compatible": false,
+        "requires_scale_matched_lut": true,
+        "end_to_end_signed_int8_compatible": false,
+        "limitation": "src/LUT.py clips GeLU output to unsigned [0,255]; no signed INT8 contract"
+      },
+      "scale_search": {
+        "file": "scale_search.json",
+        "selected": {
+          "method": "p99.99",
+          "percentile": 99.99,
+          "threshold": 4.129003571175986,
+          "requested_threshold": 4.129003571175986,
+          "zero_percentile_fallback": false,
+          "s_X": 0.032511839143118,
+          "s10": 0.005328721116110415,
+          "s_10": 0.005328721116110415,
+          "mse": 0.0009786315716122213,
+          "activation_clip_rate": 7.990637589426198e-05,
+          "activation_zero_rate": 0.24268032219000213,
+          "int10_clip_rate": 0.0,
+          "bad_ratio_channels": 0,
+          "max_ratio_relative_error": 1.4777712489604402e-05,
+          "bos_mse": 4.579674874892316e-05,
+          "bos_nmse": 0.006211478304146442,
+          "non_bos_mse": 0.0009821338406212992,
+          "non_bos_nmse": 0.0675614340157464,
+          "early_mse": 0.0007300459404004324,
+          "early_nmse": 0.040258760313326106,
+          "general_mse": 0.0009899398828308059,
+          "general_nmse": 0.06862421166647989,
+          "all_mse": 0.0009786315716122213,
+          "all_nmse": 0.06744483344785236
+        },
+        "sampling": {
+          "retained": 64,
+          "bos_rows": 16,
+          "early_rows": 16,
+          "general_rows": 32
+        }
+      }
+    },
+    {
+      "key": "op0015",
+      "module_name": "model.layers.7.mlp.down_proj",
+      "weight_name": "model.layers.7.mlp.down_proj.weight",
+      "torch_export_parameter_symbol": "p_model_layers_7_mlp_down_proj_weight",
+      "shape": {
+        "M": 34221,
+        "K": 16384,
+        "N": 2048
+      },
+      "M_semantics": "sum of valid calibration tokens, not a parameter axis",
+      "scale_keys": {
+        "s_X": "op0015.s_X",
+        "s_10": "op0015.s_10",
+        "s_W": "op0015.s_W"
+      },
+      "s_X": 0.028166947654655786,
+      "s_10": 0.00876180009154544,
+      "input_group": "model.layers.7.mlp.down_proj.input",
+      "parameter_file_offset": 122880,
+      "parameter_size_bytes": 8192,
+      "valid_parameter_bytes": 8192,
+      "valid_channels": 2048,
+      "padded_channels": 0,
+      "final_block_valid_channels": 16,
+      "alignment_bytes": 64,
+      "padding_word": 0,
+      "lut": {
+        "input_scale": 0.00876180009154544,
+        "signed_index_encoding": "10-bit two's complement",
+        "reused_lut_input_scale": null,
+        "existing_gelu_index_scale_compatible": false,
+        "requires_scale_matched_lut": true,
+        "end_to_end_signed_int8_compatible": false,
+        "limitation": "src/LUT.py clips GeLU output to unsigned [0,255]; no signed INT8 contract"
+      },
+      "scale_search": {
+        "file": "scale_search.json",
+        "selected": {
+          "method": "p99.99",
+          "percentile": 99.99,
+          "threshold": 3.577202352141285,
+          "requested_threshold": 3.577202352141285,
+          "zero_percentile_fallback": false,
+          "s_X": 0.028166947654655786,
+          "s10": 0.00876180009154544,
+          "s_10": 0.00876180009154544,
+          "mse": 0.000993549737889897,
+          "activation_clip_rate": 9.546731091796932e-05,
+          "activation_zero_rate": 0.2131592534933812,
+          "int10_clip_rate": 0.0,
+          "bad_ratio_channels": 0,
+          "max_ratio_relative_error": 1.3231321139874725e-05,
+          "bos_mse": 0.043399170878649786,
+          "bos_nmse": 0.6214678631123065,
+          "non_bos_mse": 0.0008343405305447743,
+          "non_bos_nmse": 0.06417021487365168,
+          "early_mse": 0.0001957039023910689,
+          "early_nmse": 0.013399506313586499,
+          "general_mse": 0.0008541162693705445,
+          "general_nmse": 0.06594299334795088,
+          "all_mse": 0.000993549737889897,
+          "all_nmse": 0.07518597479695366
+        },
+        "sampling": {
+          "retained": 64,
+          "bos_rows": 16,
+          "early_rows": 16,
+          "general_rows": 32
+        }
+      }
+    },
+    {
+      "key": "op0016",
+      "module_name": "model.layers.8.mlp.down_proj",
+      "weight_name": "model.layers.8.mlp.down_proj.weight",
+      "torch_export_parameter_symbol": "p_model_layers_8_mlp_down_proj_weight",
+      "shape": {
+        "M": 34221,
+        "K": 16384,
+        "N": 2048
+      },
+      "M_semantics": "sum of valid calibration tokens, not a parameter axis",
+      "scale_keys": {
+        "s_X": "op0016.s_X",
+        "s_10": "op0016.s_10",
+        "s_W": "op0016.s_W"
+      },
+      "s_X": 0.024526379690380812,
+      "s_10": 0.013832422840943694,
+      "input_group": "model.layers.8.mlp.down_proj.input",
+      "parameter_file_offset": 131072,
+      "parameter_size_bytes": 8192,
+      "valid_parameter_bytes": 8192,
+      "valid_channels": 2048,
+      "padded_channels": 0,
+      "final_block_valid_channels": 16,
+      "alignment_bytes": 64,
+      "padding_word": 0,
+      "lut": {
+        "input_scale": 0.013832422840943694,
+        "signed_index_encoding": "10-bit two's complement",
+        "reused_lut_input_scale": null,
+        "existing_gelu_index_scale_compatible": false,
+        "requires_scale_matched_lut": true,
+        "end_to_end_signed_int8_compatible": false,
+        "limitation": "src/LUT.py clips GeLU output to unsigned [0,255]; no signed INT8 contract"
+      },
+      "scale_search": {
+        "file": "scale_search.json",
+        "selected": {
+          "method": "p99.99",
+          "percentile": 99.99,
+          "threshold": 3.1148502206783633,
+          "requested_threshold": 3.1148502206783633,
+          "zero_percentile_fallback": false,
+          "s_X": 0.024526379690380812,
+          "s10": 0.013832422840943694,
+          "s_10": 0.013832422840943694,
+          "mse": 0.000955938567184796,
+          "activation_clip_rate": 8.843719205078526e-05,
+          "activation_zero_rate": 0.18915481229621414,
+          "int10_clip_rate": 0.0,
+          "bad_ratio_channels": 0,
+          "max_ratio_relative_error": 1.1782417067937166e-05,
+          "bos_mse": 0.16154288636299344,
+          "bos_nmse": 0.8008874868521958,
+          "non_bos_mse": 0.0003530250858876527,
+          "non_bos_nmse": 0.030696965898568344,
+          "early_mse": 0.00030563071197909275,
+          "early_nmse": 0.025507980250089806,
+          "general_mse": 0.00035449267906804423,
+          "general_nmse": 0.03086458963674972,
+          "all_mse": 0.000955938567184796,
+          "all_nmse": 0.07828013275947443
+        },
+        "sampling": {
+          "retained": 64,
+          "bos_rows": 16,
+          "early_rows": 16,
+          "general_rows": 32
+        }
+      }
+    },
+    {
+      "key": "op0017",
+      "module_name": "model.layers.9.mlp.down_proj",
+      "weight_name": "model.layers.9.mlp.down_proj.weight",
+      "torch_export_parameter_symbol": "p_model_layers_9_mlp_down_proj_weight",
+      "shape": {
+        "M": 34221,
+        "K": 16384,
+        "N": 2048
+      },
+      "M_semantics": "sum of valid calibration tokens, not a parameter axis",
+      "scale_keys": {
+        "s_X": "op0017.s_X",
+        "s_10": "op0017.s_10",
+        "s_W": "op0017.s_W"
+      },
+      "s_X": 0.026293062767829126,
+      "s_10": 0.004200945072465708,
+      "input_group": "model.layers.9.mlp.down_proj.input",
+      "parameter_file_offset": 139264,
+      "parameter_size_bytes": 8192,
+      "valid_parameter_bytes": 8192,
+      "valid_channels": 2048,
+      "padded_channels": 0,
+      "final_block_valid_channels": 16,
+      "alignment_bytes": 64,
+      "padding_word": 0,
+      "lut": {
+        "input_scale": 0.004200945072465708,
+        "signed_index_encoding": "10-bit two's complement",
+        "reused_lut_input_scale": null,
+        "existing_gelu_index_scale_compatible": false,
+        "requires_scale_matched_lut": true,
+        "end_to_end_signed_int8_compatible": false,
+        "limitation": "src/LUT.py clips GeLU output to unsigned [0,255]; no signed INT8 contract"
+      },
+      "scale_search": {
+        "file": "scale_search.json",
+        "selected": {
+          "method": "p99.99",
+          "percentile": 99.99,
+          "threshold": 3.339218971514299,
+          "requested_threshold": 3.339218971514299,
+          "zero_percentile_fallback": false,
+          "s_X": 0.026293062767829126,
+          "s10": 0.004200945072465708,
+          "s_10": 0.004200945072465708,
+          "mse": 0.0002248289988281937,
+          "activation_clip_rate": 9.995262618862048e-05,
+          "activation_zero_rate": 0.2007185371728661,
+          "int10_clip_rate": 9.131819642909324e-07,
+          "bad_ratio_channels": 0,
+          "max_ratio_relative_error": 1.4825312370545787e-05,
+          "bos_mse": 3.8962064822180424e-05,
+          "bos_nmse": 0.006467887024301434,
+          "non_bos_mse": 0.00022552682440977263,
+          "non_bos_nmse": 0.015924818304351565,
+          "early_mse": 0.0002627716555961439,
+          "early_nmse": 0.01900245190506146,
+          "general_mse": 0.0002243735174717085,
+          "general_nmse": 0.01583183087747441,
+          "all_mse": 0.0002248289988281937,
+          "all_nmse": 0.015909739816287738
+        },
+        "sampling": {
+          "retained": 64,
+          "bos_rows": 16,
+          "early_rows": 16,
+          "general_rows": 32
+        }
+      }
+    }
+  ],
+  "binary_export": {
+    "present": false,
+    "status": "blocked: no RTL-verified profile; use --allow-unverified-export for experiments",
+    "explicit_allow_unverified": false,
+    "explicit_allow_inaccurate": false,
+    "size_bytes": 0
+  },
+  "artifact_sha256": {
+    "scale_search.json": "9f25a5d7b299f49457891befca3a28fe857169af7df65b9b8c1bae066063af58",
+    "scales.npz": "b0d30e8139b91740029a86b97168a4d75681e04ad192964f3c6dedaa99fbb489",
+    "report.json": "81e728d373aa2b48834aa9d8fd4a73c5664f19ea85558f3a8bd625af9a1681ce",
+    "qparams.npz": "50b526f3c2a173b8e6948ec213217f1056137d4dce5bf3082edc79cabc0d66b4",
+    "test_vectors.json": "5c3163506c4672fc383234b8463d86a0015f94b7725c87d485050fdc2d18fb9e",
+    "compiler_mapping.json": "e68d1897696675e0b23122a64161f528634091c6b9108216a28a7a826bca982d"
+  }
+}

@@ -188,8 +188,9 @@ class GemmaSource:
             return self.modules[name].weight[sl].detach().to(device='cpu', dtype=self.torch.float32).numpy()
         return read
 
-    def replay(self, name, split='calibration'):
+    def replay(self, name, split='calibration', with_positions=False):
         from .core import valid_rows
+        from .sampling import valid_positions
         torch = self.torch
         def run(callback):
             # Stopping at the selected pre-hook avoids unused layers and vocabulary logits.
@@ -202,7 +203,11 @@ class GemmaSource:
                 nonlocal fired
                 x = inputs[0].detach().to(device='cpu', dtype=torch.float32).numpy()
                 try:
-                    callback(valid_rows(x, mask))
+                    rows = valid_rows(x, mask)
+                    if with_positions:
+                        callback(rows, valid_positions(mask))
+                    else:
+                        callback(rows)
                 except (ValueError, OverflowError) as exc:
                     raise type(exc)(f'{name}: {exc}') from exc
                 fired = True

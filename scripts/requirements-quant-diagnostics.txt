@@ -1,0 +1,8 @@
+# Match the historical GGUF source runtime; install only in an isolated venv.
+numpy==1.26.4
+torch==2.2.2
+transformers==4.57.6
+gguf==0.17.1
+sentencepiece==0.2.2
+protobuf==6.33.6
+tokenizers==0.22.2

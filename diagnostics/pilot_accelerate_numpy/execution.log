@@ -1,0 +1,74 @@
+Loading and verifying local model/data...
+/private/tmp/quant-diagnosis-venv/lib/python3.9/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+Model and token IDs match recorded identity
+Capture layer 0 calibration
+Capture layer 0 validation
+baseline model.layers.0.self_attn.q_proj calibration
+baseline model.layers.0.self_attn.q_proj validation
+DONE model.layers.0.self_attn.q_proj baseline: 13.6s
+baseline model.layers.0.self_attn.k_proj calibration
+baseline model.layers.0.self_attn.k_proj validation
+DONE model.layers.0.self_attn.k_proj baseline: 2.4s
+baseline model.layers.0.self_attn.v_proj calibration
+baseline model.layers.0.self_attn.v_proj validation
+DONE model.layers.0.self_attn.v_proj baseline: 2.6s
+baseline model.layers.0.self_attn.o_proj calibration
+baseline model.layers.0.self_attn.o_proj validation
+DONE model.layers.0.self_attn.o_proj baseline: 13.6s
+baseline model.layers.0.mlp.gate_proj calibration
+baseline model.layers.0.mlp.gate_proj validation
+DONE model.layers.0.mlp.gate_proj baseline: 110.0s
+baseline model.layers.0.mlp.up_proj calibration
+baseline model.layers.0.mlp.up_proj validation
+DONE model.layers.0.mlp.up_proj baseline: 105.2s
+baseline model.layers.0.mlp.down_proj calibration
+baseline model.layers.0.mlp.down_proj validation
+DONE model.layers.0.mlp.down_proj baseline: 111.8s
+Capture layer 1 calibration
+Traceback (most recent call last):
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/diagnose_linear_quant_error.py", line 268, in <module>
+    if not np.isclose(base['final_local_total_mse'],expected_mse,rtol=2e-5,atol=1e-10):
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/diagnose_linear_quant_error.py", line 209, in main
+    for layer in sorted({int(n.split('.')[2]) for n in names}):
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/quant_diagnostic_source.py", line 115, in capture
+    try:self.model(input_ids=x,attention_mask=torch.ones_like(x),use_cache=False)
+  File "/private/tmp/quant-diagnosis-venv/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1511, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/private/tmp/quant-diagnosis-venv/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1520, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/private/tmp/quant-diagnosis-venv/lib/python3.9/site-packages/transformers/utils/generic.py", line 918, in wrapper
+    output = func(self, *args, **kwargs)
+  File "/private/tmp/quant-diagnosis-venv/lib/python3.9/site-packages/transformers/models/gemma/modeling_gemma.py", line 468, in forward
+    outputs: BaseModelOutputWithPast = self.model(
+  File "/private/tmp/quant-diagnosis-venv/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1511, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/private/tmp/quant-diagnosis-venv/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1520, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/private/tmp/quant-diagnosis-venv/lib/python3.9/site-packages/transformers/utils/generic.py", line 1072, in wrapper
+    outputs = func(self, *args, **kwargs)
+  File "/private/tmp/quant-diagnosis-venv/lib/python3.9/site-packages/transformers/models/gemma/modeling_gemma.py", line 404, in forward
+    hidden_states = decoder_layer(
+  File "/private/tmp/quant-diagnosis-venv/lib/python3.9/site-packages/transformers/modeling_layers.py", line 94, in __call__
+    return super().__call__(*args, **kwargs)
+  File "/private/tmp/quant-diagnosis-venv/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1511, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/private/tmp/quant-diagnosis-venv/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1520, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/private/tmp/quant-diagnosis-venv/lib/python3.9/site-packages/transformers/utils/deprecation.py", line 172, in wrapped_func
+    return func(*args, **kwargs)
+  File "/private/tmp/quant-diagnosis-venv/lib/python3.9/site-packages/transformers/models/gemma/modeling_gemma.py", line 302, in forward
+    hidden_states = self.mlp(hidden_states)
+  File "/private/tmp/quant-diagnosis-venv/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1511, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/private/tmp/quant-diagnosis-venv/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1520, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/private/tmp/quant-diagnosis-venv/lib/python3.9/site-packages/transformers/models/gemma/modeling_gemma.py", line 78, in forward
+    down_proj = self.down_proj(self.act_fn(self.gate_proj(x)) * self.up_proj(x))
+  File "/private/tmp/quant-diagnosis-venv/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1511, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/private/tmp/quant-diagnosis-venv/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1520, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/private/tmp/quant-diagnosis-venv/lib/python3.9/site-packages/torch/nn/modules/linear.py", line 116, in forward
+    return F.linear(input, self.weight, self.bias)
+KeyboardInterrupt

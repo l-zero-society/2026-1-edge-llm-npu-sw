@@ -1,0 +1,13 @@
+Loading and verifying local model/data...
+/private/tmp/quant-diagnosis-venv/lib/python3.9/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+Traceback (most recent call last):
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/diagnose_linear_quant_error.py", line 265, in <module>
+    if __name__=='__main__':main()
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/diagnose_linear_quant_error.py", line 195, in main
+    source=RecordedGGUFSource(args.model,args.data_dir,manifest,args.threads)
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/quant_diagnostic_source.py", line 65, in __init__
+    backend,kwargs=convert_gguf_tokenizer('gemma',tokenizer_data)
+  File "/private/tmp/quant-diagnosis-venv/lib/python3.9/site-packages/transformers/integrations/ggml.py", line 778, in convert_gguf_tokenizer
+    converter = GGUF_TO_FAST_CONVERTERS[tokenizer_class_name](tokenizer_dict)
+KeyError: 'gemma'

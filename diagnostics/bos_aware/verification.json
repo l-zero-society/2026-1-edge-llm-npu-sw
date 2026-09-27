@@ -1,0 +1,22 @@
+{
+  "passed": true,
+  "down_proj_layers": 18,
+  "total_operations": 18,
+  "historical_mse_max_relative_difference": 0.0,
+  "maximum_ratio_relative_error": 1.5051500014542814e-05,
+  "protected_files_unchanged": {
+    "src/static_quant/hardware.py": true,
+    "src/LUT.py": true,
+    "luts/cos_lut_2048B.bin": true,
+    "luts/exp_lut_512B.bin": true,
+    "luts/gelu_lut_1024B.bin": true,
+    "luts/rsqrt_lut_512B.bin": true,
+    "luts/scale_lut_512B.bin": true,
+    "luts/sin_lut_2048B.bin": true,
+    "core.quantize_input": true,
+    "core.quantize_weight": true,
+    "core.exact_accumulator": true,
+    "core.check_int32": true
+  },
+  "scope": "offline calibration output consistency; not RTL or end-to-end accuracy"
+}

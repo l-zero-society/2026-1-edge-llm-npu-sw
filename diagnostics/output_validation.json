@@ -1,0 +1,11 @@
+{
+  "passed": true,
+  "operations": 126,
+  "attribution_rows": 252,
+  "down_stats_rows": 36,
+  "mlp_rows": 108,
+  "input_sweep_rows": 252,
+  "output_sweep_rows": 216,
+  "max_stored_mse_relative_difference": 3.6637359812630166e-15,
+  "scope": "Output coverage/consistency, frozen baseline scales, calibration-only threshold fitting, source hash identity; not RTL or model-accuracy validation"
+}

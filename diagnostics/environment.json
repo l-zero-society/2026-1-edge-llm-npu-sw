@@ -1,0 +1,17 @@
+{
+  "platform": "macOS-15.7.4-arm64-arm-64bit",
+  "machine": "arm64",
+  "diagnostic_python": "/tmp/quant-diagnosis-venv/bin/python",
+  "forward_threads": 2,
+  "openblas_threads": 2,
+  "blas": "macOS Accelerate cblas_dgemm FP64",
+  "offline_model_loading": true,
+  "physical_ram_bytes": 34359738368,
+  "native_metric_compiler": "Apple clang 17.0.0 clang-1700.0.13.5",
+  "native_metric_flags": [
+    "-O3",
+    "-std=c11",
+    "-ffp-contract=off",
+    "-shared"
+  ]
+}

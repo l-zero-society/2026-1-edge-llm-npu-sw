@@ -1,0 +1,6 @@
+/private/tmp/quant-diagnosis-venv/lib/python3.9/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+8 calibration 72.50083923339844 31.52699089050293 384 384
+8 validation 72.50083923339844 20.011262893676758 96 96
+17 calibration 2347.782958984375 134.26748657226562 896 896
+17 validation 2347.782958984375 135.40660095214844 224 224

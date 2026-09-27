@@ -75,3 +75,9 @@ class GemmaHookIntegrationTests(unittest.TestCase):
         with self.assertRaisesRegex(ValueError,'test failure'):
             self.source.replay(name)(failure)
         self.assertFalse(self.source.modules[name]._forward_pre_hooks)
+
+    def test_position_metadata_excludes_padding_and_resets_per_sequence(self):
+        name='model.layers.0.mlp.down_proj'
+        observed=[]
+        self.source.replay(name,with_positions=True)(lambda x,p: observed.extend(p.tolist()))
+        self.assertEqual(observed,[0,1,2,3,0,1])

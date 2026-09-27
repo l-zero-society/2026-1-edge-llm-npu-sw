@@ -1,0 +1,924 @@
+{
+  "repository": "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw",
+  "commit": "f31f9e6e52a65362acd473f27ed0bfc05097335f",
+  "inventory_path": "diagnostics/file_inventory.json",
+  "tracked_files_modified": false,
+  "files": [
+    {
+      "path": "diagnostics/README.md",
+      "sha256": "c7f1f15c616cfd92bcde5041cffd8055bc7b4c6e66534e4a23be1a09daf40d16"
+    },
+    {
+      "path": "diagnostics/bulk_capture.log",
+      "sha256": "45f74ad41d853f51de99d5734fc1d489ce46be25eeeb56da7bf9808aea2a827a"
+    },
+    {
+      "path": "diagnostics/bulk_capture_provenance.json",
+      "sha256": "cdd984d1d7b3c803c097f0c6a280ea9bfb9695eabcdd1e04b882b49447a63c8c"
+    },
+    {
+      "path": "diagnostics/checkpoint_imports.json",
+      "sha256": "ed79d2d9f04500be1aeb2ee3cdd0383a7d1ea32e8105bd330cd88f040b00b320"
+    },
+    {
+      "path": "diagnostics/commands.jsonl",
+      "sha256": "8dfbb51f29d0a68ca0e11007d06318479df253f5f10f53b56c70f92571cef8f3"
+    },
+    {
+      "path": "diagnostics/commands.md",
+      "sha256": "6b407e99da38cfe49f41bfb403996fe135c39247721588528783b686db0de375"
+    },
+    {
+      "path": "diagnostics/diagnosis_provenance.json",
+      "sha256": "fc2a8f9bdc803fd008a62adb060d591fe06327e086c880a0256ef0e48985b929"
+    },
+    {
+      "path": "diagnostics/down_proj_activation_stats.csv",
+      "sha256": "3143f1cac86c59b2830c4a45499cdcbdb9bbafc37441d50c8f88a01fc67e3d0f"
+    },
+    {
+      "path": "diagnostics/down_proj_output_scale_sweep.csv",
+      "sha256": "58182c71e9345cc107fe0fed4e6b90754258e060d6d3a20457f600bc0fc750d9"
+    },
+    {
+      "path": "diagnostics/down_proj_scale_sweep.csv",
+      "sha256": "9643638ef9f12eaf98a18a191dcbbd1efb2719043ab1814e26e0acd14122d64e"
+    },
+    {
+      "path": "diagnostics/early_layer8/commands.jsonl",
+      "sha256": "3ff3e8808c728a5cbf0b17349792377a1f40ce1dff8fa45c25102869671be973"
+    },
+    {
+      "path": "diagnostics/early_layer8/diagnosis_provenance.json",
+      "sha256": "fc2a8f9bdc803fd008a62adb060d591fe06327e086c880a0256ef0e48985b929"
+    },
+    {
+      "path": "diagnostics/early_layer8/down_proj_output_scale_sweep.csv",
+      "sha256": "a69bb130edfc61c42a1484696a4e1e3106bc4a3eb4b20b50390db6f2754510e6"
+    },
+    {
+      "path": "diagnostics/early_layer8/down_proj_scale_sweep.csv",
+      "sha256": "48ef2a430912723efc97a96c738738821b521724da59bdee1cf45b7768bc44ec"
+    },
+    {
+      "path": "diagnostics/early_layer8/sweeps/model.layers.8.mlp.down_proj.json",
+      "sha256": "28b3ba7f7773ab9a665cae5127b7517f2d7811395bb4def96f67696da56174c1"
+    },
+    {
+      "path": "diagnostics/early_layer8_execution.log",
+      "sha256": "11a038ff0de3297173fc942bc4f85c63f2816ffd031b3c9700e9dd8664e3799c"
+    },
+    {
+      "path": "diagnostics/environment.json",
+      "sha256": "b16146d4793ccf184c1ba66a64227f6ddee5247270db6db1a9e30df25e35bfa8"
+    },
+    {
+      "path": "diagnostics/execution.log",
+      "sha256": "ab9d4d4ea9e63281e16370ce741e3efb7dbc7495d25adb241e7d93238a85fcea"
+    },
+    {
+      "path": "diagnostics/mlp_activation_comparison.csv",
+      "sha256": "e37baa62a7e1abc9ac7b6c4a8eb36265066fe74e5be325c733768e3272aaa6b6"
+    },
+    {
+      "path": "diagnostics/outlier_audit.log",
+      "sha256": "06387c54659c1df9b412363c49c23c976313a0e330d37de785dc6b6db9a170b9"
+    },
+    {
+      "path": "diagnostics/outlier_position_audit.json",
+      "sha256": "938598b46ab3200ba40fe56a0fc2d3855b60e459055bddff767d1d08884fbc20"
+    },
+    {
+      "path": "diagnostics/output_validation.json",
+      "sha256": "cfb8581268f4123f7a2b5c9675026bce1ee334b5a96d917ff1bd3ec0350c33db"
+    },
+    {
+      "path": "diagnostics/parallel_high_layers/commands.jsonl",
+      "sha256": "2a9329ab1d5c143da2fb8659c328c8a078d9d26cafc259f9718abcf000a58a10"
+    },
+    {
+      "path": "diagnostics/parallel_high_layers/diagnosis_provenance.json",
+      "sha256": "fc2a8f9bdc803fd008a62adb060d591fe06327e086c880a0256ef0e48985b929"
+    },
+    {
+      "path": "diagnostics/parallel_high_layers/down_proj_output_scale_sweep.csv",
+      "sha256": "f0ecd60481620f8a3dff5af2d811a54ddd59558ca2f920baf0c65278cbabf940"
+    },
+    {
+      "path": "diagnostics/parallel_high_layers/down_proj_scale_sweep.csv",
+      "sha256": "07b3453d02033006acec4e1ac3acfefed2a484e6d607033ec205dd1f676a6294"
+    },
+    {
+      "path": "diagnostics/parallel_high_layers/sweeps/model.layers.12.mlp.down_proj.json",
+      "sha256": "6dff931bad4f723bf43ec900983847098f1428278981e87160dfa5e96cdc3de1"
+    },
+    {
+      "path": "diagnostics/parallel_high_layers/sweeps/model.layers.13.mlp.down_proj.json",
+      "sha256": "d7a570d2d750c622803f370dbc451ce7e60735f40b30ec24a28f31a206e35240"
+    },
+    {
+      "path": "diagnostics/parallel_high_layers/sweeps/model.layers.14.mlp.down_proj.json",
+      "sha256": "3d90034f04bc2cf3f3e7aec86f535af1902cda0fdd525f6b705bcfa0b9278eb7"
+    },
+    {
+      "path": "diagnostics/parallel_high_layers/sweeps/model.layers.15.mlp.down_proj.json",
+      "sha256": "4952f91682d098d66febfc8623fde4964cb937084119c53c7acd3290a7efb406"
+    },
+    {
+      "path": "diagnostics/parallel_high_layers/sweeps/model.layers.16.mlp.down_proj.json",
+      "sha256": "5a64767782abbb87a3e1bbf0c943796334e6c3ac2d2487f142ab2a263d094fc7"
+    },
+    {
+      "path": "diagnostics/parallel_high_layers/sweeps/model.layers.17.mlp.down_proj.json",
+      "sha256": "e066c9441f9705a56de9ae1ad42979c6b537ec2ae03b9ed8e8070c48c82d459b"
+    },
+    {
+      "path": "diagnostics/parallel_high_layers_execution.log",
+      "sha256": "526d241fde7f0c1489ab0f25903f6995ab00846e7521da83830f93ca661924c7"
+    },
+    {
+      "path": "diagnostics/parallel_sweeps/commands.jsonl",
+      "sha256": "0a6c66dfae9d17a383c1591c55c597af39470c5887fe1c2d636a5d28a7d14a8c"
+    },
+    {
+      "path": "diagnostics/parallel_sweeps/diagnosis_provenance.json",
+      "sha256": "fc2a8f9bdc803fd008a62adb060d591fe06327e086c880a0256ef0e48985b929"
+    },
+    {
+      "path": "diagnostics/parallel_sweeps/down_proj_output_scale_sweep.csv",
+      "sha256": "7d7ab0d67a2d2e68da9c4cbe8766240ed23754fded98ce1595fb55020f8f4e3e"
+    },
+    {
+      "path": "diagnostics/parallel_sweeps/down_proj_scale_sweep.csv",
+      "sha256": "0c461bdf7c4fea269b76d34e02ab0bfebfd6fa490e5b5a50654206ca92d7a001"
+    },
+    {
+      "path": "diagnostics/parallel_sweeps/sweeps/model.layers.0.mlp.down_proj.json",
+      "sha256": "cc43791baae234ead42bd3ceedaad0f3d8ec157a758daef7ecd08ba93688f27a"
+    },
+    {
+      "path": "diagnostics/parallel_sweeps/sweeps/model.layers.1.mlp.down_proj.json",
+      "sha256": "bb4bef730523a23cb260efd92bc2154c66931bca751a1095f4a522aca561f868"
+    },
+    {
+      "path": "diagnostics/parallel_sweeps/sweeps/model.layers.2.mlp.down_proj.json",
+      "sha256": "f146f060390ae7ac6af3b2b6ef3c91cda1ddb3421104b71387491302cb2f2210"
+    },
+    {
+      "path": "diagnostics/parallel_sweeps/sweeps/model.layers.3.mlp.down_proj.json",
+      "sha256": "20b780d3f02e954121691bbebff9a437ff304f40e087a636a869dac6feb5696b"
+    },
+    {
+      "path": "diagnostics/parallel_sweeps_execution.log",
+      "sha256": "65c772b04de557c7c9acd32bb34ae1cdbd658c51834850df27de6361be85b6a7"
+    },
+    {
+      "path": "diagnostics/pilot_accelerate_numpy/commands.jsonl",
+      "sha256": "55ccf3618310704246a07a3382d018e516f3b038d58f088795a98d5aba6f1bd5"
+    },
+    {
+      "path": "diagnostics/pilot_accelerate_numpy/diagnosis_provenance.json",
+      "sha256": "01e352b19bdbffb24a1ba8a7527aedb25f57571e3270c105e085d5d12da246cd"
+    },
+    {
+      "path": "diagnostics/pilot_accelerate_numpy/down_proj_activation_stats.csv",
+      "sha256": "564b423e38d8693ba4d33617c9b012413805450795fb691d1bbadcc5c1d8413b"
+    },
+    {
+      "path": "diagnostics/pilot_accelerate_numpy/execution.log",
+      "sha256": "0d7e0aaae5e1760ba7232c648462fe09600eaa4a9a78460307f381dd5aecdede"
+    },
+    {
+      "path": "diagnostics/pilot_accelerate_numpy/mlp_activation_comparison.csv",
+      "sha256": "94d48f793e1b365849a464f62e387e9ba1a614313decf5f0d87c3d1554e7f480"
+    },
+    {
+      "path": "diagnostics/pilot_accelerate_numpy/quant_error_attribution.csv",
+      "sha256": "15d9bc527cc08820d2e097ff614a136f306e8b129cb5fb2210d692adb1cbeecf"
+    },
+    {
+      "path": "diagnostics/pilot_accelerate_numpy/results/model.layers.0.mlp.down_proj.json",
+      "sha256": "28eb7c8f8f46b098f6882010be3c81003b302b7ebd4c59bf1baa811612be28af"
+    },
+    {
+      "path": "diagnostics/pilot_accelerate_numpy/results/model.layers.0.mlp.gate_proj.json",
+      "sha256": "094407942d071496a16847afe6825b7653b1884b175ecbe672e306f48518c4d9"
+    },
+    {
+      "path": "diagnostics/pilot_accelerate_numpy/results/model.layers.0.mlp.up_proj.json",
+      "sha256": "0f3a63d73a7659fe25c3cf3e60d974d424eccc1464dd29426e0d8cf7b0af6526"
+    },
+    {
+      "path": "diagnostics/pilot_accelerate_numpy/results/model.layers.0.self_attn.k_proj.json",
+      "sha256": "12560141168a0d6867a2ed88adb597b15ade69f706392b83281af20fe4e315af"
+    },
+    {
+      "path": "diagnostics/pilot_accelerate_numpy/results/model.layers.0.self_attn.o_proj.json",
+      "sha256": "5d62748529ebd0de4c9d349c87870f68c05b7e8e1f2306f289439f0e540e1c9e"
+    },
+    {
+      "path": "diagnostics/pilot_accelerate_numpy/results/model.layers.0.self_attn.q_proj.json",
+      "sha256": "c485fbca66aed62f7b67907291a626d3acbd9723cc3b022a3a48a80bafaffc86"
+    },
+    {
+      "path": "diagnostics/pilot_accelerate_numpy/results/model.layers.0.self_attn.v_proj.json",
+      "sha256": "212f9bdf84ed64cec72f28118ccad2ecc37906faf21f0421fedf02210d0fd53a"
+    },
+    {
+      "path": "diagnostics/pilot_numpy/commands.jsonl",
+      "sha256": "4a02d82a865822d1837344d9e1adfc0b14a731feb83201b644686380543416c8"
+    },
+    {
+      "path": "diagnostics/pilot_numpy/diagnosis_provenance.json",
+      "sha256": "fde806870641bc0ce6b609125284cc44f9a5e3650e8ed59887f2cfa93b139ea3"
+    },
+    {
+      "path": "diagnostics/pilot_numpy/down_proj_activation_stats.csv",
+      "sha256": "42054d9dfbdee8c27cf738b3c86da5de19052e112f56aa1a6b7b81a0cb3978e3"
+    },
+    {
+      "path": "diagnostics/pilot_numpy/execution.log",
+      "sha256": "8a4009cb70e8f299f338c1bc33a59e06c9fd19cdfc23365b66ae138f06aae4fa"
+    },
+    {
+      "path": "diagnostics/pilot_numpy/mlp_activation_comparison.csv",
+      "sha256": "42054d9dfbdee8c27cf738b3c86da5de19052e112f56aa1a6b7b81a0cb3978e3"
+    },
+    {
+      "path": "diagnostics/pilot_numpy/quant_error_attribution.csv",
+      "sha256": "8e79226275f7e16822eaf947e9f8f54592f987c75253335c9fbcb829025749cf"
+    },
+    {
+      "path": "diagnostics/pilot_numpy/results/model.layers.8.mlp.down_proj.json",
+      "sha256": "a3a771b052fd890a0b8833b01fb81a93e38672bf5c7a54f45c56bb870b648c57"
+    },
+    {
+      "path": "diagnostics/preflight/failed_loader.log",
+      "sha256": "145e5ec54e1aeb1e9cdd7f0c92d64793c3ecec1e6e684a63f0ca6fad5ad4b2ce"
+    },
+    {
+      "path": "diagnostics/preflight/failed_loader_provenance.json",
+      "sha256": "109868f99b205a5198e9d3450e8a40746923aedecabb6d8c3bb3632e0dc89f22"
+    },
+    {
+      "path": "diagnostics/python_packages.txt",
+      "sha256": "e60307514be5c44511bdc1f7df962fac82c9b78036b62c8717b2df0f13fff461"
+    },
+    {
+      "path": "diagnostics/quant_error_attribution.csv",
+      "sha256": "8cdfdc4340065e7015c5b23a70b21a499482153cc55d9ca807ec182393f8fce4"
+    },
+    {
+      "path": "diagnostics/quant_error_diagnosis.md",
+      "sha256": "5414090b04e66df7b2275138404a0d103b09a9609be9b1b6703e287aed75e6b1"
+    },
+    {
+      "path": "diagnostics/quantization_parameters.csv",
+      "sha256": "48af3dfe995ca28058d5a851581f6daf24ed6fac34b23d727fc4b04d66146d95"
+    },
+    {
+      "path": "diagnostics/results/model.layers.0.mlp.down_proj.json",
+      "sha256": "f0afc9a5b2aa1d79b39d501ce3da24dcc26e728d6897f109df52607547148610"
+    },
+    {
+      "path": "diagnostics/results/model.layers.0.mlp.gate_proj.json",
+      "sha256": "cfb82fed794a318e2ad0da451c489ab5edd20fb8d74aeadca7b4ef16061cc82d"
+    },
+    {
+      "path": "diagnostics/results/model.layers.0.mlp.up_proj.json",
+      "sha256": "fe2dcd89e3c66b10df0043d72ee81ca3529257fa882784cb4eddf0fb02c65fcb"
+    },
+    {
+      "path": "diagnostics/results/model.layers.0.self_attn.k_proj.json",
+      "sha256": "2a4ea455381ad99aaa04410efff20876ee02e995b7cb9737f5b3ec682f46b25f"
+    },
+    {
+      "path": "diagnostics/results/model.layers.0.self_attn.o_proj.json",
+      "sha256": "db911f563f90e78a5bfcb472b50eab53ed52048bb485c3c7a5717e408791d2f7"
+    },
+    {
+      "path": "diagnostics/results/model.layers.0.self_attn.q_proj.json",
+      "sha256": "a882d76929590b53b234b98b795874471fdc273fe1c4de47a6d1fea36d5274f2"
+    },
+    {
+      "path": "diagnostics/results/model.layers.0.self_attn.v_proj.json",
+      "sha256": "7dc507f696f19bb74b51d67522cf7cc6f0baed589519bd627bd2b767717135ed"
+    },
+    {
+      "path": "diagnostics/results/model.layers.1.mlp.down_proj.json",
+      "sha256": "4d428844e80d4db3a0beb9b5ff9e4c115ab45ebf311ca65dd2d8bcc348ea33a2"
+    },
+    {
+      "path": "diagnostics/results/model.layers.1.mlp.gate_proj.json",
+      "sha256": "dc11c6d42c1b88be1ddce473961d08971269a42aac7a368617ded205745f9488"
+    },
+    {
+      "path": "diagnostics/results/model.layers.1.mlp.up_proj.json",
+      "sha256": "25b6f66ef099b9360af70651cc92853919a1dbabf283537841ffd04c6aac3a2c"
+    },
+    {
+      "path": "diagnostics/results/model.layers.1.self_attn.k_proj.json",
+      "sha256": "ef8595d859ce33acca980f4cbc0c1f2002020c86eb8c134080bf3aa2bac92d42"
+    },
+    {
+      "path": "diagnostics/results/model.layers.1.self_attn.o_proj.json",
+      "sha256": "813ce77894847eefaf90642166c21c6bbe59683d1dbfd74dc166b778bec71060"
+    },
+    {
+      "path": "diagnostics/results/model.layers.1.self_attn.q_proj.json",
+      "sha256": "9d29f3535406195a969d6835bf24101268145f4887f7caf5896886f0ee3a6f9c"
+    },
+    {
+      "path": "diagnostics/results/model.layers.1.self_attn.v_proj.json",
+      "sha256": "64bdb559ea453fbc14b54ef2bae7164d3be5020385391125b3c5e435ea6e76aa"
+    },
+    {
+      "path": "diagnostics/results/model.layers.10.mlp.down_proj.json",
+      "sha256": "2d6360ad71eeb7c1885428f82f0e0174629b91f8bb2ef092b79c5932d090800e"
+    },
+    {
+      "path": "diagnostics/results/model.layers.10.mlp.gate_proj.json",
+      "sha256": "aef6472cd9d20d29459f66e901732ce63a3599b73d5f4d7f417fd16881951584"
+    },
+    {
+      "path": "diagnostics/results/model.layers.10.mlp.up_proj.json",
+      "sha256": "48e8dbcabe654ff0dc983ff03fc5976553c75ecb2d6dbb3442a5bdf5601dc374"
+    },
+    {
+      "path": "diagnostics/results/model.layers.10.self_attn.k_proj.json",
+      "sha256": "3048f44704f3dcdede00ee64ac24a53bfacb0793b4dbd07c56cfb80cafdeca0f"
+    },
+    {
+      "path": "diagnostics/results/model.layers.10.self_attn.o_proj.json",
+      "sha256": "be364f09bf86e2263e464c47e97e90b61e6e02461df710082195a2f6a65ff07a"
+    },
+    {
+      "path": "diagnostics/results/model.layers.10.self_attn.q_proj.json",
+      "sha256": "3c3a8c829981f16833a2673f9193bc61053da7b66171898627f33e56091e559f"
+    },
+    {
+      "path": "diagnostics/results/model.layers.10.self_attn.v_proj.json",
+      "sha256": "bf4095ae79a0967243f460cd42b70c508cbc95d4064b91cf07f229c734f0207a"
+    },
+    {
+      "path": "diagnostics/results/model.layers.11.mlp.down_proj.json",
+      "sha256": "57bef448065ed7a8132d0487a5a28770bd0068f7975d23dc0c3ac1dc6e222d7a"
+    },
+    {
+      "path": "diagnostics/results/model.layers.11.mlp.gate_proj.json",
+      "sha256": "0f3cef03825740021c5e9cded0a48d102978ffcab8f77fbdb47e2f2b206ad13e"
+    },
+    {
+      "path": "diagnostics/results/model.layers.11.mlp.up_proj.json",
+      "sha256": "6bb69f2e73c6bcb2f83525d6c0565a05088d70d84a53f89adc1625905893d8b1"
+    },
+    {
+      "path": "diagnostics/results/model.layers.11.self_attn.k_proj.json",
+      "sha256": "9832a90a8952395347a23abaf9178c8932a1ac88d5e77b45190e6936820f5c2f"
+    },
+    {
+      "path": "diagnostics/results/model.layers.11.self_attn.o_proj.json",
+      "sha256": "0a39e7724cb56531f284338183be8d7f64a7c044165585c6093a36f8dc5c1ae8"
+    },
+    {
+      "path": "diagnostics/results/model.layers.11.self_attn.q_proj.json",
+      "sha256": "25f70575b4e60447768a67844e395bc7f74bea40ed27a556626cd7312724e7d7"
+    },
+    {
+      "path": "diagnostics/results/model.layers.11.self_attn.v_proj.json",
+      "sha256": "46e0fa11b197b3755d4c761d84435774d6378465ad33c237eb263315ca94e50d"
+    },
+    {
+      "path": "diagnostics/results/model.layers.12.mlp.down_proj.json",
+      "sha256": "b824c7ab67b6192ac4f2f1da3eb5a66d4daab38c51daae7031ce627917056cb5"
+    },
+    {
+      "path": "diagnostics/results/model.layers.12.mlp.gate_proj.json",
+      "sha256": "8158622965e92a7acf19ed49c2c6521d4430e9df15296bec831aee3776bf1e2b"
+    },
+    {
+      "path": "diagnostics/results/model.layers.12.mlp.up_proj.json",
+      "sha256": "6a7ddf45f82be81ac5e753ea21715f230bc4d4d1836b4447e9f188e3e5bab87a"
+    },
+    {
+      "path": "diagnostics/results/model.layers.12.self_attn.k_proj.json",
+      "sha256": "85fc2287cd0b3b6a9a9707f9eec6cae8b5f04faa4e87134041c050ac1f804ed7"
+    },
+    {
+      "path": "diagnostics/results/model.layers.12.self_attn.o_proj.json",
+      "sha256": "52c7980a17c006be4fb1a229c6068d549a615fc8edfc9a5d2451c20b64ecc984"
+    },
+    {
+      "path": "diagnostics/results/model.layers.12.self_attn.q_proj.json",
+      "sha256": "062e8cb10c6919acaeb34df6ba41b21d7c1f3c6e89b206c2986a42db0083f879"
+    },
+    {
+      "path": "diagnostics/results/model.layers.12.self_attn.v_proj.json",
+      "sha256": "ebedd7b646dfa6580bda45d7255f11c723bcc16f1e2f23730c05c9f2adb16d7f"
+    },
+    {
+      "path": "diagnostics/results/model.layers.13.mlp.down_proj.json",
+      "sha256": "ca1a44a1dc9988e14ff8f5dcfedea04c89076dd28407be069e42bedcdf5d437c"
+    },
+    {
+      "path": "diagnostics/results/model.layers.13.mlp.gate_proj.json",
+      "sha256": "d3dcbd09b0d782403bb00364b687fd1e6c89b0285345c0ed95c10b0702b34e6a"
+    },
+    {
+      "path": "diagnostics/results/model.layers.13.mlp.up_proj.json",
+      "sha256": "81a2206969dca0ef5a359ee095968e664e75f786d50ce210864a212ab0c02f2e"
+    },
+    {
+      "path": "diagnostics/results/model.layers.13.self_attn.k_proj.json",
+      "sha256": "7ffd21c9de7c65c8abb4840a046a7066e3a53455066af57e06d5802a6ac7e726"
+    },
+    {
+      "path": "diagnostics/results/model.layers.13.self_attn.o_proj.json",
+      "sha256": "3d93c84fd836c2a145c367f70d1347cb8ec24fd454cd13f8190bc5c2259a39df"
+    },
+    {
+      "path": "diagnostics/results/model.layers.13.self_attn.q_proj.json",
+      "sha256": "5abb8b1d08e4bb1b09b0052a81d80b535d15143dcda048273b9422f910f1ed8a"
+    },
+    {
+      "path": "diagnostics/results/model.layers.13.self_attn.v_proj.json",
+      "sha256": "64317ebea1a00778322bad560e3671b621932fe34d555a1f5ea42e383eb37a0e"
+    },
+    {
+      "path": "diagnostics/results/model.layers.14.mlp.down_proj.json",
+      "sha256": "cde0f3d3923bb8a149e0215e2dd2ae871c87fed70fd26decdcaa0eaad8dd4c54"
+    },
+    {
+      "path": "diagnostics/results/model.layers.14.mlp.gate_proj.json",
+      "sha256": "f6051812ae98de92b1aae915a15e7335d841511c29d2dde33b4761f5d17e90ec"
+    },
+    {
+      "path": "diagnostics/results/model.layers.14.mlp.up_proj.json",
+      "sha256": "0c170fcbfef0d54cf5aa72e6a0e3ed486b24ca01d6c90fd5a3b7213e93b36268"
+    },
+    {
+      "path": "diagnostics/results/model.layers.14.self_attn.k_proj.json",
+      "sha256": "116eeeccf29997d92a65bce898575a57d27630d45c3d11174391026643b4a303"
+    },
+    {
+      "path": "diagnostics/results/model.layers.14.self_attn.o_proj.json",
+      "sha256": "269273824af349c3de0315bc7f28b28b8dc5655df77d733d37b7bb375988b890"
+    },
+    {
+      "path": "diagnostics/results/model.layers.14.self_attn.q_proj.json",
+      "sha256": "792132a34b8c7dba6c9dbfee0ca37c28eaf0c93ee610b724d2cb2a6c804b7365"
+    },
+    {
+      "path": "diagnostics/results/model.layers.14.self_attn.v_proj.json",
+      "sha256": "de4f472495d7bf2d97d0a00d941fa6249fd0d88815480879b5648f4bb21c5828"
+    },
+    {
+      "path": "diagnostics/results/model.layers.15.mlp.down_proj.json",
+      "sha256": "a3130272c5d61e490300794193c1669e60faf9d22c630b6f4e58e212c3498f1d"
+    },
+    {
+      "path": "diagnostics/results/model.layers.15.mlp.gate_proj.json",
+      "sha256": "c685fa39e359d513f3f6b63a48c95ec7fa8a2b89cd0bff3d1c2efb1579945d8a"
+    },
+    {
+      "path": "diagnostics/results/model.layers.15.mlp.up_proj.json",
+      "sha256": "af2866d04ce91b79c946ca5c56953547148ef078c8bdc7d76bb775bdb540e0ea"
+    },
+    {
+      "path": "diagnostics/results/model.layers.15.self_attn.k_proj.json",
+      "sha256": "9382a75bba38b5310769acfb9639f72915daec3af0610e66c2377e4beef550a9"
+    },
+    {
+      "path": "diagnostics/results/model.layers.15.self_attn.o_proj.json",
+      "sha256": "fe4f0ea6b3f660800ccd826eeb5a334322bff4a4f7d351e2583c66eb55012bbe"
+    },
+    {
+      "path": "diagnostics/results/model.layers.15.self_attn.q_proj.json",
+      "sha256": "2e85703e581fab85b36c95b6833eec332a3cd3e2774de78a7565dbd176926e10"
+    },
+    {
+      "path": "diagnostics/results/model.layers.15.self_attn.v_proj.json",
+      "sha256": "4eeedac590666854fbd63576d24e3fd88a5964068b996a97c2d6713468081cf7"
+    },
+    {
+      "path": "diagnostics/results/model.layers.16.mlp.down_proj.json",
+      "sha256": "b6ad64ecc1d3a401639cd2cbbb3660e222696d77463c48d650fb5cd23106243e"
+    },
+    {
+      "path": "diagnostics/results/model.layers.16.mlp.gate_proj.json",
+      "sha256": "d072e48672a165aa4467582f5162a1b09286b27c7584d632f4b7aff3730bf993"
+    },
+    {
+      "path": "diagnostics/results/model.layers.16.mlp.up_proj.json",
+      "sha256": "df905221526c40669b540ecae433a1bf1e0d8278ac0c39f79c224fdfbc1c1297"
+    },
+    {
+      "path": "diagnostics/results/model.layers.16.self_attn.k_proj.json",
+      "sha256": "f99758788ef2ddb615310d10e3433d906be92675d68dec128ad5e5537d9b74ab"
+    },
+    {
+      "path": "diagnostics/results/model.layers.16.self_attn.o_proj.json",
+      "sha256": "973fcac860ff009cedaa1050d9c574c8bfae0a3b7e853a8f154208bc68caf8ac"
+    },
+    {
+      "path": "diagnostics/results/model.layers.16.self_attn.q_proj.json",
+      "sha256": "3febd2fde93a6ff9639d24cab183e2484ff4e8c9b6b856814628c042e1da27cc"
+    },
+    {
+      "path": "diagnostics/results/model.layers.16.self_attn.v_proj.json",
+      "sha256": "9b13da9090c61de0b4549d2ccbedb847b35127fcf4c849da6b868cf762a37452"
+    },
+    {
+      "path": "diagnostics/results/model.layers.17.mlp.down_proj.json",
+      "sha256": "a98161eff58c22d1a9aaa0ae43e216c024d96e4115097068356ec1a66e502fea"
+    },
+    {
+      "path": "diagnostics/results/model.layers.17.mlp.gate_proj.json",
+      "sha256": "fe0686faf3d01417ad813d96334ee01536e6cb6bb8d367fc4b57e1feb7f63608"
+    },
+    {
+      "path": "diagnostics/results/model.layers.17.mlp.up_proj.json",
+      "sha256": "761c455594b127fdd9937cae8985da7da0364f2ef3f34bdd49f8738fa19e2d63"
+    },
+    {
+      "path": "diagnostics/results/model.layers.17.self_attn.k_proj.json",
+      "sha256": "9190e99677865a64e27ab6d250c60976fc49e18a716b53fe9fd9401c51a2383b"
+    },
+    {
+      "path": "diagnostics/results/model.layers.17.self_attn.o_proj.json",
+      "sha256": "7d2b7452a80f8750bf0f3ed388b032e4bff3fce0a263fce8c42a5b3e93321ffa"
+    },
+    {
+      "path": "diagnostics/results/model.layers.17.self_attn.q_proj.json",
+      "sha256": "3a8299889898896b4fe84d97166ee8b0777e48807a257805cadce002ca8b52d1"
+    },
+    {
+      "path": "diagnostics/results/model.layers.17.self_attn.v_proj.json",
+      "sha256": "4b401ec3f43b1de97c69f41f4aaf35659043603319d8616b8c0c6d43a38e6e3a"
+    },
+    {
+      "path": "diagnostics/results/model.layers.2.mlp.down_proj.json",
+      "sha256": "9b397108f26d28288bf75aa35b86c71a945e1cc71c067e73082144acc23a2525"
+    },
+    {
+      "path": "diagnostics/results/model.layers.2.mlp.gate_proj.json",
+      "sha256": "e07a52558cc3b6f2fee01e5e1b21ccecfe573b67e94bb5a8cf17b90cdc8e7624"
+    },
+    {
+      "path": "diagnostics/results/model.layers.2.mlp.up_proj.json",
+      "sha256": "3a4346e397bf1f50c482f6ada7bbbe415e5015a7567a980aac7aa5f8edf718f9"
+    },
+    {
+      "path": "diagnostics/results/model.layers.2.self_attn.k_proj.json",
+      "sha256": "250727c00bcf46b90f5ab944d03b12f61b0866fbf65db0e82c36c83bfed27ef2"
+    },
+    {
+      "path": "diagnostics/results/model.layers.2.self_attn.o_proj.json",
+      "sha256": "f66bbfeef5f3f421f00f999dbd53cd391bb8cb6c0dd33bf3322d8f60ab9ed213"
+    },
+    {
+      "path": "diagnostics/results/model.layers.2.self_attn.q_proj.json",
+      "sha256": "993bbc1824b56d2b5c966770ac119874f8aa47388f38267fd3e80f6712517e9b"
+    },
+    {
+      "path": "diagnostics/results/model.layers.2.self_attn.v_proj.json",
+      "sha256": "68ab06e3bc56d8b404ae4cda7eb73e777de87488b0cf8f72ceddbc0043a74ab7"
+    },
+    {
+      "path": "diagnostics/results/model.layers.3.mlp.down_proj.json",
+      "sha256": "91de05ba9eaebb492d2e326125d9376ee29864fb40c75f36974cbbdb39a037fc"
+    },
+    {
+      "path": "diagnostics/results/model.layers.3.mlp.gate_proj.json",
+      "sha256": "f2521954cf513bef24018a5ed69055170352027c3f1606ece12737380508bdc5"
+    },
+    {
+      "path": "diagnostics/results/model.layers.3.mlp.up_proj.json",
+      "sha256": "6c534338db26c02c63ddc6f23db820b4769031a7848398670a1431c59629572c"
+    },
+    {
+      "path": "diagnostics/results/model.layers.3.self_attn.k_proj.json",
+      "sha256": "e334d2c925d6f41c93301b0a49c595bc202a7dc0b5f7bf796acb83c5c9f27f22"
+    },
+    {
+      "path": "diagnostics/results/model.layers.3.self_attn.o_proj.json",
+      "sha256": "56cb9767947f46d5c006b57db23b0248228dbc932a7df494594dac8a5969c742"
+    },
+    {
+      "path": "diagnostics/results/model.layers.3.self_attn.q_proj.json",
+      "sha256": "798611e6bc3491a90463b19620bb30bcbd80f250f3af3724df71d22f51c4e31e"
+    },
+    {
+      "path": "diagnostics/results/model.layers.3.self_attn.v_proj.json",
+      "sha256": "42ddfc464d722257916f6c9cfaeeb9124002fd06d23b22a13e822028817c612d"
+    },
+    {
+      "path": "diagnostics/results/model.layers.4.mlp.down_proj.json",
+      "sha256": "e838b265ed600a383ffdb37782426f0c2bfb61adf9c43079fce8a13ae1dad682"
+    },
+    {
+      "path": "diagnostics/results/model.layers.4.mlp.gate_proj.json",
+      "sha256": "83d6f2fb1dc8d1b963e652e58229568351df668228924984b99140c07443651c"
+    },
+    {
+      "path": "diagnostics/results/model.layers.4.mlp.up_proj.json",
+      "sha256": "18a0efe5da3a8fc20c8cce11179bc7193746d09ee9e8810a18c403ee5e403f82"
+    },
+    {
+      "path": "diagnostics/results/model.layers.4.self_attn.k_proj.json",
+      "sha256": "b808c12ed936edaff4b20f52caa5c9de7e569aa7e0b3b20b4202ca13d1390baf"
+    },
+    {
+      "path": "diagnostics/results/model.layers.4.self_attn.o_proj.json",
+      "sha256": "e258dbf92f2c290d101d386e82c18d6f459e595fbcf1c297a1de0b846c9186d4"
+    },
+    {
+      "path": "diagnostics/results/model.layers.4.self_attn.q_proj.json",
+      "sha256": "6d591a822aaf090870b18f04ebb76fa842c46e2de263ce9844b0c2b59b5a2330"
+    },
+    {
+      "path": "diagnostics/results/model.layers.4.self_attn.v_proj.json",
+      "sha256": "4c83a00f35d9bfd452148a7afcea93d6a41ecac0acef68e3fb643436d24758e0"
+    },
+    {
+      "path": "diagnostics/results/model.layers.5.mlp.down_proj.json",
+      "sha256": "8931b26d6f62690a1e35d6b08b8f1724753ba14401956352f75ec0263f018cf1"
+    },
+    {
+      "path": "diagnostics/results/model.layers.5.mlp.gate_proj.json",
+      "sha256": "c11330851454aae8f72bb1c72f924dba0e2d1983dc3c981c6b833ad10dc628e5"
+    },
+    {
+      "path": "diagnostics/results/model.layers.5.mlp.up_proj.json",
+      "sha256": "8ed3ffdad6b0e56ff3a99d4f35c87fa744026101529ce4cfc63902bab20738c9"
+    },
+    {
+      "path": "diagnostics/results/model.layers.5.self_attn.k_proj.json",
+      "sha256": "8f169adc45790ca547da091bbdb74f334b56029043620ac1596bef9e0a5eabb3"
+    },
+    {
+      "path": "diagnostics/results/model.layers.5.self_attn.o_proj.json",
+      "sha256": "dea6297142593231a1453402ea462adfd8166790f3abb828eb0f33f5ca28d533"
+    },
+    {
+      "path": "diagnostics/results/model.layers.5.self_attn.q_proj.json",
+      "sha256": "a0f2250859e6a6e21c062bbf64cc1f54cb991406ae0186454545d50d7f7b275e"
+    },
+    {
+      "path": "diagnostics/results/model.layers.5.self_attn.v_proj.json",
+      "sha256": "cf847f1d861f2283a980986afd38330994bc1d445d4b25a5471eabe92a89ceb0"
+    },
+    {
+      "path": "diagnostics/results/model.layers.6.mlp.down_proj.json",
+      "sha256": "d9048118deba1d21b2fd71a8b0d663ed5a82f2957c84d56eeba272f24fd21ea6"
+    },
+    {
+      "path": "diagnostics/results/model.layers.6.mlp.gate_proj.json",
+      "sha256": "242783974abe324bb5d90e2af0a6b42a0cf6d519222b15321401ca8b96c68d3e"
+    },
+    {
+      "path": "diagnostics/results/model.layers.6.mlp.up_proj.json",
+      "sha256": "89e23772d3e72bb6c870d3a096d8987235ebefba749472d255bd1bfd71842d57"
+    },
+    {
+      "path": "diagnostics/results/model.layers.6.self_attn.k_proj.json",
+      "sha256": "109ae546b9c92b416d112719af17a3a537460b2c5e623c959214686d0ccd9513"
+    },
+    {
+      "path": "diagnostics/results/model.layers.6.self_attn.o_proj.json",
+      "sha256": "f3285ceccfc4cb0fcbf6b988ac25516bc304b1551e521d361c5f95f10c6389be"
+    },
+    {
+      "path": "diagnostics/results/model.layers.6.self_attn.q_proj.json",
+      "sha256": "d0b2be65b73417c6ddc3e9498abe1c9b152b9860e387d8876d9b60b8888740a1"
+    },
+    {
+      "path": "diagnostics/results/model.layers.6.self_attn.v_proj.json",
+      "sha256": "34fff1e2462846eb06b564c7779ab44f73a3b1cc71f44ab103778fa8d83e0cc4"
+    },
+    {
+      "path": "diagnostics/results/model.layers.7.mlp.down_proj.json",
+      "sha256": "520b5b44cda9daa324cb810a857d565b41dc7b1829626717a66de8888eae87d0"
+    },
+    {
+      "path": "diagnostics/results/model.layers.7.mlp.gate_proj.json",
+      "sha256": "88f33f9f7613fc7494d8777eec6c8a554868e3c061a33dd0b8e88a7d4e7f3bbc"
+    },
+    {
+      "path": "diagnostics/results/model.layers.7.mlp.up_proj.json",
+      "sha256": "062a243554ebddf8e005806c1792896f4b23add2bdee28e097cb4fc850791663"
+    },
+    {
+      "path": "diagnostics/results/model.layers.7.self_attn.k_proj.json",
+      "sha256": "f4841c5f38cf6608d4901ffea3199ee9bec1797208d78badc581631bf57b29a5"
+    },
+    {
+      "path": "diagnostics/results/model.layers.7.self_attn.o_proj.json",
+      "sha256": "73659b8b3b0be174ca59ad4df7a35e932421c8a018df2d573c4569d6e34dac45"
+    },
+    {
+      "path": "diagnostics/results/model.layers.7.self_attn.q_proj.json",
+      "sha256": "b2933f48fc7a349f2889baca819020e369ee6c8172ebe8b4bc758de8bfd73852"
+    },
+    {
+      "path": "diagnostics/results/model.layers.7.self_attn.v_proj.json",
+      "sha256": "f266f6824a3234e8c8a84972927d104c32a52a4bc35d584dd26676625d0a2fd6"
+    },
+    {
+      "path": "diagnostics/results/model.layers.8.mlp.down_proj.json",
+      "sha256": "d598e4070c1b054b535422b008e4c3f93ff19d67ddd5b6d63b307ce5d5896f7b"
+    },
+    {
+      "path": "diagnostics/results/model.layers.8.mlp.gate_proj.json",
+      "sha256": "029984a741505ce21ed6a4ed364ea454f9b41ca9fa45bc76b4d4e4bc78d5d0c3"
+    },
+    {
+      "path": "diagnostics/results/model.layers.8.mlp.up_proj.json",
+      "sha256": "7407d540a55d899de0c79c02c5cd648d2e55741ce1461b14d8039ef13e4cc740"
+    },
+    {
+      "path": "diagnostics/results/model.layers.8.self_attn.k_proj.json",
+      "sha256": "30c08771e6c3197d91d97fd241ca6a334f3b1c4d41da344f3ad52e23ff2deee7"
+    },
+    {
+      "path": "diagnostics/results/model.layers.8.self_attn.o_proj.json",
+      "sha256": "8db07d85fb8f73638255ca0937d5b2bc713da112023c137ad0f1865221c2a599"
+    },
+    {
+      "path": "diagnostics/results/model.layers.8.self_attn.q_proj.json",
+      "sha256": "2da7caea601aa5a944b7d18cfe664f1f4de352cf9dc5afb69e1eaf30f11beb60"
+    },
+    {
+      "path": "diagnostics/results/model.layers.8.self_attn.v_proj.json",
+      "sha256": "69c6c64caf28821ce2102a3a5ca2ffb826a7e7da6295a0cc1d1da5c93c151291"
+    },
+    {
+      "path": "diagnostics/results/model.layers.9.mlp.down_proj.json",
+      "sha256": "4241b72fa08a9b8b9a126a50edd8e34c459b10e9dc477ff138a3f5976e2ae25b"
+    },
+    {
+      "path": "diagnostics/results/model.layers.9.mlp.gate_proj.json",
+      "sha256": "0d6fc50046b06ce6641cd952791f6bb8cbc54303c05d9d8e8c2b8ee9d24aa9f8"
+    },
+    {
+      "path": "diagnostics/results/model.layers.9.mlp.up_proj.json",
+      "sha256": "dd88c6341808819b4db66f98d3368c62d879ccef2d50b6f6074b76cc53cfd223"
+    },
+    {
+      "path": "diagnostics/results/model.layers.9.self_attn.k_proj.json",
+      "sha256": "694366350842fcf0505beee6d8e3d68fde7ada7a94d1d9ccc2c2c2e36932d006"
+    },
+    {
+      "path": "diagnostics/results/model.layers.9.self_attn.o_proj.json",
+      "sha256": "9c545213688ace0891a5921b6dbfd84e0f7395d848a7257d0815e470800195ed"
+    },
+    {
+      "path": "diagnostics/results/model.layers.9.self_attn.q_proj.json",
+      "sha256": "5d28397b3f19bc8d59bb90a97fc87349543918e9e84529ccc575078277cd33f1"
+    },
+    {
+      "path": "diagnostics/results/model.layers.9.self_attn.v_proj.json",
+      "sha256": "875a927cf2967f1e509520547f88534c0d003cbf1fb73ecaff5b216536aff4cb"
+    },
+    {
+      "path": "diagnostics/resume_check.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "diagnostics/resume_validation.json",
+      "sha256": "1fe5bf3f445b52260f714eb44177d052e41c37ce2a63e1ae64277e8a1696d4ab"
+    },
+    {
+      "path": "diagnostics/source_audit.json",
+      "sha256": "6925d73ccd78a9a6c373e4e54e61787f23e15a2adefea3f0ee5587d483d2cf76"
+    },
+    {
+      "path": "diagnostics/sweeps/model.layers.0.mlp.down_proj.json",
+      "sha256": "cc43791baae234ead42bd3ceedaad0f3d8ec157a758daef7ecd08ba93688f27a"
+    },
+    {
+      "path": "diagnostics/sweeps/model.layers.1.mlp.down_proj.json",
+      "sha256": "bb4bef730523a23cb260efd92bc2154c66931bca751a1095f4a522aca561f868"
+    },
+    {
+      "path": "diagnostics/sweeps/model.layers.10.mlp.down_proj.json",
+      "sha256": "a1160a55dd81881ded547a0f6abdc9f612333198ef06070d53f681b51bc5f9f3"
+    },
+    {
+      "path": "diagnostics/sweeps/model.layers.11.mlp.down_proj.json",
+      "sha256": "5766ff4624a766bb3d13d9ce209f1db2e26ffb8c48f6879d91efbe6725647b76"
+    },
+    {
+      "path": "diagnostics/sweeps/model.layers.12.mlp.down_proj.json",
+      "sha256": "6dff931bad4f723bf43ec900983847098f1428278981e87160dfa5e96cdc3de1"
+    },
+    {
+      "path": "diagnostics/sweeps/model.layers.13.mlp.down_proj.json",
+      "sha256": "d7a570d2d750c622803f370dbc451ce7e60735f40b30ec24a28f31a206e35240"
+    },
+    {
+      "path": "diagnostics/sweeps/model.layers.14.mlp.down_proj.json",
+      "sha256": "3d90034f04bc2cf3f3e7aec86f535af1902cda0fdd525f6b705bcfa0b9278eb7"
+    },
+    {
+      "path": "diagnostics/sweeps/model.layers.15.mlp.down_proj.json",
+      "sha256": "4952f91682d098d66febfc8623fde4964cb937084119c53c7acd3290a7efb406"
+    },
+    {
+      "path": "diagnostics/sweeps/model.layers.16.mlp.down_proj.json",
+      "sha256": "5a64767782abbb87a3e1bbf0c943796334e6c3ac2d2487f142ab2a263d094fc7"
+    },
+    {
+      "path": "diagnostics/sweeps/model.layers.17.mlp.down_proj.json",
+      "sha256": "e066c9441f9705a56de9ae1ad42979c6b537ec2ae03b9ed8e8070c48c82d459b"
+    },
+    {
+      "path": "diagnostics/sweeps/model.layers.2.mlp.down_proj.json",
+      "sha256": "f146f060390ae7ac6af3b2b6ef3c91cda1ddb3421104b71387491302cb2f2210"
+    },
+    {
+      "path": "diagnostics/sweeps/model.layers.3.mlp.down_proj.json",
+      "sha256": "20b780d3f02e954121691bbebff9a437ff304f40e087a636a869dac6feb5696b"
+    },
+    {
+      "path": "diagnostics/sweeps/model.layers.4.mlp.down_proj.json",
+      "sha256": "a01b80e917005613f7c96c597bc831c098fb54ab5817bdb5ef37e128c8bc45a2"
+    },
+    {
+      "path": "diagnostics/sweeps/model.layers.5.mlp.down_proj.json",
+      "sha256": "57a7523255b93cd039cd3c3bfc2aa950a4c71c3e52764c7e36808ef5fe6f5fc9"
+    },
+    {
+      "path": "diagnostics/sweeps/model.layers.6.mlp.down_proj.json",
+      "sha256": "70bad434bf3d82c98efb0403318f38107e57632961a3ab6124d6f165ac73db73"
+    },
+    {
+      "path": "diagnostics/sweeps/model.layers.7.mlp.down_proj.json",
+      "sha256": "fc8c9854874652f055d85c8c6b2ac062d455f8f89f6d4555744529289f431f3a"
+    },
+    {
+      "path": "diagnostics/sweeps/model.layers.8.mlp.down_proj.json",
+      "sha256": "28b3ba7f7773ab9a665cae5127b7517f2d7811395bb4def96f67696da56174c1"
+    },
+    {
+      "path": "diagnostics/sweeps/model.layers.9.mlp.down_proj.json",
+      "sha256": "72e46803240b2122705e31c7c1c5b01c0b656e5065c1600dd8a9730d4b455631"
+    },
+    {
+      "path": "diagnostics/tests.log",
+      "sha256": "95ecaf0c40d4a100a3724931176f61eb6e591be45cc35df5b64db7ce46349335"
+    },
+    {
+      "path": "scripts/audit_quant_diagnostic_outliers.py",
+      "sha256": "be1633fa9f6f1176b16d9451fd4777177438f7e2c021eb3cec2358a22a1f3e08"
+    },
+    {
+      "path": "scripts/build_quant_diagnosis_report.py",
+      "sha256": "348cd22074d625d050fde08ca28c97142784a43dcca8fee8a70a2ed11c07bd75"
+    },
+    {
+      "path": "scripts/cache_diagnostic_reference_inputs.py",
+      "sha256": "a013dc18ff923606813c395bc09ff67605fae496ff271740f35318ea94e82b10"
+    },
+    {
+      "path": "scripts/diagnose_linear_quant_error.py",
+      "sha256": "3331c56904884d9fe24cc0f5da7de785a4b738c5ec199f548d3da897e1f3f6b1"
+    },
+    {
+      "path": "scripts/export_quant_diagnostic_parameters.py",
+      "sha256": "4cefceca1e167eda0e87c545ffbeac38c6b22bd376be5465715ee7aba469d63c"
+    },
+    {
+      "path": "scripts/import_quant_diagnostic_checkpoints.py",
+      "sha256": "1d9482ce736ccba79a8fbc2cb466527dbeec85cb1cd1ab7b297b070a27564802"
+    },
+    {
+      "path": "scripts/quant_diagnostic_math.py",
+      "sha256": "6c580b60896228e9304257871eb6f5a2c3ee3b6150328505753870cc7472e31c"
+    },
+    {
+      "path": "scripts/quant_diagnostic_reduce.py",
+      "sha256": "4c47aec6f57cd908c978a3f7f74ebb23c49957f7ffcd19739ac2035da52a088d"
+    },
+    {
+      "path": "scripts/quant_diagnostic_source.py",
+      "sha256": "6e1a93ec2987c2e03872ae7686621ef5b32e2690f9c5389c04a53c0d1aed9f7e"
+    },
+    {
+      "path": "scripts/quant_metric_reduce.c",
+      "sha256": "c2f0a4ace7311072bb4a26b2a0f5e582863a239d3616d74734d5fb441554ed24"
+    },
+    {
+      "path": "scripts/requirements-quant-diagnostics.txt",
+      "sha256": "2ac718d96ea3b8a2afe409a533338741afad6a8f224719bda5ac1d8aa7d4d703"
+    },
+    {
+      "path": "scripts/verify_quant_diagnosis.py",
+      "sha256": "ba16b01cb839666e7184883a0443b74a9fc026482e6d0171983167de508aca12"
+    },
+    {
+      "path": "tests/test_quant_diagnostics.py",
+      "sha256": "7614414f954e2016ace24c6cb9f4529102efd00661f70075e02e4a59fa643c67"
+    }
+  ]
+}

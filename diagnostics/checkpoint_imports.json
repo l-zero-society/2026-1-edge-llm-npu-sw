@@ -1,0 +1,140 @@
+[
+  {
+    "source": "diagnostics/early_layer8/sweeps/model.layers.8.mlp.down_proj.json",
+    "destination": "diagnostics/sweeps/model.layers.8.mlp.down_proj.json",
+    "sha256": "28b3ba7f7773ab9a665cae5127b7517f2d7811395bb4def96f67696da56174c1",
+    "exact_identity_equal": true,
+    "time": 1789910361.0517561,
+    "reason": "prioritized sweep after completed layer-8 baseline; no mixed-identity pilot imported"
+  },
+  {
+    "source": "diagnostics/parallel_sweeps/sweeps/model.layers.0.mlp.down_proj.json",
+    "destination": "diagnostics/sweeps/model.layers.0.mlp.down_proj.json",
+    "sha256": "cc43791baae234ead42bd3ceedaad0f3d8ec157a758daef7ecd08ba93688f27a",
+    "source_provenance_sha256": "fc2a8f9bdc803fd008a62adb060d591fe06327e086c880a0256ef0e48985b929",
+    "exact_identity_equal": true,
+    "time": 1789913035.8697238,
+    "command": [
+      "scripts/import_quant_diagnostic_checkpoints.py",
+      "diagnostics/parallel_sweeps"
+    ],
+    "reason": "completed identical-identity sweep"
+  },
+  {
+    "source": "diagnostics/parallel_sweeps/sweeps/model.layers.1.mlp.down_proj.json",
+    "destination": "diagnostics/sweeps/model.layers.1.mlp.down_proj.json",
+    "sha256": "bb4bef730523a23cb260efd92bc2154c66931bca751a1095f4a522aca561f868",
+    "source_provenance_sha256": "fc2a8f9bdc803fd008a62adb060d591fe06327e086c880a0256ef0e48985b929",
+    "exact_identity_equal": true,
+    "time": 1789913539.826688,
+    "command": [
+      "scripts/import_quant_diagnostic_checkpoints.py",
+      "diagnostics/parallel_sweeps"
+    ],
+    "reason": "completed identical-identity sweep"
+  },
+  {
+    "source": "diagnostics/parallel_sweeps/sweeps/model.layers.2.mlp.down_proj.json",
+    "destination": "diagnostics/sweeps/model.layers.2.mlp.down_proj.json",
+    "sha256": "f146f060390ae7ac6af3b2b6ef3c91cda1ddb3421104b71387491302cb2f2210",
+    "source_provenance_sha256": "fc2a8f9bdc803fd008a62adb060d591fe06327e086c880a0256ef0e48985b929",
+    "exact_identity_equal": true,
+    "time": 1789914156.639936,
+    "command": [
+      "scripts/import_quant_diagnostic_checkpoints.py",
+      "diagnostics/parallel_sweeps"
+    ],
+    "reason": "completed identical-identity sweep"
+  },
+  {
+    "source": "diagnostics/parallel_sweeps/sweeps/model.layers.3.mlp.down_proj.json",
+    "destination": "diagnostics/sweeps/model.layers.3.mlp.down_proj.json",
+    "sha256": "20b780d3f02e954121691bbebff9a437ff304f40e087a636a869dac6feb5696b",
+    "source_provenance_sha256": "fc2a8f9bdc803fd008a62adb060d591fe06327e086c880a0256ef0e48985b929",
+    "exact_identity_equal": true,
+    "time": 1789914693.016293,
+    "command": [
+      "scripts/import_quant_diagnostic_checkpoints.py",
+      "diagnostics/parallel_sweeps"
+    ],
+    "reason": "completed identical-identity sweep"
+  },
+  {
+    "source": "diagnostics/parallel_high_layers/sweeps/model.layers.12.mlp.down_proj.json",
+    "destination": "diagnostics/sweeps/model.layers.12.mlp.down_proj.json",
+    "sha256": "6dff931bad4f723bf43ec900983847098f1428278981e87160dfa5e96cdc3de1",
+    "source_provenance_sha256": "fc2a8f9bdc803fd008a62adb060d591fe06327e086c880a0256ef0e48985b929",
+    "exact_identity_equal": true,
+    "time": 1789915989.6795259,
+    "command": [
+      "scripts/import_quant_diagnostic_checkpoints.py",
+      "diagnostics/parallel_high_layers"
+    ],
+    "reason": "completed identical-identity sweep"
+  },
+  {
+    "source": "diagnostics/parallel_high_layers/sweeps/model.layers.13.mlp.down_proj.json",
+    "destination": "diagnostics/sweeps/model.layers.13.mlp.down_proj.json",
+    "sha256": "d7a570d2d750c622803f370dbc451ce7e60735f40b30ec24a28f31a206e35240",
+    "source_provenance_sha256": "fc2a8f9bdc803fd008a62adb060d591fe06327e086c880a0256ef0e48985b929",
+    "exact_identity_equal": true,
+    "time": 1789916562.0618,
+    "command": [
+      "scripts/import_quant_diagnostic_checkpoints.py",
+      "diagnostics/parallel_high_layers"
+    ],
+    "reason": "completed identical-identity sweep"
+  },
+  {
+    "source": "diagnostics/parallel_high_layers/sweeps/model.layers.14.mlp.down_proj.json",
+    "destination": "diagnostics/sweeps/model.layers.14.mlp.down_proj.json",
+    "sha256": "3d90034f04bc2cf3f3e7aec86f535af1902cda0fdd525f6b705bcfa0b9278eb7",
+    "source_provenance_sha256": "fc2a8f9bdc803fd008a62adb060d591fe06327e086c880a0256ef0e48985b929",
+    "exact_identity_equal": true,
+    "time": 1789917107.71904,
+    "command": [
+      "scripts/import_quant_diagnostic_checkpoints.py",
+      "diagnostics/parallel_high_layers"
+    ],
+    "reason": "completed identical-identity sweep"
+  },
+  {
+    "source": "diagnostics/parallel_high_layers/sweeps/model.layers.15.mlp.down_proj.json",
+    "destination": "diagnostics/sweeps/model.layers.15.mlp.down_proj.json",
+    "sha256": "4952f91682d098d66febfc8623fde4964cb937084119c53c7acd3290a7efb406",
+    "source_provenance_sha256": "fc2a8f9bdc803fd008a62adb060d591fe06327e086c880a0256ef0e48985b929",
+    "exact_identity_equal": true,
+    "time": 1789919312.19964,
+    "command": [
+      "scripts/import_quant_diagnostic_checkpoints.py",
+      "diagnostics/parallel_high_layers"
+    ],
+    "reason": "completed identical-identity sweep"
+  },
+  {
+    "source": "diagnostics/parallel_high_layers/sweeps/model.layers.16.mlp.down_proj.json",
+    "destination": "diagnostics/sweeps/model.layers.16.mlp.down_proj.json",
+    "sha256": "5a64767782abbb87a3e1bbf0c943796334e6c3ac2d2487f142ab2a263d094fc7",
+    "source_provenance_sha256": "fc2a8f9bdc803fd008a62adb060d591fe06327e086c880a0256ef0e48985b929",
+    "exact_identity_equal": true,
+    "time": 1789919650.1716669,
+    "command": [
+      "scripts/import_quant_diagnostic_checkpoints.py",
+      "diagnostics/parallel_high_layers"
+    ],
+    "reason": "completed identical-identity sweep"
+  },
+  {
+    "source": "diagnostics/parallel_high_layers/sweeps/model.layers.17.mlp.down_proj.json",
+    "destination": "diagnostics/sweeps/model.layers.17.mlp.down_proj.json",
+    "sha256": "e066c9441f9705a56de9ae1ad42979c6b537ec2ae03b9ed8e8070c48c82d459b",
+    "source_provenance_sha256": "fc2a8f9bdc803fd008a62adb060d591fe06327e086c880a0256ef0e48985b929",
+    "exact_identity_equal": true,
+    "time": 1789920426.807749,
+    "command": [
+      "scripts/import_quant_diagnostic_checkpoints.py",
+      "diagnostics/parallel_high_layers"
+    ],
+    "reason": "completed identical-identity sweep"
+  }
+]

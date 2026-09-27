@@ -1,0 +1,5 @@
+{
+  "passed": true,
+  "unchanged_checkpoint_files": 36,
+  "scope": "no-op resume preserves frozen selections and completed results"
+}

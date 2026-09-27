@@ -1,0 +1,8141 @@
+{
+  "hardware_profile": {
+    "name": "generic-rne",
+    "shift_correction": 0,
+    "rounding": "nearest_even",
+    "verification": "unverified",
+    "rtl_bit_exact": false,
+    "source": "src/static_quant/hardware.py; software definition only; no RTL found",
+    "historical_layout_source": "user request, unconfirmed design history",
+    "multiplier": "unsigned 16 bit",
+    "shift": "unsigned 5 bit",
+    "effective_shift": "max(shift - shift_correction, 0)",
+    "zero_point": "signed 8 bit, added AFTER rounded shift; exports use zero",
+    "product": "signed 48 bit exact; INT32 * UInt16 fits; no truncation or wrap",
+    "right_shift": "arithmetic (floor for negatives)",
+    "saturation": "signed INT10 [-512,511], after shift and zero point",
+    "lut_index": "10-bit two's complement: signed_q10 & 1023",
+    "layout": {
+      "zp": [
+        0,
+        7
+      ],
+      "shift": [
+        8,
+        12
+      ],
+      "reserved_zero": [
+        13,
+        15
+      ],
+      "multiplier": [
+        16,
+        31
+      ]
+    },
+    "endian": "little"
+  },
+  "status": "software expected values for future RTL comparison",
+  "modules": {
+    "model.layers.0.mlp.down_proj": [
+      {
+        "channel": 0,
+        "accumulator": 1346,
+        "word": 4266465536,
+        "expected_int10": 3,
+        "lut_index": 3
+      },
+      {
+        "channel": 1,
+        "accumulator": -1633,
+        "word": 1264260864,
+        "expected_int10": -4,
+        "lut_index": 1020
+      },
+      {
+        "channel": 2,
+        "accumulator": -3682,
+        "word": 500372992,
+        "expected_int10": -7,
+        "lut_index": 1017
+      },
+      {
+        "channel": 3,
+        "accumulator": 2884,
+        "word": 1009456896,
+        "expected_int10": 5,
+        "lut_index": 5
+      },
+      {
+        "channel": 4,
+        "accumulator": 1551,
+        "word": 553195008,
+        "expected_int10": 3,
+        "lut_index": 3
+      },
+      {
+        "channel": 5,
+        "accumulator": 1678,
+        "word": 39784960,
+        "expected_int10": 4,
+        "lut_index": 4
+      },
+      {
+        "channel": 6,
+        "accumulator": 2623,
+        "word": 2282428416,
+        "expected_int10": 5,
+        "lut_index": 5
+      },
+      {
+        "channel": 7,
+        "accumulator": 2053,
+        "word": 136123392,
+        "expected_int10": 4,
+        "lut_index": 4
+      },
+      {
+        "channel": 8,
+        "accumulator": 1149,
+        "word": 2230130688,
+        "expected_int10": 2,
+        "lut_index": 2
+      },
+      {
+        "channel": 9,
+        "accumulator": -3062,
+        "word": 1176049408,
+        "expected_int10": -7,
+        "lut_index": 1017
+      },
+      {
+        "channel": 10,
+        "accumulator": 5817,
+        "word": 3898415360,
+        "expected_int10": 10,
+        "lut_index": 10
+      },
+      {
+        "channel": 11,
+        "accumulator": -1473,
+        "word": 2159351808,
+        "expected_int10": -3,
+        "lut_index": 1021
+      },
+      {
+        "channel": 12,
+        "accumulator": 953,
+        "word": 136123392,
+        "expected_int10": 2,
+        "lut_index": 2
+      },
+      {
+        "channel": 13,
+        "accumulator": 1188,
+        "word": 2247563264,
+        "expected_int10": 2,
+        "lut_index": 2
+      },
+      {
+        "channel": 14,
+        "accumulator": 1160,
+        "word": 3880982784,
+        "expected_int10": 2,
+        "lut_index": 2
+      },
+      {
+        "channel": 15,
+        "accumulator": 2914,
+        "word": 553195008,
+        "expected_int10": 6,
+        "lut_index": 6
+      },
+      {
+        "channel": 0,
+        "accumulator": -68544,
+        "word": 4266465536,
+        "expected_int10": -133,
+        "lut_index": 891
+      },
+      {
+        "channel": 1,
+        "accumulator": 3459,
+        "word": 1264260864,
+        "expected_int10": 8,
+        "lut_index": 8
+      },
+      {
+        "channel": 2,
+        "accumulator": -7336,
+        "word": 500372992,
+        "expected_int10": -13,
+        "lut_index": 1011
+      },
+      {
+        "channel": 3,
+        "accumulator": -15592,
+        "word": 1009456896,
+        "expected_int10": -29,
+        "lut_index": 995
+      },
+      {
+        "channel": 4,
+        "accumulator": 1672,
+        "word": 553195008,
+        "expected_int10": 3,
+        "lut_index": 3
+      },
+      {
+        "channel": 5,
+        "accumulator": -14240,
+        "word": 39784960,
+        "expected_int10": -33,
+        "lut_index": 991
+      },
+      {
+        "channel": 6,
+        "accumulator": -10538,
+        "word": 2282428416,
+        "expected_int10": -22,
+        "lut_index": 1002
+      },
+      {
+        "channel": 7,
+        "accumulator": -28926,
+        "word": 136123392,
+        "expected_int10": -57,
+        "lut_index": 967
+      },
+      {
+        "channel": 8,
+        "accumulator": -7616,
+        "word": 2230130688,
+        "expected_int10": -15,
+        "lut_index": 1009
+      },
+      {
+        "channel": 9,
+        "accumulator": 13761,
+        "word": 1176049408,
+        "expected_int10": 29,
+        "lut_index": 29
+      },
+      {
+        "channel": 10,
+        "accumulator": -15482,
+        "word": 3898415360,
+        "expected_int10": -27,
+        "lut_index": 997
+      },
+      {
+        "channel": 11,
+        "accumulator": -12219,
+        "word": 2159351808,
+        "expected_int10": -24,
+        "lut_index": 1000
+      },
+      {
+        "channel": 12,
+        "accumulator": 34737,
+        "word": 136123392,
+        "expected_int10": 69,
+        "lut_index": 69
+      },
+      {
+        "channel": 13,
+        "accumulator": -46825,
+        "word": 2247563264,
+        "expected_int10": -96,
+        "lut_index": 928
+      },
+      {
+        "channel": 14,
+        "accumulator": -15411,
+        "word": 3880982784,
+        "expected_int10": -27,
+        "lut_index": 997
+      },
+      {
+        "channel": 15,
+        "accumulator": 31610,
+        "word": 553195008,
+        "expected_int10": 64,
+        "lut_index": 64
+      },
+      {
+        "channel": 0,
+        "accumulator": -21962,
+        "word": 4266465536,
+        "expected_int10": -43,
+        "lut_index": 981
+      },
+      {
+        "channel": 1,
+        "accumulator": 14280,
+        "word": 1264260864,
+        "expected_int10": 33,
+        "lut_index": 33
+      },
+      {
+        "channel": 2,
+        "accumulator": -17857,
+        "word": 500372992,
+        "expected_int10": -33,
+        "lut_index": 991
+      },
+      {
+        "channel": 3,
+        "accumulator": -12948,
+        "word": 1009456896,
+        "expected_int10": -24,
+        "lut_index": 1000
+      },
+      {
+        "channel": 4,
+        "accumulator": -11633,
+        "word": 553195008,
+        "expected_int10": -23,
+        "lut_index": 1001
+      },
+      {
+        "channel": 5,
+        "accumulator": -20501,
+        "word": 39784960,
+        "expected_int10": -47,
+        "lut_index": 977
+      },
+      {
+        "channel": 6,
+        "accumulator": -4566,
+        "word": 2282428416,
+        "expected_int10": -9,
+        "lut_index": 1015
+      },
+      {
+        "channel": 7,
+        "accumulator": 4675,
+        "word": 136123392,
+        "expected_int10": 9,
+        "lut_index": 9
+      },
+      {
+        "channel": 8,
+        "accumulator": 10504,
+        "word": 2230130688,
+        "expected_int10": 21,
+        "lut_index": 21
+      },
+      {
+        "channel": 9,
+        "accumulator": -1645,
+        "word": 1176049408,
+        "expected_int10": -4,
+        "lut_index": 1020
+      },
+      {
+        "channel": 10,
+        "accumulator": -2231,
+        "word": 3898415360,
+        "expected_int10": -4,
+        "lut_index": 1020
+      },
+      {
+        "channel": 11,
+        "accumulator": -15937,
+        "word": 2159351808,
+        "expected_int10": -31,
+        "lut_index": 993
+      },
+      {
+        "channel": 12,
+        "accumulator": 18017,
+        "word": 136123392,
+        "expected_int10": 36,
+        "lut_index": 36
+      },
+      {
+        "channel": 13,
+        "accumulator": -32540,
+        "word": 2247563264,
+        "expected_int10": -67,
+        "lut_index": 957
+      },
+      {
+        "channel": 14,
+        "accumulator": -32964,
+        "word": 3880982784,
+        "expected_int10": -58,
+        "lut_index": 966
+      },
+      {
+        "channel": 15,
+        "accumulator": 10615,
+        "word": 553195008,
+        "expected_int10": 21,
+        "lut_index": 21
+      },
+      {
+        "channel": 0,
+        "accumulator": -42891,
+        "word": 4266465536,
+        "expected_int10": -83,
+        "lut_index": 941
+      },
+      {
+        "channel": 1,
+        "accumulator": -1158,
+        "word": 1264260864,
+        "expected_int10": -3,
+        "lut_index": 1021
+      },
+      {
+        "channel": 2,
+        "accumulator": 3054,
+        "word": 500372992,
+        "expected_int10": 6,
+        "lut_index": 6
+      },
+      {
+        "channel": 3,
+        "accumulator": -19641,
+        "word": 1009456896,
+        "expected_int10": -36,
+        "lut_index": 988
+      },
+      {
+        "channel": 4,
+        "accumulator": -11599,
+        "word": 553195008,
+        "expected_int10": -23,
+        "lut_index": 1001
+      },
+      {
+        "channel": 5,
+        "accumulator": -16245,
+        "word": 39784960,
+        "expected_int10": -38,
+        "lut_index": 986
+      },
+      {
+        "channel": 6,
+        "accumulator": -8162,
+        "word": 2282428416,
+        "expected_int10": -17,
+        "lut_index": 1007
+      },
+      {
+        "channel": 7,
+        "accumulator": 10723,
+        "word": 136123392,
+        "expected_int10": 21,
+        "lut_index": 21
+      },
+      {
+        "channel": 8,
+        "accumulator": 4279,
+        "word": 2230130688,
+        "expected_int10": 9,
+        "lut_index": 9
+      },
+      {
+        "channel": 9,
+        "accumulator": 7806,
+        "word": 1176049408,
+        "expected_int10": 17,
+        "lut_index": 17
+      },
+      {
+        "channel": 10,
+        "accumulator": -32543,
+        "word": 3898415360,
+        "expected_int10": -58,
+        "lut_index": 966
+      },
+      {
+        "channel": 11,
+        "accumulator": 443,
+        "word": 2159351808,
+        "expected_int10": 1,
+        "lut_index": 1
+      },
+      {
+        "channel": 12,
+        "accumulator": 6957,
+        "word": 136123392,
+        "expected_int10": 14,
+        "lut_index": 14
+      },
+      {
+        "channel": 13,
+        "accumulator": -31577,
+        "word": 2247563264,
+        "expected_int10": -65,
+        "lut_index": 959
+      },
+      {
+        "channel": 14,
+        "accumulator": 3783,
+        "word": 3880982784,
+        "expected_int10": 7,
+        "lut_index": 7
+      },
+      {
+        "channel": 15,
+        "accumulator": -16846,
+        "word": 553195008,
+        "expected_int10": -34,
+        "lut_index": 990
+      }
+    ],
+    "model.layers.1.mlp.down_proj": [
+      {
+        "channel": 0,
+        "accumulator": -1710,
+        "word": 1355093760,
+        "expected_int10": -4,
+        "lut_index": 1020
+      },
+      {
+        "channel": 1,
+        "accumulator": -2420,
+        "word": 2108364800,
+        "expected_int10": -5,
+        "lut_index": 1019
+      },
+      {
+        "channel": 2,
+        "accumulator": -2272,
+        "word": 74257152,
+        "expected_int10": -5,
+        "lut_index": 1019
+      },
+      {
+        "channel": 3,
+        "accumulator": 1816,
+        "word": 2811828224,
+        "expected_int10": 5,
+        "lut_index": 5
+      },
+      {
+        "channel": 4,
+        "accumulator": -541,
+        "word": 1020466944,
+        "expected_int10": -1,
+        "lut_index": 1023
+      },
+      {
+        "channel": 5,
+        "accumulator": -903,
+        "word": 154735616,
+        "expected_int10": -2,
+        "lut_index": 1022
+      },
+      {
+        "channel": 6,
+        "accumulator": 2149,
+        "word": 2442467328,
+        "expected_int10": 5,
+        "lut_index": 5
+      },
+      {
+        "channel": 7,
+        "accumulator": -31,
+        "word": 2492274688,
+        "expected_int10": 0,
+        "lut_index": 0
+      },
+      {
+        "channel": 8,
+        "accumulator": -583,
+        "word": 2259884032,
+        "expected_int10": -1,
+        "lut_index": 1023
+      },
+      {
+        "channel": 9,
+        "accumulator": -1867,
+        "word": 67965696,
+        "expected_int10": -4,
+        "lut_index": 1020
+      },
+      {
+        "channel": 10,
+        "accumulator": 457,
+        "word": 2293045248,
+        "expected_int10": 1,
+        "lut_index": 1
+      },
+      {
+        "channel": 11,
+        "accumulator": -206,
+        "word": 2828474368,
+        "expected_int10": -1,
+        "lut_index": 1023
+      },
+      {
+        "channel": 12,
+        "accumulator": -1002,
+        "word": 2133268480,
+        "expected_int10": -2,
+        "lut_index": 1022
+      },
+      {
+        "channel": 13,
+        "accumulator": -1617,
+        "word": 67965696,
+        "expected_int10": -3,
+        "lut_index": 1021
+      },
+      {
+        "channel": 14,
+        "accumulator": 2459,
+        "word": 2527533056,
+        "expected_int10": 6,
+        "lut_index": 6
+      },
+      {
+        "channel": 15,
+        "accumulator": 1357,
+        "word": 2442467328,
+        "expected_int10": 3,
+        "lut_index": 3
+      },
+      {
+        "channel": 0,
+        "accumulator": -31952,
+        "word": 1355093760,
+        "expected_int10": -79,
+        "lut_index": 945
+      },
+      {
+        "channel": 1,
+        "accumulator": 26920,
+        "word": 2108364800,
+        "expected_int10": 52,
+        "lut_index": 52
+      },
+      {
+        "channel": 2,
+        "accumulator": -13653,
+        "word": 74257152,
+        "expected_int10": -30,
+        "lut_index": 994
+      },
+      {
+        "channel": 3,
+        "accumulator": 13385,
+        "word": 2811828224,
+        "expected_int10": 34,
+        "lut_index": 34
+      },
+      {
+        "channel": 4,
+        "accumulator": 15766,
+        "word": 1020466944,
+        "expected_int10": 29,
+        "lut_index": 29
+      },
+      {
+        "channel": 5,
+        "accumulator": -10976,
+        "word": 154735616,
+        "expected_int10": -25,
+        "lut_index": 999
+      },
+      {
+        "channel": 6,
+        "accumulator": -4195,
+        "word": 2442467328,
+        "expected_int10": -9,
+        "lut_index": 1015
+      },
+      {
+        "channel": 7,
+        "accumulator": -8143,
+        "word": 2492274688,
+        "expected_int10": -18,
+        "lut_index": 1006
+      },
+      {
+        "channel": 8,
+        "accumulator": -8082,
+        "word": 2259884032,
+        "expected_int10": -17,
+        "lut_index": 1007
+      },
+      {
+        "channel": 9,
+        "accumulator": -10599,
+        "word": 67965696,
+        "expected_int10": -21,
+        "lut_index": 1003
+      },
+      {
+        "channel": 10,
+        "accumulator": -8047,
+        "word": 2293045248,
+        "expected_int10": -17,
+        "lut_index": 1007
+      },
+      {
+        "channel": 11,
+        "accumulator": -15031,
+        "word": 2828474368,
+        "expected_int10": -39,
+        "lut_index": 985
+      },
+      {
+        "channel": 12,
+        "accumulator": 8184,
+        "word": 2133268480,
+        "expected_int10": 16,
+        "lut_index": 16
+      },
+      {
+        "channel": 13,
+        "accumulator": -28290,
+        "word": 67965696,
+        "expected_int10": -56,
+        "lut_index": 968
+      },
+      {
+        "channel": 14,
+        "accumulator": 9883,
+        "word": 2527533056,
+        "expected_int10": 23,
+        "lut_index": 23
+      },
+      {
+        "channel": 15,
+        "accumulator": -3303,
+        "word": 2442467328,
+        "expected_int10": -7,
+        "lut_index": 1017
+      },
+      {
+        "channel": 0,
+        "accumulator": -13762,
+        "word": 1355093760,
+        "expected_int10": -34,
+        "lut_index": 990
+      },
+      {
+        "channel": 1,
+        "accumulator": 43200,
+        "word": 2108364800,
+        "expected_int10": 83,
+        "lut_index": 83
+      },
+      {
+        "channel": 2,
+        "accumulator": 10653,
+        "word": 74257152,
+        "expected_int10": 23,
+        "lut_index": 23
+      },
+      {
+        "channel": 3,
+        "accumulator": 12313,
+        "word": 2811828224,
+        "expected_int10": 31,
+        "lut_index": 31
+      },
+      {
+        "channel": 4,
+        "accumulator": -26182,
+        "word": 1020466944,
+        "expected_int10": -49,
+        "lut_index": 975
+      },
+      {
+        "channel": 5,
+        "accumulator": -39292,
+        "word": 154735616,
+        "expected_int10": -88,
+        "lut_index": 936
+      },
+      {
+        "channel": 6,
+        "accumulator": -198,
+        "word": 2442467328,
+        "expected_int10": 0,
+        "lut_index": 0
+      },
+      {
+        "channel": 7,
+        "accumulator": 30133,
+        "word": 2492274688,
+        "expected_int10": 68,
+        "lut_index": 68
+      },
+      {
+        "channel": 8,
+        "accumulator": 29082,
+        "word": 2259884032,
+        "expected_int10": 60,
+        "lut_index": 60
+      },
+      {
+        "channel": 9,
+        "accumulator": -22016,
+        "word": 67965696,
+        "expected_int10": -44,
+        "lut_index": 980
+      },
+      {
+        "channel": 10,
+        "accumulator": 3938,
+        "word": 2293045248,
+        "expected_int10": 8,
+        "lut_index": 8
+      },
+      {
+        "channel": 11,
+        "accumulator": 4342,
+        "word": 2828474368,
+        "expected_int10": 11,
+        "lut_index": 11
+      },
+      {
+        "channel": 12,
+        "accumulator": 16583,
+        "word": 2133268480,
+        "expected_int10": 32,
+        "lut_index": 32
+      },
+      {
+        "channel": 13,
+        "accumulator": -29284,
+        "word": 67965696,
+        "expected_int10": -58,
+        "lut_index": 966
+      },
+      {
+        "channel": 14,
+        "accumulator": -15438,
+        "word": 2527533056,
+        "expected_int10": -35,
+        "lut_index": 989
+      },
+      {
+        "channel": 15,
+        "accumulator": 2612,
+        "word": 2442467328,
+        "expected_int10": 6,
+        "lut_index": 6
+      },
+      {
+        "channel": 0,
+        "accumulator": -18072,
+        "word": 1355093760,
+        "expected_int10": -45,
+        "lut_index": 979
+      },
+      {
+        "channel": 1,
+        "accumulator": 7883,
+        "word": 2108364800,
+        "expected_int10": 15,
+        "lut_index": 15
+      },
+      {
+        "channel": 2,
+        "accumulator": -10759,
+        "word": 74257152,
+        "expected_int10": -23,
+        "lut_index": 1001
+      },
+      {
+        "channel": 3,
+        "accumulator": 16929,
+        "word": 2811828224,
+        "expected_int10": 43,
+        "lut_index": 43
+      },
+      {
+        "channel": 4,
+        "accumulator": -11178,
+        "word": 1020466944,
+        "expected_int10": -21,
+        "lut_index": 1003
+      },
+      {
+        "channel": 5,
+        "accumulator": -15323,
+        "word": 154735616,
+        "expected_int10": -35,
+        "lut_index": 989
+      },
+      {
+        "channel": 6,
+        "accumulator": -16382,
+        "word": 2442467328,
+        "expected_int10": -36,
+        "lut_index": 988
+      },
+      {
+        "channel": 7,
+        "accumulator": 6452,
+        "word": 2492274688,
+        "expected_int10": 15,
+        "lut_index": 15
+      },
+      {
+        "channel": 8,
+        "accumulator": 3818,
+        "word": 2259884032,
+        "expected_int10": 8,
+        "lut_index": 8
+      },
+      {
+        "channel": 9,
+        "accumulator": -6139,
+        "word": 67965696,
+        "expected_int10": -12,
+        "lut_index": 1012
+      },
+      {
+        "channel": 10,
+        "accumulator": -4382,
+        "word": 2293045248,
+        "expected_int10": -9,
+        "lut_index": 1015
+      },
+      {
+        "channel": 11,
+        "accumulator": -2594,
+        "word": 2828474368,
+        "expected_int10": -7,
+        "lut_index": 1017
+      },
+      {
+        "channel": 12,
+        "accumulator": -2401,
+        "word": 2133268480,
+        "expected_int10": -5,
+        "lut_index": 1019
+      },
+      {
+        "channel": 13,
+        "accumulator": -13880,
+        "word": 67965696,
+        "expected_int10": -27,
+        "lut_index": 997
+      },
+      {
+        "channel": 14,
+        "accumulator": 20311,
+        "word": 2527533056,
+        "expected_int10": 47,
+        "lut_index": 47
+      },
+      {
+        "channel": 15,
+        "accumulator": 2492,
+        "word": 2442467328,
+        "expected_int10": 6,
+        "lut_index": 6
+      }
+    ],
+    "model.layers.10.mlp.down_proj": [
+      {
+        "channel": 0,
+        "accumulator": -22454,
+        "word": 3127843072,
+        "expected_int10": -32,
+        "lut_index": 992
+      },
+      {
+        "channel": 1,
+        "accumulator": -28168,
+        "word": 1449728000,
+        "expected_int10": -37,
+        "lut_index": 987
+      },
+      {
+        "channel": 2,
+        "accumulator": -12351,
+        "word": 2913540352,
+        "expected_int10": -16,
+        "lut_index": 1008
+      },
+      {
+        "channel": 3,
+        "accumulator": -244,
+        "word": 491853312,
+        "expected_int10": 0,
+        "lut_index": 0
+      },
+      {
+        "channel": 4,
+        "accumulator": -1120,
+        "word": 2685212928,
+        "expected_int10": -1,
+        "lut_index": 1023
+      },
+      {
+        "channel": 5,
+        "accumulator": 2083,
+        "word": 2395936768,
+        "expected_int10": 5,
+        "lut_index": 5
+      },
+      {
+        "channel": 6,
+        "accumulator": 3881,
+        "word": 857806592,
+        "expected_int10": 6,
+        "lut_index": 6
+      },
+      {
+        "channel": 7,
+        "accumulator": 2339,
+        "word": 674436864,
+        "expected_int10": 3,
+        "lut_index": 3
+      },
+      {
+        "channel": 8,
+        "accumulator": 3095,
+        "word": 2711820544,
+        "expected_int10": 4,
+        "lut_index": 4
+      },
+      {
+        "channel": 9,
+        "accumulator": 1853,
+        "word": 3327990016,
+        "expected_int10": 3,
+        "lut_index": 3
+      },
+      {
+        "channel": 10,
+        "accumulator": 6702,
+        "word": 1405949952,
+        "expected_int10": 9,
+        "lut_index": 9
+      },
+      {
+        "channel": 11,
+        "accumulator": 4103,
+        "word": 1728124928,
+        "expected_int10": 6,
+        "lut_index": 6
+      },
+      {
+        "channel": 12,
+        "accumulator": -1774,
+        "word": 3013679360,
+        "expected_int10": -2,
+        "lut_index": 1022
+      },
+      {
+        "channel": 13,
+        "accumulator": -18968,
+        "word": 2647726336,
+        "expected_int10": -23,
+        "lut_index": 1001
+      },
+      {
+        "channel": 14,
+        "accumulator": 12905,
+        "word": 1405949952,
+        "expected_int10": 17,
+        "lut_index": 17
+      },
+      {
+        "channel": 15,
+        "accumulator": -5355,
+        "word": 2799376640,
+        "expected_int10": -7,
+        "lut_index": 1017
+      },
+      {
+        "channel": 0,
+        "accumulator": 411,
+        "word": 3127843072,
+        "expected_int10": 1,
+        "lut_index": 1
+      },
+      {
+        "channel": 1,
+        "accumulator": 20864,
+        "word": 1449728000,
+        "expected_int10": 28,
+        "lut_index": 28
+      },
+      {
+        "channel": 2,
+        "accumulator": 6974,
+        "word": 2913540352,
+        "expected_int10": 9,
+        "lut_index": 9
+      },
+      {
+        "channel": 3,
+        "accumulator": -16359,
+        "word": 491853312,
+        "expected_int10": -29,
+        "lut_index": 995
+      },
+      {
+        "channel": 4,
+        "accumulator": 25768,
+        "word": 2685212928,
+        "expected_int10": 31,
+        "lut_index": 31
+      },
+      {
+        "channel": 5,
+        "accumulator": -14,
+        "word": 2395936768,
+        "expected_int10": 0,
+        "lut_index": 0
+      },
+      {
+        "channel": 6,
+        "accumulator": -21134,
+        "word": 857806592,
+        "expected_int10": -33,
+        "lut_index": 991
+      },
+      {
+        "channel": 7,
+        "accumulator": 3807,
+        "word": 674436864,
+        "expected_int10": 5,
+        "lut_index": 5
+      },
+      {
+        "channel": 8,
+        "accumulator": 24455,
+        "word": 2711820544,
+        "expected_int10": 30,
+        "lut_index": 30
+      },
+      {
+        "channel": 9,
+        "accumulator": -7055,
+        "word": 3327990016,
+        "expected_int10": -11,
+        "lut_index": 1013
+      },
+      {
+        "channel": 10,
+        "accumulator": 1499,
+        "word": 1405949952,
+        "expected_int10": 2,
+        "lut_index": 2
+      },
+      {
+        "channel": 11,
+        "accumulator": 6226,
+        "word": 1728124928,
+        "expected_int10": 10,
+        "lut_index": 10
+      },
+      {
+        "channel": 12,
+        "accumulator": -23017,
+        "word": 3013679360,
+        "expected_int10": -32,
+        "lut_index": 992
+      },
+      {
+        "channel": 13,
+        "accumulator": 12674,
+        "word": 2647726336,
+        "expected_int10": 15,
+        "lut_index": 15
+      },
+      {
+        "channel": 14,
+        "accumulator": 4190,
+        "word": 1405949952,
+        "expected_int10": 5,
+        "lut_index": 5
+      },
+      {
+        "channel": 15,
+        "accumulator": -27986,
+        "word": 2799376640,
+        "expected_int10": -36,
+        "lut_index": 988
+      },
+      {
+        "channel": 0,
+        "accumulator": -8383,
+        "word": 3127843072,
+        "expected_int10": -12,
+        "lut_index": 1012
+      },
+      {
+        "channel": 1,
+        "accumulator": 7059,
+        "word": 1449728000,
+        "expected_int10": 9,
+        "lut_index": 9
+      },
+      {
+        "channel": 2,
+        "accumulator": 10846,
+        "word": 2913540352,
+        "expected_int10": 14,
+        "lut_index": 14
+      },
+      {
+        "channel": 3,
+        "accumulator": -8297,
+        "word": 491853312,
+        "expected_int10": -15,
+        "lut_index": 1009
+      },
+      {
+        "channel": 4,
+        "accumulator": -6542,
+        "word": 2685212928,
+        "expected_int10": -8,
+        "lut_index": 1016
+      },
+      {
+        "channel": 5,
+        "accumulator": -9735,
+        "word": 2395936768,
+        "expected_int10": -21,
+        "lut_index": 1003
+      },
+      {
+        "channel": 6,
+        "accumulator": -10226,
+        "word": 857806592,
+        "expected_int10": -16,
+        "lut_index": 1008
+      },
+      {
+        "channel": 7,
+        "accumulator": 8195,
+        "word": 674436864,
+        "expected_int10": 10,
+        "lut_index": 10
+      },
+      {
+        "channel": 8,
+        "accumulator": 15763,
+        "word": 2711820544,
+        "expected_int10": 19,
+        "lut_index": 19
+      },
+      {
+        "channel": 9,
+        "accumulator": -1276,
+        "word": 3327990016,
+        "expected_int10": -2,
+        "lut_index": 1022
+      },
+      {
+        "channel": 10,
+        "accumulator": 2109,
+        "word": 1405949952,
+        "expected_int10": 3,
+        "lut_index": 3
+      },
+      {
+        "channel": 11,
+        "accumulator": -3628,
+        "word": 1728124928,
+        "expected_int10": -6,
+        "lut_index": 1018
+      },
+      {
+        "channel": 12,
+        "accumulator": -3902,
+        "word": 3013679360,
+        "expected_int10": -5,
+        "lut_index": 1019
+      },
+      {
+        "channel": 13,
+        "accumulator": 24108,
+        "word": 2647726336,
+        "expected_int10": 29,
+        "lut_index": 29
+      },
+      {
+        "channel": 14,
+        "accumulator": 20917,
+        "word": 1405949952,
+        "expected_int10": 27,
+        "lut_index": 27
+      },
+      {
+        "channel": 15,
+        "accumulator": -22902,
+        "word": 2799376640,
+        "expected_int10": -29,
+        "lut_index": 995
+      },
+      {
+        "channel": 0,
+        "accumulator": -25947,
+        "word": 3127843072,
+        "expected_int10": -37,
+        "lut_index": 987
+      },
+      {
+        "channel": 1,
+        "accumulator": 16845,
+        "word": 1449728000,
+        "expected_int10": 22,
+        "lut_index": 22
+      },
+      {
+        "channel": 2,
+        "accumulator": 21182,
+        "word": 2913540352,
+        "expected_int10": 28,
+        "lut_index": 28
+      },
+      {
+        "channel": 3,
+        "accumulator": -4017,
+        "word": 491853312,
+        "expected_int10": -7,
+        "lut_index": 1017
+      },
+      {
+        "channel": 4,
+        "accumulator": 3786,
+        "word": 2685212928,
+        "expected_int10": 5,
+        "lut_index": 5
+      },
+      {
+        "channel": 5,
+        "accumulator": 3340,
+        "word": 2395936768,
+        "expected_int10": 7,
+        "lut_index": 7
+      },
+      {
+        "channel": 6,
+        "accumulator": -9519,
+        "word": 857806592,
+        "expected_int10": -15,
+        "lut_index": 1009
+      },
+      {
+        "channel": 7,
+        "accumulator": -4051,
+        "word": 674436864,
+        "expected_int10": -5,
+        "lut_index": 1019
+      },
+      {
+        "channel": 8,
+        "accumulator": 9024,
+        "word": 2711820544,
+        "expected_int10": 11,
+        "lut_index": 11
+      },
+      {
+        "channel": 9,
+        "accumulator": -11951,
+        "word": 3327990016,
+        "expected_int10": -18,
+        "lut_index": 1006
+      },
+      {
+        "channel": 10,
+        "accumulator": -1667,
+        "word": 1405949952,
+        "expected_int10": -2,
+        "lut_index": 1022
+      },
+      {
+        "channel": 11,
+        "accumulator": 15656,
+        "word": 1728124928,
+        "expected_int10": 25,
+        "lut_index": 25
+      },
+      {
+        "channel": 12,
+        "accumulator": -6831,
+        "word": 3013679360,
+        "expected_int10": -9,
+        "lut_index": 1015
+      },
+      {
+        "channel": 13,
+        "accumulator": 18332,
+        "word": 2647726336,
+        "expected_int10": 22,
+        "lut_index": 22
+      },
+      {
+        "channel": 14,
+        "accumulator": 26491,
+        "word": 1405949952,
+        "expected_int10": 34,
+        "lut_index": 34
+      },
+      {
+        "channel": 15,
+        "accumulator": -24841,
+        "word": 2799376640,
+        "expected_int10": -32,
+        "lut_index": 992
+      }
+    ],
+    "model.layers.11.mlp.down_proj": [
+      {
+        "channel": 0,
+        "accumulator": -10000,
+        "word": 3109886208,
+        "expected_int10": -14,
+        "lut_index": 1010
+      },
+      {
+        "channel": 1,
+        "accumulator": 611,
+        "word": 753735424,
+        "expected_int10": 1,
+        "lut_index": 1
+      },
+      {
+        "channel": 2,
+        "accumulator": -7528,
+        "word": 145036544,
+        "expected_int10": -8,
+        "lut_index": 1016
+      },
+      {
+        "channel": 3,
+        "accumulator": 6050,
+        "word": 3181058304,
+        "expected_int10": 9,
+        "lut_index": 9
+      },
+      {
+        "channel": 4,
+        "accumulator": 2892,
+        "word": 1830885376,
+        "expected_int10": 5,
+        "lut_index": 5
+      },
+      {
+        "channel": 5,
+        "accumulator": -2884,
+        "word": 2823493888,
+        "expected_int10": -4,
+        "lut_index": 1020
+      },
+      {
+        "channel": 6,
+        "accumulator": -7635,
+        "word": 962926336,
+        "expected_int10": -13,
+        "lut_index": 1011
+      },
+      {
+        "channel": 7,
+        "accumulator": 6587,
+        "word": 1405818880,
+        "expected_int10": 8,
+        "lut_index": 8
+      },
+      {
+        "channel": 8,
+        "accumulator": 5597,
+        "word": 3231521024,
+        "expected_int10": 8,
+        "lut_index": 8
+      },
+      {
+        "channel": 9,
+        "accumulator": 998,
+        "word": 4187035904,
+        "expected_int10": 2,
+        "lut_index": 2
+      },
+      {
+        "channel": 10,
+        "accumulator": -1418,
+        "word": 382801408,
+        "expected_int10": -2,
+        "lut_index": 1022
+      },
+      {
+        "channel": 11,
+        "accumulator": 2536,
+        "word": 1543051264,
+        "expected_int10": 4,
+        "lut_index": 4
+      },
+      {
+        "channel": 12,
+        "accumulator": -7759,
+        "word": 1405818880,
+        "expected_int10": -10,
+        "lut_index": 1014
+      },
+      {
+        "channel": 13,
+        "accumulator": -7446,
+        "word": 2572753152,
+        "expected_int10": -9,
+        "lut_index": 1015
+      },
+      {
+        "channel": 14,
+        "accumulator": 16907,
+        "word": 2738952448,
+        "expected_int10": 21,
+        "lut_index": 21
+      },
+      {
+        "channel": 15,
+        "accumulator": 6906,
+        "word": 1148393472,
+        "expected_int10": 7,
+        "lut_index": 7
+      },
+      {
+        "channel": 0,
+        "accumulator": 7315,
+        "word": 3109886208,
+        "expected_int10": 10,
+        "lut_index": 10
+      },
+      {
+        "channel": 1,
+        "accumulator": 11654,
+        "word": 753735424,
+        "expected_int10": 16,
+        "lut_index": 16
+      },
+      {
+        "channel": 2,
+        "accumulator": 3107,
+        "word": 145036544,
+        "expected_int10": 3,
+        "lut_index": 3
+      },
+      {
+        "channel": 3,
+        "accumulator": 12034,
+        "word": 3181058304,
+        "expected_int10": 17,
+        "lut_index": 17
+      },
+      {
+        "channel": 4,
+        "accumulator": 18670,
+        "word": 1830885376,
+        "expected_int10": 31,
+        "lut_index": 31
+      },
+      {
+        "channel": 5,
+        "accumulator": 10099,
+        "word": 2823493888,
+        "expected_int10": 13,
+        "lut_index": 13
+      },
+      {
+        "channel": 6,
+        "accumulator": 2087,
+        "word": 962926336,
+        "expected_int10": 4,
+        "lut_index": 4
+      },
+      {
+        "channel": 7,
+        "accumulator": 5610,
+        "word": 1405818880,
+        "expected_int10": 7,
+        "lut_index": 7
+      },
+      {
+        "channel": 8,
+        "accumulator": -6181,
+        "word": 3231521024,
+        "expected_int10": -9,
+        "lut_index": 1015
+      },
+      {
+        "channel": 9,
+        "accumulator": 6686,
+        "word": 4187035904,
+        "expected_int10": 13,
+        "lut_index": 13
+      },
+      {
+        "channel": 10,
+        "accumulator": -5209,
+        "word": 382801408,
+        "expected_int10": -7,
+        "lut_index": 1017
+      },
+      {
+        "channel": 11,
+        "accumulator": 1952,
+        "word": 1543051264,
+        "expected_int10": 3,
+        "lut_index": 3
+      },
+      {
+        "channel": 12,
+        "accumulator": -12567,
+        "word": 1405818880,
+        "expected_int10": -16,
+        "lut_index": 1008
+      },
+      {
+        "channel": 13,
+        "accumulator": -13120,
+        "word": 2572753152,
+        "expected_int10": -15,
+        "lut_index": 1009
+      },
+      {
+        "channel": 14,
+        "accumulator": -1596,
+        "word": 2738952448,
+        "expected_int10": -2,
+        "lut_index": 1022
+      },
+      {
+        "channel": 15,
+        "accumulator": 341,
+        "word": 1148393472,
+        "expected_int10": 0,
+        "lut_index": 0
+      },
+      {
+        "channel": 0,
+        "accumulator": -9788,
+        "word": 3109886208,
+        "expected_int10": -14,
+        "lut_index": 1010
+      },
+      {
+        "channel": 1,
+        "accumulator": 12464,
+        "word": 753735424,
+        "expected_int10": 17,
+        "lut_index": 17
+      },
+      {
+        "channel": 2,
+        "accumulator": 17966,
+        "word": 145036544,
+        "expected_int10": 19,
+        "lut_index": 19
+      },
+      {
+        "channel": 3,
+        "accumulator": -11122,
+        "word": 3181058304,
+        "expected_int10": -16,
+        "lut_index": 1008
+      },
+      {
+        "channel": 4,
+        "accumulator": 2928,
+        "word": 1830885376,
+        "expected_int10": 5,
+        "lut_index": 5
+      },
+      {
+        "channel": 5,
+        "accumulator": -9692,
+        "word": 2823493888,
+        "expected_int10": -12,
+        "lut_index": 1012
+      },
+      {
+        "channel": 6,
+        "accumulator": -17059,
+        "word": 962926336,
+        "expected_int10": -30,
+        "lut_index": 994
+      },
+      {
+        "channel": 7,
+        "accumulator": 9168,
+        "word": 1405818880,
+        "expected_int10": 12,
+        "lut_index": 12
+      },
+      {
+        "channel": 8,
+        "accumulator": 8815,
+        "word": 3231521024,
+        "expected_int10": 13,
+        "lut_index": 13
+      },
+      {
+        "channel": 9,
+        "accumulator": 7348,
+        "word": 4187035904,
+        "expected_int10": 14,
+        "lut_index": 14
+      },
+      {
+        "channel": 10,
+        "accumulator": -1093,
+        "word": 382801408,
+        "expected_int10": -2,
+        "lut_index": 1022
+      },
+      {
+        "channel": 11,
+        "accumulator": 20292,
+        "word": 1543051264,
+        "expected_int10": 28,
+        "lut_index": 28
+      },
+      {
+        "channel": 12,
+        "accumulator": 366,
+        "word": 1405818880,
+        "expected_int10": 0,
+        "lut_index": 0
+      },
+      {
+        "channel": 13,
+        "accumulator": -20680,
+        "word": 2572753152,
+        "expected_int10": -24,
+        "lut_index": 1000
+      },
+      {
+        "channel": 14,
+        "accumulator": -9013,
+        "word": 2738952448,
+        "expected_int10": -11,
+        "lut_index": 1013
+      },
+      {
+        "channel": 15,
+        "accumulator": -11563,
+        "word": 1148393472,
+        "expected_int10": -12,
+        "lut_index": 1012
+      },
+      {
+        "channel": 0,
+        "accumulator": -1786,
+        "word": 3109886208,
+        "expected_int10": -3,
+        "lut_index": 1021
+      },
+      {
+        "channel": 1,
+        "accumulator": 5715,
+        "word": 753735424,
+        "expected_int10": 8,
+        "lut_index": 8
+      },
+      {
+        "channel": 2,
+        "accumulator": 5017,
+        "word": 145036544,
+        "expected_int10": 5,
+        "lut_index": 5
+      },
+      {
+        "channel": 3,
+        "accumulator": -4410,
+        "word": 3181058304,
+        "expected_int10": -6,
+        "lut_index": 1018
+      },
+      {
+        "channel": 4,
+        "accumulator": 4527,
+        "word": 1830885376,
+        "expected_int10": 8,
+        "lut_index": 8
+      },
+      {
+        "channel": 5,
+        "accumulator": 6796,
+        "word": 2823493888,
+        "expected_int10": 9,
+        "lut_index": 9
+      },
+      {
+        "channel": 6,
+        "accumulator": -10694,
+        "word": 962926336,
+        "expected_int10": -19,
+        "lut_index": 1005
+      },
+      {
+        "channel": 7,
+        "accumulator": 10999,
+        "word": 1405818880,
+        "expected_int10": 14,
+        "lut_index": 14
+      },
+      {
+        "channel": 8,
+        "accumulator": 10326,
+        "word": 3231521024,
+        "expected_int10": 15,
+        "lut_index": 15
+      },
+      {
+        "channel": 9,
+        "accumulator": 491,
+        "word": 4187035904,
+        "expected_int10": 1,
+        "lut_index": 1
+      },
+      {
+        "channel": 10,
+        "accumulator": 1018,
+        "word": 382801408,
+        "expected_int10": 1,
+        "lut_index": 1
+      },
+      {
+        "channel": 11,
+        "accumulator": 5671,
+        "word": 1543051264,
+        "expected_int10": 8,
+        "lut_index": 8
+      },
+      {
+        "channel": 12,
+        "accumulator": 3724,
+        "word": 1405818880,
+        "expected_int10": 5,
+        "lut_index": 5
+      },
+      {
+        "channel": 13,
+        "accumulator": -6391,
+        "word": 2572753152,
+        "expected_int10": -7,
+        "lut_index": 1017
+      },
+      {
+        "channel": 14,
+        "accumulator": -14085,
+        "word": 2738952448,
+        "expected_int10": -18,
+        "lut_index": 1006
+      },
+      {
+        "channel": 15,
+        "accumulator": 2138,
+        "word": 1148393472,
+        "expected_int10": 2,
+        "lut_index": 2
+      }
+    ],
+    "model.layers.12.mlp.down_proj": [
+      {
+        "channel": 0,
+        "accumulator": -7351,
+        "word": 553981440,
+        "expected_int10": -15,
+        "lut_index": 1009
+      },
+      {
+        "channel": 1,
+        "accumulator": -1389,
+        "word": 958732032,
+        "expected_int10": -2,
+        "lut_index": 1022
+      },
+      {
+        "channel": 2,
+        "accumulator": 1252,
+        "word": 2153060352,
+        "expected_int10": 2,
+        "lut_index": 2
+      },
+      {
+        "channel": 3,
+        "accumulator": -2968,
+        "word": 4288223488,
+        "expected_int10": -6,
+        "lut_index": 1018
+      },
+      {
+        "channel": 4,
+        "accumulator": 2448,
+        "word": 4252309760,
+        "expected_int10": 5,
+        "lut_index": 5
+      },
+      {
+        "channel": 5,
+        "accumulator": 3465,
+        "word": 483857920,
+        "expected_int10": 6,
+        "lut_index": 6
+      },
+      {
+        "channel": 6,
+        "accumulator": -10032,
+        "word": 4070512896,
+        "expected_int10": -19,
+        "lut_index": 1005
+      },
+      {
+        "channel": 7,
+        "accumulator": -2132,
+        "word": 4234352896,
+        "expected_int10": -4,
+        "lut_index": 1020
+      },
+      {
+        "channel": 8,
+        "accumulator": 3626,
+        "word": 2188974080,
+        "expected_int10": 7,
+        "lut_index": 7
+      },
+      {
+        "channel": 9,
+        "accumulator": 232,
+        "word": 3148290048,
+        "expected_int10": 1,
+        "lut_index": 1
+      },
+      {
+        "channel": 10,
+        "accumulator": -3025,
+        "word": 4124383488,
+        "expected_int10": -6,
+        "lut_index": 1018
+      },
+      {
+        "channel": 11,
+        "accumulator": -4492,
+        "word": 105190144,
+        "expected_int10": -14,
+        "lut_index": 1010
+      },
+      {
+        "channel": 12,
+        "accumulator": 14858,
+        "word": 1908480000,
+        "expected_int10": 26,
+        "lut_index": 26
+      },
+      {
+        "channel": 13,
+        "accumulator": -9779,
+        "word": 2008356864,
+        "expected_int10": -18,
+        "lut_index": 1006
+      },
+      {
+        "channel": 14,
+        "accumulator": -2595,
+        "word": 35066368,
+        "expected_int10": -5,
+        "lut_index": 1019
+      },
+      {
+        "channel": 15,
+        "accumulator": 5345,
+        "word": 2153060352,
+        "expected_int10": 10,
+        "lut_index": 10
+      },
+      {
+        "channel": 0,
+        "accumulator": 3420,
+        "word": 553981440,
+        "expected_int10": 7,
+        "lut_index": 7
+      },
+      {
+        "channel": 1,
+        "accumulator": 16386,
+        "word": 958732032,
+        "expected_int10": 29,
+        "lut_index": 29
+      },
+      {
+        "channel": 2,
+        "accumulator": 3411,
+        "word": 2153060352,
+        "expected_int10": 7,
+        "lut_index": 7
+      },
+      {
+        "channel": 3,
+        "accumulator": 9800,
+        "word": 4288223488,
+        "expected_int10": 19,
+        "lut_index": 19
+      },
+      {
+        "channel": 4,
+        "accumulator": -11961,
+        "word": 4252309760,
+        "expected_int10": -23,
+        "lut_index": 1001
+      },
+      {
+        "channel": 5,
+        "accumulator": 1471,
+        "word": 483857920,
+        "expected_int10": 3,
+        "lut_index": 3
+      },
+      {
+        "channel": 6,
+        "accumulator": 9563,
+        "word": 4070512896,
+        "expected_int10": 18,
+        "lut_index": 18
+      },
+      {
+        "channel": 7,
+        "accumulator": 15515,
+        "word": 4234352896,
+        "expected_int10": 30,
+        "lut_index": 30
+      },
+      {
+        "channel": 8,
+        "accumulator": 2938,
+        "word": 2188974080,
+        "expected_int10": 6,
+        "lut_index": 6
+      },
+      {
+        "channel": 9,
+        "accumulator": -8686,
+        "word": 3148290048,
+        "expected_int10": -25,
+        "lut_index": 999
+      },
+      {
+        "channel": 10,
+        "accumulator": 3772,
+        "word": 4124383488,
+        "expected_int10": 7,
+        "lut_index": 7
+      },
+      {
+        "channel": 11,
+        "accumulator": -6688,
+        "word": 105190144,
+        "expected_int10": -20,
+        "lut_index": 1004
+      },
+      {
+        "channel": 12,
+        "accumulator": 4368,
+        "word": 1908480000,
+        "expected_int10": 8,
+        "lut_index": 8
+      },
+      {
+        "channel": 13,
+        "accumulator": 5872,
+        "word": 2008356864,
+        "expected_int10": 11,
+        "lut_index": 11
+      },
+      {
+        "channel": 14,
+        "accumulator": -5470,
+        "word": 35066368,
+        "expected_int10": -11,
+        "lut_index": 1013
+      },
+      {
+        "channel": 15,
+        "accumulator": -3523,
+        "word": 2153060352,
+        "expected_int10": -7,
+        "lut_index": 1017
+      },
+      {
+        "channel": 0,
+        "accumulator": 6380,
+        "word": 553981440,
+        "expected_int10": 13,
+        "lut_index": 13
+      },
+      {
+        "channel": 1,
+        "accumulator": -722,
+        "word": 958732032,
+        "expected_int10": -1,
+        "lut_index": 1023
+      },
+      {
+        "channel": 2,
+        "accumulator": 16862,
+        "word": 2153060352,
+        "expected_int10": 33,
+        "lut_index": 33
+      },
+      {
+        "channel": 3,
+        "accumulator": 5005,
+        "word": 4288223488,
+        "expected_int10": 10,
+        "lut_index": 10
+      },
+      {
+        "channel": 4,
+        "accumulator": 26351,
+        "word": 4252309760,
+        "expected_int10": 51,
+        "lut_index": 51
+      },
+      {
+        "channel": 5,
+        "accumulator": -14990,
+        "word": 483857920,
+        "expected_int10": -26,
+        "lut_index": 998
+      },
+      {
+        "channel": 6,
+        "accumulator": 9434,
+        "word": 4070512896,
+        "expected_int10": 17,
+        "lut_index": 17
+      },
+      {
+        "channel": 7,
+        "accumulator": 21392,
+        "word": 4234352896,
+        "expected_int10": 41,
+        "lut_index": 41
+      },
+      {
+        "channel": 8,
+        "accumulator": 3625,
+        "word": 2188974080,
+        "expected_int10": 7,
+        "lut_index": 7
+      },
+      {
+        "channel": 9,
+        "accumulator": 1013,
+        "word": 3148290048,
+        "expected_int10": 3,
+        "lut_index": 3
+      },
+      {
+        "channel": 10,
+        "accumulator": 36307,
+        "word": 4124383488,
+        "expected_int10": 68,
+        "lut_index": 68
+      },
+      {
+        "channel": 11,
+        "accumulator": -5642,
+        "word": 105190144,
+        "expected_int10": -17,
+        "lut_index": 1007
+      },
+      {
+        "channel": 12,
+        "accumulator": 10007,
+        "word": 1908480000,
+        "expected_int10": 17,
+        "lut_index": 17
+      },
+      {
+        "channel": 13,
+        "accumulator": 18234,
+        "word": 2008356864,
+        "expected_int10": 33,
+        "lut_index": 33
+      },
+      {
+        "channel": 14,
+        "accumulator": 7718,
+        "word": 35066368,
+        "expected_int10": 16,
+        "lut_index": 16
+      },
+      {
+        "channel": 15,
+        "accumulator": -4023,
+        "word": 2153060352,
+        "expected_int10": -8,
+        "lut_index": 1016
+      },
+      {
+        "channel": 0,
+        "accumulator": -1875,
+        "word": 553981440,
+        "expected_int10": -4,
+        "lut_index": 1020
+      },
+      {
+        "channel": 1,
+        "accumulator": -10411,
+        "word": 958732032,
+        "expected_int10": -18,
+        "lut_index": 1006
+      },
+      {
+        "channel": 2,
+        "accumulator": 8315,
+        "word": 2153060352,
+        "expected_int10": 16,
+        "lut_index": 16
+      },
+      {
+        "channel": 3,
+        "accumulator": -9602,
+        "word": 4288223488,
+        "expected_int10": -19,
+        "lut_index": 1005
+      },
+      {
+        "channel": 4,
+        "accumulator": 30804,
+        "word": 4252309760,
+        "expected_int10": 60,
+        "lut_index": 60
+      },
+      {
+        "channel": 5,
+        "accumulator": 3713,
+        "word": 483857920,
+        "expected_int10": 7,
+        "lut_index": 7
+      },
+      {
+        "channel": 6,
+        "accumulator": 23861,
+        "word": 4070512896,
+        "expected_int10": 44,
+        "lut_index": 44
+      },
+      {
+        "channel": 7,
+        "accumulator": 35952,
+        "word": 4234352896,
+        "expected_int10": 69,
+        "lut_index": 69
+      },
+      {
+        "channel": 8,
+        "accumulator": 7064,
+        "word": 2188974080,
+        "expected_int10": 14,
+        "lut_index": 14
+      },
+      {
+        "channel": 9,
+        "accumulator": -3799,
+        "word": 3148290048,
+        "expected_int10": -11,
+        "lut_index": 1013
+      },
+      {
+        "channel": 10,
+        "accumulator": 33222,
+        "word": 4124383488,
+        "expected_int10": 62,
+        "lut_index": 62
+      },
+      {
+        "channel": 11,
+        "accumulator": 850,
+        "word": 105190144,
+        "expected_int10": 3,
+        "lut_index": 3
+      },
+      {
+        "channel": 12,
+        "accumulator": 19334,
+        "word": 1908480000,
+        "expected_int10": 34,
+        "lut_index": 34
+      },
+      {
+        "channel": 13,
+        "accumulator": 26285,
+        "word": 2008356864,
+        "expected_int10": 48,
+        "lut_index": 48
+      },
+      {
+        "channel": 14,
+        "accumulator": 13059,
+        "word": 35066368,
+        "expected_int10": 27,
+        "lut_index": 27
+      },
+      {
+        "channel": 15,
+        "accumulator": -2937,
+        "word": 2153060352,
+        "expected_int10": -6,
+        "lut_index": 1018
+      }
+    ],
+    "model.layers.13.mlp.down_proj": [
+      {
+        "channel": 0,
+        "accumulator": 1625,
+        "word": 2246776832,
+        "expected_int10": 3,
+        "lut_index": 3
+      },
+      {
+        "channel": 1,
+        "accumulator": -6231,
+        "word": 2246776832,
+        "expected_int10": -13,
+        "lut_index": 1011
+      },
+      {
+        "channel": 2,
+        "accumulator": -2908,
+        "word": 3507427584,
+        "expected_int10": -5,
+        "lut_index": 1019
+      },
+      {
+        "channel": 3,
+        "accumulator": -7008,
+        "word": 3635747072,
+        "expected_int10": -12,
+        "lut_index": 1012
+      },
+      {
+        "channel": 4,
+        "accumulator": -3727,
+        "word": 1785796608,
+        "expected_int10": -6,
+        "lut_index": 1018
+      },
+      {
+        "channel": 5,
+        "accumulator": 34,
+        "word": 3539540224,
+        "expected_int10": 0,
+        "lut_index": 0
+      },
+      {
+        "channel": 6,
+        "accumulator": -918,
+        "word": 63640320,
+        "expected_int10": -2,
+        "lut_index": 1022
+      },
+      {
+        "channel": 7,
+        "accumulator": 2670,
+        "word": 2020284416,
+        "expected_int10": 5,
+        "lut_index": 5
+      },
+      {
+        "channel": 8,
+        "accumulator": -3793,
+        "word": 3651737856,
+        "expected_int10": -6,
+        "lut_index": 1018
+      },
+      {
+        "channel": 9,
+        "accumulator": 699,
+        "word": 2569476096,
+        "expected_int10": 2,
+        "lut_index": 2
+      },
+      {
+        "channel": 10,
+        "accumulator": -11267,
+        "word": 880875264,
+        "expected_int10": -18,
+        "lut_index": 1006
+      },
+      {
+        "channel": 11,
+        "accumulator": -3253,
+        "word": 3491436544,
+        "expected_int10": -10,
+        "lut_index": 1014
+      },
+      {
+        "channel": 12,
+        "accumulator": -4418,
+        "word": 499062272,
+        "expected_int10": -8,
+        "lut_index": 1016
+      },
+      {
+        "channel": 13,
+        "accumulator": -6238,
+        "word": 1899042816,
+        "expected_int10": -11,
+        "lut_index": 1013
+      },
+      {
+        "channel": 14,
+        "accumulator": -7465,
+        "word": 985601792,
+        "expected_int10": -13,
+        "lut_index": 1011
+      },
+      {
+        "channel": 15,
+        "accumulator": -5129,
+        "word": 63640320,
+        "expected_int10": -9,
+        "lut_index": 1015
+      },
+      {
+        "channel": 0,
+        "accumulator": -13045,
+        "word": 2246776832,
+        "expected_int10": -27,
+        "lut_index": 997
+      },
+      {
+        "channel": 1,
+        "accumulator": -1431,
+        "word": 2246776832,
+        "expected_int10": -3,
+        "lut_index": 1021
+      },
+      {
+        "channel": 2,
+        "accumulator": 7962,
+        "word": 3507427584,
+        "expected_int10": 13,
+        "lut_index": 13
+      },
+      {
+        "channel": 3,
+        "accumulator": -4037,
+        "word": 3635747072,
+        "expected_int10": -7,
+        "lut_index": 1017
+      },
+      {
+        "channel": 4,
+        "accumulator": 9728,
+        "word": 1785796608,
+        "expected_int10": 16,
+        "lut_index": 16
+      },
+      {
+        "channel": 5,
+        "accumulator": 19567,
+        "word": 3539540224,
+        "expected_int10": 31,
+        "lut_index": 31
+      },
+      {
+        "channel": 6,
+        "accumulator": 1559,
+        "word": 63640320,
+        "expected_int10": 3,
+        "lut_index": 3
+      },
+      {
+        "channel": 7,
+        "accumulator": 7387,
+        "word": 2020284416,
+        "expected_int10": 14,
+        "lut_index": 14
+      },
+      {
+        "channel": 8,
+        "accumulator": -15078,
+        "word": 3651737856,
+        "expected_int10": -25,
+        "lut_index": 999
+      },
+      {
+        "channel": 9,
+        "accumulator": -4304,
+        "word": 2569476096,
+        "expected_int10": -10,
+        "lut_index": 1014
+      },
+      {
+        "channel": 10,
+        "accumulator": -2113,
+        "word": 880875264,
+        "expected_int10": -3,
+        "lut_index": 1021
+      },
+      {
+        "channel": 11,
+        "accumulator": 2242,
+        "word": 3491436544,
+        "expected_int10": 7,
+        "lut_index": 7
+      },
+      {
+        "channel": 12,
+        "accumulator": 1922,
+        "word": 499062272,
+        "expected_int10": 3,
+        "lut_index": 3
+      },
+      {
+        "channel": 13,
+        "accumulator": -423,
+        "word": 1899042816,
+        "expected_int10": -1,
+        "lut_index": 1023
+      },
+      {
+        "channel": 14,
+        "accumulator": 7714,
+        "word": 985601792,
+        "expected_int10": 14,
+        "lut_index": 14
+      },
+      {
+        "channel": 15,
+        "accumulator": 9505,
+        "word": 63640320,
+        "expected_int10": 18,
+        "lut_index": 18
+      },
+      {
+        "channel": 0,
+        "accumulator": -14731,
+        "word": 2246776832,
+        "expected_int10": -30,
+        "lut_index": 994
+      },
+      {
+        "channel": 1,
+        "accumulator": -5987,
+        "word": 2246776832,
+        "expected_int10": -12,
+        "lut_index": 1012
+      },
+      {
+        "channel": 2,
+        "accumulator": 17133,
+        "word": 3507427584,
+        "expected_int10": 27,
+        "lut_index": 27
+      },
+      {
+        "channel": 3,
+        "accumulator": -4396,
+        "word": 3635747072,
+        "expected_int10": -7,
+        "lut_index": 1017
+      },
+      {
+        "channel": 4,
+        "accumulator": -7532,
+        "word": 1785796608,
+        "expected_int10": -12,
+        "lut_index": 1012
+      },
+      {
+        "channel": 5,
+        "accumulator": 3873,
+        "word": 3539540224,
+        "expected_int10": 6,
+        "lut_index": 6
+      },
+      {
+        "channel": 6,
+        "accumulator": 2084,
+        "word": 63640320,
+        "expected_int10": 4,
+        "lut_index": 4
+      },
+      {
+        "channel": 7,
+        "accumulator": 10377,
+        "word": 2020284416,
+        "expected_int10": 19,
+        "lut_index": 19
+      },
+      {
+        "channel": 8,
+        "accumulator": 7041,
+        "word": 3651737856,
+        "expected_int10": 12,
+        "lut_index": 12
+      },
+      {
+        "channel": 9,
+        "accumulator": -868,
+        "word": 2569476096,
+        "expected_int10": -2,
+        "lut_index": 1022
+      },
+      {
+        "channel": 10,
+        "accumulator": -17496,
+        "word": 880875264,
+        "expected_int10": -28,
+        "lut_index": 996
+      },
+      {
+        "channel": 11,
+        "accumulator": 7556,
+        "word": 3491436544,
+        "expected_int10": 24,
+        "lut_index": 24
+      },
+      {
+        "channel": 12,
+        "accumulator": -6493,
+        "word": 499062272,
+        "expected_int10": -12,
+        "lut_index": 1012
+      },
+      {
+        "channel": 13,
+        "accumulator": 30958,
+        "word": 1899042816,
+        "expected_int10": 53,
+        "lut_index": 53
+      },
+      {
+        "channel": 14,
+        "accumulator": 144,
+        "word": 985601792,
+        "expected_int10": 0,
+        "lut_index": 0
+      },
+      {
+        "channel": 15,
+        "accumulator": 5483,
+        "word": 63640320,
+        "expected_int10": 10,
+        "lut_index": 10
+      },
+      {
+        "channel": 0,
+        "accumulator": -7436,
+        "word": 2246776832,
+        "expected_int10": -15,
+        "lut_index": 1009
+      },
+      {
+        "channel": 1,
+        "accumulator": -1927,
+        "word": 2246776832,
+        "expected_int10": -4,
+        "lut_index": 1020
+      },
+      {
+        "channel": 2,
+        "accumulator": -6514,
+        "word": 3507427584,
+        "expected_int10": -10,
+        "lut_index": 1014
+      },
+      {
+        "channel": 3,
+        "accumulator": 10644,
+        "word": 3635747072,
+        "expected_int10": 18,
+        "lut_index": 18
+      },
+      {
+        "channel": 4,
+        "accumulator": 4934,
+        "word": 1785796608,
+        "expected_int10": 8,
+        "lut_index": 8
+      },
+      {
+        "channel": 5,
+        "accumulator": -1292,
+        "word": 3539540224,
+        "expected_int10": -2,
+        "lut_index": 1022
+      },
+      {
+        "channel": 6,
+        "accumulator": 9838,
+        "word": 63640320,
+        "expected_int10": 18,
+        "lut_index": 18
+      },
+      {
+        "channel": 7,
+        "accumulator": 7968,
+        "word": 2020284416,
+        "expected_int10": 15,
+        "lut_index": 15
+      },
+      {
+        "channel": 8,
+        "accumulator": -806,
+        "word": 3651737856,
+        "expected_int10": -1,
+        "lut_index": 1023
+      },
+      {
+        "channel": 9,
+        "accumulator": 1066,
+        "word": 2569476096,
+        "expected_int10": 2,
+        "lut_index": 2
+      },
+      {
+        "channel": 10,
+        "accumulator": -6371,
+        "word": 880875264,
+        "expected_int10": -10,
+        "lut_index": 1014
+      },
+      {
+        "channel": 11,
+        "accumulator": 2492,
+        "word": 3491436544,
+        "expected_int10": 8,
+        "lut_index": 8
+      },
+      {
+        "channel": 12,
+        "accumulator": 3688,
+        "word": 499062272,
+        "expected_int10": 7,
+        "lut_index": 7
+      },
+      {
+        "channel": 13,
+        "accumulator": 10510,
+        "word": 1899042816,
+        "expected_int10": 18,
+        "lut_index": 18
+      },
+      {
+        "channel": 14,
+        "accumulator": 3122,
+        "word": 985601792,
+        "expected_int10": 6,
+        "lut_index": 6
+      },
+      {
+        "channel": 15,
+        "accumulator": 18246,
+        "word": 63640320,
+        "expected_int10": 34,
+        "lut_index": 34
+      }
+    ],
+    "model.layers.14.mlp.down_proj": [
+      {
+        "channel": 0,
+        "accumulator": -1478,
+        "word": 1277498112,
+        "expected_int10": -55,
+        "lut_index": 969
+      },
+      {
+        "channel": 1,
+        "accumulator": 536,
+        "word": 805638912,
+        "expected_int10": 13,
+        "lut_index": 13
+      },
+      {
+        "channel": 2,
+        "accumulator": -415,
+        "word": 1520768000,
+        "expected_int10": -9,
+        "lut_index": 1015
+      },
+      {
+        "channel": 3,
+        "accumulator": -63,
+        "word": 3512931584,
+        "expected_int10": -2,
+        "lut_index": 1022
+      },
+      {
+        "channel": 4,
+        "accumulator": -1503,
+        "word": 191041792,
+        "expected_int10": -33,
+        "lut_index": 991
+      },
+      {
+        "channel": 5,
+        "accumulator": -2391,
+        "word": 756617984,
+        "expected_int10": -53,
+        "lut_index": 971
+      },
+      {
+        "channel": 6,
+        "accumulator": -759,
+        "word": 3009484032,
+        "expected_int10": -17,
+        "lut_index": 1007
+      },
+      {
+        "channel": 7,
+        "accumulator": -812,
+        "word": 3420525824,
+        "expected_int10": -20,
+        "lut_index": 1004
+      },
+      {
+        "channel": 8,
+        "accumulator": 748,
+        "word": 3543078144,
+        "expected_int10": 19,
+        "lut_index": 19
+      },
+      {
+        "channel": 9,
+        "accumulator": -721,
+        "word": 893326080,
+        "expected_int10": -19,
+        "lut_index": 1005
+      },
+      {
+        "channel": 10,
+        "accumulator": -638,
+        "word": 3177256192,
+        "expected_int10": -15,
+        "lut_index": 1009
+      },
+      {
+        "channel": 11,
+        "accumulator": -648,
+        "word": 532222464,
+        "expected_int10": -20,
+        "lut_index": 1004
+      },
+      {
+        "channel": 12,
+        "accumulator": 2418,
+        "word": 3724088576,
+        "expected_int10": 66,
+        "lut_index": 66
+      },
+      {
+        "channel": 13,
+        "accumulator": -379,
+        "word": 3284735232,
+        "expected_int10": -9,
+        "lut_index": 1015
+      },
+      {
+        "channel": 14,
+        "accumulator": -778,
+        "word": 3543078144,
+        "expected_int10": -20,
+        "lut_index": 1004
+      },
+      {
+        "channel": 15,
+        "accumulator": 188,
+        "word": 3831567616,
+        "expected_int10": 5,
+        "lut_index": 5
+      },
+      {
+        "channel": 0,
+        "accumulator": -1456,
+        "word": 1277498112,
+        "expected_int10": -54,
+        "lut_index": 970
+      },
+      {
+        "channel": 1,
+        "accumulator": 786,
+        "word": 805638912,
+        "expected_int10": 18,
+        "lut_index": 18
+      },
+      {
+        "channel": 2,
+        "accumulator": 1782,
+        "word": 1520768000,
+        "expected_int10": 39,
+        "lut_index": 39
+      },
+      {
+        "channel": 3,
+        "accumulator": -2465,
+        "word": 3512931584,
+        "expected_int10": -63,
+        "lut_index": 961
+      },
+      {
+        "channel": 4,
+        "accumulator": -3871,
+        "word": 191041792,
+        "expected_int10": -86,
+        "lut_index": 938
+      },
+      {
+        "channel": 5,
+        "accumulator": 25,
+        "word": 756617984,
+        "expected_int10": 1,
+        "lut_index": 1
+      },
+      {
+        "channel": 6,
+        "accumulator": -2162,
+        "word": 3009484032,
+        "expected_int10": -47,
+        "lut_index": 977
+      },
+      {
+        "channel": 7,
+        "accumulator": 3310,
+        "word": 3420525824,
+        "expected_int10": 82,
+        "lut_index": 82
+      },
+      {
+        "channel": 8,
+        "accumulator": 1596,
+        "word": 3543078144,
+        "expected_int10": 41,
+        "lut_index": 41
+      },
+      {
+        "channel": 9,
+        "accumulator": 2557,
+        "word": 893326080,
+        "expected_int10": 66,
+        "lut_index": 66
+      },
+      {
+        "channel": 10,
+        "accumulator": 728,
+        "word": 3177256192,
+        "expected_int10": 17,
+        "lut_index": 17
+      },
+      {
+        "channel": 11,
+        "accumulator": -559,
+        "word": 532222464,
+        "expected_int10": -17,
+        "lut_index": 1007
+      },
+      {
+        "channel": 12,
+        "accumulator": 846,
+        "word": 3724088576,
+        "expected_int10": 23,
+        "lut_index": 23
+      },
+      {
+        "channel": 13,
+        "accumulator": -748,
+        "word": 3284735232,
+        "expected_int10": -18,
+        "lut_index": 1006
+      },
+      {
+        "channel": 14,
+        "accumulator": 2634,
+        "word": 3543078144,
+        "expected_int10": 68,
+        "lut_index": 68
+      },
+      {
+        "channel": 15,
+        "accumulator": 2702,
+        "word": 3831567616,
+        "expected_int10": 75,
+        "lut_index": 75
+      },
+      {
+        "channel": 0,
+        "accumulator": -1142,
+        "word": 1277498112,
+        "expected_int10": -42,
+        "lut_index": 982
+      },
+      {
+        "channel": 1,
+        "accumulator": 2996,
+        "word": 805638912,
+        "expected_int10": 70,
+        "lut_index": 70
+      },
+      {
+        "channel": 2,
+        "accumulator": -1321,
+        "word": 1520768000,
+        "expected_int10": -29,
+        "lut_index": 995
+      },
+      {
+        "channel": 3,
+        "accumulator": -3346,
+        "word": 3512931584,
+        "expected_int10": -86,
+        "lut_index": 938
+      },
+      {
+        "channel": 4,
+        "accumulator": 1659,
+        "word": 191041792,
+        "expected_int10": 37,
+        "lut_index": 37
+      },
+      {
+        "channel": 5,
+        "accumulator": -1755,
+        "word": 756617984,
+        "expected_int10": -39,
+        "lut_index": 985
+      },
+      {
+        "channel": 6,
+        "accumulator": -2400,
+        "word": 3009484032,
+        "expected_int10": -53,
+        "lut_index": 971
+      },
+      {
+        "channel": 7,
+        "accumulator": 2131,
+        "word": 3420525824,
+        "expected_int10": 53,
+        "lut_index": 53
+      },
+      {
+        "channel": 8,
+        "accumulator": 1049,
+        "word": 3543078144,
+        "expected_int10": 27,
+        "lut_index": 27
+      },
+      {
+        "channel": 9,
+        "accumulator": 1246,
+        "word": 893326080,
+        "expected_int10": 32,
+        "lut_index": 32
+      },
+      {
+        "channel": 10,
+        "accumulator": 1526,
+        "word": 3177256192,
+        "expected_int10": 35,
+        "lut_index": 35
+      },
+      {
+        "channel": 11,
+        "accumulator": -893,
+        "word": 532222464,
+        "expected_int10": -28,
+        "lut_index": 996
+      },
+      {
+        "channel": 12,
+        "accumulator": 115,
+        "word": 3724088576,
+        "expected_int10": 3,
+        "lut_index": 3
+      },
+      {
+        "channel": 13,
+        "accumulator": 5026,
+        "word": 3284735232,
+        "expected_int10": 120,
+        "lut_index": 120
+      },
+      {
+        "channel": 14,
+        "accumulator": 780,
+        "word": 3543078144,
+        "expected_int10": 20,
+        "lut_index": 20
+      },
+      {
+        "channel": 15,
+        "accumulator": -1537,
+        "word": 3831567616,
+        "expected_int10": -43,
+        "lut_index": 981
+      },
+      {
+        "channel": 0,
+        "accumulator": -194,
+        "word": 1277498112,
+        "expected_int10": -7,
+        "lut_index": 1017
+      },
+      {
+        "channel": 1,
+        "accumulator": 2996,
+        "word": 805638912,
+        "expected_int10": 70,
+        "lut_index": 70
+      },
+      {
+        "channel": 2,
+        "accumulator": -889,
+        "word": 1520768000,
+        "expected_int10": -20,
+        "lut_index": 1004
+      },
+      {
+        "channel": 3,
+        "accumulator": 19,
+        "word": 3512931584,
+        "expected_int10": 0,
+        "lut_index": 0
+      },
+      {
+        "channel": 4,
+        "accumulator": 47,
+        "word": 191041792,
+        "expected_int10": 1,
+        "lut_index": 1
+      },
+      {
+        "channel": 5,
+        "accumulator": 3047,
+        "word": 756617984,
+        "expected_int10": 67,
+        "lut_index": 67
+      },
+      {
+        "channel": 6,
+        "accumulator": -1342,
+        "word": 3009484032,
+        "expected_int10": -29,
+        "lut_index": 995
+      },
+      {
+        "channel": 7,
+        "accumulator": 957,
+        "word": 3420525824,
+        "expected_int10": 24,
+        "lut_index": 24
+      },
+      {
+        "channel": 8,
+        "accumulator": -2299,
+        "word": 3543078144,
+        "expected_int10": -59,
+        "lut_index": 965
+      },
+      {
+        "channel": 9,
+        "accumulator": -1620,
+        "word": 893326080,
+        "expected_int10": -42,
+        "lut_index": 982
+      },
+      {
+        "channel": 10,
+        "accumulator": 1159,
+        "word": 3177256192,
+        "expected_int10": 27,
+        "lut_index": 27
+      },
+      {
+        "channel": 11,
+        "accumulator": 675,
+        "word": 532222464,
+        "expected_int10": 21,
+        "lut_index": 21
+      },
+      {
+        "channel": 12,
+        "accumulator": 2515,
+        "word": 3724088576,
+        "expected_int10": 68,
+        "lut_index": 68
+      },
+      {
+        "channel": 13,
+        "accumulator": 906,
+        "word": 3284735232,
+        "expected_int10": 22,
+        "lut_index": 22
+      },
+      {
+        "channel": 14,
+        "accumulator": -83,
+        "word": 3543078144,
+        "expected_int10": -2,
+        "lut_index": 1022
+      },
+      {
+        "channel": 15,
+        "accumulator": 97,
+        "word": 3831567616,
+        "expected_int10": 3,
+        "lut_index": 3
+      }
+    ],
+    "model.layers.15.mlp.down_proj": [
+      {
+        "channel": 0,
+        "accumulator": -11600,
+        "word": 765924864,
+        "expected_int10": -32,
+        "lut_index": 992
+      },
+      {
+        "channel": 1,
+        "accumulator": 8792,
+        "word": 2370246656,
+        "expected_int10": 19,
+        "lut_index": 19
+      },
+      {
+        "channel": 2,
+        "accumulator": 8910,
+        "word": 2280200192,
+        "expected_int10": 18,
+        "lut_index": 18
+      },
+      {
+        "channel": 3,
+        "accumulator": -11288,
+        "word": 2562922496,
+        "expected_int10": -26,
+        "lut_index": 998
+      },
+      {
+        "channel": 4,
+        "accumulator": -1116,
+        "word": 1225201408,
+        "expected_int10": -2,
+        "lut_index": 1022
+      },
+      {
+        "channel": 5,
+        "accumulator": -21817,
+        "word": 2426476544,
+        "expected_int10": -48,
+        "lut_index": 976
+      },
+      {
+        "channel": 6,
+        "accumulator": -13487,
+        "word": 1338447616,
+        "expected_int10": -33,
+        "lut_index": 991
+      },
+      {
+        "channel": 7,
+        "accumulator": -30265,
+        "word": 2199984128,
+        "expected_int10": -61,
+        "lut_index": 963
+      },
+      {
+        "channel": 8,
+        "accumulator": -13955,
+        "word": 2472876032,
+        "expected_int10": -31,
+        "lut_index": 993
+      },
+      {
+        "channel": 9,
+        "accumulator": 16804,
+        "word": 2268928000,
+        "expected_int10": 35,
+        "lut_index": 35
+      },
+      {
+        "channel": 10,
+        "accumulator": -12574,
+        "word": 629478912,
+        "expected_int10": -29,
+        "lut_index": 995
+      },
+      {
+        "channel": 11,
+        "accumulator": -12506,
+        "word": 2506692608,
+        "expected_int10": -29,
+        "lut_index": 995
+      },
+      {
+        "channel": 12,
+        "accumulator": 22146,
+        "word": 2291472384,
+        "expected_int10": 46,
+        "lut_index": 46
+      },
+      {
+        "channel": 13,
+        "accumulator": -11750,
+        "word": 1440421632,
+        "expected_int10": -31,
+        "lut_index": 993
+      },
+      {
+        "channel": 14,
+        "accumulator": -8131,
+        "word": 2291472384,
+        "expected_int10": -17,
+        "lut_index": 1007
+      },
+      {
+        "channel": 15,
+        "accumulator": 14523,
+        "word": 341644544,
+        "expected_int10": 36,
+        "lut_index": 36
+      },
+      {
+        "channel": 0,
+        "accumulator": 10272,
+        "word": 765924864,
+        "expected_int10": 29,
+        "lut_index": 29
+      },
+      {
+        "channel": 1,
+        "accumulator": -5455,
+        "word": 2370246656,
+        "expected_int10": -12,
+        "lut_index": 1012
+      },
+      {
+        "channel": 2,
+        "accumulator": -6152,
+        "word": 2280200192,
+        "expected_int10": -13,
+        "lut_index": 1011
+      },
+      {
+        "channel": 3,
+        "accumulator": 14152,
+        "word": 2562922496,
+        "expected_int10": 33,
+        "lut_index": 33
+      },
+      {
+        "channel": 4,
+        "accumulator": 13429,
+        "word": 1225201408,
+        "expected_int10": 30,
+        "lut_index": 30
+      },
+      {
+        "channel": 5,
+        "accumulator": 6125,
+        "word": 2426476544,
+        "expected_int10": 14,
+        "lut_index": 14
+      },
+      {
+        "channel": 6,
+        "accumulator": 21284,
+        "word": 1338447616,
+        "expected_int10": 52,
+        "lut_index": 52
+      },
+      {
+        "channel": 7,
+        "accumulator": 6701,
+        "word": 2199984128,
+        "expected_int10": 13,
+        "lut_index": 13
+      },
+      {
+        "channel": 8,
+        "accumulator": -14361,
+        "word": 2472876032,
+        "expected_int10": -32,
+        "lut_index": 992
+      },
+      {
+        "channel": 9,
+        "accumulator": -10529,
+        "word": 2268928000,
+        "expected_int10": -22,
+        "lut_index": 1002
+      },
+      {
+        "channel": 10,
+        "accumulator": -5081,
+        "word": 629478912,
+        "expected_int10": -12,
+        "lut_index": 1012
+      },
+      {
+        "channel": 11,
+        "accumulator": 3155,
+        "word": 2506692608,
+        "expected_int10": 7,
+        "lut_index": 7
+      },
+      {
+        "channel": 12,
+        "accumulator": -3232,
+        "word": 2291472384,
+        "expected_int10": -7,
+        "lut_index": 1017
+      },
+      {
+        "channel": 13,
+        "accumulator": 4092,
+        "word": 1440421632,
+        "expected_int10": 11,
+        "lut_index": 11
+      },
+      {
+        "channel": 14,
+        "accumulator": -6280,
+        "word": 2291472384,
+        "expected_int10": -13,
+        "lut_index": 1011
+      },
+      {
+        "channel": 15,
+        "accumulator": 16545,
+        "word": 341644544,
+        "expected_int10": 41,
+        "lut_index": 41
+      },
+      {
+        "channel": 0,
+        "accumulator": -2556,
+        "word": 765924864,
+        "expected_int10": -7,
+        "lut_index": 1017
+      },
+      {
+        "channel": 1,
+        "accumulator": 7383,
+        "word": 2370246656,
+        "expected_int10": 16,
+        "lut_index": 16
+      },
+      {
+        "channel": 2,
+        "accumulator": 10270,
+        "word": 2280200192,
+        "expected_int10": 21,
+        "lut_index": 21
+      },
+      {
+        "channel": 3,
+        "accumulator": -6246,
+        "word": 2562922496,
+        "expected_int10": -15,
+        "lut_index": 1009
+      },
+      {
+        "channel": 4,
+        "accumulator": -1266,
+        "word": 1225201408,
+        "expected_int10": -3,
+        "lut_index": 1021
+      },
+      {
+        "channel": 5,
+        "accumulator": -7799,
+        "word": 2426476544,
+        "expected_int10": -17,
+        "lut_index": 1007
+      },
+      {
+        "channel": 6,
+        "accumulator": -12104,
+        "word": 1338447616,
+        "expected_int10": -29,
+        "lut_index": 995
+      },
+      {
+        "channel": 7,
+        "accumulator": -14553,
+        "word": 2199984128,
+        "expected_int10": -29,
+        "lut_index": 995
+      },
+      {
+        "channel": 8,
+        "accumulator": 15968,
+        "word": 2472876032,
+        "expected_int10": 36,
+        "lut_index": 36
+      },
+      {
+        "channel": 9,
+        "accumulator": -12667,
+        "word": 2268928000,
+        "expected_int10": -26,
+        "lut_index": 998
+      },
+      {
+        "channel": 10,
+        "accumulator": 5838,
+        "word": 629478912,
+        "expected_int10": 13,
+        "lut_index": 13
+      },
+      {
+        "channel": 11,
+        "accumulator": 5576,
+        "word": 2506692608,
+        "expected_int10": 13,
+        "lut_index": 13
+      },
+      {
+        "channel": 12,
+        "accumulator": 10704,
+        "word": 2291472384,
+        "expected_int10": 22,
+        "lut_index": 22
+      },
+      {
+        "channel": 13,
+        "accumulator": -3979,
+        "word": 1440421632,
+        "expected_int10": -10,
+        "lut_index": 1014
+      },
+      {
+        "channel": 14,
+        "accumulator": 17708,
+        "word": 2291472384,
+        "expected_int10": 37,
+        "lut_index": 37
+      },
+      {
+        "channel": 15,
+        "accumulator": 19597,
+        "word": 341644544,
+        "expected_int10": 49,
+        "lut_index": 49
+      },
+      {
+        "channel": 0,
+        "accumulator": -6140,
+        "word": 765924864,
+        "expected_int10": -17,
+        "lut_index": 1007
+      },
+      {
+        "channel": 1,
+        "accumulator": -14959,
+        "word": 2370246656,
+        "expected_int10": -32,
+        "lut_index": 992
+      },
+      {
+        "channel": 2,
+        "accumulator": 2857,
+        "word": 2280200192,
+        "expected_int10": 6,
+        "lut_index": 6
+      },
+      {
+        "channel": 3,
+        "accumulator": 6004,
+        "word": 2562922496,
+        "expected_int10": 14,
+        "lut_index": 14
+      },
+      {
+        "channel": 4,
+        "accumulator": 2472,
+        "word": 1225201408,
+        "expected_int10": 6,
+        "lut_index": 6
+      },
+      {
+        "channel": 5,
+        "accumulator": 16220,
+        "word": 2426476544,
+        "expected_int10": 36,
+        "lut_index": 36
+      },
+      {
+        "channel": 6,
+        "accumulator": -8543,
+        "word": 1338447616,
+        "expected_int10": -21,
+        "lut_index": 1003
+      },
+      {
+        "channel": 7,
+        "accumulator": -575,
+        "word": 2199984128,
+        "expected_int10": -1,
+        "lut_index": 1023
+      },
+      {
+        "channel": 8,
+        "accumulator": 16687,
+        "word": 2472876032,
+        "expected_int10": 38,
+        "lut_index": 38
+      },
+      {
+        "channel": 9,
+        "accumulator": -1065,
+        "word": 2268928000,
+        "expected_int10": -2,
+        "lut_index": 1022
+      },
+      {
+        "channel": 10,
+        "accumulator": -6472,
+        "word": 629478912,
+        "expected_int10": -15,
+        "lut_index": 1009
+      },
+      {
+        "channel": 11,
+        "accumulator": 3857,
+        "word": 2506692608,
+        "expected_int10": 9,
+        "lut_index": 9
+      },
+      {
+        "channel": 12,
+        "accumulator": -6085,
+        "word": 2291472384,
+        "expected_int10": -13,
+        "lut_index": 1011
+      },
+      {
+        "channel": 13,
+        "accumulator": -5230,
+        "word": 1440421632,
+        "expected_int10": -14,
+        "lut_index": 1010
+      },
+      {
+        "channel": 14,
+        "accumulator": -11237,
+        "word": 2291472384,
+        "expected_int10": -23,
+        "lut_index": 1001
+      },
+      {
+        "channel": 15,
+        "accumulator": -3430,
+        "word": 341644544,
+        "expected_int10": -9,
+        "lut_index": 1015
+      }
+    ],
+    "model.layers.16.mlp.down_proj": [
+      {
+        "channel": 0,
+        "accumulator": -60337,
+        "word": 2612861184,
+        "expected_int10": -72,
+        "lut_index": 952
+      },
+      {
+        "channel": 1,
+        "accumulator": -372,
+        "word": 3362724352,
+        "expected_int10": 0,
+        "lut_index": 0
+      },
+      {
+        "channel": 2,
+        "accumulator": -1167,
+        "word": 931993600,
+        "expected_int10": -1,
+        "lut_index": 1023
+      },
+      {
+        "channel": 3,
+        "accumulator": -55142,
+        "word": 3710720512,
+        "expected_int10": -47,
+        "lut_index": 977
+      },
+      {
+        "channel": 4,
+        "accumulator": -13897,
+        "word": 3937606144,
+        "expected_int10": -12,
+        "lut_index": 1012
+      },
+      {
+        "channel": 5,
+        "accumulator": -32761,
+        "word": 3676117504,
+        "expected_int10": -27,
+        "lut_index": 997
+      },
+      {
+        "channel": 6,
+        "accumulator": -22849,
+        "word": 3903003136,
+        "expected_int10": -20,
+        "lut_index": 1004
+      },
+      {
+        "channel": 7,
+        "accumulator": -46869,
+        "word": 3972209152,
+        "expected_int10": -42,
+        "lut_index": 982
+      },
+      {
+        "channel": 8,
+        "accumulator": 19251,
+        "word": 931993600,
+        "expected_int10": 16,
+        "lut_index": 16
+      },
+      {
+        "channel": 9,
+        "accumulator": 34573,
+        "word": 2064980224,
+        "expected_int10": 32,
+        "lut_index": 32
+      },
+      {
+        "channel": 10,
+        "accumulator": 4989,
+        "word": 1803491584,
+        "expected_int10": 4,
+        "lut_index": 4
+      },
+      {
+        "channel": 11,
+        "accumulator": -4331,
+        "word": 280958464,
+        "expected_int10": -4,
+        "lut_index": 1020
+      },
+      {
+        "channel": 12,
+        "accumulator": 24371,
+        "word": 1812142336,
+        "expected_int10": 20,
+        "lut_index": 20
+      },
+      {
+        "channel": 13,
+        "accumulator": -10187,
+        "word": 4268300800,
+        "expected_int10": -10,
+        "lut_index": 1014
+      },
+      {
+        "channel": 14,
+        "accumulator": 2237,
+        "word": 4216396288,
+        "expected_int10": 2,
+        "lut_index": 2
+      },
+      {
+        "channel": 15,
+        "accumulator": -17687,
+        "word": 3658816000,
+        "expected_int10": -15,
+        "lut_index": 1009
+      },
+      {
+        "channel": 0,
+        "accumulator": 3321,
+        "word": 2612861184,
+        "expected_int10": 4,
+        "lut_index": 4
+      },
+      {
+        "channel": 1,
+        "accumulator": -9165,
+        "word": 3362724352,
+        "expected_int10": -7,
+        "lut_index": 1017
+      },
+      {
+        "channel": 2,
+        "accumulator": -5270,
+        "word": 931993600,
+        "expected_int10": -4,
+        "lut_index": 1020
+      },
+      {
+        "channel": 3,
+        "accumulator": 5111,
+        "word": 3710720512,
+        "expected_int10": 4,
+        "lut_index": 4
+      },
+      {
+        "channel": 4,
+        "accumulator": 23395,
+        "word": 3937606144,
+        "expected_int10": 21,
+        "lut_index": 21
+      },
+      {
+        "channel": 5,
+        "accumulator": -1083,
+        "word": 3676117504,
+        "expected_int10": -1,
+        "lut_index": 1023
+      },
+      {
+        "channel": 6,
+        "accumulator": -14234,
+        "word": 3903003136,
+        "expected_int10": -13,
+        "lut_index": 1011
+      },
+      {
+        "channel": 7,
+        "accumulator": 4140,
+        "word": 3972209152,
+        "expected_int10": 4,
+        "lut_index": 4
+      },
+      {
+        "channel": 8,
+        "accumulator": 2563,
+        "word": 931993600,
+        "expected_int10": 2,
+        "lut_index": 2
+      },
+      {
+        "channel": 9,
+        "accumulator": 3673,
+        "word": 2064980224,
+        "expected_int10": 3,
+        "lut_index": 3
+      },
+      {
+        "channel": 10,
+        "accumulator": -21601,
+        "word": 1803491584,
+        "expected_int10": -18,
+        "lut_index": 1006
+      },
+      {
+        "channel": 11,
+        "accumulator": 22402,
+        "word": 280958464,
+        "expected_int10": 23,
+        "lut_index": 23
+      },
+      {
+        "channel": 12,
+        "accumulator": 19885,
+        "word": 1812142336,
+        "expected_int10": 16,
+        "lut_index": 16
+      },
+      {
+        "channel": 13,
+        "accumulator": -12272,
+        "word": 4268300800,
+        "expected_int10": -12,
+        "lut_index": 1012
+      },
+      {
+        "channel": 14,
+        "accumulator": 15493,
+        "word": 4216396288,
+        "expected_int10": 15,
+        "lut_index": 15
+      },
+      {
+        "channel": 15,
+        "accumulator": -13323,
+        "word": 3658816000,
+        "expected_int10": -11,
+        "lut_index": 1013
+      },
+      {
+        "channel": 0,
+        "accumulator": 1265,
+        "word": 2612861184,
+        "expected_int10": 2,
+        "lut_index": 2
+      },
+      {
+        "channel": 1,
+        "accumulator": 11651,
+        "word": 3362724352,
+        "expected_int10": 9,
+        "lut_index": 9
+      },
+      {
+        "channel": 2,
+        "accumulator": -14549,
+        "word": 931993600,
+        "expected_int10": -12,
+        "lut_index": 1012
+      },
+      {
+        "channel": 3,
+        "accumulator": 17782,
+        "word": 3710720512,
+        "expected_int10": 15,
+        "lut_index": 15
+      },
+      {
+        "channel": 4,
+        "accumulator": 7819,
+        "word": 3937606144,
+        "expected_int10": 7,
+        "lut_index": 7
+      },
+      {
+        "channel": 5,
+        "accumulator": -22831,
+        "word": 3676117504,
+        "expected_int10": -19,
+        "lut_index": 1005
+      },
+      {
+        "channel": 6,
+        "accumulator": -13839,
+        "word": 3903003136,
+        "expected_int10": -12,
+        "lut_index": 1012
+      },
+      {
+        "channel": 7,
+        "accumulator": 10575,
+        "word": 3972209152,
+        "expected_int10": 10,
+        "lut_index": 10
+      },
+      {
+        "channel": 8,
+        "accumulator": 4541,
+        "word": 931993600,
+        "expected_int10": 4,
+        "lut_index": 4
+      },
+      {
+        "channel": 9,
+        "accumulator": -21381,
+        "word": 2064980224,
+        "expected_int10": -20,
+        "lut_index": 1004
+      },
+      {
+        "channel": 10,
+        "accumulator": -14545,
+        "word": 1803491584,
+        "expected_int10": -12,
+        "lut_index": 1012
+      },
+      {
+        "channel": 11,
+        "accumulator": 13669,
+        "word": 280958464,
+        "expected_int10": 14,
+        "lut_index": 14
+      },
+      {
+        "channel": 12,
+        "accumulator": 1705,
+        "word": 1812142336,
+        "expected_int10": 1,
+        "lut_index": 1
+      },
+      {
+        "channel": 13,
+        "accumulator": 13338,
+        "word": 4268300800,
+        "expected_int10": 13,
+        "lut_index": 13
+      },
+      {
+        "channel": 14,
+        "accumulator": -5160,
+        "word": 4216396288,
+        "expected_int10": -5,
+        "lut_index": 1019
+      },
+      {
+        "channel": 15,
+        "accumulator": 5084,
+        "word": 3658816000,
+        "expected_int10": 4,
+        "lut_index": 4
+      },
+      {
+        "channel": 0,
+        "accumulator": 11709,
+        "word": 2612861184,
+        "expected_int10": 14,
+        "lut_index": 14
+      },
+      {
+        "channel": 1,
+        "accumulator": 3656,
+        "word": 3362724352,
+        "expected_int10": 3,
+        "lut_index": 3
+      },
+      {
+        "channel": 2,
+        "accumulator": -15058,
+        "word": 931993600,
+        "expected_int10": -13,
+        "lut_index": 1011
+      },
+      {
+        "channel": 3,
+        "accumulator": -417,
+        "word": 3710720512,
+        "expected_int10": 0,
+        "lut_index": 0
+      },
+      {
+        "channel": 4,
+        "accumulator": 6340,
+        "word": 3937606144,
+        "expected_int10": 6,
+        "lut_index": 6
+      },
+      {
+        "channel": 5,
+        "accumulator": -35395,
+        "word": 3676117504,
+        "expected_int10": -30,
+        "lut_index": 994
+      },
+      {
+        "channel": 6,
+        "accumulator": 758,
+        "word": 3903003136,
+        "expected_int10": 1,
+        "lut_index": 1
+      },
+      {
+        "channel": 7,
+        "accumulator": -14081,
+        "word": 3972209152,
+        "expected_int10": -13,
+        "lut_index": 1011
+      },
+      {
+        "channel": 8,
+        "accumulator": -1059,
+        "word": 931993600,
+        "expected_int10": -1,
+        "lut_index": 1023
+      },
+      {
+        "channel": 9,
+        "accumulator": 14939,
+        "word": 2064980224,
+        "expected_int10": 14,
+        "lut_index": 14
+      },
+      {
+        "channel": 10,
+        "accumulator": -9916,
+        "word": 1803491584,
+        "expected_int10": -8,
+        "lut_index": 1016
+      },
+      {
+        "channel": 11,
+        "accumulator": 14283,
+        "word": 280958464,
+        "expected_int10": 15,
+        "lut_index": 15
+      },
+      {
+        "channel": 12,
+        "accumulator": 23832,
+        "word": 1812142336,
+        "expected_int10": 20,
+        "lut_index": 20
+      },
+      {
+        "channel": 13,
+        "accumulator": 21583,
+        "word": 4268300800,
+        "expected_int10": 21,
+        "lut_index": 21
+      },
+      {
+        "channel": 14,
+        "accumulator": 74,
+        "word": 4216396288,
+        "expected_int10": 0,
+        "lut_index": 0
+      },
+      {
+        "channel": 15,
+        "accumulator": -19315,
+        "word": 3658816000,
+        "expected_int10": -16,
+        "lut_index": 1008
+      }
+    ],
+    "model.layers.17.mlp.down_proj": [
+      {
+        "channel": 0,
+        "accumulator": 1114,
+        "word": 4020049920,
+        "expected_int10": 4,
+        "lut_index": 4
+      },
+      {
+        "channel": 1,
+        "accumulator": -1599,
+        "word": 1209341440,
+        "expected_int10": -7,
+        "lut_index": 1017
+      },
+      {
+        "channel": 2,
+        "accumulator": -606,
+        "word": 1209341440,
+        "expected_int10": -3,
+        "lut_index": 1021
+      },
+      {
+        "channel": 3,
+        "accumulator": -222,
+        "word": 314119168,
+        "expected_int10": -1,
+        "lut_index": 1023
+      },
+      {
+        "channel": 4,
+        "accumulator": -1300,
+        "word": 2499876608,
+        "expected_int10": -6,
+        "lut_index": 1018
+      },
+      {
+        "channel": 5,
+        "accumulator": -587,
+        "word": 976033024,
+        "expected_int10": -4,
+        "lut_index": 1020
+      },
+      {
+        "channel": 6,
+        "accumulator": 2414,
+        "word": 2559232,
+        "expected_int10": 11,
+        "lut_index": 11
+      },
+      {
+        "channel": 7,
+        "accumulator": -988,
+        "word": 2278102784,
+        "expected_int10": -4,
+        "lut_index": 1020
+      },
+      {
+        "channel": 8,
+        "accumulator": 710,
+        "word": 2582451968,
+        "expected_int10": 3,
+        "lut_index": 3
+      },
+      {
+        "channel": 9,
+        "accumulator": -2108,
+        "word": 2628851456,
+        "expected_int10": -10,
+        "lut_index": 1014
+      },
+      {
+        "channel": 10,
+        "accumulator": 1914,
+        "word": 2349143808,
+        "expected_int10": 8,
+        "lut_index": 8
+      },
+      {
+        "channel": 11,
+        "accumulator": 1314,
+        "word": 2605651712,
+        "expected_int10": 6,
+        "lut_index": 6
+      },
+      {
+        "channel": 12,
+        "accumulator": 2675,
+        "word": 4205516800,
+        "expected_int10": 10,
+        "lut_index": 10
+      },
+      {
+        "channel": 13,
+        "accumulator": 3657,
+        "word": 2910000896,
+        "expected_int10": 19,
+        "lut_index": 19
+      },
+      {
+        "channel": 14,
+        "accumulator": -401,
+        "word": 1273828864,
+        "expected_int10": -2,
+        "lut_index": 1022
+      },
+      {
+        "channel": 15,
+        "accumulator": -944,
+        "word": 1232541184,
+        "expected_int10": -4,
+        "lut_index": 1020
+      },
+      {
+        "channel": 0,
+        "accumulator": 57,
+        "word": 4020049920,
+        "expected_int10": 0,
+        "lut_index": 0
+      },
+      {
+        "channel": 1,
+        "accumulator": 2,
+        "word": 1209341440,
+        "expected_int10": 0,
+        "lut_index": 0
+      },
+      {
+        "channel": 2,
+        "accumulator": 56,
+        "word": 1209341440,
+        "expected_int10": 0,
+        "lut_index": 0
+      },
+      {
+        "channel": 3,
+        "accumulator": 44,
+        "word": 314119168,
+        "expected_int10": 0,
+        "lut_index": 0
+      },
+      {
+        "channel": 4,
+        "accumulator": 11,
+        "word": 2499876608,
+        "expected_int10": 0,
+        "lut_index": 0
+      },
+      {
+        "channel": 5,
+        "accumulator": 13,
+        "word": 976033024,
+        "expected_int10": 0,
+        "lut_index": 0
+      },
+      {
+        "channel": 6,
+        "accumulator": -11,
+        "word": 2559232,
+        "expected_int10": 0,
+        "lut_index": 0
+      },
+      {
+        "channel": 7,
+        "accumulator": 47,
+        "word": 2278102784,
+        "expected_int10": 0,
+        "lut_index": 0
+      },
+      {
+        "channel": 8,
+        "accumulator": 16,
+        "word": 2582451968,
+        "expected_int10": 0,
+        "lut_index": 0
+      },
+      {
+        "channel": 9,
+        "accumulator": 37,
+        "word": 2628851456,
+        "expected_int10": 0,
+        "lut_index": 0
+      },
+      {
+        "channel": 10,
+        "accumulator": -28,
+        "word": 2349143808,
+        "expected_int10": 0,
+        "lut_index": 0
+      },
+      {
+        "channel": 11,
+        "accumulator": 14,
+        "word": 2605651712,
+        "expected_int10": 0,
+        "lut_index": 0
+      },
+      {
+        "channel": 12,
+        "accumulator": 46,
+        "word": 4205516800,
+        "expected_int10": 0,
+        "lut_index": 0
+      },
+      {
+        "channel": 13,
+        "accumulator": -4,
+        "word": 2910000896,
+        "expected_int10": 0,
+        "lut_index": 0
+      },
+      {
+        "channel": 14,
+        "accumulator": 37,
+        "word": 1273828864,
+        "expected_int10": 0,
+        "lut_index": 0
+      },
+      {
+        "channel": 15,
+        "accumulator": -27,
+        "word": 1232541184,
+        "expected_int10": 0,
+        "lut_index": 0
+      },
+      {
+        "channel": 0,
+        "accumulator": 14,
+        "word": 4020049920,
+        "expected_int10": 0,
+        "lut_index": 0
+      },
+      {
+        "channel": 1,
+        "accumulator": -32,
+        "word": 1209341440,
+        "expected_int10": 0,
+        "lut_index": 0
+      },
+      {
+        "channel": 2,
+        "accumulator": 12,
+        "word": 1209341440,
+        "expected_int10": 0,
+        "lut_index": 0
+      },
+      {
+        "channel": 3,
+        "accumulator": -57,
+        "word": 314119168,
+        "expected_int10": 0,
+        "lut_index": 0
+      },
+      {
+        "channel": 4,
+        "accumulator": 112,
+        "word": 2499876608,
+        "expected_int10": 1,
+        "lut_index": 1
+      },
+      {
+        "channel": 5,
+        "accumulator": -36,
+        "word": 976033024,
+        "expected_int10": 0,
+        "lut_index": 0
+      },
+      {
+        "channel": 6,
+        "accumulator": -63,
+        "word": 2559232,
+        "expected_int10": 0,
+        "lut_index": 0
+      },
+      {
+        "channel": 7,
+        "accumulator": -192,
+        "word": 2278102784,
+        "expected_int10": -1,
+        "lut_index": 1023
+      },
+      {
+        "channel": 8,
+        "accumulator": 261,
+        "word": 2582451968,
+        "expected_int10": 1,
+        "lut_index": 1
+      },
+      {
+        "channel": 9,
+        "accumulator": 22,
+        "word": 2628851456,
+        "expected_int10": 0,
+        "lut_index": 0
+      },
+      {
+        "channel": 10,
+        "accumulator": 233,
+        "word": 2349143808,
+        "expected_int10": 1,
+        "lut_index": 1
+      },
+      {
+        "channel": 11,
+        "accumulator": 65,
+        "word": 2605651712,
+        "expected_int10": 0,
+        "lut_index": 0
+      },
+      {
+        "channel": 12,
+        "accumulator": 90,
+        "word": 4205516800,
+        "expected_int10": 0,
+        "lut_index": 0
+      },
+      {
+        "channel": 13,
+        "accumulator": -37,
+        "word": 2910000896,
+        "expected_int10": 0,
+        "lut_index": 0
+      },
+      {
+        "channel": 14,
+        "accumulator": 5,
+        "word": 1273828864,
+        "expected_int10": 0,
+        "lut_index": 0
+      },
+      {
+        "channel": 15,
+        "accumulator": 19,
+        "word": 1232541184,
+        "expected_int10": 0,
+        "lut_index": 0
+      },
+      {
+        "channel": 0,
+        "accumulator": -97,
+        "word": 4020049920,
+        "expected_int10": 0,
+        "lut_index": 0
+      },
+      {
+        "channel": 1,
+        "accumulator": 83,
+        "word": 1209341440,
+        "expected_int10": 0,
+        "lut_index": 0
+      },
+      {
+        "channel": 2,
+        "accumulator": 77,
+        "word": 1209341440,
+        "expected_int10": 0,
+        "lut_index": 0
+      },
+      {
+        "channel": 3,
+        "accumulator": 13,
+        "word": 314119168,
+        "expected_int10": 0,
+        "lut_index": 0
+      },
+      {
+        "channel": 4,
+        "accumulator": -8,
+        "word": 2499876608,
+        "expected_int10": 0,
+        "lut_index": 0
+      },
+      {
+        "channel": 5,
+        "accumulator": 22,
+        "word": 976033024,
+        "expected_int10": 0,
+        "lut_index": 0
+      },
+      {
+        "channel": 6,
+        "accumulator": 38,
+        "word": 2559232,
+        "expected_int10": 0,
+        "lut_index": 0
+      },
+      {
+        "channel": 7,
+        "accumulator": -83,
+        "word": 2278102784,
+        "expected_int10": 0,
+        "lut_index": 0
+      },
+      {
+        "channel": 8,
+        "accumulator": 24,
+        "word": 2582451968,
+        "expected_int10": 0,
+        "lut_index": 0
+      },
+      {
+        "channel": 9,
+        "accumulator": -32,
+        "word": 2628851456,
+        "expected_int10": 0,
+        "lut_index": 0
+      },
+      {
+        "channel": 10,
+        "accumulator": -31,
+        "word": 2349143808,
+        "expected_int10": 0,
+        "lut_index": 0
+      },
+      {
+        "channel": 11,
+        "accumulator": 45,
+        "word": 2605651712,
+        "expected_int10": 0,
+        "lut_index": 0
+      },
+      {
+        "channel": 12,
+        "accumulator": 3,
+        "word": 4205516800,
+        "expected_int10": 0,
+        "lut_index": 0
+      },
+      {
+        "channel": 13,
+        "accumulator": -57,
+        "word": 2910000896,
+        "expected_int10": 0,
+        "lut_index": 0
+      },
+      {
+        "channel": 14,
+        "accumulator": 78,
+        "word": 1273828864,
+        "expected_int10": 0,
+        "lut_index": 0
+      },
+      {
+        "channel": 15,
+        "accumulator": -84,
+        "word": 1232541184,
+        "expected_int10": 0,
+        "lut_index": 0
+      }
+    ],
+    "model.layers.2.mlp.down_proj": [
+      {
+        "channel": 0,
+        "accumulator": 267,
+        "word": 3542554624,
+        "expected_int10": 1,
+        "lut_index": 1
+      },
+      {
+        "channel": 1,
+        "accumulator": -1825,
+        "word": 2977634304,
+        "expected_int10": -5,
+        "lut_index": 1019
+      },
+      {
+        "channel": 2,
+        "accumulator": -3253,
+        "word": 3437565952,
+        "expected_int10": -10,
+        "lut_index": 1014
+      },
+      {
+        "channel": 3,
+        "accumulator": 1914,
+        "word": 1655117568,
+        "expected_int10": 6,
+        "lut_index": 6
+      },
+      {
+        "channel": 4,
+        "accumulator": -1418,
+        "word": 779425280,
+        "expected_int10": -4,
+        "lut_index": 1020
+      },
+      {
+        "channel": 5,
+        "accumulator": -34,
+        "word": 802100736,
+        "expected_int10": 0,
+        "lut_index": 0
+      },
+      {
+        "channel": 6,
+        "accumulator": -6241,
+        "word": 1565202176,
+        "expected_int10": -18,
+        "lut_index": 1006
+      },
+      {
+        "channel": 7,
+        "accumulator": 3237,
+        "word": 1745819392,
+        "expected_int10": 10,
+        "lut_index": 10
+      },
+      {
+        "channel": 8,
+        "accumulator": 844,
+        "word": 1745819392,
+        "expected_int10": 3,
+        "lut_index": 3
+      },
+      {
+        "channel": 9,
+        "accumulator": -7,
+        "word": 1577916160,
+        "expected_int10": 0,
+        "lut_index": 0
+      },
+      {
+        "channel": 10,
+        "accumulator": -2745,
+        "word": 106631936,
+        "expected_int10": -9,
+        "lut_index": 1015
+      },
+      {
+        "channel": 11,
+        "accumulator": 691,
+        "word": 1667831552,
+        "expected_int10": 2,
+        "lut_index": 2
+      },
+      {
+        "channel": 12,
+        "accumulator": -1762,
+        "word": 3182893056,
+        "expected_int10": -5,
+        "lut_index": 1019
+      },
+      {
+        "channel": 13,
+        "accumulator": 528,
+        "word": 1475286784,
+        "expected_int10": 1,
+        "lut_index": 1
+      },
+      {
+        "channel": 14,
+        "accumulator": -2176,
+        "word": 1520637696,
+        "expected_int10": -6,
+        "lut_index": 1018
+      },
+      {
+        "channel": 15,
+        "accumulator": 889,
+        "word": 3720812544,
+        "expected_int10": 3,
+        "lut_index": 3
+      },
+      {
+        "channel": 0,
+        "accumulator": -7044,
+        "word": 3542554624,
+        "expected_int10": -23,
+        "lut_index": 1001
+      },
+      {
+        "channel": 1,
+        "accumulator": -8113,
+        "word": 2977634304,
+        "expected_int10": -22,
+        "lut_index": 1002
+      },
+      {
+        "channel": 2,
+        "accumulator": -5532,
+        "word": 3437565952,
+        "expected_int10": -17,
+        "lut_index": 1007
+      },
+      {
+        "channel": 3,
+        "accumulator": 7976,
+        "word": 1655117568,
+        "expected_int10": 24,
+        "lut_index": 24
+      },
+      {
+        "channel": 4,
+        "accumulator": 11191,
+        "word": 779425280,
+        "expected_int10": 32,
+        "lut_index": 32
+      },
+      {
+        "channel": 5,
+        "accumulator": -20886,
+        "word": 802100736,
+        "expected_int10": -61,
+        "lut_index": 963
+      },
+      {
+        "channel": 6,
+        "accumulator": -8203,
+        "word": 1565202176,
+        "expected_int10": -23,
+        "lut_index": 1001
+      },
+      {
+        "channel": 7,
+        "accumulator": -15055,
+        "word": 1745819392,
+        "expected_int10": -48,
+        "lut_index": 976
+      },
+      {
+        "channel": 8,
+        "accumulator": 1498,
+        "word": 1745819392,
+        "expected_int10": 5,
+        "lut_index": 5
+      },
+      {
+        "channel": 9,
+        "accumulator": 19767,
+        "word": 1577916160,
+        "expected_int10": 57,
+        "lut_index": 57
+      },
+      {
+        "channel": 10,
+        "accumulator": -3940,
+        "word": 106631936,
+        "expected_int10": -12,
+        "lut_index": 1012
+      },
+      {
+        "channel": 11,
+        "accumulator": -877,
+        "word": 1667831552,
+        "expected_int10": -3,
+        "lut_index": 1021
+      },
+      {
+        "channel": 12,
+        "accumulator": 10972,
+        "word": 3182893056,
+        "expected_int10": 32,
+        "lut_index": 32
+      },
+      {
+        "channel": 13,
+        "accumulator": -14007,
+        "word": 1475286784,
+        "expected_int10": -38,
+        "lut_index": 986
+      },
+      {
+        "channel": 14,
+        "accumulator": -9480,
+        "word": 1520637696,
+        "expected_int10": -26,
+        "lut_index": 998
+      },
+      {
+        "channel": 15,
+        "accumulator": 8313,
+        "word": 3720812544,
+        "expected_int10": 28,
+        "lut_index": 28
+      },
+      {
+        "channel": 0,
+        "accumulator": -32285,
+        "word": 3542554624,
+        "expected_int10": -104,
+        "lut_index": 920
+      },
+      {
+        "channel": 1,
+        "accumulator": 12730,
+        "word": 2977634304,
+        "expected_int10": 34,
+        "lut_index": 34
+      },
+      {
+        "channel": 2,
+        "accumulator": -29656,
+        "word": 3437565952,
+        "expected_int10": -93,
+        "lut_index": 931
+      },
+      {
+        "channel": 3,
+        "accumulator": -451,
+        "word": 1655117568,
+        "expected_int10": -1,
+        "lut_index": 1023
+      },
+      {
+        "channel": 4,
+        "accumulator": -30824,
+        "word": 779425280,
+        "expected_int10": -87,
+        "lut_index": 937
+      },
+      {
+        "channel": 5,
+        "accumulator": -29165,
+        "word": 802100736,
+        "expected_int10": -85,
+        "lut_index": 939
+      },
+      {
+        "channel": 6,
+        "accumulator": 31280,
+        "word": 1565202176,
+        "expected_int10": 89,
+        "lut_index": 89
+      },
+      {
+        "channel": 7,
+        "accumulator": 40823,
+        "word": 1745819392,
+        "expected_int10": 130,
+        "lut_index": 130
+      },
+      {
+        "channel": 8,
+        "accumulator": -23860,
+        "word": 1745819392,
+        "expected_int10": -76,
+        "lut_index": 948
+      },
+      {
+        "channel": 9,
+        "accumulator": -27988,
+        "word": 1577916160,
+        "expected_int10": -80,
+        "lut_index": 944
+      },
+      {
+        "channel": 10,
+        "accumulator": -13316,
+        "word": 106631936,
+        "expected_int10": -41,
+        "lut_index": 983
+      },
+      {
+        "channel": 11,
+        "accumulator": 23286,
+        "word": 1667831552,
+        "expected_int10": 71,
+        "lut_index": 71
+      },
+      {
+        "channel": 12,
+        "accumulator": -26803,
+        "word": 3182893056,
+        "expected_int10": -78,
+        "lut_index": 946
+      },
+      {
+        "channel": 13,
+        "accumulator": 32721,
+        "word": 1475286784,
+        "expected_int10": 88,
+        "lut_index": 88
+      },
+      {
+        "channel": 14,
+        "accumulator": -28398,
+        "word": 1520637696,
+        "expected_int10": -79,
+        "lut_index": 945
+      },
+      {
+        "channel": 15,
+        "accumulator": 20082,
+        "word": 3720812544,
+        "expected_int10": 68,
+        "lut_index": 68
+      },
+      {
+        "channel": 0,
+        "accumulator": -45910,
+        "word": 3542554624,
+        "expected_int10": -148,
+        "lut_index": 876
+      },
+      {
+        "channel": 1,
+        "accumulator": -25048,
+        "word": 2977634304,
+        "expected_int10": -68,
+        "lut_index": 956
+      },
+      {
+        "channel": 2,
+        "accumulator": -11295,
+        "word": 3437565952,
+        "expected_int10": -35,
+        "lut_index": 989
+      },
+      {
+        "channel": 3,
+        "accumulator": 34861,
+        "word": 1655117568,
+        "expected_int10": 105,
+        "lut_index": 105
+      },
+      {
+        "channel": 4,
+        "accumulator": -18494,
+        "word": 779425280,
+        "expected_int10": -52,
+        "lut_index": 972
+      },
+      {
+        "channel": 5,
+        "accumulator": -6251,
+        "word": 802100736,
+        "expected_int10": -18,
+        "lut_index": 1006
+      },
+      {
+        "channel": 6,
+        "accumulator": -3606,
+        "word": 1565202176,
+        "expected_int10": -10,
+        "lut_index": 1014
+      },
+      {
+        "channel": 7,
+        "accumulator": 3344,
+        "word": 1745819392,
+        "expected_int10": 11,
+        "lut_index": 11
+      },
+      {
+        "channel": 8,
+        "accumulator": 23041,
+        "word": 1745819392,
+        "expected_int10": 73,
+        "lut_index": 73
+      },
+      {
+        "channel": 9,
+        "accumulator": 16604,
+        "word": 1577916160,
+        "expected_int10": 48,
+        "lut_index": 48
+      },
+      {
+        "channel": 10,
+        "accumulator": -33222,
+        "word": 106631936,
+        "expected_int10": -103,
+        "lut_index": 921
+      },
+      {
+        "channel": 11,
+        "accumulator": 6438,
+        "word": 1667831552,
+        "expected_int10": 20,
+        "lut_index": 20
+      },
+      {
+        "channel": 12,
+        "accumulator": 1371,
+        "word": 3182893056,
+        "expected_int10": 4,
+        "lut_index": 4
+      },
+      {
+        "channel": 13,
+        "accumulator": 14239,
+        "word": 1475286784,
+        "expected_int10": 38,
+        "lut_index": 38
+      },
+      {
+        "channel": 14,
+        "accumulator": 23326,
+        "word": 1520637696,
+        "expected_int10": 65,
+        "lut_index": 65
+      },
+      {
+        "channel": 15,
+        "accumulator": -12550,
+        "word": 3720812544,
+        "expected_int10": -42,
+        "lut_index": 982
+      }
+    ],
+    "model.layers.3.mlp.down_proj": [
+      {
+        "channel": 0,
+        "accumulator": -2727,
+        "word": 2311133184,
+        "expected_int10": -6,
+        "lut_index": 1018
+      },
+      {
+        "channel": 1,
+        "accumulator": -7342,
+        "word": 2218989568,
+        "expected_int10": -15,
+        "lut_index": 1009
+      },
+      {
+        "channel": 2,
+        "accumulator": -6224,
+        "word": 71373568,
+        "expected_int10": -13,
+        "lut_index": 1011
+      },
+      {
+        "channel": 3,
+        "accumulator": -265,
+        "word": 3043563520,
+        "expected_int10": -1,
+        "lut_index": 1023
+      },
+      {
+        "channel": 4,
+        "accumulator": -1092,
+        "word": 1114052352,
+        "expected_int10": -2,
+        "lut_index": 1022
+      },
+      {
+        "channel": 5,
+        "accumulator": -1208,
+        "word": 586880512,
+        "expected_int10": -3,
+        "lut_index": 1021
+      },
+      {
+        "channel": 6,
+        "accumulator": -2390,
+        "word": 1114052352,
+        "expected_int10": -5,
+        "lut_index": 1019
+      },
+      {
+        "channel": 7,
+        "accumulator": 1688,
+        "word": 561583616,
+        "expected_int10": 3,
+        "lut_index": 3
+      },
+      {
+        "channel": 8,
+        "accumulator": 720,
+        "word": 297997568,
+        "expected_int10": 2,
+        "lut_index": 2
+      },
+      {
+        "channel": 9,
+        "accumulator": -4283,
+        "word": 687543808,
+        "expected_int10": -11,
+        "lut_index": 1013
+      },
+      {
+        "channel": 10,
+        "accumulator": 6681,
+        "word": 1137383168,
+        "expected_int10": 14,
+        "lut_index": 14
+      },
+      {
+        "channel": 11,
+        "accumulator": -2319,
+        "word": 3100448768,
+        "expected_int10": -7,
+        "lut_index": 1017
+      },
+      {
+        "channel": 12,
+        "accumulator": -621,
+        "word": 316478720,
+        "expected_int10": -1,
+        "lut_index": 1023
+      },
+      {
+        "channel": 13,
+        "accumulator": -6815,
+        "word": 2604603392,
+        "expected_int10": -16,
+        "lut_index": 1008
+      },
+      {
+        "channel": 14,
+        "accumulator": 9646,
+        "word": 1228347136,
+        "expected_int10": 22,
+        "lut_index": 22
+      },
+      {
+        "channel": 15,
+        "accumulator": 5475,
+        "word": 71373568,
+        "expected_int10": 11,
+        "lut_index": 11
+      },
+      {
+        "channel": 0,
+        "accumulator": -36223,
+        "word": 2311133184,
+        "expected_int10": -76,
+        "lut_index": 948
+      },
+      {
+        "channel": 1,
+        "accumulator": -16411,
+        "word": 2218989568,
+        "expected_int10": -33,
+        "lut_index": 991
+      },
+      {
+        "channel": 2,
+        "accumulator": -4069,
+        "word": 71373568,
+        "expected_int10": -8,
+        "lut_index": 1016
+      },
+      {
+        "channel": 3,
+        "accumulator": 9918,
+        "word": 3043563520,
+        "expected_int10": 27,
+        "lut_index": 27
+      },
+      {
+        "channel": 4,
+        "accumulator": -1877,
+        "word": 1114052352,
+        "expected_int10": -4,
+        "lut_index": 1020
+      },
+      {
+        "channel": 5,
+        "accumulator": -4177,
+        "word": 586880512,
+        "expected_int10": -9,
+        "lut_index": 1015
+      },
+      {
+        "channel": 6,
+        "accumulator": 13860,
+        "word": 1114052352,
+        "expected_int10": 28,
+        "lut_index": 28
+      },
+      {
+        "channel": 7,
+        "accumulator": -24094,
+        "word": 561583616,
+        "expected_int10": -49,
+        "lut_index": 975
+      },
+      {
+        "channel": 8,
+        "accumulator": 7013,
+        "word": 297997568,
+        "expected_int10": 15,
+        "lut_index": 15
+      },
+      {
+        "channel": 9,
+        "accumulator": 14533,
+        "word": 687543808,
+        "expected_int10": 36,
+        "lut_index": 36
+      },
+      {
+        "channel": 10,
+        "accumulator": 13759,
+        "word": 1137383168,
+        "expected_int10": 28,
+        "lut_index": 28
+      },
+      {
+        "channel": 11,
+        "accumulator": -24698,
+        "word": 3100448768,
+        "expected_int10": -70,
+        "lut_index": 954
+      },
+      {
+        "channel": 12,
+        "accumulator": 13634,
+        "word": 316478720,
+        "expected_int10": 31,
+        "lut_index": 31
+      },
+      {
+        "channel": 13,
+        "accumulator": 7550,
+        "word": 2604603392,
+        "expected_int10": 18,
+        "lut_index": 18
+      },
+      {
+        "channel": 14,
+        "accumulator": -6791,
+        "word": 1228347136,
+        "expected_int10": -15,
+        "lut_index": 1009
+      },
+      {
+        "channel": 15,
+        "accumulator": -1539,
+        "word": 71373568,
+        "expected_int10": -3,
+        "lut_index": 1021
+      },
+      {
+        "channel": 0,
+        "accumulator": -45901,
+        "word": 2311133184,
+        "expected_int10": -96,
+        "lut_index": 928
+      },
+      {
+        "channel": 1,
+        "accumulator": -15001,
+        "word": 2218989568,
+        "expected_int10": -30,
+        "lut_index": 994
+      },
+      {
+        "channel": 2,
+        "accumulator": -5410,
+        "word": 71373568,
+        "expected_int10": -11,
+        "lut_index": 1013
+      },
+      {
+        "channel": 3,
+        "accumulator": -574,
+        "word": 3043563520,
+        "expected_int10": -2,
+        "lut_index": 1022
+      },
+      {
+        "channel": 4,
+        "accumulator": -25163,
+        "word": 1114052352,
+        "expected_int10": -51,
+        "lut_index": 973
+      },
+      {
+        "channel": 5,
+        "accumulator": -22328,
+        "word": 586880512,
+        "expected_int10": -48,
+        "lut_index": 976
+      },
+      {
+        "channel": 6,
+        "accumulator": 44220,
+        "word": 1114052352,
+        "expected_int10": 90,
+        "lut_index": 90
+      },
+      {
+        "channel": 7,
+        "accumulator": -54748,
+        "word": 561583616,
+        "expected_int10": -112,
+        "lut_index": 912
+      },
+      {
+        "channel": 8,
+        "accumulator": 29340,
+        "word": 297997568,
+        "expected_int10": 64,
+        "lut_index": 64
+      },
+      {
+        "channel": 9,
+        "accumulator": -3382,
+        "word": 687543808,
+        "expected_int10": -8,
+        "lut_index": 1016
+      },
+      {
+        "channel": 10,
+        "accumulator": -26030,
+        "word": 1137383168,
+        "expected_int10": -54,
+        "lut_index": 970
+      },
+      {
+        "channel": 11,
+        "accumulator": -14119,
+        "word": 3100448768,
+        "expected_int10": -40,
+        "lut_index": 984
+      },
+      {
+        "channel": 12,
+        "accumulator": -48825,
+        "word": 316478720,
+        "expected_int10": -112,
+        "lut_index": 912
+      },
+      {
+        "channel": 13,
+        "accumulator": -6874,
+        "word": 2604603392,
+        "expected_int10": -16,
+        "lut_index": 1008
+      },
+      {
+        "channel": 14,
+        "accumulator": -25392,
+        "word": 1228347136,
+        "expected_int10": -57,
+        "lut_index": 967
+      },
+      {
+        "channel": 15,
+        "accumulator": 23066,
+        "word": 71373568,
+        "expected_int10": 48,
+        "lut_index": 48
+      },
+      {
+        "channel": 0,
+        "accumulator": -35204,
+        "word": 2311133184,
+        "expected_int10": -74,
+        "lut_index": 950
+      },
+      {
+        "channel": 1,
+        "accumulator": -11098,
+        "word": 2218989568,
+        "expected_int10": -22,
+        "lut_index": 1002
+      },
+      {
+        "channel": 2,
+        "accumulator": 13994,
+        "word": 71373568,
+        "expected_int10": 29,
+        "lut_index": 29
+      },
+      {
+        "channel": 3,
+        "accumulator": 11725,
+        "word": 3043563520,
+        "expected_int10": 32,
+        "lut_index": 32
+      },
+      {
+        "channel": 4,
+        "accumulator": 31696,
+        "word": 1114052352,
+        "expected_int10": 64,
+        "lut_index": 64
+      },
+      {
+        "channel": 5,
+        "accumulator": -16714,
+        "word": 586880512,
+        "expected_int10": -36,
+        "lut_index": 988
+      },
+      {
+        "channel": 6,
+        "accumulator": 1870,
+        "word": 1114052352,
+        "expected_int10": 4,
+        "lut_index": 4
+      },
+      {
+        "channel": 7,
+        "accumulator": -9213,
+        "word": 561583616,
+        "expected_int10": -19,
+        "lut_index": 1005
+      },
+      {
+        "channel": 8,
+        "accumulator": 9311,
+        "word": 297997568,
+        "expected_int10": 20,
+        "lut_index": 20
+      },
+      {
+        "channel": 9,
+        "accumulator": 11038,
+        "word": 687543808,
+        "expected_int10": 28,
+        "lut_index": 28
+      },
+      {
+        "channel": 10,
+        "accumulator": -1609,
+        "word": 1137383168,
+        "expected_int10": -3,
+        "lut_index": 1021
+      },
+      {
+        "channel": 11,
+        "accumulator": -23619,
+        "word": 3100448768,
+        "expected_int10": -67,
+        "lut_index": 957
+      },
+      {
+        "channel": 12,
+        "accumulator": -50305,
+        "word": 316478720,
+        "expected_int10": -116,
+        "lut_index": 908
+      },
+      {
+        "channel": 13,
+        "accumulator": -4106,
+        "word": 2604603392,
+        "expected_int10": -10,
+        "lut_index": 1014
+      },
+      {
+        "channel": 14,
+        "accumulator": -23048,
+        "word": 1228347136,
+        "expected_int10": -51,
+        "lut_index": 973
+      },
+      {
+        "channel": 15,
+        "accumulator": 27735,
+        "word": 71373568,
+        "expected_int10": 58,
+        "lut_index": 58
+      }
+    ],
+    "model.layers.4.mlp.down_proj": [
+      {
+        "channel": 0,
+        "accumulator": -11287,
+        "word": 1547114240,
+        "expected_int10": -32,
+        "lut_index": 992
+      },
+      {
+        "channel": 1,
+        "accumulator": -1101,
+        "word": 2839877632,
+        "expected_int10": -3,
+        "lut_index": 1021
+      },
+      {
+        "channel": 2,
+        "accumulator": -2765,
+        "word": 1273960192,
+        "expected_int10": -6,
+        "lut_index": 1018
+      },
+      {
+        "channel": 3,
+        "accumulator": 6643,
+        "word": 2924156928,
+        "expected_int10": 18,
+        "lut_index": 18
+      },
+      {
+        "channel": 4,
+        "accumulator": -2569,
+        "word": 1541084928,
+        "expected_int10": -7,
+        "lut_index": 1017
+      },
+      {
+        "channel": 5,
+        "accumulator": 4956,
+        "word": 1474107136,
+        "expected_int10": 13,
+        "lut_index": 13
+      },
+      {
+        "channel": 6,
+        "accumulator": 2433,
+        "word": 3226671104,
+        "expected_int10": 7,
+        "lut_index": 7
+      },
+      {
+        "channel": 7,
+        "accumulator": 2102,
+        "word": 2717980672,
+        "expected_int10": 5,
+        "lut_index": 5
+      },
+      {
+        "channel": 8,
+        "accumulator": -1670,
+        "word": 86446848,
+        "expected_int10": -4,
+        "lut_index": 1020
+      },
+      {
+        "channel": 9,
+        "accumulator": -7386,
+        "word": 1759319808,
+        "expected_int10": -24,
+        "lut_index": 1000
+      },
+      {
+        "channel": 10,
+        "accumulator": 6250,
+        "word": 2790201344,
+        "expected_int10": 16,
+        "lut_index": 16
+      },
+      {
+        "channel": 11,
+        "accumulator": 255,
+        "word": 1553143552,
+        "expected_int10": 1,
+        "lut_index": 1
+      },
+      {
+        "channel": 12,
+        "accumulator": 3434,
+        "word": 1662981888,
+        "expected_int10": 10,
+        "lut_index": 10
+      },
+      {
+        "channel": 13,
+        "accumulator": -14946,
+        "word": 1474107136,
+        "expected_int10": -40,
+        "lut_index": 984
+      },
+      {
+        "channel": 14,
+        "accumulator": 14125,
+        "word": 2705922048,
+        "expected_int10": 35,
+        "lut_index": 35
+      },
+      {
+        "channel": 15,
+        "accumulator": 160,
+        "word": 1407915776,
+        "expected_int10": 0,
+        "lut_index": 0
+      },
+      {
+        "channel": 0,
+        "accumulator": 1314,
+        "word": 1547114240,
+        "expected_int10": 4,
+        "lut_index": 4
+      },
+      {
+        "channel": 1,
+        "accumulator": -1888,
+        "word": 2839877632,
+        "expected_int10": -5,
+        "lut_index": 1019
+      },
+      {
+        "channel": 2,
+        "accumulator": -6788,
+        "word": 1273960192,
+        "expected_int10": -16,
+        "lut_index": 1008
+      },
+      {
+        "channel": 3,
+        "accumulator": 3048,
+        "word": 2924156928,
+        "expected_int10": 8,
+        "lut_index": 8
+      },
+      {
+        "channel": 4,
+        "accumulator": 12853,
+        "word": 1541084928,
+        "expected_int10": 36,
+        "lut_index": 36
+      },
+      {
+        "channel": 5,
+        "accumulator": -6166,
+        "word": 1474107136,
+        "expected_int10": -17,
+        "lut_index": 1007
+      },
+      {
+        "channel": 6,
+        "accumulator": 9177,
+        "word": 3226671104,
+        "expected_int10": 27,
+        "lut_index": 27
+      },
+      {
+        "channel": 7,
+        "accumulator": -20475,
+        "word": 2717980672,
+        "expected_int10": -51,
+        "lut_index": 973
+      },
+      {
+        "channel": 8,
+        "accumulator": -9084,
+        "word": 86446848,
+        "expected_int10": -23,
+        "lut_index": 1001
+      },
+      {
+        "channel": 9,
+        "accumulator": 25824,
+        "word": 1759319808,
+        "expected_int10": 83,
+        "lut_index": 83
+      },
+      {
+        "channel": 10,
+        "accumulator": -22452,
+        "word": 2790201344,
+        "expected_int10": -57,
+        "lut_index": 967
+      },
+      {
+        "channel": 11,
+        "accumulator": -27256,
+        "word": 1553143552,
+        "expected_int10": -77,
+        "lut_index": 947
+      },
+      {
+        "channel": 12,
+        "accumulator": 5416,
+        "word": 1662981888,
+        "expected_int10": 16,
+        "lut_index": 16
+      },
+      {
+        "channel": 13,
+        "accumulator": -20151,
+        "word": 1474107136,
+        "expected_int10": -54,
+        "lut_index": 970
+      },
+      {
+        "channel": 14,
+        "accumulator": -10545,
+        "word": 2705922048,
+        "expected_int10": -26,
+        "lut_index": 998
+      },
+      {
+        "channel": 15,
+        "accumulator": -5290,
+        "word": 1407915776,
+        "expected_int10": -14,
+        "lut_index": 1010
+      },
+      {
+        "channel": 0,
+        "accumulator": 4722,
+        "word": 1547114240,
+        "expected_int10": 13,
+        "lut_index": 13
+      },
+      {
+        "channel": 1,
+        "accumulator": 27190,
+        "word": 2839877632,
+        "expected_int10": 70,
+        "lut_index": 70
+      },
+      {
+        "channel": 2,
+        "accumulator": 57426,
+        "word": 1273960192,
+        "expected_int10": 133,
+        "lut_index": 133
+      },
+      {
+        "channel": 3,
+        "accumulator": 12270,
+        "word": 2924156928,
+        "expected_int10": 33,
+        "lut_index": 33
+      },
+      {
+        "channel": 4,
+        "accumulator": -5441,
+        "word": 1541084928,
+        "expected_int10": -15,
+        "lut_index": 1009
+      },
+      {
+        "channel": 5,
+        "accumulator": 23075,
+        "word": 1474107136,
+        "expected_int10": 62,
+        "lut_index": 62
+      },
+      {
+        "channel": 6,
+        "accumulator": -20156,
+        "word": 3226671104,
+        "expected_int10": -59,
+        "lut_index": 965
+      },
+      {
+        "channel": 7,
+        "accumulator": -3625,
+        "word": 2717980672,
+        "expected_int10": -9,
+        "lut_index": 1015
+      },
+      {
+        "channel": 8,
+        "accumulator": 46787,
+        "word": 86446848,
+        "expected_int10": 118,
+        "lut_index": 118
+      },
+      {
+        "channel": 9,
+        "accumulator": -20636,
+        "word": 1759319808,
+        "expected_int10": -66,
+        "lut_index": 958
+      },
+      {
+        "channel": 10,
+        "accumulator": -12670,
+        "word": 2790201344,
+        "expected_int10": -32,
+        "lut_index": 992
+      },
+      {
+        "channel": 11,
+        "accumulator": -8441,
+        "word": 1553143552,
+        "expected_int10": -24,
+        "lut_index": 1000
+      },
+      {
+        "channel": 12,
+        "accumulator": 6720,
+        "word": 1662981888,
+        "expected_int10": 20,
+        "lut_index": 20
+      },
+      {
+        "channel": 13,
+        "accumulator": -20687,
+        "word": 1474107136,
+        "expected_int10": -55,
+        "lut_index": 969
+      },
+      {
+        "channel": 14,
+        "accumulator": 1012,
+        "word": 2705922048,
+        "expected_int10": 2,
+        "lut_index": 2
+      },
+      {
+        "channel": 15,
+        "accumulator": -23882,
+        "word": 1407915776,
+        "expected_int10": -61,
+        "lut_index": 963
+      },
+      {
+        "channel": 0,
+        "accumulator": -35285,
+        "word": 1547114240,
+        "expected_int10": -99,
+        "lut_index": 925
+      },
+      {
+        "channel": 1,
+        "accumulator": 25130,
+        "word": 2839877632,
+        "expected_int10": 65,
+        "lut_index": 65
+      },
+      {
+        "channel": 2,
+        "accumulator": 33183,
+        "word": 1273960192,
+        "expected_int10": 77,
+        "lut_index": 77
+      },
+      {
+        "channel": 3,
+        "accumulator": -5404,
+        "word": 2924156928,
+        "expected_int10": -14,
+        "lut_index": 1010
+      },
+      {
+        "channel": 4,
+        "accumulator": 10645,
+        "word": 1541084928,
+        "expected_int10": 30,
+        "lut_index": 30
+      },
+      {
+        "channel": 5,
+        "accumulator": 50420,
+        "word": 1474107136,
+        "expected_int10": 135,
+        "lut_index": 135
+      },
+      {
+        "channel": 6,
+        "accumulator": -17446,
+        "word": 3226671104,
+        "expected_int10": -51,
+        "lut_index": 973
+      },
+      {
+        "channel": 7,
+        "accumulator": -17664,
+        "word": 2717980672,
+        "expected_int10": -44,
+        "lut_index": 980
+      },
+      {
+        "channel": 8,
+        "accumulator": -5201,
+        "word": 86446848,
+        "expected_int10": -13,
+        "lut_index": 1011
+      },
+      {
+        "channel": 9,
+        "accumulator": 12837,
+        "word": 1759319808,
+        "expected_int10": 41,
+        "lut_index": 41
+      },
+      {
+        "channel": 10,
+        "accumulator": 10221,
+        "word": 2790201344,
+        "expected_int10": 26,
+        "lut_index": 26
+      },
+      {
+        "channel": 11,
+        "accumulator": -21043,
+        "word": 1553143552,
+        "expected_int10": -59,
+        "lut_index": 965
+      },
+      {
+        "channel": 12,
+        "accumulator": -13158,
+        "word": 1662981888,
+        "expected_int10": -40,
+        "lut_index": 984
+      },
+      {
+        "channel": 13,
+        "accumulator": -12742,
+        "word": 1474107136,
+        "expected_int10": -34,
+        "lut_index": 990
+      },
+      {
+        "channel": 14,
+        "accumulator": -2354,
+        "word": 2705922048,
+        "expected_int10": -6,
+        "lut_index": 1018
+      },
+      {
+        "channel": 15,
+        "accumulator": -32219,
+        "word": 1407915776,
+        "expected_int10": -83,
+        "lut_index": 941
+      }
+    ],
+    "model.layers.5.mlp.down_proj": [
+      {
+        "channel": 0,
+        "accumulator": 548,
+        "word": 1136990208,
+        "expected_int10": 1,
+        "lut_index": 1
+      },
+      {
+        "channel": 1,
+        "accumulator": -1980,
+        "word": 511383296,
+        "expected_int10": -2,
+        "lut_index": 1022
+      },
+      {
+        "channel": 2,
+        "accumulator": 1541,
+        "word": 2223446272,
+        "expected_int10": 2,
+        "lut_index": 2
+      },
+      {
+        "channel": 3,
+        "accumulator": 4945,
+        "word": 2528712960,
+        "expected_int10": 6,
+        "lut_index": 6
+      },
+      {
+        "channel": 4,
+        "accumulator": -3448,
+        "word": 4175239680,
+        "expected_int10": -3,
+        "lut_index": 1021
+      },
+      {
+        "channel": 5,
+        "accumulator": -4557,
+        "word": 1205409792,
+        "expected_int10": -5,
+        "lut_index": 1019
+      },
+      {
+        "channel": 6,
+        "accumulator": -3701,
+        "word": 2164463872,
+        "expected_int10": -4,
+        "lut_index": 1020
+      },
+      {
+        "channel": 7,
+        "accumulator": 651,
+        "word": 3684637184,
+        "expected_int10": 1,
+        "lut_index": 1
+      },
+      {
+        "channel": 8,
+        "accumulator": -12424,
+        "word": 445585152,
+        "expected_int10": -10,
+        "lut_index": 1014
+      },
+      {
+        "channel": 9,
+        "accumulator": -3514,
+        "word": 709039872,
+        "expected_int10": -5,
+        "lut_index": 1019
+      },
+      {
+        "channel": 10,
+        "accumulator": 3270,
+        "word": 115676416,
+        "expected_int10": 3,
+        "lut_index": 3
+      },
+      {
+        "channel": 11,
+        "accumulator": 2789,
+        "word": 2665552128,
+        "expected_int10": 3,
+        "lut_index": 3
+      },
+      {
+        "channel": 12,
+        "accumulator": -2187,
+        "word": 1867585792,
+        "expected_int10": -2,
+        "lut_index": 1022
+      },
+      {
+        "channel": 13,
+        "accumulator": -11859,
+        "word": 2393970944,
+        "expected_int10": -13,
+        "lut_index": 1011
+      },
+      {
+        "channel": 14,
+        "accumulator": 980,
+        "word": 4244707840,
+        "expected_int10": 1,
+        "lut_index": 1
+      },
+      {
+        "channel": 15,
+        "accumulator": 8123,
+        "word": 2427656448,
+        "expected_int10": 9,
+        "lut_index": 9
+      },
+      {
+        "channel": 0,
+        "accumulator": 17886,
+        "word": 1136990208,
+        "expected_int10": 18,
+        "lut_index": 18
+      },
+      {
+        "channel": 1,
+        "accumulator": 10567,
+        "word": 511383296,
+        "expected_int10": 10,
+        "lut_index": 10
+      },
+      {
+        "channel": 2,
+        "accumulator": -15304,
+        "word": 2223446272,
+        "expected_int10": -15,
+        "lut_index": 1009
+      },
+      {
+        "channel": 3,
+        "accumulator": 3312,
+        "word": 2528712960,
+        "expected_int10": 4,
+        "lut_index": 4
+      },
+      {
+        "channel": 4,
+        "accumulator": 4332,
+        "word": 4175239680,
+        "expected_int10": 4,
+        "lut_index": 4
+      },
+      {
+        "channel": 5,
+        "accumulator": 11123,
+        "word": 1205409792,
+        "expected_int10": 12,
+        "lut_index": 12
+      },
+      {
+        "channel": 6,
+        "accumulator": 9963,
+        "word": 2164463872,
+        "expected_int10": 10,
+        "lut_index": 10
+      },
+      {
+        "channel": 7,
+        "accumulator": -38573,
+        "word": 3684637184,
+        "expected_int10": -32,
+        "lut_index": 992
+      },
+      {
+        "channel": 8,
+        "accumulator": 2661,
+        "word": 445585152,
+        "expected_int10": 2,
+        "lut_index": 2
+      },
+      {
+        "channel": 9,
+        "accumulator": -2553,
+        "word": 709039872,
+        "expected_int10": -3,
+        "lut_index": 1021
+      },
+      {
+        "channel": 10,
+        "accumulator": -2231,
+        "word": 115676416,
+        "expected_int10": -2,
+        "lut_index": 1022
+      },
+      {
+        "channel": 11,
+        "accumulator": -803,
+        "word": 2665552128,
+        "expected_int10": -1,
+        "lut_index": 1023
+      },
+      {
+        "channel": 12,
+        "accumulator": 4304,
+        "word": 1867585792,
+        "expected_int10": 4,
+        "lut_index": 4
+      },
+      {
+        "channel": 13,
+        "accumulator": -9575,
+        "word": 2393970944,
+        "expected_int10": -10,
+        "lut_index": 1014
+      },
+      {
+        "channel": 14,
+        "accumulator": 11625,
+        "word": 4244707840,
+        "expected_int10": 11,
+        "lut_index": 11
+      },
+      {
+        "channel": 15,
+        "accumulator": -13877,
+        "word": 2427656448,
+        "expected_int10": -15,
+        "lut_index": 1009
+      },
+      {
+        "channel": 0,
+        "accumulator": 2701,
+        "word": 1136990208,
+        "expected_int10": 3,
+        "lut_index": 3
+      },
+      {
+        "channel": 1,
+        "accumulator": 19979,
+        "word": 511383296,
+        "expected_int10": 19,
+        "lut_index": 19
+      },
+      {
+        "channel": 2,
+        "accumulator": 38019,
+        "word": 2223446272,
+        "expected_int10": 38,
+        "lut_index": 38
+      },
+      {
+        "channel": 3,
+        "accumulator": 5524,
+        "word": 2528712960,
+        "expected_int10": 6,
+        "lut_index": 6
+      },
+      {
+        "channel": 4,
+        "accumulator": 38040,
+        "word": 4175239680,
+        "expected_int10": 36,
+        "lut_index": 36
+      },
+      {
+        "channel": 5,
+        "accumulator": 16432,
+        "word": 1205409792,
+        "expected_int10": 18,
+        "lut_index": 18
+      },
+      {
+        "channel": 6,
+        "accumulator": 21403,
+        "word": 2164463872,
+        "expected_int10": 21,
+        "lut_index": 21
+      },
+      {
+        "channel": 7,
+        "accumulator": -20757,
+        "word": 3684637184,
+        "expected_int10": -17,
+        "lut_index": 1007
+      },
+      {
+        "channel": 8,
+        "accumulator": 15409,
+        "word": 445585152,
+        "expected_int10": 12,
+        "lut_index": 12
+      },
+      {
+        "channel": 9,
+        "accumulator": 11923,
+        "word": 709039872,
+        "expected_int10": 15,
+        "lut_index": 15
+      },
+      {
+        "channel": 10,
+        "accumulator": -20914,
+        "word": 115676416,
+        "expected_int10": -18,
+        "lut_index": 1006
+      },
+      {
+        "channel": 11,
+        "accumulator": 6789,
+        "word": 2665552128,
+        "expected_int10": 8,
+        "lut_index": 8
+      },
+      {
+        "channel": 12,
+        "accumulator": 4102,
+        "word": 1867585792,
+        "expected_int10": 3,
+        "lut_index": 3
+      },
+      {
+        "channel": 13,
+        "accumulator": 5313,
+        "word": 2393970944,
+        "expected_int10": 6,
+        "lut_index": 6
+      },
+      {
+        "channel": 14,
+        "accumulator": 18632,
+        "word": 4244707840,
+        "expected_int10": 18,
+        "lut_index": 18
+      },
+      {
+        "channel": 15,
+        "accumulator": -13113,
+        "word": 2427656448,
+        "expected_int10": -14,
+        "lut_index": 1010
+      },
+      {
+        "channel": 0,
+        "accumulator": -13946,
+        "word": 1136990208,
+        "expected_int10": -14,
+        "lut_index": 1010
+      },
+      {
+        "channel": 1,
+        "accumulator": -4266,
+        "word": 511383296,
+        "expected_int10": -4,
+        "lut_index": 1020
+      },
+      {
+        "channel": 2,
+        "accumulator": 39782,
+        "word": 2223446272,
+        "expected_int10": 40,
+        "lut_index": 40
+      },
+      {
+        "channel": 3,
+        "accumulator": -546,
+        "word": 2528712960,
+        "expected_int10": -1,
+        "lut_index": 1023
+      },
+      {
+        "channel": 4,
+        "accumulator": 17516,
+        "word": 4175239680,
+        "expected_int10": 17,
+        "lut_index": 17
+      },
+      {
+        "channel": 5,
+        "accumulator": 7651,
+        "word": 1205409792,
+        "expected_int10": 8,
+        "lut_index": 8
+      },
+      {
+        "channel": 6,
+        "accumulator": 33036,
+        "word": 2164463872,
+        "expected_int10": 33,
+        "lut_index": 33
+      },
+      {
+        "channel": 7,
+        "accumulator": -25660,
+        "word": 3684637184,
+        "expected_int10": -21,
+        "lut_index": 1003
+      },
+      {
+        "channel": 8,
+        "accumulator": 47196,
+        "word": 445585152,
+        "expected_int10": 38,
+        "lut_index": 38
+      },
+      {
+        "channel": 9,
+        "accumulator": 8728,
+        "word": 709039872,
+        "expected_int10": 11,
+        "lut_index": 11
+      },
+      {
+        "channel": 10,
+        "accumulator": -7689,
+        "word": 115676416,
+        "expected_int10": -6,
+        "lut_index": 1018
+      },
+      {
+        "channel": 11,
+        "accumulator": 7181,
+        "word": 2665552128,
+        "expected_int10": 9,
+        "lut_index": 9
+      },
+      {
+        "channel": 12,
+        "accumulator": -10887,
+        "word": 1867585792,
+        "expected_int10": -9,
+        "lut_index": 1015
+      },
+      {
+        "channel": 13,
+        "accumulator": -7113,
+        "word": 2393970944,
+        "expected_int10": -8,
+        "lut_index": 1016
+      },
+      {
+        "channel": 14,
+        "accumulator": 8589,
+        "word": 4244707840,
+        "expected_int10": 8,
+        "lut_index": 8
+      },
+      {
+        "channel": 15,
+        "accumulator": -1129,
+        "word": 2427656448,
+        "expected_int10": -1,
+        "lut_index": 1023
+      }
+    ],
+    "model.layers.6.mlp.down_proj": [
+      {
+        "channel": 0,
+        "accumulator": -7100,
+        "word": 3005290752,
+        "expected_int10": -10,
+        "lut_index": 1014
+      },
+      {
+        "channel": 1,
+        "accumulator": -8227,
+        "word": 3133217024,
+        "expected_int10": -12,
+        "lut_index": 1012
+      },
+      {
+        "channel": 2,
+        "accumulator": -6267,
+        "word": 1741756416,
+        "expected_int10": -10,
+        "lut_index": 1014
+      },
+      {
+        "channel": 3,
+        "accumulator": 4351,
+        "word": 4049672448,
+        "expected_int10": 8,
+        "lut_index": 8
+      },
+      {
+        "channel": 4,
+        "accumulator": -2976,
+        "word": 3107657984,
+        "expected_int10": -4,
+        "lut_index": 1020
+      },
+      {
+        "channel": 5,
+        "accumulator": -3868,
+        "word": 770512640,
+        "expected_int10": -5,
+        "lut_index": 1019
+      },
+      {
+        "channel": 6,
+        "accumulator": -456,
+        "word": 3171621120,
+        "expected_int10": -1,
+        "lut_index": 1023
+      },
+      {
+        "channel": 7,
+        "accumulator": 1161,
+        "word": 2901350656,
+        "expected_int10": 2,
+        "lut_index": 2
+      },
+      {
+        "channel": 8,
+        "accumulator": -7690,
+        "word": 2901350656,
+        "expected_int10": -10,
+        "lut_index": 1014
+      },
+      {
+        "channel": 9,
+        "accumulator": -11545,
+        "word": 2269583360,
+        "expected_int10": -24,
+        "lut_index": 1000
+      },
+      {
+        "channel": 10,
+        "accumulator": 12186,
+        "word": 1276319744,
+        "expected_int10": 14,
+        "lut_index": 14
+      },
+      {
+        "channel": 11,
+        "accumulator": -883,
+        "word": 2746161152,
+        "expected_int10": -2,
+        "lut_index": 1022
+      },
+      {
+        "channel": 12,
+        "accumulator": 2594,
+        "word": 1528240128,
+        "expected_int10": 4,
+        "lut_index": 4
+      },
+      {
+        "channel": 13,
+        "accumulator": -2744,
+        "word": 3107657984,
+        "expected_int10": -4,
+        "lut_index": 1020
+      },
+      {
+        "channel": 14,
+        "accumulator": -6604,
+        "word": 2888505600,
+        "expected_int10": -9,
+        "lut_index": 1015
+      },
+      {
+        "channel": 15,
+        "accumulator": 9159,
+        "word": 2926909696,
+        "expected_int10": 12,
+        "lut_index": 12
+      },
+      {
+        "channel": 0,
+        "accumulator": -7232,
+        "word": 3005290752,
+        "expected_int10": -10,
+        "lut_index": 1014
+      },
+      {
+        "channel": 1,
+        "accumulator": -2479,
+        "word": 3133217024,
+        "expected_int10": -4,
+        "lut_index": 1020
+      },
+      {
+        "channel": 2,
+        "accumulator": 12467,
+        "word": 1741756416,
+        "expected_int10": 20,
+        "lut_index": 20
+      },
+      {
+        "channel": 3,
+        "accumulator": 2118,
+        "word": 4049672448,
+        "expected_int10": 4,
+        "lut_index": 4
+      },
+      {
+        "channel": 4,
+        "accumulator": -34012,
+        "word": 3107657984,
+        "expected_int10": -48,
+        "lut_index": 976
+      },
+      {
+        "channel": 5,
+        "accumulator": -6106,
+        "word": 770512640,
+        "expected_int10": -9,
+        "lut_index": 1015
+      },
+      {
+        "channel": 6,
+        "accumulator": 12680,
+        "word": 3171621120,
+        "expected_int10": 18,
+        "lut_index": 18
+      },
+      {
+        "channel": 7,
+        "accumulator": 7048,
+        "word": 2901350656,
+        "expected_int10": 9,
+        "lut_index": 9
+      },
+      {
+        "channel": 8,
+        "accumulator": 15247,
+        "word": 2901350656,
+        "expected_int10": 20,
+        "lut_index": 20
+      },
+      {
+        "channel": 9,
+        "accumulator": -3021,
+        "word": 2269583360,
+        "expected_int10": -6,
+        "lut_index": 1018
+      },
+      {
+        "channel": 10,
+        "accumulator": -7786,
+        "word": 1276319744,
+        "expected_int10": -9,
+        "lut_index": 1015
+      },
+      {
+        "channel": 11,
+        "accumulator": -12127,
+        "word": 2746161152,
+        "expected_int10": -30,
+        "lut_index": 994
+      },
+      {
+        "channel": 12,
+        "accumulator": 20857,
+        "word": 1528240128,
+        "expected_int10": 29,
+        "lut_index": 29
+      },
+      {
+        "channel": 13,
+        "accumulator": -13546,
+        "word": 3107657984,
+        "expected_int10": -19,
+        "lut_index": 1005
+      },
+      {
+        "channel": 14,
+        "accumulator": 14837,
+        "word": 2888505600,
+        "expected_int10": 19,
+        "lut_index": 19
+      },
+      {
+        "channel": 15,
+        "accumulator": -2341,
+        "word": 2926909696,
+        "expected_int10": -3,
+        "lut_index": 1021
+      },
+      {
+        "channel": 0,
+        "accumulator": 34770,
+        "word": 3005290752,
+        "expected_int10": 48,
+        "lut_index": 48
+      },
+      {
+        "channel": 1,
+        "accumulator": 24462,
+        "word": 3133217024,
+        "expected_int10": 35,
+        "lut_index": 35
+      },
+      {
+        "channel": 2,
+        "accumulator": 20304,
+        "word": 1741756416,
+        "expected_int10": 32,
+        "lut_index": 32
+      },
+      {
+        "channel": 3,
+        "accumulator": 7856,
+        "word": 4049672448,
+        "expected_int10": 14,
+        "lut_index": 14
+      },
+      {
+        "channel": 4,
+        "accumulator": -14920,
+        "word": 3107657984,
+        "expected_int10": -21,
+        "lut_index": 1003
+      },
+      {
+        "channel": 5,
+        "accumulator": 11569,
+        "word": 770512640,
+        "expected_int10": 16,
+        "lut_index": 16
+      },
+      {
+        "channel": 6,
+        "accumulator": 26281,
+        "word": 3171621120,
+        "expected_int10": 38,
+        "lut_index": 38
+      },
+      {
+        "channel": 7,
+        "accumulator": 15230,
+        "word": 2901350656,
+        "expected_int10": 20,
+        "lut_index": 20
+      },
+      {
+        "channel": 8,
+        "accumulator": 35754,
+        "word": 2901350656,
+        "expected_int10": 47,
+        "lut_index": 47
+      },
+      {
+        "channel": 9,
+        "accumulator": 8138,
+        "word": 2269583360,
+        "expected_int10": 17,
+        "lut_index": 17
+      },
+      {
+        "channel": 10,
+        "accumulator": -12165,
+        "word": 1276319744,
+        "expected_int10": -14,
+        "lut_index": 1010
+      },
+      {
+        "channel": 11,
+        "accumulator": 8155,
+        "word": 2746161152,
+        "expected_int10": 20,
+        "lut_index": 20
+      },
+      {
+        "channel": 12,
+        "accumulator": 18431,
+        "word": 1528240128,
+        "expected_int10": 26,
+        "lut_index": 26
+      },
+      {
+        "channel": 13,
+        "accumulator": -6053,
+        "word": 3107657984,
+        "expected_int10": -9,
+        "lut_index": 1015
+      },
+      {
+        "channel": 14,
+        "accumulator": -12144,
+        "word": 2888505600,
+        "expected_int10": -16,
+        "lut_index": 1008
+      },
+      {
+        "channel": 15,
+        "accumulator": -1112,
+        "word": 2926909696,
+        "expected_int10": -1,
+        "lut_index": 1023
+      },
+      {
+        "channel": 0,
+        "accumulator": 14691,
+        "word": 3005290752,
+        "expected_int10": 20,
+        "lut_index": 20
+      },
+      {
+        "channel": 1,
+        "accumulator": -2557,
+        "word": 3133217024,
+        "expected_int10": -4,
+        "lut_index": 1020
+      },
+      {
+        "channel": 2,
+        "accumulator": -520,
+        "word": 1741756416,
+        "expected_int10": -1,
+        "lut_index": 1023
+      },
+      {
+        "channel": 3,
+        "accumulator": 17280,
+        "word": 4049672448,
+        "expected_int10": 32,
+        "lut_index": 32
+      },
+      {
+        "channel": 4,
+        "accumulator": -17468,
+        "word": 3107657984,
+        "expected_int10": -25,
+        "lut_index": 999
+      },
+      {
+        "channel": 5,
+        "accumulator": -10105,
+        "word": 770512640,
+        "expected_int10": -14,
+        "lut_index": 1010
+      },
+      {
+        "channel": 6,
+        "accumulator": -7200,
+        "word": 3171621120,
+        "expected_int10": -10,
+        "lut_index": 1014
+      },
+      {
+        "channel": 7,
+        "accumulator": 21690,
+        "word": 2901350656,
+        "expected_int10": 29,
+        "lut_index": 29
+      },
+      {
+        "channel": 8,
+        "accumulator": 31533,
+        "word": 2901350656,
+        "expected_int10": 42,
+        "lut_index": 42
+      },
+      {
+        "channel": 9,
+        "accumulator": 4649,
+        "word": 2269583360,
+        "expected_int10": 10,
+        "lut_index": 10
+      },
+      {
+        "channel": 10,
+        "accumulator": 9919,
+        "word": 1276319744,
+        "expected_int10": 12,
+        "lut_index": 12
+      },
+      {
+        "channel": 11,
+        "accumulator": -3825,
+        "word": 2746161152,
+        "expected_int10": -10,
+        "lut_index": 1014
+      },
+      {
+        "channel": 12,
+        "accumulator": -14269,
+        "word": 1528240128,
+        "expected_int10": -20,
+        "lut_index": 1004
+      },
+      {
+        "channel": 13,
+        "accumulator": 10398,
+        "word": 3107657984,
+        "expected_int10": 15,
+        "lut_index": 15
+      },
+      {
+        "channel": 14,
+        "accumulator": 1383,
+        "word": 2888505600,
+        "expected_int10": 2,
+        "lut_index": 2
+      },
+      {
+        "channel": 15,
+        "accumulator": -1401,
+        "word": 2926909696,
+        "expected_int10": -2,
+        "lut_index": 1022
+      }
+    ],
+    "model.layers.7.mlp.down_proj": [
+      {
+        "channel": 0,
+        "accumulator": -6121,
+        "word": 3411352064,
+        "expected_int10": -5,
+        "lut_index": 1019
+      },
+      {
+        "channel": 1,
+        "accumulator": -2924,
+        "word": 3207404032,
+        "expected_int10": -2,
+        "lut_index": 1022
+      },
+      {
+        "channel": 2,
+        "accumulator": -6524,
+        "word": 180033024,
+        "expected_int10": -4,
+        "lut_index": 1020
+      },
+      {
+        "channel": 3,
+        "accumulator": 12402,
+        "word": 2445613312,
+        "expected_int10": 14,
+        "lut_index": 14
+      },
+      {
+        "channel": 4,
+        "accumulator": 2907,
+        "word": 3003456000,
+        "expected_int10": 2,
+        "lut_index": 2
+      },
+      {
+        "channel": 5,
+        "accumulator": -10534,
+        "word": 1331501312,
+        "expected_int10": -6,
+        "lut_index": 1018
+      },
+      {
+        "channel": 6,
+        "accumulator": 4309,
+        "word": 1474763008,
+        "expected_int10": 3,
+        "lut_index": 3
+      },
+      {
+        "channel": 7,
+        "accumulator": 5621,
+        "word": 1535449344,
+        "expected_int10": 4,
+        "lut_index": 4
+      },
+      {
+        "channel": 8,
+        "accumulator": -5473,
+        "word": 3003456000,
+        "expected_int10": -4,
+        "lut_index": 1020
+      },
+      {
+        "channel": 9,
+        "accumulator": -12830,
+        "word": 3724876288,
+        "expected_int10": -11,
+        "lut_index": 1013
+      },
+      {
+        "channel": 10,
+        "accumulator": 19627,
+        "word": 2907380224,
+        "expected_int10": 13,
+        "lut_index": 13
+      },
+      {
+        "channel": 11,
+        "accumulator": -6922,
+        "word": 71373824,
+        "expected_int10": -7,
+        "lut_index": 1017
+      },
+      {
+        "channel": 12,
+        "accumulator": -142,
+        "word": 1692211456,
+        "expected_int10": 0,
+        "lut_index": 0
+      },
+      {
+        "channel": 13,
+        "accumulator": -2195,
+        "word": 3805747712,
+        "expected_int10": -2,
+        "lut_index": 1022
+      },
+      {
+        "channel": 14,
+        "accumulator": 13876,
+        "word": 99816704,
+        "expected_int10": 10,
+        "lut_index": 10
+      },
+      {
+        "channel": 15,
+        "accumulator": 10177,
+        "word": 4048493056,
+        "expected_int10": 9,
+        "lut_index": 9
+      },
+      {
+        "channel": 0,
+        "accumulator": 2872,
+        "word": 3411352064,
+        "expected_int10": 2,
+        "lut_index": 2
+      },
+      {
+        "channel": 1,
+        "accumulator": 8248,
+        "word": 3207404032,
+        "expected_int10": 6,
+        "lut_index": 6
+      },
+      {
+        "channel": 2,
+        "accumulator": 27828,
+        "word": 180033024,
+        "expected_int10": 18,
+        "lut_index": 18
+      },
+      {
+        "channel": 3,
+        "accumulator": 7566,
+        "word": 2445613312,
+        "expected_int10": 8,
+        "lut_index": 8
+      },
+      {
+        "channel": 4,
+        "accumulator": 8871,
+        "word": 3003456000,
+        "expected_int10": 6,
+        "lut_index": 6
+      },
+      {
+        "channel": 5,
+        "accumulator": 9914,
+        "word": 1331501312,
+        "expected_int10": 6,
+        "lut_index": 6
+      },
+      {
+        "channel": 6,
+        "accumulator": 4346,
+        "word": 1474763008,
+        "expected_int10": 3,
+        "lut_index": 3
+      },
+      {
+        "channel": 7,
+        "accumulator": -2021,
+        "word": 1535449344,
+        "expected_int10": -1,
+        "lut_index": 1023
+      },
+      {
+        "channel": 8,
+        "accumulator": -4060,
+        "word": 3003456000,
+        "expected_int10": -3,
+        "lut_index": 1021
+      },
+      {
+        "channel": 9,
+        "accumulator": 7917,
+        "word": 3724876288,
+        "expected_int10": 7,
+        "lut_index": 7
+      },
+      {
+        "channel": 10,
+        "accumulator": 12648,
+        "word": 2907380224,
+        "expected_int10": 8,
+        "lut_index": 8
+      },
+      {
+        "channel": 11,
+        "accumulator": -4121,
+        "word": 71373824,
+        "expected_int10": -4,
+        "lut_index": 1020
+      },
+      {
+        "channel": 12,
+        "accumulator": -8222,
+        "word": 1692211456,
+        "expected_int10": -6,
+        "lut_index": 1018
+      },
+      {
+        "channel": 13,
+        "accumulator": 12987,
+        "word": 3805747712,
+        "expected_int10": 11,
+        "lut_index": 11
+      },
+      {
+        "channel": 14,
+        "accumulator": 169,
+        "word": 99816704,
+        "expected_int10": 0,
+        "lut_index": 0
+      },
+      {
+        "channel": 15,
+        "accumulator": 9270,
+        "word": 4048493056,
+        "expected_int10": 9,
+        "lut_index": 9
+      },
+      {
+        "channel": 0,
+        "accumulator": 21367,
+        "word": 3411352064,
+        "expected_int10": 17,
+        "lut_index": 17
+      },
+      {
+        "channel": 1,
+        "accumulator": 6021,
+        "word": 3207404032,
+        "expected_int10": 4,
+        "lut_index": 4
+      },
+      {
+        "channel": 2,
+        "accumulator": 29511,
+        "word": 180033024,
+        "expected_int10": 19,
+        "lut_index": 19
+      },
+      {
+        "channel": 3,
+        "accumulator": 22350,
+        "word": 2445613312,
+        "expected_int10": 25,
+        "lut_index": 25
+      },
+      {
+        "channel": 4,
+        "accumulator": 2319,
+        "word": 3003456000,
+        "expected_int10": 2,
+        "lut_index": 2
+      },
+      {
+        "channel": 5,
+        "accumulator": -3617,
+        "word": 1331501312,
+        "expected_int10": -2,
+        "lut_index": 1022
+      },
+      {
+        "channel": 6,
+        "accumulator": -12990,
+        "word": 1474763008,
+        "expected_int10": -9,
+        "lut_index": 1015
+      },
+      {
+        "channel": 7,
+        "accumulator": 14226,
+        "word": 1535449344,
+        "expected_int10": 10,
+        "lut_index": 10
+      },
+      {
+        "channel": 8,
+        "accumulator": 27276,
+        "word": 3003456000,
+        "expected_int10": 19,
+        "lut_index": 19
+      },
+      {
+        "channel": 9,
+        "accumulator": 1938,
+        "word": 3724876288,
+        "expected_int10": 2,
+        "lut_index": 2
+      },
+      {
+        "channel": 10,
+        "accumulator": 9501,
+        "word": 2907380224,
+        "expected_int10": 6,
+        "lut_index": 6
+      },
+      {
+        "channel": 11,
+        "accumulator": -7241,
+        "word": 71373824,
+        "expected_int10": -8,
+        "lut_index": 1016
+      },
+      {
+        "channel": 12,
+        "accumulator": -10932,
+        "word": 1692211456,
+        "expected_int10": -8,
+        "lut_index": 1016
+      },
+      {
+        "channel": 13,
+        "accumulator": 14061,
+        "word": 3805747712,
+        "expected_int10": 12,
+        "lut_index": 12
+      },
+      {
+        "channel": 14,
+        "accumulator": -19619,
+        "word": 99816704,
+        "expected_int10": -14,
+        "lut_index": 1010
+      },
+      {
+        "channel": 15,
+        "accumulator": -7247,
+        "word": 4048493056,
+        "expected_int10": -7,
+        "lut_index": 1017
+      },
+      {
+        "channel": 0,
+        "accumulator": -9310,
+        "word": 3411352064,
+        "expected_int10": -7,
+        "lut_index": 1017
+      },
+      {
+        "channel": 1,
+        "accumulator": 5264,
+        "word": 3207404032,
+        "expected_int10": 4,
+        "lut_index": 4
+      },
+      {
+        "channel": 2,
+        "accumulator": 514,
+        "word": 180033024,
+        "expected_int10": 0,
+        "lut_index": 0
+      },
+      {
+        "channel": 3,
+        "accumulator": 13710,
+        "word": 2445613312,
+        "expected_int10": 15,
+        "lut_index": 15
+      },
+      {
+        "channel": 4,
+        "accumulator": -15065,
+        "word": 3003456000,
+        "expected_int10": -10,
+        "lut_index": 1014
+      },
+      {
+        "channel": 5,
+        "accumulator": -3857,
+        "word": 1331501312,
+        "expected_int10": -2,
+        "lut_index": 1022
+      },
+      {
+        "channel": 6,
+        "accumulator": 14213,
+        "word": 1474763008,
+        "expected_int10": 10,
+        "lut_index": 10
+      },
+      {
+        "channel": 7,
+        "accumulator": 31647,
+        "word": 1535449344,
+        "expected_int10": 22,
+        "lut_index": 22
+      },
+      {
+        "channel": 8,
+        "accumulator": 18103,
+        "word": 3003456000,
+        "expected_int10": 12,
+        "lut_index": 12
+      },
+      {
+        "channel": 9,
+        "accumulator": 11025,
+        "word": 3724876288,
+        "expected_int10": 9,
+        "lut_index": 9
+      },
+      {
+        "channel": 10,
+        "accumulator": -20343,
+        "word": 2907380224,
+        "expected_int10": -13,
+        "lut_index": 1011
+      },
+      {
+        "channel": 11,
+        "accumulator": -14438,
+        "word": 71373824,
+        "expected_int10": -15,
+        "lut_index": 1009
+      },
+      {
+        "channel": 12,
+        "accumulator": -22459,
+        "word": 1692211456,
+        "expected_int10": -17,
+        "lut_index": 1007
+      },
+      {
+        "channel": 13,
+        "accumulator": 6256,
+        "word": 3805747712,
+        "expected_int10": 5,
+        "lut_index": 5
+      },
+      {
+        "channel": 14,
+        "accumulator": -9297,
+        "word": 99816704,
+        "expected_int10": -7,
+        "lut_index": 1017
+      },
+      {
+        "channel": 15,
+        "accumulator": 1649,
+        "word": 4048493056,
+        "expected_int10": 2,
+        "lut_index": 2
+      }
+    ],
+    "model.layers.8.mlp.down_proj": [
+      {
+        "channel": 0,
+        "accumulator": -16854,
+        "word": 3447003904,
+        "expected_int10": -7,
+        "lut_index": 1017
+      },
+      {
+        "channel": 1,
+        "accumulator": -14728,
+        "word": 434837504,
+        "expected_int10": -6,
+        "lut_index": 1018
+      },
+      {
+        "channel": 2,
+        "accumulator": -25892,
+        "word": 455284736,
+        "expected_int10": -11,
+        "lut_index": 1013
+      },
+      {
+        "channel": 3,
+        "accumulator": 17081,
+        "word": 57873408,
+        "expected_int10": 14,
+        "lut_index": 14
+      },
+      {
+        "channel": 4,
+        "accumulator": 11328,
+        "word": 809703680,
+        "expected_int10": 4,
+        "lut_index": 4
+      },
+      {
+        "channel": 5,
+        "accumulator": 3436,
+        "word": 4108917504,
+        "expected_int10": 2,
+        "lut_index": 2
+      },
+      {
+        "channel": 6,
+        "accumulator": -2723,
+        "word": 1835997696,
+        "expected_int10": -1,
+        "lut_index": 1023
+      },
+      {
+        "channel": 7,
+        "accumulator": -3264,
+        "word": 213587712,
+        "expected_int10": -1,
+        "lut_index": 1023
+      },
+      {
+        "channel": 8,
+        "accumulator": -23,
+        "word": 213587712,
+        "expected_int10": 0,
+        "lut_index": 0
+      },
+      {
+        "channel": 9,
+        "accumulator": -18468,
+        "word": 4198177536,
+        "expected_int10": -9,
+        "lut_index": 1015
+      },
+      {
+        "channel": 10,
+        "accumulator": -4818,
+        "word": 3597605632,
+        "expected_int10": -2,
+        "lut_index": 1022
+      },
+      {
+        "channel": 11,
+        "accumulator": 1920,
+        "word": 57873664,
+        "expected_int10": 1,
+        "lut_index": 1
+      },
+      {
+        "channel": 12,
+        "accumulator": -22992,
+        "word": 3043564288,
+        "expected_int10": -8,
+        "lut_index": 1016
+      },
+      {
+        "channel": 13,
+        "accumulator": -24874,
+        "word": 1783962112,
+        "expected_int10": -10,
+        "lut_index": 1014
+      },
+      {
+        "channel": 14,
+        "accumulator": -2482,
+        "word": 1634277888,
+        "expected_int10": -1,
+        "lut_index": 1023
+      },
+      {
+        "channel": 15,
+        "accumulator": 11155,
+        "word": 3162577664,
+        "expected_int10": 4,
+        "lut_index": 4
+      },
+      {
+        "channel": 0,
+        "accumulator": -9048,
+        "word": 3447003904,
+        "expected_int10": -4,
+        "lut_index": 1020
+      },
+      {
+        "channel": 1,
+        "accumulator": -12978,
+        "word": 434837504,
+        "expected_int10": -5,
+        "lut_index": 1019
+      },
+      {
+        "channel": 2,
+        "accumulator": -19528,
+        "word": 455284736,
+        "expected_int10": -8,
+        "lut_index": 1016
+      },
+      {
+        "channel": 3,
+        "accumulator": -2343,
+        "word": 57873408,
+        "expected_int10": -2,
+        "lut_index": 1022
+      },
+      {
+        "channel": 4,
+        "accumulator": 6170,
+        "word": 809703680,
+        "expected_int10": 2,
+        "lut_index": 2
+      },
+      {
+        "channel": 5,
+        "accumulator": 15896,
+        "word": 4108917504,
+        "expected_int10": 7,
+        "lut_index": 7
+      },
+      {
+        "channel": 6,
+        "accumulator": -898,
+        "word": 1835997696,
+        "expected_int10": 0,
+        "lut_index": 0
+      },
+      {
+        "channel": 7,
+        "accumulator": -14905,
+        "word": 213587712,
+        "expected_int10": -6,
+        "lut_index": 1018
+      },
+      {
+        "channel": 8,
+        "accumulator": -2743,
+        "word": 213587712,
+        "expected_int10": -1,
+        "lut_index": 1023
+      },
+      {
+        "channel": 9,
+        "accumulator": 8907,
+        "word": 4198177536,
+        "expected_int10": 4,
+        "lut_index": 4
+      },
+      {
+        "channel": 10,
+        "accumulator": 1571,
+        "word": 3597605632,
+        "expected_int10": 1,
+        "lut_index": 1
+      },
+      {
+        "channel": 11,
+        "accumulator": -9649,
+        "word": 57873664,
+        "expected_int10": -4,
+        "lut_index": 1020
+      },
+      {
+        "channel": 12,
+        "accumulator": 1092,
+        "word": 3043564288,
+        "expected_int10": 0,
+        "lut_index": 0
+      },
+      {
+        "channel": 13,
+        "accumulator": 13602,
+        "word": 1783962112,
+        "expected_int10": 6,
+        "lut_index": 6
+      },
+      {
+        "channel": 14,
+        "accumulator": -16267,
+        "word": 1634277888,
+        "expected_int10": -6,
+        "lut_index": 1018
+      },
+      {
+        "channel": 15,
+        "accumulator": 28389,
+        "word": 3162577664,
+        "expected_int10": 10,
+        "lut_index": 10
+      },
+      {
+        "channel": 0,
+        "accumulator": -1493,
+        "word": 3447003904,
+        "expected_int10": -1,
+        "lut_index": 1023
+      },
+      {
+        "channel": 1,
+        "accumulator": 15422,
+        "word": 434837504,
+        "expected_int10": 6,
+        "lut_index": 6
+      },
+      {
+        "channel": 2,
+        "accumulator": 7950,
+        "word": 455284736,
+        "expected_int10": 3,
+        "lut_index": 3
+      },
+      {
+        "channel": 3,
+        "accumulator": -5049,
+        "word": 57873408,
+        "expected_int10": -4,
+        "lut_index": 1020
+      },
+      {
+        "channel": 4,
+        "accumulator": -1013,
+        "word": 809703680,
+        "expected_int10": 0,
+        "lut_index": 0
+      },
+      {
+        "channel": 5,
+        "accumulator": -6374,
+        "word": 4108917504,
+        "expected_int10": -3,
+        "lut_index": 1021
+      },
+      {
+        "channel": 6,
+        "accumulator": -4903,
+        "word": 1835997696,
+        "expected_int10": -2,
+        "lut_index": 1022
+      },
+      {
+        "channel": 7,
+        "accumulator": -34425,
+        "word": 213587712,
+        "expected_int10": -13,
+        "lut_index": 1011
+      },
+      {
+        "channel": 8,
+        "accumulator": -18053,
+        "word": 213587712,
+        "expected_int10": -7,
+        "lut_index": 1017
+      },
+      {
+        "channel": 9,
+        "accumulator": -5073,
+        "word": 4198177536,
+        "expected_int10": -2,
+        "lut_index": 1022
+      },
+      {
+        "channel": 10,
+        "accumulator": -6773,
+        "word": 3597605632,
+        "expected_int10": -3,
+        "lut_index": 1021
+      },
+      {
+        "channel": 11,
+        "accumulator": -13293,
+        "word": 57873664,
+        "expected_int10": -6,
+        "lut_index": 1018
+      },
+      {
+        "channel": 12,
+        "accumulator": 15097,
+        "word": 3043564288,
+        "expected_int10": 5,
+        "lut_index": 5
+      },
+      {
+        "channel": 13,
+        "accumulator": 7434,
+        "word": 1783962112,
+        "expected_int10": 3,
+        "lut_index": 3
+      },
+      {
+        "channel": 14,
+        "accumulator": -3152,
+        "word": 1634277888,
+        "expected_int10": -1,
+        "lut_index": 1023
+      },
+      {
+        "channel": 15,
+        "accumulator": -10241,
+        "word": 3162577664,
+        "expected_int10": -4,
+        "lut_index": 1020
+      },
+      {
+        "channel": 0,
+        "accumulator": -2530,
+        "word": 3447003904,
+        "expected_int10": -1,
+        "lut_index": 1023
+      },
+      {
+        "channel": 1,
+        "accumulator": -16793,
+        "word": 434837504,
+        "expected_int10": -7,
+        "lut_index": 1017
+      },
+      {
+        "channel": 2,
+        "accumulator": 20258,
+        "word": 455284736,
+        "expected_int10": 8,
+        "lut_index": 8
+      },
+      {
+        "channel": 3,
+        "accumulator": -9690,
+        "word": 57873408,
+        "expected_int10": -8,
+        "lut_index": 1016
+      },
+      {
+        "channel": 4,
+        "accumulator": -190,
+        "word": 809703680,
+        "expected_int10": 0,
+        "lut_index": 0
+      },
+      {
+        "channel": 5,
+        "accumulator": 7838,
+        "word": 4108917504,
+        "expected_int10": 4,
+        "lut_index": 4
+      },
+      {
+        "channel": 6,
+        "accumulator": -26855,
+        "word": 1835997696,
+        "expected_int10": -11,
+        "lut_index": 1013
+      },
+      {
+        "channel": 7,
+        "accumulator": -28492,
+        "word": 213587712,
+        "expected_int10": -11,
+        "lut_index": 1013
+      },
+      {
+        "channel": 8,
+        "accumulator": -29070,
+        "word": 213587712,
+        "expected_int10": -11,
+        "lut_index": 1013
+      },
+      {
+        "channel": 9,
+        "accumulator": 3962,
+        "word": 4198177536,
+        "expected_int10": 2,
+        "lut_index": 2
+      },
+      {
+        "channel": 10,
+        "accumulator": -1570,
+        "word": 3597605632,
+        "expected_int10": -1,
+        "lut_index": 1023
+      },
+      {
+        "channel": 11,
+        "accumulator": -2448,
+        "word": 57873664,
+        "expected_int10": -1,
+        "lut_index": 1023
+      },
+      {
+        "channel": 12,
+        "accumulator": 23274,
+        "word": 3043564288,
+        "expected_int10": 8,
+        "lut_index": 8
+      },
+      {
+        "channel": 13,
+        "accumulator": 6857,
+        "word": 1783962112,
+        "expected_int10": 3,
+        "lut_index": 3
+      },
+      {
+        "channel": 14,
+        "accumulator": 2564,
+        "word": 1634277888,
+        "expected_int10": 1,
+        "lut_index": 1
+      },
+      {
+        "channel": 15,
+        "accumulator": -1704,
+        "word": 3162577664,
+        "expected_int10": -1,
+        "lut_index": 1023
+      }
+    ],
+    "model.layers.9.mlp.down_proj": [
+      {
+        "channel": 0,
+        "accumulator": -15392,
+        "word": 1561139200,
+        "expected_int10": -22,
+        "lut_index": 1002
+      },
+      {
+        "channel": 1,
+        "accumulator": -5815,
+        "word": 879433472,
+        "expected_int10": -9,
+        "lut_index": 1015
+      },
+      {
+        "channel": 2,
+        "accumulator": -14380,
+        "word": 3253541120,
+        "expected_int10": -21,
+        "lut_index": 1003
+      },
+      {
+        "channel": 3,
+        "accumulator": 1614,
+        "word": 2777749760,
+        "expected_int10": 2,
+        "lut_index": 2
+      },
+      {
+        "channel": 4,
+        "accumulator": -9337,
+        "word": 3836025088,
+        "expected_int10": -16,
+        "lut_index": 1008
+      },
+      {
+        "channel": 5,
+        "accumulator": -10984,
+        "word": 714544896,
+        "expected_int10": -14,
+        "lut_index": 1010
+      },
+      {
+        "channel": 6,
+        "accumulator": 9443,
+        "word": 3148552448,
+        "expected_int10": 14,
+        "lut_index": 14
+      },
+      {
+        "channel": 7,
+        "accumulator": 14788,
+        "word": 1323243520,
+        "expected_int10": 18,
+        "lut_index": 18
+      },
+      {
+        "channel": 8,
+        "accumulator": 4872,
+        "word": 2923763968,
+        "expected_int10": 6,
+        "lut_index": 6
+      },
+      {
+        "channel": 9,
+        "accumulator": -21661,
+        "word": 1865488384,
+        "expected_int10": -37,
+        "lut_index": 987
+      },
+      {
+        "channel": 10,
+        "accumulator": 24980,
+        "word": 2790856960,
+        "expected_int10": 32,
+        "lut_index": 32
+      },
+      {
+        "channel": 11,
+        "accumulator": -13670,
+        "word": 2936871168,
+        "expected_int10": -18,
+        "lut_index": 1006
+      },
+      {
+        "channel": 12,
+        "accumulator": 7881,
+        "word": 1554585600,
+        "expected_int10": 11,
+        "lut_index": 11
+      },
+      {
+        "channel": 13,
+        "accumulator": -2076,
+        "word": 1719474176,
+        "expected_int10": -3,
+        "lut_index": 1021
+      },
+      {
+        "channel": 14,
+        "accumulator": 5005,
+        "word": 113316864,
+        "expected_int10": 8,
+        "lut_index": 8
+      },
+      {
+        "channel": 15,
+        "accumulator": -2040,
+        "word": 2844989696,
+        "expected_int10": -3,
+        "lut_index": 1021
+      },
+      {
+        "channel": 0,
+        "accumulator": 122,
+        "word": 1561139200,
+        "expected_int10": 0,
+        "lut_index": 0
+      },
+      {
+        "channel": 1,
+        "accumulator": -4918,
+        "word": 879433472,
+        "expected_int10": -8,
+        "lut_index": 1016
+      },
+      {
+        "channel": 2,
+        "accumulator": 8295,
+        "word": 3253541120,
+        "expected_int10": 12,
+        "lut_index": 12
+      },
+      {
+        "channel": 3,
+        "accumulator": 4774,
+        "word": 2777749760,
+        "expected_int10": 6,
+        "lut_index": 6
+      },
+      {
+        "channel": 4,
+        "accumulator": 12260,
+        "word": 3836025088,
+        "expected_int10": 21,
+        "lut_index": 21
+      },
+      {
+        "channel": 5,
+        "accumulator": -29477,
+        "word": 714544896,
+        "expected_int10": -38,
+        "lut_index": 986
+      },
+      {
+        "channel": 6,
+        "accumulator": -6211,
+        "word": 3148552448,
+        "expected_int10": -9,
+        "lut_index": 1015
+      },
+      {
+        "channel": 7,
+        "accumulator": 411,
+        "word": 1323243520,
+        "expected_int10": 0,
+        "lut_index": 0
+      },
+      {
+        "channel": 8,
+        "accumulator": -1708,
+        "word": 2923763968,
+        "expected_int10": -2,
+        "lut_index": 1022
+      },
+      {
+        "channel": 9,
+        "accumulator": 6653,
+        "word": 1865488384,
+        "expected_int10": 11,
+        "lut_index": 11
+      },
+      {
+        "channel": 10,
+        "accumulator": -16153,
+        "word": 2790856960,
+        "expected_int10": -21,
+        "lut_index": 1003
+      },
+      {
+        "channel": 11,
+        "accumulator": 5780,
+        "word": 2936871168,
+        "expected_int10": 8,
+        "lut_index": 8
+      },
+      {
+        "channel": 12,
+        "accumulator": -7869,
+        "word": 1554585600,
+        "expected_int10": -11,
+        "lut_index": 1013
+      },
+      {
+        "channel": 13,
+        "accumulator": -15286,
+        "word": 1719474176,
+        "expected_int10": -24,
+        "lut_index": 1000
+      },
+      {
+        "channel": 14,
+        "accumulator": -8488,
+        "word": 113316864,
+        "expected_int10": -14,
+        "lut_index": 1010
+      },
+      {
+        "channel": 15,
+        "accumulator": 594,
+        "word": 2844989696,
+        "expected_int10": 1,
+        "lut_index": 1
+      },
+      {
+        "channel": 0,
+        "accumulator": -19088,
+        "word": 1561139200,
+        "expected_int10": -27,
+        "lut_index": 997
+      },
+      {
+        "channel": 1,
+        "accumulator": -11019,
+        "word": 879433472,
+        "expected_int10": -18,
+        "lut_index": 1006
+      },
+      {
+        "channel": 2,
+        "accumulator": 21664,
+        "word": 3253541120,
+        "expected_int10": 32,
+        "lut_index": 32
+      },
+      {
+        "channel": 3,
+        "accumulator": 14723,
+        "word": 2777749760,
+        "expected_int10": 19,
+        "lut_index": 19
+      },
+      {
+        "channel": 4,
+        "accumulator": 12623,
+        "word": 3836025088,
+        "expected_int10": 22,
+        "lut_index": 22
+      },
+      {
+        "channel": 5,
+        "accumulator": -36134,
+        "word": 714544896,
+        "expected_int10": -47,
+        "lut_index": 977
+      },
+      {
+        "channel": 6,
+        "accumulator": -26881,
+        "word": 3148552448,
+        "expected_int10": -38,
+        "lut_index": 986
+      },
+      {
+        "channel": 7,
+        "accumulator": 16592,
+        "word": 1323243520,
+        "expected_int10": 20,
+        "lut_index": 20
+      },
+      {
+        "channel": 8,
+        "accumulator": 8531,
+        "word": 2923763968,
+        "expected_int10": 11,
+        "lut_index": 11
+      },
+      {
+        "channel": 9,
+        "accumulator": -16250,
+        "word": 1865488384,
+        "expected_int10": -28,
+        "lut_index": 996
+      },
+      {
+        "channel": 10,
+        "accumulator": -11587,
+        "word": 2790856960,
+        "expected_int10": -15,
+        "lut_index": 1009
+      },
+      {
+        "channel": 11,
+        "accumulator": 6458,
+        "word": 2936871168,
+        "expected_int10": 9,
+        "lut_index": 9
+      },
+      {
+        "channel": 12,
+        "accumulator": 2705,
+        "word": 1554585600,
+        "expected_int10": 4,
+        "lut_index": 4
+      },
+      {
+        "channel": 13,
+        "accumulator": -20910,
+        "word": 1719474176,
+        "expected_int10": -33,
+        "lut_index": 991
+      },
+      {
+        "channel": 14,
+        "accumulator": -15407,
+        "word": 113316864,
+        "expected_int10": -25,
+        "lut_index": 999
+      },
+      {
+        "channel": 15,
+        "accumulator": -988,
+        "word": 2844989696,
+        "expected_int10": -1,
+        "lut_index": 1023
+      },
+      {
+        "channel": 0,
+        "accumulator": 3601,
+        "word": 1561139200,
+        "expected_int10": 5,
+        "lut_index": 5
+      },
+      {
+        "channel": 1,
+        "accumulator": -20563,
+        "word": 879433472,
+        "expected_int10": -33,
+        "lut_index": 991
+      },
+      {
+        "channel": 2,
+        "accumulator": 13395,
+        "word": 3253541120,
+        "expected_int10": 20,
+        "lut_index": 20
+      },
+      {
+        "channel": 3,
+        "accumulator": 442,
+        "word": 2777749760,
+        "expected_int10": 1,
+        "lut_index": 1
+      },
+      {
+        "channel": 4,
+        "accumulator": 18944,
+        "word": 3836025088,
+        "expected_int10": 33,
+        "lut_index": 33
+      },
+      {
+        "channel": 5,
+        "accumulator": -11876,
+        "word": 714544896,
+        "expected_int10": -15,
+        "lut_index": 1009
+      },
+      {
+        "channel": 6,
+        "accumulator": -1233,
+        "word": 3148552448,
+        "expected_int10": -2,
+        "lut_index": 1022
+      },
+      {
+        "channel": 7,
+        "accumulator": -27958,
+        "word": 1323243520,
+        "expected_int10": -34,
+        "lut_index": 990
+      },
+      {
+        "channel": 8,
+        "accumulator": 12475,
+        "word": 2923763968,
+        "expected_int10": 17,
+        "lut_index": 17
+      },
+      {
+        "channel": 9,
+        "accumulator": -23123,
+        "word": 1865488384,
+        "expected_int10": -39,
+        "lut_index": 985
+      },
+      {
+        "channel": 10,
+        "accumulator": 1494,
+        "word": 2790856960,
+        "expected_int10": 2,
+        "lut_index": 2
+      },
+      {
+        "channel": 11,
+        "accumulator": 20206,
+        "word": 2936871168,
+        "expected_int10": 27,
+        "lut_index": 27
+      },
+      {
+        "channel": 12,
+        "accumulator": 12896,
+        "word": 1554585600,
+        "expected_int10": 18,
+        "lut_index": 18
+      },
+      {
+        "channel": 13,
+        "accumulator": -23249,
+        "word": 1719474176,
+        "expected_int10": -36,
+        "lut_index": 988
+      },
+      {
+        "channel": 14,
+        "accumulator": -13031,
+        "word": 113316864,
+        "expected_int10": -21,
+        "lut_index": 1003
+      },
+      {
+        "channel": 15,
+        "accumulator": -8246,
+        "word": 2844989696,
+        "expected_int10": -11,
+        "lut_index": 1013
+      }
+    ]
+  }
+}

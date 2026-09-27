@@ -1,0 +1,21 @@
+{
+  "argv": [
+    "scripts/cache_diagnostic_reference_inputs.py",
+    "--model",
+    "/Users/mac/lzero_llama_workspace/llama.cpp/models/gemma-2b-it.Q8_0.gguf",
+    "--first-layer",
+    "0",
+    "--output-dir",
+    "diagnostics/bos_aware",
+    "--cache-dir",
+    "/tmp/bos-aware-capture",
+    "--staging-dir",
+    "/tmp/bos-aware-staging"
+  ],
+  "script_sha256": "a013dc18ff923606813c395bc09ff67605fae496ff271740f35318ea94e82b10",
+  "source_sha256": "6e1a93ec2987c2e03872ae7686621ef5b32e2690f9c5389c04a53c0d1aed9f7e",
+  "model_sha256": "dae8a0a75dda3553c06af737adfff0c003ed1b6393932964cce72bb4f0fd41f6",
+  "started": 1790430694.691394,
+  "scope": "original model inputs; hooks do not replace outputs",
+  "completed": 1790431148.975936
+}

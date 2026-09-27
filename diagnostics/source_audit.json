@@ -1,0 +1,71 @@
+{
+  "current_commit": "f31f9e6e52a65362acd473f27ed0bfc05097335f",
+  "files": [
+    {
+      "file": "src/static_quant/checkpoint.py",
+      "recorded_sha256": "3bbac4517c3f14c2460d86cb273d764981ce8bebeb12debfcdb9c649742ff2b6",
+      "current_sha256": null,
+      "match": false
+    },
+    {
+      "file": "src/static_quant/gguf_source.py",
+      "recorded_sha256": "216d606b1ff44591cf8560a4c83857ebc380384ade528f54c1443c9eff98f187",
+      "current_sha256": null,
+      "match": false
+    },
+    {
+      "file": "src/static_quant/policy.py",
+      "recorded_sha256": "b873d7499ad574340450c6ebdc50f254ddb1406e5c9073807142cb1baded5841",
+      "current_sha256": null,
+      "match": false
+    },
+    {
+      "file": "src/static_quant/__init__.py",
+      "recorded_sha256": "5202c67993adf6346f64a6744cfe41c0869b39cab7ead7e8882c4b79c5aea784",
+      "current_sha256": "5202c67993adf6346f64a6744cfe41c0869b39cab7ead7e8882c4b79c5aea784",
+      "match": true
+    },
+    {
+      "file": "src/static_quant/core.py",
+      "recorded_sha256": "655f51a765763a674aa807064d62a48e54aa9f7c019545cc13c442124c11afc2",
+      "current_sha256": "63620425341af69ad1d38be1954e30aff0f07b1518bbb520c36e143ff6d3de38",
+      "match": false
+    },
+    {
+      "file": "src/static_quant/export.py",
+      "recorded_sha256": "418a28070b09561efc9207c5b63809f64d3d19bca716f1abaca1d17b4379da6c",
+      "current_sha256": "f008e483bfa054866b753ae69449fd8c0a739d505ea80042a0460c3044e998a8",
+      "match": false
+    },
+    {
+      "file": "src/static_quant/full_run.py",
+      "recorded_sha256": "6520cf52ac196fe645fa2f389b625828cd0a8c65d48afbc5f268334116bf6344",
+      "current_sha256": null,
+      "match": false
+    },
+    {
+      "file": "src/static_quant/compiler_adapter.py",
+      "recorded_sha256": "5f5e3c44309f6ee2b0b1ce11b89b6bcc2455b60b4933b38ea11eb718bea991fd",
+      "current_sha256": "5f5e3c44309f6ee2b0b1ce11b89b6bcc2455b60b4933b38ea11eb718bea991fd",
+      "match": true
+    },
+    {
+      "file": "src/static_quant/cli.py",
+      "recorded_sha256": "1d99cd471d8f1f36373c3ecf3dec241ec6a67ff8d20369178d955271cad0494d",
+      "current_sha256": "a525624437b9ff472a2fdb3a0342dbdd87c64178f8b679ccdfd42ec0d889df75",
+      "match": false
+    },
+    {
+      "file": "src/static_quant/hardware.py",
+      "recorded_sha256": "173a90ceb6742cfe8033e1473f556d8848aa99ce89882f1b9feb003ddfcca206",
+      "current_sha256": "173a90ceb6742cfe8033e1473f556d8848aa99ce89882f1b9feb003ddfcca206",
+      "match": true
+    },
+    {
+      "file": "src/static_quant/gemma.py",
+      "recorded_sha256": "05b465369e5a318919ca3983f8a6a5f9562eb683a437f7accddf3e48dfa5f0ef",
+      "current_sha256": "f1f063041a05c0ca095537c138fd3d0dd88d3619d1b37cdccd79027df024423e",
+      "match": false
+    }
+  ]
+}

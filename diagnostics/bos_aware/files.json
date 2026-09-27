@@ -1,0 +1,443 @@
+{
+  "scope": "Files created or modified by the BOS-aware calibration task; excludes the pre-existing diagnostic implementation and outputs",
+  "source_files": [
+    "docs/static-calibration.md",
+    "docs/bos-aware-calibration.md",
+    "src/static_quant/sampling.py",
+    "src/static_quant/search.py",
+    "src/static_quant/core.py",
+    "src/static_quant/cli.py",
+    "src/static_quant/gemma.py",
+    "src/static_quant/export.py",
+    "tests/test_bos_calibration.py",
+    "tests/test_gemma_frontend.py",
+    "scripts/run_bos_aware_calibration.py",
+    "scripts/build_bos_aware_report.py",
+    "scripts/verify_bos_aware_results.py",
+    "scripts/export_bos_aware_parameters.py"
+  ],
+  "required_outputs": [
+    "diagnostics/bos_aware_calibration_report.md",
+    "diagnostics/bos_aware_scale_search.csv",
+    "diagnostics/bos_aware_evaluation.csv",
+    "diagnostics/down_proj_old_vs_new.csv",
+    "diagnostics/search_row_sensitivity.csv"
+  ],
+  "files": [
+    {
+      "path": "diagnostics/bos_aware/bulk_capture_provenance.json",
+      "bytes": 736,
+      "sha256": "8c1794780d0962c9afaed412b2c467b2050b80c9e26959d84e48fce9e79b3ca3"
+    },
+    {
+      "path": "diagnostics/bos_aware/calibrated/compiler_mapping.json",
+      "bytes": 5155,
+      "sha256": "e68d1897696675e0b23122a64161f528634091c6b9108216a28a7a826bca982d"
+    },
+    {
+      "path": "diagnostics/bos_aware/calibrated/manifest.json",
+      "bytes": 61930,
+      "sha256": "21126f78fe57e2acbecdcd35f0ea5d2725e083ddaf7be515d0457dc4219fa85a"
+    },
+    {
+      "path": "diagnostics/bos_aware/calibrated/qparams.npz",
+      "bytes": 5535634,
+      "sha256": "50b526f3c2a173b8e6948ec213217f1056137d4dce5bf3082edc79cabc0d66b4"
+    },
+    {
+      "path": "diagnostics/bos_aware/calibrated/report.json",
+      "bytes": 333607,
+      "sha256": "81e728d373aa2b48834aa9d8fd4a73c5664f19ea85558f3a8bd625af9a1681ce"
+    },
+    {
+      "path": "diagnostics/bos_aware/calibrated/scale_search.json",
+      "bytes": 752592,
+      "sha256": "9f25a5d7b299f49457891befca3a28fe857169af7df65b9b8c1bae066063af58"
+    },
+    {
+      "path": "diagnostics/bos_aware/calibrated/scales.npz",
+      "bytes": 308866,
+      "sha256": "b0d30e8139b91740029a86b97168a4d75681e04ad192964f3c6dedaa99fbb489"
+    },
+    {
+      "path": "diagnostics/bos_aware/calibrated/test_vectors.json",
+      "bytes": 176394,
+      "sha256": "5c3163506c4672fc383234b8463d86a0015f94b7725c87d485050fdc2d18fb9e"
+    },
+    {
+      "path": "diagnostics/bos_aware/capture.log",
+      "bytes": 1403,
+      "sha256": "fa8b6b927a597d682ffe28552e13fbe4ebcddb70510e1e906d06cd100cbf33de"
+    },
+    {
+      "path": "diagnostics/bos_aware/commands.jsonl",
+      "bytes": 420,
+      "sha256": "9cbceb802b4dc34fe65c7402511957e712777d5148c67b06b4d063cfb9346c50"
+    },
+    {
+      "path": "diagnostics/bos_aware/commands.md",
+      "bytes": 3340,
+      "sha256": "7ebf080aad0cf2d2a9c7820c8f77deeaf52aeba569b023d0729780601861d52a"
+    },
+    {
+      "path": "diagnostics/bos_aware/execution.log",
+      "bytes": 10922,
+      "sha256": "823345eb97bf0e9de7018d46f6dd753a9bf7f3d0b9ffcb819e4122a616c56177"
+    },
+    {
+      "path": "diagnostics/bos_aware/export.log",
+      "bytes": 132,
+      "sha256": "6892385dfd83b7dca2196314beaa2b539ab082dc6590df3cd66999cacf7f27c4"
+    },
+    {
+      "path": "diagnostics/bos_aware/export_smoke/compiler_mapping.json",
+      "bytes": 678,
+      "sha256": "9761802d7c652fd47701ffc6f813d8b4de83ed2dd51ed47582e882fca93fb6c2"
+    },
+    {
+      "path": "diagnostics/bos_aware/export_smoke/manifest.json",
+      "bytes": 20195,
+      "sha256": "af608cdaa8535aa359a01bdc9d703461e1c1f5b6d0aa5b76aa39369a76a46f65"
+    },
+    {
+      "path": "diagnostics/bos_aware/export_smoke/qparams.npz",
+      "bytes": 615090,
+      "sha256": "e5e5188a2441524285c9cf7ed1e89b644ca9bd8cdc2cfa009f5c75f44190f93a"
+    },
+    {
+      "path": "diagnostics/bos_aware/export_smoke/report.json",
+      "bytes": 37128,
+      "sha256": "f3a29f5c316c05e437007c1d0f74b0cd7f08999e8df2b3cdd39b3341b212c0cf"
+    },
+    {
+      "path": "diagnostics/bos_aware/export_smoke/scale_search.json",
+      "bytes": 83351,
+      "sha256": "9b56a26e9a16e6cec8463483b2f9527ad9678c0a832ee2f68310fa202b644384"
+    },
+    {
+      "path": "diagnostics/bos_aware/export_smoke/scales.npz",
+      "bytes": 34338,
+      "sha256": "66e5aba644927f134a919b278775ce43435a8f8a014a6f7d2b9b11ea7ab03610"
+    },
+    {
+      "path": "diagnostics/bos_aware/export_smoke/test_vectors.json",
+      "bytes": 20661,
+      "sha256": "9b5442d820da2648c128bb257b211704a22776d9c9e894622d597237ec072e8e"
+    },
+    {
+      "path": "diagnostics/bos_aware/export_smoke.log",
+      "bytes": 131,
+      "sha256": "49f6c7635f36509ba92f013a6d6b79fa8015ce7cf89476ad443501e920d91ff0"
+    },
+    {
+      "path": "diagnostics/bos_aware/provenance.json",
+      "bytes": 6949,
+      "sha256": "714dac72844bf5dbac6f068c03f988fc1c885e8279be0a688c563d0f51efa3f6"
+    },
+    {
+      "path": "diagnostics/bos_aware/python_packages.txt",
+      "bytes": 460,
+      "sha256": "e60307514be5c44511bdc1f7df962fac82c9b78036b62c8717b2df0f13fff461"
+    },
+    {
+      "path": "diagnostics/bos_aware/results/model.layers.0.mlp.down_proj.json",
+      "bytes": 252888,
+      "sha256": "03503d5467f1487fccc9779316f797a98029cf3cc4a71f42779579847c9739cc"
+    },
+    {
+      "path": "diagnostics/bos_aware/results/model.layers.1.mlp.down_proj.json",
+      "bytes": 254341,
+      "sha256": "969e97c3906b268d08dd310ee75de53207674f0b31e9a4c594eaa0a925831cef"
+    },
+    {
+      "path": "diagnostics/bos_aware/results/model.layers.10.mlp.down_proj.json",
+      "bytes": 256568,
+      "sha256": "b8917dd7409ff178e3f7c59dc9e02ec262666df4ff6c2ad6f4e94c4972c24cfa"
+    },
+    {
+      "path": "diagnostics/bos_aware/results/model.layers.11.mlp.down_proj.json",
+      "bytes": 254937,
+      "sha256": "c32c6a25d25ff5fd14a68ea47f2834a3319daf5d1a234e54a2d78db469ca55da"
+    },
+    {
+      "path": "diagnostics/bos_aware/results/model.layers.12.mlp.down_proj.json",
+      "bytes": 255217,
+      "sha256": "a2214f81911ffb23b1f5d795a4de69f0c6295898aa8b5de49117c0b7a115a236"
+    },
+    {
+      "path": "diagnostics/bos_aware/results/model.layers.13.mlp.down_proj.json",
+      "bytes": 254915,
+      "sha256": "58738c71529d7307c9a87ab5bcda8a22b1a6d4a67a93930b46a438b8d5ced747"
+    },
+    {
+      "path": "diagnostics/bos_aware/results/model.layers.14.mlp.down_proj.json",
+      "bytes": 253809,
+      "sha256": "ef8dafdef56e718b53d6eb94b24c1d5f17fb9611df455aea05f0c300fe79ab8e"
+    },
+    {
+      "path": "diagnostics/bos_aware/results/model.layers.15.mlp.down_proj.json",
+      "bytes": 254237,
+      "sha256": "b8c5fae1faf45e4dbadfe4dd0293f2e1fe53d3fb0ad5ed5020aecccb4c3de239"
+    },
+    {
+      "path": "diagnostics/bos_aware/results/model.layers.16.mlp.down_proj.json",
+      "bytes": 254802,
+      "sha256": "a68f0d1adfb3acc632d88180e225bf6c90a0b1f2c0cfc5821e4a2bbe502327f2"
+    },
+    {
+      "path": "diagnostics/bos_aware/results/model.layers.17.mlp.down_proj.json",
+      "bytes": 248660,
+      "sha256": "a7bf58d71ff047bc270964e044573a34ce3ecb8344d1404a8f98923f4d4c2961"
+    },
+    {
+      "path": "diagnostics/bos_aware/results/model.layers.2.mlp.down_proj.json",
+      "bytes": 254726,
+      "sha256": "388e8ba36e8c46d8c487912263b17e74ba26e2698f125233c5cc3c8a678aafa7"
+    },
+    {
+      "path": "diagnostics/bos_aware/results/model.layers.3.mlp.down_proj.json",
+      "bytes": 254077,
+      "sha256": "13a9603ec5468a68f200adfcddb396c2261c8a3796718a089a1fb0177dc15039"
+    },
+    {
+      "path": "diagnostics/bos_aware/results/model.layers.4.mlp.down_proj.json",
+      "bytes": 255224,
+      "sha256": "97ce03526754e4570befa4557efa3eac84c7c7b492c629b709b7141cfd0a1b33"
+    },
+    {
+      "path": "diagnostics/bos_aware/results/model.layers.5.mlp.down_proj.json",
+      "bytes": 254984,
+      "sha256": "734fa721a765e650952c840da6141c5e817e66f2535e600e237a062658b80bcc"
+    },
+    {
+      "path": "diagnostics/bos_aware/results/model.layers.6.mlp.down_proj.json",
+      "bytes": 254756,
+      "sha256": "5f27b52aee5f2aad5507406d39c5d76479844833bc670b41061e4ac3a3fa5c01"
+    },
+    {
+      "path": "diagnostics/bos_aware/results/model.layers.7.mlp.down_proj.json",
+      "bytes": 254054,
+      "sha256": "ed4300c635168e548073feb8ccf8f91b9b2431bfedce13d0cde5ad040b1aa8d5"
+    },
+    {
+      "path": "diagnostics/bos_aware/results/model.layers.8.mlp.down_proj.json",
+      "bytes": 253838,
+      "sha256": "146fd5611ca7637c9c664dc11a683e7cdb02ddbbcbb15f657973f3192b6fd05e"
+    },
+    {
+      "path": "diagnostics/bos_aware/results/model.layers.9.mlp.down_proj.json",
+      "bytes": 256074,
+      "sha256": "1d43dcbcf92c50033a82d540efc6952888092b495c76d28124e9a14c288930a6"
+    },
+    {
+      "path": "diagnostics/bos_aware/resume.log",
+      "bytes": 311,
+      "sha256": "35e1a60a8ae79f06248302f8cc6e791b9b42e7e632bab54c1297814afb0a9fab"
+    },
+    {
+      "path": "diagnostics/bos_aware/resume_before.json",
+      "bytes": 3277,
+      "sha256": "727e3bb7969694105d1052de7a7ed0d0b53b119ce702576182bb7fc2a0f1e825"
+    },
+    {
+      "path": "diagnostics/bos_aware/resume_verification.json",
+      "bytes": 134,
+      "sha256": "a42eaac3134ca891b56247a017b7d7625efd2f9863d0852eb1bb725a4438ccf2"
+    },
+    {
+      "path": "diagnostics/bos_aware/selected/model.layers.0.mlp.down_proj.json",
+      "bytes": 191240,
+      "sha256": "5ee1c4397383094d0fed0e59be835f1823a39060b587ffc5999ccb548fd16fb2"
+    },
+    {
+      "path": "diagnostics/bos_aware/selected/model.layers.1.mlp.down_proj.json",
+      "bytes": 192344,
+      "sha256": "f62ed20da0a0d92454894624c728b37f4cc89144406b1636f0cdb0e34d4d1cdb"
+    },
+    {
+      "path": "diagnostics/bos_aware/selected/model.layers.10.mlp.down_proj.json",
+      "bytes": 194002,
+      "sha256": "94eadb8cc65e43143a3dff66c9e27bc3e17dd94bf5c63074d7c9b1a0b1f115d0"
+    },
+    {
+      "path": "diagnostics/bos_aware/selected/model.layers.11.mlp.down_proj.json",
+      "bytes": 192691,
+      "sha256": "efb223e14dd40d65f623cc762c69f13b86a91f471e09677d6e5725facd1d098d"
+    },
+    {
+      "path": "diagnostics/bos_aware/selected/model.layers.12.mlp.down_proj.json",
+      "bytes": 192727,
+      "sha256": "e4d5c50aa5c7554e2e73a08e91a7bd14669a452ffc6dd1dc201840b57cb2b51e"
+    },
+    {
+      "path": "diagnostics/bos_aware/selected/model.layers.13.mlp.down_proj.json",
+      "bytes": 192766,
+      "sha256": "7d209ea9ec51a18719137dfda7a15f4ab4c18b88a07d50e46b5265d3fe594d00"
+    },
+    {
+      "path": "diagnostics/bos_aware/selected/model.layers.14.mlp.down_proj.json",
+      "bytes": 192035,
+      "sha256": "e8ebdac832eed99003d7d7bbfd8f5e4cce5b8d36f07db181ddb7c07d2c00b563"
+    },
+    {
+      "path": "diagnostics/bos_aware/selected/model.layers.15.mlp.down_proj.json",
+      "bytes": 191827,
+      "sha256": "86b6661f331099602dd073328ab68bf980b665779cc308c8cff17d5e7ff886a8"
+    },
+    {
+      "path": "diagnostics/bos_aware/selected/model.layers.16.mlp.down_proj.json",
+      "bytes": 192772,
+      "sha256": "33c7e6afca925e9b5c8ebbc83015e457a411e5226654f054aab6ad34fab872bb"
+    },
+    {
+      "path": "diagnostics/bos_aware/selected/model.layers.17.mlp.down_proj.json",
+      "bytes": 189684,
+      "sha256": "671e89e41e1376ebeb7569d495a68e6f6222d207ba9bce2410996bf0be92ac25"
+    },
+    {
+      "path": "diagnostics/bos_aware/selected/model.layers.2.mlp.down_proj.json",
+      "bytes": 192726,
+      "sha256": "0cd91ec02c846350288fef430833ce63330b893ce276b79bd0758f932f85b072"
+    },
+    {
+      "path": "diagnostics/bos_aware/selected/model.layers.3.mlp.down_proj.json",
+      "bytes": 192182,
+      "sha256": "7d8be8a02a12ef26c95c3eb96b2793eee2600dcb6f8c8e78a979a73ff04c6277"
+    },
+    {
+      "path": "diagnostics/bos_aware/selected/model.layers.4.mlp.down_proj.json",
+      "bytes": 193133,
+      "sha256": "c49b0686362582d70c0e84e8708d0318af2925e379c9dcf38b15c3e833781115"
+    },
+    {
+      "path": "diagnostics/bos_aware/selected/model.layers.5.mlp.down_proj.json",
+      "bytes": 192818,
+      "sha256": "d54a9e636b5f9f928b1ca63d986b563d7f4ca93cc3f2073cb04e1cb1c246ded9"
+    },
+    {
+      "path": "diagnostics/bos_aware/selected/model.layers.6.mlp.down_proj.json",
+      "bytes": 192479,
+      "sha256": "cca57a89bb8b35afcf28d3fcece3e9bd14c6c7e1dfad26234e52f9afcc452e8c"
+    },
+    {
+      "path": "diagnostics/bos_aware/selected/model.layers.7.mlp.down_proj.json",
+      "bytes": 192799,
+      "sha256": "007daf02bcbac1f2c7f437e69f7fd2960139bff813baa80ddbbf18e51af64c25"
+    },
+    {
+      "path": "diagnostics/bos_aware/selected/model.layers.8.mlp.down_proj.json",
+      "bytes": 192591,
+      "sha256": "899771e02ab929898f5a8b9f0ed956336018f7194d9ec75a254ce2bfcb5f80e4"
+    },
+    {
+      "path": "diagnostics/bos_aware/selected/model.layers.9.mlp.down_proj.json",
+      "bytes": 193490,
+      "sha256": "8d9196c778005169a5c391f1ed32ae57c45f0020b13e77857fc18417dd48f60a"
+    },
+    {
+      "path": "diagnostics/bos_aware/tests.log",
+      "bytes": 3986,
+      "sha256": "2b3dae4bb56664f3bcb752a6a06928b6cd00b32aeaa45f743870051f6cd4d14f"
+    },
+    {
+      "path": "diagnostics/bos_aware/verification.json",
+      "bytes": 719,
+      "sha256": "73fb9c5556767d42ff8b4375420c4d7dfe50f57d88ad44fa3da1776535e87737"
+    },
+    {
+      "path": "diagnostics/bos_aware_calibration_report.md",
+      "bytes": 22940,
+      "sha256": "30072aaf3e3f21c549c083be09d7b82e2e13a8bb95f240e48f8b0bb242aeb8ff"
+    },
+    {
+      "path": "diagnostics/bos_aware_evaluation.csv",
+      "bytes": 422548,
+      "sha256": "e2f14b368e3ad3a4ca05530a415f8dbe531afd1ad6ab5359f78c507a99edc070"
+    },
+    {
+      "path": "diagnostics/bos_aware_scale_search.csv",
+      "bytes": 1132316,
+      "sha256": "393299accc502554e1ed9255c9b3d3a02974150cb61753dad0d71e5ed5f6d3e9"
+    },
+    {
+      "path": "diagnostics/down_proj_old_vs_new.csv",
+      "bytes": 11484,
+      "sha256": "9df35b87c37dd3b1d73897c172199035ae37462774fbcd0a3518fee47f73ab11"
+    },
+    {
+      "path": "diagnostics/search_row_sensitivity.csv",
+      "bytes": 31188,
+      "sha256": "5f45610652538986d22bb0962d6d16fe9ef1e9e1cc5533adfa4f82957e4c8670"
+    },
+    {
+      "path": "docs/bos-aware-calibration.md",
+      "bytes": 7617,
+      "sha256": "435c90414b354c8d8e628d3ee498ab958ebd63ce9cdd636253efdd220801c86d"
+    },
+    {
+      "path": "docs/static-calibration.md",
+      "bytes": 19111,
+      "sha256": "db110e9f889a715241e6a321cb8e028639530879bff1220f5b8077c92e0898f3"
+    },
+    {
+      "path": "scripts/build_bos_aware_report.py",
+      "bytes": 22923,
+      "sha256": "c08ceafc8c52084b08360f48dce3e16edd25072f02acdc087bea35b8cc1d8808"
+    },
+    {
+      "path": "scripts/export_bos_aware_parameters.py",
+      "bytes": 3900,
+      "sha256": "8ec4120a23e6b574ffe4c9e86be14642e3546fca2c418525de0dc8b90c2b5e2e"
+    },
+    {
+      "path": "scripts/run_bos_aware_calibration.py",
+      "bytes": 16726,
+      "sha256": "573edc0ca5c8f3abcf912641970c08bcda7edc510a6160ea624a38911783b0c9"
+    },
+    {
+      "path": "scripts/verify_bos_aware_results.py",
+      "bytes": 4429,
+      "sha256": "ddda00ec67a6bf6d8bab8422a33adb7016a0f8e35a731152c9de95c333b5cfbf"
+    },
+    {
+      "path": "src/static_quant/cli.py",
+      "bytes": 9716,
+      "sha256": "3ddc1309e4dbee1fa0c093a4f9e0c32d9af1b7cdaff179b9ef47d4619dd5cd80"
+    },
+    {
+      "path": "src/static_quant/core.py",
+      "bytes": 18377,
+      "sha256": "e1c7f5b7466718b47f0a0f8d18be50b2a3a686f169b42bcb68e5f3355aadf135"
+    },
+    {
+      "path": "src/static_quant/export.py",
+      "bytes": 9659,
+      "sha256": "66d869e19005b5d12c89f4fedf02da4d6885f08fc1fb5170b91734606f3b0ffc"
+    },
+    {
+      "path": "src/static_quant/gemma.py",
+      "bytes": 12878,
+      "sha256": "810a2da590ce0eacbe5a0830e93b4485bf4097f1438a64e6a26ac277cb9fa329"
+    },
+    {
+      "path": "src/static_quant/sampling.py",
+      "bytes": 5828,
+      "sha256": "6faa5e59efebb638c925096d11b755151801dc765945fe26971393c6cd3679ba"
+    },
+    {
+      "path": "src/static_quant/search.py",
+      "bytes": 6584,
+      "sha256": "e73802159e024055dc1848dc25ca28a0b092396b516ac934664f04b9eaf22ba6"
+    },
+    {
+      "path": "tests/test_bos_calibration.py",
+      "bytes": 9255,
+      "sha256": "91e73c9df453eaaab87bbf763440a8d5145ac700e4427586d2f97a729348e92e"
+    },
+    {
+      "path": "tests/test_gemma_frontend.py",
+      "bytes": 4132,
+      "sha256": "29a6ab3290ff1b0fae7af8f04f3063e22218075bb89f8bc8ea60d0510c843356"
+    }
+  ]
+}

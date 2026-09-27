@@ -2,6 +2,8 @@
 
 실행 진입점은 `src/calibrate_gemma.py`이다. 실제 pretrained 모델의 **원래 Linear 입력**을 관측하는 local, **prefill-only** calibration이다. 모델 내부에 INT8/INT10 출력을 주입하지 않는다. Attention QKᵀ/PV activation matmul, decode, 양자화 오차 전파, perplexity, RTL bit-exact 검증은 지원/검증 범위 밖이다.
 
+BOS-aware sampler, 출력 MSE 기반 joint search 및 consumer별 고정 scale은 [BOS-aware calibration](bos-aware-calibration.md)을 참조한다. `--search-rows` 기본값 64와 runtime 수치 계약은 유지한다.
+
 ## 설치와 실행
 
 저장소 root에서 실행한다. 기존 출력은 덮어쓰지 않으며, **새롭거나 빈 output directory**만 허용한다.
@@ -67,7 +69,7 @@ python src/calibrate_gemma.py \
   --scale-mode fixed --s10 0.1 --reuse-gelu-lut
 ```
 
-이 옵션은 선택한 모든 연산에 동일 `s_10=0.1`을 강제한다. `--reuse-gelu-lut`와 탐색 모드 또는 다른 `s_10`의 조합은 오류다. LUT를 거치지 않는 연산은 `--scale-mode fixed --s10 VALUE`만 사용할 수 있다. 검색 결과는 연산마다 scale이 달라질 수 있으므로 별도 scale에 맞는 LUT가 필요하다는 metadata를 만든다. 하나의 기존 LUT와 모두 호환된다고 표시하지 않는다.
+Gate는 항상 기존 LUT scale `s_10=0.1`, Q/K는 기존 의도인 `s_10=0.2`로 고정한다. 이 consumer별 제약이 전역 옵션보다 우선한다. 나머지 선택 연산에는 전역 옵션을 적용한다. `--reuse-gelu-lut`와 탐색 모드 또는 다른 `s_10`의 조합은 오류다. LUT를 거치지 않는 연산은 `--scale-mode fixed --s10 VALUE`만 사용할 수 있다. 검색 결과는 연산마다 scale이 달라질 수 있으므로 별도 scale에 맞는 LUT가 필요하다는 metadata를 만든다. 하나의 기존 LUT와 모두 호환된다고 표시하지 않는다.
 
 **기본 qparams.bin은 생성하지 않는다.** 다음 옵션으로만 실험용 export를 허용한다.
 
@@ -92,15 +94,15 @@ JSONL은 한 줄당 `{"text":"..."}` 객체, `.txt`는 비어 있지 않은 한 
 
 - `X[M,K]`, `W[N,K]`, `Y=X@W.T[M,N]`. zero point는 0, INT8은 `[-127,127]`.
 - `s_W[n]=max(abs(W[n,:]))/127`, `W_q=clip(rint(W/s_W[:,None]),-127,127)`.
-- Pass A: 원본 입력의 전체 유효 token absmax로 **static scalar** `s_X`를 fitting한다. `--input-percentile 99.9`는 `--percentile-capacity`개의 균등 priority reservoir 원소로 percentile을 근사한다. sampling 방법/크기/관측 수를 기록한다. 같은 layer Q/K/V, gate/up은 동일 group의 Pass A 결과와 `s_X`를 공유한다.
+- Pass A: 원본 입력의 전체 유효 token absmax로 **static scalar** `s_X`를 fitting한다. `--input-percentile 99.9`는 `--percentile-capacity`개의 균등 priority reservoir 원소로 percentile을 근사한다. sampling 방법/크기/관측 수를 기록한다. 같은 layer Q/K/V, gate/up은 Pass A 통계를 공유한다. 출력 오차 탐색에서 선택되는 `s_X`는 연산별로 다를 수 있다.
 - Pass B: 같은 데이터에서 고정 INT8 `X_q,W_q`를 사용한다. M/N/K chunk로 exact INT64 accumulator를 계산하고 INT32 범위를 검사한다. K의 모든 partial sum을 합친 다음에만 requantization한다. Gemma의 K는 `K*127² <= INT32_MAX`라 모든 prefix가 안전하다. 더 큰 synthetic K는 절대 곱 합의 보수적 bound로 모든 prefix 안전성을 검사하고, 증명할 수 없으면 거부한다. reference 함수 자체도 각 K chunk 경계에서 overflow를 검사한다.
-- 출력 실수 범위는 `A*s_X*s_W[n]`의 absmax를 streaming으로 수집한다. `--search-rows`개의 **입력 row**만 균등 priority reservoir에 보관한다. 무제한 activation/accumulator를 저장하지 않는다.
-- Pass C: minmax baseline은 전체 channel의 공통 absmax / 511 (전부 0이면 1). fixed는 사용자 scale, mse는 baseline과 제한된 threshold 후보를 평가한다. 모든 후보에서 profile별 multiplier/shift를 생성하고 실제 정수 reference의 dequantized INT10 MSE를 평가한다. 표본의 accumulator도 chunk별로 다시 계산한다.
+- 출력 실수 범위는 `A*s_X*s_W[n]`의 absmax를 streaming으로 수집한다. 위치별 bounded priority reservoir에서 대표 행을 선택한다. 최종 선택 행 수는 `--search-rows` 이하이다. 무제한 activation/accumulator를 저장하지 않는다.
+- Pass C: minmax baseline은 전체 channel의 공통 absmax / 511 (전부 0이면 1). fixed는 사용자 scale, mse는 baseline과 제한된 threshold 후보를 평가한다. 모든 후보에서 profile별 multiplier/shift를 생성하고 실제 정수 reference의 dequantized INT10 대 float Linear 출력 MSE를 모집단 비율로 가중하여 평가한다. 표본의 accumulator도 chunk별로 다시 계산한다.
 - `r[n]=s_X*s_W[n]/s_10`. 한 연산에 공통 `s_10` 하나, N개 channel parameter만 사용한다. M이나 K에 따라 복제하지 않는다. 각 channel의 최대값으로 서로 다른 출력 실수 scale을 만들지 않는다.
 - all-zero 입력/weight channel은 scale 1을 sentinel로 사용하고 quantized 값은 0이다. percentile이 0이지만 tensor가 nonzero이면 absmax로 fallback한다. scale 0으로 나누지 않는다.
 - 최종 선택 후 전체 calibration 데이터와 optional held-out 데이터를 재실행하여 report를 만든다. 탐색 표본의 오차를 전체 데이터 오차로 표시하지 않는다.
 
-최대 작업 메모리는 모델 외에 현재 token batch 입력, N chunk weight/INT64 copy, M×N chunk accumulator, `search_rows×K` reservoir, channel 통계 및 parameter이다. lm_head 포함해 전체 float weight 복사나 전체 M×N accumulator를 보관하지 않는다. optional weight 파일은 N chunk씩 `.npy` memmap으로 쓴다. model/산출물 SHA256은 streaming으로 계산한다.
+최대 작업 메모리는 모델 외에 현재 token batch 입력, N chunk weight/INT64 copy, M×N chunk accumulator, 최대 `3×search_rows×K` reservoir, channel 통계 및 parameter이다. lm_head 포함해 전체 float weight 복사나 전체 M×N accumulator를 보관하지 않는다. optional weight 파일은 N chunk씩 `.npy` memmap으로 쓴다. model/산출물 SHA256은 streaming으로 계산한다.
 
 ## Hardware profile: 둘 다 unverified
 
@@ -166,6 +168,7 @@ adapter는 binary 존재, profile opt-in, 정확한 weight 이름, 64B base/offs
 - `scales.npz`: `op0000.s_X`, `.s_W`, `.s_10` 등. `.s_W`는 N개.
 - `qparams.npz`: N개의 multiplier/shift/zero_point/packed word, 원하는/표현 ratio, 오차와 상태. Python `np.load(...,allow_pickle=False)`로 읽음.
 - `qparams.bin`: 허용된 경우에만 생성. channel 순서 UInt32, 16개씩 64B. N이 16 배수가 아니면 마지막 block의 남은 word를 0으로 padding. module 시작은 64B 정렬. N개 valid count와 padding/size를 manifest에 기록. offset은 binary 차단 시에도 예정 layout으로 제공하지만 adapter가 binary 없는 연결은 거부.
+- `scale_search.json`: joint 후보 표, calibration 표본의 출력 MSE, BOS/non-BOS 오차, sampling 위치·가중치와 선택 결과.
 - `report.json`: calibration 및 optional validation의 MSE/MAE/max absolute error, 각 channel의 동일 오차, 전체/channel별 clipping, input INT8 clipping, worst channel 목록, s_X/s_10/s_W 통계, ratio 오차/상태, 유효 token 및 overflow 여부. sample 수는 manifest의 각 dataset에 기록.
 - `compiler_mapping.json`: 원래 weight 이름 → parameter file offset. runtime base는 null.
 - `test_vectors.json`: 작은 실제 관측 accumulator 입력, UInt32 parameter, software expected signed INT10 및 LUT index. 아직 RTL 검증 결과가 아님.

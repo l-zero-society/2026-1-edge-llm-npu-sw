@@ -1,0 +1,22 @@
+Loading and verifying local model/data...
+/private/tmp/quant-diagnosis-venv/lib/python3.9/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+Model and token IDs match recorded identity
+sweep model.layers.12.mlp.down_proj calibration
+sweep model.layers.12.mlp.down_proj validation
+DONE model.layers.12.mlp.down_proj sweep: 583.7s
+sweep model.layers.13.mlp.down_proj calibration
+sweep model.layers.13.mlp.down_proj validation
+DONE model.layers.13.mlp.down_proj sweep: 594.7s
+sweep model.layers.14.mlp.down_proj calibration
+sweep model.layers.14.mlp.down_proj validation
+DONE model.layers.14.mlp.down_proj sweep: 593.4s
+sweep model.layers.15.mlp.down_proj calibration
+sweep model.layers.15.mlp.down_proj validation
+DONE model.layers.15.mlp.down_proj sweep: 584.2s
+sweep model.layers.16.mlp.down_proj calibration
+sweep model.layers.16.mlp.down_proj validation
+DONE model.layers.16.mlp.down_proj sweep: 615.5s
+sweep model.layers.17.mlp.down_proj calibration
+sweep model.layers.17.mlp.down_proj validation
+DONE model.layers.17.mlp.down_proj sweep: 783.9s

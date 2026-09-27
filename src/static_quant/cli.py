@@ -1,5 +1,5 @@
 import argparse
-from dataclasses import asdict
+from dataclasses import asdict, replace
 import hashlib
 from pathlib import Path
 import platform
@@ -10,6 +10,7 @@ from .core import InputStats, LinearCalibration, Options, valid_rows
 from .export import Exporter
 from .gemma import GemmaSource, input_group
 from .hardware import get_profile
+from .sampling import valid_positions
 
 
 def parser():
@@ -38,6 +39,13 @@ def parser():
     p.add_argument('--reuse-gelu-lut', action='store_true', help='require fixed s10=0.1, matching src/LUT.py index scale')
     p.add_argument('--thresholds', default='1,.95,.9,.8,.7,.5')
     p.add_argument('--search-rows', type=int, default=64)
+    p.add_argument('--bos-search-rows', type=int, default=16, help='0 explicitly disables guaranteed BOS/position-zero sampling')
+    p.add_argument('--early-search-rows', type=int, default=16)
+    p.add_argument('--early-position-limit', type=int, default=8)
+    p.add_argument('--uniform-search-sampling', action='store_true', help='explicitly disable position stratification for comparisons')
+    p.add_argument('--activation-search', choices=['none', 'output-mse'], default='none',
+                   help='output-mse jointly searches activation thresholds and permitted output scales')
+    p.add_argument('--activation-percentiles', default='99,99.5,99.9,99.95,99.99')
     p.add_argument('--m-chunk', type=int, default=32)
     p.add_argument('--n-chunk', type=int, default=64)
     p.add_argument('--k-chunk', type=int, default=256)
@@ -60,6 +68,15 @@ def provenance():
     return dict(source_commit=commit, source_tree_dirty=dirty, python_version=platform.python_version())
 
 
+def operation_options(name, options):
+    """Output consumer constraints take priority over the global scale search."""
+    if name.endswith(('q_proj', 'k_proj')):
+        return replace(options, mode='fixed', s10=0.2, fixed_lut_scale=None)
+    if name.endswith('gate_proj'):
+        return replace(options, mode='fixed', s10=0.1, fixed_lut_scale=0.1)
+    return options
+
+
 def main(argv=None):
     args = parser().parse_args(argv)
     if min(args.samples, args.validation_samples, args.sequence_length, args.batch_size, args.percentile_capacity) < 1:
@@ -68,11 +85,19 @@ def main(argv=None):
         raise ValueError('input percentile must be in (0,100]')
     if args.seed < 0:
         raise ValueError('seed must be nonnegative')
+    if args.activation_search != 'none' and args.input_percentile is not None:
+        raise ValueError('choose output-MSE search or a supplied input percentile, not both')
+    activation_percentiles = tuple(float(p) for p in args.activation_percentiles.split(','))
+    if any(not np.isfinite(p) or not 0 < p <= 100 for p in activation_percentiles):
+        raise ValueError('activation percentiles must be finite in (0,100]')
     if Path(args.output_dir).exists() and any(Path(args.output_dir).iterdir()):
         raise FileExistsError(f'Output directory must be empty: {args.output_dir}')
     options = Options(m_chunk=args.m_chunk, n_chunk=args.n_chunk, k_chunk=args.k_chunk,
                       search_rows=args.search_rows, seed=args.seed, mode=args.scale_mode, s10=args.s10,
                       fixed_lut_scale=0.1 if args.reuse_gelu_lut else None,
+                      bos_search_rows=args.bos_search_rows, early_search_rows=args.early_search_rows,
+                      early_position_limit=args.early_position_limit,
+                      representative_sampling=not args.uniform_search_sampling,
                       thresholds=tuple(float(s) for s in args.thresholds.split(',')), ratio_tolerance=args.ratio_tolerance)
     profile = get_profile(args.profile)
     if args.synthetic:
@@ -87,7 +112,7 @@ def main(argv=None):
         w[0] = 0
         names = ['synthetic.linear']
         def replay(name, split='calibration'):
-            return lambda callback: callback(valid_rows(x, mask))
+            return lambda callback: callback(valid_rows(x, mask), valid_positions(mask))
         weights = {names[0]: w}
         read_weight = lambda name: lambda sl: weights[name][sl]
         shapes = {names[0]: w.shape}
@@ -101,7 +126,8 @@ def main(argv=None):
             raise ValueError('--calibration-data is required unless --synthetic is selected')
         print('Loading real pretrained checkpoint and tokenizer...', flush=True)
         source = GemmaSource(args)
-        names, replay, read_weight, metadata = source.names, source.replay, source.read_weight, source.metadata
+        names, read_weight, metadata = source.names, source.read_weight, source.metadata
+        replay = lambda name, split='calibration': source.replay(name, split, with_positions=True)
         shapes = {name: tuple(source.modules[name].weight.shape) for name in names}
         has_validation = args.validation_data is not None
     metadata.update(provenance(), seed=args.seed, calibration_options=asdict(options), batch_size=args.batch_size)
@@ -112,27 +138,18 @@ def main(argv=None):
         group = input_group(name)
         print(f'[{index+1}/{len(names)}] {name}: Pass A / B / C / fixed-parameter evaluation', flush=True)
         if group not in groups:
-            stats = InputStats(args.seed, args.input_percentile, args.percentile_capacity)
+            stats = InputStats(args.seed, args.input_percentile, args.percentile_capacity,
+                               activation_percentiles if args.activation_search == 'output-mse' else ())
             replay(name)(stats.add)
             groups[group] = (stats, shapes[name][1])
         stats, input_width = groups[group]
 
-        # 수정 
         if input_width != shapes[name][1]:
             raise ValueError(f'{group}: shared input width mismatch')
-        # --- [추가된 코드] QK 라벨링 및 스케일 0.2 독립 조정 ---
-        from dataclasses import replace
-        if name.endswith(('q_proj', 'k_proj')):
-            # Q, K는 RoPE 팽창을 대비해 LUT 제약을 풀고 0.2 스케일로 강제
-            layer_options = replace(options, mode='fixed', s10=0.2, fixed_lut_scale=None)
-        else:
-            # 나머지는 기존 전역 options (GeLU용 0.1 고정 등) 유지
-            layer_options = options
-        # --------------------------------------------------------
-
-        # 주의: 마지막 인자를 options에서 layer_options로 변경!
-
-        operation = LinearCalibration(name, shapes[name], read_weight(name), stats.scale(), profile, options)
+        layer_options = operation_options(name, options)
+        candidates = stats.candidates() if args.activation_search == 'output-mse' else None
+        operation = LinearCalibration(name, shapes[name], read_weight(name), stats.scale(), profile,
+                                      layer_options, activation_thresholds=candidates)
         report, vectors = operation.run(replay(name), replay(name, 'validation') if has_validation else None)
         exporter.add(operation, report, vectors, stats.metadata(), group)
     manifest = exporter.finish()

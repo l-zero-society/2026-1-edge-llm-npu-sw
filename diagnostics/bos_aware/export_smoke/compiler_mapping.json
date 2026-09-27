@@ -1,0 +1,21 @@
+{
+  "address_kind": "file offset",
+  "runtime_base_address": null,
+  "compiler_field": "quant_param_addr",
+  "weights": {
+    "model.layers.0.mlp.down_proj.weight": {
+      "module_name": "model.layers.0.mlp.down_proj",
+      "torch_export_parameter_symbol": "p_model_layers_0_mlp_down_proj_weight",
+      "parameter_file_offset": 0,
+      "size_bytes": 8192,
+      "valid_channels": 2048
+    },
+    "model.layers.1.mlp.down_proj.weight": {
+      "module_name": "model.layers.1.mlp.down_proj",
+      "torch_export_parameter_symbol": "p_model_layers_1_mlp_down_proj_weight",
+      "parameter_file_offset": 8192,
+      "size_bytes": 8192,
+      "valid_channels": 2048
+    }
+  }
+}

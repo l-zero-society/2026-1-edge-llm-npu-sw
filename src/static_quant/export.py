@@ -21,6 +21,7 @@ class Exporter:
         self.profile, self.allow_binary = profile, allow_unverified
         self.save_weights, self.allow_inaccurate = save_weights, allow_inaccurate
         self.scales, self.params, self.reports, self.vectors = {}, {}, {}, {}
+        self.searches = {}
         self.manifest = dict(schema_version=1, **metadata, hardware_profile=profile.metadata(),
                              axes={'X': '[M,K]', 'W': '[N,K]', 'Y': '[M,N]',
                                    'channel_axis_W': 0, 'channel_axis_Y': 1},
@@ -81,6 +82,13 @@ class Exporter:
                 report[split]['samples'] = self.manifest.get('datasets', {}).get(split, {}).get('actual_samples')
         if input_stats is not None:
             report['input_statistics'] = input_stats
+        if 'selected' in report['selection']:
+            self.searches[op.name] = report['selection']
+            report = dict(report, selection={k: v for k, v in report['selection'].items() if k != 'candidates'})
+            report['selection']['candidate_table_file'] = 'scale_search.json'
+            entry['scale_search'] = dict(file='scale_search.json', selected=self.searches[op.name]['selected'],
+                                        sampling={k: self.searches[op.name]['sampling'][k]
+                                                  for k in ('retained', 'bos_rows', 'early_rows', 'general_rows')})
         self.manifest['modules'].append(entry)
         self.reports[op.name], self.vectors[op.name] = report, vectors
         self.offset += count*4
@@ -101,6 +109,8 @@ class Exporter:
                                               size_bytes=self.offset if binary else 0)
         np.savez(self.path/'scales.npz', **self.scales)
         np.savez(self.path/'qparams.npz', **self.params)
+        if self.searches:
+            write_json(self.path/'scale_search.json', self.searches)
         write_json(self.path/'report.json', dict(scope=self.manifest['calibration_scope'],
                                                 rtl_bit_exact=False, modules=self.reports))
         write_json(self.path/'test_vectors.json', dict(hardware_profile=self.profile.metadata(),

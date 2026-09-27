@@ -1,0 +1,269 @@
+{
+  "script_sha256": "be1633fa9f6f1176b16d9451fd4777177438f7e2c021eb3cec2358a22a1f3e08",
+  "argv": [
+    "scripts/audit_quant_diagnostic_outliers.py",
+    "/Users/mac/lzero_llama_workspace/llama.cpp/models/gemma-2b-it.Q8_0.gguf"
+  ],
+  "model_sha256": "dae8a0a75dda3553c06af737adfff0c003ed1b6393932964cce72bb4f0fd41f6",
+  "token_ids_verified": true,
+  "layers": [
+    {
+      "layer": 8,
+      "s_X": 0.570872749869279,
+      "s_10": 0.013832422840943694,
+      "splits": {
+        "calibration": {
+          "bos_rows": 128,
+          "bos_absmax": 72.50083923339844,
+          "non_bos_absmax": 31.52699089050293,
+          "baseline_int10_clip_count": 384,
+          "bos_int10_clip_count": 384,
+          "all_int10_clips_at_bos": true,
+          "search_rows": [
+            10217,
+            18983,
+            26742,
+            16209,
+            19054,
+            12490,
+            28356,
+            25494,
+            33636,
+            32978,
+            23168,
+            23537,
+            13201,
+            31580,
+            26968,
+            23515,
+            5481,
+            6119,
+            22194,
+            25464,
+            10194,
+            1157,
+            33787,
+            18035,
+            29108,
+            21776,
+            1836,
+            9866,
+            29607,
+            22737,
+            3502,
+            15905,
+            19327,
+            13991,
+            15218,
+            20602,
+            3150,
+            32588,
+            4641,
+            7030,
+            2879,
+            3452,
+            31715,
+            10919,
+            30070,
+            5539,
+            1220,
+            8034,
+            26927,
+            15709,
+            17344,
+            743,
+            10050,
+            7008,
+            14411,
+            17349,
+            16918,
+            23793,
+            23839,
+            22940,
+            21201,
+            22156,
+            23850,
+            16213
+          ],
+          "sampled_bos_rows": 0,
+          "historical_search_scores_reproduced": true,
+          "search_candidates": [
+            {
+              "s_10": 0.027664845681887387,
+              "stored_search_mse": 6.401950326898311e-05,
+              "reproduced_search_mse": 6.401950326898311e-05,
+              "matches": true
+            },
+            {
+              "s_10": 0.026281603397793018,
+              "stored_search_mse": 5.760140401319811e-05,
+              "reproduced_search_mse": 5.760140401319812e-05,
+              "matches": true
+            },
+            {
+              "s_10": 0.02489836111369865,
+              "stored_search_mse": 5.1561150850957244e-05,
+              "reproduced_search_mse": 5.156115085095724e-05,
+              "matches": true
+            },
+            {
+              "s_10": 0.02213187654550991,
+              "stored_search_mse": 4.08404325334646e-05,
+              "reproduced_search_mse": 4.0840432533464586e-05,
+              "matches": true
+            },
+            {
+              "s_10": 0.01936539197732117,
+              "stored_search_mse": 3.1349930545124165e-05,
+              "reproduced_search_mse": 3.1349930545124165e-05,
+              "matches": true
+            },
+            {
+              "s_10": 0.013832422840943694,
+              "stored_search_mse": 1.5958205998745438e-05,
+              "reproduced_search_mse": 1.5958205998745435e-05,
+              "matches": true
+            }
+          ]
+        },
+        "validation": {
+          "bos_rows": 32,
+          "bos_absmax": 72.50083923339844,
+          "non_bos_absmax": 20.011262893676758,
+          "baseline_int10_clip_count": 96,
+          "bos_int10_clip_count": 96,
+          "all_int10_clips_at_bos": true
+        }
+      }
+    },
+    {
+      "layer": 17,
+      "s_X": 18.486479992002952,
+      "s_10": 0.41800357495886586,
+      "splits": {
+        "calibration": {
+          "bos_rows": 128,
+          "bos_absmax": 2347.782958984375,
+          "non_bos_absmax": 134.26748657226562,
+          "baseline_int10_clip_count": 896,
+          "bos_int10_clip_count": 896,
+          "all_int10_clips_at_bos": true,
+          "search_rows": [
+            10217,
+            18983,
+            26742,
+            16209,
+            19054,
+            12490,
+            28356,
+            25494,
+            33636,
+            32978,
+            23168,
+            23537,
+            13201,
+            31580,
+            26968,
+            23515,
+            5481,
+            6119,
+            22194,
+            25464,
+            10194,
+            1157,
+            33787,
+            18035,
+            29108,
+            21776,
+            1836,
+            9866,
+            29607,
+            22737,
+            3502,
+            15905,
+            19327,
+            13991,
+            15218,
+            20602,
+            3150,
+            32588,
+            4641,
+            7030,
+            2879,
+            3452,
+            31715,
+            10919,
+            30070,
+            5539,
+            1220,
+            8034,
+            26927,
+            15709,
+            17344,
+            743,
+            10050,
+            7008,
+            14411,
+            17349,
+            16918,
+            23793,
+            23839,
+            22940,
+            21201,
+            22156,
+            23850,
+            16213
+          ],
+          "sampled_bos_rows": 0,
+          "historical_search_scores_reproduced": true,
+          "search_candidates": [
+            {
+              "s_10": 0.8360071499177317,
+              "stored_search_mse": 0.03936248367574853,
+              "reproduced_search_mse": 0.03936248367574852,
+              "matches": true
+            },
+            {
+              "s_10": 0.7942067924218451,
+              "stored_search_mse": 0.036311035285968934,
+              "reproduced_search_mse": 0.03631103528596894,
+              "matches": true
+            },
+            {
+              "s_10": 0.7524064349259586,
+              "stored_search_mse": 0.033268338137461176,
+              "reproduced_search_mse": 0.033268338137461176,
+              "matches": true
+            },
+            {
+              "s_10": 0.6688057199341855,
+              "stored_search_mse": 0.027392228114725786,
+              "reproduced_search_mse": 0.027392228114725786,
+              "matches": true
+            },
+            {
+              "s_10": 0.5852050049424121,
+              "stored_search_mse": 0.021811416601248745,
+              "reproduced_search_mse": 0.021811416601248745,
+              "matches": true
+            },
+            {
+              "s_10": 0.41800357495886586,
+              "stored_search_mse": 0.012013934197829349,
+              "reproduced_search_mse": 0.012013934197829345,
+              "matches": true
+            }
+          ]
+        },
+        "validation": {
+          "bos_rows": 32,
+          "bos_absmax": 2347.782958984375,
+          "non_bos_absmax": 135.40660095214844,
+          "baseline_int10_clip_count": 224,
+          "bos_int10_clip_count": 224,
+          "all_int10_clips_at_bos": true
+        }
+      }
+    }
+  ]
+}

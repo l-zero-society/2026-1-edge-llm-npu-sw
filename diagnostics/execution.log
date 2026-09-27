@@ -1,0 +1,413 @@
+Loading and verifying local model/data...
+/private/tmp/quant-diagnosis-venv/lib/python3.9/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+Model and token IDs match recorded identity
+baseline model.layers.0.self_attn.q_proj calibration
+baseline model.layers.0.self_attn.q_proj validation
+DONE model.layers.0.self_attn.q_proj baseline: 12.7s
+baseline model.layers.0.self_attn.k_proj calibration
+baseline model.layers.0.self_attn.k_proj validation
+DONE model.layers.0.self_attn.k_proj baseline: 2.7s
+baseline model.layers.0.self_attn.v_proj calibration
+baseline model.layers.0.self_attn.v_proj validation
+DONE model.layers.0.self_attn.v_proj baseline: 2.7s
+baseline model.layers.0.self_attn.o_proj calibration
+baseline model.layers.0.self_attn.o_proj validation
+DONE model.layers.0.self_attn.o_proj baseline: 13.4s
+baseline model.layers.0.mlp.gate_proj calibration
+baseline model.layers.0.mlp.gate_proj validation
+DONE model.layers.0.mlp.gate_proj baseline: 85.3s
+baseline model.layers.0.mlp.up_proj calibration
+baseline model.layers.0.mlp.up_proj validation
+DONE model.layers.0.mlp.up_proj baseline: 92.4s
+baseline model.layers.0.mlp.down_proj calibration
+baseline model.layers.0.mlp.down_proj validation
+DONE model.layers.0.mlp.down_proj baseline: 115.8s
+Capture layer 1 calibration
+Capture layer 1 validation
+baseline model.layers.1.self_attn.q_proj calibration
+baseline model.layers.1.self_attn.q_proj validation
+DONE model.layers.1.self_attn.q_proj baseline: 10.7s
+baseline model.layers.1.self_attn.k_proj calibration
+baseline model.layers.1.self_attn.k_proj validation
+DONE model.layers.1.self_attn.k_proj baseline: 2.2s
+baseline model.layers.1.self_attn.v_proj calibration
+baseline model.layers.1.self_attn.v_proj validation
+DONE model.layers.1.self_attn.v_proj baseline: 2.2s
+baseline model.layers.1.self_attn.o_proj calibration
+baseline model.layers.1.self_attn.o_proj validation
+DONE model.layers.1.self_attn.o_proj baseline: 10.3s
+baseline model.layers.1.mlp.gate_proj calibration
+baseline model.layers.1.mlp.gate_proj validation
+DONE model.layers.1.mlp.gate_proj baseline: 121.5s
+baseline model.layers.1.mlp.up_proj calibration
+baseline model.layers.1.mlp.up_proj validation
+DONE model.layers.1.mlp.up_proj baseline: 136.3s
+baseline model.layers.1.mlp.down_proj calibration
+baseline model.layers.1.mlp.down_proj validation
+DONE model.layers.1.mlp.down_proj baseline: 152.9s
+Capture layer 2 calibration
+Capture layer 2 validation
+baseline model.layers.2.self_attn.q_proj calibration
+baseline model.layers.2.self_attn.q_proj validation
+DONE model.layers.2.self_attn.q_proj baseline: 12.8s
+baseline model.layers.2.self_attn.k_proj calibration
+baseline model.layers.2.self_attn.k_proj validation
+DONE model.layers.2.self_attn.k_proj baseline: 2.6s
+baseline model.layers.2.self_attn.v_proj calibration
+baseline model.layers.2.self_attn.v_proj validation
+DONE model.layers.2.self_attn.v_proj baseline: 2.7s
+baseline model.layers.2.self_attn.o_proj calibration
+baseline model.layers.2.self_attn.o_proj validation
+DONE model.layers.2.self_attn.o_proj baseline: 12.3s
+baseline model.layers.2.mlp.gate_proj calibration
+baseline model.layers.2.mlp.gate_proj validation
+DONE model.layers.2.mlp.gate_proj baseline: 88.9s
+baseline model.layers.2.mlp.up_proj calibration
+baseline model.layers.2.mlp.up_proj validation
+DONE model.layers.2.mlp.up_proj baseline: 124.1s
+baseline model.layers.2.mlp.down_proj calibration
+baseline model.layers.2.mlp.down_proj validation
+DONE model.layers.2.mlp.down_proj baseline: 144.8s
+Capture layer 3 calibration
+Capture layer 3 validation
+baseline model.layers.3.self_attn.q_proj calibration
+baseline model.layers.3.self_attn.q_proj validation
+DONE model.layers.3.self_attn.q_proj baseline: 15.2s
+baseline model.layers.3.self_attn.k_proj calibration
+baseline model.layers.3.self_attn.k_proj validation
+DONE model.layers.3.self_attn.k_proj baseline: 3.0s
+baseline model.layers.3.self_attn.v_proj calibration
+baseline model.layers.3.self_attn.v_proj validation
+DONE model.layers.3.self_attn.v_proj baseline: 3.2s
+baseline model.layers.3.self_attn.o_proj calibration
+baseline model.layers.3.self_attn.o_proj validation
+DONE model.layers.3.self_attn.o_proj baseline: 15.3s
+baseline model.layers.3.mlp.gate_proj calibration
+baseline model.layers.3.mlp.gate_proj validation
+DONE model.layers.3.mlp.gate_proj baseline: 121.0s
+baseline model.layers.3.mlp.up_proj calibration
+baseline model.layers.3.mlp.up_proj validation
+DONE model.layers.3.mlp.up_proj baseline: 75.5s
+baseline model.layers.3.mlp.down_proj calibration
+baseline model.layers.3.mlp.down_proj validation
+DONE model.layers.3.mlp.down_proj baseline: 101.2s
+Capture layer 4 calibration
+Capture layer 4 validation
+baseline model.layers.4.self_attn.q_proj calibration
+baseline model.layers.4.self_attn.q_proj validation
+DONE model.layers.4.self_attn.q_proj baseline: 9.5s
+baseline model.layers.4.self_attn.k_proj calibration
+baseline model.layers.4.self_attn.k_proj validation
+DONE model.layers.4.self_attn.k_proj baseline: 2.1s
+baseline model.layers.4.self_attn.v_proj calibration
+baseline model.layers.4.self_attn.v_proj validation
+DONE model.layers.4.self_attn.v_proj baseline: 2.0s
+baseline model.layers.4.self_attn.o_proj calibration
+baseline model.layers.4.self_attn.o_proj validation
+DONE model.layers.4.self_attn.o_proj baseline: 9.2s
+baseline model.layers.4.mlp.gate_proj calibration
+baseline model.layers.4.mlp.gate_proj validation
+DONE model.layers.4.mlp.gate_proj baseline: 74.6s
+baseline model.layers.4.mlp.up_proj calibration
+baseline model.layers.4.mlp.up_proj validation
+DONE model.layers.4.mlp.up_proj baseline: 73.3s
+baseline model.layers.4.mlp.down_proj calibration
+baseline model.layers.4.mlp.down_proj validation
+DONE model.layers.4.mlp.down_proj baseline: 98.3s
+Capture layer 5 calibration
+Capture layer 5 validation
+baseline model.layers.5.self_attn.q_proj calibration
+baseline model.layers.5.self_attn.q_proj validation
+DONE model.layers.5.self_attn.q_proj baseline: 9.6s
+baseline model.layers.5.self_attn.k_proj calibration
+baseline model.layers.5.self_attn.k_proj validation
+DONE model.layers.5.self_attn.k_proj baseline: 2.1s
+baseline model.layers.5.self_attn.v_proj calibration
+baseline model.layers.5.self_attn.v_proj validation
+DONE model.layers.5.self_attn.v_proj baseline: 2.1s
+baseline model.layers.5.self_attn.o_proj calibration
+baseline model.layers.5.self_attn.o_proj validation
+DONE model.layers.5.self_attn.o_proj baseline: 9.4s
+baseline model.layers.5.mlp.gate_proj calibration
+baseline model.layers.5.mlp.gate_proj validation
+DONE model.layers.5.mlp.gate_proj baseline: 74.7s
+baseline model.layers.5.mlp.up_proj calibration
+baseline model.layers.5.mlp.up_proj validation
+DONE model.layers.5.mlp.up_proj baseline: 72.4s
+baseline model.layers.5.mlp.down_proj calibration
+baseline model.layers.5.mlp.down_proj validation
+DONE model.layers.5.mlp.down_proj baseline: 97.9s
+baseline model.layers.6.self_attn.q_proj calibration
+baseline model.layers.6.self_attn.q_proj validation
+DONE model.layers.6.self_attn.q_proj baseline: 10.5s
+baseline model.layers.6.self_attn.k_proj calibration
+baseline model.layers.6.self_attn.k_proj validation
+DONE model.layers.6.self_attn.k_proj baseline: 2.1s
+baseline model.layers.6.self_attn.v_proj calibration
+baseline model.layers.6.self_attn.v_proj validation
+DONE model.layers.6.self_attn.v_proj baseline: 2.1s
+baseline model.layers.6.self_attn.o_proj calibration
+baseline model.layers.6.self_attn.o_proj validation
+DONE model.layers.6.self_attn.o_proj baseline: 10.1s
+baseline model.layers.6.mlp.gate_proj calibration
+baseline model.layers.6.mlp.gate_proj validation
+DONE model.layers.6.mlp.gate_proj baseline: 75.9s
+baseline model.layers.6.mlp.up_proj calibration
+baseline model.layers.6.mlp.up_proj validation
+DONE model.layers.6.mlp.up_proj baseline: 83.4s
+baseline model.layers.6.mlp.down_proj calibration
+baseline model.layers.6.mlp.down_proj validation
+DONE model.layers.6.mlp.down_proj baseline: 104.4s
+baseline model.layers.7.self_attn.q_proj calibration
+baseline model.layers.7.self_attn.q_proj validation
+DONE model.layers.7.self_attn.q_proj baseline: 10.7s
+baseline model.layers.7.self_attn.k_proj calibration
+baseline model.layers.7.self_attn.k_proj validation
+DONE model.layers.7.self_attn.k_proj baseline: 2.2s
+baseline model.layers.7.self_attn.v_proj calibration
+baseline model.layers.7.self_attn.v_proj validation
+DONE model.layers.7.self_attn.v_proj baseline: 2.1s
+baseline model.layers.7.self_attn.o_proj calibration
+baseline model.layers.7.self_attn.o_proj validation
+DONE model.layers.7.self_attn.o_proj baseline: 10.6s
+baseline model.layers.7.mlp.gate_proj calibration
+baseline model.layers.7.mlp.gate_proj validation
+DONE model.layers.7.mlp.gate_proj baseline: 79.0s
+baseline model.layers.7.mlp.up_proj calibration
+baseline model.layers.7.mlp.up_proj validation
+DONE model.layers.7.mlp.up_proj baseline: 81.7s
+baseline model.layers.7.mlp.down_proj calibration
+baseline model.layers.7.mlp.down_proj validation
+DONE model.layers.7.mlp.down_proj baseline: 106.5s
+baseline model.layers.8.self_attn.q_proj calibration
+baseline model.layers.8.self_attn.q_proj validation
+DONE model.layers.8.self_attn.q_proj baseline: 10.7s
+baseline model.layers.8.self_attn.k_proj calibration
+baseline model.layers.8.self_attn.k_proj validation
+DONE model.layers.8.self_attn.k_proj baseline: 2.2s
+baseline model.layers.8.self_attn.v_proj calibration
+baseline model.layers.8.self_attn.v_proj validation
+DONE model.layers.8.self_attn.v_proj baseline: 2.1s
+baseline model.layers.8.self_attn.o_proj calibration
+baseline model.layers.8.self_attn.o_proj validation
+DONE model.layers.8.self_attn.o_proj baseline: 10.8s
+baseline model.layers.8.mlp.gate_proj calibration
+baseline model.layers.8.mlp.gate_proj validation
+DONE model.layers.8.mlp.gate_proj baseline: 79.2s
+baseline model.layers.8.mlp.up_proj calibration
+baseline model.layers.8.mlp.up_proj validation
+DONE model.layers.8.mlp.up_proj baseline: 76.0s
+baseline model.layers.8.mlp.down_proj calibration
+baseline model.layers.8.mlp.down_proj validation
+DONE model.layers.8.mlp.down_proj baseline: 104.9s
+baseline model.layers.9.self_attn.q_proj calibration
+baseline model.layers.9.self_attn.q_proj validation
+DONE model.layers.9.self_attn.q_proj baseline: 10.4s
+baseline model.layers.9.self_attn.k_proj calibration
+baseline model.layers.9.self_attn.k_proj validation
+DONE model.layers.9.self_attn.k_proj baseline: 2.1s
+baseline model.layers.9.self_attn.v_proj calibration
+baseline model.layers.9.self_attn.v_proj validation
+DONE model.layers.9.self_attn.v_proj baseline: 2.1s
+baseline model.layers.9.self_attn.o_proj calibration
+baseline model.layers.9.self_attn.o_proj validation
+DONE model.layers.9.self_attn.o_proj baseline: 10.2s
+baseline model.layers.9.mlp.gate_proj calibration
+baseline model.layers.9.mlp.gate_proj validation
+DONE model.layers.9.mlp.gate_proj baseline: 79.2s
+baseline model.layers.9.mlp.up_proj calibration
+baseline model.layers.9.mlp.up_proj validation
+DONE model.layers.9.mlp.up_proj baseline: 76.2s
+baseline model.layers.9.mlp.down_proj calibration
+baseline model.layers.9.mlp.down_proj validation
+DONE model.layers.9.mlp.down_proj baseline: 103.8s
+baseline model.layers.10.self_attn.q_proj calibration
+baseline model.layers.10.self_attn.q_proj validation
+DONE model.layers.10.self_attn.q_proj baseline: 10.5s
+baseline model.layers.10.self_attn.k_proj calibration
+baseline model.layers.10.self_attn.k_proj validation
+DONE model.layers.10.self_attn.k_proj baseline: 2.0s
+baseline model.layers.10.self_attn.v_proj calibration
+baseline model.layers.10.self_attn.v_proj validation
+DONE model.layers.10.self_attn.v_proj baseline: 2.1s
+baseline model.layers.10.self_attn.o_proj calibration
+baseline model.layers.10.self_attn.o_proj validation
+DONE model.layers.10.self_attn.o_proj baseline: 10.4s
+baseline model.layers.10.mlp.gate_proj calibration
+baseline model.layers.10.mlp.gate_proj validation
+DONE model.layers.10.mlp.gate_proj baseline: 79.8s
+baseline model.layers.10.mlp.up_proj calibration
+baseline model.layers.10.mlp.up_proj validation
+DONE model.layers.10.mlp.up_proj baseline: 80.0s
+baseline model.layers.10.mlp.down_proj calibration
+baseline model.layers.10.mlp.down_proj validation
+DONE model.layers.10.mlp.down_proj baseline: 122.5s
+baseline model.layers.11.self_attn.q_proj calibration
+baseline model.layers.11.self_attn.q_proj validation
+DONE model.layers.11.self_attn.q_proj baseline: 16.2s
+baseline model.layers.11.self_attn.k_proj calibration
+baseline model.layers.11.self_attn.k_proj validation
+DONE model.layers.11.self_attn.k_proj baseline: 3.3s
+baseline model.layers.11.self_attn.v_proj calibration
+baseline model.layers.11.self_attn.v_proj validation
+DONE model.layers.11.self_attn.v_proj baseline: 3.4s
+baseline model.layers.11.self_attn.o_proj calibration
+baseline model.layers.11.self_attn.o_proj validation
+DONE model.layers.11.self_attn.o_proj baseline: 17.2s
+baseline model.layers.11.mlp.gate_proj calibration
+baseline model.layers.11.mlp.gate_proj validation
+DONE model.layers.11.mlp.gate_proj baseline: 124.8s
+baseline model.layers.11.mlp.up_proj calibration
+baseline model.layers.11.mlp.up_proj validation
+DONE model.layers.11.mlp.up_proj baseline: 124.0s
+baseline model.layers.11.mlp.down_proj calibration
+baseline model.layers.11.mlp.down_proj validation
+DONE model.layers.11.mlp.down_proj baseline: 143.2s
+baseline model.layers.12.self_attn.q_proj calibration
+baseline model.layers.12.self_attn.q_proj validation
+DONE model.layers.12.self_attn.q_proj baseline: 16.0s
+baseline model.layers.12.self_attn.k_proj calibration
+baseline model.layers.12.self_attn.k_proj validation
+DONE model.layers.12.self_attn.k_proj baseline: 3.1s
+baseline model.layers.12.self_attn.v_proj calibration
+baseline model.layers.12.self_attn.v_proj validation
+DONE model.layers.12.self_attn.v_proj baseline: 3.3s
+baseline model.layers.12.self_attn.o_proj calibration
+baseline model.layers.12.self_attn.o_proj validation
+DONE model.layers.12.self_attn.o_proj baseline: 16.2s
+baseline model.layers.12.mlp.gate_proj calibration
+baseline model.layers.12.mlp.gate_proj validation
+DONE model.layers.12.mlp.gate_proj baseline: 109.3s
+baseline model.layers.12.mlp.up_proj calibration
+baseline model.layers.12.mlp.up_proj validation
+DONE model.layers.12.mlp.up_proj baseline: 123.2s
+baseline model.layers.12.mlp.down_proj calibration
+baseline model.layers.12.mlp.down_proj validation
+DONE model.layers.12.mlp.down_proj baseline: 140.4s
+baseline model.layers.13.self_attn.q_proj calibration
+baseline model.layers.13.self_attn.q_proj validation
+DONE model.layers.13.self_attn.q_proj baseline: 16.3s
+baseline model.layers.13.self_attn.k_proj calibration
+baseline model.layers.13.self_attn.k_proj validation
+DONE model.layers.13.self_attn.k_proj baseline: 3.1s
+baseline model.layers.13.self_attn.v_proj calibration
+baseline model.layers.13.self_attn.v_proj validation
+DONE model.layers.13.self_attn.v_proj baseline: 3.2s
+baseline model.layers.13.self_attn.o_proj calibration
+baseline model.layers.13.self_attn.o_proj validation
+DONE model.layers.13.self_attn.o_proj baseline: 16.5s
+baseline model.layers.13.mlp.gate_proj calibration
+baseline model.layers.13.mlp.gate_proj validation
+DONE model.layers.13.mlp.gate_proj baseline: 121.0s
+baseline model.layers.13.mlp.up_proj calibration
+baseline model.layers.13.mlp.up_proj validation
+DONE model.layers.13.mlp.up_proj baseline: 112.1s
+baseline model.layers.13.mlp.down_proj calibration
+baseline model.layers.13.mlp.down_proj validation
+DONE model.layers.13.mlp.down_proj baseline: 140.1s
+baseline model.layers.14.self_attn.q_proj calibration
+baseline model.layers.14.self_attn.q_proj validation
+DONE model.layers.14.self_attn.q_proj baseline: 15.8s
+baseline model.layers.14.self_attn.k_proj calibration
+baseline model.layers.14.self_attn.k_proj validation
+DONE model.layers.14.self_attn.k_proj baseline: 3.3s
+baseline model.layers.14.self_attn.v_proj calibration
+baseline model.layers.14.self_attn.v_proj validation
+DONE model.layers.14.self_attn.v_proj baseline: 3.2s
+baseline model.layers.14.self_attn.o_proj calibration
+baseline model.layers.14.self_attn.o_proj validation
+DONE model.layers.14.self_attn.o_proj baseline: 16.2s
+baseline model.layers.14.mlp.gate_proj calibration
+baseline model.layers.14.mlp.gate_proj validation
+DONE model.layers.14.mlp.gate_proj baseline: 121.3s
+baseline model.layers.14.mlp.up_proj calibration
+baseline model.layers.14.mlp.up_proj validation
+DONE model.layers.14.mlp.up_proj baseline: 114.5s
+baseline model.layers.14.mlp.down_proj calibration
+baseline model.layers.14.mlp.down_proj validation
+DONE model.layers.14.mlp.down_proj baseline: 138.2s
+baseline model.layers.15.self_attn.q_proj calibration
+baseline model.layers.15.self_attn.q_proj validation
+DONE model.layers.15.self_attn.q_proj baseline: 16.0s
+baseline model.layers.15.self_attn.k_proj calibration
+baseline model.layers.15.self_attn.k_proj validation
+DONE model.layers.15.self_attn.k_proj baseline: 3.3s
+baseline model.layers.15.self_attn.v_proj calibration
+baseline model.layers.15.self_attn.v_proj validation
+DONE model.layers.15.self_attn.v_proj baseline: 3.1s
+baseline model.layers.15.self_attn.o_proj calibration
+baseline model.layers.15.self_attn.o_proj validation
+DONE model.layers.15.self_attn.o_proj baseline: 16.1s
+baseline model.layers.15.mlp.gate_proj calibration
+baseline model.layers.15.mlp.gate_proj validation
+DONE model.layers.15.mlp.gate_proj baseline: 123.2s
+baseline model.layers.15.mlp.up_proj calibration
+baseline model.layers.15.mlp.up_proj validation
+DONE model.layers.15.mlp.up_proj baseline: 122.2s
+baseline model.layers.15.mlp.down_proj calibration
+baseline model.layers.15.mlp.down_proj validation
+DONE model.layers.15.mlp.down_proj baseline: 131.2s
+baseline model.layers.16.self_attn.q_proj calibration
+baseline model.layers.16.self_attn.q_proj validation
+DONE model.layers.16.self_attn.q_proj baseline: 9.5s
+baseline model.layers.16.self_attn.k_proj calibration
+baseline model.layers.16.self_attn.k_proj validation
+DONE model.layers.16.self_attn.k_proj baseline: 2.0s
+baseline model.layers.16.self_attn.v_proj calibration
+baseline model.layers.16.self_attn.v_proj validation
+DONE model.layers.16.self_attn.v_proj baseline: 2.0s
+baseline model.layers.16.self_attn.o_proj calibration
+baseline model.layers.16.self_attn.o_proj validation
+DONE model.layers.16.self_attn.o_proj baseline: 9.8s
+baseline model.layers.16.mlp.gate_proj calibration
+baseline model.layers.16.mlp.gate_proj validation
+DONE model.layers.16.mlp.gate_proj baseline: 71.5s
+baseline model.layers.16.mlp.up_proj calibration
+baseline model.layers.16.mlp.up_proj validation
+DONE model.layers.16.mlp.up_proj baseline: 70.3s
+baseline model.layers.16.mlp.down_proj calibration
+baseline model.layers.16.mlp.down_proj validation
+DONE model.layers.16.mlp.down_proj baseline: 99.4s
+baseline model.layers.17.self_attn.q_proj calibration
+baseline model.layers.17.self_attn.q_proj validation
+DONE model.layers.17.self_attn.q_proj baseline: 9.7s
+baseline model.layers.17.self_attn.k_proj calibration
+baseline model.layers.17.self_attn.k_proj validation
+DONE model.layers.17.self_attn.k_proj baseline: 2.0s
+baseline model.layers.17.self_attn.v_proj calibration
+baseline model.layers.17.self_attn.v_proj validation
+DONE model.layers.17.self_attn.v_proj baseline: 1.9s
+baseline model.layers.17.self_attn.o_proj calibration
+baseline model.layers.17.self_attn.o_proj validation
+DONE model.layers.17.self_attn.o_proj baseline: 9.6s
+baseline model.layers.17.mlp.gate_proj calibration
+baseline model.layers.17.mlp.gate_proj validation
+DONE model.layers.17.mlp.gate_proj baseline: 73.7s
+baseline model.layers.17.mlp.up_proj calibration
+baseline model.layers.17.mlp.up_proj validation
+DONE model.layers.17.mlp.up_proj baseline: 82.8s
+baseline model.layers.17.mlp.down_proj calibration
+baseline model.layers.17.mlp.down_proj validation
+DONE model.layers.17.mlp.down_proj baseline: 107.0s
+sweep model.layers.4.mlp.down_proj calibration
+sweep model.layers.4.mlp.down_proj validation
+DONE model.layers.4.mlp.down_proj sweep: 522.2s
+sweep model.layers.5.mlp.down_proj calibration
+sweep model.layers.5.mlp.down_proj validation
+DONE model.layers.5.mlp.down_proj sweep: 587.8s
+sweep model.layers.6.mlp.down_proj calibration
+sweep model.layers.6.mlp.down_proj validation
+DONE model.layers.6.mlp.down_proj sweep: 591.0s
+sweep model.layers.7.mlp.down_proj calibration
+sweep model.layers.7.mlp.down_proj validation
+DONE model.layers.7.mlp.down_proj sweep: 581.7s
+sweep model.layers.9.mlp.down_proj calibration
+sweep model.layers.9.mlp.down_proj validation
+DONE model.layers.9.mlp.down_proj sweep: 568.6s
+sweep model.layers.10.mlp.down_proj calibration
+sweep model.layers.10.mlp.down_proj validation
+DONE model.layers.10.mlp.down_proj sweep: 736.1s
+sweep model.layers.11.mlp.down_proj calibration
+sweep model.layers.11.mlp.down_proj validation
+DONE model.layers.11.mlp.down_proj sweep: 603.3s

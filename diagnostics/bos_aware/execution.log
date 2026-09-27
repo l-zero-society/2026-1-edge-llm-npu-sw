@@ -1,0 +1,128 @@
+/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/.venv-calibration/lib/python3.9/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+model.layers.0.mlp.down_proj stratified_64 p99.99 0.3282365401739341 0.03950863180028707 3.2166882920000006
+model.layers.0.mlp.down_proj stratified_128 p99.99 0.3282365401739341 0.03950863180028707 3.701397250000003
+model.layers.0.mlp.down_proj stratified_256 p99.99 0.3282365401739341 0.03950863180028707 4.453662915999999
+model.layers.0.mlp.down_proj uniform_64 p99.99 0.3282365401739341 0.028220451285919337 3.1446380829999967
+model.layers.0.mlp.down_proj evaluate calibration
+model.layers.0.mlp.down_proj evaluate validation
+DONE model.layers.0.mlp.down_proj 164.51262325
+model.layers.1.mlp.down_proj stratified_64 p99.99 0.10382454303004575 0.013115626278312096 3.208756208000011
+model.layers.1.mlp.down_proj stratified_128 p99.99 0.10382454303004575 0.013115626278312096 3.768673875000019
+model.layers.1.mlp.down_proj stratified_256 p99.99 0.10382454303004575 0.00936830448450864 4.220448000000005
+model.layers.1.mlp.down_proj uniform_64 p99.99 0.10382454303004575 0.00936830448450864 3.1113055419999966
+model.layers.1.mlp.down_proj evaluate calibration
+model.layers.1.mlp.down_proj evaluate validation
+DONE model.layers.1.mlp.down_proj 149.28984166599997
+model.layers.2.mlp.down_proj stratified_64 p99.99 0.08881361209234713 0.007314705481437474 3.354575000000011
+model.layers.2.mlp.down_proj stratified_128 p99.99 0.08881361209234713 0.008359663407357115 3.761823583000023
+model.layers.2.mlp.down_proj stratified_256 p99.99 0.08881361209234713 0.008359663407357115 4.358656749999966
+model.layers.2.mlp.down_proj uniform_64 p99.99 0.08881361209234713 0.008359663407357115 3.1364667920000215
+model.layers.2.mlp.down_proj evaluate calibration
+model.layers.2.mlp.down_proj evaluate validation
+DONE model.layers.2.mlp.down_proj 153.44492254200003
+model.layers.3.mlp.down_proj stratified_64 p99.99 0.050720926149982394 0.00584516967319508 3.1650242090000233
+model.layers.3.mlp.down_proj stratified_128 p99.99 0.050720926149982394 0.005114523464045695 3.6569888749999677
+model.layers.3.mlp.down_proj stratified_256 p99.99 0.050720926149982394 0.003653231045746925 4.306719541000007
+model.layers.3.mlp.down_proj uniform_64 p99.99 0.050720926149982394 0.005114523464045695 3.0838972920000174
+model.layers.3.mlp.down_proj evaluate calibration
+model.layers.3.mlp.down_proj evaluate validation
+DONE model.layers.3.mlp.down_proj 169.83473516699996
+model.layers.4.mlp.down_proj stratified_64 p99.99 0.038223395864209544 0.0033289869740030973 3.287573416999976
+model.layers.4.mlp.down_proj stratified_128 p99.99 0.038223395864209544 0.0033289869740030973 3.831924458000003
+model.layers.4.mlp.down_proj stratified_256 p99.99 0.038223395864209544 0.004660581763604336 4.420104832999982
+model.layers.4.mlp.down_proj uniform_64 p99.99 0.038223395864209544 0.004660581763604336 3.1435225000000173
+model.layers.4.mlp.down_proj evaluate calibration
+model.layers.4.mlp.down_proj evaluate validation
+DONE model.layers.4.mlp.down_proj 157.18935754200004
+model.layers.5.mlp.down_proj stratified_64 p99.99 0.03359186993170409 0.008364651664054494 3.0947080000000824
+model.layers.5.mlp.down_proj stratified_128 p99.99 0.03359186993170409 0.008364651664054494 3.719322791999957
+model.layers.5.mlp.down_proj stratified_256 p99.99 0.03359186993170409 0.008364651664054494 4.215025458000014
+model.layers.5.mlp.down_proj uniform_64 p99.99 0.03359186993170409 0.008364651664054494 3.00869641700001
+model.layers.5.mlp.down_proj evaluate calibration
+model.layers.5.mlp.down_proj evaluate validation
+DONE model.layers.5.mlp.down_proj 155.69582545800006
+model.layers.6.mlp.down_proj stratified_64 p99.99 0.032511839143118 0.005328721116110415 3.292883999999958
+model.layers.6.mlp.down_proj stratified_128 p99.99 0.032511839143118 0.005328721116110415 3.802355333000037
+model.layers.6.mlp.down_proj stratified_256 p99.99 0.032511839143118 0.005328721116110415 4.395261000000005
+model.layers.6.mlp.down_proj uniform_64 p99.99 0.032511839143118 0.005328721116110415 3.150437583999974
+model.layers.6.mlp.down_proj evaluate calibration
+model.layers.6.mlp.down_proj evaluate validation
+DONE model.layers.6.mlp.down_proj 149.37109050000004
+model.layers.7.mlp.down_proj stratified_64 p99.99 0.028166947654655786 0.00876180009154544 3.596342166999875
+model.layers.7.mlp.down_proj stratified_128 p99.99 0.028166947654655786 0.00876180009154544 3.962684583999817
+model.layers.7.mlp.down_proj stratified_256 p99.99 0.028166947654655786 0.00876180009154544 4.382040125000003
+model.layers.7.mlp.down_proj uniform_64 p99.99 0.028166947654655786 0.00876180009154544 3.244417958999975
+model.layers.7.mlp.down_proj evaluate calibration
+model.layers.7.mlp.down_proj evaluate validation
+DONE model.layers.7.mlp.down_proj 181.6175438749999
+model.layers.8.mlp.down_proj stratified_64 p99.99 0.024526379690380812 0.013832422840943694 8.357417292000036
+model.layers.8.mlp.down_proj stratified_128 p99.99 0.024526379690380812 0.013832422840943694 4.108869416000061
+model.layers.8.mlp.down_proj stratified_256 p99.99 0.024526379690380812 0.013832422840943694 15.538364750000028
+model.layers.8.mlp.down_proj uniform_64 p99.99 0.024526379690380812 0.013832422840943694 10.009818374999895
+model.layers.8.mlp.down_proj evaluate calibration
+model.layers.8.mlp.down_proj evaluate validation
+DONE model.layers.8.mlp.down_proj 195.391936042
+model.layers.9.mlp.down_proj stratified_64 p99.99 0.026293062767829126 0.004200945072465708 3.077771958000085
+model.layers.9.mlp.down_proj stratified_128 p99.99 0.026293062767829126 0.004200945072465708 3.582773542000041
+model.layers.9.mlp.down_proj stratified_256 p99.99 0.026293062767829126 0.004200945072465708 4.258893417000081
+model.layers.9.mlp.down_proj uniform_64 p99.99 0.026293062767829126 0.005881323101451991 2.9712146659999235
+model.layers.9.mlp.down_proj evaluate calibration
+model.layers.9.mlp.down_proj evaluate validation
+DONE model.layers.9.mlp.down_proj 163.5963603749999
+model.layers.10.mlp.down_proj stratified_64 p99.99 0.028068215385946754 0.0047048408855794675 3.171615250000059
+model.layers.10.mlp.down_proj stratified_128 p99.99 0.028068215385946754 0.0047048408855794675 3.731360959000085
+model.layers.10.mlp.down_proj stratified_256 p99.99 0.028068215385946754 0.0047048408855794675 4.31751470800009
+model.layers.10.mlp.down_proj uniform_64 p99.99 0.028068215385946754 0.0033606006325567627 3.0524155420000625
+model.layers.10.mlp.down_proj evaluate calibration
+model.layers.10.mlp.down_proj evaluate validation
+DONE model.layers.10.mlp.down_proj 159.19171404100007
+model.layers.11.mlp.down_proj stratified_64 p99.99 0.04009637724241954 0.007084301397567825 3.6773617500000455
+model.layers.11.mlp.down_proj stratified_128 p99.99 0.04009637724241954 0.007084301397567825 4.00755716599997
+model.layers.11.mlp.down_proj stratified_256 p99.99 0.04009637724241954 0.007084301397567825 4.78878454200003
+model.layers.11.mlp.down_proj uniform_64 p99.99 0.04009637724241954 0.007084301397567825 3.3777520419998837
+model.layers.11.mlp.down_proj evaluate calibration
+model.layers.11.mlp.down_proj evaluate validation
+DONE model.layers.11.mlp.down_proj 160.6324676669999
+model.layers.12.mlp.down_proj stratified_64 p99.99 0.04774677847314069 0.005577903089469502 3.59004295800014
+model.layers.12.mlp.down_proj stratified_128 p99.99 0.04774677847314069 0.005577903089469502 4.476081291000128
+model.layers.12.mlp.down_proj stratified_256 p99.99 0.04774677847314069 0.005577903089469502 4.9159120829999665
+model.layers.12.mlp.down_proj uniform_64 p99.99 0.04774677847314069 0.007809064325257302 3.7315077499999916
+model.layers.12.mlp.down_proj evaluate calibration
+model.layers.12.mlp.down_proj evaluate validation
+DONE model.layers.12.mlp.down_proj 178.5173528329999
+model.layers.13.mlp.down_proj stratified_64 p99.99 0.07070487266142435 0.00924775857367402 3.6810814169998594
+model.layers.13.mlp.down_proj stratified_128 p99.99 0.07070487266142435 0.00924775857367402 4.179091666999739
+model.layers.13.mlp.down_proj stratified_256 p99.99 0.07070487266142435 0.00924775857367402 4.7535263749996375
+model.layers.13.mlp.down_proj uniform_64 p99.99 0.07070487266142435 0.010568866941341737 3.3836117079999894
+model.layers.13.mlp.down_proj evaluate calibration
+model.layers.13.mlp.down_proj evaluate validation
+DONE model.layers.13.mlp.down_proj 168.8240111670002
+model.layers.14.mlp.down_proj stratified_64 absmax 0.8091608483021654 0.00703072449753549 3.404925750000075
+model.layers.14.mlp.down_proj stratified_128 absmax 0.8091608483021654 0.00703072449753549 3.958331666000049
+model.layers.14.mlp.down_proj stratified_256 p99.99 0.10854874934849128 0.00703072449753549 4.4259689170003185
+model.layers.14.mlp.down_proj uniform_64 p99.99 0.10854874934849128 0.008035113711469132 3.2450911670002824
+model.layers.14.mlp.down_proj evaluate calibration
+model.layers.14.mlp.down_proj evaluate validation
+DONE model.layers.14.mlp.down_proj 163.14145087499992
+model.layers.15.mlp.down_proj stratified_64 p99.99 0.12396700225211163 0.011551249603778284 3.437245624999832
+model.layers.15.mlp.down_proj stratified_128 p99.99 0.12396700225211163 0.011551249603778284 3.943227041999762
+model.layers.15.mlp.down_proj stratified_256 p99.99 0.12396700225211163 0.011551249603778284 4.630516000000171
+model.layers.15.mlp.down_proj uniform_64 absmax 0.7310742956446851 0.018481999366045256 3.517867375000151
+model.layers.15.mlp.down_proj evaluate calibration
+model.layers.15.mlp.down_proj evaluate validation
+DONE model.layers.15.mlp.down_proj 171.61062241699983
+model.layers.16.mlp.down_proj stratified_64 p99.99 0.13463173597885658 0.03266129841391674 3.5598076249998485
+model.layers.16.mlp.down_proj stratified_128 p99.99 0.13463173597885658 0.03266129841391674 4.205742999999984
+model.layers.16.mlp.down_proj stratified_256 p99.99 0.13463173597885658 0.03266129841391674 4.603192957999909
+model.layers.16.mlp.down_proj uniform_64 p99.99 0.13463173597885658 0.025403232099713017 3.6169876250000925
+model.layers.16.mlp.down_proj evaluate calibration
+model.layers.16.mlp.down_proj evaluate validation
+DONE model.layers.16.mlp.down_proj 169.96525412500023
+model.layers.17.mlp.down_proj stratified_64 absmax 18.486479992002952 0.8360071499177317 3.457031041999926
+model.layers.17.mlp.down_proj stratified_128 absmax 18.486479992002952 0.7942067924218451 3.937084541999866
+model.layers.17.mlp.down_proj stratified_256 absmax 18.486479992002952 0.7942067924218451 4.832940624999992
+model.layers.17.mlp.down_proj uniform_64 p99.99 0.1640534411557361 0.41800357495886586 3.3568480829999316
+model.layers.17.mlp.down_proj evaluate calibration
+model.layers.17.mlp.down_proj evaluate validation
+DONE model.layers.17.mlp.down_proj 172.20517162500028

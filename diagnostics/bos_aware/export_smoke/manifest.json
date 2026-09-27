@@ -1,0 +1,496 @@
+{
+  "schema_version": 1,
+  "model": "gemma-2b-it.Q8_0.gguf",
+  "source_format": "reconstructed Q8_0 GGUF",
+  "datasets": {
+    "calibration": {
+      "file_sha256": "ee1e90fc6b70878574dbb6cfb3fe8c9bf214c4528cc87c7ff6431b4c6bbc6f9e",
+      "selected_texts_sha256": "d7f16b18477ff274d633ce63b7202b96ed05956cd229c9f503658bbf61eb52c5",
+      "requested_samples": 128,
+      "actual_samples": 128,
+      "selection": "first nonempty records in file order",
+      "format": "JSONL text field",
+      "length_distribution": {
+        "min": 53,
+        "max": 512,
+        "mean": 267.3515625,
+        "p50": 221.5,
+        "p95": 512.0,
+        "shorter_than_limit": 99,
+        "at_limit": 29
+      },
+      "valid_tokens": 34221,
+      "token_ids_sha256": "709157b438ffeafa56b7654a98d6839f661357072d1a4a23c5c3c4596b640b13",
+      "preparation_manifest_sha256": "a2981ce5c68cc7edc1d850512dca76914b139e177bbfba8366b5bfbf2563e52f",
+      "preparation": {
+        "source": "OpenAssistant/oasst1",
+        "url": "https://huggingface.co/datasets/OpenAssistant/oasst1/resolve/fdf72ae0827c1cda404aff25b6603abec9e3399b/2023-04-12_oasst_all.messages.jsonl.gz",
+        "revision": "fdf72ae0827c1cda404aff25b6603abec9e3399b",
+        "license": "Apache-2.0",
+        "license_evidence": "SOURCE_README.md",
+        "source_archive_sha256": "2ff4aa8999c911ffec7972ddf70359f220b3da184b731f3649f68b1391e19341",
+        "seed": 42,
+        "split_method": "original message_tree_id SHA256(seed:tree) mod 5; entire tree held out; only one message/tree",
+        "duplicate_method": "casefold + whitespace normalization; globally distinct text and conversation tree",
+        "filters": "human only; not deleted; positive review; en/ko; at least 120 characters",
+        "category_method": "language metadata; code/technical regex heuristic; rest general",
+        "splits": {
+          "calibration": {
+            "samples": 128,
+            "sha256": "ee1e90fc6b70878574dbb6cfb3fe8c9bf214c4528cc87c7ff6431b4c6bbc6f9e",
+            "categories": {
+              "ko": 16,
+              "en_code": 16,
+              "en_technical": 32,
+              "en_general": 64
+            }
+          },
+          "validation": {
+            "samples": 32,
+            "sha256": "a47228ca6ef1a9023fcff60afe9007ee48e7ced0ab0a82373d949459a3850b40",
+            "categories": {
+              "ko": 4,
+              "en_code": 4,
+              "en_technical": 8,
+              "en_general": 16
+            }
+          }
+        }
+      }
+    },
+    "validation": {
+      "file_sha256": "a47228ca6ef1a9023fcff60afe9007ee48e7ced0ab0a82373d949459a3850b40",
+      "selected_texts_sha256": "37790509a69300db2d547fcbf84ffc167f35fd24fe93ce1083e5431ccdd42ad2",
+      "requested_samples": 32,
+      "actual_samples": 32,
+      "selection": "first nonempty records in file order",
+      "format": "JSONL text field",
+      "length_distribution": {
+        "min": 56,
+        "max": 512,
+        "mean": 316.90625,
+        "p50": 337.0,
+        "p95": 512.0,
+        "shorter_than_limit": 21,
+        "at_limit": 11
+      },
+      "valid_tokens": 10141,
+      "token_ids_sha256": "9f50bb0b0103923bc9d355f16f755e73f4056c274b7dc380b2a10761d5b83370",
+      "preparation_manifest_sha256": "a2981ce5c68cc7edc1d850512dca76914b139e177bbfba8366b5bfbf2563e52f",
+      "preparation": {
+        "source": "OpenAssistant/oasst1",
+        "url": "https://huggingface.co/datasets/OpenAssistant/oasst1/resolve/fdf72ae0827c1cda404aff25b6603abec9e3399b/2023-04-12_oasst_all.messages.jsonl.gz",
+        "revision": "fdf72ae0827c1cda404aff25b6603abec9e3399b",
+        "license": "Apache-2.0",
+        "license_evidence": "SOURCE_README.md",
+        "source_archive_sha256": "2ff4aa8999c911ffec7972ddf70359f220b3da184b731f3649f68b1391e19341",
+        "seed": 42,
+        "split_method": "original message_tree_id SHA256(seed:tree) mod 5; entire tree held out; only one message/tree",
+        "duplicate_method": "casefold + whitespace normalization; globally distinct text and conversation tree",
+        "filters": "human only; not deleted; positive review; en/ko; at least 120 characters",
+        "category_method": "language metadata; code/technical regex heuristic; rest general",
+        "splits": {
+          "calibration": {
+            "samples": 128,
+            "sha256": "ee1e90fc6b70878574dbb6cfb3fe8c9bf214c4528cc87c7ff6431b4c6bbc6f9e",
+            "categories": {
+              "ko": 16,
+              "en_code": 16,
+              "en_technical": 32,
+              "en_general": 64
+            }
+          },
+          "validation": {
+            "samples": 32,
+            "sha256": "a47228ca6ef1a9023fcff60afe9007ee48e7ced0ab0a82373d949459a3850b40",
+            "categories": {
+              "ko": 4,
+              "en_code": 4,
+              "en_technical": 8,
+              "en_general": 16
+            }
+          }
+        }
+      }
+    }
+  },
+  "source_commit": "f31f9e6e52a65362acd473f27ed0bfc05097335f",
+  "source_tree_dirty": true,
+  "calibration_policy": "stratified_64",
+  "diagnostic_provenance": {
+    "commit": "f31f9e6e52a65362acd473f27ed0bfc05097335f",
+    "model_sha256": "dae8a0a75dda3553c06af737adfff0c003ed1b6393932964cce72bb4f0fd41f6",
+    "manifest_sha256": "423c628975784166aa1141ff537c46831b4a399ff032e59335d62aa358e8fdf5",
+    "source_hashes": {
+      "src/static_quant/__init__.py": "5202c67993adf6346f64a6744cfe41c0869b39cab7ead7e8882c4b79c5aea784",
+      "src/static_quant/core.py": "e1c7f5b7466718b47f0a0f8d18be50b2a3a686f169b42bcb68e5f3355aadf135",
+      "src/static_quant/export.py": "66d869e19005b5d12c89f4fedf02da4d6885f08fc1fb5170b91734606f3b0ffc",
+      "src/static_quant/compiler_adapter.py": "5f5e3c44309f6ee2b0b1ce11b89b6bcc2455b60b4933b38ea11eb718bea991fd",
+      "src/static_quant/cli.py": "3ddc1309e4dbee1fa0c093a4f9e0c32d9af1b7cdaff179b9ef47d4619dd5cd80",
+      "src/static_quant/sampling.py": "6faa5e59efebb638c925096d11b755151801dc765945fe26971393c6cd3679ba",
+      "src/static_quant/hardware.py": "173a90ceb6742cfe8033e1473f556d8848aa99ce89882f1b9feb003ddfcca206",
+      "src/static_quant/search.py": "e73802159e024055dc1848dc25ca28a0b092396b516ac934664f04b9eaf22ba6",
+      "src/static_quant/gemma.py": "810a2da590ce0eacbe5a0830e93b4485bf4097f1438a64e6a26ac277cb9fa329",
+      "scripts/run_bos_aware_calibration.py": "573edc0ca5c8f3abcf912641970c08bcda7edc510a6160ea624a38911783b0c9",
+      "scripts/quant_diagnostic_math.py": "6c580b60896228e9304257871eb6f5a2c3ee3b6150328505753870cc7472e31c",
+      "scripts/quant_diagnostic_reduce.py": "4c47aec6f57cd908c978a3f7f74ebb23c49957f7ffcd19739ac2035da52a088d",
+      "scripts/quant_metric_reduce.c": "c2f0a4ace7311072bb4a26b2a0f5e582863a239d3616d74734d5fb441554ed24",
+      "scripts/quant_diagnostic_source.py": "6e1a93ec2987c2e03872ae7686621ef5b32e2690f9c5389c04a53c0d1aed9f7e"
+    },
+    "seed": 42,
+    "thresholds": "exact full calibration percentiles",
+    "row_counts": [
+      64,
+      128,
+      256
+    ],
+    "bos_quota": 16,
+    "early_quota": 16,
+    "early_limit": 8,
+    "objective": "population-weighted final output MSE",
+    "integer_backend": "bounded fp64-exact with NumPy INT64 oracle checks",
+    "datasets": {
+      "calibration": {
+        "file_sha256": "ee1e90fc6b70878574dbb6cfb3fe8c9bf214c4528cc87c7ff6431b4c6bbc6f9e",
+        "selected_texts_sha256": "d7f16b18477ff274d633ce63b7202b96ed05956cd229c9f503658bbf61eb52c5",
+        "requested_samples": 128,
+        "actual_samples": 128,
+        "selection": "first nonempty records in file order",
+        "format": "JSONL text field",
+        "length_distribution": {
+          "min": 53,
+          "max": 512,
+          "mean": 267.3515625,
+          "p50": 221.5,
+          "p95": 512.0,
+          "shorter_than_limit": 99,
+          "at_limit": 29
+        },
+        "valid_tokens": 34221,
+        "token_ids_sha256": "709157b438ffeafa56b7654a98d6839f661357072d1a4a23c5c3c4596b640b13",
+        "preparation_manifest_sha256": "a2981ce5c68cc7edc1d850512dca76914b139e177bbfba8366b5bfbf2563e52f",
+        "preparation": {
+          "source": "OpenAssistant/oasst1",
+          "url": "https://huggingface.co/datasets/OpenAssistant/oasst1/resolve/fdf72ae0827c1cda404aff25b6603abec9e3399b/2023-04-12_oasst_all.messages.jsonl.gz",
+          "revision": "fdf72ae0827c1cda404aff25b6603abec9e3399b",
+          "license": "Apache-2.0",
+          "license_evidence": "SOURCE_README.md",
+          "source_archive_sha256": "2ff4aa8999c911ffec7972ddf70359f220b3da184b731f3649f68b1391e19341",
+          "seed": 42,
+          "split_method": "original message_tree_id SHA256(seed:tree) mod 5; entire tree held out; only one message/tree",
+          "duplicate_method": "casefold + whitespace normalization; globally distinct text and conversation tree",
+          "filters": "human only; not deleted; positive review; en/ko; at least 120 characters",
+          "category_method": "language metadata; code/technical regex heuristic; rest general",
+          "splits": {
+            "calibration": {
+              "samples": 128,
+              "sha256": "ee1e90fc6b70878574dbb6cfb3fe8c9bf214c4528cc87c7ff6431b4c6bbc6f9e",
+              "categories": {
+                "ko": 16,
+                "en_code": 16,
+                "en_technical": 32,
+                "en_general": 64
+              }
+            },
+            "validation": {
+              "samples": 32,
+              "sha256": "a47228ca6ef1a9023fcff60afe9007ee48e7ced0ab0a82373d949459a3850b40",
+              "categories": {
+                "ko": 4,
+                "en_code": 4,
+                "en_technical": 8,
+                "en_general": 16
+              }
+            }
+          }
+        }
+      },
+      "validation": {
+        "file_sha256": "a47228ca6ef1a9023fcff60afe9007ee48e7ced0ab0a82373d949459a3850b40",
+        "selected_texts_sha256": "37790509a69300db2d547fcbf84ffc167f35fd24fe93ce1083e5431ccdd42ad2",
+        "requested_samples": 32,
+        "actual_samples": 32,
+        "selection": "first nonempty records in file order",
+        "format": "JSONL text field",
+        "length_distribution": {
+          "min": 56,
+          "max": 512,
+          "mean": 316.90625,
+          "p50": 337.0,
+          "p95": 512.0,
+          "shorter_than_limit": 21,
+          "at_limit": 11
+        },
+        "valid_tokens": 10141,
+        "token_ids_sha256": "9f50bb0b0103923bc9d355f16f755e73f4056c274b7dc380b2a10761d5b83370",
+        "preparation_manifest_sha256": "a2981ce5c68cc7edc1d850512dca76914b139e177bbfba8366b5bfbf2563e52f",
+        "preparation": {
+          "source": "OpenAssistant/oasst1",
+          "url": "https://huggingface.co/datasets/OpenAssistant/oasst1/resolve/fdf72ae0827c1cda404aff25b6603abec9e3399b/2023-04-12_oasst_all.messages.jsonl.gz",
+          "revision": "fdf72ae0827c1cda404aff25b6603abec9e3399b",
+          "license": "Apache-2.0",
+          "license_evidence": "SOURCE_README.md",
+          "source_archive_sha256": "2ff4aa8999c911ffec7972ddf70359f220b3da184b731f3649f68b1391e19341",
+          "seed": 42,
+          "split_method": "original message_tree_id SHA256(seed:tree) mod 5; entire tree held out; only one message/tree",
+          "duplicate_method": "casefold + whitespace normalization; globally distinct text and conversation tree",
+          "filters": "human only; not deleted; positive review; en/ko; at least 120 characters",
+          "category_method": "language metadata; code/technical regex heuristic; rest general",
+          "splits": {
+            "calibration": {
+              "samples": 128,
+              "sha256": "ee1e90fc6b70878574dbb6cfb3fe8c9bf214c4528cc87c7ff6431b4c6bbc6f9e",
+              "categories": {
+                "ko": 16,
+                "en_code": 16,
+                "en_technical": 32,
+                "en_general": 64
+              }
+            },
+            "validation": {
+              "samples": 32,
+              "sha256": "a47228ca6ef1a9023fcff60afe9007ee48e7ced0ab0a82373d949459a3850b40",
+              "categories": {
+                "ko": 4,
+                "en_code": 4,
+                "en_technical": 8,
+                "en_general": 16
+              }
+            }
+          }
+        }
+      }
+    },
+    "versions": {
+      "torch": "2.2.2",
+      "transformers": "4.57.6",
+      "numpy": "1.26.4",
+      "gguf": "0.17.1"
+    }
+  },
+  "gguf_source_error": "not measured",
+  "selection_split": "calibration",
+  "hardware_profile": {
+    "name": "generic-rne",
+    "shift_correction": 0,
+    "rounding": "nearest_even",
+    "verification": "unverified",
+    "rtl_bit_exact": false,
+    "source": "src/static_quant/hardware.py; software definition only; no RTL found",
+    "historical_layout_source": "user request, unconfirmed design history",
+    "multiplier": "unsigned 16 bit",
+    "shift": "unsigned 5 bit",
+    "effective_shift": "max(shift - shift_correction, 0)",
+    "zero_point": "signed 8 bit, added AFTER rounded shift; exports use zero",
+    "product": "signed 48 bit exact; INT32 * UInt16 fits; no truncation or wrap",
+    "right_shift": "arithmetic (floor for negatives)",
+    "saturation": "signed INT10 [-512,511], after shift and zero point",
+    "lut_index": "10-bit two's complement: signed_q10 & 1023",
+    "layout": {
+      "zp": [
+        0,
+        7
+      ],
+      "shift": [
+        8,
+        12
+      ],
+      "reserved_zero": [
+        13,
+        15
+      ],
+      "multiplier": [
+        16,
+        31
+      ]
+    },
+    "endian": "little"
+  },
+  "axes": {
+    "X": "[M,K]",
+    "W": "[N,K]",
+    "Y": "[M,N]",
+    "channel_axis_W": 0,
+    "channel_axis_Y": 1
+  },
+  "calibration_scope": "prefill-only, original model inputs, local Linear error",
+  "excluded": [
+    "attention QK^T / PV activation matmuls",
+    "decode calibration",
+    "propagated full-model quantization",
+    "perplexity",
+    "RTL equivalence"
+  ],
+  "parameter_storage": {
+    "bytes_per_channel": 4,
+    "qb_channels": 16,
+    "alignment_bytes": 64,
+    "endian": "little",
+    "padding_word": 0,
+    "order": "output channel ascending",
+    "address_kind": "file offset, NOT runtime physical address",
+    "repeated_over_M": false,
+    "repeated_over_K": false
+  },
+  "modules": [
+    {
+      "key": "op0000",
+      "module_name": "model.layers.0.mlp.down_proj",
+      "weight_name": "model.layers.0.mlp.down_proj.weight",
+      "torch_export_parameter_symbol": "p_model_layers_0_mlp_down_proj_weight",
+      "shape": {
+        "M": 34221,
+        "K": 16384,
+        "N": 2048
+      },
+      "M_semantics": "sum of valid calibration tokens, not a parameter axis",
+      "scale_keys": {
+        "s_X": "op0000.s_X",
+        "s_10": "op0000.s_10",
+        "s_W": "op0000.s_W"
+      },
+      "s_X": 0.3282365401739341,
+      "s_10": 0.03950863180028707,
+      "input_group": "model.layers.0.mlp.down_proj.input",
+      "parameter_file_offset": 0,
+      "parameter_size_bytes": 8192,
+      "valid_parameter_bytes": 8192,
+      "valid_channels": 2048,
+      "padded_channels": 0,
+      "final_block_valid_channels": 16,
+      "alignment_bytes": 64,
+      "padding_word": 0,
+      "lut": {
+        "input_scale": 0.03950863180028707,
+        "signed_index_encoding": "10-bit two's complement",
+        "reused_lut_input_scale": null,
+        "existing_gelu_index_scale_compatible": false,
+        "requires_scale_matched_lut": true,
+        "end_to_end_signed_int8_compatible": false,
+        "limitation": "src/LUT.py clips GeLU output to unsigned [0,255]; no signed INT8 contract"
+      },
+      "scale_search": {
+        "file": "scale_search.json",
+        "selected": {
+          "method": "p99.99",
+          "percentile": 99.99,
+          "threshold": 41.68604060208963,
+          "requested_threshold": 41.68604060208963,
+          "zero_percentile_fallback": false,
+          "s_X": 0.3282365401739341,
+          "s10": 0.03950863180028707,
+          "s_10": 0.03950863180028707,
+          "mse": 0.06534432606327341,
+          "activation_clip_rate": 8.959544610351535e-05,
+          "activation_zero_rate": 0.6729633460272404,
+          "int10_clip_rate": 0.0,
+          "bad_ratio_channels": 0,
+          "max_ratio_relative_error": 1.4710392408125748e-05,
+          "bos_mse": 0.006737936105541922,
+          "bos_nmse": 0.05704308452556763,
+          "non_bos_mse": 0.06556436002668495,
+          "non_bos_nmse": 0.025902846633680365,
+          "early_mse": 0.09025247971641712,
+          "early_nmse": 0.031266027741803704,
+          "general_mse": 0.06479987865251925,
+          "general_nmse": 0.02571262495315195,
+          "all_mse": 0.06534432606327341,
+          "all_nmse": 0.025908301626052954
+        },
+        "sampling": {
+          "retained": 64,
+          "bos_rows": 16,
+          "early_rows": 16,
+          "general_rows": 32
+        }
+      }
+    },
+    {
+      "key": "op0001",
+      "module_name": "model.layers.1.mlp.down_proj",
+      "weight_name": "model.layers.1.mlp.down_proj.weight",
+      "torch_export_parameter_symbol": "p_model_layers_1_mlp_down_proj_weight",
+      "shape": {
+        "M": 34221,
+        "K": 16384,
+        "N": 2048
+      },
+      "M_semantics": "sum of valid calibration tokens, not a parameter axis",
+      "scale_keys": {
+        "s_X": "op0001.s_X",
+        "s_10": "op0001.s_10",
+        "s_W": "op0001.s_W"
+      },
+      "s_X": 0.10382454303004575,
+      "s_10": 0.013115626278312096,
+      "input_group": "model.layers.1.mlp.down_proj.input",
+      "parameter_file_offset": 8192,
+      "parameter_size_bytes": 8192,
+      "valid_parameter_bytes": 8192,
+      "valid_channels": 2048,
+      "padded_channels": 0,
+      "final_block_valid_channels": 16,
+      "alignment_bytes": 64,
+      "padding_word": 0,
+      "lut": {
+        "input_scale": 0.013115626278312096,
+        "signed_index_encoding": "10-bit two's complement",
+        "reused_lut_input_scale": null,
+        "existing_gelu_index_scale_compatible": false,
+        "requires_scale_matched_lut": true,
+        "end_to_end_signed_int8_compatible": false,
+        "limitation": "src/LUT.py clips GeLU output to unsigned [0,255]; no signed INT8 contract"
+      },
+      "scale_search": {
+        "file": "scale_search.json",
+        "selected": {
+          "method": "p99.99",
+          "percentile": 99.99,
+          "threshold": 13.18571696481581,
+          "requested_threshold": 13.18571696481581,
+          "zero_percentile_fallback": false,
+          "s_X": 0.10382454303004575,
+          "s10": 0.013115626278312096,
+          "s_10": 0.013115626278312096,
+          "mse": 0.0071405447209274275,
+          "activation_clip_rate": 0.00012024394857141814,
+          "activation_zero_rate": 0.4797538486892157,
+          "int10_clip_rate": 0.0,
+          "bad_ratio_channels": 0,
+          "max_ratio_relative_error": 1.422084705416534e-05,
+          "bos_mse": 0.00042940912125562545,
+          "bos_nmse": 0.08978443394816348,
+          "non_bos_mse": 0.007165741252671715,
+          "non_bos_nmse": 0.01585380737846602,
+          "early_mse": 0.006746941687722,
+          "early_nmse": 0.018498639397734003,
+          "general_mse": 0.007178709614415599,
+          "general_nmse": 0.01578811303156259,
+          "all_mse": 0.0071405447209274275,
+          "all_nmse": 0.015856744314964685
+        },
+        "sampling": {
+          "retained": 64,
+          "bos_rows": 16,
+          "early_rows": 16,
+          "general_rows": 32
+        }
+      }
+    }
+  ],
+  "binary_export": {
+    "present": false,
+    "status": "blocked: no RTL-verified profile; use --allow-unverified-export for experiments",
+    "explicit_allow_unverified": false,
+    "explicit_allow_inaccurate": false,
+    "size_bytes": 0
+  },
+  "artifact_sha256": {
+    "scale_search.json": "9b56a26e9a16e6cec8463483b2f9527ad9678c0a832ee2f68310fa202b644384",
+    "scales.npz": "66e5aba644927f134a919b278775ce43435a8f8a014a6f7d2b9b11ea7ab03610",
+    "report.json": "f3a29f5c316c05e437007c1d0f74b0cd7f08999e8df2b3cdd39b3341b212c0cf",
+    "qparams.npz": "e5e5188a2441524285c9cf7ed1e89b644ca9bd8cdc2cfa009f5c75f44190f93a",
+    "test_vectors.json": "9b5442d820da2648c128bb257b211704a22776d9c9e894622d597237ec072e8e",
+    "compiler_mapping.json": "9761802d7c652fd47701ffc6f813d8b4de83ed2dd51ed47582e882fca93fb6c2"
+  }
+}
