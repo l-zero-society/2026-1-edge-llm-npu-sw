@@ -1,0 +1,36 @@
+{
+  "proceed": true,
+  "explanation": "GO: layers 7/8 BOS NMSE falls from 62.1468%/80.0887% to 16.3431%/17.1658% with arbitrary correction; PoT gives 17.0429%/17.4642% (4.28%/1.74% relative MSE penalty). Layer 17 gives 0.5495% arbitrary versus 0.5608% PoT BOS NMSE, while non-BOS improves from 77.4380% to 21.0356%. B/C non-BOS outputs are identical. This preserves most BOS gain and meets the requested descriptive go/no-go test; proceed to remaining down_proj only. Remaining BOS error is not eliminated; frozen-s10 BOS saturation is 0.146484375% in layers 7/8. This is an architectural experiment, not a production acceptance rule.\n\n## Final architectural interpretation\n\nA. Factorization materially recovers the severe layer-7/8 BOS regressions, but does not eliminate their errors with the frozen common s_10. Exact reference-to-INT10 projection gives unavoidable BOS NMSE lower bounds of 13.239929% and 15.701946% at these output scales (layer 17: 0.0262483%). These are output-grid bounds, not a fourth scheme or an additive error decomposition; see output_grid_bound.json.\n\nB. On layers 7/8/17, PoT adds 0.699822/0.298359/0.011353 percentage points BOS NMSE versus arbitrary, corresponding to 4.282074%/1.738102%/2.066201% relative MSE penalties. This supports a shift-only architectural follow-up. It is not universally within 20% relative MSE: layer 5 is 0.939184% versus 0.510115% (84.11% relative, 0.429069 percentage points absolute). The bounded arbitrary search includes PoT points, so a coarser arbitrary grid cannot artificially make PoT look better.\n\nC. B/C non-BOS outputs and all recorded non-BOS metrics are exactly identical. Compared with A, nine layers improve (5,9,10,11,13,14,15,16,17), nine are unchanged, none worsen. Layer 17 still has 21.0356% non-BOS NMSE. PoT BOS is slightly worse than A on layers 5/10/17; the absolute increases are about 0.00488/0.02409/0.01135 percentage points. There is no universal token-group accuracy guarantee.\n\nD. The positive three-layer decision was recorded before expanding; all 18 down_proj have now completed. No other projections or end-to-end inference were run. Common-s_10 optimization was deliberately omitted to isolate row factorization.\n\nSelected PoT effective shifts lie in [11,28]. The CSV effective_shift_min/max fields represent corrected shifts for PoT and the base channel shift range for arbitrary/baseline; arbitrary correction is not a pure shift. No separate BOS channel arrays, packed parameters or dynamic scale stream were exported. Future row_change/index selection must identify logical sequence BOS, not every tile's first row or every decode row. No RTL cost or implementation claim is made.\n\n## Verification\n\n37 tests pass: 6 new focused mathematical tests plus 31 relevant existing static_quant/BOS-calibration tests. All 18 baseline group MSEs reproduce the previous frozen results; exact INT64 oracle checks pass, all s_10 values remain common and frozen, selection precedes validation, cache file sizes/mtimes and prior numerical source hashes are unchanged. CSVs have 9 and 54 rows. See verification.json, environment.json, commands.md and provenance.json. Total per-operation computation was 719.17 seconds; no activation capture was needed.\n",
+  "metrics": [
+    {
+      "layer": 7,
+      "baseline_bos_nmse": 0.6214678631123065,
+      "arbitrary_bos_nmse": 0.16343059363974605,
+      "pot_bos_nmse": 0.1704288124235675,
+      "pot_mse_ratio": 1.0428207389324413,
+      "gap_nmse": 0.006998218783821453,
+      "normal_identical_B_C": true
+    },
+    {
+      "layer": 8,
+      "baseline_bos_nmse": 0.8008874868521964,
+      "arbitrary_bos_nmse": 0.17165823789640106,
+      "pot_bos_nmse": 0.17464183275037662,
+      "pot_mse_ratio": 1.0173810175994944,
+      "gap_nmse": 0.002983594853975563,
+      "normal_identical_B_C": true
+    },
+    {
+      "layer": 17,
+      "baseline_bos_nmse": 0.005494803095152087,
+      "arbitrary_bos_nmse": 0.005494803095152087,
+      "pot_bos_nmse": 0.005608336785166205,
+      "pot_mse_ratio": 1.0206620124594246,
+      "gap_nmse": 0.00011353369001411776,
+      "normal_identical_B_C": true
+    }
+  ],
+  "parameter_selection": "calibration only; validation reviewed only for the requested expansion decision",
+  "initial_decision_file_mtime_ns": 1790495597274516796,
+  "initial_explanation": "GO: layers 7/8 BOS NMSE falls from 62.1468%/80.0887% to 16.3431%/17.1658% with arbitrary correction; PoT gives 17.0429%/17.4642% (4.28%/1.74% relative MSE penalty). Layer 17 gives 0.5495% arbitrary versus 0.5608% PoT BOS NMSE, while non-BOS improves from 77.4380% to 21.0356%. B/C non-BOS outputs are identical. This preserves most BOS gain and meets the requested descriptive go/no-go test; proceed to remaining down_proj only. Remaining BOS error is not eliminated; frozen-s10 BOS saturation is 0.146484375% in layers 7/8. This is an architectural experiment, not a production acceptance rule."
+}

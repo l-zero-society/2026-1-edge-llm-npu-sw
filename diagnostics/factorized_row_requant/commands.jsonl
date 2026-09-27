@@ -1,0 +1,2 @@
+{"argv": ["scripts/test_factorized_row_requant.py", "--layers", "7,8,17"], "time": 1790495373.5492811}
+{"argv": ["scripts/test_factorized_row_requant.py", "--layers", "all"], "time": 1790495598.9770849}

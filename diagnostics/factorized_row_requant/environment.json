@@ -1,0 +1,10 @@
+{
+  "python": "3.9.6",
+  "platform": "macOS-15.7.4-arm64-arm-64bit",
+  "versions": {
+    "numpy": "1.26.4",
+    "gguf": "0.17.1",
+    "torch": "2.2.2",
+    "transformers": "4.57.6"
+  }
+}

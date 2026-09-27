@@ -1,0 +1,62 @@
+{
+  "passed": true,
+  "layers": 18,
+  "new_tests_passed": 6,
+  "relevant_existing_tests_passed": 31,
+  "normal_improved": [
+    5,
+    9,
+    10,
+    11,
+    13,
+    14,
+    15,
+    16,
+    17
+  ],
+  "normal_worse": [],
+  "pot_bos_worse_than_baseline": [
+    5,
+    10,
+    17
+  ],
+  "summary_percent": [
+    {
+      "scheme": "baseline",
+      "bos_median": 1.2762473269182297,
+      "bos_max": 80.08874868521964,
+      "non_bos_median": 4.526566818159923,
+      "non_bos_max": 77.4379976064422
+    },
+    {
+      "scheme": "arbitrary",
+      "bos_median": 0.3832699624572665,
+      "bos_max": 17.165823789640104,
+      "non_bos_median": 4.436393099337672,
+      "non_bos_max": 21.035583596769843
+    },
+    {
+      "scheme": "pot",
+      "bos_median": 0.4709540330414404,
+      "bos_max": 17.464183275037662,
+      "non_bos_median": 4.436393099337672,
+      "non_bos_max": 21.035583596769843
+    }
+  ],
+  "pot_effective_shift_range": [
+    11,
+    28
+  ],
+  "max_pot_arbitrary_bos_mse_ratio": 1.8411233948920973,
+  "total_operation_seconds": 719.1680119999999,
+  "checks": [
+    "frozen calibration selections",
+    "unchanged common s10",
+    "identical B/C normal metrics",
+    "unchanged prior production source hashes",
+    "unchanged cached input mtimes",
+    "finite metrics",
+    "9/54 CSV rows",
+    "no QB or qparam array export"
+  ]
+}

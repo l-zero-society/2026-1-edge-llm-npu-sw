@@ -1,0 +1,35 @@
+{
+  "interpretation": "Best possible BOS output on the frozen INT10 grid, from rounding Y_ref directly; lower bound, not an additional architecture scheme or s10 search",
+  "results": [
+    {
+      "layer": 7,
+      "s_10": 0.00876180009154544,
+      "bos_rows": 32,
+      "mse": 0.009245883152513274,
+      "mae": 0.004493001145154898,
+      "nmse": 0.13239928618556293,
+      "max_absolute_error": 4.341480645990782,
+      "reference_energy": 0.06983333081988673
+    },
+    {
+      "layer": 8,
+      "s_10": 0.013832422840943694,
+      "bos_rows": 32,
+      "mse": 0.03167158636128275,
+      "mae": 0.009561360287282722,
+      "nmse": 0.15701946261200872,
+      "max_absolute_error": 7.0100667884036465,
+      "reference_energy": 0.20170484495633811
+    },
+    {
+      "layer": 17,
+      "s_10": 0.8360071499177317,
+      "bos_rows": 32,
+      "mse": 0.11242880697421576,
+      "mae": 0.20800856846301308,
+      "nmse": 0.00026248300952144623,
+      "max_absolute_error": 10.789106482210059,
+      "reference_energy": 428.3279408415566
+    }
+  ]
+}
