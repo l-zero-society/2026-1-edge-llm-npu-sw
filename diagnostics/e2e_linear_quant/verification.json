@@ -1,0 +1,28 @@
+{
+  "checks": {
+    "full_held_out_split": true,
+    "sequence_order": true,
+    "mode_a_exact_down_18": true,
+    "mode_b_existing_126": true,
+    "no_missing_artifacts": true,
+    "frozen_calibration_only_weight_quarter": true,
+    "frozen_policy_unchanged": true,
+    "down_parameters_exact": true,
+    "other_parameters_exact": true,
+    "all_1088_quantized_boundaries_propagated": true,
+    "one_call_per_quantized_operation": true,
+    "position_zero_and_remaining_counts": true,
+    "same_fp_reference_both_modes": true,
+    "conditional_groups_cover_each_layer": true,
+    "artifact_source_hashes_unchanged": true,
+    "script_hash_matches_final_execution": true,
+    "no_tracked_files_changed": true,
+    "native_fp_and_integer_reference_sanity": true
+  },
+  "passed": 18,
+  "failed": 0,
+  "unit_tests_passed": 38,
+  "unit_tests_failed": 0,
+  "fp_reproduction_scope": "native vs observer-only 8-token validation prefix, bit exact; all full-reference passes use unchanged model driver",
+  "source_commit": "2d2520cf6778dadbc46c22dc2b719b03366ce83c"
+}

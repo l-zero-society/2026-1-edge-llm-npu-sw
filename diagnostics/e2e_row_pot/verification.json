@@ -1,0 +1,29 @@
+{
+  "checks": {
+    "full_validation_split": true,
+    "exact_sequence_ids": true,
+    "baseline_aggregate_reproduction": true,
+    "all_stored_per_sequence_baseline_statistics_reproduced": true,
+    "same_fp_nll_and_labels_for_both_modes": true,
+    "only_18_down_proj": true,
+    "one_forward_each_selected_op": true,
+    "effective_shifts_0_to_31": true,
+    "row_histogram_totals": true,
+    "per_op_histograms_match_token_counts": true,
+    "bos_choice_matches_previous": true,
+    "both_modes_propagate_all_boundaries": true,
+    "frozen_selection_unchanged": true,
+    "previous_e2e_provenance_and_script_unchanged": true,
+    "artifact_and_numerical_source_hashes_unchanged": true,
+    "experiment_script_unchanged_during_run": true,
+    "no_tracked_production_changes": true,
+    "all_result_values_finite": true,
+    "recovery_formula": true,
+    "no_empty_feasible_candidate_failure": true
+  },
+  "passed": 20,
+  "failed": 0,
+  "tests_passed": 38,
+  "tests_failed": 0,
+  "measured_seconds": 670.641738958
+}

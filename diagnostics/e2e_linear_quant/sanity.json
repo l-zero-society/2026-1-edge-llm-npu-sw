@@ -1,0 +1,8 @@
+{
+  "fp_logits_bit_exact": true,
+  "quantized_ops_checked": 126,
+  "exact_accumulator_and_pot_reference_match": true,
+  "boundary_pointer_checks_per_forward": 17,
+  "nonlinear_methods_unchanged": true,
+  "fp_embedding_lm_head": true
+}

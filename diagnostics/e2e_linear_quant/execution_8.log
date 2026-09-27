@@ -1,0 +1,27 @@
+/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/.venv-calibration/lib/python3.9/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+READY 126 valid operations; 0 missing; 52.757813417 seconds
+MODE 0 512 down_only hidden_nmse 0.15367529631370852 seconds 15.225868165999998
+MODE 0 512 all_linear hidden_nmse 0.17515315519929928 seconds 40.407982041
+DONE 0 seconds 40.415262458
+MODE 1 512 down_only hidden_nmse 0.13044623757282087 seconds 15.211487500000004
+MODE 1 512 all_linear hidden_nmse 0.1585988193280643 seconds 40.826443583000014
+DONE 1 seconds 40.834939082999995
+MODE 2 512 down_only hidden_nmse 0.16518481404361893 seconds 15.205186249999997
+MODE 2 512 all_linear hidden_nmse 0.18882424240662646 seconds 41.43127408400002
+DONE 2 seconds 41.43843612500001
+MODE 3 164 down_only hidden_nmse 0.1513016000738246 seconds 8.541032333000004
+MODE 3 164 all_linear hidden_nmse 0.18728138294915256 seconds 22.107622332999995
+DONE 3 seconds 22.110866625
+MODE 4 67 down_only hidden_nmse 0.12705612355501691 seconds 4.098421999999999
+MODE 4 67 all_linear hidden_nmse 0.17510899342634267 seconds 13.567217666999994
+DONE 4 seconds 13.56952262499999
+MODE 5 252 down_only hidden_nmse 0.17632017248902507 seconds 7.704001874999989
+MODE 5 252 all_linear hidden_nmse 0.20355624530871325 seconds 23.70218029099999
+DONE 5 seconds 23.706767541000005
+MODE 6 74 down_only hidden_nmse 0.11780059198635306 seconds 5.340927375000007
+MODE 6 74 all_linear hidden_nmse 0.16535720637629486 seconds 14.941502249999985
+DONE 6 seconds 14.944563082999991
+MODE 7 179 down_only hidden_nmse 0.12546509634595315 seconds 6.444616416999963
+MODE 7 179 all_linear hidden_nmse 0.1614961529375265 seconds 19.926603124999986
+DONE 7 seconds 19.930812624999987

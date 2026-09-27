@@ -1,0 +1,1372 @@
+{
+  "sequences": 8,
+  "tokens": 2272,
+  "next_token_targets": 2264,
+  "modes": {
+    "down_only": {
+      "logits": {
+        "nmse": 0.04047572479037316,
+        "mae": 2.354896407844964,
+        "mse": 15.443411640861294,
+        "cosine": 0.9925978886174417,
+        "flattened_cosine": 0.9801058766241041,
+        "fp_energy": 381.54750089946236,
+        "quant_energy": 391.54667579792846
+      },
+      "final_block_hidden": {
+        "layer": 17,
+        "mode": "down_only",
+        "nmse": 0.14806704484579675,
+        "mae": 0.39962620596564147,
+        "mse": 0.41200334760349105,
+        "cosine": 0.924651609470415,
+        "flattened_cosine": 0.925151712083494,
+        "fp_energy": 2.782545893534707,
+        "quant_energy": 2.7171626871488694,
+        "bos_nmse": 0.13186505972492008,
+        "non_bos_nmse": 0.1564628500330725
+      },
+      "final_normalized_hidden": {
+        "nmse": 0.13510389318555652,
+        "mae": 0.4373377041878839,
+        "mse": 0.36152057233332663,
+        "cosine": 0.9340768115159706,
+        "flattened_cosine": 0.9336726715166328,
+        "fp_energy": 2.675870870995563,
+        "quant_energy": 2.7645149408067193
+      },
+      "kl": 1.1772823814531006,
+      "top1_agreement": 0.6210387323943662,
+      "top5_agreement": 0.6434859357459445,
+      "top5_exact_set_agreement": 0.1311619718309859,
+      "fp_top1_in_quant_top5": 0.8723591549295775,
+      "nll": 5.747199633211495,
+      "fp_nll": 5.649564387916875,
+      "first_layer_above_1percent": 0,
+      "first_layer_above_5percent": 15,
+      "worst_layer": 17,
+      "worst_hidden_nmse": 0.14806704484579675,
+      "ppl": 313.3120419962913,
+      "fp_ppl": 284.16765199563645
+    },
+    "all_linear": {
+      "logits": {
+        "nmse": 0.05306632737071377,
+        "mae": 2.6071728757835557,
+        "mse": 20.247324590208578,
+        "cosine": 0.9918188998472701,
+        "flattened_cosine": 0.9738686804184024,
+        "fp_energy": 381.54750089946236,
+        "quant_energy": 391.0873016950153
+      },
+      "final_block_hidden": {
+        "layer": 17,
+        "mode": "all_linear",
+        "nmse": 0.17777032157930886,
+        "mae": 0.4219759736286311,
+        "mse": 0.49465407830285024,
+        "cosine": 0.9182987073334488,
+        "flattened_cosine": 0.9077202497965391,
+        "fp_energy": 2.782545893534707,
+        "quant_energy": 2.5073892347158386,
+        "bos_nmse": 0.19444426778451235,
+        "non_bos_nmse": 0.16912994800794803
+      },
+      "final_normalized_hidden": {
+        "nmse": 0.14607389382407923,
+        "mae": 0.4573780510097648,
+        "mse": 0.39087487749675226,
+        "cosine": 0.9287012205132554,
+        "flattened_cosine": 0.9282648320451261,
+        "fp_energy": 2.675870870995563,
+        "quant_energy": 2.7637936338837945
+      },
+      "kl": 1.3969999432045235,
+      "top1_agreement": 0.6091549295774648,
+      "top5_agreement": 0.627288749835021,
+      "top5_exact_set_agreement": 0.11487676056338028,
+      "fp_top1_in_quant_top5": 0.8595950704225352,
+      "nll": 5.949603743067366,
+      "fp_nll": 5.649564387916875,
+      "first_layer_above_1percent": 0,
+      "first_layer_above_5percent": 14,
+      "worst_layer": 17,
+      "worst_hidden_nmse": 0.17777032157930886,
+      "ppl": 383.60130426449774,
+      "fp_ppl": 284.16765199563645
+    }
+  },
+  "provenance": {
+    "script_sha256": "64425c87023641d269b85f0cf41c9b354e79d85a7c6e17400e1a1e0d59ca8b4a",
+    "commit": "2d2520cf6778dadbc46c22dc2b719b03366ce83c",
+    "model_sha256": "dae8a0a75dda3553c06af737adfff0c003ed1b6393932964cce72bb4f0fd41f6",
+    "manifest_sha256": "423c628975784166aa1141ff537c46831b4a399ff032e59335d62aa358e8fdf5",
+    "frozen_selection_sha256": "b5dfe02246d9b1cf61f43a53012fefb521552f920cb2a5f9d1ef81c323802097",
+    "global_w_BOS": 0.25,
+    "selection_split": "calibration",
+    "validation_dataset": {
+      "file_sha256": "a47228ca6ef1a9023fcff60afe9007ee48e7ced0ab0a82373d949459a3850b40",
+      "selected_texts_sha256": "37790509a69300db2d547fcbf84ffc167f35fd24fe93ce1083e5431ccdd42ad2",
+      "requested_samples": 32,
+      "actual_samples": 32,
+      "selection": "first nonempty records in file order",
+      "format": "JSONL text field",
+      "length_distribution": {
+        "min": 56,
+        "max": 512,
+        "mean": 316.90625,
+        "p50": 337.0,
+        "p95": 512.0,
+        "shorter_than_limit": 21,
+        "at_limit": 11
+      },
+      "valid_tokens": 10141,
+      "token_ids_sha256": "9f50bb0b0103923bc9d355f16f755e73f4056c274b7dc380b2a10761d5b83370",
+      "preparation_manifest_sha256": "a2981ce5c68cc7edc1d850512dca76914b139e177bbfba8366b5bfbf2563e52f",
+      "preparation": {
+        "source": "OpenAssistant/oasst1",
+        "url": "https://huggingface.co/datasets/OpenAssistant/oasst1/resolve/fdf72ae0827c1cda404aff25b6603abec9e3399b/2023-04-12_oasst_all.messages.jsonl.gz",
+        "revision": "fdf72ae0827c1cda404aff25b6603abec9e3399b",
+        "license": "Apache-2.0",
+        "license_evidence": "SOURCE_README.md",
+        "source_archive_sha256": "2ff4aa8999c911ffec7972ddf70359f220b3da184b731f3649f68b1391e19341",
+        "seed": 42,
+        "split_method": "original message_tree_id SHA256(seed:tree) mod 5; entire tree held out; only one message/tree",
+        "duplicate_method": "casefold + whitespace normalization; globally distinct text and conversation tree",
+        "filters": "human only; not deleted; positive review; en/ko; at least 120 characters",
+        "category_method": "language metadata; code/technical regex heuristic; rest general",
+        "splits": {
+          "calibration": {
+            "samples": 128,
+            "sha256": "ee1e90fc6b70878574dbb6cfb3fe8c9bf214c4528cc87c7ff6431b4c6bbc6f9e",
+            "categories": {
+              "ko": 16,
+              "en_code": 16,
+              "en_technical": 32,
+              "en_general": 64
+            }
+          },
+          "validation": {
+            "samples": 32,
+            "sha256": "a47228ca6ef1a9023fcff60afe9007ee48e7ced0ab0a82373d949459a3850b40",
+            "categories": {
+              "ko": 4,
+              "en_code": 4,
+              "en_technical": 8,
+              "en_general": 16
+            }
+          }
+        }
+      }
+    },
+    "profile": {
+      "name": "generic-rne",
+      "shift_correction": 0,
+      "rounding": "nearest_even",
+      "verification": "unverified",
+      "rtl_bit_exact": false,
+      "source": "src/static_quant/hardware.py; software definition only; no RTL found",
+      "historical_layout_source": "user request, unconfirmed design history",
+      "multiplier": "unsigned 16 bit",
+      "shift": "unsigned 5 bit",
+      "effective_shift": "max(shift - shift_correction, 0)",
+      "zero_point": "signed 8 bit, added AFTER rounded shift; exports use zero",
+      "product": "signed 48 bit exact; INT32 * UInt16 fits; no truncation or wrap",
+      "right_shift": "arithmetic (floor for negatives)",
+      "saturation": "signed INT10 [-512,511], after shift and zero point",
+      "lut_index": "10-bit two's complement: signed_q10 & 1023",
+      "layout": {
+        "zp": [
+          0,
+          7
+        ],
+        "shift": [
+          8,
+          12
+        ],
+        "reserved_zero": [
+          13,
+          15
+        ],
+        "multiplier": [
+          16,
+          31
+        ]
+      },
+      "endian": "little"
+    },
+    "enabled": {
+      "down_only": [
+        "model.layers.0.mlp.down_proj",
+        "model.layers.1.mlp.down_proj",
+        "model.layers.2.mlp.down_proj",
+        "model.layers.3.mlp.down_proj",
+        "model.layers.4.mlp.down_proj",
+        "model.layers.5.mlp.down_proj",
+        "model.layers.6.mlp.down_proj",
+        "model.layers.7.mlp.down_proj",
+        "model.layers.8.mlp.down_proj",
+        "model.layers.9.mlp.down_proj",
+        "model.layers.10.mlp.down_proj",
+        "model.layers.11.mlp.down_proj",
+        "model.layers.12.mlp.down_proj",
+        "model.layers.13.mlp.down_proj",
+        "model.layers.14.mlp.down_proj",
+        "model.layers.15.mlp.down_proj",
+        "model.layers.16.mlp.down_proj",
+        "model.layers.17.mlp.down_proj"
+      ],
+      "all_linear": [
+        "model.layers.0.self_attn.q_proj",
+        "model.layers.0.self_attn.k_proj",
+        "model.layers.0.self_attn.v_proj",
+        "model.layers.0.self_attn.o_proj",
+        "model.layers.0.mlp.gate_proj",
+        "model.layers.0.mlp.up_proj",
+        "model.layers.0.mlp.down_proj",
+        "model.layers.1.self_attn.q_proj",
+        "model.layers.1.self_attn.k_proj",
+        "model.layers.1.self_attn.v_proj",
+        "model.layers.1.self_attn.o_proj",
+        "model.layers.1.mlp.gate_proj",
+        "model.layers.1.mlp.up_proj",
+        "model.layers.1.mlp.down_proj",
+        "model.layers.2.self_attn.q_proj",
+        "model.layers.2.self_attn.k_proj",
+        "model.layers.2.self_attn.v_proj",
+        "model.layers.2.self_attn.o_proj",
+        "model.layers.2.mlp.gate_proj",
+        "model.layers.2.mlp.up_proj",
+        "model.layers.2.mlp.down_proj",
+        "model.layers.3.self_attn.q_proj",
+        "model.layers.3.self_attn.k_proj",
+        "model.layers.3.self_attn.v_proj",
+        "model.layers.3.self_attn.o_proj",
+        "model.layers.3.mlp.gate_proj",
+        "model.layers.3.mlp.up_proj",
+        "model.layers.3.mlp.down_proj",
+        "model.layers.4.self_attn.q_proj",
+        "model.layers.4.self_attn.k_proj",
+        "model.layers.4.self_attn.v_proj",
+        "model.layers.4.self_attn.o_proj",
+        "model.layers.4.mlp.gate_proj",
+        "model.layers.4.mlp.up_proj",
+        "model.layers.4.mlp.down_proj",
+        "model.layers.5.self_attn.q_proj",
+        "model.layers.5.self_attn.k_proj",
+        "model.layers.5.self_attn.v_proj",
+        "model.layers.5.self_attn.o_proj",
+        "model.layers.5.mlp.gate_proj",
+        "model.layers.5.mlp.up_proj",
+        "model.layers.5.mlp.down_proj",
+        "model.layers.6.self_attn.q_proj",
+        "model.layers.6.self_attn.k_proj",
+        "model.layers.6.self_attn.v_proj",
+        "model.layers.6.self_attn.o_proj",
+        "model.layers.6.mlp.gate_proj",
+        "model.layers.6.mlp.up_proj",
+        "model.layers.6.mlp.down_proj",
+        "model.layers.7.self_attn.q_proj",
+        "model.layers.7.self_attn.k_proj",
+        "model.layers.7.self_attn.v_proj",
+        "model.layers.7.self_attn.o_proj",
+        "model.layers.7.mlp.gate_proj",
+        "model.layers.7.mlp.up_proj",
+        "model.layers.7.mlp.down_proj",
+        "model.layers.8.self_attn.q_proj",
+        "model.layers.8.self_attn.k_proj",
+        "model.layers.8.self_attn.v_proj",
+        "model.layers.8.self_attn.o_proj",
+        "model.layers.8.mlp.gate_proj",
+        "model.layers.8.mlp.up_proj",
+        "model.layers.8.mlp.down_proj",
+        "model.layers.9.self_attn.q_proj",
+        "model.layers.9.self_attn.k_proj",
+        "model.layers.9.self_attn.v_proj",
+        "model.layers.9.self_attn.o_proj",
+        "model.layers.9.mlp.gate_proj",
+        "model.layers.9.mlp.up_proj",
+        "model.layers.9.mlp.down_proj",
+        "model.layers.10.self_attn.q_proj",
+        "model.layers.10.self_attn.k_proj",
+        "model.layers.10.self_attn.v_proj",
+        "model.layers.10.self_attn.o_proj",
+        "model.layers.10.mlp.gate_proj",
+        "model.layers.10.mlp.up_proj",
+        "model.layers.10.mlp.down_proj",
+        "model.layers.11.self_attn.q_proj",
+        "model.layers.11.self_attn.k_proj",
+        "model.layers.11.self_attn.v_proj",
+        "model.layers.11.self_attn.o_proj",
+        "model.layers.11.mlp.gate_proj",
+        "model.layers.11.mlp.up_proj",
+        "model.layers.11.mlp.down_proj",
+        "model.layers.12.self_attn.q_proj",
+        "model.layers.12.self_attn.k_proj",
+        "model.layers.12.self_attn.v_proj",
+        "model.layers.12.self_attn.o_proj",
+        "model.layers.12.mlp.gate_proj",
+        "model.layers.12.mlp.up_proj",
+        "model.layers.12.mlp.down_proj",
+        "model.layers.13.self_attn.q_proj",
+        "model.layers.13.self_attn.k_proj",
+        "model.layers.13.self_attn.v_proj",
+        "model.layers.13.self_attn.o_proj",
+        "model.layers.13.mlp.gate_proj",
+        "model.layers.13.mlp.up_proj",
+        "model.layers.13.mlp.down_proj",
+        "model.layers.14.self_attn.q_proj",
+        "model.layers.14.self_attn.k_proj",
+        "model.layers.14.self_attn.v_proj",
+        "model.layers.14.self_attn.o_proj",
+        "model.layers.14.mlp.gate_proj",
+        "model.layers.14.mlp.up_proj",
+        "model.layers.14.mlp.down_proj",
+        "model.layers.15.self_attn.q_proj",
+        "model.layers.15.self_attn.k_proj",
+        "model.layers.15.self_attn.v_proj",
+        "model.layers.15.self_attn.o_proj",
+        "model.layers.15.mlp.gate_proj",
+        "model.layers.15.mlp.up_proj",
+        "model.layers.15.mlp.down_proj",
+        "model.layers.16.self_attn.q_proj",
+        "model.layers.16.self_attn.k_proj",
+        "model.layers.16.self_attn.v_proj",
+        "model.layers.16.self_attn.o_proj",
+        "model.layers.16.mlp.gate_proj",
+        "model.layers.16.mlp.up_proj",
+        "model.layers.16.mlp.down_proj",
+        "model.layers.17.self_attn.q_proj",
+        "model.layers.17.self_attn.k_proj",
+        "model.layers.17.self_attn.v_proj",
+        "model.layers.17.self_attn.o_proj",
+        "model.layers.17.mlp.gate_proj",
+        "model.layers.17.mlp.up_proj",
+        "model.layers.17.mlp.down_proj"
+      ]
+    },
+    "missing_artifacts": [],
+    "artifact_hashes": {
+      "calibration_outputs/gguf-all-126-oasst1/modules/0000/op0000.weights.int8.npy": "dda4ccd851ade7f168435798953f890f540b64e6d799a5795ccdec2959268afa",
+      "calibration_outputs/gguf-all-126-oasst1/modules/0000/scales.npz": "42b2a6f597391baf9d3bf0b3dc018f580028daaa6bddc347e02a7a0a814353fa",
+      "calibration_outputs/gguf-all-126-oasst1/modules/0000/qparams.npz": "32e4279982ab4344ff816b6f29a4a5ab358088c598aa4acc0367c0f8768d63f4",
+      "calibration_outputs/gguf-all-126-oasst1/modules/0001/op0000.weights.int8.npy": "068f4100408c05b519da3493be8fdae646ce2913fbd84e3f8c56121fc2fd0a01",
+      "calibration_outputs/gguf-all-126-oasst1/modules/0001/scales.npz": "78e4fdddf799e933dd75d006a0a20d595ae3b09c9f77f0cc78e6dfc52679432f",
+      "calibration_outputs/gguf-all-126-oasst1/modules/0001/qparams.npz": "d583d3e697929601dabe57b5b44117ea3ff114526505118ba6af00a114660860",
+      "calibration_outputs/gguf-all-126-oasst1/modules/0002/op0000.weights.int8.npy": "7b9d16ad03c58322e321195a153c1812af23fe1a8f50c313a4350fcaa62374b9",
+      "calibration_outputs/gguf-all-126-oasst1/modules/0002/scales.npz": "ffec66a13e1ef7d981a12d8e050a8761734d94a04d399d24af37d0881c2b790e",
+      "calibration_outputs/gguf-all-126-oasst1/modules/0002/qparams.npz": "d2bac8da064421cbca104256f3e0308f093f4c7fc340a843d8956af129cda00b",
+      "calibration_outputs/gguf-all-126-oasst1/modules/0003/op0000.weights.int8.npy": "d019ee4f659b8befe386221c3468328ed7799d350ff587ef4a3aba57298a7bad",
+      "calibration_outputs/gguf-all-126-oasst1/modules/0003/scales.npz": "ad0f4b99d71affbe15177a06323fc026a653e2fadbe92f685addf63cb0e066a7",
+      "calibration_outputs/gguf-all-126-oasst1/modules/0003/qparams.npz": "a113226c86b122d88e3f76f4bface7ef527e8df0cae251db0457b27c7661cca8",
+      "calibration_outputs/gguf-all-126-oasst1/modules/0004/op0000.weights.int8.npy": "3e038f0141b18669f147bb2bd261aa8fdd072f118f37c7329e9cb884b2210314",
+      "calibration_outputs/gguf-all-126-oasst1/modules/0004/scales.npz": "4079cd74de4120fa7bc6ef68f15a55432520c006f9d2a6f4843c672fa3da5740",
+      "calibration_outputs/gguf-all-126-oasst1/modules/0004/qparams.npz": "6aca4190f863be58b03211f4ab7c99339362b836e08f8e640afa8124afa4d39c",
+      "calibration_outputs/gguf-all-126-oasst1/modules/0005/op0000.weights.int8.npy": "2e6226867a2ec38d1c26980d62c675609f5e5b9330afba2781c37fed40edd414",
+      "calibration_outputs/gguf-all-126-oasst1/modules/0005/scales.npz": "5db3ab92271b416a88db5b3706fc25ccfb6dc8856ed2772433312eaec5600355",
+      "calibration_outputs/gguf-all-126-oasst1/modules/0005/qparams.npz": "c9da6123863ac86176b73295346acdf95d1a2757d94150eefb53a292bd4cf530",
+      "calibration_outputs/gguf-all-126-oasst1/modules/0006/op0000.weights.int8.npy": "72150fb320bd7e3e7cba795c2c088cdbe50dcd16dee6f9ca79291379da84a0f9",
+      "calibration_outputs/gguf-all-126-oasst1/modules/0006/scales.npz": "2276a2c9618fe8c6ae0896a38c2a3f12e0ee985a0309938842ecdcfd7783ac8d",
+      "calibration_outputs/gguf-all-126-oasst1/modules/0006/qparams.npz": "f504727f9d772a1d5d6ef032344c6e94d42f64f576be2ed1531ebf9cc2ecf6ac",
+      "calibration_outputs/gguf-all-126-oasst1/modules/0007/op0000.weights.int8.npy": "639a1ae4fe01f1ca12d0b27199eb0858c83348111d4c7eea8be16f0ed699bcbc",
+      "calibration_outputs/gguf-all-126-oasst1/modules/0007/scales.npz": "6f54bbd9542430722132aeab0ef6dcff6dceffab2df68224a0b6553e1346d1ab",
+      "calibration_outputs/gguf-all-126-oasst1/modules/0007/qparams.npz": "ee83b1c1cb37f1ed97d3916c603ec9a50747e97ba9fa64e2c46a6fcf2375e7f1",
+      "calibration_outputs/gguf-all-126-oasst1/modules/0008/op0000.weights.int8.npy": "94e7d691e669d060459e3b8f983940c06a26c5696a4fb1596a66ae8940c0093c",
+      "calibration_outputs/gguf-all-126-oasst1/modules/0008/scales.npz": "c31472b36d67b40327d0eb12367cc1a9e4bfb0c317d368f314a0ecdd582376a8",
+      "calibration_outputs/gguf-all-126-oasst1/modules/0008/qparams.npz": "07a77776c7ce9073cc6a85bc27d7fbbc3b3eaaefe6661e45c23019693bf5b4cf",
+      "calibration_outputs/gguf-all-126-oasst1/modules/0009/op0000.weights.int8.npy": "f82888f01c639f05efc990a84fc61d93dbb374ed5d67e822e8ab0c2f00421d8a",
+      "calibration_outputs/gguf-all-126-oasst1/modules/0009/scales.npz": "c7be433da0672950201415f9a9629a969786380a1f1511656093f933bf13c5b4",
+      "calibration_outputs/gguf-all-126-oasst1/modules/0009/qparams.npz": "b0207e39dba88498846ad91c78115a71fa2072643ddded42cc0df1621ec85799",
+      "calibration_outputs/gguf-all-126-oasst1/modules/0010/op0000.weights.int8.npy": "ba851b2a8a7d41b76f72bde2f3a56d8dea36a9034c3b5045ceeff92d2d205027",
+      "calibration_outputs/gguf-all-126-oasst1/modules/0010/scales.npz": "5c387bc69545ec50e3daba8f698c0c8a858b46a48c817d6cdaa63d9bb0c70c1d",
+      "calibration_outputs/gguf-all-126-oasst1/modules/0010/qparams.npz": "4d33bbdee69d518aa8b6260ae80fc094b39a39ba967aa426fb4045ee9316d68c",
+      "calibration_outputs/gguf-all-126-oasst1/modules/0011/op0000.weights.int8.npy": "da5d88a726d2e43199f61412a53fb31de26b8ea2d6c0e0eb4e2c499a80bdc3b9",
+      "calibration_outputs/gguf-all-126-oasst1/modules/0011/scales.npz": "113637aa9030dafccd314f0c6420533df1145b97695d0f2762be828cb0d2126e",
+      "calibration_outputs/gguf-all-126-oasst1/modules/0011/qparams.npz": "7fe21e90ff5115d1da6fbe4dcb7f82f08bcd46def0e799c2650b41842db49d12",
+      "calibration_outputs/gguf-all-126-oasst1/modules/0012/op0000.weights.int8.npy": "4fe456836a0ad20f70655b59c898bfe9f911dcc50c56b7050fc6f1ff948e2dfc",
+      "calibration_outputs/gguf-all-126-oasst1/modules/0012/scales.npz": "4449f596bd15a645d8075a453a9ffbb80d347bed323e5ac6783a976d1193fb92",
+      "calibration_outputs/gguf-all-126-oasst1/modules/0012/qparams.npz": "78ab4b7e8c95c742bafea9c01266d540f8fe07279356b6cf5c743b4c63c9cb16",
+      "calibration_outputs/gguf-all-126-oasst1/modules/0013/op0000.weights.int8.npy": "22bf6fa128876437c4ce89fa13b846800b43304cb6b4bae01a2f8702bd891e04",
+      "calibration_outputs/gguf-all-126-oasst1/modules/0013/scales.npz": "ad71093421816cc1ec6761f590561de2a9feb4337dddfb6db80a37a2b948aea8",
+      "calibration_outputs/gguf-all-126-oasst1/modules/0013/qparams.npz": "f92dfd490a736d885916eb9f6917f488cdeacc76ecaf4efbcf74ed8a8c75b40f",
+      "calibration_outputs/gguf-all-126-oasst1/modules/0014/op0000.weights.int8.npy": "6821f7b5b99bd348c2c97905b577f8b7865114fe47760b8ae919d0abcb6e5dd8",
+      "calibration_outputs/gguf-all-126-oasst1/modules/0014/scales.npz": "faa72b6d7a1100d2f99a551447101f022c211b43fca7a0f5622501ccdb396704",
+      "calibration_outputs/gguf-all-126-oasst1/modules/0014/qparams.npz": "abd72f4ac8fdc2f769db294dbce4832de5c503a5485636fed33a896f33f007d2",
+      "calibration_outputs/gguf-all-126-oasst1/modules/0015/op0000.weights.int8.npy": "4b46dcef73e0532883833686cebdbd81b32c1d7ee625b68f6aaae3b6f6cffea3",
+      "calibration_outputs/gguf-all-126-oasst1/modules/0015/scales.npz": "2e7df4e956b53ff2668ccf5306c8ab68c6906bcea91fa45b3f4fb2f9f1af4c74",
+      "calibration_outputs/gguf-all-126-oasst1/modules/0015/qparams.npz": "6e012744001a65d1338d745b06a622c469cdf16bf7dd18f160a64fe5243be87f",
+      "calibration_outputs/gguf-all-126-oasst1/modules/0016/op0000.weights.int8.npy": "7bef55962c4bd5ebba2b8eaaf5670345f706c5d9cf6801d1439ba36705c37347",
+      "calibration_outputs/gguf-all-126-oasst1/modules/0016/scales.npz": "b34c3721c012f0e0c48af6adaf6798ec865fdf900c33eb08d9faf02d6dd27ea7",
+      "calibration_outputs/gguf-all-126-oasst1/modules/0016/qparams.npz": "e36df788ee9051ae6a53ab45dd44d44d5e2c5539a37de8fcc5ac12835596e4d6",
+      "calibration_outputs/gguf-all-126-oasst1/modules/0017/op0000.weights.int8.npy": "b360377733fa56201d3a8eeb07bcb3a741610f39b8638c1fecaa67c4c63149ec",
+      "calibration_outputs/gguf-all-126-oasst1/modules/0017/scales.npz": "407e64dc93a63677a9a6fb4d271ff9fc47d0c50b254cebb3ed7c87af91de089a",
+      "calibration_outputs/gguf-all-126-oasst1/modules/0017/qparams.npz": "53136c3a05fc02d51728d7994199d6a3772c2ce9373ab396ca2fd49f002884b8",
+      "calibration_outputs/gguf-all-126-oasst1/modules/0018/op0000.weights.int8.npy": "331836aeb980fb1c7e1064a4c7d541ff2f535fac6b0fe6da3cd1eb7cd4062d10",
+      "calibration_outputs/gguf-all-126-oasst1/modules/0018/scales.npz": "8dd1da6c5688e374e458625a789f921e4a5ec7284b4748c9f2c6c0c0fb6910ce",
+      "calibration_outputs/gguf-all-126-oasst1/modules/0018/qparams.npz": "a2da3ff31000d1e085b34a8529fe63d3dba01b4569b095508b0edb2bba4b3abb",
+      "calibration_outputs/gguf-all-126-oasst1/modules/0019/op0000.weights.int8.npy": "5adfbdccc3f4cf78dbb1c045dacc2a31711e68f17d71474240323bcac9433ef0",
+      "calibration_outputs/gguf-all-126-oasst1/modules/0019/scales.npz": "e080ebd4dbb0e52824998b0f9427dcda0488e1af6e53591b484cee058ee45e77",
+      "calibration_outputs/gguf-all-126-oasst1/modules/0019/qparams.npz": "9fba459364b06374462d1c8bc6261aeba119f65c8c84b68cb90bbee1c0813e81",
+      "calibration_outputs/gguf-all-126-oasst1/modules/0020/op0000.weights.int8.npy": "07460ea5c5da15466803efe3bf29924246e2071ce512faf88de8a3d5d8f54b20",
+      "calibration_outputs/gguf-all-126-oasst1/modules/0020/scales.npz": "4e26c9377441d7ec4e0caba780193010ec72c4e91f02124d375d736ed371416e",
+      "calibration_outputs/gguf-all-126-oasst1/modules/0020/qparams.npz": "1da3be850f1eece908922d3374127746db121e8d1388e3bc5462aba8feafd9f9",
+      "calibration_outputs/gguf-all-126-oasst1/modules/0021/op0000.weights.int8.npy": "084eda773a8780c44565efbe22b6f04c5f47bc09e4958f07c7510fbe5402eca7",
+      "calibration_outputs/gguf-all-126-oasst1/modules/0021/scales.npz": "b42f40181ed455d84e4d58ef3525673392ea0e730b6feb0a7886da1356837f1b",
+      "calibration_outputs/gguf-all-126-oasst1/modules/0021/qparams.npz": "586457ff0506099ca0021b6ac75f281e09b32deb6bc585eeea4c575868ae91fe",
+      "calibration_outputs/gguf-all-126-oasst1/modules/0022/op0000.weights.int8.npy": "e5b19b7d01e9c88c72f7186ffeb988240a81f54688678406dc3c7e1e17898ea5",
+      "calibration_outputs/gguf-all-126-oasst1/modules/0022/scales.npz": "43ef62d9c0fc7826207f808e39de67d62734d890faa09ab0f60fbc27f44fe970",
+      "calibration_outputs/gguf-all-126-oasst1/modules/0022/qparams.npz": "effd7b67d2ca8c8419a663c07ad62b07e6c0260e9f6397c16b7dda8166b191ab",
+      "calibration_outputs/gguf-all-126-oasst1/modules/0023/op0000.weights.int8.npy": "43bdf76121548af3af90f42a27554d159d6f2172f1d9a4c5d68259e84108ac20",
+      "calibration_outputs/gguf-all-126-oasst1/modules/0023/scales.npz": "fa206163fb98224a1789e1a64733c425a839d32cadc60e0eab033f7d0dfe7cfd",
+      "calibration_outputs/gguf-all-126-oasst1/modules/0023/qparams.npz": "c21fcfcbd8772dcd24837076ba536cc1e844d5ebac0145d6b6c2f3fa01abf91f",
+      "calibration_outputs/gguf-all-126-oasst1/modules/0024/op0000.weights.int8.npy": "e7cb40b7456a69a20d1c91ba2ade1382e519cd1c4d48363e4272bdf1dcec08a1",
+      "calibration_outputs/gguf-all-126-oasst1/modules/0024/scales.npz": "913e1db99de607fb41d4103302e2f842473582b62de28c162ba6a63b34a4e2c4",
+      "calibration_outputs/gguf-all-126-oasst1/modules/0024/qparams.npz": "7dde8ced20648a3f8a7889e8180487b9319bdf4eedd38086dbc99069b53a145d",
+      "calibration_outputs/gguf-all-126-oasst1/modules/0025/op0000.weights.int8.npy": "8b1b9352d45f1543c9fda00916e296201f77576185c84979a334691445755a63",
+      "calibration_outputs/gguf-all-126-oasst1/modules/0025/scales.npz": "102c1b7262fc5e488fb3b2a0b5b1c166bb59ff4b5efe94d2b2ba002bdc0b77bf",
+      "calibration_outputs/gguf-all-126-oasst1/modules/0025/qparams.npz": "eeca460c268cf25793e8e6e54465fcbfc613e32d113dc8dfe79296331a555b09",
+      "calibration_outputs/gguf-all-126-oasst1/modules/0026/op0000.weights.int8.npy": "0cdb784b6d83e2a58ff47be1925db9a9d4f820e341125a632822f4a517942773",
+      "calibration_outputs/gguf-all-126-oasst1/modules/0026/scales.npz": "27adc701544352cb4f19db39c64626fec0c048c68dcaf197c631a6ec0b7f6a43",
+      "calibration_outputs/gguf-all-126-oasst1/modules/0026/qparams.npz": "2cac572d9fae39d747069d2e628c54dbb4c4d6fde7a4c537f758c6b12dc0c71e",
+      "calibration_outputs/gguf-all-126-oasst1/modules/0027/op0000.weights.int8.npy": "2bd4311b0d6db2bbfdc2db082420212579997f344ae9480fb5c2524b4e2e9357",
+      "calibration_outputs/gguf-all-126-oasst1/modules/0027/scales.npz": "828ae0c53c09042313505d983b339b2885ef497239d28672661b3b9565b35b63",
+      "calibration_outputs/gguf-all-126-oasst1/modules/0027/qparams.npz": "111501e01a1eb06a42542c0d64f6f55943cc100ee8908f0398002fd3ca15e329",
+      "calibration_outputs/gguf-all-126-oasst1/modules/0028/op0000.weights.int8.npy": "e326155e062cf95de16da36207a53fa6860a58ff3790a43af5147ba45b8cf13d",
+      "calibration_outputs/gguf-all-126-oasst1/modules/0028/scales.npz": "c2f19447bab75553f802840e128355664a9c0f2e551db7850a909bdeaf1e61b7",
+      "calibration_outputs/gguf-all-126-oasst1/modules/0028/qparams.npz": "4fc36e9a305a4bed69032bb4a9755c9836e7f47e187c24f415b7564ac4cc079e",
+      "calibration_outputs/gguf-all-126-oasst1/modules/0029/op0000.weights.int8.npy": "a28e80daf6e933951a8f52a995649028c0660d44a3f8e79fd5391f666056a870",
+      "calibration_outputs/gguf-all-126-oasst1/modules/0029/scales.npz": "f1b1d26ee2538ed36f621c328928cb0a1cd68d2218e6a3ddb89dd4be74418fb6",
+      "calibration_outputs/gguf-all-126-oasst1/modules/0029/qparams.npz": "3e4e8a61d213b08ce60e529d59d01fbe30bfe5cd34cd82c31d4a3349a4faa69d",
+      "calibration_outputs/gguf-all-126-oasst1/modules/0030/op0000.weights.int8.npy": "ce551b65c744c1574ed65291d1804fe9f31081255aec1f70a62aaf1f498660cc",
+      "calibration_outputs/gguf-all-126-oasst1/modules/0030/scales.npz": "6131b62d510c4803c68e26f89d312f2715b03b1c87a40294c2f24c44c82351d6",
+      "calibration_outputs/gguf-all-126-oasst1/modules/0030/qparams.npz": "8bc69b0083efc504de40011f761255c8d846d5c213effcae8e8e65a273356192",
+      "calibration_outputs/gguf-all-126-oasst1/modules/0031/op0000.weights.int8.npy": "bb3232db603bd4c78a75c5f383164919e30d84d9a7880a26200e5087b394853b",
+      "calibration_outputs/gguf-all-126-oasst1/modules/0031/scales.npz": "731095dbc109325d9e084d8a90eafab83330e3e09b0181c601812c23735b03f6",
+      "calibration_outputs/gguf-all-126-oasst1/modules/0031/qparams.npz": "1e1b6f1976ada5490fdb3769ac0ebee2050ad981d5f444260fb31d09b2340875",
+      "calibration_outputs/gguf-all-126-oasst1/modules/0032/op0000.weights.int8.npy": "7812300881bcc5234d370e471ec3c7e22906304d91c0821a03a80f2adf384de6",
+      "calibration_outputs/gguf-all-126-oasst1/modules/0032/scales.npz": "ace21630a95287465f9b21f68edef54f4e31b79f79a2626060c4e1e06783f1f2",
+      "calibration_outputs/gguf-all-126-oasst1/modules/0032/qparams.npz": "9c65181b3d2cd037b263df054ea123bef3409f3267640e092c02cca60f869034",
+      "calibration_outputs/gguf-all-126-oasst1/modules/0033/op0000.weights.int8.npy": "186fbae6a73b43ba45f70294b72c932e3f2b1e6b2e8eb35755508fca368896da",
+      "calibration_outputs/gguf-all-126-oasst1/modules/0033/scales.npz": "9611eca2d5f596b81437d094ad5e04afe8c382fa18ac43d86efb212a067cf6ba",
+      "calibration_outputs/gguf-all-126-oasst1/modules/0033/qparams.npz": "6acd60eb847dd80998c59a9a7372f488a842902579edef5913f2977c2b651e30",
+      "calibration_outputs/gguf-all-126-oasst1/modules/0034/op0000.weights.int8.npy": "8a48beacacaf2eac5f1a4859e414d6f696514cf9c83dadbd37f1c44ac81490a1",
+      "calibration_outputs/gguf-all-126-oasst1/modules/0034/scales.npz": "382ea80d37c56a10edabc4c1899f6543fc60c89df0855c07f34c41725008c2eb",
+      "calibration_outputs/gguf-all-126-oasst1/modules/0034/qparams.npz": "328b5f65f0be77517dcb884979f2eb6933511915d785eaa6b8a6c7c0b12907be",
+      "calibration_outputs/gguf-all-126-oasst1/modules/0035/op0000.weights.int8.npy": "1ffac6dc9703e07e02056637df51cc4155f3771702c6ac70304910ad85b02bde",
+      "calibration_outputs/gguf-all-126-oasst1/modules/0035/scales.npz": "e5c7c1246473da0f0a74391977097a70f5ae43d365adaa48c8b5fbd0a205945c",
+      "calibration_outputs/gguf-all-126-oasst1/modules/0035/qparams.npz": "d6fbc952623e012d0b604e388b2563f7b7d6f2936e897114dd08aaed5ada80fa",
+      "calibration_outputs/gguf-all-126-oasst1/modules/0036/op0000.weights.int8.npy": "3a2b6f2792750e08049651cbea1b979e8d6d77a6ddb57a16fd71735200fb4b86",
+      "calibration_outputs/gguf-all-126-oasst1/modules/0036/scales.npz": "b5671d4877fd83008f67cce159c11cb5193977860fc91bd55cd3a9e98090ecb4",
+      "calibration_outputs/gguf-all-126-oasst1/modules/0036/qparams.npz": "5ebd874cf5960e8c8f02bd47d84a50700931c21f3a3fde664da54ceecd30d4e1",
+      "calibration_outputs/gguf-all-126-oasst1/modules/0037/op0000.weights.int8.npy": "24192756f6ac07eccedb79fbb90c212f466b85978aa896dcde8e47470ae42bf5",
+      "calibration_outputs/gguf-all-126-oasst1/modules/0037/scales.npz": "15f706bcf71aa0a9f0b8c5a2c77d791ee93bdfc568f35f27e7222e7b2b9d0771",
+      "calibration_outputs/gguf-all-126-oasst1/modules/0037/qparams.npz": "85fd68b80505cb470d7af65cdb3b1dfa7b00df429371454e7eef14a2209c90a2",
+      "calibration_outputs/gguf-all-126-oasst1/modules/0038/op0000.weights.int8.npy": "e4a3a204c432d780268b166bebb2c0a0d3c0643dcffdb1877e699f18a2aeecbe",
+      "calibration_outputs/gguf-all-126-oasst1/modules/0038/scales.npz": "2271fd43ecf81dd16ffbb90c939c8456d322c67b49d13a728275dd607e4dfefe",
+      "calibration_outputs/gguf-all-126-oasst1/modules/0038/qparams.npz": "83759143a33e526c1dcf1d5ea2a8ea800104bbb0e4b53fa9b7ec95fd96d57493",
+      "calibration_outputs/gguf-all-126-oasst1/modules/0039/op0000.weights.int8.npy": "84ada55a66e99b09cc2e0aea308b4fcdb8187c5104dcddcfdd0c7c30f613f3cc",
+      "calibration_outputs/gguf-all-126-oasst1/modules/0039/scales.npz": "afa21a24c8f65552c1eba3a6b54ade56df0c7dadb9df49529921fc0e41de6e6f",
+      "calibration_outputs/gguf-all-126-oasst1/modules/0039/qparams.npz": "6db3152c8f39dea96e6ff68fc3b4f064816232bebf638376c01f2dab6eddc266",
+      "calibration_outputs/gguf-all-126-oasst1/modules/0040/op0000.weights.int8.npy": "9bb0c4fe550ae4f04705a342ba3cb233867886104db033e8ab5f9b93c43ce1ff",
+      "calibration_outputs/gguf-all-126-oasst1/modules/0040/scales.npz": "d588da6e99278207c02b8c289a7904900eda2caf3e6bceeda3d69d8bb0df1032",
+      "calibration_outputs/gguf-all-126-oasst1/modules/0040/qparams.npz": "caaf755fca71fe547ad748e6b8fe243ba07318702d8f659843cb77466f478a3f",
+      "calibration_outputs/gguf-all-126-oasst1/modules/0041/op0000.weights.int8.npy": "2272b1c13913d2dbcbcfc07644fb72e75affd1d6299ed265728a78437e79a33a",
+      "calibration_outputs/gguf-all-126-oasst1/modules/0041/scales.npz": "59a62c9aa9233ccf95b79f7f781378d43bef2be5022097317c86fdb950806574",
+      "calibration_outputs/gguf-all-126-oasst1/modules/0041/qparams.npz": "184aae226f479952640b0cd1e5239a27f7b63a7747abdc2959bde3689645fb52",
+      "calibration_outputs/gguf-all-126-oasst1/modules/0042/op0000.weights.int8.npy": "3d77d4f14bbb4d2f746e3f45fa4a2d8730d4aa63db7f8693972669f1269b8c79",
+      "calibration_outputs/gguf-all-126-oasst1/modules/0042/scales.npz": "522ec6b2a586f09d5e6890604447a1d609448a4c1d09d0db79f5ef42aaa825bd",
+      "calibration_outputs/gguf-all-126-oasst1/modules/0042/qparams.npz": "db982b772ee047c8389524745ce65e02a65f06534ef8006eb5a6f628fe6140f2",
+      "calibration_outputs/gguf-all-126-oasst1/modules/0043/op0000.weights.int8.npy": "36645fbf3256b4c609a39b5880413b78199253d8def4dc8a8262754e7b2dd26a",
+      "calibration_outputs/gguf-all-126-oasst1/modules/0043/scales.npz": "824fac02b36274bd1d63fc1f6f2399e50a79a6b90777f4c1358fb423797bcf70",
+      "calibration_outputs/gguf-all-126-oasst1/modules/0043/qparams.npz": "04a0dd0745a0ba14bc97e87b89f10ad90dc89cb443d3264e825fd313b22ba0f5",
+      "calibration_outputs/gguf-all-126-oasst1/modules/0044/op0000.weights.int8.npy": "0ef6e4de95d197fabc4a4c5b502b3b844790f6edd8aeabad8bbe9d9bd8b23143",
+      "calibration_outputs/gguf-all-126-oasst1/modules/0044/scales.npz": "8b66a3545265e9942aba0766d3ff44c27e6490800e726087f62fb19cb2215c90",
+      "calibration_outputs/gguf-all-126-oasst1/modules/0044/qparams.npz": "5236e223572664b919368b2099a3c380ed282bea07df1fa20528910786166a39",
+      "calibration_outputs/gguf-all-126-oasst1/modules/0045/op0000.weights.int8.npy": "a57b3efb81aafdcc4f5d988324b4ee58ee34e0859c9d1c5ef4ab7ebe1b8f1498",
+      "calibration_outputs/gguf-all-126-oasst1/modules/0045/scales.npz": "dcc1f6fae4bf73de56b0fe48b80c93dea2790912cb8a23a541418571ea156066",
+      "calibration_outputs/gguf-all-126-oasst1/modules/0045/qparams.npz": "04ed83be174cf5f2b37922a614b2c99e6d25c7a9c3d230d3058c48d7825a7e5c",
+      "calibration_outputs/gguf-all-126-oasst1/modules/0046/op0000.weights.int8.npy": "78b2cdaae53bf3fb04748887f91dbc5ffdbe5e44c11ffb77f20d47d4757015ea",
+      "calibration_outputs/gguf-all-126-oasst1/modules/0046/scales.npz": "bca07af3cf3c7ee35464f59be6fd6ea5bd4fb688befd7a7f81d3424eb66fad7c",
+      "calibration_outputs/gguf-all-126-oasst1/modules/0046/qparams.npz": "a020962c8b8551db5a65aac337fb4f26b4c247fdbcffcf9665be95d4fb6e2450",
+      "calibration_outputs/gguf-all-126-oasst1/modules/0047/op0000.weights.int8.npy": "e99b22d65ba995d9ce8bafc1cb00342ab1495c74ee2a8b20f5aaa3c84b2a6d18",
+      "calibration_outputs/gguf-all-126-oasst1/modules/0047/scales.npz": "dd9e5aa5f274fed5bd58145962503f0bbe822a05bfdf864ddd9d62bb5a1c53c0",
+      "calibration_outputs/gguf-all-126-oasst1/modules/0047/qparams.npz": "cc53e14a69a0bf1c121b03f13f535f20bc59807ca55c206965fbc6c9f9970e1c",
+      "calibration_outputs/gguf-all-126-oasst1/modules/0048/op0000.weights.int8.npy": "4ac6751f7877c925fde6af47439e183239903a1dba32e3c5e32a97b7e78d9bf9",
+      "calibration_outputs/gguf-all-126-oasst1/modules/0048/scales.npz": "532af079aebede54c397573de57272b9cd0709ad0c21d6d910ee71fbd33d1252",
+      "calibration_outputs/gguf-all-126-oasst1/modules/0048/qparams.npz": "cfdf0ceef96c252116a1f919dd56442b067dc2db6973349409b103deda43c0b7",
+      "calibration_outputs/gguf-all-126-oasst1/modules/0049/op0000.weights.int8.npy": "b7730625e74b5a756bc147b073b6e26a39afae66f253119047ae88dd03f53f1b",
+      "calibration_outputs/gguf-all-126-oasst1/modules/0049/scales.npz": "ec7ba550f9524a7380d5ac05599d9a162c552673277d06d5800f182a359f8704",
+      "calibration_outputs/gguf-all-126-oasst1/modules/0049/qparams.npz": "6ad61af12d82c5c7337a4d8224f11f9614112d575bd114b3efe654933f9ae637",
+      "calibration_outputs/gguf-all-126-oasst1/modules/0050/op0000.weights.int8.npy": "70a1c3105fbd11cf871b03ea9770613ee38ea46b9a9505922a06e1547bd08d84",
+      "calibration_outputs/gguf-all-126-oasst1/modules/0050/scales.npz": "ec9efa3aaf1e579bda6939fc6770f7ed3cc9cb2ebea0b0ad728a9eee349f014f",
+      "calibration_outputs/gguf-all-126-oasst1/modules/0050/qparams.npz": "d765640073b5c79448ad15d229ef5c58d7ff4060cc1690666c9cde98ad1f2fd3",
+      "calibration_outputs/gguf-all-126-oasst1/modules/0051/op0000.weights.int8.npy": "fcfd676bc8473d3c3388adb4163ad1fce90263348babc74b3bf8003633506aac",
+      "calibration_outputs/gguf-all-126-oasst1/modules/0051/scales.npz": "7bc99c3ebd028ef4883adb960793e8543a2c9e0d5f3a920a715b2c8c3c943d6b",
+      "calibration_outputs/gguf-all-126-oasst1/modules/0051/qparams.npz": "eddda0894dcd194342fe6de1c1183028db189c0ef5f45f77c9188c4fde836a8d",
+      "calibration_outputs/gguf-all-126-oasst1/modules/0052/op0000.weights.int8.npy": "f20b0bafcc6e4edc1c83a5d91030e00f9f7f783861912f413701166b24eb93c0",
+      "calibration_outputs/gguf-all-126-oasst1/modules/0052/scales.npz": "b95406dbb2e71f3a7aba31da2e982a0c32b6bfdf80dc6ea5bd67884211ac8d44",
+      "calibration_outputs/gguf-all-126-oasst1/modules/0052/qparams.npz": "14b63551f12b16d5987751174762bf6f05d255890fd1e16ed625cdbc1d1fc2a7",
+      "calibration_outputs/gguf-all-126-oasst1/modules/0053/op0000.weights.int8.npy": "582b087a2f04f013520f7ee2b4ea869a2b695647f0710120f78e057bff8a2485",
+      "calibration_outputs/gguf-all-126-oasst1/modules/0053/scales.npz": "e25f16f6382e009d5419b08af2438991132a1765190911efcd8769c63ad0b04a",
+      "calibration_outputs/gguf-all-126-oasst1/modules/0053/qparams.npz": "e0a3b70d10f05b743c5da1465cb030c63cfaa8ae992f6f154198e0749b22f3da",
+      "calibration_outputs/gguf-all-126-oasst1/modules/0054/op0000.weights.int8.npy": "c77572718bfcfbfd93fd060409342444c3ea1f4eb85aef64c1eb4710af8186bc",
+      "calibration_outputs/gguf-all-126-oasst1/modules/0054/scales.npz": "08bfaf56e78b46b8c55f76f078bb0647902863c0b8e0cb6db9ee2d997e72b7bc",
+      "calibration_outputs/gguf-all-126-oasst1/modules/0054/qparams.npz": "1cb6447db5b521ca7a278876a1caffc12348c305528495b7cf57523345703698",
+      "calibration_outputs/gguf-all-126-oasst1/modules/0055/op0000.weights.int8.npy": "4f30f56491b024c0fd74618da514410ee5919f0937305437347be5b06cddbd1a",
+      "calibration_outputs/gguf-all-126-oasst1/modules/0055/scales.npz": "54df2d293ba56f583a1f505871aa3133786e2a84d7d33e5f8b60239487bc09ac",
+      "calibration_outputs/gguf-all-126-oasst1/modules/0055/qparams.npz": "454c908eddbe98ee5503ba6941d67647da697d4b8f6cfbb374b58ff9d17dd535",
+      "calibration_outputs/gguf-all-126-oasst1/modules/0056/op0000.weights.int8.npy": "4e956ef52989225b61c222c016d3d3c63ad54ce1df939f45f6651c4c759a8336",
+      "calibration_outputs/gguf-all-126-oasst1/modules/0056/scales.npz": "49671dd40dd415f69c61bf68fc19748ed2deade5389e1d0bcaf5791ff22dc587",
+      "calibration_outputs/gguf-all-126-oasst1/modules/0056/qparams.npz": "51f1951d1adbcdc7b752b85f5634fe6994ced2d7e234a0bbc525f2713ab365f1",
+      "calibration_outputs/gguf-all-126-oasst1/modules/0057/op0000.weights.int8.npy": "523ca518d0727aeb24f5460cdd5f2114608bf753573702833782fa249341f451",
+      "calibration_outputs/gguf-all-126-oasst1/modules/0057/scales.npz": "0e5b3e1d32712659c637aad4663fc640d6b8c5e9923e57a587b91b5878adb238",
+      "calibration_outputs/gguf-all-126-oasst1/modules/0057/qparams.npz": "3b1e9fa2a6557ff9afbe354752b3edd06db7116fef7dfeb8e274cbf51fbcc51c",
+      "calibration_outputs/gguf-all-126-oasst1/modules/0058/op0000.weights.int8.npy": "7d8f24c68f0ea1fb70e2245f16f35d327b53717a490e14425f9e5ea53118c856",
+      "calibration_outputs/gguf-all-126-oasst1/modules/0058/scales.npz": "39af0bc97b236c4ba659d19748bda5ccccfdff5dbfe74500e6239b532b3d2075",
+      "calibration_outputs/gguf-all-126-oasst1/modules/0058/qparams.npz": "898a3dd28859a4487cafa7342eebbdab78f9a7dec7069e8fd35db7e58d64bf05",
+      "calibration_outputs/gguf-all-126-oasst1/modules/0059/op0000.weights.int8.npy": "23b177e3f9fff37b1474664f9ba7edc41a94dd95d282e3b0525b9b2e4b979588",
+      "calibration_outputs/gguf-all-126-oasst1/modules/0059/scales.npz": "8456fe7c05a40fd14646ab8642a3946e7d4ae55787680eaf417d4cec92d43f32",
+      "calibration_outputs/gguf-all-126-oasst1/modules/0059/qparams.npz": "ace5dac2724f4ea00e3e5cf98f2995908fbe7c0ab2d5d702865c149198d7b6e7",
+      "calibration_outputs/gguf-all-126-oasst1/modules/0060/op0000.weights.int8.npy": "a7e830c07a7727043f9375d348da346d940b962767013e7c9dfb0bc288e14573",
+      "calibration_outputs/gguf-all-126-oasst1/modules/0060/scales.npz": "4bce17e8402be46b7b497df71623f5fadfab7a2f1ac5eb99b1fbfacbcbd975e9",
+      "calibration_outputs/gguf-all-126-oasst1/modules/0060/qparams.npz": "b455c55104d278d27dd435fcf11d5674b6bbc00a255d817aac55506e5a150c1b",
+      "calibration_outputs/gguf-all-126-oasst1/modules/0061/op0000.weights.int8.npy": "5058f563f0e33ecc4e6af96954fe23593549819d61093cccb131b7efe57fa822",
+      "calibration_outputs/gguf-all-126-oasst1/modules/0061/scales.npz": "17b372f7d26758aaa10d5ecc29acf35e0fd516d5330a278ea5469019ec6dc262",
+      "calibration_outputs/gguf-all-126-oasst1/modules/0061/qparams.npz": "fa69ecbce444e540da7737bed33f60e6005b28562badc72b44187683d4086aa2",
+      "calibration_outputs/gguf-all-126-oasst1/modules/0062/op0000.weights.int8.npy": "4b599bfa6bae3b31aa5367e91ac77a3197fecf62f8996a5ca932d007ce55e2e5",
+      "calibration_outputs/gguf-all-126-oasst1/modules/0062/scales.npz": "297869fad921d5839860011866256b6fada2b1c11f482c3b926aafd6541b5c82",
+      "calibration_outputs/gguf-all-126-oasst1/modules/0062/qparams.npz": "a400d9c7b17b1d60d9e42f329bd41c093e6a548194a62fcb44eec1b4c4e97cf8",
+      "calibration_outputs/gguf-all-126-oasst1/modules/0063/op0000.weights.int8.npy": "3cfff2d707b77501a6efa23d75af5f6e22e6e7b2f736ad2c92f034e11e2414d7",
+      "calibration_outputs/gguf-all-126-oasst1/modules/0063/scales.npz": "f0ab0619cbf0ee1e377d212a311f1ae3920570131c7ce0ade61059bfe5a652b0",
+      "calibration_outputs/gguf-all-126-oasst1/modules/0063/qparams.npz": "2721d3280c246938323a3766ef8a6312eefa502cca940e5028e81114f52d217d",
+      "calibration_outputs/gguf-all-126-oasst1/modules/0064/op0000.weights.int8.npy": "81ce167a0c4424d13a2919f9d0554226ff6f8650ce6003aa0b5a0ec1cf110246",
+      "calibration_outputs/gguf-all-126-oasst1/modules/0064/scales.npz": "1efcb3fd8cbbe8032111f918e91119a8f4454017cf2fa5789fa80a73ea86352d",
+      "calibration_outputs/gguf-all-126-oasst1/modules/0064/qparams.npz": "3cc805221594665cccacc5c1b28b9453cf2d5d1d070f0a0f3759517178cc98ce",
+      "calibration_outputs/gguf-all-126-oasst1/modules/0065/op0000.weights.int8.npy": "845e05832c220bad6fd94e6fb5166baa7761ff192cdde48b306c880081d57cb0",
+      "calibration_outputs/gguf-all-126-oasst1/modules/0065/scales.npz": "9bf122f22d2db661426a174886b18708d02305396df068db730e9cc528c47385",
+      "calibration_outputs/gguf-all-126-oasst1/modules/0065/qparams.npz": "4dbb13a2d9db076996547bc5ecc43c77fadc71da725878d670f719a18a85161c",
+      "calibration_outputs/gguf-all-126-oasst1/modules/0066/op0000.weights.int8.npy": "4d0034ea139d4ab1e90d9572b22e5288b90e8d341306f230b908d63e5bd25acf",
+      "calibration_outputs/gguf-all-126-oasst1/modules/0066/scales.npz": "7d5727fe39fd9c900874556977d278038c5e99927927b56ce882eb9c766950a0",
+      "calibration_outputs/gguf-all-126-oasst1/modules/0066/qparams.npz": "f267a8bb3a039df321ade9b266db1f7ef6dea3792ff9600a3ea4c2355e30bf24",
+      "calibration_outputs/gguf-all-126-oasst1/modules/0067/op0000.weights.int8.npy": "44bb35552f95c0c80a0761987367663d41d1cc5984432ee90d8535b23adcf7ab",
+      "calibration_outputs/gguf-all-126-oasst1/modules/0067/scales.npz": "82cb396254672c81f85b8a9dc80d3478d1bd3ab50d625376fc34f4094d1b4d60",
+      "calibration_outputs/gguf-all-126-oasst1/modules/0067/qparams.npz": "7e8b4f2ed045493723de886c135e07398ffebc3f31c52cd91f2ff3b46a742ad2",
+      "calibration_outputs/gguf-all-126-oasst1/modules/0068/op0000.weights.int8.npy": "db8a2e82672195cebfe11cc86e9cdb245489afef84db8c9016aa11a463ff9ada",
+      "calibration_outputs/gguf-all-126-oasst1/modules/0068/scales.npz": "e2109f216f2e5bb2a5ed88c365b035b462cd59c8e65cc45db2132886c13ef81c",
+      "calibration_outputs/gguf-all-126-oasst1/modules/0068/qparams.npz": "3176113b56431da730a35543e4d01edc8660f10eecb6ba3c7f128f84b3cac6d1",
+      "calibration_outputs/gguf-all-126-oasst1/modules/0069/op0000.weights.int8.npy": "66131d6bbaeaf5ad321ee0b49b5eba939f7f90625948e5eb11d8dd71901cd93e",
+      "calibration_outputs/gguf-all-126-oasst1/modules/0069/scales.npz": "19ade00b643bd3bb5b99b7a95726cb79d104d0cc2bd80c29f2fbf34c3a7e48e8",
+      "calibration_outputs/gguf-all-126-oasst1/modules/0069/qparams.npz": "590dc796494f472933677b895b1c1962f2489869fbf2e7e395da06ded855c4c6",
+      "calibration_outputs/gguf-all-126-oasst1/modules/0070/op0000.weights.int8.npy": "049be25a2b711dde862ed6e7e5afb5bfbe98247654149346967528685bb443f7",
+      "calibration_outputs/gguf-all-126-oasst1/modules/0070/scales.npz": "1a94fc49900ca8e9bf8ecf22a3cd2e45582003adec8e3463953cefbe84123c89",
+      "calibration_outputs/gguf-all-126-oasst1/modules/0070/qparams.npz": "61a6f7a2dbf56e8dc31233c3abbe0e3083ed7763d460e18cfb24d14aa41971bd",
+      "calibration_outputs/gguf-all-126-oasst1/modules/0071/op0000.weights.int8.npy": "9bf7fc04c42a10bf2fa4854d3b2b8b4c7f37fcae57c4c52032c9ba802edac300",
+      "calibration_outputs/gguf-all-126-oasst1/modules/0071/scales.npz": "50c6d5d5ae34cadce87108ad485b3cae188321d9e18bf7001e96894a1d2203c0",
+      "calibration_outputs/gguf-all-126-oasst1/modules/0071/qparams.npz": "5d96da196c3ae78948fb7ba4976c919bf948aeaa7ce22766dcf87817db9ca759",
+      "calibration_outputs/gguf-all-126-oasst1/modules/0072/op0000.weights.int8.npy": "3e8163a9b5d4d13201f2c263147a371870526c19ded53f1756ee594421313b4b",
+      "calibration_outputs/gguf-all-126-oasst1/modules/0072/scales.npz": "3e569ee80b6534f0da8c53120b3192ff72746abc28c90d7f3e50671c8df9c87e",
+      "calibration_outputs/gguf-all-126-oasst1/modules/0072/qparams.npz": "5647c405a2c29345df8b2b8fe3e2edae839764737c5739ff5b0e6a82580616f2",
+      "calibration_outputs/gguf-all-126-oasst1/modules/0073/op0000.weights.int8.npy": "31acabd6c5a91bd0caea75681238050998added8c435af138e884ea975a998e3",
+      "calibration_outputs/gguf-all-126-oasst1/modules/0073/scales.npz": "3bc20a77064a04457c753ccb0b1ee16bae19df4a3ea58122ab0c2ca44bf4e09b",
+      "calibration_outputs/gguf-all-126-oasst1/modules/0073/qparams.npz": "1542dd14588c662fb9f28a3e94ed75d8d5b757d7c6920b185f8c9b0ec9b11dd2",
+      "calibration_outputs/gguf-all-126-oasst1/modules/0074/op0000.weights.int8.npy": "7397930c92a8117d410a01167233fb6a6af484ab6d543bb2bee74852494b5a50",
+      "calibration_outputs/gguf-all-126-oasst1/modules/0074/scales.npz": "649d0b83a1af152d26bbdf0f5d79cc18b4a851c9cd349ff58821e200376200b4",
+      "calibration_outputs/gguf-all-126-oasst1/modules/0074/qparams.npz": "dae2f8394b95c67239f0d5c9747cdc9e47bfdc83be3e4facb91122ad8266c823",
+      "calibration_outputs/gguf-all-126-oasst1/modules/0075/op0000.weights.int8.npy": "a42691979cdd2d70acf6945d27c58e6636144cc5c5579e3bb883d5c6f7a9dc8a",
+      "calibration_outputs/gguf-all-126-oasst1/modules/0075/scales.npz": "cdd77513f95f5d7b65d1befcd43ff7d8247ae6ef47d99b58b6da15d88fe5e7f8",
+      "calibration_outputs/gguf-all-126-oasst1/modules/0075/qparams.npz": "d7c02edf36af75b919a87cd2a597c2246c0d6b7c96e436f27ff60f9fb5fef9cf",
+      "calibration_outputs/gguf-all-126-oasst1/modules/0076/op0000.weights.int8.npy": "8845ee22ef2dcbd2f7cde410ba9452ad6eda67c092b4607ffa6fafe7a53997c2",
+      "calibration_outputs/gguf-all-126-oasst1/modules/0076/scales.npz": "12e0315150b16e8d6adec63f964eb53a1a7d47a1526d10f6731939ac509d4cac",
+      "calibration_outputs/gguf-all-126-oasst1/modules/0076/qparams.npz": "55cc481a50fdfafb7e9d719a869bb3b9abc96bcdba6b3a3cab3f6f7736d4c064",
+      "calibration_outputs/gguf-all-126-oasst1/modules/0077/op0000.weights.int8.npy": "b615068f417208a806e4859a0a2b67659e729d78df90eed87c65dc61ab499228",
+      "calibration_outputs/gguf-all-126-oasst1/modules/0077/scales.npz": "65f0554bf3c1476913e16e945306d36adbdde88d9d454273bd301d7cbe0c46ba",
+      "calibration_outputs/gguf-all-126-oasst1/modules/0077/qparams.npz": "925f4bb45e87d060c93ed0e3fe11733b239f389a44b7a5eda744bbfd95d70026",
+      "calibration_outputs/gguf-all-126-oasst1/modules/0078/op0000.weights.int8.npy": "e2ade3a9879e352612a254c0f2da0bbe7449e0498aff336eda2b7ead9226d545",
+      "calibration_outputs/gguf-all-126-oasst1/modules/0078/scales.npz": "089a140f0eadf57952acbfede45b276d986cd77ff523514756c965cb63de9263",
+      "calibration_outputs/gguf-all-126-oasst1/modules/0078/qparams.npz": "3949d928b685c3f1d51371f1c80b47e08839b07cd7f5284847ff4dde802b319b",
+      "calibration_outputs/gguf-all-126-oasst1/modules/0079/op0000.weights.int8.npy": "c869fa6abc9ad1fbf65397067dc06d80de6f2aea688102f0549279d229a42a50",
+      "calibration_outputs/gguf-all-126-oasst1/modules/0079/scales.npz": "4612478146086d260fd85f9d23b66a83703b8d8c840949dcdbe43bd01bd09815",
+      "calibration_outputs/gguf-all-126-oasst1/modules/0079/qparams.npz": "9ac3299ddc84235da127fabd8abc7a6a342c1b67be1deee563505b70158b98f8",
+      "calibration_outputs/gguf-all-126-oasst1/modules/0080/op0000.weights.int8.npy": "b72381c86640767fe5a3c63503a1dc6ecb47ec2e07e87efee82efda9072cd308",
+      "calibration_outputs/gguf-all-126-oasst1/modules/0080/scales.npz": "843527c5d067651c12c751d5d92241918fda6677bf423fb6a8eb766603ab2dde",
+      "calibration_outputs/gguf-all-126-oasst1/modules/0080/qparams.npz": "f05abfb903170e10b1aa62a2aa02c998aacf4f84fed135caa4f8ccbc4482c490",
+      "calibration_outputs/gguf-all-126-oasst1/modules/0081/op0000.weights.int8.npy": "48df09dcbfa9f42214dd5741e09d62b0eaa6e72cb3c6d9fc0e94a3b6fa77387f",
+      "calibration_outputs/gguf-all-126-oasst1/modules/0081/scales.npz": "eccabb666458b9385b4026d37c6e5d8bf7d8658b1d4a140ba476767ec6267327",
+      "calibration_outputs/gguf-all-126-oasst1/modules/0081/qparams.npz": "1e8cba91e1bc0339e68e11e4472b64ef9f76ca04355c444470980a25e04fcc1e",
+      "calibration_outputs/gguf-all-126-oasst1/modules/0082/op0000.weights.int8.npy": "0e31475468dce126547067f4a3e996ab65cd8694c2811bddfe8485e00bb0ee32",
+      "calibration_outputs/gguf-all-126-oasst1/modules/0082/scales.npz": "918c9ac8b313bae741053d63f45da9e2e51fc6872238a66cac8df9c3280d49dd",
+      "calibration_outputs/gguf-all-126-oasst1/modules/0082/qparams.npz": "95c5377d25d7c95602781b128da69389820f88acf5025db96ba2643ba71f11fd",
+      "calibration_outputs/gguf-all-126-oasst1/modules/0083/op0000.weights.int8.npy": "72a5226362e92d1001ab5f74cd083b07cface590c4c04789af4e9672df0c0b19",
+      "calibration_outputs/gguf-all-126-oasst1/modules/0083/scales.npz": "88fd3e9cc69d384b463272a0b81dc7d7e50ea82b67524e8261011f6430364908",
+      "calibration_outputs/gguf-all-126-oasst1/modules/0083/qparams.npz": "ad48125cda8202e7ada0bec9c36628ef18bb8b6a70bf499c6139e0278b953bb5",
+      "calibration_outputs/gguf-all-126-oasst1/modules/0084/op0000.weights.int8.npy": "908c07b7178bb5b151bf7c400a4a296b255f92674078edc268e16c164cd98f2c",
+      "calibration_outputs/gguf-all-126-oasst1/modules/0084/scales.npz": "2021d1052f89997660fbb751c4f220e1971b527bd259c213773c2c6b19cdc4dd",
+      "calibration_outputs/gguf-all-126-oasst1/modules/0084/qparams.npz": "3cbebeb424ffecbec0a6116065e718e985df6cc452f940d960908b09388a2c49",
+      "calibration_outputs/gguf-all-126-oasst1/modules/0085/op0000.weights.int8.npy": "193799f8933113891a0f9a456185e5a9044015bf7337b38f86730941ca8d2b36",
+      "calibration_outputs/gguf-all-126-oasst1/modules/0085/scales.npz": "0cad6edec18b0534c712e68ac20b98608d43d1443c1a147e199687824af9143f",
+      "calibration_outputs/gguf-all-126-oasst1/modules/0085/qparams.npz": "c997cb1b543c22472df8e769979adb6cebf8c1b2d7754ca10db987bb455be4ca",
+      "calibration_outputs/gguf-all-126-oasst1/modules/0086/op0000.weights.int8.npy": "f0a937cbe37432f8dc78731638fd63d0f3f7b2a5abe944a2f19100fa62365357",
+      "calibration_outputs/gguf-all-126-oasst1/modules/0086/scales.npz": "44a69e62510a64f919410f3e049be941ca53cec1b0b0e50c3151631310ef0f1a",
+      "calibration_outputs/gguf-all-126-oasst1/modules/0086/qparams.npz": "b87f5d3b87213c83a00bf2f08be70ef8f37e38d52924e6ebd1b274bab5e3355f",
+      "calibration_outputs/gguf-all-126-oasst1/modules/0087/op0000.weights.int8.npy": "957966a5ea3738c7d522f4d9e726c22f1a147c9827c86285d5e2fcd7ae6939e9",
+      "calibration_outputs/gguf-all-126-oasst1/modules/0087/scales.npz": "79579b64470798f648d837fb640ab4391dcd0bd5a990fa32f8c21303e1850fe7",
+      "calibration_outputs/gguf-all-126-oasst1/modules/0087/qparams.npz": "d8dc3d7a60210ac8b43d3c1068e483aea0eca355a33969317e88cf64f6212086",
+      "calibration_outputs/gguf-all-126-oasst1/modules/0088/op0000.weights.int8.npy": "3acf46b8a4420f6d83fea2ca0df189ab36928adb396f34bbbed877ccf150a724",
+      "calibration_outputs/gguf-all-126-oasst1/modules/0088/scales.npz": "3074333367d5a366b56b1613511fad72fb0fb4916980b25c5e294b8c718cd61b",
+      "calibration_outputs/gguf-all-126-oasst1/modules/0088/qparams.npz": "25509bf3babb276d831de72acf5b5fdd21e4613867c3e9e77380c32c6d97bf3b",
+      "calibration_outputs/gguf-all-126-oasst1/modules/0089/op0000.weights.int8.npy": "192b2fbf9d0219d0a9ff762be0bb0516e117061b8bec53f3c36005441b2c269d",
+      "calibration_outputs/gguf-all-126-oasst1/modules/0089/scales.npz": "ce0f5257a4ed355ecbc2c9dca21b0b426423b79eef69124e07b17eba8f351c5a",
+      "calibration_outputs/gguf-all-126-oasst1/modules/0089/qparams.npz": "d2376914eef7e6881a33cdf55f3f343d93f5d36b0317dedcc469388c915f021d",
+      "calibration_outputs/gguf-all-126-oasst1/modules/0090/op0000.weights.int8.npy": "a8d12291012bb89adff11ce9666b090a616da47729b922860d25f60c813de41e",
+      "calibration_outputs/gguf-all-126-oasst1/modules/0090/scales.npz": "aa45ea49f247c941c9aaea9a0ee0ee7f0ededae2566aba6c8bdb3b3df4aad1f5",
+      "calibration_outputs/gguf-all-126-oasst1/modules/0090/qparams.npz": "6a73895985065e1739e2221c489e8909a3c40820f6dc38050fe3d0cfc2050335",
+      "calibration_outputs/gguf-all-126-oasst1/modules/0091/op0000.weights.int8.npy": "31238f728c66dd20e6dbfbfc34fcb96dcfbf8e5cb61726ade5f30ffb0c058d85",
+      "calibration_outputs/gguf-all-126-oasst1/modules/0091/scales.npz": "97ce49d46cc59ccec928cf4ca12828c9b35ae8f3adbaae96435c985fa0af6c4f",
+      "calibration_outputs/gguf-all-126-oasst1/modules/0091/qparams.npz": "46c54c20bc31d77118eeb2da9331200f31b58bf3fd5c7340eb7ddcc586f9cacc",
+      "calibration_outputs/gguf-all-126-oasst1/modules/0092/op0000.weights.int8.npy": "26e66f4f41f351138876b64cec6f00d5b7ba21c1d9fee51ca7f0147bcd5742e6",
+      "calibration_outputs/gguf-all-126-oasst1/modules/0092/scales.npz": "ace8a3118402dcbad168e5bbd26f1283e89d9debf4ba8ddd6ef177d82f093891",
+      "calibration_outputs/gguf-all-126-oasst1/modules/0092/qparams.npz": "81df6380f7b5b8f08284ab1b335a787b994eaf2cf2651dcfd3c4220b3aac9531",
+      "calibration_outputs/gguf-all-126-oasst1/modules/0093/op0000.weights.int8.npy": "ba2098e37d83b8031c79596835eeaf07116b38c40bc1d2e376a8a31b753478a2",
+      "calibration_outputs/gguf-all-126-oasst1/modules/0093/scales.npz": "837e53e0b6a75a1dfb737e213b7b875e0b31adaa8231ad1b02eb3169003843c9",
+      "calibration_outputs/gguf-all-126-oasst1/modules/0093/qparams.npz": "e786857336aadc8a206c4c7e69d9294f187b7f18ae28004786c75d50d13c7a27",
+      "calibration_outputs/gguf-all-126-oasst1/modules/0094/op0000.weights.int8.npy": "af93b41ae76060e454f0586f8dc3fd3c5f1b9f3fa425bf3af86d4ce66f558646",
+      "calibration_outputs/gguf-all-126-oasst1/modules/0094/scales.npz": "b397c7720c4bf294a68748f89136e12e7d527c239fcc87b0161415b3a91a9e91",
+      "calibration_outputs/gguf-all-126-oasst1/modules/0094/qparams.npz": "88e60fc106cc8517c81ca6750cc98b1b2bc6c58dc180938d73759aae479bd216",
+      "calibration_outputs/gguf-all-126-oasst1/modules/0095/op0000.weights.int8.npy": "95e2aaeb3dc9865afdef0fddf00a577792f30e3be22574bd4189e0028e7c00a3",
+      "calibration_outputs/gguf-all-126-oasst1/modules/0095/scales.npz": "db13e0e21e7297989300554101eb933efd37123a3852c7b06f97bce96c2ebd6f",
+      "calibration_outputs/gguf-all-126-oasst1/modules/0095/qparams.npz": "da757fef871701a0221f2aa9896e00009ffbee4e4bf28a47f820379cacfabde6",
+      "calibration_outputs/gguf-all-126-oasst1/modules/0096/op0000.weights.int8.npy": "39de5d12dde660fc8241778ff79d92d28260d918ac44c499f99c098a141fca5e",
+      "calibration_outputs/gguf-all-126-oasst1/modules/0096/scales.npz": "fdc19063e0e3ac3f33fd3c582d76174678ac08247641686d4e890fa3f616bfc0",
+      "calibration_outputs/gguf-all-126-oasst1/modules/0096/qparams.npz": "ce6283d594778adb8824d3d6cee078066685974c2fff3a53a9297d13f70eb6f9",
+      "calibration_outputs/gguf-all-126-oasst1/modules/0097/op0000.weights.int8.npy": "d80091e27e4ca43d1f39f7c6e66b558ead68545e9ae9f24c4d7d42bc1fd3ec66",
+      "calibration_outputs/gguf-all-126-oasst1/modules/0097/scales.npz": "987b3cac338bce24eee2cd145113ad758caaf7ad10fc453cc952454e70e75cc1",
+      "calibration_outputs/gguf-all-126-oasst1/modules/0097/qparams.npz": "f2726fd74669284383ed00e4ad17e4a301bc1ede14f5e75ccab0c9044a63cac2",
+      "calibration_outputs/gguf-all-126-oasst1/modules/0098/op0000.weights.int8.npy": "04f5a3f86366697221060bcaaf562b3cfc6b2b1eefa63311e89c84c1fbde7e93",
+      "calibration_outputs/gguf-all-126-oasst1/modules/0098/scales.npz": "d7853afd55367413f45f36f7411d2654c2f3ba984c8d48f741ba21f2ead619ee",
+      "calibration_outputs/gguf-all-126-oasst1/modules/0098/qparams.npz": "4587ed3144e7d8c4486f5988cfb3bf4b67bdda9300606a159b7ae76385c00053",
+      "calibration_outputs/gguf-all-126-oasst1/modules/0099/op0000.weights.int8.npy": "9e6d4ffcb7bd9a594341f17cf831bf86d81da85aa723b94992d46d1e2b69c409",
+      "calibration_outputs/gguf-all-126-oasst1/modules/0099/scales.npz": "ad579ce0dab2b183dd7fb0aff7dadf22ddbf8b1c6b18d1a708040261293ff6fa",
+      "calibration_outputs/gguf-all-126-oasst1/modules/0099/qparams.npz": "a064c4229eaa6b5bf65976a3587082c9dbb932a5d160a81a9a64dae66c6a5735",
+      "calibration_outputs/gguf-all-126-oasst1/modules/0100/op0000.weights.int8.npy": "f03d46b55e715cdae1cd9a0f365b94ba282f00186ef6a9f5660785102d87d21d",
+      "calibration_outputs/gguf-all-126-oasst1/modules/0100/scales.npz": "5600fe74a99e5b61c2c1e010e7c09e0e35054b416d5bd28e4427d767dab9955b",
+      "calibration_outputs/gguf-all-126-oasst1/modules/0100/qparams.npz": "4c11c428203656e1e7ec7ca68de08944ca20c9c7a850ce21318094bfe2524500",
+      "calibration_outputs/gguf-all-126-oasst1/modules/0101/op0000.weights.int8.npy": "e8bb7857cf2936379e4d2877c925f22b0865b68ff512cf6d5db13080ff1bc2ce",
+      "calibration_outputs/gguf-all-126-oasst1/modules/0101/scales.npz": "05506715a0980c93cead140c378d86333cdb957f970585b92e88d76eebd727c8",
+      "calibration_outputs/gguf-all-126-oasst1/modules/0101/qparams.npz": "cc33f8667f38fc8298b0ea8c99b5cd54998855ebe112422a2227868546bfbb71",
+      "calibration_outputs/gguf-all-126-oasst1/modules/0102/op0000.weights.int8.npy": "8874a5ae70d94849f2f8d4480f9917039b4a8516ed6a82b55d08b84c73552185",
+      "calibration_outputs/gguf-all-126-oasst1/modules/0102/scales.npz": "6c6baccae2a09bc0c718abdc09a7e7fa6b7f980c2c85a53505726a0f98e6ba90",
+      "calibration_outputs/gguf-all-126-oasst1/modules/0102/qparams.npz": "2e9f66871dc15af670c340b07dcc9a8b58102d9b837d45e6ffb15787f4878436",
+      "calibration_outputs/gguf-all-126-oasst1/modules/0103/op0000.weights.int8.npy": "a7d8b1a6c0e1750fc5f247c2cb4b969fb56392bea06f2172c495d9e5a5e814a6",
+      "calibration_outputs/gguf-all-126-oasst1/modules/0103/scales.npz": "53fddc07ed5b7ca09a949450ad6aad2ed62faadc32c8f237f37f57dd0c66af93",
+      "calibration_outputs/gguf-all-126-oasst1/modules/0103/qparams.npz": "490a9c9b6ea7264df72dc4814b30156d3267bcc153b496ffb5e0d812511712e0",
+      "calibration_outputs/gguf-all-126-oasst1/modules/0104/op0000.weights.int8.npy": "5584c4ecc47837aa25e03c79bf327930be7ac0bf19d8850c1582bc21efe5a08f",
+      "calibration_outputs/gguf-all-126-oasst1/modules/0104/scales.npz": "fb04e1d6a573090f3074c53aaee39f22808afa22bd133ff600af3ff8355c6406",
+      "calibration_outputs/gguf-all-126-oasst1/modules/0104/qparams.npz": "d2bc5a3871bf72ae62e1d5de6a7065de9beb12b7525468e4dd3924ca6259ef09",
+      "calibration_outputs/gguf-all-126-oasst1/modules/0105/op0000.weights.int8.npy": "af308f20960827329e567ad6102bc9570d677650e4538238fda494095d2f5369",
+      "calibration_outputs/gguf-all-126-oasst1/modules/0105/scales.npz": "d23a018c3c32eeeb37a85d3ef5d4dea949265a3caa61252c2a0a8f7cfc3b8245",
+      "calibration_outputs/gguf-all-126-oasst1/modules/0105/qparams.npz": "36f920b20d090e16de761bd6219c251369b7217266a07030128bfe9189f03b15",
+      "calibration_outputs/gguf-all-126-oasst1/modules/0106/op0000.weights.int8.npy": "506c66ffa31395afc28cc3c2f9b842bd2ac7011860075ff228c43adfb90a8e33",
+      "calibration_outputs/gguf-all-126-oasst1/modules/0106/scales.npz": "9b1327c338f85602d75c8247aa8eefeceaf164aa5f330f148931fc66955f67e4",
+      "calibration_outputs/gguf-all-126-oasst1/modules/0106/qparams.npz": "f4111f29ec8dd0b87cc598d862b50d1d8f36786219bab974ca13ff053d58a555",
+      "calibration_outputs/gguf-all-126-oasst1/modules/0107/op0000.weights.int8.npy": "2bec5cf11b9211da6025800d558bb34eb1129b8ec67229754c8a36fbb17be6ff",
+      "calibration_outputs/gguf-all-126-oasst1/modules/0107/scales.npz": "24c98b05280fb1ccdc5bb0911ef49d8f2cc032be1d707726d64b9451ad7b886b",
+      "calibration_outputs/gguf-all-126-oasst1/modules/0107/qparams.npz": "1ff5d8d749fbe0bc0287e67835a56a73371c6b6080272ce046db08516f897657",
+      "calibration_outputs/gguf-all-126-oasst1/modules/0108/op0000.weights.int8.npy": "1d647229697b995aadf79d96205107835e03ae44cbd4b65d280e52984ee21e33",
+      "calibration_outputs/gguf-all-126-oasst1/modules/0108/scales.npz": "009f15b772313209d11736f578673996569ce2f89f9f6f9a936ef642ec55e1e3",
+      "calibration_outputs/gguf-all-126-oasst1/modules/0108/qparams.npz": "706cecf14fbf4e84a0902c67e4ccc48d46b13a9642cd7788b06bb806a4c2d0c1",
+      "calibration_outputs/gguf-all-126-oasst1/modules/0109/op0000.weights.int8.npy": "c317138e1db72bc5a0d05e3a3bbc346bd5041a74b8340977275ff8df6c27aab9",
+      "calibration_outputs/gguf-all-126-oasst1/modules/0109/scales.npz": "2f8922b0e19a512c5983566800707b08744d7576ab9446f86337ebca57be6809",
+      "calibration_outputs/gguf-all-126-oasst1/modules/0109/qparams.npz": "c9bd45e4a6cb2652feddfbad18b1d94b2cdecf4cb4fa7e7d6e96f16e21fd917f",
+      "calibration_outputs/gguf-all-126-oasst1/modules/0110/op0000.weights.int8.npy": "db64cd40f6a2bb3f46a1a68dd5007b1f209399ac2f0b5e531428a2927f689e21",
+      "calibration_outputs/gguf-all-126-oasst1/modules/0110/scales.npz": "8eb90ede7673ede157da534f9a7c5f63c99132de5b81af0180708dc93f3595a5",
+      "calibration_outputs/gguf-all-126-oasst1/modules/0110/qparams.npz": "0d40939e1dd14eeb92854bd8179063657a514c028358698376e5619c124ab7cc",
+      "calibration_outputs/gguf-all-126-oasst1/modules/0111/op0000.weights.int8.npy": "859436ae976fdeb230993a6ba2d45fb5590bd680279a6b234c0384bff2da9639",
+      "calibration_outputs/gguf-all-126-oasst1/modules/0111/scales.npz": "6faccfb86764b6ccd205910e80dbc04616b71edbcdfb18e247261639dc39de12",
+      "calibration_outputs/gguf-all-126-oasst1/modules/0111/qparams.npz": "147b04b2f1648652c60d21dd048ef4bfe857521e2fadb6ded0f67c1311cdd412",
+      "calibration_outputs/gguf-all-126-oasst1/modules/0112/op0000.weights.int8.npy": "6e75a4bef5d4a7073f1153ed9564ece376993ddf5c0f7895252f85127987f36f",
+      "calibration_outputs/gguf-all-126-oasst1/modules/0112/scales.npz": "b2322accb7d86af4a1557b970eb8b54862fa2bdc27cbc256366ca83680402500",
+      "calibration_outputs/gguf-all-126-oasst1/modules/0112/qparams.npz": "20be503eeaa678ab834de1d1c866d89ff9b887698bab9156b10e0b8ace432bfe",
+      "calibration_outputs/gguf-all-126-oasst1/modules/0113/op0000.weights.int8.npy": "9d43ee1ebe2bc06758614fbe47d668ec40c34344ad0112b1aa9dc819c2ec5b38",
+      "calibration_outputs/gguf-all-126-oasst1/modules/0113/scales.npz": "97b0f9cd3b9b3aee7d30ca64e2dc4d42ab3552c23e2f6c77d956706693b24f24",
+      "calibration_outputs/gguf-all-126-oasst1/modules/0113/qparams.npz": "3c1268fa64c79bffca55b7889c61389144040f0bd8ba3dd019fd3c972c7e1569",
+      "calibration_outputs/gguf-all-126-oasst1/modules/0114/op0000.weights.int8.npy": "fe588915cce0584082cab2a00d69657899a41510a40545a0a3e3debf6d6cefa0",
+      "calibration_outputs/gguf-all-126-oasst1/modules/0114/scales.npz": "dffbfae95a611fa0c6b996968941ec5a8da2a37b0e3f996babd72de62b3817f9",
+      "calibration_outputs/gguf-all-126-oasst1/modules/0114/qparams.npz": "09333cd2e64a58a95a91e75cb0c9511467d8a3b34c3e3db24f76b81ff5cfec62",
+      "calibration_outputs/gguf-all-126-oasst1/modules/0115/op0000.weights.int8.npy": "dd2d8b6d15f401d804428bd875787f008edd20910457b3cdde6ed4bc4cdd3b72",
+      "calibration_outputs/gguf-all-126-oasst1/modules/0115/scales.npz": "4729e580b28922435b492bc0db89c6858adaeaadeb0449ae150194299efa0d6b",
+      "calibration_outputs/gguf-all-126-oasst1/modules/0115/qparams.npz": "dab5ad157874e726d84f572078dca321490881c5c31d44833dca0b0448af501a",
+      "calibration_outputs/gguf-all-126-oasst1/modules/0116/op0000.weights.int8.npy": "5de5ba9ba7bd1aaa370c79d2db6ebb40eeabd06e48c3d1559cb22dbb68ec2376",
+      "calibration_outputs/gguf-all-126-oasst1/modules/0116/scales.npz": "7ce7376ed2f46fe6602680ca3f5ef1d44c84ff4e7a8c4e00decd87376e1e8320",
+      "calibration_outputs/gguf-all-126-oasst1/modules/0116/qparams.npz": "3344a5fc1d2d8b923456ed8dd6242640a04df05ee6beb52b6bd2846ba47f0141",
+      "calibration_outputs/gguf-all-126-oasst1/modules/0117/op0000.weights.int8.npy": "2dd224fae78e4073a429332ce8d0d06514246732b9a137afaa38dac953410246",
+      "calibration_outputs/gguf-all-126-oasst1/modules/0117/scales.npz": "d744b660c880ffc13303b5985c9e6b8137f8cbbf704160caf2bf3ea5f532c9b4",
+      "calibration_outputs/gguf-all-126-oasst1/modules/0117/qparams.npz": "52ce53b40b00968c52508ff264955e51124ff815e409e9ab589c60c487156f21",
+      "calibration_outputs/gguf-all-126-oasst1/modules/0118/op0000.weights.int8.npy": "fad78e3f38e2d291be15c98b01f88ae3d398b55ee3fa08b42f8bb026a9ed56d0",
+      "calibration_outputs/gguf-all-126-oasst1/modules/0118/scales.npz": "cdb39414bdb97b76347ff9dbff6fcc388c53fc8bbef61d4f703c91538333c1ce",
+      "calibration_outputs/gguf-all-126-oasst1/modules/0118/qparams.npz": "98e61f6fcbccfd33a650fd6b0abf22cd745c03c68dd4880e9a53b0a72745b806",
+      "calibration_outputs/gguf-all-126-oasst1/modules/0119/op0000.weights.int8.npy": "6bbe71149098a30dad656fac2666fecdf757d15117cb4df6fdba8cb87b43fb80",
+      "calibration_outputs/gguf-all-126-oasst1/modules/0119/scales.npz": "49955c04ac3d9205cc7f50065f620ca72d4d70571a71615f71bba289d2cca005",
+      "calibration_outputs/gguf-all-126-oasst1/modules/0119/qparams.npz": "1e177955c37f84f82f067f12643e51a2b1a30450e8567b2205ba0ce5e31e52ca",
+      "calibration_outputs/gguf-all-126-oasst1/modules/0120/op0000.weights.int8.npy": "0ffbbfccc684eb56d0694754b5c05c5f66a50092f35f23e22721490d5d1c4ed0",
+      "calibration_outputs/gguf-all-126-oasst1/modules/0120/scales.npz": "07a5ed523892b67db9dc8ceb51f13276e0f98f618a616ea3303680b5f585cc16",
+      "calibration_outputs/gguf-all-126-oasst1/modules/0120/qparams.npz": "7cbb5f93794a5f867412a3b266a33e823dd300f329a592aac49cab3f7116e36a",
+      "calibration_outputs/gguf-all-126-oasst1/modules/0121/op0000.weights.int8.npy": "41ced912b9f6d91f689eb2f99c44230f6419aa34e260912298167e3d3a4d5d6e",
+      "calibration_outputs/gguf-all-126-oasst1/modules/0121/scales.npz": "3c3ad9ab09316634c6e6849dd4090bbcadd52146731fbe0e9cbb03f23d953b70",
+      "calibration_outputs/gguf-all-126-oasst1/modules/0121/qparams.npz": "4c02320b6df29c4b0fbb6320a756ccf590f38fc808cb4f1f729315ecec63adec",
+      "calibration_outputs/gguf-all-126-oasst1/modules/0122/op0000.weights.int8.npy": "eac8d586ad23c293b32584e2154faea0502f2b3e977f67e1cadf793a32d9d39a",
+      "calibration_outputs/gguf-all-126-oasst1/modules/0122/scales.npz": "d363358321d43db906a7638125b3aa6cffa25c41fd10253f78b3b0c30100d7f9",
+      "calibration_outputs/gguf-all-126-oasst1/modules/0122/qparams.npz": "f43601e509d2ff8bf9919c224066ea59c80b02c019aec485b63437f50a1e6296",
+      "calibration_outputs/gguf-all-126-oasst1/modules/0123/op0000.weights.int8.npy": "37c25af51ac5e47a0b2679282c115af8af21982e3f0e1098a3410340e292c777",
+      "calibration_outputs/gguf-all-126-oasst1/modules/0123/scales.npz": "63202b67bdf523322f584a51e989d94bf735cd2543eaa6a8bec5ae32d8e07943",
+      "calibration_outputs/gguf-all-126-oasst1/modules/0123/qparams.npz": "b3c900918cc9de9dc4c72c0d5e2ca1b1c50aec5d0788df9c248b8f7a7e94dfee",
+      "calibration_outputs/gguf-all-126-oasst1/modules/0124/op0000.weights.int8.npy": "178d7b53cbdaf824ae9327f60e414798600226fccd3b858f0b3506604284f6bf",
+      "calibration_outputs/gguf-all-126-oasst1/modules/0124/scales.npz": "7c1290a9d86f0d43d08ad2170518f2aee6fd3344b7b9ddbca905856804ecfdb7",
+      "calibration_outputs/gguf-all-126-oasst1/modules/0124/qparams.npz": "db36d646c0efb460680c57ff02701b1a7a327697ccae0e0e1152ef36edca742a",
+      "calibration_outputs/gguf-all-126-oasst1/modules/0125/op0000.weights.int8.npy": "4117275bd6f8610eb30b77f7417cf5cb3fc6c2565679eb14b2f20c4bd335ab6e",
+      "calibration_outputs/gguf-all-126-oasst1/modules/0125/scales.npz": "3c1d8f3cba23ef5f167e8265abeeb34968e12a338fb2880ee2bbd11b2c5fd041",
+      "calibration_outputs/gguf-all-126-oasst1/modules/0125/qparams.npz": "26b50d438af22ebe54eeef3d94ed71a7501e074eac7f366d6dcc2896851abb22"
+    },
+    "policies": {
+      "model.layers.0.self_attn.q_proj": {
+        "s_X": 0.1963493016761119,
+        "s_10": 0.07829076966195074,
+        "k": 0
+      },
+      "model.layers.0.self_attn.k_proj": {
+        "s_X": 0.1963493016761119,
+        "s_10": 0.03024389738466232,
+        "k": 0
+      },
+      "model.layers.0.self_attn.v_proj": {
+        "s_X": 0.1963493016761119,
+        "s_10": 0.03317802587696017,
+        "k": 0
+      },
+      "model.layers.0.self_attn.o_proj": {
+        "s_X": 0.19018647802157665,
+        "s_10": 0.06724393067947003,
+        "k": 0
+      },
+      "model.layers.0.mlp.gate_proj": {
+        "s_X": 0.693679328978531,
+        "s_10": 0.1,
+        "k": 0
+      },
+      "model.layers.0.mlp.up_proj": {
+        "s_X": 0.693679328978531,
+        "s_10": 0.1114146830459375,
+        "k": 0
+      },
+      "model.layers.0.mlp.down_proj": {
+        "s_X": 0.3282365401739341,
+        "s_10": 0.02793682146138546,
+        "k": -2
+      },
+      "model.layers.1.self_attn.q_proj": {
+        "s_X": 0.410057878869725,
+        "s_10": 0.027982859175556003,
+        "k": 0
+      },
+      "model.layers.1.self_attn.k_proj": {
+        "s_X": 0.410057878869725,
+        "s_10": 0.03681590083769439,
+        "k": 0
+      },
+      "model.layers.1.self_attn.v_proj": {
+        "s_X": 0.410057878869725,
+        "s_10": 0.02420471984613091,
+        "k": 0
+      },
+      "model.layers.1.self_attn.o_proj": {
+        "s_X": 0.13748164439764549,
+        "s_10": 0.017179812327030135,
+        "k": 0
+      },
+      "model.layers.1.mlp.gate_proj": {
+        "s_X": 0.6731993307278851,
+        "s_10": 0.1,
+        "k": 0
+      },
+      "model.layers.1.mlp.up_proj": {
+        "s_X": 0.6731993307278851,
+        "s_10": 0.042277841788850606,
+        "k": 0
+      },
+      "model.layers.1.mlp.down_proj": {
+        "s_X": 0.10382454303004575,
+        "s_10": 0.007798598043942701,
+        "k": -3
+      },
+      "model.layers.2.self_attn.q_proj": {
+        "s_X": 0.28375268170214074,
+        "s_10": 0.0232895007159644,
+        "k": 0
+      },
+      "model.layers.2.self_attn.k_proj": {
+        "s_X": 0.28375268170214074,
+        "s_10": 0.03247343051843931,
+        "k": 0
+      },
+      "model.layers.2.self_attn.v_proj": {
+        "s_X": 0.28375268170214074,
+        "s_10": 0.01525644716845253,
+        "k": 0
+      },
+      "model.layers.2.self_attn.o_proj": {
+        "s_X": 0.0781887985589936,
+        "s_10": 0.01041680210337196,
+        "k": 0
+      },
+      "model.layers.2.mlp.gate_proj": {
+        "s_X": 0.3925844928411048,
+        "s_10": 0.1,
+        "k": 0
+      },
+      "model.layers.2.mlp.up_proj": {
+        "s_X": 0.3925844928411048,
+        "s_10": 0.0489013163462807,
+        "k": 0
+      },
+      "model.layers.2.mlp.down_proj": {
+        "s_X": 0.08881361209234713,
+        "s_10": 0.007314705481437474,
+        "k": -3
+      },
+      "model.layers.3.self_attn.q_proj": {
+        "s_X": 0.28896481972041094,
+        "s_10": 0.026321897007572682,
+        "k": 0
+      },
+      "model.layers.3.self_attn.k_proj": {
+        "s_X": 0.28896481972041094,
+        "s_10": 0.03571855800816563,
+        "k": 0
+      },
+      "model.layers.3.self_attn.v_proj": {
+        "s_X": 0.28896481972041094,
+        "s_10": 0.012599050011709707,
+        "k": 0
+      },
+      "model.layers.3.self_attn.o_proj": {
+        "s_X": 0.06252980795432264,
+        "s_10": 0.005210351265756162,
+        "k": 0
+      },
+      "model.layers.3.mlp.gate_proj": {
+        "s_X": 0.3985322666919138,
+        "s_10": 0.1,
+        "k": 0
+      },
+      "model.layers.3.mlp.up_proj": {
+        "s_X": 0.3985322666919138,
+        "s_10": 0.02734790244485872,
+        "k": 0
+      },
+      "model.layers.3.mlp.down_proj": {
+        "s_X": 0.050720926149982394,
+        "s_10": 0.004133159113102198,
+        "k": -2
+      },
+      "model.layers.4.self_attn.q_proj": {
+        "s_X": 0.27298406165415845,
+        "s_10": 0.030007605268378926,
+        "k": 0
+      },
+      "model.layers.4.self_attn.k_proj": {
+        "s_X": 0.27298406165415845,
+        "s_10": 0.030708015190072466,
+        "k": 0
+      },
+      "model.layers.4.self_attn.v_proj": {
+        "s_X": 0.27298406165415845,
+        "s_10": 0.011643317407621777,
+        "k": 0
+      },
+      "model.layers.4.self_attn.o_proj": {
+        "s_X": 0.04941546072171429,
+        "s_10": 0.0026378932247043438,
+        "k": 0
+      },
+      "model.layers.4.mlp.gate_proj": {
+        "s_X": 0.41927710105115035,
+        "s_10": 0.1,
+        "k": 0
+      },
+      "model.layers.4.mlp.up_proj": {
+        "s_X": 0.41927710105115035,
+        "s_10": 0.03304968914172574,
+        "k": 0
+      },
+      "model.layers.4.mlp.down_proj": {
+        "s_X": 0.038223395864209544,
+        "s_10": 0.00470789852759855,
+        "k": -1
+      },
+      "model.layers.5.self_attn.q_proj": {
+        "s_X": 0.23957949360524575,
+        "s_10": 0.027872737051548958,
+        "k": 0
+      },
+      "model.layers.5.self_attn.k_proj": {
+        "s_X": 0.23957949360524575,
+        "s_10": 0.031007355153142752,
+        "k": 0
+      },
+      "model.layers.5.self_attn.v_proj": {
+        "s_X": 0.23957949360524575,
+        "s_10": 0.00709677490582036,
+        "k": 0
+      },
+      "model.layers.5.self_attn.o_proj": {
+        "s_X": 0.037041513938603436,
+        "s_10": 0.004422438287004189,
+        "k": 0
+      },
+      "model.layers.5.mlp.gate_proj": {
+        "s_X": 0.4235353544941099,
+        "s_10": 0.1,
+        "k": 0
+      },
+      "model.layers.5.mlp.up_proj": {
+        "s_X": 0.4235353544941099,
+        "s_10": 0.02295824805342389,
+        "k": 0
+      },
+      "model.layers.5.mlp.down_proj": {
+        "s_X": 0.03362189469597742,
+        "s_10": 0.0070338055991494425,
+        "k": 0
+      },
+      "model.layers.6.self_attn.q_proj": {
+        "s_X": 0.30385045930156557,
+        "s_10": 0.027094309049189323,
+        "k": 0
+      },
+      "model.layers.6.self_attn.k_proj": {
+        "s_X": 0.30385045930156557,
+        "s_10": 0.03207205589875921,
+        "k": 0
+      },
+      "model.layers.6.self_attn.v_proj": {
+        "s_X": 0.30385045930156557,
+        "s_10": 0.007808138355767178,
+        "k": 0
+      },
+      "model.layers.6.self_attn.o_proj": {
+        "s_X": 0.04065028138048067,
+        "s_10": 0.006970633613799508,
+        "k": 0
+      },
+      "model.layers.6.mlp.gate_proj": {
+        "s_X": 0.46477343341496985,
+        "s_10": 0.1,
+        "k": 0
+      },
+      "model.layers.6.mlp.up_proj": {
+        "s_X": 0.46477343341496985,
+        "s_10": 0.017367394868996817,
+        "k": 0
+      },
+      "model.layers.6.mlp.down_proj": {
+        "s_X": 0.032511839143118,
+        "s_10": 0.004886458808583359,
+        "k": 0
+      },
+      "model.layers.7.self_attn.q_proj": {
+        "s_X": 0.3265497402882013,
+        "s_10": 0.02399895152961916,
+        "k": 0
+      },
+      "model.layers.7.self_attn.k_proj": {
+        "s_X": 0.3265497402882013,
+        "s_10": 0.026009080630288423,
+        "k": 0
+      },
+      "model.layers.7.self_attn.v_proj": {
+        "s_X": 0.3265497402882013,
+        "s_10": 0.007652526638663362,
+        "k": 0
+      },
+      "model.layers.7.self_attn.o_proj": {
+        "s_X": 0.04130151328139418,
+        "s_10": 0.002927675783664818,
+        "k": 0
+      },
+      "model.layers.7.mlp.gate_proj": {
+        "s_X": 0.4877010555717889,
+        "s_10": 0.1,
+        "k": 0
+      },
+      "model.layers.7.mlp.up_proj": {
+        "s_X": 0.4877010555717889,
+        "s_10": 0.021029127380288302,
+        "k": 0
+      },
+      "model.layers.7.mlp.down_proj": {
+        "s_X": 0.028166947654655786,
+        "s_10": 0.01752360018309088,
+        "k": 4
+      },
+      "model.layers.8.self_attn.q_proj": {
+        "s_X": 0.36531415323572836,
+        "s_10": 0.01931758939326242,
+        "k": 0
+      },
+      "model.layers.8.self_attn.k_proj": {
+        "s_X": 0.36531415323572836,
+        "s_10": 0.029029180624886193,
+        "k": 0
+      },
+      "model.layers.8.self_attn.v_proj": {
+        "s_X": 0.36531415323572836,
+        "s_10": 0.00819967066035962,
+        "k": 0
+      },
+      "model.layers.8.self_attn.o_proj": {
+        "s_X": 0.03271618039589229,
+        "s_10": 0.002984912652735104,
+        "k": 0
+      },
+      "model.layers.8.mlp.gate_proj": {
+        "s_X": 0.5243468997985359,
+        "s_10": 0.1,
+        "k": 0
+      },
+      "model.layers.8.mlp.up_proj": {
+        "s_X": 0.5243468997985359,
+        "s_10": 0.027438949335823946,
+        "k": 0
+      },
+      "model.layers.8.mlp.down_proj": {
+        "s_X": 0.024526379690380812,
+        "s_10": 0.027664845681887387,
+        "k": 5
+      },
+      "model.layers.9.self_attn.q_proj": {
+        "s_X": 0.41246044729638287,
+        "s_10": 0.020108040622374222,
+        "k": 0
+      },
+      "model.layers.9.self_attn.k_proj": {
+        "s_X": 0.41246044729638287,
+        "s_10": 0.04230240454427595,
+        "k": 0
+      },
+      "model.layers.9.self_attn.v_proj": {
+        "s_X": 0.41246044729638287,
+        "s_10": 0.007969601232448748,
+        "k": 0
+      },
+      "model.layers.9.self_attn.o_proj": {
+        "s_X": 0.04086306714636134,
+        "s_10": 0.004032875028774582,
+        "k": 0
+      },
+      "model.layers.9.mlp.gate_proj": {
+        "s_X": 0.532886234794076,
+        "s_10": 0.1,
+        "k": 0
+      },
+      "model.layers.9.mlp.up_proj": {
+        "s_X": 0.532886234794076,
+        "s_10": 0.03126452246252506,
+        "k": 0
+      },
+      "model.layers.9.mlp.down_proj": {
+        "s_X": 0.02654486945501135,
+        "s_10": 0.0038522836167317947,
+        "k": 0
+      },
+      "model.layers.10.self_attn.q_proj": {
+        "s_X": 0.4139352032518762,
+        "s_10": 0.032276920465837716,
+        "k": 0
+      },
+      "model.layers.10.self_attn.k_proj": {
+        "s_X": 0.4139352032518762,
+        "s_10": 0.03507830783016727,
+        "k": 0
+      },
+      "model.layers.10.self_attn.v_proj": {
+        "s_X": 0.4139352032518762,
+        "s_10": 0.006515828976112621,
+        "k": 0
+      },
+      "model.layers.10.self_attn.o_proj": {
+        "s_X": 0.03297549345361905,
+        "s_10": 0.0035575404381475682,
+        "k": 0
+      },
+      "model.layers.10.mlp.gate_proj": {
+        "s_X": 0.5594419344203678,
+        "s_10": 0.1,
+        "k": 0
+      },
+      "model.layers.10.mlp.up_proj": {
+        "s_X": 0.5594419344203678,
+        "s_10": 0.009464029980750407,
+        "k": 0
+      },
+      "model.layers.10.mlp.down_proj": {
+        "s_X": 0.029077519361174062,
+        "s_10": 0.005130665366684068,
+        "k": 0
+      },
+      "model.layers.11.self_attn.q_proj": {
+        "s_X": 0.4397388968880721,
+        "s_10": 0.02993460240811296,
+        "k": 0
+      },
+      "model.layers.11.self_attn.k_proj": {
+        "s_X": 0.4397388968880721,
+        "s_10": 0.027843273012165583,
+        "k": 0
+      },
+      "model.layers.11.self_attn.v_proj": {
+        "s_X": 0.4397388968880721,
+        "s_10": 0.008833896412441585,
+        "k": 0
+      },
+      "model.layers.11.self_attn.o_proj": {
+        "s_X": 0.04839379768671952,
+        "s_10": 0.003043535185311351,
+        "k": 0
+      },
+      "model.layers.11.mlp.gate_proj": {
+        "s_X": 0.49798695121224473,
+        "s_10": 0.1,
+        "k": 0
+      },
+      "model.layers.11.mlp.up_proj": {
+        "s_X": 0.49798695121224473,
+        "s_10": 0.027613686366683543,
+        "k": 0
+      },
+      "model.layers.11.mlp.down_proj": {
+        "s_X": 0.04120852278461451,
+        "s_10": 0.005009357558189546,
+        "k": -2
+      },
+      "model.layers.12.self_attn.q_proj": {
+        "s_X": 0.4234142754021592,
+        "s_10": 0.02069385360136338,
+        "k": 0
+      },
+      "model.layers.12.self_attn.k_proj": {
+        "s_X": 0.4234142754021592,
+        "s_10": 0.028945812932623778,
+        "k": 0
+      },
+      "model.layers.12.self_attn.v_proj": {
+        "s_X": 0.4234142754021592,
+        "s_10": 0.009990869144770494,
+        "k": 0
+      },
+      "model.layers.12.self_attn.o_proj": {
+        "s_X": 0.040459539007952836,
+        "s_10": 0.004856618219669769,
+        "k": 0
+      },
+      "model.layers.12.mlp.gate_proj": {
+        "s_X": 0.5469219177726685,
+        "s_10": 0.1,
+        "k": 0
+      },
+      "model.layers.12.mlp.up_proj": {
+        "s_X": 0.5469219177726685,
+        "s_10": 0.013578050990628256,
+        "k": 0
+      },
+      "model.layers.12.mlp.down_proj": {
+        "s_X": 0.04774677847314069,
+        "s_10": 0.005577903089469502,
+        "k": -2
+      },
+      "model.layers.13.self_attn.q_proj": {
+        "s_X": 0.5112491517555057,
+        "s_10": 0.02473130454847349,
+        "k": 0
+      },
+      "model.layers.13.self_attn.k_proj": {
+        "s_X": 0.5112491517555057,
+        "s_10": 0.03058599798008071,
+        "k": 0
+      },
+      "model.layers.13.self_attn.v_proj": {
+        "s_X": 0.5112491517555057,
+        "s_10": 0.006482152542112583,
+        "k": 0
+      },
+      "model.layers.13.self_attn.o_proj": {
+        "s_X": 0.04793363481056033,
+        "s_10": 0.006331390260360215,
+        "k": 0
+      },
+      "model.layers.13.mlp.gate_proj": {
+        "s_X": 0.5543916957584891,
+        "s_10": 0.1,
+        "k": 0
+      },
+      "model.layers.13.mlp.up_proj": {
+        "s_X": 0.5543916957584891,
+        "s_10": 0.019696777307986274,
+        "k": 0
+      },
+      "model.layers.13.mlp.down_proj": {
+        "s_X": 0.07599170793847512,
+        "s_10": 0.00848023200263974,
+        "k": -2
+      },
+      "model.layers.14.self_attn.q_proj": {
+        "s_X": 0.5221090241679995,
+        "s_10": 0.02297044330148192,
+        "k": 0
+      },
+      "model.layers.14.self_attn.k_proj": {
+        "s_X": 0.5221090241679995,
+        "s_10": 0.021826114068106618,
+        "k": 0
+      },
+      "model.layers.14.self_attn.v_proj": {
+        "s_X": 0.5221090241679995,
+        "s_10": 0.013131198788238835,
+        "k": 0
+      },
+      "model.layers.14.self_attn.o_proj": {
+        "s_X": 0.059502935785008225,
+        "s_10": 0.00665561399765493,
+        "k": 0
+      },
+      "model.layers.14.mlp.gate_proj": {
+        "s_X": 0.6668131670613927,
+        "s_10": 0.1,
+        "k": 0
+      },
+      "model.layers.14.mlp.up_proj": {
+        "s_X": 0.6668131670613927,
+        "s_10": 0.028330732807872353,
+        "k": 0
+      },
+      "model.layers.14.mlp.down_proj": {
+        "s_X": 0.11293576948808345,
+        "s_10": 0.00766705943080151,
+        "k": -2
+      },
+      "model.layers.15.self_attn.q_proj": {
+        "s_X": 0.5212994673120694,
+        "s_10": 0.02967633571321144,
+        "k": 0
+      },
+      "model.layers.15.self_attn.k_proj": {
+        "s_X": 0.5212994673120694,
+        "s_10": 0.021530750564063266,
+        "k": 0
+      },
+      "model.layers.15.self_attn.v_proj": {
+        "s_X": 0.5212994673120694,
+        "s_10": 0.02005295172459187,
+        "k": 0
+      },
+      "model.layers.15.self_attn.o_proj": {
+        "s_X": 0.0728716737642063,
+        "s_10": 0.004019391533994654,
+        "k": 0
+      },
+      "model.layers.15.mlp.gate_proj": {
+        "s_X": 0.8713639627291462,
+        "s_10": 0.1,
+        "k": 0
+      },
+      "model.layers.15.mlp.up_proj": {
+        "s_X": 0.8713639627291462,
+        "s_10": 0.03118999734926476,
+        "k": 0
+      },
+      "model.layers.15.mlp.down_proj": {
+        "s_X": 0.12424406176432232,
+        "s_10": 0.01498011739182648,
+        "k": -1
+      },
+      "model.layers.16.self_attn.q_proj": {
+        "s_X": 0.5084650234913263,
+        "s_10": 0.03163715224746439,
+        "k": 0
+      },
+      "model.layers.16.self_attn.k_proj": {
+        "s_X": 0.5084650234913263,
+        "s_10": 0.023877710994060983,
+        "k": 0
+      },
+      "model.layers.16.self_attn.v_proj": {
+        "s_X": 0.5084650234913263,
+        "s_10": 0.009878570599917948,
+        "k": 0
+      },
+      "model.layers.16.self_attn.o_proj": {
+        "s_X": 0.050307964715431995,
+        "s_10": 0.008932531393021317,
+        "k": 0
+      },
+      "model.layers.16.mlp.gate_proj": {
+        "s_X": 1.0033412542868787,
+        "s_10": 0.1,
+        "k": 0
+      },
+      "model.layers.16.mlp.up_proj": {
+        "s_X": 1.0033412542868787,
+        "s_10": 0.04268388557187473,
+        "k": 0
+      },
+      "model.layers.16.mlp.down_proj": {
+        "s_X": 0.1391938735466204,
+        "s_10": 0.03561739847926372,
+        "k": 1
+      },
+      "model.layers.17.self_attn.q_proj": {
+        "s_X": 0.7801551518477793,
+        "s_10": 0.019627759008522237,
+        "k": 0
+      },
+      "model.layers.17.self_attn.k_proj": {
+        "s_X": 0.7801551518477793,
+        "s_10": 0.03161156489809467,
+        "k": 0
+      },
+      "model.layers.17.self_attn.v_proj": {
+        "s_X": 0.7801551518477793,
+        "s_10": 0.007584077251045921,
+        "k": 0
+      },
+      "model.layers.17.self_attn.o_proj": {
+        "s_X": 0.04963882701603446,
+        "s_10": 0.017197297552991358,
+        "k": 0
+      },
+      "model.layers.17.mlp.gate_proj": {
+        "s_X": 1.3803368515855685,
+        "s_10": 0.1,
+        "k": 0
+      },
+      "model.layers.17.mlp.up_proj": {
+        "s_X": 1.3803368515855685,
+        "s_10": 0.057270489689215415,
+        "k": 0
+      },
+      "model.layers.17.mlp.down_proj": {
+        "s_X": 0.14417332510157593,
+        "s_10": 0.41800357495886586,
+        "k": 7
+      }
+    },
+    "source_hashes": {
+      "scripts/quant_diagnostic_source.py": "6e1a93ec2987c2e03872ae7686621ef5b32e2690f9c5389c04a53c0d1aed9f7e",
+      "scripts/quant_diagnostic_math.py": "6c580b60896228e9304257871eb6f5a2c3ee3b6150328505753870cc7472e31c",
+      "src/static_quant/hardware.py": "173a90ceb6742cfe8033e1473f556d8848aa99ce89882f1b9feb003ddfcca206",
+      "src/static_quant/core.py": "e1c7f5b7466718b47f0a0f8d18be50b2a3a686f169b42bcb68e5f3355aadf135"
+    }
+  },
+  "scope": "FP32 recovered GGUF model; only Linear INT8/INT10 propagated",
+  "top5_definition": "mean |FP top5 intersection quant top5| / 5; exact set agreement also recorded",
+  "cosine_definition": "mean per-token cosine; flattened cosine also recorded",
+  "decode": "not run; this focused experiment uses complete unpadded prefill, use_cache=False"
+}

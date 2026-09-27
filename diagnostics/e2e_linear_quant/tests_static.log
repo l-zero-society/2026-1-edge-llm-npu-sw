@@ -1,0 +1,27 @@
+test_data_loading (test_static_quant.CalibrationTests) ... ok
+test_fixed_lut_constraints (test_static_quant.CalibrationTests) ... ok
+test_gemma2_rejected (test_static_quant.CalibrationTests) ... ok
+test_metrics_against_dense_oracle_and_heldout (test_static_quant.CalibrationTests) ... ok
+test_padding_and_nonfinite (test_static_quant.CalibrationTests) ... ok
+test_reproducibility (test_static_quant.CalibrationTests) ... ok
+test_reservoir_bounded_reproducible (test_static_quant.CalibrationTests) ... ok
+test_shared_consumer_groups_and_selection (test_static_quant.CalibrationTests) ... ok
+test_zero_tensor (test_static_quant.CalibrationTests) ... ok
+test_cli_e2e_and_vectors (test_static_quant.ExportTests) ... ok
+test_default_blocks_binary (test_static_quant.ExportTests) ... ok
+test_existing_lut_contract (test_static_quant.ExportTests) ... ok
+test_export_reload_padding_mapping_and_compiler (test_static_quant.ExportTests) ... ok
+test_inaccurate_blocks_binary_even_with_unverified_flag (test_static_quant.ExportTests) ... ok
+test_int32_extremes_product_fits (test_static_quant.IntegerReferenceTests) ... ok
+test_k_chunk_and_python_integer_oracle (test_static_quant.IntegerReferenceTests) ... ok
+test_overflow (test_static_quant.IntegerReferenceTests) ... ok
+test_pack_unpack_and_endian (test_static_quant.IntegerReferenceTests) ... ok
+test_ratio_range_status_and_rejection (test_static_quant.IntegerReferenceTests) ... ok
+test_rounding_negative_and_saturation (test_static_quant.IntegerReferenceTests) ... ok
+test_rounding_python_oracle (test_static_quant.IntegerReferenceTests) ... ok
+test_weight_axis_and_row_reuse (test_static_quant.IntegerReferenceTests) ... ok
+
+----------------------------------------------------------------------
+Ran 22 tests in 0.169s
+
+OK

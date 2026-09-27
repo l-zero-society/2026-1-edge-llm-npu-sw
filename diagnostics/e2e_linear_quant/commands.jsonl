@@ -1,0 +1,2 @@
+{"argv": ["scripts/test_e2e_linear_quant.py", "--sequences", "8"], "time": 1790510243.935744}
+{"argv": ["scripts/test_e2e_linear_quant.py", "--sequences", "32"], "time": 1790510545.05641}

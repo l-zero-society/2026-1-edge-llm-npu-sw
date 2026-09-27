@@ -1,0 +1,26 @@
+## Answers A–G
+
+A. **Down_proj-only is bounded but not accuracy-stable.** All 18 layers remain finite, with quant/FP hidden-energy ratios spanning 0.928969–1.099894. Final block hidden NMSE is 14.538275%; final normalized hidden NMSE is 13.221936%. Perplexity increases from 186.637058 to 220.711908 (+18.257%).
+
+B. **All-Linear propagation is also bounded but loses more accuracy.** Energy ratios span 0.903427–1.104239. Final block hidden NMSE is 17.546855%; post-normalization NMSE is 14.488294%. Perplexity is 266.943033 (+43.028% versus FP). These energy ratios indicate no exploding activation scale; they do not establish accuracy.
+
+C. **Material error is already present at layer 0**: total hidden NMSE 3.136937% (A), 3.724677% (B). Both first cross 1% there. Total NMSE first exceeds 5% at layer 15 (A) and layer 14 (B); the **non-BOS group crosses 5% at layer 1 in both modes**. Non-BOS NMSE reaches 13.061600% / 13.913497% at layer 5. The smaller mid-layer all-position NMSE must not be interpreted as recovery of normal-token accuracy: reference energy differs substantially between position groups. The worst layer is 17 in both modes.
+
+D. **The early propagation problem is primarily in ordinary tokens, not BOS alone.** At layer 16, BOS NMSE is only 0.006212% / 0.011963%, while non-BOS NMSE is 14.492372% / 15.856245%. At layer 17, both groups are affected: A BOS 13.186506% versus non-BOS 15.175714%; B BOS 19.444427% versus non-BOS 16.652037%. These are independent conditional NMSEs, without BOS/non-BOS objective weighting in reporting.
+
+E. **Logit ranking is not reliably preserved despite high cosine.** A/B mean logit cosine is 0.99339565 / 0.99247186, but top-1 agreement is only 64.0864% / 62.0254%. Top-5 overlap is 65.4649% / 63.9227%; exact top-5 set agreement is 13.3222% / 11.8825%. KL(FP||quant) is 1.07989234 / 1.30009617 nats/token.
+
+F. **Do not treat this Linear scheme as accuracy-qualified for subsequent fixed-point nonlinear validation yet.** No acceptance threshold was specified, but the measured ranking disagreement, KL and likelihood loss are substantial. Fixed-point blocks may be implemented/tested independently; adding their errors now would obscure an already significant Linear-only loss. No loss in this experiment is attributable to a LUT or fixed-point Normalizer/RoPE/softmax.
+
+G. **The first demonstrated bottleneck family is down_proj, starting at layer 0.** Mode A quantizes only this family and already produces 3.136937% total / 4.199223% non-BOS hidden NMSE at the first block. The large final BOS jump is localized to layer 17. Mode B introduces additional loss, but this comparison does not isolate which of q/k/v/o/gate/up contributes most; no additive MSE decomposition is implied. Next test calibration-only remedies for normal-token down_proj error and the layer-17 operating cases, keeping nonlinear math FP and confirming each frozen remedy on independent propagated validation. This task did not select any remedy or recalibrate on validation.
+
+## Exact scope and sanity verification
+
+- Mode A: `model.layers.{0..17}.mlp.down_proj` (18 operations).
+- Mode B: `q_proj`, `k_proj`, `v_proj`, `o_proj`, `gate_proj`, `up_proj`, `down_proj` in all 18 layers (126 operations). Non-down operations use the actual historical all-126 exported scales/qparams, without correcting or recalibrating historical policy differences. Down operations use exactly the frozen global w_BOS=0.25 sX_normal, k and s10.
+- RMSNorm, GeLU, RoPE, softmax, attention scaling, residual/elementwise math, embedding and lm_head remain the original FP32 model path. There is no LUT execution or KV-cache arithmetic (`use_cache=False`).
+- Reference and both modes use the same 32 held-out tokenized sequences: 10,141 valid positions, 10,109 next-token targets, max length 512. The prefix-8 sanity pass verifies native FP logits equal instrumented FP logits bit-for-bit. Every full reference pass uses the unchanged original model driver.
+- All 126 stored INT8 weights and per-channel scales exactly match re-quantization of the reference recovered matrices; stored non-down multiplier/shift fields reproduce exactly. Existing INT64 references agree with accelerated integer GEMMs and PoT shift application for all 126 operations. All effective shifts remain 0..31. This validates the existing software profile, not RTL bit equivalence.
+- All 1,088 quantized-run transformer boundaries (2 modes × 32 sequences × 17 boundaries) passed tensor-pointer propagation assertions. Quantized wrappers accept only the actual current model input; they have no reference activation argument. Each selected operation executes once per prefill, with exactly one position-0 row and T-1 normal rows.
+- 38 unit tests pass (22 existing static_quant, 16 focused); 18 final data/provenance invariants pass. Missing artifacts: **none**. Production, RTL, LUT, QB, ABI and calibration artifacts are unchanged. Source/parameter hashes and commit are in `provenance.json`; checks are in `verification.json`; exact commands and logs are in this directory.
+- Decode is intentionally not run: the focused wrapper is prefill-only; decode needs cache-position-aware row handling and verification. The measured result is not end-to-end hardware accuracy and does not measure BF16-to-GGUF source error.

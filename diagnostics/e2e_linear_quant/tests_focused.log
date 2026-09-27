@@ -1,0 +1,21 @@
+test_identity_metrics_and_next_token_targets (test_e2e_linear_math.E2ELinearTests) ... ok
+test_invalid_shift_is_rejected (test_e2e_linear_math.E2ELinearTests) ... ok
+test_outputs_propagate_and_only_requested_modules_change (test_e2e_linear_math.E2ELinearTests) ... ok
+test_prefill_matches_existing_path_and_position_zero_only (test_e2e_linear_math.E2ELinearTests) ... ok
+test_arbitrary_uses_same_scalar_on_input_and_before_rounding (test_factorized_math.FactorizedTests) ... ok
+test_bos_never_generates_another_channel_parameter_array (test_factorized_math.FactorizedTests) ... ok
+test_c_one_is_existing_path_exactly (test_factorized_math.FactorizedTests) ... ok
+test_calibration_only_and_frozen_common_scale (test_factorized_math.FactorizedTests) ... ok
+test_invalid_correction_rejected (test_factorized_math.FactorizedTests) ... ok
+test_pot_exact_extended_shifts_and_signed_ties (test_factorized_math.FactorizedTests) ... ok
+test_baseline_matches_previous_pot (test_s10_search.S10Tests) ... ok
+test_candidate_grid_recomputes_channel_params_but_freezes_input (test_s10_search.S10Tests) ... ok
+test_deterministic_tie_breaks (test_s10_search.S10Tests) ... ok
+test_effective_shift_feasibility_and_feasible_selection (test_s10_search.S10Tests) ... ok
+test_production_source_and_lut_contract_unchanged (test_s10_search.S10Tests) ... ok
+test_validation_independent_and_common_scale (test_s10_search.S10Tests) ... ok
+
+----------------------------------------------------------------------
+Ran 16 tests in 0.215s
+
+OK
