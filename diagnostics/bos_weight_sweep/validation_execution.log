@@ -1,0 +1,40 @@
+/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/.venv-calibration/lib/python3.9/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+VALIDATED missing scales 0 [0.02793682146138546, 0.033222666852440304]
+VALIDATED missing scales 1 [0.007798598043942701, 0.011028883121240058]
+VALIDATED missing scales 2 [0.00869869980267485]
+VALIDATED missing scales 3 [0.004507241973173824]
+VALIDATED missing scales 6 [0.004480902484424021, 0.004886458808583359]
+VALIDATED missing scales 7 [0.02702508590248333]
+VALIDATED missing scales 8 [0.025368775344924023]
+VALIDATED missing scales 11 [0.005009357558189546]
+VALIDATED missing scales 13 [0.00848023200263974]
+VALIDATED missing scales 14 [0.00766705943080151]
+VALIDATED missing scales 15 [0.012596727014866712]
+VALIDATED missing scales 16 [0.029950542701875964]
+VALIDATED missing scales 17 [0.41800357495886586]
+{
+  "best_global": 0.25,
+  "plateau": [
+    0.2,
+    0.25,
+    0.3,
+    0.35,
+    0.4,
+    0.45
+  ],
+  "gains": {
+    "calibration": {
+      "absolute_nmse_reduction": 6.797577836968605e-05,
+      "percentage_point_reduction": 0.006797577836968605,
+      "relative_reduction": 0.0013765785814290811
+    },
+    "validation": {
+      "absolute_nmse_reduction": 7.442508852346236e-05,
+      "percentage_point_reduction": 0.007442508852346236,
+      "relative_reduction": 0.0015232602181267346
+    }
+  },
+  "material_layers": [],
+  "missing_validation": 0
+}

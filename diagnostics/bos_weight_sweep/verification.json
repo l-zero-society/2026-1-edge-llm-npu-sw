@@ -1,0 +1,24 @@
+{
+  "checks": {
+    "source_hashes_unchanged": true,
+    "script_hash_unchanged": true,
+    "594_existing_candidates": true,
+    "all_378_selections_feasible_and_pareto": true,
+    "50_50_reproduces_all_18": true,
+    "global_minimizes_calibration_robust_score": true,
+    "all_per_op_minimize_calibration_worst": true,
+    "164_frontier_candidates": true,
+    "no_missing_validation": true,
+    "sx_and_k_frozen": true,
+    "only_16_missing_combinations_13_layers": true,
+    "validation_references_frozen_selection": true,
+    "selection_frozen_before_validation": true,
+    "cached_activations_unmodified": true,
+    "validation_metrics_finite": true,
+    "transitions_cover_all_21_weights": true,
+    "synthetic_frontier_and_objectives": true
+  },
+  "passed": 17,
+  "failed": 0,
+  "kind": "analysis invariants and numerical smoke checks; no production test suite changes"
+}
