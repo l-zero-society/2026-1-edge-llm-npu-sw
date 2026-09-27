@@ -1,0 +1,51 @@
+{
+  "script_sha256": "18ee4b07ed5906203535694e932a6de07dbead582d01ee392e2839183d8b0314",
+  "commit": "9389e55850df0f97048b0b3ab5868e8bdad91c6e",
+  "previous_provenance_sha256": "909960524c915ffa4cd98f340faf7b8679f81a9d95b98153841a2bb5494ca215",
+  "model_sha256": "dae8a0a75dda3553c06af737adfff0c003ed1b6393932964cce72bb4f0fd41f6",
+  "effective_shift_bounds": [
+    0,
+    31
+  ],
+  "ratio_exponents": [
+    -16,
+    16,
+    8
+  ],
+  "profile": {
+    "name": "generic-rne",
+    "shift_correction": 0,
+    "rounding": "nearest_even",
+    "verification": "unverified",
+    "rtl_bit_exact": false,
+    "source": "src/static_quant/hardware.py; software definition only; no RTL found",
+    "historical_layout_source": "user request, unconfirmed design history",
+    "multiplier": "unsigned 16 bit",
+    "shift": "unsigned 5 bit",
+    "effective_shift": "max(shift - shift_correction, 0)",
+    "zero_point": "signed 8 bit, added AFTER rounded shift; exports use zero",
+    "product": "signed 48 bit exact; INT32 * UInt16 fits; no truncation or wrap",
+    "right_shift": "arithmetic (floor for negatives)",
+    "saturation": "signed INT10 [-512,511], after shift and zero point",
+    "lut_index": "10-bit two's complement: signed_q10 & 1023",
+    "layout": {
+      "zp": [
+        0,
+        7
+      ],
+      "shift": [
+        8,
+        12
+      ],
+      "reserved_zero": [
+        13,
+        15
+      ],
+      "multiplier": [
+        16,
+        31
+      ]
+    },
+    "endian": "little"
+  }
+}

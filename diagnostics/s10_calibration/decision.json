@@ -1,0 +1,4 @@
+{
+  "proceed": true,
+  "explanation": "GO after layers 7/8/17: validation BOS NMSE falls from 17.0429% to 3.9488% (layer 7) and 17.4642% to 1.8280% (layer 8), with non-BOS increases of 0.1492 and 0.4009 percentage points. These are material gains with modest ordinary-token costs, so expand to remaining down_proj only. Layer 17 trades BOS 0.5608%\u21923.6167% for non-BOS 21.0356%\u219212.4162%, illustrating the balanced objective, not a no-regression guarantee. All choices were fitted on calibration; validation is used only for this requested architecture-expansion decision. Also authorize the bounded optional three-layer joint diagnostic to measure residual input-scale restrictions; do not expand joint search to all 18."
+}

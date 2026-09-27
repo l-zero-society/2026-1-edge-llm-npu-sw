@@ -1,0 +1,70 @@
+{
+  "passed": true,
+  "tests_passed": 34,
+  "operations": 18,
+  "joint_operations": 3,
+  "primary_candidate_count": 594,
+  "joint_candidate_count": 81,
+  "summaries_percent": [
+    {
+      "scheme": "frozen",
+      "bos_median": 0.4709540330414404,
+      "bos_max": 17.464183275037662,
+      "non_bos_median": 4.436393099337672,
+      "non_bos_max": 21.035583596769843
+    },
+    {
+      "scheme": "calibrated",
+      "bos_median": 0.32244625550349476,
+      "bos_max": 3.9487939462623087,
+      "non_bos_median": 4.442514576791299,
+      "non_bos_max": 12.936505690458677
+    }
+  ],
+  "selected_scale_range": [
+    0.003767974836253623,
+    0.5420835699921855
+  ],
+  "selected_ratio_range": [
+    0.5452538663326288,
+    2.0
+  ],
+  "effective_shift_range": [
+    12,
+    30
+  ],
+  "infeasible_selected": 0,
+  "infeasible_unconstrained_best": 0,
+  "normal_worse_layers": [
+    0,
+    1,
+    2,
+    3,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    15,
+    16
+  ],
+  "bos_worse_layers": [
+    4,
+    17
+  ],
+  "checks": [
+    "frozen sx/k primary candidates",
+    "exact previous PoT metrics reproduction",
+    "independent frozen validation",
+    "common s10 for both groups",
+    "0..31 shift feasibility",
+    "unchanged INT8-pair metrics",
+    "unchanged previous numerical sources",
+    "joint rerun reproduces both first-pass policies"
+  ],
+  "seconds": 312.716138833,
+  "joint_seconds": 80.618906834
+}

@@ -1,0 +1,9 @@
+{
+  "python": "3.9.6",
+  "versions": {
+    "numpy": "1.26.4",
+    "gguf": "0.17.1",
+    "torch": "2.2.2",
+    "transformers": "4.57.6"
+  }
+}
