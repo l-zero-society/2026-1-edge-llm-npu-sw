@@ -1,0 +1,132 @@
+/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/.venv-calibration/lib/python3.9/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+PROTOCOL 24 9655 14630 skipped 8
+PREFILL 0 FP
+PREFILL 0 bos_only
+PREFILL 0 general_pot
+DONE PREFILL 0 {'FP': 173.68038754754286, 'bos_only': 79.88287878602759, 'general_pot': 189.58106240558686}
+PREFILL 1 FP
+PREFILL 1 bos_only
+PREFILL 1 general_pot
+DONE PREFILL 1 {'FP': 8.46406005480597, 'bos_only': 6.750551056572658, 'general_pot': 8.467468218187141}
+PREFILL 2 FP
+PREFILL 2 bos_only
+PREFILL 2 general_pot
+DONE PREFILL 2 {'FP': 164.70644310814333, 'bos_only': 108.18316044372014, 'general_pot': 184.66865412696012}
+PREFILL 3 FP
+PREFILL 3 bos_only
+PREFILL 3 general_pot
+DONE PREFILL 3 {'FP': 401.88311306040964, 'bos_only': 272.87677539979876, 'general_pot': 436.377927029009}
+PREFILL 4 FP
+PREFILL 4 bos_only
+PREFILL 4 general_pot
+DONE PREFILL 4 {'FP': 11.203210130877412, 'bos_only': 8.718044957876307, 'general_pot': 11.701204816314714}
+PREFILL 5 FP
+PREFILL 5 bos_only
+PREFILL 5 general_pot
+DONE PREFILL 5 {'FP': 202.578899734912, 'bos_only': 114.23526233568013, 'general_pot': 215.66343654417648}
+PREFILL 7 FP
+PREFILL 7 bos_only
+PREFILL 7 general_pot
+DONE PREFILL 7 {'FP': 203.95471231468176, 'bos_only': 137.60854202700287, 'general_pot': 207.4634681904441}
+PREFILL 8 FP
+PREFILL 8 bos_only
+PREFILL 8 general_pot
+DONE PREFILL 8 {'FP': 98.02326272963958, 'bos_only': 53.302527574555036, 'general_pot': 104.58202835096196}
+PREFILL 9 FP
+PREFILL 9 bos_only
+PREFILL 9 general_pot
+DONE PREFILL 9 {'FP': 17.588816202254975, 'bos_only': 14.20678318423017, 'general_pot': 18.121129319948267}
+PREFILL 10 FP
+PREFILL 10 bos_only
+PREFILL 10 general_pot
+DONE PREFILL 10 {'FP': 406.20387712806007, 'bos_only': 135.26553709134194, 'general_pot': 394.0735942601552}
+PREFILL 11 FP
+PREFILL 11 bos_only
+PREFILL 11 general_pot
+DONE PREFILL 11 {'FP': 152.50109094146399, 'bos_only': 93.27640341235758, 'general_pot': 170.78749080537028}
+PREFILL 12 FP
+PREFILL 12 bos_only
+PREFILL 12 general_pot
+DONE PREFILL 12 {'FP': 135.37150467321416, 'bos_only': 77.62095493959272, 'general_pot': 146.13198213340593}
+PREFILL 13 FP
+PREFILL 13 bos_only
+PREFILL 13 general_pot
+DONE PREFILL 13 {'FP': 52.31983977920198, 'bos_only': 31.89179708969441, 'general_pot': 56.58813984499912}
+PREFILL 16 FP
+PREFILL 16 bos_only
+PREFILL 16 general_pot
+DONE PREFILL 16 {'FP': 82.43197497803875, 'bos_only': 54.19396320249201, 'general_pot': 89.73393565439689}
+PREFILL 18 FP
+PREFILL 18 bos_only
+PREFILL 18 general_pot
+DONE PREFILL 18 {'FP': 132.89964156676047, 'bos_only': 109.77445517006382, 'general_pot': 160.62468748580096}
+PREFILL 21 FP
+PREFILL 21 bos_only
+PREFILL 21 general_pot
+DONE PREFILL 21 {'FP': 80.40921243959232, 'bos_only': 52.45653860348602, 'general_pot': 92.38203400301103}
+PREFILL 22 FP
+PREFILL 22 bos_only
+PREFILL 22 general_pot
+DONE PREFILL 22 {'FP': 1020.8651522755018, 'bos_only': 488.79247806950644, 'general_pot': 1122.8254352150207}
+PREFILL 24 FP
+PREFILL 24 bos_only
+PREFILL 24 general_pot
+DONE PREFILL 24 {'FP': 31.087618589372983, 'bos_only': 20.312049586087966, 'general_pot': 35.142716318660064}
+PREFILL 25 FP
+PREFILL 25 bos_only
+PREFILL 25 general_pot
+DONE PREFILL 25 {'FP': 55.66785285850652, 'bos_only': 38.53012920795885, 'general_pot': 57.01528666914905}
+PREFILL 26 FP
+PREFILL 26 bos_only
+PREFILL 26 general_pot
+DONE PREFILL 26 {'FP': 3.6408677349434657, 'bos_only': 2.786311780107078, 'general_pot': 3.694107455670981}
+PREFILL 27 FP
+PREFILL 27 bos_only
+PREFILL 27 general_pot
+DONE PREFILL 27 {'FP': 20.901573833690456, 'bos_only': 13.989239612618297, 'general_pot': 22.825845754244227}
+PREFILL 28 FP
+PREFILL 28 bos_only
+PREFILL 28 general_pot
+DONE PREFILL 28 {'FP': 85.89307600794345, 'bos_only': 58.83663379191183, 'general_pot': 94.0347123342835}
+PREFILL 29 FP
+PREFILL 29 bos_only
+PREFILL 29 general_pot
+DONE PREFILL 29 {'FP': 208.40435816346738, 'bos_only': 128.21233892563905, 'general_pot': 243.25943542058698}
+PREFILL 31 FP
+PREFILL 31 bos_only
+PREFILL 31 general_pot
+DONE PREFILL 31 {'FP': 39.745987072865155, 'bos_only': 28.369949872674916, 'general_pot': 41.17518153972821}
+DONE CACHE 0 32 seconds 159.8238609580003
+DONE CACHE 1 32 seconds 164.32779504200016
+DONE CACHE 2 32 seconds 139.34587762499996
+DONE CACHE 3 32 seconds 137.90818141599993
+DONE CACHE 4 32 seconds 145.51346224999998
+DONE CACHE 5 32 seconds 153.451126209
+DONE CACHE 7 32 seconds 147.8960379580003
+DONE CACHE 8 32 seconds 246.106375459
+DONE CACHE 9 32 seconds 170.19346120799992
+DONE CACHE 10 32 seconds 146.63394400000016
+DONE CACHE 11 32 seconds 140.57843283300008
+DONE CACHE 12 32 seconds 140.0164962079998
+DONE CACHE 13 32 seconds 288.40611250000075
+DONE CACHE 16 32 seconds 196.8492214580001
+DONE CACHE 18 32 seconds 383.7782040000002
+DONE CACHE 21 32 seconds 159.32226416700087
+DONE GREEDY 0 {'FP': 32, 'bos_only': 0, 'general_pot': 14}
+DONE GREEDY 1 {'FP': 32, 'bos_only': 8, 'general_pot': 32}
+DONE GREEDY 2 {'FP': 32, 'bos_only': 1, 'general_pot': 1}
+DONE GREEDY 3 {'FP': 32, 'bos_only': 8, 'general_pot': 29}
+DONE GREEDY 4 {'FP': 32, 'bos_only': 0, 'general_pot': 13}
+DONE GREEDY 5 {'FP': 32, 'bos_only': 9, 'general_pot': 16}
+DONE GREEDY 7 {'FP': 32, 'bos_only': 24, 'general_pot': 3}
+DONE GREEDY 8 {'FP': 32, 'bos_only': 6, 'general_pot': 6}
+DONE GREEDY 9 {'FP': 32, 'bos_only': 8, 'general_pot': 26}
+DONE GREEDY 10 {'FP': 32, 'bos_only': 0, 'general_pot': 0}
+DONE GREEDY 11 {'FP': 32, 'bos_only': 0, 'general_pot': 0}
+DONE GREEDY 12 {'FP': 32, 'bos_only': 0, 'general_pot': 7}
+DONE GREEDY 13 {'FP': 32, 'bos_only': 5, 'general_pot': 5}
+DONE GREEDY 16 {'FP': 32, 'bos_only': 1, 'general_pot': 32}
+DONE GREEDY 18 {'FP': 32, 'bos_only': 1, 'general_pot': 1}
+DONE GREEDY 21 {'FP': 32, 'bos_only': 2, 'general_pot': 2}
+COMPLETE {"decode_status": {"status": "complete", "examples": 16, "max_response_targets": 32}, "generation_status": {"status": "complete", "examples": 16, "max_new_tokens": 32}}

@@ -1,0 +1,12 @@
+{
+  "decode_status": {
+    "status": "complete",
+    "examples": 16,
+    "max_response_targets": 32
+  },
+  "generation_status": {
+    "status": "complete",
+    "examples": 16,
+    "max_new_tokens": 32
+  }
+}

@@ -1,0 +1,50 @@
+{
+  "generation": {
+    "FP": {
+      "shared_prefix": 32.0,
+      "token_agreement": 1.0,
+      "length": 32.0,
+      "length_difference": 0.0,
+      "median_shared_prefix": 32.0,
+      "exact_sequences": 16,
+      "eos_observed": 0,
+      "eos_comparison_censored": 16
+    },
+    "bos_only": {
+      "shared_prefix": 4.5625,
+      "token_agreement": 0.18359375,
+      "length": 31.5625,
+      "length_difference": -0.4375,
+      "median_shared_prefix": 1.5,
+      "exact_sequences": 0,
+      "eos_observed": 2,
+      "eos_comparison_censored": 16
+    },
+    "general_pot": {
+      "shared_prefix": 11.6875,
+      "token_agreement": 0.458984375,
+      "length": 31.125,
+      "length_difference": -0.875,
+      "median_shared_prefix": 6.5,
+      "exact_sequences": 2,
+      "eos_observed": 3,
+      "eos_comparison_censored": 16
+    },
+    "general_vs_bos_prefix": {
+      "longer": 8,
+      "same": 7,
+      "shorter": 1
+    }
+  },
+  "cached_max_abs_token_nll_delta": {
+    "FP": 8.710892863117436e-05,
+    "bos_only": 1.4773690147309928,
+    "general_pot": 2.489128641252231
+  },
+  "prefix_vs_full_max_normalized_hidden_nmse": {
+    "FP": 0.0,
+    "bos_only": 0.0,
+    "general_pot": 0.0
+  },
+  "max_chat_tokens": 3174
+}

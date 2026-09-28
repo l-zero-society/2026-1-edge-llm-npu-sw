@@ -1,0 +1,18 @@
+{
+  "status": "passed",
+  "tests_passed": 52,
+  "tests_failed": 0,
+  "mask_and_target_counts_verified": true,
+  "identical_mode_target_populations": true,
+  "first_content_included": true,
+  "cache_matched_window_tokens": 512,
+  "completed_prefill_examples": 24,
+  "completed_cached_examples": 16,
+  "completed_generation_examples": 16,
+  "immutable_files_rehashed": 61,
+  "tokenization_hash_verified": true,
+  "tracked_files_unchanged": true,
+  "model_hash_source": "existing provenance; model was verified by reused loader during execution",
+  "propagation": "17 boundaries asserted on every forward",
+  "production_changes": false
+}

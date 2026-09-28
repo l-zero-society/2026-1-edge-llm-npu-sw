@@ -1,0 +1,58 @@
+{
+  "examples": 24,
+  "prompt_tokens": 9655,
+  "response_tokens": 14630,
+  "total_tokens": 24333,
+  "source_recovery": {
+    "original_anchors": 32,
+    "valid": 24,
+    "skipped": [
+      {
+        "index": 6,
+        "anchor_id": "16c89e47-93cd-42e7-bdce-4ef0dfb3f62b",
+        "reason": "anchor absent from locally available ready-tree archive"
+      },
+      {
+        "index": 14,
+        "anchor_id": "fed0ccbd-2784-4ffc-8aee-3b4865cff7c6",
+        "reason": "anchor absent from locally available ready-tree archive"
+      },
+      {
+        "index": 15,
+        "anchor_id": "e43c1076-0e78-4c7a-b401-a0b8f269d2da",
+        "reason": "anchor absent from locally available ready-tree archive"
+      },
+      {
+        "index": 17,
+        "anchor_id": "86884e4b-1852-4c00-8915-1f10c956de7a",
+        "reason": "anchor absent from locally available ready-tree archive"
+      },
+      {
+        "index": 19,
+        "anchor_id": "d00050ec-af24-4abf-a1dd-2719cdab0f32",
+        "reason": "anchor absent from locally available ready-tree archive"
+      },
+      {
+        "index": 20,
+        "anchor_id": "b2da0450-0b62-44d3-89c8-898e1befdb60",
+        "reason": "anchor absent from locally available ready-tree archive"
+      },
+      {
+        "index": 23,
+        "anchor_id": "81ef8e96-da7c-4bb8-b5e7-f5d69439b4d0",
+        "reason": "anchor absent from locally available ready-tree archive"
+      },
+      {
+        "index": 30,
+        "anchor_id": "e465bd6a-7ba5-4891-917a-aec88a2a49ac",
+        "reason": "anchor absent from locally available ready-tree archive"
+      }
+    ],
+    "rule": "original assistant anchor or ranked valid human assistant child of original user anchor; preserve all ancestors; no calibration-tree overlap"
+  },
+  "template": "{{ bos_token }}{% if messages[0]['role'] == 'system' %}{{ raise_exception('System role not supported') }}{% endif %}{% for message in messages %}{% if (message['role'] == 'user') != (loop.index0 % 2 == 0) %}{{ raise_exception('Conversation roles must alternate user/assistant/user/assistant/...') }}{% endif %}{% if (message['role'] == 'assistant') %}{% set role = 'model' %}{% else %}{% set role = message['role'] %}{% endif %}{{ '<start_of_turn>' + role + '\n' + message['content'] | trim + '<end_of_turn>\n' }}{% endfor %}{% if add_generation_prompt %}{{'<start_of_turn>model\n'}}{% endif %}",
+  "template_source": "local GGUF tokenizer.chat_template",
+  "decode_examples": 16,
+  "decode_token_limit": 32,
+  "scoring": "target content token at t uses logits/hidden at t-1; first content token included; no prompt/template/control targets"
+}
