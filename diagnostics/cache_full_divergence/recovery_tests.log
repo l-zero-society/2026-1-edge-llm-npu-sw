@@ -1,0 +1,13 @@
+test_bos_absolute_offset (test_cache_full_trace_math.CacheFullTraceTests) ... ok
+test_boundary_distance (test_cache_full_trace_math.CacheFullTraceTests) ... ok
+test_force_k_changes_only_selected_row_scale (test_cache_full_trace_math.CacheFullTraceTests) ... ok
+test_force_q10_changes_output_only (test_cache_full_trace_math.CacheFullTraceTests) ... ok
+test_force_xq_injects_only_codes_and_matching_k (test_cache_full_trace_math.CacheFullTraceTests) ... ok
+test_general_is_existing_path_exactly (test_cache_full_trace_math.CacheFullTraceTests) ... ok
+test_identical_history_and_absolute_position (test_cache_full_trace_math.CacheFullTraceTests) ... ok
+test_no_tracked_production_changes (test_cache_full_trace_math.CacheFullTraceTests) ... ok
+
+----------------------------------------------------------------------
+Ran 8 tests in 0.033s
+
+OK

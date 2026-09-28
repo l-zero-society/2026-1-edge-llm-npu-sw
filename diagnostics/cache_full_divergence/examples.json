@@ -1,0 +1,30 @@
+[
+  {
+    "index": 0,
+    "anchor_id": "2b1a6983-e13c-47e9-bdda-5e2b54d27231",
+    "response_id": "2b1a6983-e13c-47e9-bdda-5e2b54d27231",
+    "prompt_tokens": 31,
+    "response_tokens": 969
+  },
+  {
+    "index": 1,
+    "anchor_id": "d2dd12d4-854f-459b-956f-d3740eaeb5b9",
+    "response_id": "d2dd12d4-854f-459b-956f-d3740eaeb5b9",
+    "prompt_tokens": 599,
+    "response_tokens": 853
+  },
+  {
+    "index": 2,
+    "anchor_id": "65060c86-991b-4e79-ab25-ee295f27b64d",
+    "response_id": "65060c86-991b-4e79-ab25-ee295f27b64d",
+    "prompt_tokens": 65,
+    "response_tokens": 657
+  },
+  {
+    "index": 3,
+    "anchor_id": "ca6ed2e0-9285-4e4c-972e-d00a0fd7ec57",
+    "response_id": "ca6ed2e0-9285-4e4c-972e-d00a0fd7ec57",
+    "prompt_tokens": 24,
+    "response_tokens": 163
+  }
+]

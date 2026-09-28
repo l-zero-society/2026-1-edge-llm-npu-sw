@@ -1,0 +1,18 @@
+{
+  "status": "passed",
+  "tests_passed": 55,
+  "tests_failed": 0,
+  "trace_rows": 6912,
+  "kv_rows": 1152,
+  "matched_targets_per_mode": 64,
+  "t0_identical": true,
+  "identical_history_and_position_asserted": true,
+  "force_Xq_ACC_raw_q10_all_exact": true,
+  "force_Xq_and_q10_final_metrics_identical": true,
+  "recovered_full_energy_fingerprints_and_k_match": true,
+  "source_artifact_hashes_verified": 62,
+  "tracked_files_unchanged": true,
+  "effective_shift_min": 8,
+  "effective_shift_max": 31,
+  "shift_violations": 0
+}
