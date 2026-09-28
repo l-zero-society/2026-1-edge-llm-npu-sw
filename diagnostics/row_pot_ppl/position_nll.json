@@ -1,0 +1,54 @@
+[
+  {
+    "mode": "bos_only",
+    "group": "bos_predictor",
+    "count": 32,
+    "nll_fp": 63.6532157143131,
+    "nll_quant": 239.1684342175722,
+    "delta_nll": 175.5152185032591,
+    "delta_target_logit": 12.020063001662493,
+    "delta_lse": 187.5352815049216,
+    "fp_ppl": 4.407987356213428e+27,
+    "quant_ppl": 7.405105088549518e+103,
+    "net_excess_share": 3.3131657892725292
+  },
+  {
+    "mode": "bos_only",
+    "group": "non_bos_predictor",
+    "count": 10077,
+    "nll_fp": 5.043637473619625,
+    "nll_quant": 4.654505343717418,
+    "delta_nll": -0.3891321299021865,
+    "delta_target_logit": -2.002867949005322,
+    "delta_lse": -2.3920000789075035,
+    "fp_ppl": 155.03291878369706,
+    "quant_ppl": 105.05723992006611,
+    "net_excess_share": -2.3131657892725226
+  },
+  {
+    "mode": "general_pot",
+    "group": "bos_predictor",
+    "count": 32,
+    "nll_fp": 63.6532157143131,
+    "nll_quant": 239.1684342175722,
+    "delta_nll": 175.5152185032591,
+    "delta_target_logit": 12.020063001662493,
+    "delta_lse": 187.5352815049216,
+    "fp_ppl": 4.407987356213428e+27,
+    "quant_ppl": 7.405105088549518e+103,
+    "net_excess_share": 0.8765616386194555
+  },
+  {
+    "mode": "general_pot",
+    "group": "non_bos_predictor",
+    "count": 10077,
+    "nll_fp": 5.043637473619625,
+    "nll_quant": 5.122125098352021,
+    "delta_nll": 0.07848762473237388,
+    "delta_target_logit": -0.10834985298822207,
+    "delta_lse": -0.029862228255848194,
+    "fp_ppl": 155.03291878369706,
+    "quant_ppl": 167.6913518539797,
+    "net_excess_share": 0.12343836138054255
+  }
+]

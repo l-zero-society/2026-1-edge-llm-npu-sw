@@ -1,0 +1,16 @@
+{
+  "comparison": "general minus BOS-only on identical targets",
+  "mean": 0.466139506128447,
+  "median": 0.05444058299497545,
+  "p90": 2.585017702990145,
+  "p95": 3.6921900451087732,
+  "p99": 5.885700237044307,
+  "fraction_positive": 0.5821545157780196,
+  "fraction_negative": 0.41467998812938967,
+  "bos_difference_max_abs": 0.0,
+  "tail_net_shares": {
+    "1": 0.15024367125419125,
+    "5": 0.5398065167288225,
+    "10": 0.8710546777422435
+  }
+}

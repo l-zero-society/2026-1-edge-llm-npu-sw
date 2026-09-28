@@ -1,0 +1,68 @@
+{
+  "bos_only": {
+    "mean": 0.1676924046968001,
+    "median": -0.029561910640666156,
+    "p90": 1.3543509394156663,
+    "p95": 2.323632298019622,
+    "p99": 4.919436016023071,
+    "max": 177.94630631380525,
+    "fraction_positive": 0.43416757344940154,
+    "fraction_negative": 0.5658324265505985,
+    "total_excess_nll": 1695.2025190799523,
+    "mean_delta_target_logit": -1.9584784158743131,
+    "mean_delta_lse": -1.790786011177513,
+    "tails": {
+      "1": {
+        "tokens": 102,
+        "excess_nll": 6041.016088691859,
+        "fraction_net_excess": 3.563595511862817,
+        "fraction_positive_burden": 0.6392376075787704
+      },
+      "5": {
+        "tokens": 506,
+        "excess_nll": 7359.535598923925,
+        "fraction_net_excess": 4.341390197389638,
+        "fraction_positive_burden": 0.778758384364053
+      },
+      "10": {
+        "tokens": 1011,
+        "excess_nll": 8247.81971711992,
+        "fraction_net_excess": 4.865389016526657,
+        "fraction_positive_burden": 0.872753269699441
+      }
+    }
+  },
+  "general_pot": {
+    "mean": 0.6338319108252471,
+    "median": 0.0015362062443937674,
+    "p90": 0.8791627708086465,
+    "p95": 1.2765722746143089,
+    "p99": 2.3426709348697927,
+    "max": 177.94630631380525,
+    "fraction_positive": 0.5502027895934316,
+    "fraction_negative": 0.4497972104065684,
+    "total_excess_nll": 6407.406786532423,
+    "mean_delta_target_logit": -0.06995740948749768,
+    "mean_delta_lse": 0.5638745013377494,
+    "tails": {
+      "1": {
+        "tokens": 102,
+        "excess_nll": 5813.8732539329085,
+        "fraction_net_excess": 0.9073675899824171,
+        "fraction_positive_burden": 0.7105409313524761
+      },
+      "5": {
+        "tokens": 506,
+        "excess_nll": 6487.095365588689,
+        "fraction_net_excess": 1.0124369470694075,
+        "fraction_positive_burden": 0.7928185878011075
+      },
+      "10": {
+        "tokens": 1011,
+        "excess_nll": 7022.506344444404,
+        "fraction_net_excess": 1.095998206201742,
+        "fraction_positive_burden": 0.8582536943052148
+      }
+    }
+  }
+}

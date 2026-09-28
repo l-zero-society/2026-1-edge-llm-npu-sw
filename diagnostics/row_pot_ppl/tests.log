@@ -1,0 +1,57 @@
+test_caps_only_restrict_non_bos (test_row_pot_ppl_math.PPLDiagnosisTests) ... ok
+test_d1_has_no_weight_or_label_input (test_row_pot_ppl_math.PPLDiagnosisTests) ... ok
+test_d3_matches_actual_path_brute_force (test_row_pot_ppl_math.PPLDiagnosisTests) ... ok
+test_existing_paths_reproduce (test_row_pot_ppl_math.PPLDiagnosisTests) ... ok
+test_oracles_are_row_local_without_targets (test_row_pot_ppl_math.PPLDiagnosisTests) ... ok
+test_recenter_selection_is_calibration_only (test_row_pot_ppl_math.PPLDiagnosisTests) ... ok
+test_shift_feasibility (test_row_pot_ppl_math.PPLDiagnosisTests) ... ok
+test_token_decomposition_alignment (test_row_pot_ppl_math.PPLDiagnosisTests) ... ok
+test_baseline_reproduction_checks_all_statistics (test_row_pot_math.RowPoTTests) ... ok
+test_feasibility_filters_and_empty_set_errors (test_row_pot_math.RowPoTTests) ... ok
+test_input_scale_and_shift_only_no_channel_regeneration (test_row_pot_math.RowPoTTests) ... ok
+test_k_zero_is_existing_path (test_row_pot_math.RowPoTTests) ... ok
+test_selection_is_activation_only_and_minimum_mse (test_row_pot_math.RowPoTTests) ... ok
+test_zero_rows_and_finite_validation (test_row_pot_math.RowPoTTests) ... ok
+test_identity_metrics_and_next_token_targets (test_e2e_linear_math.E2ELinearTests) ... ok
+test_invalid_shift_is_rejected (test_e2e_linear_math.E2ELinearTests) ... ok
+test_outputs_propagate_and_only_requested_modules_change (test_e2e_linear_math.E2ELinearTests) ... ok
+test_prefill_matches_existing_path_and_position_zero_only (test_e2e_linear_math.E2ELinearTests) ... ok
+test_arbitrary_uses_same_scalar_on_input_and_before_rounding (test_factorized_math.FactorizedTests) ... ok
+test_bos_never_generates_another_channel_parameter_array (test_factorized_math.FactorizedTests) ... ok
+test_c_one_is_existing_path_exactly (test_factorized_math.FactorizedTests) ... ok
+test_calibration_only_and_frozen_common_scale (test_factorized_math.FactorizedTests) ... ok
+test_invalid_correction_rejected (test_factorized_math.FactorizedTests) ... ok
+test_pot_exact_extended_shifts_and_signed_ties (test_factorized_math.FactorizedTests) ... ok
+test_data_loading (test_static_quant.CalibrationTests) ... ok
+test_fixed_lut_constraints (test_static_quant.CalibrationTests) ... ok
+test_gemma2_rejected (test_static_quant.CalibrationTests) ... ok
+test_metrics_against_dense_oracle_and_heldout (test_static_quant.CalibrationTests) ... ok
+test_padding_and_nonfinite (test_static_quant.CalibrationTests) ... ok
+test_reproducibility (test_static_quant.CalibrationTests) ... ok
+test_reservoir_bounded_reproducible (test_static_quant.CalibrationTests) ... ok
+test_shared_consumer_groups_and_selection (test_static_quant.CalibrationTests) ... ok
+test_zero_tensor (test_static_quant.CalibrationTests) ... ok
+test_cli_e2e_and_vectors (test_static_quant.ExportTests) ... ok
+test_default_blocks_binary (test_static_quant.ExportTests) ... ok
+test_existing_lut_contract (test_static_quant.ExportTests) ... ok
+test_export_reload_padding_mapping_and_compiler (test_static_quant.ExportTests) ... ok
+test_inaccurate_blocks_binary_even_with_unverified_flag (test_static_quant.ExportTests) ... ok
+test_int32_extremes_product_fits (test_static_quant.IntegerReferenceTests) ... ok
+test_k_chunk_and_python_integer_oracle (test_static_quant.IntegerReferenceTests) ... ok
+test_overflow (test_static_quant.IntegerReferenceTests) ... ok
+test_pack_unpack_and_endian (test_static_quant.IntegerReferenceTests) ... ok
+test_ratio_range_status_and_rejection (test_static_quant.IntegerReferenceTests) ... ok
+test_rounding_negative_and_saturation (test_static_quant.IntegerReferenceTests) ... ok
+test_rounding_python_oracle (test_static_quant.IntegerReferenceTests) ... ok
+test_weight_axis_and_row_reuse (test_static_quant.IntegerReferenceTests) ... ok
+test_baseline_matches_previous_pot (test_s10_search.S10Tests) ... ok
+test_candidate_grid_recomputes_channel_params_but_freezes_input (test_s10_search.S10Tests) ... ok
+test_deterministic_tie_breaks (test_s10_search.S10Tests) ... ok
+test_effective_shift_feasibility_and_feasible_selection (test_s10_search.S10Tests) ... ok
+test_production_source_and_lut_contract_unchanged (test_s10_search.S10Tests) ... ok
+test_validation_independent_and_common_scale (test_s10_search.S10Tests) ... ok
+
+----------------------------------------------------------------------
+Ran 52 tests in 0.297s
+
+OK

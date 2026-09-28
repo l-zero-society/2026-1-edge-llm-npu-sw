@@ -1,0 +1,73 @@
+{
+  "completed_modes": {
+    "bos_only": {
+      "sequences": 32,
+      "tokens": 10141,
+      "targets": 10109,
+      "quantized_ops": 18,
+      "propagated_boundaries": 17
+    },
+    "general_pot": {
+      "sequences": 32,
+      "tokens": 10141,
+      "targets": 10109,
+      "quantized_ops": 18,
+      "propagated_boundaries": 17
+    },
+    "pair_oracle": {
+      "sequences": 32,
+      "tokens": 10141,
+      "targets": 10109,
+      "quantized_ops": 18,
+      "propagated_boundaries": 17
+    },
+    "int10_oracle": {
+      "sequences": 32,
+      "tokens": 10141,
+      "targets": 10109,
+      "quantized_ops": 18,
+      "propagated_boundaries": 17
+    },
+    "recentered": {
+      "sequences": 32,
+      "tokens": 10141,
+      "targets": 10109,
+      "quantized_ops": 18,
+      "propagated_boundaries": 17
+    },
+    "arbitrary_absmax": {
+      "sequences": 32,
+      "tokens": 10141,
+      "targets": 10109,
+      "quantized_ops": 18,
+      "propagated_boundaries": 17
+    }
+  },
+  "baseline": {
+    "ppl": {
+      "bos_only": 220.71190840229545,
+      "general_pot": 351.7771137096895
+    },
+    "fp_ppl": 186.63705798247005,
+    "full_statistics_match": true
+  },
+  "token_nll_identity_max_abs_error": 3.552713678800501e-15,
+  "oracle_BOS_k_agreement": {
+    "pair_oracle": 1.0,
+    "int10_oracle": 1.0
+  },
+  "all_recorded_source_and_artifact_hashes_match": true,
+  "tracked_files_unchanged": true,
+  "all_HW_shifts_in_0_31": true,
+  "calibration_selection_frozen_before_validation": true,
+  "tests": {
+    "passed": 52,
+    "failed": 0,
+    "new_tests": 8
+  },
+  "incomplete_modes": [
+    "cap0",
+    "cap1",
+    "cap2"
+  ]
+}
