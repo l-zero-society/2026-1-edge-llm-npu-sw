@@ -1,0 +1,137 @@
+{
+  "shared": {
+    "model.layers.0.mlp.down_proj": {
+      "sx": 0.27601292998754307,
+      "s10": 0.05587364292277092,
+      "k": -2,
+      "effective_shift_min": 10,
+      "effective_shift_max": 34
+    },
+    "model.layers.1.mlp.down_proj": {
+      "sx": 0.10382454303004575,
+      "s10": 0.015597196087885403,
+      "k": -3,
+      "effective_shift_min": 4,
+      "effective_shift_max": 33
+    },
+    "model.layers.2.mlp.down_proj": {
+      "sx": 0.06280070737217022,
+      "s10": 0.009485999398950673,
+      "k": -3,
+      "effective_shift_min": 11,
+      "effective_shift_max": 33
+    },
+    "model.layers.3.mlp.down_proj": {
+      "sx": 0.042651044977868584,
+      "s10": 0.008266318226204395,
+      "k": -2,
+      "effective_shift_min": 12,
+      "effective_shift_max": 33
+    },
+    "model.layers.4.mlp.down_proj": {
+      "sx": 0.038223395864209544,
+      "s10": 0.006105389029873048,
+      "k": -1,
+      "effective_shift_min": 11,
+      "effective_shift_max": 33
+    },
+    "model.layers.5.mlp.down_proj": {
+      "sx": 0.02827253072388529,
+      "s10": 0.004182325832027247,
+      "k": 0,
+      "effective_shift_min": 7,
+      "effective_shift_max": 33
+    },
+    "model.layers.6.mlp.down_proj": {
+      "sx": 0.02733908898875332,
+      "s10": 0.0037679748362536222,
+      "k": 0,
+      "effective_shift_min": 10,
+      "effective_shift_max": 33
+    },
+    "model.layers.7.mlp.down_proj": {
+      "sx": 0.03349633455882586,
+      "s10": 0.00876180009154544,
+      "k": 4,
+      "effective_shift_min": 13,
+      "effective_shift_max": 34
+    },
+    "model.layers.8.mlp.down_proj": {
+      "sx": 0.020624144760792735,
+      "s10": 0.013832422840943694,
+      "k": 5,
+      "effective_shift_min": 12,
+      "effective_shift_max": 35
+    },
+    "model.layers.9.mlp.down_proj": {
+      "sx": 0.0315673476227179,
+      "s10": 0.002970516748132714,
+      "k": 0,
+      "effective_shift_min": 7,
+      "effective_shift_max": 33
+    },
+    "model.layers.10.mlp.down_proj": {
+      "sx": 0.03457919291093757,
+      "s10": 0.002565332683342034,
+      "k": 0,
+      "effective_shift_min": 10,
+      "effective_shift_max": 32
+    },
+    "model.layers.11.mlp.down_proj": {
+      "sx": 0.03465209908748336,
+      "s10": 0.007084301397567827,
+      "k": -2,
+      "effective_shift_min": 10,
+      "effective_shift_max": 34
+    },
+    "model.layers.12.mlp.down_proj": {
+      "sx": 0.04774677847314069,
+      "s10": 0.007888346198730557,
+      "k": -2,
+      "effective_shift_min": 10,
+      "effective_shift_max": 33
+    },
+    "model.layers.13.mlp.down_proj": {
+      "sx": 0.05373425199724336,
+      "s10": 0.00924775857367402,
+      "k": -2,
+      "effective_shift_min": 11,
+      "effective_shift_max": 33
+    },
+    "model.layers.14.mlp.down_proj": {
+      "sx": 0.13430402061353605,
+      "s10": 0.006447202790898175,
+      "k": -2,
+      "effective_shift_min": 7,
+      "effective_shift_max": 32
+    },
+    "model.layers.15.mlp.down_proj": {
+      "sx": 0.12424406176432232,
+      "s10": 0.013736828215985496,
+      "k": -1,
+      "effective_shift_min": 11,
+      "effective_shift_max": 33
+    },
+    "model.layers.16.mlp.down_proj": {
+      "sx": 0.11704762929063195,
+      "s10": 0.029950542701875964,
+      "k": 1,
+      "effective_shift_min": 11,
+      "effective_shift_max": 34
+    },
+    "model.layers.17.mlp.down_proj": {
+      "sx": 0.10194593584553704,
+      "s10": 0.20900178747943293,
+      "k": 7,
+      "effective_shift_min": 14,
+      "effective_shift_max": 37
+    }
+  },
+  "refinement": {
+    "mean_pass1_nmse": 0.010712818047728829,
+    "mean_pass2_nmse": 0.01069642016353666,
+    "shifted_layers": []
+  },
+  "dual_threshold_met": false,
+  "dual_qualified_layers": 0
+}

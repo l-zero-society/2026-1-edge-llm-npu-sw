@@ -1,0 +1,133 @@
+/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/.venv-calibration/lib/python3.9/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+CAPTURE 1 32 2 32
+CAPTURE 2 32 3 32
+CAPTURE 3 32 6 32
+CAPTURE 4 32 7 32
+CAPTURE 5 32 9 32
+CAPTURE 6 32 11 32
+CAPTURE 7 32 13 32
+CAPTURE 8 32 14 32
+CAPTURE 9 32 15 32
+CAPTURE 10 32 17 32
+CAPTURE 11 32 20 32
+CAPTURE 12 32 22 32
+CAPTURE 13 32 25 32
+CAPTURE 14 32 28 32
+CAPTURE 15 32 30 32
+CAPTURE 16 32 31 32
+CAPTURE 17 32 32 32
+CAPTURE 18 32 33 32
+CAPTURE 19 32 34 32
+CAPTURE 20 32 35 32
+CAPTURE 21 32 36 32
+CAPTURE 22 32 37 32
+CAPTURE 23 32 38 32
+CAPTURE 24 32 39 32
+CAPTURE 25 32 40 32
+CAPTURE 26 32 41 32
+CAPTURE 27 32 43 32
+CAPTURE 28 32 44 32
+CAPTURE 29 32 45 32
+CAPTURE 30 32 47 32
+CAPTURE 31 32 48 32
+CAPTURE 32 32 49 32
+CALIBRATE 0 0.27601292998754307 0.05587364292277092 0.011042093704143878 0.009413844253400114
+CALIBRATE 1 0.10382454303004575 0.015597196087885403 0.009898392501150752 0.0057359964954697825
+CALIBRATE 2 0.06280070737217022 0.009485999398950673 0.008842389091924419 0.008007132964762747
+CALIBRATE 3 0.042651044977868584 0.008266318226204395 0.029796377505200415 0.023135206818030704
+CALIBRATE 4 0.038223395864209544 0.006105389029873048 0.01009708913071226 0.009905148641936493
+CALIBRATE 5 0.02827253072388529 0.004182325832027247 0.009522339798672582 0.00906869902771735
+CALIBRATE 6 0.02733908898875332 0.0037679748362536222 0.010073257798360054 0.00992258868799858
+CALIBRATE 7 0.03349633455882586 0.00876180009154544 0.009198994861300895 0.007620301060398278
+CALIBRATE 8 0.020624144760792735 0.013832422840943694 0.0116158153897539 0.007559476592540115
+CALIBRATE 9 0.0315673476227179 0.002970516748132714 0.006696048795066097 0.006508738386539486
+CALIBRATE 10 0.03457919291093757 0.002565332683342034 0.0073612315608141965 0.007098354323555576
+CALIBRATE 11 0.03465209908748336 0.007084301397567827 0.00827142053849864 0.008026927844176426
+CALIBRATE 12 0.04774677847314069 0.007888346198730557 0.010212227274561739 0.010080832355784875
+CALIBRATE 13 0.05373425199724336 0.00924775857367402 0.013584344603200677 0.013203651654925128
+CALIBRATE 14 0.13430402061353605 0.006447202790898175 0.018136336205849195 0.01725588648801812
+CALIBRATE 15 0.12424406176432232 0.013736828215985496 0.011015937674271885 0.011014285072699574
+CALIBRATE 16 0.11704762929063195 0.029950542701875964 0.010920564336189731 0.009873976909510734
+CALIBRATE 17 0.10194593584553704 0.20900178747943293 0.04937160320942718 0.019399677281654867
+CAPTURE 1 32 2 32
+CAPTURE 2 32 3 32
+CAPTURE 3 32 6 32
+CAPTURE 4 32 7 32
+CAPTURE 5 32 9 32
+CAPTURE 6 32 11 32
+CAPTURE 7 32 13 32
+CAPTURE 8 32 14 32
+CAPTURE 9 32 15 32
+CAPTURE 10 32 17 32
+CAPTURE 11 32 20 32
+CAPTURE 12 32 22 32
+CAPTURE 13 32 25 32
+CAPTURE 14 32 28 32
+CAPTURE 15 32 30 32
+CAPTURE 16 32 31 32
+CAPTURE 17 32 32 32
+CAPTURE 18 32 33 32
+CAPTURE 19 32 34 32
+CAPTURE 20 32 35 32
+CAPTURE 21 32 36 32
+CAPTURE 22 32 37 32
+CAPTURE 23 32 38 32
+CAPTURE 24 32 39 32
+CAPTURE 25 32 40 32
+CAPTURE 26 32 41 32
+CAPTURE 27 32 43 32
+CAPTURE 28 32 44 32
+CAPTURE 29 32 45 32
+CAPTURE 30 32 47 32
+CAPTURE 31 32 48 32
+CAPTURE 32 32 49 32
+VALIDATION 1 24 969
+Traceback (most recent call last):
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/calibrate_cached_decode_ptq.py", line 578, in <module>
+    if __name__ == "__main__": main()
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/calibrate_cached_decode_ptq.py", line 543, in main
+    record=validation_example(source,example,policies,dual if run_dual else None,greedy=i<16)
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/calibrate_cached_decode_ptq.py", line 417, in validation_example
+    matrix,state_matrix,cache=mixed_forward(source,mode_specs,[example["targets"][t-1]],"decode",cache)
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/calibrate_cached_decode_ptq.py", line 391, in mixed_forward
+    result = source.model.model(input_ids=token,
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/.venv-calibration/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1511, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/.venv-calibration/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1520, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/.venv-calibration/lib/python3.9/site-packages/transformers/utils/generic.py", line 1072, in wrapper
+    outputs = func(self, *args, **kwargs)
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/.venv-calibration/lib/python3.9/site-packages/transformers/models/gemma/modeling_gemma.py", line 404, in forward
+    hidden_states = decoder_layer(
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/.venv-calibration/lib/python3.9/site-packages/transformers/modeling_layers.py", line 94, in __call__
+    return super().__call__(*args, **kwargs)
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/.venv-calibration/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1511, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/.venv-calibration/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1561, in _call_impl
+    result = forward_call(*args, **kwargs)
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/.venv-calibration/lib/python3.9/site-packages/transformers/utils/deprecation.py", line 172, in wrapped_func
+    return func(*args, **kwargs)
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/.venv-calibration/lib/python3.9/site-packages/transformers/models/gemma/modeling_gemma.py", line 302, in forward
+    hidden_states = self.mlp(hidden_states)
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/.venv-calibration/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1511, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/.venv-calibration/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1520, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/.venv-calibration/lib/python3.9/site-packages/transformers/models/gemma/modeling_gemma.py", line 78, in forward
+    down_proj = self.down_proj(self.act_fn(self.gate_proj(x)) * self.up_proj(x))
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/.venv-calibration/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1511, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/.venv-calibration/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1520, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/calibrate_cached_decode_ptq.py", line 372, in forward
+    y = quantized_one(value.detach().numpy(), selected)
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/calibrate_cached_decode_ptq.py", line 195, in quantized_one
+    return row.apply_rows(x, **spec)[0]
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/test_e2e_row_pot.py", line 75, in apply_rows
+    q,ks,counts=select_rows(x[0],sx,params['shift'])
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/test_e2e_row_pot.py", line 27, in select_rows
+    x=finite(np.asarray(x,np.float64),'row activation');positive_scale(sx,'base scale')
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/src/static_quant/hardware.py", line 10, in finite
+    raise ValueError(f"{name}: NaN/Inf at index {where}")
+ValueError: row activation: NaN/Inf at index [0, 0]

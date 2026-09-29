@@ -1,0 +1,4 @@
+mode,examples,mean_shared_prefix,median_shared_prefix,token_agreement,exact_32
+FP,16,32.0,32.0,1.0,16
+old_general,16,11.6875,6.5,0.458984375,2
+calibrated,16,12.875,6.0,0.447265625,4

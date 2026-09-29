@@ -1,0 +1,29 @@
+{
+  "selection_split": "calibration",
+  "validation_selection_used": false,
+  "chat_template_matches_response_quant_eval": true,
+  "capture_path": "batch-one prompt prefill with cache followed by teacher-forced one-token cached decode",
+  "quantized_modules": "model.layers.0..17.mlp.down_proj only",
+  "runtime_row_selector_unchanged": true,
+  "weight_codes_and_scales_unchanged": true,
+  "sx_search_integer_gemm_calls": 0,
+  "s10_accumulator_reused_across_candidates": true,
+  "effective_shift_range_enforced": [0, 31],
+  "production_artifacts_modified": false,
+  "old_general_reproduction": {
+    "examples": 16,
+    "targets_per_example": 32,
+    "tokens": 512,
+    "ppl": 273.9483751915176,
+    "kl": 0.08328384498890502,
+    "logits_nmse": 0.007906658399577382,
+    "top1": 0.85546875,
+    "matches_prior_response_quant_eval": true
+  },
+  "tests": {
+    "passed": 55,
+    "failed": 0
+  },
+  "excluded_artifact": "validation_000.batched_invalid.json",
+  "final_script_sha256": "8c16f69ea60a5995735aefca94ab949c7cf24bc39e090a1386f97f5cee895b08"
+}
