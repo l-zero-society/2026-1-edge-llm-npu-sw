@@ -1,0 +1,38 @@
+{
+  "index": 0,
+  "modes": {
+    "FP": {
+      "shared_prefix": 37,
+      "token_agreement": 1.0,
+      "exact_32": true,
+      "exact_64": false,
+      "fp_length": 37,
+      "length": 37,
+      "length_difference": 0,
+      "fp_eos": true,
+      "eos": true
+    },
+    "previous": {
+      "shared_prefix": 14,
+      "token_agreement": 0.43243243243243246,
+      "exact_32": false,
+      "exact_64": false,
+      "fp_length": 37,
+      "length": 37,
+      "length_difference": 0,
+      "fp_eos": true,
+      "eos": true
+    },
+    "final": {
+      "shared_prefix": 14,
+      "token_agreement": 0.4117647058823529,
+      "exact_32": false,
+      "exact_64": false,
+      "fp_length": 37,
+      "length": 34,
+      "length_difference": -3,
+      "fp_eos": true,
+      "eos": true
+    }
+  }
+}

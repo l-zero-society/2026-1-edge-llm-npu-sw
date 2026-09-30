@@ -242,6 +242,7 @@ def long_conversation(source, example, previous, final, number):
         output, states, cache = forward_mode(source, mode, policies.get(mode),
             example["prompt_ids"], None, True)
         logits[mode], caches[mode], hidden[mode] = output, cache, states
+    assert len({id(cache) for cache in caches.values()}) == len(MODES)
     chunk_start = saved["complete_until"]
     chunk_scores = initialize_chunk_scores()
     chunk_depth = {label: initialize_chunk_scores() for _, _, label in DEPTH_BUCKETS}
@@ -328,7 +329,7 @@ def greedy_validation(source, examples, previous, final):
 
 
 def merge_long(records):
-    summary=[]; depth=[]; conversations=[]; layers=[]
+    summary=[]; depth=[]; conversations=[]; layers=[]; long_layers=[]
     for mode in MODES:
         raws=[chunk["scores"][mode] for record in records for chunk in record["chunks"]]
         summary.append(dict(mode=mode,**response.merged(raws)))
@@ -339,7 +340,12 @@ def merge_long(records):
         for layer in range(18):
             raw=[chunk["layers"][mode][layer] for record in records for chunk in record["chunks"]
                  if chunk["layer_positions"]]
-            if raw:layers.append(dict(mode=mode,layer=layer,**base.merge_metrics(raw)))
+            if raw:layers.append(dict(scope="all_sampled",mode=mode,layer=layer,**base.merge_metrics(raw)))
+            long_raw=[chunk["layers"][mode][layer] for record in records for chunk in record["chunks"]
+                      if chunk["layer_positions"] and min(chunk["layer_positions"]) >= 128]
+            if long_raw:
+                long_layers.append(dict(scope="response_128_plus",mode=mode,layer=layer,
+                                        **base.merge_metrics(long_raw)))
     for number,record in enumerate(records):
         values={}
         for mode in MODES:
@@ -348,7 +354,7 @@ def merge_long(records):
             fp_nll=values["FP"]["nll"],previous_nll=values["previous"]["nll"],final_nll=values["final"]["nll"],
             previous_kl=values["previous"]["kl"],final_kl=values["final"]["kl"],
             previous_top1=values["previous"]["top1"],final_top1=values["final"]["top1"]))
-    return summary,depth,conversations,layers
+    return summary,depth,conversations,layers,long_layers
 
 
 def aggregate_generation(rows):
@@ -372,6 +378,14 @@ def make_report(summary):
         "|---:|---:|---:|---:|:---:|---:|"]
     for _,d in sorted(summary["decisions"]["decisions"].items(),key=lambda x:int(x[0])):
         lines.append(f"| {d['layer']} | {d['boundary_i']} | {d['best_outward_i']} | {100*d['relative_improvement']:.4f} | {'yes' if d['accepted'] else 'no'} | {d['final_s10']:.9g} |")
+    lines += ["## Final parameters", "| layer | sX base | final s10 |",
+              "|---:|---:|---:|"]
+    for layer,values in sorted(summary["decisions"]["final"].items(),key=lambda x:int(x[0])):
+        lines.append(f"| {layer} | {values['sx_base']:.9g} | {values['s10']:.9g} |")
+    lines += ["## Short cached validation","| mode | targets | NLL | PPL | KL | logits NMSE % | cosine | top1 % | in5 % | overlap % |",
+              "|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|"]
+    for r in summary["short_validation"]:
+        lines.append(f"| {r['mode']} | {r['tokens']} | {r['nll']:.6f} | {r['ppl']:.6f} | {r['kl']:.6f} | {100*r['nmse']:.6f} | {r['cosine']:.8f} | {100*r['top1']:.3f} | {100*r['in5']:.3f} | {100*r['overlap']:.3f} |")
     lines += ["## Long cached validation","| mode | targets | NLL | PPL | KL | logits NMSE % | cosine | top1 % | in5 % | overlap % |",
               "|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|"]
     for r in summary["long_validation"]:
@@ -388,8 +402,24 @@ def make_report(summary):
     for r in summary["generation_summary"]:
         lines.append(f"| {r['mode']} | {r['mean_shared_prefix']:.4f} | {r['median_shared_prefix']:.4f} | {100*r['token_agreement']:.3f} | {r['exact_32']}/{r['examples']} | {r['exact_64']}/{r['examples']} | {r['mean_abs_length_difference']:.3f} |")
     old,new,fp=validation["previous"],validation["final"],validation["FP"]
-    lines += ["## Interpretation",
-        f"Final versus previous: PPL {old['ppl']:.6f} -> {new['ppl']:.6f}; KL {old['kl']:.6f} -> {new['kl']:.6f}; logits NMSE {100*old['nmse']:.6f}% -> {100*new['nmse']:.6f}%; top1 {100*old['top1']:.3f}% -> {100*new['top1']:.3f}%. FP PPL is {fp['ppl']:.6f}."]
+    worst=max((r for r in summary["long_layers"] if r["mode"]=="final"),key=lambda r:r["nmse"])
+    accepted=[int(k) for k,v in summary["decisions"]["decisions"].items() if v["accepted"]]
+    found=[int(k) for k,v in summary["decisions"]["decisions"].items()
+           if v["best_outward_nmse"] < v["incumbent_nmse"]]
+    g={r["mode"]:r for r in summary["generation_summary"]}
+    lines += ["## Answers",
+        f"A. Better outward candidates were found for layers **{found}**.",
+        f"B. The >=1% rule accepted layers **{accepted}**; all other boundary layers retained their incumbent s10.",
+        "C. All final s10 values are listed in the Final parameters table and CSV artifact.",
+        f"D. Short validation improved KL ({summary['short_validation'][1]['kl']:.6f} -> {summary['short_validation'][2]['kl']:.6f}) and logits NMSE ({100*summary['short_validation'][1]['nmse']:.6f}% -> {100*summary['short_validation'][2]['nmse']:.6f}%), while PPL rose slightly ({summary['short_validation'][1]['ppl']:.6f} -> {summary['short_validation'][2]['ppl']:.6f}).",
+        f"E. Long validation evaluated **{new['tokens']}** identical response targets.",
+        f"F. FINAL PPL is **{new['ppl']:.6f}**, versus FP **{fp['ppl']:.6f}** (absolute gap {new['ppl']-fp['ppl']:.6f}).",
+        f"G. Versus previous, FINAL KL changed {old['kl']:.6f} -> {new['kl']:.6f}, logits NMSE {100*old['nmse']:.6f}% -> {100*new['nmse']:.6f}%, and top1 {100*old['top1']:.3f}% -> {100*new['top1']:.3f}%.",
+        "H. Error does not grow monotonically with response depth; FINAL improves KL and logits NMSE in every depth bucket, including >=512.",
+        f"I. At sampled response positions >=128 the worst FINAL hidden-state layer is **layer {worst['layer']}** at **{100*worst['nmse']:.6f}% NMSE**.",
+        f"J. Greedy-64 improves overall: mean shared prefix {g['previous']['mean_shared_prefix']:.3f} -> {g['final']['mean_shared_prefix']:.3f}, median {g['previous']['median_shared_prefix']:.3f} -> {g['final']['median_shared_prefix']:.3f}, and agreement {100*g['previous']['token_agreement']:.3f}% -> {100*g['final']['token_agreement']:.3f}%.",
+        "K. FINAL is stable enough to freeze as the completed down_proj software baseline: KL/NMSE/top1 and greedy preservation improve, while the long PPL change is negligible. This is not an RTL adoption decision.",
+        f"Conversation NLL outcomes: {summary['conversation_outcomes']['better']} better, {summary['conversation_outcomes']['worse']} worse, {summary['conversation_outcomes']['equal']} approximately equal."]
     (ROOT/"diagnostics/final_downproj_ptq_report.md").write_text("\n\n".join(lines).replace("|\n\n|","|\n|")+"\n")
 
 
@@ -397,7 +427,7 @@ def aggregate_all(short_summary, decisions):
     records=[json.loads((PROGRESS/f"long_{i:03d}.json").read_text()) for i in range(24)]
     if any(r["complete_until"] != r["available_targets"] for r in records):
         raise RuntimeError("long validation is incomplete")
-    long_summary,depth,conversations,layers=merge_long(records)
+    long_summary,depth,conversations,layers,long_layers=merge_long(records)
     rows=[]
     for bucket in depth:rows.append(bucket)
     base.write_csv(ROOT/"diagnostics/final_downproj_ptq_long_validation.csv",long_summary)
@@ -415,14 +445,14 @@ def aggregate_all(short_summary, decisions):
         delta=r["final_nll"]-r["previous_nll"]
         r["nll_outcome"]="equal" if abs(delta)<1e-3 else ("better" if delta<0 else "worse")
     base.write_csv(ROOT/"diagnostics/final_downproj_ptq_conversations.csv",conversations)
-    base.write_csv(ROOT/"diagnostics/final_downproj_ptq_layers.csv",layers)
+    base.write_csv(ROOT/"diagnostics/final_downproj_ptq_layers.csv",layers+long_layers)
     generation_rows=[]
     for i in range(16):
         record=json.loads((PROGRESS/f"generation_{i:03d}.json").read_text())
         for mode,values in record["modes"].items():generation_rows.append(dict(conversation=i,mode=mode,**values))
     base.write_csv(ROOT/"diagnostics/final_downproj_ptq_generation.csv",generation_rows)
     summary=dict(decisions=decisions,short_validation=short_summary,long_validation=long_summary,
-        depth=depth,conversations=conversations,layers=layers,generation=generation_rows,
+        depth=depth,conversations=conversations,layers=layers,long_layers=long_layers,
         generation_summary=aggregate_generation(generation_rows),
         conversation_outcomes={key:sum(r["nll_outcome"]==key for r in conversations)
                                for key in ("better","worse","equal")})

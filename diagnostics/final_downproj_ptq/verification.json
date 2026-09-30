@@ -1,0 +1,29 @@
+{
+  "status": "pass",
+  "checks": {
+    "boundary_layers_exact": true,
+    "accepted_meet_threshold": true,
+    "rejected_preserve_incumbent": true,
+    "sx_unchanged": true,
+    "observed_shifts_feasible": true,
+    "progress_counts": true,
+    "long_target_count": true,
+    "finite_summary": true,
+    "tests": "62/62 passed",
+    "long_position_layer_scope_recorded": true
+  },
+  "accepted_layers": [
+    1,
+    3,
+    7,
+    8,
+    17
+  ],
+  "short_conversations": 24,
+  "long_conversations": 24,
+  "long_targets": 14630,
+  "generation_conversations": 16,
+  "script_sha256": "2c2853508e11f3977bb14d1c349349e66950959aa760c5158abd117fe56b96c0",
+  "test_sha256": "099cf1bbca464ec05eb722e84530998a35c4af4a3bcb2e728240bb4fe5ed4a09",
+  "summary_sha256": "9c9faa1fa3d41b87d819599b04a7699fe3ae7a26d0608066d394850ff9e8ec1d"
+}
