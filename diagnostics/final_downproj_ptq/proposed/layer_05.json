@@ -1,0 +1,16 @@
+{
+  "layer": 5,
+  "name": "model.layers.5.mlp.down_proj",
+  "sx_base": 0.02827253072388529,
+  "previous_s10": 0.004182325832027247,
+  "final_s10": 0.004182325832027247,
+  "boundary_decision": null,
+  "k_range": [
+    -8,
+    7
+  ],
+  "static_shift_min": 14,
+  "static_shift_max": 25,
+  "observed_effective_shift_min": 12,
+  "observed_effective_shift_max": 26
+}

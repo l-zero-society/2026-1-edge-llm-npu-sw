@@ -1,0 +1,28 @@
+{
+  "layer": 0,
+  "name": "model.layers.0.mlp.down_proj",
+  "sx_base": 0.27601292998754307,
+  "previous_s10": 0.05587364292277092,
+  "final_s10": 0.05587364292277092,
+  "boundary_decision": {
+    "layer": 0,
+    "boundary_i": 8,
+    "incumbent_s10": 0.05587364292277092,
+    "incumbent_nmse": 0.009413844253400114,
+    "best_outward_i": 9,
+    "best_outward_s10": 0.06093063965945914,
+    "best_outward_nmse": 0.009420831818767274,
+    "relative_improvement": -0.0007422648154217676,
+    "accepted": false,
+    "final_i": 8,
+    "final_s10": 0.05587364292277092
+  },
+  "k_range": [
+    -8,
+    7
+  ],
+  "static_shift_min": 17,
+  "static_shift_max": 26,
+  "observed_effective_shift_min": 14,
+  "observed_effective_shift_max": 26
+}
