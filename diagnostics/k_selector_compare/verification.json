@@ -1,0 +1,20 @@
+{
+  "tests_passed": 7,
+  "tests_failed": 0,
+  "validation_chats": 24,
+  "response_targets": 768,
+  "baseline_targets_per_mode": 768,
+  "head_parameters_unchanged": true,
+  "parameter_fingerprints_unchanged": true,
+  "stored_baselines_unchanged": true,
+  "all_reported_numeric_metrics_finite": true,
+  "effective_shifts_in_0_31": true,
+  "tracked_files_unchanged": true,
+  "fp_or_mse3_inference": false,
+  "hidden_metrics": "skipped: no stored reference vectors",
+  "final_script_sha256": "983d7220a8afbf1fab353881d4bc44e4951534d6cb42ab4ad8091181b6f91fa2",
+  "commands": [
+    ".venv-calibration/bin/python scripts/compare_k_selectors_e2e.py",
+    "PYTHONPYCACHEPREFIX=/tmp/k-selector-test .venv-calibration/bin/python -m unittest tests.test_k_selector_compare"
+  ]
+}
