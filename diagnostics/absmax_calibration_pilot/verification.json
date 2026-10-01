@@ -1,0 +1,53 @@
+{
+  "calibration_examples": 6,
+  "calibration_response_limit": 16,
+  "reservoir_capacity": 32,
+  "validation_examples": 6,
+  "validation_targets": 144,
+  "selector_identity": true,
+  "independent_validation_caches": true,
+  "effective_shifts_feasible": true,
+  "fixed_candidate_sets": {
+    "sx": [
+      -2,
+      -1,
+      0,
+      1,
+      2
+    ],
+    "s10": [
+      -4,
+      -3,
+      -2,
+      -1,
+      0,
+      1,
+      2,
+      3,
+      4
+    ]
+  },
+  "no_boundary_expansion": true,
+  "quantized_modules": [
+    "model.layers.0.mlp.down_proj",
+    "model.layers.1.mlp.down_proj",
+    "model.layers.10.mlp.down_proj",
+    "model.layers.11.mlp.down_proj",
+    "model.layers.12.mlp.down_proj",
+    "model.layers.13.mlp.down_proj",
+    "model.layers.14.mlp.down_proj",
+    "model.layers.15.mlp.down_proj",
+    "model.layers.16.mlp.down_proj",
+    "model.layers.17.mlp.down_proj",
+    "model.layers.2.mlp.down_proj",
+    "model.layers.3.mlp.down_proj",
+    "model.layers.4.mlp.down_proj",
+    "model.layers.5.mlp.down_proj",
+    "model.layers.6.mlp.down_proj",
+    "model.layers.7.mlp.down_proj",
+    "model.layers.8.mlp.down_proj",
+    "model.layers.9.mlp.down_proj"
+  ],
+  "frozen_unchanged": true,
+  "classification": "REGRESSION"
+}
