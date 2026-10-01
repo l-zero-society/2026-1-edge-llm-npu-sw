@@ -1,0 +1,23 @@
+{
+  "seed": 20261001,
+  "resamples": 10000,
+  "unit": "paired conversation",
+  "note": "Descriptive equal-conversation mean differences. NMSE CI uses per-conversation NMSE, not pooled-energy NMSE. Top1 units are fractions.",
+  "intervals": {
+    "kl": {
+      "mean": 0.003373907632998339,
+      "low": -0.005091150760624392,
+      "high": 0.01292972938432985
+    },
+    "nmse": {
+      "mean": -0.00028011210914140767,
+      "low": -0.0010095055864441057,
+      "high": 0.0003058426310736787
+    },
+    "top1": {
+      "mean": 0.0078125,
+      "low": -0.018229166666666668,
+      "high": 0.033854166666666664
+    }
+  }
+}

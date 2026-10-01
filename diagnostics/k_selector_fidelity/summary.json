@@ -1,0 +1,120 @@
+{
+  "provenance": {
+    "commit": "a42b415e377e13ed8d0ab6cad21f42f0f165d86a",
+    "before": {
+      "decisions_sha256": "8a981679284c556135e6a5a149a493f52370d71730c1dd2042e7b124d229e36e",
+      "parameters_sha256": "b81c46af7c1bc6da454711054b9e2e30dc389e62a74a3577ddcd93d4741ef8dd"
+    },
+    "script_sha256": "27d1c0cf5a66a6900dbca0491265c4d3d00f9baa9a3ff40eb647846eb25068f0",
+    "command": [
+      "scripts/confirm_k_selector_fidelity.py"
+    ],
+    "baseline_sha256": {
+      "0": "85b3f0c6685844769c1fe41219f936817a70eaedc7d319851c4395e912734e2d",
+      "3": "713594422c29508276cb147ecc9095df1e5766f99cd646dee4c8abed638ec6a0",
+      "6": "3a0034e02b3cc93cd276f0e88e0eae7e8e3ca0397f2d845c9e2713b6c2c70a1c",
+      "9": "7ac54cffc38db29cff924439d9405b7eae7b4d054f537433f0eb47f7aec4d5bf",
+      "12": "1d6ccc9e8f935b20c5ea83cafb25664c3daba2c0b6346d87f38fff1ab5c7576c",
+      "15": "e1d40be4063fae59be54b61a1b62f9de4f8eac2dc1e39483bdcae9bb0384dbcc",
+      "18": "dee15db9d73cfcafc974712b5d400054868288835396b4550395f3cd0b7a03dd",
+      "21": "4e93b99416ecac93545937ff998985aafb5bba1673d77abf82c6141104fd839c"
+    },
+    "after": {
+      "decisions_sha256": "8a981679284c556135e6a5a149a493f52370d71730c1dd2042e7b124d229e36e",
+      "parameters_sha256": "b81c46af7c1bc6da454711054b9e2e30dc389e62a74a3577ddcd93d4741ef8dd"
+    }
+  },
+  "subset": [
+    0,
+    3,
+    6,
+    9,
+    12,
+    15,
+    18,
+    21
+  ],
+  "targets": 256,
+  "modes": [
+    {
+      "mode": "FP",
+      "tokens": 256,
+      "nmse": 0.0,
+      "mae": 0.0,
+      "mse": 0.0,
+      "cosine": 1.0,
+      "flattened_cosine": 1.0,
+      "fp_energy": 319.77304693109124,
+      "quant_energy": 319.77304693109124,
+      "nll": 5.5780941379455795,
+      "kl": 0.0,
+      "top1": 1.0,
+      "in5": 1.0,
+      "overlap": 1.0,
+      "ppl": 264.5668969765107
+    },
+    {
+      "mode": "Final MSE3",
+      "tokens": 256,
+      "nmse": 0.0034310821595427777,
+      "mae": 0.6970545498509598,
+      "mse": 1.0971675964279024,
+      "cosine": 0.9975652307817781,
+      "flattened_cosine": 0.9983771967489203,
+      "fp_energy": 319.77304693109124,
+      "quant_energy": 310.03885892105313,
+      "nll": 5.60479341220431,
+      "kl": 0.06482393733652911,
+      "top1": 0.87890625,
+      "in5": 1.0,
+      "overlap": 0.8804687571246177,
+      "ppl": 271.7257844046506
+    },
+    {
+      "mode": "HW absmax",
+      "tokens": 256,
+      "nmse": 0.0026595166387050444,
+      "mae": 0.6721179319401089,
+      "mse": 0.8504417389226462,
+      "cosine": 0.9990591043862798,
+      "flattened_cosine": 0.9987152883366051,
+      "fp_energy": 319.77304693109124,
+      "quant_energy": 312.8633862328095,
+      "nll": 5.544774894921934,
+      "kl": 0.07226070827283887,
+      "top1": 0.90234375,
+      "in5": 1.0,
+      "overlap": 0.87500000721775,
+      "ppl": 255.89696805237097
+    }
+  ],
+  "deltas": {
+    "kl_relative": 0.1147226046715161,
+    "nmse_relative": -0.22487526819834336,
+    "ppl_relative": -0.05825290517409109,
+    "top1_pp": 2.34375
+  },
+  "direct_absmax_vs_mse3": {
+    "nmse": 0.002189253912676573,
+    "cosine": 0.9979616520420957,
+    "top1": 0.90234375
+  },
+  "decision": {
+    "kl": false,
+    "nmse": true,
+    "top1": false,
+    "overall": "not-yet"
+  },
+  "worst_hidden_degradation": {
+    "layer": 3,
+    "mse3_nmse": 0.012543737949782682,
+    "absmax_nmse": 0.013992030698020734,
+    "degradation": 0.0014482927482380517
+  },
+  "conversation_outcomes": {
+    "better": 6,
+    "worse": 2,
+    "equal": 0
+  },
+  "max_fresh_stored_nll_error": 0.0
+}

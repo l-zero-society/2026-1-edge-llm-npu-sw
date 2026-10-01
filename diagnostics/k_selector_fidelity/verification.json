@@ -1,0 +1,57 @@
+{
+  "frozen_fingerprint_unchanged": true,
+  "independent_caches": true,
+  "fresh_baselines_match_stored": true,
+  "subset": [
+    0,
+    3,
+    6,
+    9,
+    12,
+    15,
+    18,
+    21
+  ],
+  "targets": 256,
+  "quantized_operations": [
+    "model.layers.0.mlp.down_proj",
+    "model.layers.1.mlp.down_proj",
+    "model.layers.10.mlp.down_proj",
+    "model.layers.11.mlp.down_proj",
+    "model.layers.12.mlp.down_proj",
+    "model.layers.13.mlp.down_proj",
+    "model.layers.14.mlp.down_proj",
+    "model.layers.15.mlp.down_proj",
+    "model.layers.16.mlp.down_proj",
+    "model.layers.17.mlp.down_proj",
+    "model.layers.2.mlp.down_proj",
+    "model.layers.3.mlp.down_proj",
+    "model.layers.4.mlp.down_proj",
+    "model.layers.5.mlp.down_proj",
+    "model.layers.6.mlp.down_proj",
+    "model.layers.7.mlp.down_proj",
+    "model.layers.8.mlp.down_proj",
+    "model.layers.9.mlp.down_proj"
+  ],
+  "hidden_positions": [
+    0,
+    7,
+    31
+  ],
+  "all_metrics_finite": true,
+  "selector_import_identity": true,
+  "before": {
+    "decisions_sha256": "8a981679284c556135e6a5a149a493f52370d71730c1dd2042e7b124d229e36e",
+    "parameters_sha256": "b81c46af7c1bc6da454711054b9e2e30dc389e62a74a3577ddcd93d4741ef8dd"
+  },
+  "after": {
+    "decisions_sha256": "8a981679284c556135e6a5a149a493f52370d71730c1dd2042e7b124d229e36e",
+    "parameters_sha256": "b81c46af7c1bc6da454711054b9e2e30dc389e62a74a3577ddcd93d4741ef8dd"
+  },
+  "tests_passed": 21,
+  "tests_failed": 0,
+  "tracked_files_unchanged": true,
+  "stored_baselines_unchanged": true,
+  "final_script_sha256": "15760397ba02c4630284b09af6765155926e762bf9c831b55a692d0f8f8bc7f9",
+  "test_command": "PYTHONPYCACHEPREFIX=/tmp/k-selector-fidelity .venv-calibration/bin/python -m unittest tests.test_k_selector_fidelity tests.test_k_selector_compare tests.test_finalize_downproj_ptq"
+}

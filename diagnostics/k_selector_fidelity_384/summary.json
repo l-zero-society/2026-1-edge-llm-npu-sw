@@ -1,0 +1,191 @@
+{
+  "provenance": {
+    "commit": "a42b415e377e13ed8d0ab6cad21f42f0f165d86a",
+    "before": {
+      "decisions_sha256": "8a981679284c556135e6a5a149a493f52370d71730c1dd2042e7b124d229e36e",
+      "parameters_sha256": "b81c46af7c1bc6da454711054b9e2e30dc389e62a74a3577ddcd93d4741ef8dd"
+    },
+    "script_sha256": "a3cbdb320c7da6ef3b92dc7586804028e998c2d6eed0e827feffedea30ef90be",
+    "command": [
+      "scripts/confirm_k_selector_fidelity_384.py"
+    ],
+    "prior_artifact_hashes": {
+      "diagnostics/k_selector_fidelity/conversation_000.json": "6740d5ec417292acf37e950a141ea6c74a6a351f224afe0923341086fa15ff12",
+      "diagnostics/k_selector_fidelity/summary.json": "8b9add0de3a9e10ffff047b37689d2313d0ba8f751d3e2ce76ec5efdeec1f560",
+      "diagnostics/k_selector_fidelity/conversation_021.json": "4f1584ad1f2a70bcb21313a79a81f0db9721b104819b1c6204710dc294e17e36",
+      "diagnostics/k_selector_fidelity/per_conversation.csv": "be5f0dce6356316d60a0e483e450a7121517f1f229c3562c6b81e285ccb687ab",
+      "diagnostics/k_selector_fidelity/report.md": "541953abc4f3cc842c15dcf4ce40d23c131714da003cc539ff0d27510650104d",
+      "diagnostics/k_selector_fidelity/conversation_006.json": "217bd9801e2e33ed54506e04efdcb8cf9fd5f406a4ff203b0ed9d0a164298573",
+      "diagnostics/k_selector_fidelity/conversation_012.json": "461d55df00871900742748985978f24ee1f887aa987aba73232a714915c1d669",
+      "diagnostics/k_selector_fidelity/hidden_layers.csv": "7fa559ce82b7186791030579e7be183eef09420c46d1f2623525673a057272be",
+      "diagnostics/k_selector_fidelity/conversation_009.json": "f8759307489a1a891d8c008906e592a8cdd7cedb5ee5384d89a2dc08659cb813",
+      "diagnostics/k_selector_fidelity/verification.json": "9f1830cd5e60eda6eb031e0a390223bede780df2aa3d34ebd46bb3eba11d748b",
+      "diagnostics/k_selector_fidelity/conversation_018.json": "f8a7628d99b44be6b63f5d1e836e74193986c2dcebc6cd2c370ee12bfa1a29e4",
+      "diagnostics/k_selector_fidelity/conversation_003.json": "835962d319b68c814df45596ab8a40de52b66d0bc0237a6e6218af0c71369e65",
+      "diagnostics/k_selector_fidelity/conversation_015.json": "ef2300c1b27ab6552842ca2f2ac717a798587dc38da1c919104ae9fda6634b79",
+      "diagnostics/k_selector_compare/conversation_000.json": "14106027184b6c87b008348316d4b15dd03867c9a885e4bb006a1ae5b3a063c1",
+      "diagnostics/k_selector_compare/conversation_016.json": "3bae2f9d0e796c1506b5e588a43984f0edb6262521663f9469b2b083c53245ed",
+      "diagnostics/k_selector_compare/summary.json": "6dd88d1bdc00da1fc3e3fd2cca62c6b61952201e866636ca732733a1119df62d",
+      "diagnostics/k_selector_compare/conversation_020.json": "8cf18c840cb9eccdc605e6032c8e7be6f8f6a0aa936dbdb688e33e22d1730f03",
+      "diagnostics/k_selector_compare/conversation_021.json": "7660cb87e54be6033992ca634a7ef2a79499f1ac1135e4e3dbb8768712d6ac0d",
+      "diagnostics/k_selector_compare/per_conversation.csv": "ff38bcf092fa260c7e29992c57439261ec30e9377498997f74e7201ef7bf4b24",
+      "diagnostics/k_selector_compare/k_stats.csv": "1311f8b37b64b0bf211ba397a98bc47dfc28ec539e55c281f80b623c1e29bb04",
+      "diagnostics/k_selector_compare/conversation_017.json": "a0bcd3a04c521f722259cc67e895e7b7f2661b934254c9770f4f23a9d9bd85b4",
+      "diagnostics/k_selector_compare/conversation_001.json": "ccf89ab655caddeb1f1eb92625de0cb99f52432760799c73d47a498905267246",
+      "diagnostics/k_selector_compare/report.md": "ccf91363d229529e13e20b353c6c0a1544560a594f20eaa61d17b77c6d2b5edb",
+      "diagnostics/k_selector_compare/k_delta_histogram.csv": "440aad6d678717305f61d2dfcccfc73aa1748ced07119797c26c5db97919d5f1",
+      "diagnostics/k_selector_compare/conversation_006.json": "292142e5e78c4ff7d010b25e16fa8efcc61396457df5fbf9c06a1d30f4e4055c",
+      "diagnostics/k_selector_compare/conversation_010.json": "abe16df5f74925a68644ba943b5820a2fd1cc551f779fe841e3505b9204ff46e",
+      "diagnostics/k_selector_compare/conversation_011.json": "b35c87e90d9c4cb0aa48815d0888b5a549e1a149554605023b2d223488e67aa7",
+      "diagnostics/k_selector_compare/conversation_007.json": "628c555505942ea01c30688bc5387c2090a87d847a6d96328b5ff8ba5b069ae1",
+      "diagnostics/k_selector_compare/conversation_008.json": "e193240691a3133e672a1f47528e3f0138647c30d04f8ea4c86aec2a93abf7c4",
+      "diagnostics/k_selector_compare/conversation_012.json": "fbe372618e7e0e5f331e59c798960414c43d134eddfff82bec47fe30a5b94521",
+      "diagnostics/k_selector_compare/conversation_004.json": "c2c9829f120a44ca27a466914cf8dc919348969fc017e6de2e2d680d4a281296",
+      "diagnostics/k_selector_compare/conversation_005.json": "3a17f873d9baac305838619204d6cfaf5b55a498f5a72e4241e46783f52e0136",
+      "diagnostics/k_selector_compare/conversation_013.json": "56ee42b3eff9b3b03382f073eada48691348f491430fcc85a35c39783e7e3244",
+      "diagnostics/k_selector_compare/conversation_009.json": "8455640870261ec089229f9455c404c11761c92ac32bbd9cca25515fd1368ea1",
+      "diagnostics/k_selector_compare/verification.json": "6b72718eac923f6f8d581566b6663e5e2c5710a97b2af7e5a7bdc4468759466e",
+      "diagnostics/k_selector_compare/conversation_014.json": "f7363615659dbe685f5e13981d0049cca1f3515c08602646718847b0ca3777e4",
+      "diagnostics/k_selector_compare/conversation_002.json": "c8885a7e24aa6b915756b16d7514059fbf43c7e85efb9dcb72c4d5e1c406d89f",
+      "diagnostics/k_selector_compare/conversation_022.json": "6a4d33be530827c8d7182dd008fb8144190fe545924e15076c5b06910b70def0",
+      "diagnostics/k_selector_compare/conversation_018.json": "0ef1b80366c3562fbd8990344864f31603a63f405e171b9c0a8a72b2f51cf36d",
+      "diagnostics/k_selector_compare/conversation_019.json": "5a361f4103131d0f9d1bece6cf83e825ae1e3e469d8d2d95b8c44486a6d4292d",
+      "diagnostics/k_selector_compare/conversation_023.json": "1499149fa4d2b23069a36d597d62dc7c96fd22f5c9bd0cb576d91738448a932d",
+      "diagnostics/k_selector_compare/conversation_003.json": "955bd0eecd7b00e831327368e766f6f2ecccf87f03bebba450857820869cab03",
+      "diagnostics/k_selector_compare/conversation_015.json": "c2ebc2e21202875ef7e21ca36ff71b2ce6e38c2dc740338c13fc0e31de9ff8b1"
+    },
+    "after": {
+      "decisions_sha256": "8a981679284c556135e6a5a149a493f52370d71730c1dd2042e7b124d229e36e",
+      "parameters_sha256": "b81c46af7c1bc6da454711054b9e2e30dc389e62a74a3577ddcd93d4741ef8dd"
+    }
+  },
+  "subset": [
+    0,
+    3,
+    6,
+    9,
+    12,
+    15,
+    18,
+    21,
+    2,
+    8,
+    14,
+    20
+  ],
+  "targets": 384,
+  "modes": [
+    {
+      "mode": "FP",
+      "tokens": 384,
+      "nmse": 0.0,
+      "mae": 0.0,
+      "mse": 0.0,
+      "cosine": 1.0,
+      "flattened_cosine": 1.0,
+      "fp_energy": 325.7438735613351,
+      "quant_energy": 325.7438735613351,
+      "nll": 5.308105880255753,
+      "kl": 0.0,
+      "top1": 1.0,
+      "in5": 1.0,
+      "overlap": 1.0,
+      "ppl": 201.96731558113976
+    },
+    {
+      "mode": "Final MSE3",
+      "tokens": 384,
+      "nmse": 0.0031813705582229247,
+      "mae": 0.6820101118229321,
+      "mse": 1.0363119688695224,
+      "cosine": 0.9976628024373424,
+      "flattened_cosine": 0.9984766922451983,
+      "fp_energy": 325.7438735613351,
+      "quant_energy": 317.1809138617007,
+      "nll": 5.354980758150799,
+      "kl": 0.06693737196218782,
+      "top1": 0.890625,
+      "in5": 0.9973958333333334,
+      "overlap": 0.8812500068452209,
+      "ppl": 211.65990358576383
+    },
+    {
+      "mode": "HW absmax",
+      "tokens": 384,
+      "nmse": 0.002816361993121887,
+      "mae": 0.6686292792417652,
+      "mse": 0.9174126649904456,
+      "cosine": 0.998396436807108,
+      "flattened_cosine": 0.9986274163160654,
+      "fp_energy": 325.7438735613351,
+      "quant_energy": 319.3124050280354,
+      "nll": 5.289997865566558,
+      "kl": 0.07031127959518617,
+      "top1": 0.8984375,
+      "in5": 1.0,
+      "overlap": 0.8796875070159634,
+      "ppl": 198.3430020589927
+    }
+  ],
+  "deltas": {
+    "kl_relative": 0.05040394527147296,
+    "nmse_relative": -0.11473311845349037,
+    "ppl_relative": -0.06291650568278351,
+    "top1_pp": 0.78125
+  },
+  "decision": {
+    "kl": true,
+    "nmse": true,
+    "top1": true,
+    "overall": "HW-ready"
+  },
+  "classification": {
+    "case": "A",
+    "label": "HW-ready"
+  },
+  "bootstrap": {
+    "seed": 20261001,
+    "resamples": 10000,
+    "unit": "paired conversation",
+    "note": "Descriptive equal-conversation mean differences. NMSE CI uses per-conversation NMSE, not pooled-energy NMSE. Top1 units are fractions.",
+    "intervals": {
+      "kl": {
+        "mean": 0.003373907632998339,
+        "low": -0.005091150760624392,
+        "high": 0.01292972938432985
+      },
+      "nmse": {
+        "mean": -0.00028011210914140767,
+        "low": -0.0010095055864441057,
+        "high": 0.0003058426310736787
+      },
+      "top1": {
+        "mean": 0.0078125,
+        "low": -0.018229166666666668,
+        "high": 0.033854166666666664
+      }
+    }
+  },
+  "direct_absmax_vs_mse3": {
+    "nmse": 0.0020134736007674935,
+    "cosine": 0.9983925289086093,
+    "top1": 0.90625
+  },
+  "nll_outcomes": {
+    "better": 9,
+    "worse": 3,
+    "equal": 0
+  },
+  "kl_outcomes": {
+    "absmax_lower": 5,
+    "absmax_higher": 7,
+    "approximately_equal": 0
+  },
+  "max_previous_nll_error": 0.0,
+  "old_subset_fresh_deltas": {
+    "kl_relative": 0.1147226046715161,
+    "nmse_relative": -0.22487526819834336,
+    "ppl_relative": -0.05825290517409109,
+    "top1_pp": 2.34375
+  }
+}
