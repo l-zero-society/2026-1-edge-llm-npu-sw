@@ -1,0 +1,9 @@
+{
+  "exact_sx_match_count": 6,
+  "exact_s10_match_count": 8,
+  "exact_pair_match_count": 2,
+  "sx_direction_match_count": 7,
+  "s10_direction_match_count": 11,
+  "persistent_sx_boundary_count": 1,
+  "persistent_s10_boundary_count": 7
+}
