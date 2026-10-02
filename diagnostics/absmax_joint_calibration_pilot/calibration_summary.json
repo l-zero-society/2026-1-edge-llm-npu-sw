@@ -1,0 +1,14 @@
+{
+  "changed_sx_layers": 10,
+  "changed_s10_layers": 17,
+  "sx_boundary_hits": 1,
+  "s10_boundary_hits": 9,
+  "boundary_hit_layers": 9,
+  "mean_relative_local_nmse_change": -0.07374938220400908,
+  "median_relative_local_nmse_change": -0.06551587436731532,
+  "best_layer_improvement": 0.1974149215853424,
+  "worst_layer_change": -0.0004375943425313012,
+  "total_feasible_candidates": 810,
+  "total_rejected_candidates": 0,
+  "total_unique_acc": 72
+}

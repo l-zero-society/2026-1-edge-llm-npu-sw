@@ -1,0 +1,14 @@
+/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/.venv-calibration/lib/python3.9/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+CAPTURE 1 6
+CAPTURE 2 6
+CAPTURE 3 6
+CAPTURE 4 6
+CAPTURE 5 6
+CAPTURE 6 6
+VALIDATE 1 6
+VALIDATE 2 6
+VALIDATE 3 6
+VALIDATE 4 6
+VALIDATE 5 6
+VALIDATE 6 6

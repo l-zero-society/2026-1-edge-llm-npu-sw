@@ -58,6 +58,12 @@ class JointCalibrationTests(unittest.TestCase):
         self.assertLessEqual(result["selected"]["score"],
                              result["old"]["score"] + joint.LOCAL_REGRESSION_TOL)
 
+    def test_regression_guard_is_runtime_error(self):
+        with patch.object(joint, "evaluate_joint_candidate", side_effect=self.fake_candidate), \
+                patch.object(joint, "candidate_key", side_effect=lambda c, *args: -c["score"]):
+            with self.assertRaisesRegex(RuntimeError, "locally regressive"):
+                self.search([0, 1], [0, 1])
+
     def test_candidate_specific_shifts(self):
         first = dict(multiplier=np.array([1]), shift=np.array([4]), status=np.array(["ok"]))
         second = dict(multiplier=np.array([1]), shift=np.array([5]), status=np.array(["ok"]))

@@ -132,7 +132,11 @@ def search_joint_pair(x, labels, ref, wq, sw, old_sx, old_s10, *, sx_js, s10_is)
         raise ValueError("old pair is infeasible: " + old["rejection_reason"])
     feasible = [c for c in candidates if c["feasible"]]
     selected = min(feasible, key=lambda c: candidate_key(c, old_sx, old_s10))
-    assert selected["score"] <= old["score"] + LOCAL_REGRESSION_TOL
+    if selected["score"] > old["score"] + LOCAL_REGRESSION_TOL:
+        raise RuntimeError(
+            "joint calibration selected a locally regressive candidate: "
+            f"selected={selected['score']!r}, old={old['score']!r}, "
+            f"tolerance={LOCAL_REGRESSION_TOL!r}")
     relative = ((selected["score"] - old["score"]) / old["score"]
                 if old["score"] else 0.0)
     metadata = dict(old_score=old["score"], selected_score=selected["score"],
