@@ -1,0 +1,22 @@
+/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/.venv-calibration/lib/python3.9/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+Traceback (most recent call last):
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/run_absmax_cross_layer_calibration.py", line 408, in <module>
+    try:main()
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/run_absmax_cross_layer_calibration.py", line 270, in main
+    captured=capture_rows(frozen,before,base.sha256_file(pilot_path))
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/run_absmax_cross_layer_calibration.py", line 171, in capture_rows
+    if stored!=stable_config:raise RuntimeError('stability capture configuration/fingerprint mismatch')
+RuntimeError: stability capture configuration/fingerprint mismatch
+/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/.venv-calibration/lib/python3.9/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+Traceback (most recent call last):
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/run_absmax_cross_layer_calibration.py", line 415, in <module>
+    try:main()
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/run_absmax_cross_layer_calibration.py", line 277, in main
+    captured=capture_rows(frozen,before,base.sha256_file(pilot_path))
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/run_absmax_cross_layer_calibration.py", line 176, in capture_rows
+    raise RuntimeError('stability capture frozen fingerprint mismatch')
+RuntimeError: stability capture frozen fingerprint mismatch
+/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/.venv-calibration/lib/python3.9/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(

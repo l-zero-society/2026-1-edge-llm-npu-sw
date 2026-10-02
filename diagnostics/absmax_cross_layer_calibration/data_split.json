@@ -1,0 +1,89 @@
+{
+  "seed": 20261003,
+  "available_fresh_conversations": 10,
+  "previous_validation_source_indices": [
+    0,
+    2,
+    3,
+    4,
+    7,
+    9,
+    10,
+    13,
+    18,
+    21,
+    22,
+    25,
+    27,
+    28
+  ],
+  "selection": [
+    {
+      "index": 16,
+      "anchor_id": "70cc7683-a28a-4a64-bc65-a5c08facf160",
+      "response_id": "70cc7683-a28a-4a64-bc65-a5c08facf160",
+      "tree_id": "1657e69e-e2e1-4243-af76-2c065be50a04"
+    },
+    {
+      "index": 24,
+      "anchor_id": "f14e2497-aed7-423a-adef-72712c4d2baa",
+      "response_id": "f14e2497-aed7-423a-adef-72712c4d2baa",
+      "tree_id": "47b8dfb9-c809-447d-ad95-d8f8f802ce74"
+    },
+    {
+      "index": 26,
+      "anchor_id": "fd836f97-982b-4c1b-815d-bf99e4d2ddaa",
+      "response_id": "fd836f97-982b-4c1b-815d-bf99e4d2ddaa",
+      "tree_id": "ae58a3a2-2a3e-4db5-8cbb-87687017a065"
+    },
+    {
+      "index": 12,
+      "anchor_id": "1046b020-f165-4b69-af82-92012eb9042b",
+      "response_id": "1046b020-f165-4b69-af82-92012eb9042b",
+      "tree_id": "84c45d4f-5726-4a7c-86c9-11689fcec28f"
+    }
+  ],
+  "final": [
+    {
+      "index": 5,
+      "anchor_id": "c948c38a-d429-4a9c-a826-b90b8bd96fd5",
+      "response_id": "c948c38a-d429-4a9c-a826-b90b8bd96fd5",
+      "tree_id": "7c7f099f-d4ee-4181-9685-5b1d173c57f4"
+    },
+    {
+      "index": 29,
+      "anchor_id": "a25cda55-012d-4921-a9a6-745e6d505fe6",
+      "response_id": "a25cda55-012d-4921-a9a6-745e6d505fe6",
+      "tree_id": "f1be017c-007e-43d3-9661-d3281075a341"
+    },
+    {
+      "index": 11,
+      "anchor_id": "6e336ce7-0def-4d76-931d-055d3bfbe746",
+      "response_id": "6e336ce7-0def-4d76-931d-055d3bfbe746",
+      "tree_id": "5910983a-1936-4418-b904-91c86500615c"
+    },
+    {
+      "index": 1,
+      "anchor_id": "d2dd12d4-854f-459b-956f-d3740eaeb5b9",
+      "response_id": "d2dd12d4-854f-459b-956f-d3740eaeb5b9",
+      "tree_id": "b33a05fb-b12d-4ccb-af40-26522503f349"
+    },
+    {
+      "index": 31,
+      "anchor_id": "24dfc058-670b-450c-87a5-d810db502170",
+      "response_id": "24dfc058-670b-450c-87a5-d810db502170",
+      "tree_id": "696b4440-2db4-42de-bf3a-4d065adc6253"
+    },
+    {
+      "index": 8,
+      "anchor_id": "6a817490-13cf-4741-804c-2ad2f14699f0",
+      "response_id": "6a817490-13cf-4741-804c-2ad2f14699f0",
+      "tree_id": "f20e008f-8eeb-421a-ad77-18071e4d96c3"
+    }
+  ],
+  "selection_conversations": 4,
+  "selection_targets": 96,
+  "final_conversations": 6,
+  "final_targets": 192,
+  "fingerprint": "f8a5b9e4333154d2b239da56dbe9dbd0b4f1258b0ee589f4f8457d0ebaaf7daf"
+}

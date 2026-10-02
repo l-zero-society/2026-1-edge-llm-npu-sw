@@ -1,0 +1,116 @@
+RUN_START
+DATA_SPLIT_FAILED
+RESUME_AFTER_DATA_SPLIT_FAILED
+DATA_SPLIT_REVISED fresh=10 selection=4 final=6
+UNIT_TEST_START
+UNIT_TEST_DONE
+FROZEN_VERIFY_START
+FROZEN_VERIFY_DONE
+RUN_FAILED
+RESUME_AFTER_DATA_SPLIT_FAILED
+DATA_SPLIT_REVISED fresh=10 selection=4 final=6
+UNIT_TEST_START
+UNIT_TEST_DONE
+FROZEN_VERIFY_START
+FROZEN_VERIFY_DONE
+RUN_FAILED
+RESUME_AFTER_DATA_SPLIT_FAILED
+DATA_SPLIT_REVISED fresh=10 selection=4 final=6
+UNIT_TEST_START
+UNIT_TEST_DONE
+FROZEN_VERIFY_START
+FROZEN_VERIFY_DONE
+CANDIDATE_GENERATION_START
+CANDIDATE_LAYER 0/18 DONE
+CANDIDATE_LAYER 1/18 DONE
+CANDIDATE_LAYER 2/18 DONE
+CANDIDATE_LAYER 3/18 DONE
+CANDIDATE_LAYER 4/18 DONE
+CANDIDATE_LAYER 5/18 DONE
+CANDIDATE_LAYER 6/18 DONE
+CANDIDATE_LAYER 7/18 DONE
+CANDIDATE_LAYER 8/18 DONE
+CANDIDATE_LAYER 9/18 DONE
+CANDIDATE_LAYER 10/18 DONE
+CANDIDATE_LAYER 11/18 DONE
+CANDIDATE_LAYER 12/18 DONE
+CANDIDATE_LAYER 13/18 DONE
+CANDIDATE_LAYER 14/18 DONE
+CANDIDATE_LAYER 15/18 DONE
+CANDIDATE_LAYER 16/18 DONE
+CANDIDATE_LAYER 17/18 DONE
+CANDIDATE_GENERATION_DONE
+DATA_SPLIT_DONE selection_targets=96 final_targets=192
+SELECTION_FP_START
+SELECTION_FP_DONE
+OLD_ABSMAX_SELECTION_BASELINE_DONE
+SENSITIVITY_START
+SENSITIVITY 1/18 DONE layer=0 batch_sec=217.576 elapsed_sec=568.753
+SENSITIVITY 2/18 DONE layer=1 batch_sec=215.096 elapsed_sec=783.850
+SENSITIVITY 3/18 DONE layer=2 batch_sec=213.539 elapsed_sec=997.390
+SENSITIVITY 4/18 DONE layer=3 batch_sec=232.290 elapsed_sec=1229.681
+SENSITIVITY 5/18 DONE layer=4 batch_sec=245.130 elapsed_sec=1474.814
+SENSITIVITY 6/18 DONE layer=5 batch_sec=264.279 elapsed_sec=1739.095
+SENSITIVITY 7/18 DONE layer=6 batch_sec=241.053 elapsed_sec=1980.149
+SENSITIVITY 8/18 DONE layer=7 batch_sec=252.337 elapsed_sec=2232.488
+SENSITIVITY 9/18 DONE layer=8 batch_sec=264.068 elapsed_sec=2496.557
+SENSITIVITY 10/18 DONE layer=9 batch_sec=250.736 elapsed_sec=2747.295
+SENSITIVITY 11/18 DONE layer=10 batch_sec=241.598 elapsed_sec=2988.894
+SENSITIVITY 12/18 DONE layer=11 batch_sec=247.103 elapsed_sec=3235.999
+SENSITIVITY 13/18 DONE layer=12 batch_sec=241.741 elapsed_sec=3477.743
+SENSITIVITY 14/18 DONE layer=13 batch_sec=247.459 elapsed_sec=3725.204
+SENSITIVITY 15/18 DONE layer=14 batch_sec=247.649 elapsed_sec=3972.856
+SENSITIVITY 16/18 DONE layer=15 batch_sec=231.387 elapsed_sec=4204.245
+SENSITIVITY 17/18 DONE layer=16 batch_sec=220.026 elapsed_sec=4424.274
+SENSITIVITY 18/18 DONE layer=17 batch_sec=216.904 elapsed_sec=4641.179
+SENSITIVITY_DONE shortlist=6
+COORD_PASS_1_START
+COORD_PASS_1 layer=16 candidate=L16C1 DONE batch_sec=215.799 elapsed_sec=4857.895
+COORD_PASS_1 layer=16 candidate=L16C2 DONE batch_sec=216.486 elapsed_sec=5074.700
+COORD_PASS_1 layer=16 candidate=L16C3 DONE batch_sec=217.170 elapsed_sec=5292.177
+COORD_PASS_1 layer=17 candidate=L17C1 DONE batch_sec=217.256 elapsed_sec=5510.672
+COORD_PASS_1 layer=17 candidate=L17C2 DONE batch_sec=218.838 elapsed_sec=5729.821
+COORD_PASS_1 layer=17 candidate=L17C3 DONE batch_sec=218.740 elapsed_sec=5948.869
+COORD_PASS_1 layer=13 candidate=L13C1 DONE batch_sec=219.075 elapsed_sec=6169.178
+COORD_PASS_1 layer=13 candidate=L13C2 DONE batch_sec=218.883 elapsed_sec=6388.372
+COORD_PASS_1 layer=13 candidate=L13C3 DONE batch_sec=219.010 elapsed_sec=6607.689
+COORD_PASS_1 layer=1 candidate=L1C1 DONE batch_sec=219.468 elapsed_sec=6828.379
+COORD_PASS_1 layer=1 candidate=L1C2 DONE batch_sec=218.556 elapsed_sec=7047.249
+COORD_PASS_1 layer=1 candidate=L1C3 DONE batch_sec=218.745 elapsed_sec=7266.308
+COORD_PASS_1 layer=14 candidate=L14C1 DONE batch_sec=218.175 elapsed_sec=7485.697
+COORD_PASS_1 layer=14 candidate=L14C2 DONE batch_sec=219.041 elapsed_sec=7705.054
+COORD_PASS_1 layer=14 candidate=L14C3 DONE batch_sec=219.518 elapsed_sec=7924.887
+COORD_PASS_1 layer=0 candidate=L0C1 DONE batch_sec=208.588 elapsed_sec=8134.699
+COORD_PASS_1 layer=0 candidate=L0C2 DONE batch_sec=206.344 elapsed_sec=8341.359
+COORD_PASS_1 layer=0 candidate=L0C3 DONE batch_sec=205.854 elapsed_sec=8547.518
+COORD_PASS_1_DONE changed_layers=3
+COORD_PASS_2_START
+COORD_PASS_2 layer=16 candidate=L16C0 DONE batch_sec=208.142 elapsed_sec=8756.557
+COORD_PASS_2 layer=16 candidate=L16C2 DONE batch_sec=210.006 elapsed_sec=8967.165
+COORD_PASS_2 layer=16 candidate=L16C3 DONE batch_sec=210.489 elapsed_sec=9177.966
+COORD_PASS_2 layer=17 candidate=L17C0 DONE batch_sec=207.669 elapsed_sec=9386.535
+COORD_PASS_2 layer=17 candidate=L17C1 DONE batch_sec=207.099 elapsed_sec=9593.938
+COORD_PASS_2 layer=17 candidate=L17C2 DONE batch_sec=209.272 elapsed_sec=9803.516
+COORD_PASS_2 layer=13 candidate=L13C0 DONE batch_sec=209.204 elapsed_sec=10013.911
+COORD_PASS_2 layer=13 candidate=L13C1 DONE batch_sec=208.208 elapsed_sec=10222.426
+COORD_PASS_2 layer=13 candidate=L13C3 DONE batch_sec=209.507 elapsed_sec=10432.546
+COORD_PASS_2 layer=1 candidate=L1C1 DONE batch_sec=209.988 elapsed_sec=10643.741
+COORD_PASS_2 layer=1 candidate=L1C2 DONE batch_sec=207.128 elapsed_sec=10851.174
+COORD_PASS_2 layer=1 candidate=L1C3 DONE batch_sec=210.886 elapsed_sec=11062.371
+COORD_PASS_2 layer=14 candidate=L14C1 DONE batch_sec=210.347 elapsed_sec=11273.929
+COORD_PASS_2 layer=14 candidate=L14C2 DONE batch_sec=210.138 elapsed_sec=11484.376
+COORD_PASS_2 layer=14 candidate=L14C3 DONE batch_sec=211.169 elapsed_sec=11695.861
+COORD_PASS_2 layer=0 candidate=L0C1 DONE batch_sec=215.172 elapsed_sec=11912.254
+COORD_PASS_2 layer=0 candidate=L0C2 DONE batch_sec=220.790 elapsed_sec=12133.358
+COORD_PASS_2 layer=0 candidate=L0C3 DONE batch_sec=221.297 elapsed_sec=12354.969
+COORD_PASS_2_DONE changed_layers=3
+FINAL_VALIDATION_START
+FINAL_BATCH 1/6 DONE targets=32 total_targets=32/192 batch_sec=247.345 elapsed_sec=12602.670
+FINAL_BATCH 2/6 DONE targets=32 total_targets=64/192 batch_sec=236.904 elapsed_sec=12839.575
+FINAL_BATCH 3/6 DONE targets=32 total_targets=96/192 batch_sec=234.433 elapsed_sec=13074.007
+FINAL_BATCH 4/6 DONE targets=32 total_targets=128/192 batch_sec=245.132 elapsed_sec=13319.139
+FINAL_BATCH 5/6 DONE targets=32 total_targets=160/192 batch_sec=255.804 elapsed_sec=13574.943
+FINAL_BATCH 6/6 DONE targets=32 total_targets=192/192 batch_sec=251.841 elapsed_sec=13826.784
+ARTIFACT_WRITE_DONE
+FINAL_VERIFY_DONE
+RUN_COMPLETE
