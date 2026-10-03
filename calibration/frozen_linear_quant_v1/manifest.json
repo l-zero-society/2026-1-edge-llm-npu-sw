@@ -1,0 +1,36 @@
+{
+  "format_version": 1,
+  "name": "frozen_linear_quant_v1",
+  "status": "FROZEN_REFERENCE",
+  "scope": {
+    "quantized_module_count": 18,
+    "quantized_module_pattern": "model.layers.{0..17}.mlp.down_proj",
+    "quantized_modules": "18 x mlp.down_proj only"
+  },
+  "runtime_row_scale_policy": "absmax",
+  "changed_layers": [13, 16, 17],
+  "source_selected_configuration": "diagnostics/absmax_cross_layer_calibration/selected_configuration.json",
+  "source_confirmation": "diagnostics/frozen_cross_layer_confirmation/",
+  "canonical_parameters": "calibration/frozen_linear_quant_v1/parameters.json",
+  "source_selected_configuration_sha256": "ca11fda5f782a9577cbc41b0d14abf134a8a13acf21809089cb77d8e010762fb",
+  "canonical_parameters_sha256": "ca11fda5f782a9577cbc41b0d14abf134a8a13acf21809089cb77d8e010762fb",
+  "old_baseline_parameters_fingerprint": "b81c46af7c1bc6da454711054b9e2e30dc389e62a74a3577ddcd93d4741ef8dd",
+  "selected_configuration_fingerprint": "7153e2b535acdd6c3a492aba2fcab090984d10bf23776bb2e0f03831f2b86353",
+  "selector": "compare_k_selectors_e2e.select_absmax",
+  "signed_int10_range": [-512, 511],
+  "effective_shift_range": [0, 31],
+  "observed_confirmation_effective_shift_min": 10,
+  "observed_confirmation_effective_shift_max": 29,
+  "confirmation_dataset_type": "local_unseen",
+  "confirmation_sequences": 32,
+  "confirmation_targets": 1024,
+  "previous_data_overlap": false,
+  "search_performed_in_confirmation": false,
+  "calibration_performed_in_confirmation": false,
+  "weight_quantization": {
+    "format": "INT8 symmetric per-output-channel",
+    "reference": "diagnostics/final_downproj_ptq/",
+    "unchanged_from_old_baseline": true
+  },
+  "note": "Final/reference Linear quant configuration. Selected because it passes the predefined fidelity gate and provides a robust logits-NMSE reduction; it is not a strict KL/PPL optimum."
+}
