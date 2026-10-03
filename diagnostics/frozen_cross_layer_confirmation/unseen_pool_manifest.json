@@ -1,0 +1,798 @@
+{
+  "total_local_examples": 111,
+  "previously_used_examples": 56,
+  "fresh_eligible_examples": 55,
+  "skipped": [
+    {
+      "source_partition": "calibration",
+      "index": 0,
+      "anchor_id": "d6ff61de-0289-4560-aa87-3ddbd23bc3a5",
+      "reason": "anchor absent from locally available ready-tree archive"
+    },
+    {
+      "source_partition": "calibration",
+      "index": 1,
+      "anchor_id": "65fc8720-fa3a-4a69-8628-465d177a0169",
+      "reason": "anchor absent from locally available ready-tree archive"
+    },
+    {
+      "source_partition": "calibration",
+      "index": 4,
+      "anchor_id": "74bd2d08-6171-46d9-a754-4c62b49f36b0",
+      "reason": "anchor absent from locally available ready-tree archive"
+    },
+    {
+      "source_partition": "calibration",
+      "index": 5,
+      "anchor_id": "148146b7-af79-4e98-93ac-b0e01232d6f3",
+      "reason": "anchor absent from locally available ready-tree archive"
+    },
+    {
+      "source_partition": "calibration",
+      "index": 8,
+      "anchor_id": "f5f03ae3-d179-43c5-96ff-25d72bab6cbb",
+      "reason": "anchor absent from locally available ready-tree archive"
+    },
+    {
+      "source_partition": "calibration",
+      "index": 10,
+      "anchor_id": "7716a645-2532-4c56-b095-937a7e4a8e88",
+      "reason": "anchor absent from locally available ready-tree archive"
+    },
+    {
+      "source_partition": "calibration",
+      "index": 12,
+      "anchor_id": "021ad72a-7f3a-4634-83eb-4c39b1ae562d",
+      "reason": "anchor absent from locally available ready-tree archive"
+    },
+    {
+      "source_partition": "calibration",
+      "index": 16,
+      "anchor_id": "c43f908e-363c-4d49-8233-1f23035356d4",
+      "reason": "anchor absent from locally available ready-tree archive"
+    },
+    {
+      "source_partition": "calibration",
+      "index": 18,
+      "anchor_id": "2233b6bb-ad21-45b6-9a4c-58b3183f6fa7",
+      "reason": "anchor absent from locally available ready-tree archive"
+    },
+    {
+      "source_partition": "calibration",
+      "index": 19,
+      "anchor_id": "5c33774d-ec63-4357-992a-eed101f67dbc",
+      "reason": "anchor absent from locally available ready-tree archive"
+    },
+    {
+      "source_partition": "calibration",
+      "index": 21,
+      "anchor_id": "28f90834-2b6c-4338-b9a1-acf6c05d05db",
+      "reason": "anchor absent from locally available ready-tree archive"
+    },
+    {
+      "source_partition": "calibration",
+      "index": 23,
+      "anchor_id": "b7bf6211-8bf6-4db5-81fb-40773e6a37f2",
+      "reason": "anchor absent from locally available ready-tree archive"
+    },
+    {
+      "source_partition": "calibration",
+      "index": 24,
+      "anchor_id": "a59b8ac8-4263-4457-a474-194c16d002d7",
+      "reason": "anchor absent from locally available ready-tree archive"
+    },
+    {
+      "source_partition": "calibration",
+      "index": 26,
+      "anchor_id": "df97292f-6bc5-4c27-8c2f-92b2560aeb2f",
+      "reason": "anchor absent from locally available ready-tree archive"
+    },
+    {
+      "source_partition": "calibration",
+      "index": 27,
+      "anchor_id": "4a7ace01-5979-4b8e-86ca-c0fdb8322e63",
+      "reason": "anchor absent from locally available ready-tree archive"
+    },
+    {
+      "source_partition": "calibration",
+      "index": 29,
+      "anchor_id": "665e2653-327b-4f8b-8faf-c7cfbe56a0f5",
+      "reason": "anchor absent from locally available ready-tree archive"
+    },
+    {
+      "source_partition": "calibration",
+      "index": 42,
+      "anchor_id": "3d272c88-8e94-47ee-83ec-761e22293a0c",
+      "reason": "anchor absent from locally available ready-tree archive"
+    },
+    {
+      "source_partition": "calibration",
+      "index": 46,
+      "anchor_id": "115d19b9-b285-44af-b592-d7622ce1200f",
+      "reason": "anchor absent from locally available ready-tree archive"
+    },
+    {
+      "source_partition": "calibration",
+      "index": 51,
+      "anchor_id": "e8de4a50-fc07-4f75-a6c3-2ec7c56329ee",
+      "reason": "anchor absent from locally available ready-tree archive"
+    },
+    {
+      "source_partition": "calibration",
+      "index": 53,
+      "anchor_id": "3d0d8df1-7657-434d-bfe0-dd4a985c64d5",
+      "reason": "anchor absent from locally available ready-tree archive"
+    },
+    {
+      "source_partition": "calibration",
+      "index": 58,
+      "anchor_id": "6690f224-890d-43fd-a2c5-06750f181d67",
+      "reason": "anchor absent from locally available ready-tree archive"
+    },
+    {
+      "source_partition": "calibration",
+      "index": 60,
+      "anchor_id": "c4bdb3a9-6216-4ab0-b9c4-92dabf7da1e9",
+      "reason": "anchor absent from locally available ready-tree archive"
+    },
+    {
+      "source_partition": "calibration",
+      "index": 63,
+      "anchor_id": "f865d4cd-2809-469b-bb7c-ccc412273e12",
+      "reason": "no valid human assistant child in local archive"
+    },
+    {
+      "source_partition": "calibration",
+      "index": 66,
+      "anchor_id": "eb8ccdfa-b975-49f0-a7ed-5983522aa10d",
+      "reason": "anchor absent from locally available ready-tree archive"
+    },
+    {
+      "source_partition": "calibration",
+      "index": 68,
+      "anchor_id": "b9f0e5b3-de5c-4d4f-abb9-f738b7428335",
+      "reason": "anchor absent from locally available ready-tree archive"
+    },
+    {
+      "source_partition": "calibration",
+      "index": 69,
+      "anchor_id": "3f42b500-74ec-46d1-8b52-258e72b106d2",
+      "reason": "anchor absent from locally available ready-tree archive"
+    },
+    {
+      "source_partition": "calibration",
+      "index": 72,
+      "anchor_id": "4fa6eadc-92f0-4073-a7e6-6947b1d71415",
+      "reason": "anchor absent from locally available ready-tree archive"
+    },
+    {
+      "source_partition": "calibration",
+      "index": 75,
+      "anchor_id": "dd2d41d6-c44b-4ad4-ac71-806e65801632",
+      "reason": "anchor absent from locally available ready-tree archive"
+    },
+    {
+      "source_partition": "calibration",
+      "index": 77,
+      "anchor_id": "e896f8a6-03bb-4e6f-90c1-5865a19d0f90",
+      "reason": "anchor absent from locally available ready-tree archive"
+    },
+    {
+      "source_partition": "calibration",
+      "index": 80,
+      "anchor_id": "d2c6819f-561a-4579-9bdf-ba0a5ef15cc5",
+      "reason": "anchor absent from locally available ready-tree archive"
+    },
+    {
+      "source_partition": "calibration",
+      "index": 82,
+      "anchor_id": "009fc9f5-f12e-403e-b58e-596db597ed00",
+      "reason": "no valid human assistant child in local archive"
+    },
+    {
+      "source_partition": "calibration",
+      "index": 89,
+      "anchor_id": "c78b88c2-5ce1-4be4-8702-fa8835db772b",
+      "reason": "anchor absent from locally available ready-tree archive"
+    },
+    {
+      "source_partition": "calibration",
+      "index": 92,
+      "anchor_id": "54d5c8fb-a428-41e3-8d63-7c2d6afdf99f",
+      "reason": "anchor absent from locally available ready-tree archive"
+    },
+    {
+      "source_partition": "calibration",
+      "index": 100,
+      "anchor_id": "d482a643-dd41-4e92-b853-bbf6ee35ff0e",
+      "reason": "no valid human assistant child in local archive"
+    },
+    {
+      "source_partition": "calibration",
+      "index": 101,
+      "anchor_id": "6c5e7259-e985-4b60-8cb6-04b0b6df3da3",
+      "reason": "no valid human assistant child in local archive"
+    },
+    {
+      "source_partition": "calibration",
+      "index": 114,
+      "anchor_id": "46155abd-4f34-456d-a7c0-29777235230f",
+      "reason": "anchor absent from locally available ready-tree archive"
+    },
+    {
+      "source_partition": "calibration",
+      "index": 115,
+      "anchor_id": "e8187a49-0dcb-429b-bc45-d0e3189b90dd",
+      "reason": "anchor absent from locally available ready-tree archive"
+    },
+    {
+      "source_partition": "calibration",
+      "index": 118,
+      "anchor_id": "92f31215-8708-4dcc-a6ff-0ac06f341479",
+      "reason": "anchor absent from locally available ready-tree archive"
+    },
+    {
+      "source_partition": "calibration",
+      "index": 119,
+      "anchor_id": "d61513b4-13c5-42e4-9c56-d6d298148a26",
+      "reason": "anchor absent from locally available ready-tree archive"
+    },
+    {
+      "source_partition": "calibration",
+      "index": 121,
+      "anchor_id": "f4218fa7-d6b1-48c1-bf56-fd5f6c5db356",
+      "reason": "anchor absent from locally available ready-tree archive"
+    },
+    {
+      "source_partition": "calibration",
+      "index": 126,
+      "anchor_id": "5926b53f-7989-4bcd-9a5d-f650d86bf72c",
+      "reason": "anchor absent from locally available ready-tree archive"
+    },
+    {
+      "source_partition": "validation",
+      "index": 6,
+      "anchor_id": "16c89e47-93cd-42e7-bdce-4ef0dfb3f62b",
+      "reason": "anchor absent from locally available ready-tree archive"
+    },
+    {
+      "source_partition": "validation",
+      "index": 14,
+      "anchor_id": "fed0ccbd-2784-4ffc-8aee-3b4865cff7c6",
+      "reason": "anchor absent from locally available ready-tree archive"
+    },
+    {
+      "source_partition": "validation",
+      "index": 15,
+      "anchor_id": "e43c1076-0e78-4c7a-b401-a0b8f269d2da",
+      "reason": "anchor absent from locally available ready-tree archive"
+    },
+    {
+      "source_partition": "validation",
+      "index": 17,
+      "anchor_id": "86884e4b-1852-4c00-8915-1f10c956de7a",
+      "reason": "anchor absent from locally available ready-tree archive"
+    },
+    {
+      "source_partition": "validation",
+      "index": 19,
+      "anchor_id": "d00050ec-af24-4abf-a1dd-2719cdab0f32",
+      "reason": "anchor absent from locally available ready-tree archive"
+    },
+    {
+      "source_partition": "validation",
+      "index": 20,
+      "anchor_id": "b2da0450-0b62-44d3-89c8-898e1befdb60",
+      "reason": "anchor absent from locally available ready-tree archive"
+    },
+    {
+      "source_partition": "validation",
+      "index": 23,
+      "anchor_id": "81ef8e96-da7c-4bb8-b5e7-f5d69439b4d0",
+      "reason": "anchor absent from locally available ready-tree archive"
+    },
+    {
+      "source_partition": "validation",
+      "index": 30,
+      "anchor_id": "e465bd6a-7ba5-4891-917a-aec88a2a49ac",
+      "reason": "anchor absent from locally available ready-tree archive"
+    }
+  ],
+  "fresh": [
+    {
+      "stable_id": "oasst:1856fc52-e9c9-4ae3-b9e5-32ebe3a4fd45:1ca6b96a-6fa8-428c-aa28-7eaf13e5e65e:1ca6b96a-6fa8-428c-aa28-7eaf13e5e65e",
+      "source_partition": "calibration",
+      "source_index": 78,
+      "anchor_id": "1ca6b96a-6fa8-428c-aa28-7eaf13e5e65e",
+      "response_id": "1ca6b96a-6fa8-428c-aa28-7eaf13e5e65e",
+      "tree_id": "1856fc52-e9c9-4ae3-b9e5-32ebe3a4fd45",
+      "response_targets": 864
+    },
+    {
+      "stable_id": "oasst:d9555868-9d0d-449b-9b24-4096da32b147:4b44bfb8-4eb5-4338-9967-db83bf207e9d:4b44bfb8-4eb5-4338-9967-db83bf207e9d",
+      "source_partition": "calibration",
+      "source_index": 104,
+      "anchor_id": "4b44bfb8-4eb5-4338-9967-db83bf207e9d",
+      "response_id": "4b44bfb8-4eb5-4338-9967-db83bf207e9d",
+      "tree_id": "d9555868-9d0d-449b-9b24-4096da32b147",
+      "response_targets": 397
+    },
+    {
+      "stable_id": "oasst:baf76060-5431-4984-a947-8f7a770fba4b:c8cceaac-5731-4ab5-ae64-5cff0ad87772:c8cceaac-5731-4ab5-ae64-5cff0ad87772",
+      "source_partition": "calibration",
+      "source_index": 123,
+      "anchor_id": "c8cceaac-5731-4ab5-ae64-5cff0ad87772",
+      "response_id": "c8cceaac-5731-4ab5-ae64-5cff0ad87772",
+      "tree_id": "baf76060-5431-4984-a947-8f7a770fba4b",
+      "response_targets": 296
+    },
+    {
+      "stable_id": "oasst:7160fa6e-e318-4840-9f03-24f4574522fd:ae113104-d36d-47af-89ca-5b06d532fa34:ae113104-d36d-47af-89ca-5b06d532fa34",
+      "source_partition": "calibration",
+      "source_index": 73,
+      "anchor_id": "ae113104-d36d-47af-89ca-5b06d532fa34",
+      "response_id": "ae113104-d36d-47af-89ca-5b06d532fa34",
+      "tree_id": "7160fa6e-e318-4840-9f03-24f4574522fd",
+      "response_targets": 254
+    },
+    {
+      "stable_id": "oasst:7fb58c0b-e719-4a6f-8055-d2276691f8a9:5f9a998c-3d7c-4828-b887-919a44eb10ee:837238ea-8a52-45db-befd-93d1a48a1d40",
+      "source_partition": "calibration",
+      "source_index": 103,
+      "anchor_id": "5f9a998c-3d7c-4828-b887-919a44eb10ee",
+      "response_id": "837238ea-8a52-45db-befd-93d1a48a1d40",
+      "tree_id": "7fb58c0b-e719-4a6f-8055-d2276691f8a9",
+      "response_targets": 474
+    },
+    {
+      "stable_id": "oasst:e42c55f0-d577-4dd1-97d4-24ff794797bd:a6e2e2ad-688e-4e4a-83d8-9a16594fd346:a6e2e2ad-688e-4e4a-83d8-9a16594fd346",
+      "source_partition": "calibration",
+      "source_index": 108,
+      "anchor_id": "a6e2e2ad-688e-4e4a-83d8-9a16594fd346",
+      "response_id": "a6e2e2ad-688e-4e4a-83d8-9a16594fd346",
+      "tree_id": "e42c55f0-d577-4dd1-97d4-24ff794797bd",
+      "response_targets": 112
+    },
+    {
+      "stable_id": "oasst:6821f212-5798-4335-ad4f-212718e09d3e:dbacd9e6-45a3-429d-9887-95b8e761370e:dbacd9e6-45a3-429d-9887-95b8e761370e",
+      "source_partition": "calibration",
+      "source_index": 110,
+      "anchor_id": "dbacd9e6-45a3-429d-9887-95b8e761370e",
+      "response_id": "dbacd9e6-45a3-429d-9887-95b8e761370e",
+      "tree_id": "6821f212-5798-4335-ad4f-212718e09d3e",
+      "response_targets": 387
+    },
+    {
+      "stable_id": "oasst:e22525ee-f021-4c60-bc05-0f140951cf61:123fe3bb-54cf-411c-b840-ba8754b06962:123fe3bb-54cf-411c-b840-ba8754b06962",
+      "source_partition": "calibration",
+      "source_index": 90,
+      "anchor_id": "123fe3bb-54cf-411c-b840-ba8754b06962",
+      "response_id": "123fe3bb-54cf-411c-b840-ba8754b06962",
+      "tree_id": "e22525ee-f021-4c60-bc05-0f140951cf61",
+      "response_targets": 186
+    },
+    {
+      "stable_id": "oasst:dfd52581-3114-4a90-80e1-c79c115af703:dea85743-f1cd-42db-8f75-305a3ea3448b:dea85743-f1cd-42db-8f75-305a3ea3448b",
+      "source_partition": "calibration",
+      "source_index": 83,
+      "anchor_id": "dea85743-f1cd-42db-8f75-305a3ea3448b",
+      "response_id": "dea85743-f1cd-42db-8f75-305a3ea3448b",
+      "tree_id": "dfd52581-3114-4a90-80e1-c79c115af703",
+      "response_targets": 476
+    },
+    {
+      "stable_id": "oasst:85209e8a-99f6-44f6-9ce0-efc7b2008306:41020122-cc48-49a6-bc83-0f89d44ee57f:41020122-cc48-49a6-bc83-0f89d44ee57f",
+      "source_partition": "calibration",
+      "source_index": 54,
+      "anchor_id": "41020122-cc48-49a6-bc83-0f89d44ee57f",
+      "response_id": "41020122-cc48-49a6-bc83-0f89d44ee57f",
+      "tree_id": "85209e8a-99f6-44f6-9ce0-efc7b2008306",
+      "response_targets": 135
+    },
+    {
+      "stable_id": "oasst:c11abff2-740d-4924-b80d-9bf066e14055:e2629a60-bbaf-4d07-931c-2485e3004f8b:e2629a60-bbaf-4d07-931c-2485e3004f8b",
+      "source_partition": "calibration",
+      "source_index": 95,
+      "anchor_id": "e2629a60-bbaf-4d07-931c-2485e3004f8b",
+      "response_id": "e2629a60-bbaf-4d07-931c-2485e3004f8b",
+      "tree_id": "c11abff2-740d-4924-b80d-9bf066e14055",
+      "response_targets": 884
+    },
+    {
+      "stable_id": "oasst:217cc8ee-a206-42d7-9d3a-ae2aa1a02881:b5e40456-f410-4fdc-9424-a75557884782:b5e40456-f410-4fdc-9424-a75557884782",
+      "source_partition": "calibration",
+      "source_index": 50,
+      "anchor_id": "b5e40456-f410-4fdc-9424-a75557884782",
+      "response_id": "b5e40456-f410-4fdc-9424-a75557884782",
+      "tree_id": "217cc8ee-a206-42d7-9d3a-ae2aa1a02881",
+      "response_targets": 753
+    },
+    {
+      "stable_id": "oasst:5328520f-88e3-487a-bf07-dcc60dd70145:105a5ea2-4e04-464f-a197-92c61d9a4c54:105a5ea2-4e04-464f-a197-92c61d9a4c54",
+      "source_partition": "calibration",
+      "source_index": 94,
+      "anchor_id": "105a5ea2-4e04-464f-a197-92c61d9a4c54",
+      "response_id": "105a5ea2-4e04-464f-a197-92c61d9a4c54",
+      "tree_id": "5328520f-88e3-487a-bf07-dcc60dd70145",
+      "response_targets": 252
+    },
+    {
+      "stable_id": "oasst:10145ac5-25dc-4153-9aea-ab316aa35c71:46ac9060-d471-4864-a0cd-66488bbf2f85:46ac9060-d471-4864-a0cd-66488bbf2f85",
+      "source_partition": "calibration",
+      "source_index": 98,
+      "anchor_id": "46ac9060-d471-4864-a0cd-66488bbf2f85",
+      "response_id": "46ac9060-d471-4864-a0cd-66488bbf2f85",
+      "tree_id": "10145ac5-25dc-4153-9aea-ab316aa35c71",
+      "response_targets": 63
+    },
+    {
+      "stable_id": "oasst:05b014f2-0d57-4552-afd4-b63e4116f126:9185823c-17af-49cd-b89d-685a9635cd33:9185823c-17af-49cd-b89d-685a9635cd33",
+      "source_partition": "calibration",
+      "source_index": 61,
+      "anchor_id": "9185823c-17af-49cd-b89d-685a9635cd33",
+      "response_id": "9185823c-17af-49cd-b89d-685a9635cd33",
+      "tree_id": "05b014f2-0d57-4552-afd4-b63e4116f126",
+      "response_targets": 103
+    },
+    {
+      "stable_id": "oasst:325efbfb-c4ab-45c1-8a66-21ebda33ad56:ce8f0a2d-0cc0-4969-92e6-7fb8c0aa8496:ce8f0a2d-0cc0-4969-92e6-7fb8c0aa8496",
+      "source_partition": "calibration",
+      "source_index": 120,
+      "anchor_id": "ce8f0a2d-0cc0-4969-92e6-7fb8c0aa8496",
+      "response_id": "ce8f0a2d-0cc0-4969-92e6-7fb8c0aa8496",
+      "tree_id": "325efbfb-c4ab-45c1-8a66-21ebda33ad56",
+      "response_targets": 66
+    },
+    {
+      "stable_id": "oasst:ff80110d-9236-48de-b597-25f61edc48c9:456a8676-e188-46b9-8171-933585b708c6:456a8676-e188-46b9-8171-933585b708c6",
+      "source_partition": "calibration",
+      "source_index": 88,
+      "anchor_id": "456a8676-e188-46b9-8171-933585b708c6",
+      "response_id": "456a8676-e188-46b9-8171-933585b708c6",
+      "tree_id": "ff80110d-9236-48de-b597-25f61edc48c9",
+      "response_targets": 1086
+    },
+    {
+      "stable_id": "oasst:e087c390-5b85-426f-8ccc-fae45883dfe9:11c30bcd-ae8f-411d-8977-dfccc584bbb4:11c30bcd-ae8f-411d-8977-dfccc584bbb4",
+      "source_partition": "calibration",
+      "source_index": 62,
+      "anchor_id": "11c30bcd-ae8f-411d-8977-dfccc584bbb4",
+      "response_id": "11c30bcd-ae8f-411d-8977-dfccc584bbb4",
+      "tree_id": "e087c390-5b85-426f-8ccc-fae45883dfe9",
+      "response_targets": 517
+    },
+    {
+      "stable_id": "oasst:de62b2e7-6e76-4164-ae8c-3d5dfd4c797e:716691a7-f7fa-4e31-8ec2-4ad161f8c78d:716691a7-f7fa-4e31-8ec2-4ad161f8c78d",
+      "source_partition": "calibration",
+      "source_index": 65,
+      "anchor_id": "716691a7-f7fa-4e31-8ec2-4ad161f8c78d",
+      "response_id": "716691a7-f7fa-4e31-8ec2-4ad161f8c78d",
+      "tree_id": "de62b2e7-6e76-4164-ae8c-3d5dfd4c797e",
+      "response_targets": 317
+    },
+    {
+      "stable_id": "oasst:80b35622-2421-4a7d-aaa3-55f479bb3f00:b10a897f-187b-4119-9ad7-8bc84b51636c:b10a897f-187b-4119-9ad7-8bc84b51636c",
+      "source_partition": "calibration",
+      "source_index": 56,
+      "anchor_id": "b10a897f-187b-4119-9ad7-8bc84b51636c",
+      "response_id": "b10a897f-187b-4119-9ad7-8bc84b51636c",
+      "tree_id": "80b35622-2421-4a7d-aaa3-55f479bb3f00",
+      "response_targets": 705
+    },
+    {
+      "stable_id": "oasst:389bf5e3-d61c-4266-9b14-693f14c7cb6c:71626b3b-1c4b-4fec-b522-1efb7321d518:71626b3b-1c4b-4fec-b522-1efb7321d518",
+      "source_partition": "calibration",
+      "source_index": 84,
+      "anchor_id": "71626b3b-1c4b-4fec-b522-1efb7321d518",
+      "response_id": "71626b3b-1c4b-4fec-b522-1efb7321d518",
+      "tree_id": "389bf5e3-d61c-4266-9b14-693f14c7cb6c",
+      "response_targets": 358
+    },
+    {
+      "stable_id": "oasst:80f2532c-a9e8-454b-98b7-c2cd8e4055b6:48b4715a-8c11-47f3-8cda-148741284666:48b4715a-8c11-47f3-8cda-148741284666",
+      "source_partition": "calibration",
+      "source_index": 109,
+      "anchor_id": "48b4715a-8c11-47f3-8cda-148741284666",
+      "response_id": "48b4715a-8c11-47f3-8cda-148741284666",
+      "tree_id": "80f2532c-a9e8-454b-98b7-c2cd8e4055b6",
+      "response_targets": 724
+    },
+    {
+      "stable_id": "oasst:bd27a60a-8842-47d4-afcc-ba99b500fab1:ad3bc741-6468-420b-bec0-77ec59b39406:ad3bc741-6468-420b-bec0-77ec59b39406",
+      "source_partition": "calibration",
+      "source_index": 91,
+      "anchor_id": "ad3bc741-6468-420b-bec0-77ec59b39406",
+      "response_id": "ad3bc741-6468-420b-bec0-77ec59b39406",
+      "tree_id": "bd27a60a-8842-47d4-afcc-ba99b500fab1",
+      "response_targets": 121
+    },
+    {
+      "stable_id": "oasst:d20e08a4-d740-4063-8448-81dc39aac378:fab4d527-2cb8-4a82-88a3-ec1d9679be32:fab4d527-2cb8-4a82-88a3-ec1d9679be32",
+      "source_partition": "calibration",
+      "source_index": 86,
+      "anchor_id": "fab4d527-2cb8-4a82-88a3-ec1d9679be32",
+      "response_id": "fab4d527-2cb8-4a82-88a3-ec1d9679be32",
+      "tree_id": "d20e08a4-d740-4063-8448-81dc39aac378",
+      "response_targets": 79
+    },
+    {
+      "stable_id": "oasst:20e2c7bd-6936-42ff-921b-bbc8433d27aa:01a0c955-96a5-401a-90f9-71d124501b48:01a0c955-96a5-401a-90f9-71d124501b48",
+      "source_partition": "calibration",
+      "source_index": 97,
+      "anchor_id": "01a0c955-96a5-401a-90f9-71d124501b48",
+      "response_id": "01a0c955-96a5-401a-90f9-71d124501b48",
+      "tree_id": "20e2c7bd-6936-42ff-921b-bbc8433d27aa",
+      "response_targets": 347
+    },
+    {
+      "stable_id": "oasst:e64144ff-77b3-4b19-9b83-d622a1fe1bc8:04c63783-5853-4b14-b6c2-be88b66db42d:04c63783-5853-4b14-b6c2-be88b66db42d",
+      "source_partition": "calibration",
+      "source_index": 122,
+      "anchor_id": "04c63783-5853-4b14-b6c2-be88b66db42d",
+      "response_id": "04c63783-5853-4b14-b6c2-be88b66db42d",
+      "tree_id": "e64144ff-77b3-4b19-9b83-d622a1fe1bc8",
+      "response_targets": 176
+    },
+    {
+      "stable_id": "oasst:382d8535-5c98-407f-ae4c-9a8bb90c4f27:87656a4a-9f2b-4ea4-a8cf-7b37f30d22a2:87656a4a-9f2b-4ea4-a8cf-7b37f30d22a2",
+      "source_partition": "calibration",
+      "source_index": 111,
+      "anchor_id": "87656a4a-9f2b-4ea4-a8cf-7b37f30d22a2",
+      "response_id": "87656a4a-9f2b-4ea4-a8cf-7b37f30d22a2",
+      "tree_id": "382d8535-5c98-407f-ae4c-9a8bb90c4f27",
+      "response_targets": 131
+    },
+    {
+      "stable_id": "oasst:6713aae8-83ff-49ce-91f9-23dcbeb7111d:7a901d7c-a547-4750-813d-d6781df79cf3:7a901d7c-a547-4750-813d-d6781df79cf3",
+      "source_partition": "calibration",
+      "source_index": 116,
+      "anchor_id": "7a901d7c-a547-4750-813d-d6781df79cf3",
+      "response_id": "7a901d7c-a547-4750-813d-d6781df79cf3",
+      "tree_id": "6713aae8-83ff-49ce-91f9-23dcbeb7111d",
+      "response_targets": 720
+    },
+    {
+      "stable_id": "oasst:43c81817-b74d-404d-b8cd-aef91f485014:81081d30-9abc-41c9-909a-86ff1a695216:81081d30-9abc-41c9-909a-86ff1a695216",
+      "source_partition": "calibration",
+      "source_index": 85,
+      "anchor_id": "81081d30-9abc-41c9-909a-86ff1a695216",
+      "response_id": "81081d30-9abc-41c9-909a-86ff1a695216",
+      "tree_id": "43c81817-b74d-404d-b8cd-aef91f485014",
+      "response_targets": 98
+    },
+    {
+      "stable_id": "oasst:495d8ae4-c4f0-4907-98d7-4baef448086f:61ace5d4-31d2-4a45-b98d-0635170048e1:61ace5d4-31d2-4a45-b98d-0635170048e1",
+      "source_partition": "calibration",
+      "source_index": 81,
+      "anchor_id": "61ace5d4-31d2-4a45-b98d-0635170048e1",
+      "response_id": "61ace5d4-31d2-4a45-b98d-0635170048e1",
+      "tree_id": "495d8ae4-c4f0-4907-98d7-4baef448086f",
+      "response_targets": 344
+    },
+    {
+      "stable_id": "oasst:f825e453-01d9-4be2-ae8c-b5a99d93bda9:ba16a381-adc9-47c5-9104-2871c473f4da:ba16a381-adc9-47c5-9104-2871c473f4da",
+      "source_partition": "calibration",
+      "source_index": 99,
+      "anchor_id": "ba16a381-adc9-47c5-9104-2871c473f4da",
+      "response_id": "ba16a381-adc9-47c5-9104-2871c473f4da",
+      "tree_id": "f825e453-01d9-4be2-ae8c-b5a99d93bda9",
+      "response_targets": 209
+    },
+    {
+      "stable_id": "oasst:1c5f95d5-5d06-4c35-98a2-e4804078a854:4d3fbb03-e824-4f0a-9fe1-b4b29cae7d27:4d3fbb03-e824-4f0a-9fe1-b4b29cae7d27",
+      "source_partition": "calibration",
+      "source_index": 125,
+      "anchor_id": "4d3fbb03-e824-4f0a-9fe1-b4b29cae7d27",
+      "response_id": "4d3fbb03-e824-4f0a-9fe1-b4b29cae7d27",
+      "tree_id": "1c5f95d5-5d06-4c35-98a2-e4804078a854",
+      "response_targets": 138
+    },
+    {
+      "stable_id": "oasst:9d0fe39a-aad8-42e1-bf15-6fea5f245cbd:9599e107-b2e0-4f8c-9277-8c187cd4a9c1:5338caa0-ddc8-4f4a-bf4a-2268da38e742",
+      "source_partition": "calibration",
+      "source_index": 55,
+      "anchor_id": "9599e107-b2e0-4f8c-9277-8c187cd4a9c1",
+      "response_id": "5338caa0-ddc8-4f4a-bf4a-2268da38e742",
+      "tree_id": "9d0fe39a-aad8-42e1-bf15-6fea5f245cbd",
+      "response_targets": 467
+    },
+    {
+      "stable_id": "oasst:96ad6f30-4be0-49f7-93ef-d7db62461c51:225b0647-7bc7-4343-b72e-7b80723f28c4:225b0647-7bc7-4343-b72e-7b80723f28c4",
+      "source_partition": "calibration",
+      "source_index": 102,
+      "anchor_id": "225b0647-7bc7-4343-b72e-7b80723f28c4",
+      "response_id": "225b0647-7bc7-4343-b72e-7b80723f28c4",
+      "tree_id": "96ad6f30-4be0-49f7-93ef-d7db62461c51",
+      "response_targets": 445
+    },
+    {
+      "stable_id": "oasst:356bf7bb-fca5-47e9-8ba4-00c484e72ea2:4a528870-99cd-499a-a4d3-5b7bda81de33:4a528870-99cd-499a-a4d3-5b7bda81de33",
+      "source_partition": "calibration",
+      "source_index": 52,
+      "anchor_id": "4a528870-99cd-499a-a4d3-5b7bda81de33",
+      "response_id": "4a528870-99cd-499a-a4d3-5b7bda81de33",
+      "tree_id": "356bf7bb-fca5-47e9-8ba4-00c484e72ea2",
+      "response_targets": 541
+    },
+    {
+      "stable_id": "oasst:c0b25dc7-95bd-412a-94bb-936845fb0d81:2f04c49a-5e65-403e-a299-3e1fe6edd3fa:2f04c49a-5e65-403e-a299-3e1fe6edd3fa",
+      "source_partition": "calibration",
+      "source_index": 112,
+      "anchor_id": "2f04c49a-5e65-403e-a299-3e1fe6edd3fa",
+      "response_id": "2f04c49a-5e65-403e-a299-3e1fe6edd3fa",
+      "tree_id": "c0b25dc7-95bd-412a-94bb-936845fb0d81",
+      "response_targets": 393
+    },
+    {
+      "stable_id": "oasst:63fd9a66-4fbe-4b99-96ce-52c6a4d8c24a:59833fce-ce78-43f4-97d2-7539be09b02d:59833fce-ce78-43f4-97d2-7539be09b02d",
+      "source_partition": "calibration",
+      "source_index": 127,
+      "anchor_id": "59833fce-ce78-43f4-97d2-7539be09b02d",
+      "response_id": "59833fce-ce78-43f4-97d2-7539be09b02d",
+      "tree_id": "63fd9a66-4fbe-4b99-96ce-52c6a4d8c24a",
+      "response_targets": 206
+    },
+    {
+      "stable_id": "oasst:1002f944-eb02-4f61-85d9-2ee7d136ccef:6e84c2e7-22c7-4be3-8226-bbcd530fcea7:6e84c2e7-22c7-4be3-8226-bbcd530fcea7",
+      "source_partition": "calibration",
+      "source_index": 113,
+      "anchor_id": "6e84c2e7-22c7-4be3-8226-bbcd530fcea7",
+      "response_id": "6e84c2e7-22c7-4be3-8226-bbcd530fcea7",
+      "tree_id": "1002f944-eb02-4f61-85d9-2ee7d136ccef",
+      "response_targets": 100
+    },
+    {
+      "stable_id": "oasst:af46ed7b-570c-4c2e-8969-45079f9a2082:bfcb3355-14bd-4dea-b662-20e9252e77e2:bfcb3355-14bd-4dea-b662-20e9252e77e2",
+      "source_partition": "calibration",
+      "source_index": 64,
+      "anchor_id": "bfcb3355-14bd-4dea-b662-20e9252e77e2",
+      "response_id": "bfcb3355-14bd-4dea-b662-20e9252e77e2",
+      "tree_id": "af46ed7b-570c-4c2e-8969-45079f9a2082",
+      "response_targets": 721
+    },
+    {
+      "stable_id": "oasst:b91836f0-4205-473e-b33d-43d6082cfa26:ccfd1bf1-b9bb-4019-aea4-cecd3d67a0d9:ccfd1bf1-b9bb-4019-aea4-cecd3d67a0d9",
+      "source_partition": "calibration",
+      "source_index": 74,
+      "anchor_id": "ccfd1bf1-b9bb-4019-aea4-cecd3d67a0d9",
+      "response_id": "ccfd1bf1-b9bb-4019-aea4-cecd3d67a0d9",
+      "tree_id": "b91836f0-4205-473e-b33d-43d6082cfa26",
+      "response_targets": 647
+    },
+    {
+      "stable_id": "oasst:1d3bd997-6acc-42ee-aea0-567a89da6745:e3cac58d-23cc-4a21-adcb-1e98294b6c18:e3cac58d-23cc-4a21-adcb-1e98294b6c18",
+      "source_partition": "calibration",
+      "source_index": 87,
+      "anchor_id": "e3cac58d-23cc-4a21-adcb-1e98294b6c18",
+      "response_id": "e3cac58d-23cc-4a21-adcb-1e98294b6c18",
+      "tree_id": "1d3bd997-6acc-42ee-aea0-567a89da6745",
+      "response_targets": 821
+    },
+    {
+      "stable_id": "oasst:29ca5c2c-2226-4745-aaca-64e8869c3c50:8fbabbb8-28ed-488d-a1ba-efa6c368d334:8fbabbb8-28ed-488d-a1ba-efa6c368d334",
+      "source_partition": "calibration",
+      "source_index": 106,
+      "anchor_id": "8fbabbb8-28ed-488d-a1ba-efa6c368d334",
+      "response_id": "8fbabbb8-28ed-488d-a1ba-efa6c368d334",
+      "tree_id": "29ca5c2c-2226-4745-aaca-64e8869c3c50",
+      "response_targets": 269
+    },
+    {
+      "stable_id": "oasst:4d600440-028f-4317-99a6-76331062d462:dedf4321-c721-4e73-9b97-1ba17a1c85a0:dedf4321-c721-4e73-9b97-1ba17a1c85a0",
+      "source_partition": "calibration",
+      "source_index": 107,
+      "anchor_id": "dedf4321-c721-4e73-9b97-1ba17a1c85a0",
+      "response_id": "dedf4321-c721-4e73-9b97-1ba17a1c85a0",
+      "tree_id": "4d600440-028f-4317-99a6-76331062d462",
+      "response_targets": 177
+    },
+    {
+      "stable_id": "oasst:15fdd9bd-8ce1-4bfb-854d-bfabb11925cb:eec9cbf7-b95f-48bb-88bf-0d9dfae301d4:eec9cbf7-b95f-48bb-88bf-0d9dfae301d4",
+      "source_partition": "calibration",
+      "source_index": 71,
+      "anchor_id": "eec9cbf7-b95f-48bb-88bf-0d9dfae301d4",
+      "response_id": "eec9cbf7-b95f-48bb-88bf-0d9dfae301d4",
+      "tree_id": "15fdd9bd-8ce1-4bfb-854d-bfabb11925cb",
+      "response_targets": 496
+    },
+    {
+      "stable_id": "oasst:64e4247c-9463-45ec-a42b-8dc5dbb5e458:f68e0ff2-5534-44d1-9644-0e68c215ff4d:f68e0ff2-5534-44d1-9644-0e68c215ff4d",
+      "source_partition": "calibration",
+      "source_index": 70,
+      "anchor_id": "f68e0ff2-5534-44d1-9644-0e68c215ff4d",
+      "response_id": "f68e0ff2-5534-44d1-9644-0e68c215ff4d",
+      "tree_id": "64e4247c-9463-45ec-a42b-8dc5dbb5e458",
+      "response_targets": 121
+    },
+    {
+      "stable_id": "oasst:943985b4-5013-458e-a0dd-22e96c8efcea:fe21b47b-bdc0-4594-ad98-d2487b63aa24:fe21b47b-bdc0-4594-ad98-d2487b63aa24",
+      "source_partition": "calibration",
+      "source_index": 105,
+      "anchor_id": "fe21b47b-bdc0-4594-ad98-d2487b63aa24",
+      "response_id": "fe21b47b-bdc0-4594-ad98-d2487b63aa24",
+      "tree_id": "943985b4-5013-458e-a0dd-22e96c8efcea",
+      "response_targets": 111
+    },
+    {
+      "stable_id": "oasst:37866381-a856-4adc-8218-3ce731765069:2abadc7f-f46c-4889-a997-5f04e509e648:2abadc7f-f46c-4889-a997-5f04e509e648",
+      "source_partition": "calibration",
+      "source_index": 67,
+      "anchor_id": "2abadc7f-f46c-4889-a997-5f04e509e648",
+      "response_id": "2abadc7f-f46c-4889-a997-5f04e509e648",
+      "tree_id": "37866381-a856-4adc-8218-3ce731765069",
+      "response_targets": 306
+    },
+    {
+      "stable_id": "oasst:bcfb0b2d-b08f-47f6-ab27-685704648183:ee4d5324-5939-4225-bace-0a4ac6d283e2:ee4d5324-5939-4225-bace-0a4ac6d283e2",
+      "source_partition": "calibration",
+      "source_index": 124,
+      "anchor_id": "ee4d5324-5939-4225-bace-0a4ac6d283e2",
+      "response_id": "ee4d5324-5939-4225-bace-0a4ac6d283e2",
+      "tree_id": "bcfb0b2d-b08f-47f6-ab27-685704648183",
+      "response_targets": 727
+    },
+    {
+      "stable_id": "oasst:086729ce-50ea-45ec-b89e-219ca792ac06:00e1502b-b890-4fde-943c-b6e9fce54855:47769539-6de8-4787-9713-c5480ad74564",
+      "source_partition": "calibration",
+      "source_index": 96,
+      "anchor_id": "00e1502b-b890-4fde-943c-b6e9fce54855",
+      "response_id": "47769539-6de8-4787-9713-c5480ad74564",
+      "tree_id": "086729ce-50ea-45ec-b89e-219ca792ac06",
+      "response_targets": 506
+    },
+    {
+      "stable_id": "oasst:34fe8a7a-830d-4914-8bd8-0e0eaf9d711c:ba1c5f45-da26-458f-a028-a28b42c386a5:ba1c5f45-da26-458f-a028-a28b42c386a5",
+      "source_partition": "calibration",
+      "source_index": 93,
+      "anchor_id": "ba1c5f45-da26-458f-a028-a28b42c386a5",
+      "response_id": "ba1c5f45-da26-458f-a028-a28b42c386a5",
+      "tree_id": "34fe8a7a-830d-4914-8bd8-0e0eaf9d711c",
+      "response_targets": 729
+    },
+    {
+      "stable_id": "oasst:fa6ca8ed-dcfb-4a8d-931c-7091b69304a5:fa6ca8ed-dcfb-4a8d-931c-7091b69304a5:80dfe0f0-8b77-4430-84b7-5a6066c85320",
+      "source_partition": "calibration",
+      "source_index": 76,
+      "anchor_id": "fa6ca8ed-dcfb-4a8d-931c-7091b69304a5",
+      "response_id": "80dfe0f0-8b77-4430-84b7-5a6066c85320",
+      "tree_id": "fa6ca8ed-dcfb-4a8d-931c-7091b69304a5",
+      "response_targets": 907
+    },
+    {
+      "stable_id": "oasst:f454e2f9-bb13-4b9f-8b39-f69e60d4ea8c:ef7d60d6-03fd-419a-bee5-0389e0c8dcfe:ef7d60d6-03fd-419a-bee5-0389e0c8dcfe",
+      "source_partition": "calibration",
+      "source_index": 117,
+      "anchor_id": "ef7d60d6-03fd-419a-bee5-0389e0c8dcfe",
+      "response_id": "ef7d60d6-03fd-419a-bee5-0389e0c8dcfe",
+      "tree_id": "f454e2f9-bb13-4b9f-8b39-f69e60d4ea8c",
+      "response_targets": 268
+    },
+    {
+      "stable_id": "oasst:5db7e978-a1ee-4507-8e8a-9958739ebe89:ad2f1c0f-4f96-40f7-bd72-6227e5736c61:ad2f1c0f-4f96-40f7-bd72-6227e5736c61",
+      "source_partition": "calibration",
+      "source_index": 79,
+      "anchor_id": "ad2f1c0f-4f96-40f7-bd72-6227e5736c61",
+      "response_id": "ad2f1c0f-4f96-40f7-bd72-6227e5736c61",
+      "tree_id": "5db7e978-a1ee-4507-8e8a-9958739ebe89",
+      "response_targets": 807
+    },
+    {
+      "stable_id": "oasst:37a54195-05e9-4599-b87e-59530a581e58:26b7ee4f-639b-424b-93dd-5b4520e7c672:26b7ee4f-639b-424b-93dd-5b4520e7c672",
+      "source_partition": "calibration",
+      "source_index": 57,
+      "anchor_id": "26b7ee4f-639b-424b-93dd-5b4520e7c672",
+      "response_id": "26b7ee4f-639b-424b-93dd-5b4520e7c672",
+      "tree_id": "37a54195-05e9-4599-b87e-59530a581e58",
+      "response_targets": 126
+    },
+    {
+      "stable_id": "oasst:5c994c91-14e1-4954-abfb-44c40edf16d8:4b0437f3-465e-46c2-993e-3caca0878816:4b0437f3-465e-46c2-993e-3caca0878816",
+      "source_partition": "calibration",
+      "source_index": 59,
+      "anchor_id": "4b0437f3-465e-46c2-993e-3caca0878816",
+      "response_id": "4b0437f3-465e-46c2-993e-3caca0878816",
+      "tree_id": "5c994c91-14e1-4954-abfb-44c40edf16d8",
+      "response_targets": 1025
+    }
+  ]
+}

@@ -1,0 +1,71 @@
+{
+  "old_baseline_fingerprint": "b81c46af7c1bc6da454711054b9e2e30dc389e62a74a3577ddcd93d4741ef8dd",
+  "selected_configuration_fingerprint": "7153e2b535acdd6c3a492aba2fcab090984d10bf23776bb2e0f03831f2b86353",
+  "selected_configuration_sha256": "ca11fda5f782a9577cbc41b0d14abf134a8a13acf21809089cb77d8e010762fb",
+  "changed_layers": [
+    13,
+    16,
+    17
+  ],
+  "frozen_before": {
+    "decisions_sha256": "8a981679284c556135e6a5a149a493f52370d71730c1dd2042e7b124d229e36e",
+    "baseline_parameters_sha256": "b81c46af7c1bc6da454711054b9e2e30dc389e62a74a3577ddcd93d4741ef8dd",
+    "selected_configuration_sha256": "ca11fda5f782a9577cbc41b0d14abf134a8a13acf21809089cb77d8e010762fb",
+    "protected_artifacts_sha256": "08f8f6f02e497cafd5edcc351c82c2119fb1275e10ef01d7ffcf1fc02009919d"
+  },
+  "frozen_after": {
+    "decisions_sha256": "8a981679284c556135e6a5a149a493f52370d71730c1dd2042e7b124d229e36e",
+    "baseline_parameters_sha256": "b81c46af7c1bc6da454711054b9e2e30dc389e62a74a3577ddcd93d4741ef8dd",
+    "selected_configuration_sha256": "ca11fda5f782a9577cbc41b0d14abf134a8a13acf21809089cb77d8e010762fb",
+    "protected_artifacts_sha256": "08f8f6f02e497cafd5edcc351c82c2119fb1275e10ef01d7ffcf1fc02009919d"
+  },
+  "frozen_unchanged": true,
+  "quantized_modules": [
+    "model.layers.0.mlp.down_proj",
+    "model.layers.1.mlp.down_proj",
+    "model.layers.10.mlp.down_proj",
+    "model.layers.11.mlp.down_proj",
+    "model.layers.12.mlp.down_proj",
+    "model.layers.13.mlp.down_proj",
+    "model.layers.14.mlp.down_proj",
+    "model.layers.15.mlp.down_proj",
+    "model.layers.16.mlp.down_proj",
+    "model.layers.17.mlp.down_proj",
+    "model.layers.2.mlp.down_proj",
+    "model.layers.3.mlp.down_proj",
+    "model.layers.4.mlp.down_proj",
+    "model.layers.5.mlp.down_proj",
+    "model.layers.6.mlp.down_proj",
+    "model.layers.7.mlp.down_proj",
+    "model.layers.8.mlp.down_proj",
+    "model.layers.9.mlp.down_proj"
+  ],
+  "selector_identity": true,
+  "effective_shifts_feasible": true,
+  "observed_effective_shift_min": 10,
+  "observed_effective_shift_max": 29,
+  "independent_kv_caches": true,
+  "dataset_type": "local_unseen",
+  "dataset_manifest_fingerprint": "7d714f9b435a98dede64a7c2765a856845b2bcb40c2f2333375a75e01ab44928",
+  "total_sequences": 32,
+  "total_aligned_targets": 1024,
+  "previous_data_overlap": false,
+  "search_performed": false,
+  "calibration_performed": false,
+  "parameter_changes_during_run": false,
+  "bootstrap_seed": 20261004,
+  "bootstrap_replicates": 2000,
+  "test_command": [
+    "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/.venv-calibration/bin/python",
+    "-m",
+    "unittest",
+    "tests.test_frozen_cross_layer_confirmation",
+    "tests.test_absmax_cross_layer_calibration",
+    "tests.test_absmax_joint_stability",
+    "tests.test_absmax_joint_calibration",
+    "tests.test_k_selector_compare",
+    "tests.test_finalize_downproj_ptq"
+  ],
+  "test_return_code": 0,
+  "elapsed_sec": 5712.682753125
+}
