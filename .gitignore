@@ -2,3 +2,4 @@ __pycache__/
 *.py[cod]
 .venv-calibration/
 calibration_outputs/
+diagnostics/**/work/
