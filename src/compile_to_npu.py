@@ -1,59 +1,102 @@
 import struct
+from dataclasses import dataclass
+from typing import Optional, Tuple, List
 
-# ---------------------------------------------------------
-# [1] 비트 매킹 헬퍼 함수 (작성자님이 제공하신 코드 동일)
-# ---------------------------------------------------------
+# =============================================================================
+# Shoot-and-Go ISA constants
+# =============================================================================
+
+RS2_FMT = "<12Q9I"
+RS2_SIZE = struct.calcsize(RS2_FMT)  # 12*8 + 9*4 = 132 bytes
+assert RS2_SIZE == 132
+
+# hw_enables sub-fields / enum-like values
+ALU_BYPASS = 0
+ALU_ADD = 1
+ALU_MUL = 2
+
+INPUT_MXU = 0
+INPUT_VPU1 = 1
+INPUT_VPU2 = 2
+
+OUT_VPU2 = 0
+OUT_VPU1 = 1
+
+NORM_BYPASS = 0
+NORM_RMS = 1
+NORM_LAYER = 2
+
+
+def _u32(value: int, name: str) -> int:
+    if not 0 <= int(value) <= 0xFFFF_FFFF:
+        raise ValueError(f"{name} must fit uint32: {value}")
+    return int(value)
+
+
+def _u64(value: int, name: str) -> int:
+    if not 0 <= int(value) <= 0xFFFF_FFFF_FFFF_FFFF:
+        raise ValueError(f"{name} must fit uint64: {value}")
+    return int(value)
+
+
+# =============================================================================
+# [1] rs1: RoCC immediate control word
+# =============================================================================
+
 def build_rs1(
-    # --- [15:0] 16b: Vector 상수배/덧셈 오퍼랜드 ---
-    constant_operand=0,
-    # --- [31:16] 16b: Write Mask 생성을 위한 Valid Row 비트맵 ---
-    # 기본값: 16개 Row 모두 Valid (Deadlock 방지 및 Dummy Flush 용도)
-    valid_row=0xFFFF,
-    # --- [32] 1b: Output Vector Compact 레이아웃 선택 (0: tiled, 1: compact) ---
-    vector_compact_out=0,
-    # --- [33] 1b: Input Vector Compact 모드 (Zero Padder 가동) ---
-    vector_compact_in=0,
-    # --- [35:34] 2b: 출력 스트림 종착점 (0: vpu2, 1: vpu1) ---
-    out_point=0,
-    # --- [37:36] 2b: 입력 스트림 시작점 (0: mxu, 1: vpu1, 2: vpu2) ---
-    input_point=0,
-    # --- [38] 1b: Write 시 구조체 output_stride 자동 계산 적용 ---
-    tile_strided_wr=0,
-    # --- [40:39] 2b: Read 시 구조체 offset 자동 계산 적용 [1: input, 0: weight] ---
-    tile_strided_rd=0,
-    # --- [41] 1b: DMA Write 시 종단 Output Transposer 통과 ---
-    transpose_en_wr=0,
-    # --- [43:42] 2b: DMA Read 시 입력 Transposer 통과 [1: input, 0: weight] ---
-    transpose_en_rd=0,
-    
-    # ====== hw_enables [50:44] (7 bits) ======
-    # [44] 1b: VPU2 RoPE 위치 인코딩 활성화
-    rope_en=0,
-    # [46:45] 2b: VPU2 Norm 모드
-    norm_mode=0,
-    # [47] 1b: VPU1 양자화 및 SiLU(GELU) 활성화
-    act_en=0,
-    # [49:48] 2b: VPU1 ALU 모드 (0: Bypass, 1: Add, 2: Mul)
-    alu_mode=0,
-    # [50] 1b: TPU 매트릭스 연산기 가동
-    mxu_en=0,
-    # =========================================
-    
-    # --- [55:51] 5b: LUT/Param 기록 펄스 [4:Act, 3:Exp, 2:Scale, 1:Sin, 0:Cos] ---
-    lut_write=0,
-    # --- [56] 1b: TPU -> VPU1 -> VPU2 End-to-End 라우팅 ---
-    fusion_en=0,
-    # --- [59:57] 3b: Intermediate Buffer write enable [2:out, 1:weight, 0:input] ---
-    cache_enable=0,
-    # --- [60] 1b: Normalizer phase1 output NB write enable ---
-    nb_enable=0
-):
-    """
-    최신 NPU 제어용 rs1 64-bit 레지스터 패킹 함수 (61비트 할당).
-    비트 마스킹(&)을 통해 각 필드가 할당된 크기를 초과하여 오염되지 않도록 안전하게 패킹합니다.
+    # [15:0] vector scalar operand. 0 means unused.
+    constant_operand: int = 0,
+    # [31:16] output write-mask bitmap
+    valid_row: int = 0xFFFF,
+    # [32], [33]
+    vector_compact_out: int = 0,
+    vector_compact_in: int = 0,
+    # [35:34], [37:36]
+    out_point: int = OUT_VPU2,
+    input_point: int = INPUT_MXU,
+    # [38], [40:39]
+    tile_strided_wr: int = 0,
+    tile_strided_rd: int = 0,
+    # [41], [43:42]
+    transpose_en_wr: int = 0,
+    transpose_en_rd: int = 0,
+    # hw_enables [50:44]
+    rope_en: int = 0,
+    norm_mode: int = NORM_BYPASS,
+    act_en: int = 0,
+    alu_mode: int = ALU_BYPASS,
+    mxu_en: int = 0,
+    # [55:51], [56], [57]
+    lut_write: int = 0,
+    fusion_en: int = 0,
+    nb_enable: int = 0,
+) -> int:
+    """Pack the current Shoot-and-Go rs1 layout.
+
+    Bit allocation:
+      [15:0]   constant_operand
+      [31:16]  valid_row
+      [32]     vector_compact_out
+      [33]     vector_compact_in
+      [35:34]  out_point
+      [37:36]  input_point
+      [38]     tile_strided_wr
+      [40:39]  tile_strided_rd
+      [41]     transpose_en_wr
+      [43:42]  transpose_en_rd
+      [44]     rope_en
+      [46:45]  norm_mode
+      [47]     act_en
+      [49:48]  alu_mode
+      [50]     mxu_en
+      [55:51]  lut_write
+      [56]     fusion_en
+      [57]     nb_enable
+      [63:58]  reserved = 0
+
+    Note: the previous cache_enable field is not part of this ISA layout.
     """
     rs1 = 0
-    
     rs1 |= (constant_operand & 0xFFFF) << 0
     rs1 |= (valid_row & 0xFFFF) << 16
     rs1 |= (vector_compact_out & 0x1) << 32
@@ -61,122 +104,138 @@ def build_rs1(
     rs1 |= (out_point & 0x3) << 34
     rs1 |= (input_point & 0x3) << 36
     rs1 |= (tile_strided_wr & 0x1) << 38
-    
-    # [변경 사항 반영] tile_strided_rd가 2비트로 확장됨 (비트 오프셋 1씩 밀림)
     rs1 |= (tile_strided_rd & 0x3) << 39
-    
     rs1 |= (transpose_en_wr & 0x1) << 41
     rs1 |= (transpose_en_rd & 0x3) << 42
-    
-    # hw_enables 패킹 (44번 비트부터 차례로 누적)
+
+    # hw_enables [50:44]
     rs1 |= (rope_en & 0x1) << 44
     rs1 |= (norm_mode & 0x3) << 45
     rs1 |= (act_en & 0x1) << 47
     rs1 |= (alu_mode & 0x3) << 48
     rs1 |= (mxu_en & 0x1) << 50
-    
+
     rs1 |= (lut_write & 0x1F) << 51
     rs1 |= (fusion_en & 0x1) << 56
-    rs1 |= (cache_enable & 0x7) << 57
-    rs1 |= (nb_enable & 0x1) << 60
-    
-    # 63~61 비트는 Reserved 구역 (0으로 유지됨)
+    rs1 |= (nb_enable & 0x1) << 57
+
+    # [63:58] remain zero.
     return rs1
-    
+
+
+# =============================================================================
+# [2] rs2: DRAM-resident npu_ctrl task descriptor
+# =============================================================================
+
 def build_rs2_struct(
-    # --- 1. Data Pointers (void*) ---
-    input_addr=0,
-    weight1_addr=0,
-    weight2_addr=0,     # Residual Add 등을 위한 2nd Operand
-    
-    # --- 2. Parameter Pointers (void*) ---
-    quant_param_addr=0,
-    angle_param_addr=0,
-    
-    # --- 3. LUT & Parameter Pointers (void*) ---
-    act_lut_addr=0,
-    exp_lut_addr=0,
-    scale_lut_addr=0,
-    rope_sin_addr=0,
-    rope_cos_addr=0,
-    
-    # --- 4. Output Pointers (void*) ---
-    output_addr=0,
-    norm_buff_addr=0,   # Phase 1 결과 저장 및 Phase 2 읽기용
-    
-    # --- 5. Dimensions (unsigned, 32-bit) ---
-    out_rowNum=0,       # 1/16 scale
-    out_intermNum=0,    # 1/16 scale
-    out_colNum=0,       # 1/16 scale
-    
-    # --- 6. Strided Offset (unsigned, 32-bit) ---
-    input_offset=0,     # 1/16 scale
-    weight_offset=0,    # 1/16 scale
-    output_offset=0     # 1/16 scale
-):
+    # 1. Data pointers
+    input_addr: int = 0,
+    weight1_addr: int = 0,
+    weight2_addr: int = 0,
+    # 2. Parameter pointers
+    quant_param_addr: int = 0,
+    angle_param_addr: int = 0,
+    # 3. LUT pointers
+    act_lut_addr: int = 0,
+    exp_lut_addr: int = 0,
+    scale_lut_addr: int = 0,
+    rope_sin_addr: int = 0,
+    rope_cos_addr: int = 0,
+    # 4. Output pointers
+    output_addr: int = 0,
+    norm_buff_addr: int = 0,
+    # 5. Dimensions: all in 1/16 scale
+    out_rowNum: int = 0,
+    out_intermNum: int = 0,
+    out_colNum: int = 0,
+    # Explicit tile totals
+    input_total_tiles: int = 0,
+    weight_total_tiles: int = 0,
+    out_total_tiles: int = 0,
+    # 6. Strided offsets: all in 1/256 scale
+    input_offset: int = 0,
+    weight_offset: int = 0,
+    output_offset: int = 0,
+) -> bytes:
+    """Serialize the current npu_ctrl field list as packed little-endian bytes.
+
+    Layout = 12 pointers + 9 uint32 fields = 132 bytes exactly.
+
+    Host-side C must use the same packed/manual serialization contract if
+    sizeof(npu_ctrl) is expected to be exactly 132 bytes; a normal LP64 C
+    compiler may add tail padding otherwise.
     """
-    최신 npu_ctrl 구조체 명세에 맞춘 rs2 (DRAM Descriptor) 패킹 함수.
-    
-    - 12개의 포인터(void*)      -> 'Q' (8 bytes unsigned long long) * 12 = 96 Bytes
-    - 6개의 차원/오프셋(unsigned) -> 'I' (4 bytes unsigned int) * 6       = 24 Bytes
-    - Total Size: 120 Bytes (64-bit alignment 만족)
-    """
-    fmt = '<12Q6I'  # 리틀 엔디안, 12개의 8바이트 정수, 6개의 4바이트 정수
-    
-    return struct.pack(
-        fmt,
-        # 12Q: Pointers
+    qwords = [
         input_addr, weight1_addr, weight2_addr,
         quant_param_addr, angle_param_addr,
-        act_lut_addr, exp_lut_addr, scale_lut_addr, rope_sin_addr, rope_cos_addr,
+        act_lut_addr, exp_lut_addr, scale_lut_addr,
+        rope_sin_addr, rope_cos_addr,
         output_addr, norm_buff_addr,
-        
-        # 6I: Dimensions & Offsets
+    ]
+    dwords = [
         out_rowNum, out_intermNum, out_colNum,
-        input_offset, weight_offset, output_offset
+        input_total_tiles, weight_total_tiles, out_total_tiles,
+        input_offset, weight_offset, output_offset,
+    ]
+
+    qwords = [_u64(v, f"ptr[{i}]") for i, v in enumerate(qwords)]
+    dwords = [_u32(v, f"u32[{i}]") for i, v in enumerate(dwords)]
+    return struct.pack(RS2_FMT, *qwords, *dwords)
+
+
+def gemm_tile_totals(row_tiles: int, k_tiles: int, col_tiles: int) -> Tuple[int, int, int]:
+    """ISA-defined GEMM tile totals."""
+    return (
+        row_tiles * k_tiles,
+        k_tiles * col_tiles,
+        row_tiles * col_tiles,
     )
 
-# =========================================================
-# 사용 예시 (메모리 맵 테스트)
-# =========================================================
-if __name__ == "__main__":
-    # 테스트용 주소 상수 (GGUF 메모리 맵 참고)
-    MEM_IN_H_L = 0x0000
-    WT_Q = 0x110000
-    MEM_Q_OUT = 0x2000
-    
-    # 구조체 바이너리 생성 (예: Q Projection 수행 시)
-    rs2_binary = build_rs2_struct(
-        input_addr=MEM_IN_H_L,
-        weight1_addr=WT_Q,
-        output_addr=MEM_Q_OUT,
-        out_rowNum=1,       # 시퀀스 길이 / 16
-        out_intermNum=128,  # 입력 차원 2048 / 16
-        out_colNum=128      # 출력 차원 2048 / 16
-    )
-    
-    print(f"Generated Struct Size: {len(rs2_binary)} Bytes (Expected: 120)")
-    # 이 rs2_binary 바이트 배열을 호스트 CPU(RISC-V)가 DRAM에 복사한 뒤,
-    # 그 시작 주소를 RoCC 커스텀 명령어의 rs2 인자로 전달하면 됩니다.
 
-# ---------------------------------------------------------
-# [2] 하드웨어 주소 맵 (가상 오프셋, 실제로는 GGUF에서 추출)
-# ---------------------------------------------------------
-MEM_IN_H_L        = 0x0000  # 현재 레이어 입력 H_l (SRAM)
-MEM_NORM_OUT      = 0x1000  # RMSNorm 결과 (SRAM)
-MEM_Q_OUT         = 0x2000  # Q 벡터 (SRAM)
-MEM_K_OUT         = 0x3000  # K 벡터 (SRAM)
-MEM_V_OUT         = 0x4000  # V 벡터 (SRAM)
-MEM_ATTN_OUT      = 0x5000  # O_attn 행렬곱 결과 (SRAM)
-MEM_H_MID         = 0x6000  # Residual 1 결과 (SRAM)
-MEM_MLP_NORM_OUT  = 0x7000  # Post-Norm 결과 (SRAM)
-MEM_GATE_OUT      = 0x8000  # Gate(+GELU) 결과 (SRAM)
-MEM_UP_OUT        = 0x9000  # Up 결과 (SRAM)
-MEM_GEGLU_OUT     = 0xA000  # GeGLU 결합 결과 (SRAM)
-MEM_H_OUT         = 0xB000  # 다음 레이어로 넘어갈 최종 H_{l+1} (SRAM)
+def vector_tile_totals(row_tiles: int, col_tiles: int, *, has_weight_vector: bool = False) -> Tuple[int, int, int]:
+    """Convenience convention for the examples below.
 
-# 가중치 오프셋 (GGUF DRAM 주소)
-WT_NORM_IN        = 0x100000 
+    The ISA page gives explicit total-tile formulae for GEMM. For standalone
+    vector/VPU operations, this compiler emits the physically consumed input
+    and output tile counts directly. A norm weight vector, when used, is counted
+    as one 16-element line per col tile.
+    """
+    vector_tiles = row_tiles * col_tiles
+    weight_tiles = col_tiles if has_weight_vector else 0
+    return vector_tiles, weight_tiles, vector_tiles
+
+
+@dataclass(frozen=True)
+class EncodedInstruction:
+    name: str
+    rs1: int
+    rs2: bytes
+
+    def __post_init__(self):
+        if len(self.rs2) != RS2_SIZE:
+            raise ValueError(f"{self.name}: rs2 descriptor must be {RS2_SIZE} bytes")
+
+
+# =============================================================================
+# [3] Example memory map
+# =============================================================================
+
+# Activations / intermediate data
+MEM_IN_H_L        = 0x0000
+MEM_NORM_OUT      = 0x1000
+MEM_Q_OUT         = 0x2000
+MEM_K_OUT         = 0x3000
+MEM_V_OUT         = 0x4000
+MEM_ATTN_OUT      = 0x5000
+MEM_H_MID         = 0x6000
+MEM_MLP_NORM_OUT  = 0x7000
+MEM_GEGLU_OUT     = 0xA000
+MEM_H_OUT         = 0xB000
+MEM_NORM_BUF      = 0xC000
+MEM_POST_NORM_BUF = 0xD000
+
+# Weights
+WT_NORM_IN        = 0x100000
 WT_Q              = 0x110000
 WT_K              = 0x120000
 WT_V              = 0x130000
@@ -186,122 +245,271 @@ WT_GATE           = 0x160000
 WT_UP             = 0x170000
 WT_DOWN           = 0x180000
 
-# ---------------------------------------------------------
-# [3] NPU 명령어 생성 코어 (1개 레이어 기준)
-# ---------------------------------------------------------
-def compile_single_layer():
-    instructions = []
-    
-    # 공통 차원 (1/16 scaling) - Gemma-2B 기준 D=2048
-    dim_d = 2048 // 16     # 128
-    dim_mid = 16384 // 16  # MLP 은닉 차원 (예시)
-    
-    # -----------------------------------------------------------
-    # Step 1: Input RMSNorm (VPU2 전용 연산)
-    # -----------------------------------------------------------
-    # VPU2가 데이터 통계(Variance)를 구하고 가중치(WT_NORM_IN + 1.0)를 곱함
+# Parameter/LUT addresses are intentionally left as zero placeholders here.
+# The real compiler should fill these from calibrated artifacts / GGUF layout.
+QP_Q = QP_K = QP_V = QP_O = QP_GATE = QP_UP = QP_DOWN = 0
+ACT_LUT_GELU = 0
+ANGLE_PARAM = ROPE_SIN_LUT = ROPE_COS_LUT = 0
+
+
+# =============================================================================
+# [4] Single-layer compiler example
+# =============================================================================
+
+def compile_single_layer(
+    *,
+    valid_row: int = 0x0001,        # GEMV M=1 example: only logical row 0 is valid
+    geglu_scale_operand: int = 0,   # GPALU scalar scaling encoding; 0 = disabled/not supplied
+) -> List[EncodedInstruction]:
+    instructions: List[EncodedInstruction] = []
+
+    # Gemma-2B example dimensions in ISA 1/16 units.
+    row_tiles = 1
+    dim_d = 2048 // 16       # 128
+    dim_mid = 16384 // 16    # 1024
+
+    # -------------------------------------------------------------------------
+    # Step 1. Input RMSNorm (one Shoot-and-Go task; internal phase sequencing)
+    # -------------------------------------------------------------------------
+    in_t, wt_t, out_t = vector_tile_totals(row_tiles, dim_d, has_weight_vector=True)
     rs1 = build_rs1(
-        mxu_en=0, norm_mode=1,       # TPU 끄고 Norm 모드 켜기
-        input_point=2, out_point=0,  # VPU2(입력) -> VPU2(출력)
-        out_row=1, out_col=dim_d     # 1D Vector, 차원 D
+        norm_mode=NORM_RMS,
+        input_point=INPUT_VPU2,
+        out_point=OUT_VPU2,
+        nb_enable=1,
+        valid_row=valid_row,
+        vector_compact_in=1,
+        vector_compact_out=1,
     )
     rs2 = build_rs2_struct(
-        input_offset=MEM_IN_H_L, weight1_offset=WT_NORM_IN, 
-        output_offset=MEM_NORM_OUT, out_rowNum=1, out_colNum=dim_d
+        input_addr=MEM_IN_H_L,
+        weight1_addr=WT_NORM_IN,
+        output_addr=MEM_NORM_OUT,
+        norm_buff_addr=MEM_NORM_BUF,
+        out_rowNum=row_tiles,
+        out_colNum=dim_d,
+        input_total_tiles=in_t,
+        weight_total_tiles=wt_t,
+        out_total_tiles=out_t,
     )
-    instructions.append((rs1, rs2))
+    instructions.append(EncodedInstruction("input_rmsnorm", rs1, rs2))
 
-    # -----------------------------------------------------------
-    # Step 2: Q, K, V Projection (TPU GEMV)
-    # -----------------------------------------------------------
-    # Q Proj
-    rs1 = build_rs1(mxu_en=1, input_point=0, out_point=1, out_row=1, out_interm=dim_d, out_col=dim_d)
-    rs2 = build_rs2_struct(input_offset=MEM_NORM_OUT, weight1_offset=WT_Q, output_offset=MEM_Q_OUT, out_rowNum=1, out_intermNum=dim_d, out_colNum=dim_d)
-    instructions.append((rs1, rs2))
-    
-    # K Proj
-    rs1 = build_rs1(mxu_en=1, input_point=0, out_point=1, out_row=1, out_interm=dim_d, out_col=dim_d)
-    rs2 = build_rs2_struct(input_offset=MEM_NORM_OUT, weight1_offset=WT_K, output_offset=MEM_K_OUT, out_rowNum=1, out_intermNum=dim_d, out_colNum=dim_d)
-    instructions.append((rs1, rs2))
-    
-    # V Proj (V는 RoPE를 안 하므로 캐시나 다음 연산으로 직행)
-    rs1 = build_rs1(mxu_en=1, input_point=0, out_point=1, out_row=1, out_interm=dim_d, out_col=dim_d)
-    rs2 = build_rs2_struct(input_offset=MEM_NORM_OUT, weight1_offset=WT_V, output_offset=MEM_V_OUT, out_rowNum=1, out_intermNum=dim_d, out_colNum=dim_d)
-    instructions.append((rs1, rs2))
+    # -------------------------------------------------------------------------
+    # Step 2. Q / K / V projections
+    # -------------------------------------------------------------------------
+    gemm_in, gemm_w, gemm_out = gemm_tile_totals(row_tiles, dim_d, dim_d)
+    for name, weight, output, qparam in (
+        ("q_proj", WT_Q, MEM_Q_OUT, QP_Q),
+        ("k_proj", WT_K, MEM_K_OUT, QP_K),
+        ("v_proj", WT_V, MEM_V_OUT, QP_V),
+    ):
+        rs1 = build_rs1(
+            mxu_en=1,
+            input_point=INPUT_MXU,
+            out_point=OUT_VPU1,
+            valid_row=valid_row,
+            vector_compact_in=1,
+            vector_compact_out=1,
+        )
+        rs2 = build_rs2_struct(
+            input_addr=MEM_NORM_OUT,
+            weight1_addr=weight,
+            quant_param_addr=qparam,
+            output_addr=output,
+            out_rowNum=row_tiles,
+            out_intermNum=dim_d,
+            out_colNum=dim_d,
+            input_total_tiles=gemm_in,
+            weight_total_tiles=gemm_w,
+            out_total_tiles=gemm_out,
+        )
+        instructions.append(EncodedInstruction(name, rs1, rs2))
 
-    # -----------------------------------------------------------
-    # Step 3: RoPE 회전 변환 (VPU2 전용 연산) - Q와 K에만 적용
-    # -----------------------------------------------------------
-    rs1 = build_rs1(rope_en=1, input_point=2, out_point=0, out_row=1, out_col=dim_d)
-    rs2_q = build_rs2_struct(input_offset=MEM_Q_OUT, output_offset=MEM_Q_OUT, out_rowNum=1, out_colNum=dim_d) # In-place 덮어쓰기
-    rs2_k = build_rs2_struct(input_offset=MEM_K_OUT, output_offset=MEM_K_OUT, out_rowNum=1, out_colNum=dim_d)
-    instructions.append((rs1, rs2_q))
-    instructions.append((rs1, rs2_k))
+    # -------------------------------------------------------------------------
+    # Step 3. RoPE for Q and K (kept as standalone tasks in this example)
+    # -------------------------------------------------------------------------
+    rope_in, _, rope_out = vector_tile_totals(row_tiles, dim_d)
+    rope_rs1 = build_rs1(
+        rope_en=1,
+        input_point=INPUT_VPU2,
+        out_point=OUT_VPU2,
+        valid_row=valid_row,
+        vector_compact_in=1,
+        vector_compact_out=1,
+    )
+    for name, address in (("q_rope", MEM_Q_OUT), ("k_rope", MEM_K_OUT)):
+        rs2 = build_rs2_struct(
+            input_addr=address,
+            angle_param_addr=ANGLE_PARAM,
+            rope_sin_addr=ROPE_SIN_LUT,
+            rope_cos_addr=ROPE_COS_LUT,
+            output_addr=address,
+            out_rowNum=row_tiles,
+            out_colNum=dim_d,
+            input_total_tiles=rope_in,
+            weight_total_tiles=0,
+            out_total_tiles=rope_out,
+        )
+        instructions.append(EncodedInstruction(name, rope_rs1, rs2))
 
-    # -----------------------------------------------------------
-    # Step 4: Attention (O Proj) 및 Residual Add 1
-    # -----------------------------------------------------------
-    # (주의: 실제로는 여기에 MQA를 위한 KV Cache 읽기용 GEMM이 들어가야 함. 여기선 생략하고 바로 O-Proj로 넘어감)
-    
-    # O-Proj 후 VPU1의 ALU(Add)를 켜서 원래 H_l과 더해 H_mid 생성
+    # -------------------------------------------------------------------------
+    # Attention score / softmax / V aggregation omitted here, same as old sample.
+    # -------------------------------------------------------------------------
+
+    # -------------------------------------------------------------------------
+    # Step 4. O projection + residual add
+    # weight2_addr carries the second VPU1 operand source descriptor.
+    # -------------------------------------------------------------------------
     rs1 = build_rs1(
-        mxu_en=1, alu_mode=1,        # TPU 켜고, VPU1 ALU=Add(1) 모드 켬!
-        input_point=0, out_point=1,
-        out_row=1, out_interm=dim_d, out_col=dim_d
+        mxu_en=1,
+        alu_mode=ALU_ADD,
+        input_point=INPUT_MXU,
+        out_point=OUT_VPU1,
+        valid_row=valid_row,
+        vector_compact_in=1,
+        vector_compact_out=1,
     )
     rs2 = build_rs2_struct(
-        input_offset=MEM_ATTN_OUT, weight1_offset=WT_O, 
-        residual_offset=MEM_IN_H_L,  # ALU_Add를 위해 원래 입력 H_l을 가져옴
-        output_offset=MEM_H_MID, out_rowNum=1, out_intermNum=dim_d, out_colNum=dim_d
+        input_addr=MEM_ATTN_OUT,
+        weight1_addr=WT_O,
+        weight2_addr=MEM_IN_H_L,
+        quant_param_addr=QP_O,
+        output_addr=MEM_H_MID,
+        out_rowNum=row_tiles,
+        out_intermNum=dim_d,
+        out_colNum=dim_d,
+        input_total_tiles=gemm_in,
+        weight_total_tiles=gemm_w,
+        out_total_tiles=gemm_out,
     )
-    instructions.append((rs1, rs2))
+    instructions.append(EncodedInstruction("o_proj_residual", rs1, rs2))
 
-    # -----------------------------------------------------------
-    # Step 5: Post RMSNorm 
-    # -----------------------------------------------------------
-    rs1 = build_rs1(norm_mode=1, input_point=2, out_point=0, out_row=1, out_col=dim_d)
-    rs2 = build_rs2_struct(input_offset=MEM_H_MID, weight1_offset=WT_NORM_POST, output_offset=MEM_MLP_NORM_OUT, out_rowNum=1, out_colNum=dim_d)
-    instructions.append((rs1, rs2))
-
-    # -----------------------------------------------------------
-    # Step 6: MLP Block (Gate, Up, Down, GeGLU)
-    # -----------------------------------------------------------
-    # 6-1. Gate Proj + GELU (VPU1 통과 시 act_en 켜기)
-    rs1 = build_rs1(mxu_en=1, act_en=1, input_point=0, out_point=1, out_row=1, out_interm=dim_d, out_col=dim_mid)
-    rs2 = build_rs2_struct(input_offset=MEM_MLP_NORM_OUT, weight1_offset=WT_GATE, output_offset=MEM_GATE_OUT, out_rowNum=1, out_intermNum=dim_d, out_colNum=dim_mid)
-    instructions.append((rs1, rs2))
-
-    # 6-2. Up Proj
-    rs1 = build_rs1(mxu_en=1, act_en=0, input_point=0, out_point=1, out_row=1, out_interm=dim_d, out_col=dim_mid)
-    rs2 = build_rs2_struct(input_offset=MEM_MLP_NORM_OUT, weight1_offset=WT_UP, output_offset=MEM_UP_OUT, out_rowNum=1, out_intermNum=dim_d, out_colNum=dim_mid)
-    instructions.append((rs1, rs2))
-
-    # 6-3. GeGLU (Gate_GELU * Up) - VPU1 ALU=Mul(2)
-    # TPU는 끄고 VPU1만 써서 두 벡터를 Element-wise Mul
-    rs1 = build_rs1(mxu_en=0, alu_mode=2, input_point=1, out_point=1, out_row=1, out_col=dim_mid)
-    rs2 = build_rs2_struct(input_offset=MEM_GATE_OUT, residual_offset=MEM_UP_OUT, output_offset=MEM_GEGLU_OUT, out_rowNum=1, out_colNum=dim_mid)
-    instructions.append((rs1, rs2))
-
-    # 6-4. Down Proj & Residual Add 2 (H_l+1 완성)
-    rs1 = build_rs1(mxu_en=1, alu_mode=1, input_point=0, out_point=1, out_row=1, out_interm=dim_mid, out_col=dim_d)
+    # -------------------------------------------------------------------------
+    # Step 5. Post-attention RMSNorm
+    # -------------------------------------------------------------------------
+    in_t, wt_t, out_t = vector_tile_totals(row_tiles, dim_d, has_weight_vector=True)
+    rs1 = build_rs1(
+        norm_mode=NORM_RMS,
+        input_point=INPUT_VPU2,
+        out_point=OUT_VPU2,
+        nb_enable=1,
+        valid_row=valid_row,
+        vector_compact_in=1,
+        vector_compact_out=1,
+    )
     rs2 = build_rs2_struct(
-        input_offset=MEM_GEGLU_OUT, weight1_offset=WT_DOWN, 
-        residual_offset=MEM_H_MID,  # H_mid를 더해서 최종 Residual 완성
-        output_offset=MEM_H_OUT, out_rowNum=1, out_intermNum=dim_mid, out_colNum=dim_d
+        input_addr=MEM_H_MID,
+        weight1_addr=WT_NORM_POST,
+        output_addr=MEM_MLP_NORM_OUT,
+        norm_buff_addr=MEM_POST_NORM_BUF,
+        out_rowNum=row_tiles,
+        out_colNum=dim_d,
+        input_total_tiles=in_t,
+        weight_total_tiles=wt_t,
+        out_total_tiles=out_t,
     )
-    instructions.append((rs1, rs2))
+    instructions.append(EncodedInstruction("post_rmsnorm", rs1, rs2))
+
+    # -------------------------------------------------------------------------
+    # Step 6. Fused GeGLU Shoot-and-Go task
+    #   GeLU(X * W_gate^T) ** (X * W_up^T)
+    #
+    # The Sequencer uses weight1/weight2 as the two GEMM branches.  act_en marks
+    # the activation-bearing branch, alu_mode=MUL requests the elementwise merge,
+    # and fusion_en turns the multi-branch task on.
+    #
+    # constant_operand is reserved here for the assumed GPALU scalar-scale path.
+    # Its exact fixed-point encoding should follow the final GPALU implementation.
+    # -------------------------------------------------------------------------
+    gate_in, gate_w, gate_out = gemm_tile_totals(row_tiles, dim_d, dim_mid)
+    rs1 = build_rs1(
+        constant_operand=geglu_scale_operand,
+        mxu_en=1,
+        act_en=1,
+        alu_mode=ALU_MUL,
+        fusion_en=1,
+        input_point=INPUT_MXU,
+        out_point=OUT_VPU1,
+        valid_row=valid_row,
+        vector_compact_in=1,
+        vector_compact_out=1,
+    )
+    rs2 = build_rs2_struct(
+        input_addr=MEM_MLP_NORM_OUT,
+        weight1_addr=WT_GATE,
+        weight2_addr=WT_UP,
+        quant_param_addr=QP_GATE,  # real compiler may pack/point to both branch params
+        act_lut_addr=ACT_LUT_GELU,
+        output_addr=MEM_GEGLU_OUT,
+        out_rowNum=row_tiles,
+        out_intermNum=dim_d,
+        out_colNum=dim_mid,
+        input_total_tiles=gate_in,
+        weight_total_tiles=gate_w,
+        out_total_tiles=gate_out,
+    )
+    instructions.append(EncodedInstruction("fused_geglu", rs1, rs2))
+
+    # -------------------------------------------------------------------------
+    # Step 7. Down projection + second residual
+    # -------------------------------------------------------------------------
+    down_in, down_w, down_out = gemm_tile_totals(row_tiles, dim_mid, dim_d)
+    rs1 = build_rs1(
+        mxu_en=1,
+        alu_mode=ALU_ADD,
+        input_point=INPUT_MXU,
+        out_point=OUT_VPU1,
+        valid_row=valid_row,
+        vector_compact_in=1,
+        vector_compact_out=1,
+    )
+    rs2 = build_rs2_struct(
+        input_addr=MEM_GEGLU_OUT,
+        weight1_addr=WT_DOWN,
+        weight2_addr=MEM_H_MID,
+        quant_param_addr=QP_DOWN,
+        output_addr=MEM_H_OUT,
+        out_rowNum=row_tiles,
+        out_intermNum=dim_mid,
+        out_colNum=dim_d,
+        input_total_tiles=down_in,
+        weight_total_tiles=down_w,
+        out_total_tiles=down_out,
+    )
+    instructions.append(EncodedInstruction("down_proj_residual", rs1, rs2))
 
     return instructions
 
-# ---------------------------------------------------------
-# [4] 파일로 굽기
-# ---------------------------------------------------------
+
+# =============================================================================
+# [5] Program serialization / smoke test
+# =============================================================================
+
+def write_program(path: str, instructions: List[EncodedInstruction]) -> None:
+    """Write an offline compiler image: [rs1:uint64][npu_ctrl:132B] per task.
+
+    At runtime, the host places each npu_ctrl in DRAM and passes its address as
+    RoCC rs2.  This flat file is an offline packaging format, not the literal
+    electrical value carried by the RoCC rs2 register.
+    """
+    with open(path, "wb") as f:
+        for inst in instructions:
+            f.write(struct.pack("<Q", inst.rs1))
+            f.write(inst.rs2)
+
+
 if __name__ == "__main__":
     layer_instrs = compile_single_layer()
-    
-    with open("gemma_layer0.bin", "wb") as f:
-        for rs1, rs2_packed in layer_instrs:
-            f.write(struct.pack('<Q', rs1))
-            f.write(rs2_packed)
-            
-    print(f"✅ 컴파일 완료! {len(layer_instrs)}개의 Instruction이 'gemma_layer0.bin'에 저장되었습니다.")
+
+    # ISA sanity checks
+    assert all((inst.rs1 >> 58) == 0 for inst in layer_instrs), "rs1 reserved bits must be zero"
+    assert all(len(inst.rs2) == 132 for inst in layer_instrs)
+
+    output_path = "gemma_layer0.bin"
+    write_program(output_path, layer_instrs)
+
+    print(f"npu_ctrl packed size: {RS2_SIZE} bytes")
+    print(f"instructions: {len(layer_instrs)}")
+    for i, inst in enumerate(layer_instrs):
+        print(f"  {i:02d} {inst.name:20s} rs1=0x{inst.rs1:016X} rs2={len(inst.rs2)}B")
+    print(f"wrote: {output_path}")
