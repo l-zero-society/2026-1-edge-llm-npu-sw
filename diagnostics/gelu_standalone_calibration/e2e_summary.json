@@ -1,0 +1,124 @@
+{
+  "modes": {
+    "FP_FULL": {
+      "tokens": 192,
+      "nmse": 0.0,
+      "mae": 0.0,
+      "mse": 0.0,
+      "cosine": 1.0,
+      "flattened_cosine": 1.0,
+      "fp_energy": 338.402490668592,
+      "quant_energy": 338.402490668592,
+      "nll": 4.969690900607934,
+      "kl": 0.0,
+      "top1": 1.0,
+      "in5": 1.0,
+      "overlap": 1.0,
+      "ppl": 143.98237562722292
+    },
+    "FROZEN_LINEAR_FP_GELU": {
+      "tokens": 192,
+      "nmse": 0.003115489172676624,
+      "mae": 0.725382106390837,
+      "mse": 1.0542892956848007,
+      "cosine": 0.9975569852095583,
+      "flattened_cosine": 0.9985264747012815,
+      "fp_energy": 338.402490668592,
+      "quant_energy": 328.6364259053456,
+      "nll": 4.940165278174111,
+      "kl": 0.05650374554125706,
+      "top1": 0.8802083333333334,
+      "in5": 0.9947916666666666,
+      "overlap": 0.8854166733411452,
+      "ppl": 139.79335244079363
+    },
+    "FROZEN_LINEAR_PER_OP_ABSMAX_GELU_LUT": {
+      "tokens": 192,
+      "nmse": 0.0034169708354857397,
+      "mae": 0.8058712274341592,
+      "mse": 1.1563114412703142,
+      "cosine": 0.9977307198013131,
+      "flattened_cosine": 0.9983896111951205,
+      "fp_energy": 338.402490668592,
+      "quant_energy": 327.8536978442852,
+      "nll": 4.931057406598225,
+      "kl": 0.06930574777934843,
+      "top1": 0.9166666666666666,
+      "in5": 1.0,
+      "overlap": 0.8666666746139526,
+      "ppl": 138.5259131383122
+    },
+    "FROZEN_LINEAR_PER_OP_SELECTED_GELU_LUT": {
+      "tokens": 192,
+      "nmse": 0.0026193186320738002,
+      "mae": 0.7188510872400088,
+      "mse": 0.8863839489484233,
+      "cosine": 0.9983630204884616,
+      "flattened_cosine": 0.9987119249572077,
+      "fp_energy": 338.402490668592,
+      "quant_energy": 333.0208383345049,
+      "nll": 4.909764441825885,
+      "kl": 0.08473665178056382,
+      "top1": 0.859375,
+      "in5": 1.0,
+      "overlap": 0.8750000069849193,
+      "ppl": 135.6074671985301
+    }
+  },
+  "fp_gelu_to_absmax": {
+    "kl": {
+      "absolute": 0.012802002238091373,
+      "relative": 0.22656909051708435
+    },
+    "nmse": {
+      "absolute": 0.0003014816628091159,
+      "relative": 0.09676864405537403
+    },
+    "ppl": {
+      "absolute": -1.2674393024814208,
+      "relative": -0.009066520548737942
+    },
+    "top1": {
+      "absolute": 0.03645833333333326,
+      "relative": 0.04142011834319518
+    }
+  },
+  "absmax_to_selected": {
+    "kl": {
+      "absolute": 0.015430904001215384,
+      "relative": 0.22264970071953324
+    },
+    "nmse": {
+      "absolute": -0.0007976522034119395,
+      "relative": -0.23343839962817511
+    },
+    "ppl": {
+      "absolute": -2.918445939782117,
+      "relative": -0.021067870073292163
+    },
+    "top1": {
+      "absolute": -0.05729166666666663,
+      "relative": -0.062499999999999965
+    }
+  },
+  "gates": {
+    "FROZEN_LINEAR_PER_OP_ABSMAX_GELU_LUT": {
+      "kl_pass": false,
+      "nmse_pass": false,
+      "top1_pass": true,
+      "passed": false
+    },
+    "FROZEN_LINEAR_PER_OP_SELECTED_GELU_LUT": {
+      "kl_pass": false,
+      "nmse_pass": true,
+      "top1_pass": false,
+      "passed": false
+    }
+  },
+  "classifications": {
+    "FROZEN_LINEAR_PER_OP_ABSMAX_GELU_LUT": "BASELINE_REGRESSION",
+    "FROZEN_LINEAR_PER_OP_SELECTED_GELU_LUT": "BASELINE_REGRESSION"
+  },
+  "clipping_classification": "CLIPPING_TRADEOFF",
+  "parameter_selection_used_e2e": false
+}

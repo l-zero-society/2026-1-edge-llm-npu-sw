@@ -1,0 +1,20 @@
+{
+  "layer": 6,
+  "activation": "torch.nn.functional.gelu(approximate='tanh')",
+  "s10": 0.1,
+  "S_act": 0.07874015748031496,
+  "selection_policy": "ABSMAX",
+  "retained_percentile": 100.0,
+  "clipping_fraction": 0.0,
+  "address_mapping": "q + 512",
+  "input_codes": [
+    -512,
+    511
+  ],
+  "output_codes": [
+    -127,
+    127
+  ],
+  "entries": 1024,
+  "sha256": "f139ff3fd91dbd52f0191108fa962b4d0b62c6a559d16121534164db981e94f3"
+}

@@ -1,0 +1,195 @@
+{
+  "branch": "lut_cali",
+  "source_commit": "45af28b810eba762a29a7a0b1bef03fc8853c8fa",
+  "model_identity": {
+    "file_name": "gemma-2b-it.Q8_0.gguf",
+    "size_bytes": 2669070080,
+    "sha256": "dae8a0a75dda3553c06af737adfff0c003ed1b6393932964cce72bb4f0fd41f6",
+    "architecture": "gemma",
+    "metadata": {
+      "general.architecture": "gemma",
+      "general.name": "models--google--gemma-2b-it",
+      "gemma.context_length": 8192,
+      "gemma.embedding_length": 2048,
+      "gemma.block_count": 18,
+      "gemma.feed_forward_length": 16384,
+      "gemma.attention.head_count": 8,
+      "gemma.attention.head_count_kv": 1,
+      "gemma.attention.layer_norm_rms_epsilon": 9.999999974752427e-07,
+      "gemma.attention.key_length": 256,
+      "gemma.attention.value_length": 256,
+      "general.file_type": 7,
+      "tokenizer.ggml.model": "llama",
+      "tokenizer.ggml.tokens": {
+        "entries": 256000
+      },
+      "tokenizer.ggml.scores": {
+        "entries": 256000
+      },
+      "tokenizer.ggml.token_type": {
+        "entries": 256000
+      },
+      "tokenizer.ggml.bos_token_id": 2,
+      "tokenizer.ggml.eos_token_id": 1,
+      "tokenizer.ggml.unknown_token_id": 3,
+      "tokenizer.ggml.padding_token_id": 0,
+      "tokenizer.ggml.add_bos_token": true,
+      "tokenizer.ggml.add_eos_token": false,
+      "tokenizer.chat_template": "{{ bos_token }}{% if messages[0]['role'] == 'system' %}{{ raise_exception('System role not supported') }}{% endif %}{% for message in messages %}{% if (message['role'] == 'user') != (loop.index0 % 2 == 0) %}{{ raise_exception('Conversation roles must alternate user/assistant/user/assistant/...') }}{% endif %}{% if (message['role'] == 'assistant') %}{% set role = 'model' %}{% else %}{% set role = message['role'] %}{% endif %}{{ '<start_of_turn>' + role + '\n' + message['content'] | trim + '<end_of_turn>\n' }}{% endfor %}{% if add_generation_prompt %}{{'<start_of_turn>model\n'}}{% endif %}",
+      "general.quantization_version": 2
+    },
+    "quantization_type_counts": {
+      "Q8_0": 127,
+      "F32": 37
+    },
+    "mapping_implementation": "original-gemma-gguf-v1",
+    "gguf_version": "0.17.1",
+    "transformers_version": "4.57.6",
+    "converter_source": "https://github.com/ggml-org/llama.cpp/blob/master/conversion/gemma.py",
+    "fp32_tensor_bytes": 10024689664
+  },
+  "activation_implementation": "torch.nn.functional.gelu(x, approximate='tanh')",
+  "number_activation_ops": 18,
+  "frozen_linear_hashes_before": {
+    "manifest.json": "a82a223553b2bcdd3846cb226a8bcd117af1f13197f144240d3af20dc477e19f",
+    "parameters.json": "ca11fda5f782a9577cbc41b0d14abf134a8a13acf21809089cb77d8e010762fb"
+  },
+  "frozen_linear_hashes_after": {
+    "manifest.json": "a82a223553b2bcdd3846cb226a8bcd117af1f13197f144240d3af20dc477e19f",
+    "parameters.json": "ca11fda5f782a9577cbc41b0d14abf134a8a13acf21809089cb77d8e010762fb"
+  },
+  "frozen_linear_unchanged": true,
+  "s10_source_per_op": [
+    {
+      "layer": 0,
+      "s10": 0.1,
+      "source": "AUTHORITATIVE_FIXED_LINEAR_ARTIFACT"
+    },
+    {
+      "layer": 1,
+      "s10": 0.1,
+      "source": "AUTHORITATIVE_FIXED_LINEAR_ARTIFACT"
+    },
+    {
+      "layer": 2,
+      "s10": 0.1,
+      "source": "AUTHORITATIVE_FIXED_LINEAR_ARTIFACT"
+    },
+    {
+      "layer": 3,
+      "s10": 0.1,
+      "source": "AUTHORITATIVE_FIXED_LINEAR_ARTIFACT"
+    },
+    {
+      "layer": 4,
+      "s10": 0.1,
+      "source": "AUTHORITATIVE_FIXED_LINEAR_ARTIFACT"
+    },
+    {
+      "layer": 5,
+      "s10": 0.1,
+      "source": "AUTHORITATIVE_FIXED_LINEAR_ARTIFACT"
+    },
+    {
+      "layer": 6,
+      "s10": 0.1,
+      "source": "AUTHORITATIVE_FIXED_LINEAR_ARTIFACT"
+    },
+    {
+      "layer": 7,
+      "s10": 0.1,
+      "source": "AUTHORITATIVE_FIXED_LINEAR_ARTIFACT"
+    },
+    {
+      "layer": 8,
+      "s10": 0.1,
+      "source": "AUTHORITATIVE_FIXED_LINEAR_ARTIFACT"
+    },
+    {
+      "layer": 9,
+      "s10": 0.1,
+      "source": "AUTHORITATIVE_FIXED_LINEAR_ARTIFACT"
+    },
+    {
+      "layer": 10,
+      "s10": 0.1,
+      "source": "AUTHORITATIVE_FIXED_LINEAR_ARTIFACT"
+    },
+    {
+      "layer": 11,
+      "s10": 0.1,
+      "source": "AUTHORITATIVE_FIXED_LINEAR_ARTIFACT"
+    },
+    {
+      "layer": 12,
+      "s10": 0.1,
+      "source": "AUTHORITATIVE_FIXED_LINEAR_ARTIFACT"
+    },
+    {
+      "layer": 13,
+      "s10": 0.1,
+      "source": "AUTHORITATIVE_FIXED_LINEAR_ARTIFACT"
+    },
+    {
+      "layer": 14,
+      "s10": 0.1,
+      "source": "AUTHORITATIVE_FIXED_LINEAR_ARTIFACT"
+    },
+    {
+      "layer": 15,
+      "s10": 0.1,
+      "source": "AUTHORITATIVE_FIXED_LINEAR_ARTIFACT"
+    },
+    {
+      "layer": 16,
+      "s10": 0.1,
+      "source": "AUTHORITATIVE_FIXED_LINEAR_ARTIFACT"
+    },
+    {
+      "layer": 17,
+      "s10": 0.1,
+      "source": "AUTHORITATIVE_FIXED_LINEAR_ARTIFACT"
+    }
+  ],
+  "number_authoritative_s10": 18,
+  "number_derived_s10": 0,
+  "lut_count": 18,
+  "table_size_bytes": 1024,
+  "all_table_hashes": [
+    "2a25cdcad43a3bad07431bea106bb1ce1f5130574fc6bb8777acc236e048037d",
+    "eb4a0fa441458f45273a45e8749b147f1dda3923408a62184d78af5913cd8161",
+    "272f1d2620338e53fd4730c2f361b1a3f38fde7e51d3aa92195e1844ef0aed2e",
+    "4a9183b28db1c91e94a25a8056ceff3e0311bf9839489c9be8330f6d1d687a7b",
+    "ade519f474b2c40f469d4061b8888a42db6bdc019791a33c07265092166fe174",
+    "49b1876dbc661a9e1c007cecbf8a569b165a9fb0641a9039cc820d250ff962a4",
+    "5f09299f9932f0a0744d72ab1e9a11db2bb1f7805721e2d1458657d1eecb2c39",
+    "5f09299f9932f0a0744d72ab1e9a11db2bb1f7805721e2d1458657d1eecb2c39",
+    "ade519f474b2c40f469d4061b8888a42db6bdc019791a33c07265092166fe174",
+    "828a3c865a4ac6b92af821cf8a836fea2e2b741987b3feb1c17f33c77e87db96",
+    "cc33121e257ed41399a877ff1a51f9098e2e8eec5e3f0f0a4cef948ebdff2385",
+    "b93bc64685a33717da78fa2c2a68023572d29d9e208e8835c59a162b7f69a540",
+    "d96239ff50b43a58235b4dbe5dd54bd6e76f76992365c186ba2e3b23544ad8fa",
+    "3b86864a7e548f92d5ca5ab0b00c0cf0c43b8d00c4c4ef9558a2879a5c1bdc79",
+    "7b7f6483ed7e328e1b726fd8fd990b1fd49c92b9af3411884fbe8bf11fedab81",
+    "63fd742b2e1cc86cf803ecfd92e14b4cac0cfacca9ad7fa2e674414246ae9bab",
+    "eeda8969666a81bd12791abdf43e95532e1b0deec16c30b7a505fd6e138345e1",
+    "8f5b520735264030a488526b077fecb4bf5e84064b133b5b01a3c657819eee58"
+  ],
+  "clustering_performed": false,
+  "fusion_tuning_performed": false,
+  "product_aware_selection": false,
+  "e2e_used_for_parameter_selection": false,
+  "final_linear_confirmation_overlap": false,
+  "independent_kv_caches": true,
+  "capture_reused": true,
+  "test_command": [
+    "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/.venv-calibration/bin/python",
+    "-m",
+    "unittest",
+    "tests.test_gelu_standalone_calibration",
+    "tests.test_activation_lut_calibration",
+    "tests.test_frozen_linear_quant_v1"
+  ],
+  "test_return_code": 0,
+  "elapsed_sec": 1542.1167875
+}
