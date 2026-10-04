@@ -1,0 +1,73 @@
+{
+  "examples": [
+    {
+      "index": 2,
+      "anchor_id": "c91d187c-eef6-4e21-bb13-02fa2d1de54d",
+      "response_id": "c91d187c-eef6-4e21-bb13-02fa2d1de54d",
+      "tree_id": "39670037-563d-4297-9552-24ae8d7a2478"
+    },
+    {
+      "index": 11,
+      "anchor_id": "fc9a0de2-90b5-46a2-9e37-ff5a23d4f33f",
+      "response_id": "fc9a0de2-90b5-46a2-9e37-ff5a23d4f33f",
+      "tree_id": "7714d51d-2628-4f99-ad6f-bd79e436136e"
+    },
+    {
+      "index": 20,
+      "anchor_id": "fbaaecf0-8ad5-45e6-ade3-cbd2abb3751b",
+      "response_id": "fbaaecf0-8ad5-45e6-ade3-cbd2abb3751b",
+      "tree_id": "fa9368ce-1bfd-412f-be8f-bebe05a0a09a"
+    },
+    {
+      "index": 31,
+      "anchor_id": "e5037ca8-a1f4-46fe-a6dd-af1b101be5f4",
+      "response_id": "e5037ca8-a1f4-46fe-a6dd-af1b101be5f4",
+      "tree_id": "32a60526-9085-4c1d-a597-c100d60d0301"
+    }
+  ],
+  "response_limit": 8,
+  "reservoir_capacity": 8,
+  "seed": 20261005,
+  "role": "FP Linear inputs",
+  "model_sha256": "dae8a0a75dda3553c06af737adfff0c003ed1b6393932964cce72bb4f0fd41f6",
+  "inventory_hash": "23f898f046acc55ca6a015df1c8f097f4d165d3e52294d0e3c32d651d88c225a",
+  "script_sha256": "25695dee02ff288780d715a0c0e7a52fabfbe5350ed336f6d02f396be75da422",
+  "row_selector": "compare_k_selectors_e2e.select_absmax",
+  "profile": {
+    "name": "generic-rne",
+    "shift_correction": 0,
+    "rounding": "nearest_even",
+    "verification": "unverified",
+    "rtl_bit_exact": false,
+    "source": "src/static_quant/hardware.py; software definition only; no RTL found",
+    "historical_layout_source": "user request, unconfirmed design history",
+    "multiplier": "unsigned 16 bit",
+    "shift": "unsigned 5 bit",
+    "effective_shift": "max(shift - shift_correction, 0)",
+    "zero_point": "signed 8 bit, added AFTER rounded shift; exports use zero",
+    "product": "signed 48 bit exact; INT32 * UInt16 fits; no truncation or wrap",
+    "right_shift": "arithmetic (floor for negatives)",
+    "saturation": "signed INT10 [-512,511], after shift and zero point",
+    "lut_index": "10-bit two's complement: signed_q10 & 1023",
+    "layout": {
+      "zp": [
+        0,
+        7
+      ],
+      "shift": [
+        8,
+        12
+      ],
+      "reserved_zero": [
+        13,
+        15
+      ],
+      "multiplier": [
+        16,
+        31
+      ]
+    },
+    "endian": "little"
+  },
+  "weight_quantization": "static_quant.core.quantize_weight"
+}

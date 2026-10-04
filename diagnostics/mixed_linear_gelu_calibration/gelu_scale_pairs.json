@@ -1,0 +1,203 @@
+{
+  "clustering_performed": false,
+  "pairs": [
+    {
+      "layer": 0,
+      "s10": 0.028939161731223927,
+      "s_act": 0.09436964936238433,
+      "log2_s10": -5.1108330572527585,
+      "log2_s_act": -3.4055332470821,
+      "selection_policy": "PERCENTILE_CLIPPING",
+      "percentile": 99.995,
+      "clipping_fraction": 4.999999999995453e-05,
+      "lut_hash": "a564c124cb019f975551376144a49f5ff6169d97cb6769e7785c9d8222153894"
+    },
+    {
+      "layer": 1,
+      "s10": 0.0164190925399534,
+      "s_act": 0.061253001987450775,
+      "log2_s10": -5.928481796172214,
+      "log2_s_act": -4.029075637965196,
+      "selection_policy": "PERCENTILE_CLIPPING",
+      "percentile": 99.99,
+      "clipping_fraction": 0.00010000000000005117,
+      "lut_hash": "0f70c23468858d4bff4ce32e2ff3a5cd8676caa9ad671ebac986695730b449e3"
+    },
+    {
+      "layer": 2,
+      "s10": 0.012308702159862605,
+      "s_act": 0.040705943594247486,
+      "log2_s10": -6.34417753893852,
+      "log2_s_act": -4.618616727767232,
+      "selection_policy": "PERCENTILE_CLIPPING",
+      "percentile": 99.995,
+      "clipping_fraction": 4.999999999995453e-05,
+      "lut_hash": "61256f5227b4e48f2609b8d06883e8123ca64edd7c9a5914292bb69d16715188"
+    },
+    {
+      "layer": 3,
+      "s10": 0.013761605246231738,
+      "s_act": 0.055371498274208,
+      "log2_s10": -6.183207424262132,
+      "log2_s_act": -4.1747126300966775,
+      "selection_policy": "ABSMAX",
+      "percentile": 100.0,
+      "clipping_fraction": 0.0,
+      "lut_hash": "ad4bd064ee43dcc80b5eb5bca73ba92e935e0c02589103fb506c832792dc4120"
+    },
+    {
+      "layer": 4,
+      "s10": 0.010057491756816287,
+      "s_act": 0.027803708603889008,
+      "log2_s10": -6.635585634252657,
+      "log2_s_act": -5.168578859790247,
+      "selection_policy": "PERCENTILE_CLIPPING",
+      "percentile": 99.99,
+      "clipping_fraction": 0.00010000000000005117,
+      "lut_hash": "d89affb3ac49af04506690096834eaad819434e9d95083f2799765f56ad9cba0"
+    },
+    {
+      "layer": 5,
+      "s10": 0.01320703788138844,
+      "s_act": 0.031475715483555454,
+      "log2_s10": -6.242549259376632,
+      "log2_s_act": -4.989617017141146,
+      "selection_policy": "PERCENTILE_CLIPPING",
+      "percentile": 99.995,
+      "clipping_fraction": 4.999999999995453e-05,
+      "lut_hash": "eedd35d9774fe21bab4de136282d2337fe9730940d6a1dd5f641cc1923d97a22"
+    },
+    {
+      "layer": 6,
+      "s10": 0.020765666778062575,
+      "s_act": 0.029996748682257268,
+      "log2_s10": -5.589655992851409,
+      "log2_s_act": -5.059050052859655,
+      "selection_policy": "PERCENTILE_CLIPPING",
+      "percentile": 99.995,
+      "clipping_fraction": 4.999999999995453e-05,
+      "lut_hash": "d6f0e9b27d82390711419f333fbddabe2ac59fafa3aa802619e5f0ccef6e875d"
+    },
+    {
+      "layer": 7,
+      "s10": 0.01826035831321036,
+      "s_act": 0.030018384818839047,
+      "log2_s10": -5.775141114944383,
+      "log2_s_act": -5.058009836951371,
+      "selection_policy": "PERCENTILE_CLIPPING",
+      "percentile": 99.995,
+      "clipping_fraction": 4.999999999995453e-05,
+      "lut_hash": "d399875c95a612316db1c4502f8d352d63294307978d86e1daeb101a4441210c"
+    },
+    {
+      "layer": 8,
+      "s10": 0.028123432265258486,
+      "s_act": 0.02811978677601465,
+      "log2_s10": -5.152083513931329,
+      "log2_s_act": -5.152270534850498,
+      "selection_policy": "PERCENTILE_CLIPPING",
+      "percentile": 99.995,
+      "clipping_fraction": 4.999999999995453e-05,
+      "lut_hash": "1d992f70e471b3d2b963236cd699453c94d84b8ca17a3cb9bf3cdef10027b9d6"
+    },
+    {
+      "layer": 9,
+      "s10": 0.011526146463491874,
+      "s_act": 0.031180859997693027,
+      "log2_s10": -6.438945932401409,
+      "log2_s_act": -5.003195470292693,
+      "selection_policy": "PERCENTILE_CLIPPING",
+      "percentile": 99.995,
+      "clipping_fraction": 4.999999999995453e-05,
+      "lut_hash": "51207ebcd80d0fbfd570e546781d108296ba04e2663f9d587452f15f726b359a"
+    },
+    {
+      "layer": 10,
+      "s10": 0.012879267779617237,
+      "s_act": 0.030324553692407538,
+      "log2_s10": -6.278805615013438,
+      "log2_s_act": -5.043369777421144,
+      "selection_policy": "PERCENTILE_CLIPPING",
+      "percentile": 99.995,
+      "clipping_fraction": 4.999999999995453e-05,
+      "lut_hash": "24ff65a4e2b18c9481bc5b9422bad1921a64bda95a7a3927cf423683e49a3cc1"
+    },
+    {
+      "layer": 11,
+      "s10": 0.011616590187941438,
+      "s_act": 0.03465696087657992,
+      "log2_s10": -6.427669532465955,
+      "log2_s_act": -4.85071104192766,
+      "selection_policy": "PERCENTILE_CLIPPING",
+      "percentile": 99.995,
+      "clipping_fraction": 4.999999999995453e-05,
+      "lut_hash": "688de88e46c808d81f4d89557ba23db7d2e9608179de2c06c1b929fadd51bdb8"
+    },
+    {
+      "layer": 12,
+      "s10": 0.010646293274572923,
+      "s_act": 0.03393269728439543,
+      "log2_s10": -6.553504975777586,
+      "log2_s_act": -4.8811800764320985,
+      "selection_policy": "PERCENTILE_CLIPPING",
+      "percentile": 99.995,
+      "clipping_fraction": 4.999999999995453e-05,
+      "lut_hash": "5cd50da761c69c4d4102c3e7af06fdc2b8d0074e1a80993c222de3f2b68cb227"
+    },
+    {
+      "layer": 13,
+      "s10": 0.013993791653840936,
+      "s_act": 0.04263069231246156,
+      "log2_s10": -6.1590692723725775,
+      "log2_s_act": -4.5519637052529625,
+      "selection_policy": "PERCENTILE_CLIPPING",
+      "percentile": 99.995,
+      "clipping_fraction": 4.999999999995453e-05,
+      "lut_hash": "cb00b278c69e03e455049513bebd3af9add7a3924d7918f854d2d9bcfe7e938a"
+    },
+    {
+      "layer": 14,
+      "s10": 0.018516429540982364,
+      "s_act": 0.04939450034280454,
+      "log2_s10": -5.755050254249973,
+      "log2_s_act": -4.339505770836351,
+      "selection_policy": "PERCENTILE_CLIPPING",
+      "percentile": 99.995,
+      "clipping_fraction": 4.999999999995453e-05,
+      "lut_hash": "82e237d65f5e87dea1aed2eb90ddbac75593ecbd030c06cc21e7e6ab690d0f3a"
+    },
+    {
+      "layer": 15,
+      "s10": 0.01805284828106154,
+      "s_act": 0.05358995119653683,
+      "log2_s10": -5.791629714059414,
+      "log2_s_act": -4.22189368756292,
+      "selection_policy": "PERCENTILE_CLIPPING",
+      "percentile": 99.995,
+      "clipping_fraction": 4.999999999995453e-05,
+      "lut_hash": "7275cc4a176f68aa43a101ab51d9f37848fa6d3f0f4bd0511d29a29995717fd4"
+    },
+    {
+      "layer": 16,
+      "s10": 0.024505817568407803,
+      "s_act": 0.06856941940345677,
+      "log2_s10": -5.350731910718877,
+      "log2_s_act": -3.8662908832235625,
+      "selection_policy": "PERCENTILE_CLIPPING",
+      "percentile": 99.995,
+      "clipping_fraction": 4.999999999995453e-05,
+      "lut_hash": "f8ed33b0b1788978546eeba4f0c4ac37a18f6c94aeeca36e4c6d9a7a2ed55104"
+    },
+    {
+      "layer": 17,
+      "s10": 0.059822264513133036,
+      "s_act": 0.08191074070584878,
+      "log2_s10": -4.063173666478414,
+      "log2_s_act": -3.6098035492994507,
+      "selection_policy": "PERCENTILE_CLIPPING",
+      "percentile": 99.995,
+      "clipping_fraction": 4.999999999995453e-05,
+      "lut_hash": "8d275986e762c2a6b2b7dcbbca5ff504d19b9c02cf67e033beae847f4d16a74b"
+    }
+  ]
+}

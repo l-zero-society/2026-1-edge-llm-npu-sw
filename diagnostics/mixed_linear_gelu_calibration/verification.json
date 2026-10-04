@@ -1,0 +1,203 @@
+{
+  "branch": "lut_cali",
+  "source_commit": "bd5edb936b0a25cc61a81f0de217c59c7f41f5b6",
+  "model_identity": {
+    "file_name": "gemma-2b-it.Q8_0.gguf",
+    "size_bytes": 2669070080,
+    "sha256": "dae8a0a75dda3553c06af737adfff0c003ed1b6393932964cce72bb4f0fd41f6",
+    "architecture": "gemma",
+    "metadata": {
+      "general.architecture": "gemma",
+      "general.name": "models--google--gemma-2b-it",
+      "gemma.context_length": 8192,
+      "gemma.embedding_length": 2048,
+      "gemma.block_count": 18,
+      "gemma.feed_forward_length": 16384,
+      "gemma.attention.head_count": 8,
+      "gemma.attention.head_count_kv": 1,
+      "gemma.attention.layer_norm_rms_epsilon": 9.999999974752427e-07,
+      "gemma.attention.key_length": 256,
+      "gemma.attention.value_length": 256,
+      "general.file_type": 7,
+      "tokenizer.ggml.model": "llama",
+      "tokenizer.ggml.tokens": {
+        "entries": 256000
+      },
+      "tokenizer.ggml.scores": {
+        "entries": 256000
+      },
+      "tokenizer.ggml.token_type": {
+        "entries": 256000
+      },
+      "tokenizer.ggml.bos_token_id": 2,
+      "tokenizer.ggml.eos_token_id": 1,
+      "tokenizer.ggml.unknown_token_id": 3,
+      "tokenizer.ggml.padding_token_id": 0,
+      "tokenizer.ggml.add_bos_token": true,
+      "tokenizer.ggml.add_eos_token": false,
+      "tokenizer.chat_template": "{{ bos_token }}{% if messages[0]['role'] == 'system' %}{{ raise_exception('System role not supported') }}{% endif %}{% for message in messages %}{% if (message['role'] == 'user') != (loop.index0 % 2 == 0) %}{{ raise_exception('Conversation roles must alternate user/assistant/user/assistant/...') }}{% endif %}{% if (message['role'] == 'assistant') %}{% set role = 'model' %}{% else %}{% set role = message['role'] %}{% endif %}{{ '<start_of_turn>' + role + '\n' + message['content'] | trim + '<end_of_turn>\n' }}{% endfor %}{% if add_generation_prompt %}{{'<start_of_turn>model\n'}}{% endif %}",
+      "general.quantization_version": 2
+    },
+    "quantization_type_counts": {
+      "Q8_0": 127,
+      "F32": 37
+    },
+    "mapping_implementation": "original-gemma-gguf-v1",
+    "gguf_version": "0.17.1",
+    "transformers_version": "4.57.6",
+    "converter_source": "https://github.com/ggml-org/llama.cpp/blob/master/conversion/gemma.py",
+    "fp32_tensor_bytes": 10024689664
+  },
+  "GGUF_identity": {
+    "file_name": "gemma-2b-it.Q8_0.gguf",
+    "size_bytes": 2669070080,
+    "sha256": "dae8a0a75dda3553c06af737adfff0c003ed1b6393932964cce72bb4f0fd41f6",
+    "architecture": "gemma",
+    "metadata": {
+      "general.architecture": "gemma",
+      "general.name": "models--google--gemma-2b-it",
+      "gemma.context_length": 8192,
+      "gemma.embedding_length": 2048,
+      "gemma.block_count": 18,
+      "gemma.feed_forward_length": 16384,
+      "gemma.attention.head_count": 8,
+      "gemma.attention.head_count_kv": 1,
+      "gemma.attention.layer_norm_rms_epsilon": 9.999999974752427e-07,
+      "gemma.attention.key_length": 256,
+      "gemma.attention.value_length": 256,
+      "general.file_type": 7,
+      "tokenizer.ggml.model": "llama",
+      "tokenizer.ggml.tokens": {
+        "entries": 256000
+      },
+      "tokenizer.ggml.scores": {
+        "entries": 256000
+      },
+      "tokenizer.ggml.token_type": {
+        "entries": 256000
+      },
+      "tokenizer.ggml.bos_token_id": 2,
+      "tokenizer.ggml.eos_token_id": 1,
+      "tokenizer.ggml.unknown_token_id": 3,
+      "tokenizer.ggml.padding_token_id": 0,
+      "tokenizer.ggml.add_bos_token": true,
+      "tokenizer.ggml.add_eos_token": false,
+      "tokenizer.chat_template": "{{ bos_token }}{% if messages[0]['role'] == 'system' %}{{ raise_exception('System role not supported') }}{% endif %}{% for message in messages %}{% if (message['role'] == 'user') != (loop.index0 % 2 == 0) %}{{ raise_exception('Conversation roles must alternate user/assistant/user/assistant/...') }}{% endif %}{% if (message['role'] == 'assistant') %}{% set role = 'model' %}{% else %}{% set role = message['role'] %}{% endif %}{{ '<start_of_turn>' + role + '\n' + message['content'] | trim + '<end_of_turn>\n' }}{% endfor %}{% if add_generation_prompt %}{{'<start_of_turn>model\n'}}{% endif %}",
+      "general.quantization_version": 2
+    },
+    "quantization_type_counts": {
+      "Q8_0": 127,
+      "F32": 37
+    },
+    "mapping_implementation": "original-gemma-gguf-v1",
+    "gguf_version": "0.17.1",
+    "transformers_version": "4.57.6",
+    "converter_source": "https://github.com/ggml-org/llama.cpp/blob/master/conversion/gemma.py",
+    "fp32_tensor_bytes": 10024689664
+  },
+  "total_linear_op_count": 126,
+  "ordinary_op_count": 108,
+  "gate_op_count": 18,
+  "ordinary_contract": {
+    "output": "INT8",
+    "range": [
+      -128,
+      127
+    ]
+  },
+  "gate_contract": {
+    "output": "INT10",
+    "range": [
+      -512,
+      511
+    ]
+  },
+  "gelu_contract": {
+    "input": "INT10",
+    "entries": 1024,
+    "output": "INT8",
+    "range": [
+      -127,
+      127
+    ]
+  },
+  "row_selector_identity": "compare_k_selectors_e2e.select_absmax",
+  "quant_profile_identity": {
+    "name": "generic-rne",
+    "shift_correction": 0,
+    "rounding": "nearest_even",
+    "verification": "unverified",
+    "rtl_bit_exact": false,
+    "source": "src/static_quant/hardware.py; software definition only; no RTL found",
+    "historical_layout_source": "user request, unconfirmed design history",
+    "multiplier": "unsigned 16 bit",
+    "shift": "unsigned 5 bit",
+    "effective_shift": "max(shift - shift_correction, 0)",
+    "zero_point": "signed 8 bit, added AFTER rounded shift; exports use zero",
+    "product": "signed 48 bit exact; INT32 * UInt16 fits; no truncation or wrap",
+    "right_shift": "arithmetic (floor for negatives)",
+    "saturation": "signed INT10 [-512,511], after shift and zero point",
+    "lut_index": "10-bit two's complement: signed_q10 & 1023",
+    "layout": {
+      "zp": [
+        0,
+        7
+      ],
+      "shift": [
+        8,
+        12
+      ],
+      "reserved_zero": [
+        13,
+        15
+      ],
+      "multiplier": [
+        16,
+        31
+      ]
+    },
+    "endian": "little"
+  },
+  "parameter_artifact_hashes": {
+    "linear_parameters.json": "381382f3fb99dec24b0b9a6b3a136107e1d8587c0f151a534fa07278e6d63bf8",
+    "gelu_scale_pairs.json": "0f0409d81a80360fb22f48819b077c172e86552ec34297fb7fd0573421e28ca6"
+  },
+  "all_lut_hashes": [
+    "a564c124cb019f975551376144a49f5ff6169d97cb6769e7785c9d8222153894",
+    "0f70c23468858d4bff4ce32e2ff3a5cd8676caa9ad671ebac986695730b449e3",
+    "61256f5227b4e48f2609b8d06883e8123ca64edd7c9a5914292bb69d16715188",
+    "ad4bd064ee43dcc80b5eb5bca73ba92e935e0c02589103fb506c832792dc4120",
+    "d89affb3ac49af04506690096834eaad819434e9d95083f2799765f56ad9cba0",
+    "eedd35d9774fe21bab4de136282d2337fe9730940d6a1dd5f641cc1923d97a22",
+    "d6f0e9b27d82390711419f333fbddabe2ac59fafa3aa802619e5f0ccef6e875d",
+    "d399875c95a612316db1c4502f8d352d63294307978d86e1daeb101a4441210c",
+    "1d992f70e471b3d2b963236cd699453c94d84b8ca17a3cb9bf3cdef10027b9d6",
+    "51207ebcd80d0fbfd570e546781d108296ba04e2663f9d587452f15f726b359a",
+    "24ff65a4e2b18c9481bc5b9422bad1921a64bda95a7a3927cf423683e49a3cc1",
+    "688de88e46c808d81f4d89557ba23db7d2e9608179de2c06c1b929fadd51bdb8",
+    "5cd50da761c69c4d4102c3e7af06fdc2b8d0074e1a80993c222de3f2b68cb227",
+    "cb00b278c69e03e455049513bebd3af9add7a3924d7918f854d2d9bcfe7e938a",
+    "82e237d65f5e87dea1aed2eb90ddbac75593ecbd030c06cc21e7e6ab690d0f3a",
+    "7275cc4a176f68aa43a101ab51d9f37848fa6d3f0f4bd0511d29a29995717fd4",
+    "f8ed33b0b1788978546eeba4f0c4ac37a18f6c94aeeca36e4c6d9a7a2ed55104",
+    "8d275986e762c2a6b2b7dcbbca5ff504d19b9c02cf67e033beae847f4d16a74b"
+  ],
+  "observed_effective_shift_min": 9,
+  "observed_effective_shift_max": 31,
+  "infeasible_candidate_count": 0,
+  "capture_reused": false,
+  "clustering_performed": false,
+  "fusion_tuning_performed": false,
+  "gpalu_product_calibration_performed": false,
+  "e2e_used_for_parameter_selection": false,
+  "final_confirmation_overlap": false,
+  "test_command": [
+    "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/.venv-calibration/bin/python",
+    "-m",
+    "unittest",
+    "tests.test_mixed_linear_gelu_calibration",
+    "tests.test_gelu_standalone_calibration"
+  ],
+  "test_return_code": 0,
+  "elapsed_sec": 3146.243257125
+}
