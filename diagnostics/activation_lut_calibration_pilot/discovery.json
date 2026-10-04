@@ -1,0 +1,81 @@
+{
+  "status": "RESOLVED_BY_EXPLICIT_CONTRACT",
+  "branch": "lut_cali",
+  "activation_function": "gelu_pytorch_tanh",
+  "activation_implementation": "transformers.activations.GELUTanh -> torch.nn.functional.gelu(approximate=\"tanh\")",
+  "activation_config_source": "calibration_outputs/gguf-all-126-oasst1/manifest.json: config_source.values",
+  "model_graph_source": ".venv-calibration/lib/python3.9/site-packages/transformers/models/gemma/modeling_gemma.py:66-79",
+  "graph": "g=gate_proj(x); u=up_proj(x); a=GELUTanh(g); h=a*u; y=down_proj(h)",
+  "activation_input_edge": "gate_proj output (FP under frozen down_proj-only scope)",
+  "frozen_down_proj_input_edge": "h=activation(gate_proj(x))*up_proj(x)",
+  "activation_input_scale_equals_down_proj_s10": false,
+  "previous_fp16_lut_found": false,
+  "previous_fp16_lut_reference": null,
+  "fp16_input_address_expansion_semantics": null,
+  "existing_integer_lut": {
+    "source": "src/LUT.py:generate_hardware_lut",
+    "test": "tests/test_static_quant.py:test_existing_lut_contract",
+    "binary": "luts/gelu_lut_1024B.bin",
+    "input_representation": "signed 10-bit two's-complement integer code",
+    "address_mapping": "address a in [0,1023]; q=a if a<512 else a-1024; x=q*0.1",
+    "domain": [
+      -51.2,
+      51.1
+    ],
+    "expansion": "signed integer decoding times 0.1; not FP16 expansion",
+    "depth": 1024,
+    "entry_dtype": "uint8",
+    "entry_bits": 8,
+    "function": "0.5*x*(1+tanh(sqrt(2/pi)*(x+0.044715*x**3)))",
+    "output": "clip(round(y*255),0,255); implied reconstruction q/255",
+    "rounding": "Python round, ties to even",
+    "saturation": [
+      0,
+      255
+    ],
+    "interpolation": "none in table generator; runtime FP input address conversion not specified",
+    "hw_status": "src/LUT.py explicitly labels 10-bit input / 8-bit output as an uncertain interpretation of handwritten design notes requiring hardware confirmation"
+  },
+  "roadmap_status": "docs/lut_calibration_guide.md discusses FP16 expansion without implementation; INT10 input/output are examples, not an established contract",
+  "blocker": "Required previous FP16-expansion/addressing implementation was not found. Existing unsigned-8 integer generator is an explicitly unconfirmed different input path; no authoritative FP gate-output to LUT-address contract establishes how to preserve requested input semantics.",
+  "discovery_files": [
+    "docs/lut_calibration_guide.md",
+    "src/LUT.py",
+    "docs/static-calibration.md",
+    "tests/test_static_quant.py",
+    "scripts/quant_diagnostic_source.py",
+    ".venv-calibration/lib/python3.9/site-packages/transformers/models/gemma/modeling_gemma.py",
+    ".venv-calibration/lib/python3.9/site-packages/transformers/activations.py"
+  ],
+  "search_scope": "Targeted case-insensitive FP16/float16 plus LUT/expansion searches in scripts/src/tests/docs and repository text; work directories, NPZ and large generated files excluded.",
+  "frozen_linear_hashes": {
+    "calibration/frozen_linear_quant_v1/manifest.json": "a82a223553b2bcdd3846cb226a8bcd117af1f13197f144240d3af20dc477e19f",
+    "calibration/frozen_linear_quant_v1/parameters.json": "ca11fda5f782a9577cbc41b0d14abf134a8a13acf21809089cb77d8e010762fb"
+  },
+  "frozen_linear_unchanged": true,
+  "model_loaded": false,
+  "capture_performed": false,
+  "calibration_performed": false,
+  "inference_performed": false,
+  "resolution": {
+    "source": "explicit user architecture contract",
+    "fp16_expansion_required": false,
+    "lut_input_dtype": "signed_int10",
+    "lut_input_codes": [
+      -512,
+      511
+    ],
+    "lut_depth": 1024,
+    "address_mapping": "q + 512",
+    "activation": "gelu_tanh",
+    "lut_output_dtype": "signed_int8",
+    "lut_output_codes": [
+      -127,
+      127
+    ],
+    "input_scale_policy": "global_common_sL",
+    "output_scale_policy": "global_common_sA",
+    "table_sharing": "one_common_table_image_all_layers_and_lanes",
+    "interpolation": false
+  }
+}

@@ -1,0 +1,50 @@
+{
+  "selected": {
+    "candidate": 19,
+    "sL": 0.01843670829728099,
+    "sA": 0.07418234598354792,
+    "score": 0.004703540632912025,
+    "worst_layer_product_nmse": 0.008861890506967004,
+    "input_clip_rate": 9.981791178385417e-05,
+    "saturation_rate": 0.0,
+    "activation_nmse": 0.003539044240626847,
+    "downstream_nmse": 0.012720707161275734
+  },
+  "shortlist": [
+    {
+      "candidate": 19,
+      "sL": 0.01843670829728099,
+      "sA": 0.07418234598354792,
+      "score": 0.004703540632912025,
+      "worst_layer_product_nmse": 0.008861890506967004,
+      "input_clip_rate": 9.981791178385417e-05,
+      "saturation_rate": 0.0,
+      "activation_nmse": 0.003539044240626847,
+      "downstream_nmse": 0.012720707161275734
+    },
+    {
+      "candidate": 18,
+      "sL": 0.01843670829728099,
+      "sA": 0.07332968451689123,
+      "score": 0.0047798307550582075,
+      "worst_layer_product_nmse": 0.008937399148613856,
+      "input_clip_rate": 9.981791178385417e-05,
+      "saturation_rate": 9.417533874511719e-05,
+      "activation_nmse": 0.003622165162495162,
+      "downstream_nmse": 0.012759222582229973
+    },
+    {
+      "candidate": 24,
+      "sL": 0.059188036536050634,
+      "sA": 0.07316946248944842,
+      "score": 0.005135686307517263,
+      "worst_layer_product_nmse": 0.00942452602216036,
+      "input_clip_rate": 0.0,
+      "saturation_rate": 9.960598415798611e-05,
+      "activation_nmse": 0.003951181314071481,
+      "downstream_nmse": 0.012962139599052683
+    }
+  ],
+  "policy": "product-balanced top3, then frozen-downproj-balanced NMSE; no E2E reselection",
+  "refinement": false
+}

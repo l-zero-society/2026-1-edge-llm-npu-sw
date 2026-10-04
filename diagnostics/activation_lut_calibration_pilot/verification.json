@@ -1,0 +1,61 @@
+{
+  "frozen_linear_before": {
+    "manifest.json": "a82a223553b2bcdd3846cb226a8bcd117af1f13197f144240d3af20dc477e19f",
+    "parameters.json": "ca11fda5f782a9577cbc41b0d14abf134a8a13acf21809089cb77d8e010762fb"
+  },
+  "frozen_linear_after": {
+    "manifest.json": "a82a223553b2bcdd3846cb226a8bcd117af1f13197f144240d3af20dc477e19f",
+    "parameters.json": "ca11fda5f782a9577cbc41b0d14abf134a8a13acf21809089cb77d8e010762fb"
+  },
+  "frozen_linear_unchanged": true,
+  "activation_function": "gelu_tanh",
+  "activation_implementation": "torch.nn.functional.gelu(approximate=tanh)",
+  "previous_fp16_lut_found": false,
+  "previous_fp16_lut_reference": null,
+  "lut_input_semantics_source": "explicit user contract",
+  "lut_table_depth": 1024,
+  "lut_output_dtype": "signed_int8",
+  "lut_output_bits": 8,
+  "capture_dataset_fingerprint": "c8600bc48f28216d9c7ba45d037b40c55cf36c87408d8fc3db0a84b4f9d5639a",
+  "e2e_dataset_fingerprint": "3dbbacfd93857f3219b1680dff6b939909c4052145dca13077c5304f83c6aed6",
+  "final_linear_confirmation_overlap": false,
+  "linear_recalibration_performed": false,
+  "sX_modified": false,
+  "s10_modified": false,
+  "RS_modified": false,
+  "model_inference_per_candidate": false,
+  "local_candidates_evaluated": 26,
+  "downstream_candidates": 3,
+  "e2e_modes_evaluated": [
+    "FP_FULL",
+    "FROZEN_LINEAR_FP_ACT",
+    "FROZEN_LINEAR_SHARED_LUT"
+  ],
+  "independent_kv_caches": true,
+  "test_command": [
+    "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/.venv-calibration/bin/python",
+    "-m",
+    "unittest",
+    "tests.test_activation_lut_calibration",
+    "tests.test_frozen_linear_quant_v1"
+  ],
+  "test_return_code": 0,
+  "elapsed_sec": 1639.8254479579998,
+  "frozen_linear_manifest_sha256_before": "a82a223553b2bcdd3846cb226a8bcd117af1f13197f144240d3af20dc477e19f",
+  "frozen_linear_manifest_sha256_after": "a82a223553b2bcdd3846cb226a8bcd117af1f13197f144240d3af20dc477e19f",
+  "frozen_linear_parameters_sha256_before": "ca11fda5f782a9577cbc41b0d14abf134a8a13acf21809089cb77d8e010762fb",
+  "frozen_linear_parameters_sha256_after": "ca11fda5f782a9577cbc41b0d14abf134a8a13acf21809089cb77d8e010762fb",
+  "effective_shifts_feasible": true,
+  "effective_shift_check": "existing select_absmax checks every operation against [0,31]",
+  "parameter_selection_after_e2e": false,
+  "rounding": "RNE",
+  "input_range": [
+    -512,
+    511
+  ],
+  "output_range": [
+    -127,
+    127
+  ],
+  "source_commit": "72d0748"
+}
