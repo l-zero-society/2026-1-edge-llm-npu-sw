@@ -1,0 +1,148 @@
+{
+  "layers": [
+    {
+      "layer": 0,
+      "s10": 0.02653732831448623,
+      "qparam_binary_path": "diagnostics/gpalu_fullscale_downaware_pilot/gate_qparams/layer_00_gate_qb.bin",
+      "qparam_sha256": "d8df2806b154776486cd524b6a16033f6a47aa228df9d10dd73a74fb02673e83",
+      "lut_path": "diagnostics/gpalu_fullscale_downaware_pilot/gelu_tables/layer_00_gelu.bin",
+      "lut_sha256": "1a04cfa8b8cc5bc4b3ed3981582413267e4450231dccdee90fe9fa87700b009c"
+    },
+    {
+      "layer": 1,
+      "s10": 0.019525701670400682,
+      "qparam_binary_path": "diagnostics/gpalu_fullscale_downaware_pilot/gate_qparams/layer_01_gate_qb.bin",
+      "qparam_sha256": "add1e759f55f7376862b64c2d8bc11b0a8b81d30ed2a19d845201059686c76c3",
+      "lut_path": "diagnostics/gpalu_fullscale_downaware_pilot/gelu_tables/layer_01_gelu.bin",
+      "lut_sha256": "b0ade289071a70fc9d518472ae04901adc76e3bc1a76792331a40bac633badaf"
+    },
+    {
+      "layer": 2,
+      "s10": 0.02070068704530824,
+      "qparam_binary_path": "diagnostics/gpalu_fullscale_downaware_pilot/gate_qparams/layer_02_gate_qb.bin",
+      "qparam_sha256": "c61b248eb3ad288b36d5fcaa1656329f895c0dfae70607c771816bde755fbe38",
+      "lut_path": "diagnostics/gpalu_fullscale_downaware_pilot/gelu_tables/layer_02_gelu.bin",
+      "lut_sha256": "395d71b0fcc8b831b14186d1be282e13902e7329aa42799c263dc35ca44d4354"
+    },
+    {
+      "layer": 3,
+      "s10": 0.010611648292864649,
+      "qparam_binary_path": "diagnostics/gpalu_fullscale_downaware_pilot/gate_qparams/layer_03_gate_qb.bin",
+      "qparam_sha256": "246d11943986293140b23a76a4de6c92e227d4ac20ed74b91a3d7f5a24bb24fd",
+      "lut_path": "diagnostics/gpalu_fullscale_downaware_pilot/gelu_tables/layer_03_gelu.bin",
+      "lut_sha256": "5ef98cd9e58b32b440a9ed1acd272a9a4c5bda867e289a757f2b6c010031c800"
+    },
+    {
+      "layer": 4,
+      "s10": 0.009222760605498186,
+      "qparam_binary_path": "diagnostics/gpalu_fullscale_downaware_pilot/gate_qparams/layer_04_gate_qb.bin",
+      "qparam_sha256": "9c03e4f8a7c89b021aa8d5432726bd1fb16c48eb60152db74f2aac5664bcb608",
+      "lut_path": "diagnostics/gpalu_fullscale_downaware_pilot/gelu_tables/layer_04_gelu.bin",
+      "lut_sha256": "c0a4b19da7a5ae8e926c1e078909656a1e9c996f399164df078239e7bdf873e0"
+    },
+    {
+      "layer": 5,
+      "s10": 0.009338786045317378,
+      "qparam_binary_path": "diagnostics/gpalu_fullscale_downaware_pilot/gate_qparams/layer_05_gate_qb.bin",
+      "qparam_sha256": "d605a8a6c29aa1932fe00deef31902b6fa7cdb45171b50228616cfbceae560ed",
+      "lut_path": "diagnostics/gpalu_fullscale_downaware_pilot/gelu_tables/layer_05_gelu.bin",
+      "lut_sha256": "6be66b59bbae15c2abd5c3b63a24b94ec6506a097c712b2d4b313b9cd20d3516"
+    },
+    {
+      "layer": 6,
+      "s10": 0.013464869028246966,
+      "qparam_binary_path": "diagnostics/gpalu_fullscale_downaware_pilot/gate_qparams/layer_06_gate_qb.bin",
+      "qparam_sha256": "0d859afe79addaf9cb38bfdb4ae48018c3f964fe43be186cfeeaaf9eb08cef57",
+      "lut_path": "diagnostics/gpalu_fullscale_downaware_pilot/gelu_tables/layer_06_gelu.bin",
+      "lut_sha256": "c9fa4b47f16a5d8dddb32c53e105143cd78b8f3e72ea502deaab8fea7dc314da"
+    },
+    {
+      "layer": 7,
+      "s10": 0.012912023190167194,
+      "qparam_binary_path": "diagnostics/gpalu_fullscale_downaware_pilot/gate_qparams/layer_07_gate_qb.bin",
+      "qparam_sha256": "65531aa8c5ee87d8153a56dca3d9f4d8bd03967fe5f051563172df5d533a6717",
+      "lut_path": "diagnostics/gpalu_fullscale_downaware_pilot/gelu_tables/layer_07_gelu.bin",
+      "lut_sha256": "e0ed2e20eee4adb8dfb3ad37e1f655c02df6caf65e80d80dd21ad22d555a59cd"
+    },
+    {
+      "layer": 8,
+      "s10": 0.021686130843554304,
+      "qparam_binary_path": "diagnostics/gpalu_fullscale_downaware_pilot/gate_qparams/layer_08_gate_qb.bin",
+      "qparam_sha256": "412d4c53694e4fdb1e8ff4247e4d16ea8f658ff4d2686340c1d41a141a55ebbe",
+      "lut_path": "diagnostics/gpalu_fullscale_downaware_pilot/gelu_tables/layer_08_gelu.bin",
+      "lut_sha256": "8258c368cef26d718a585f4f79681f9d969281c7cd41d42a44b493afd17eb905"
+    },
+    {
+      "layer": 9,
+      "s10": 0.008150216325284447,
+      "qparam_binary_path": "diagnostics/gpalu_fullscale_downaware_pilot/gate_qparams/layer_09_gate_qb.bin",
+      "qparam_sha256": "2aa2001610ef62494210e00ae7071f5d3c65d8a00e82bd1f2ca87db5297b15f3",
+      "lut_path": "diagnostics/gpalu_fullscale_downaware_pilot/gelu_tables/layer_09_gelu.bin",
+      "lut_sha256": "b14c66a6b164d1c9982ef2dd9363810e8755f47c1b4c658e9b34eaf6ddda964d"
+    },
+    {
+      "layer": 10,
+      "s10": 0.009931273096526697,
+      "qparam_binary_path": "diagnostics/gpalu_fullscale_downaware_pilot/gate_qparams/layer_10_gate_qb.bin",
+      "qparam_sha256": "33bdb758ea15541ec4140359bf7f1acd25e337f7411016d944582cb04a36c864",
+      "lut_path": "diagnostics/gpalu_fullscale_downaware_pilot/gelu_tables/layer_10_gelu.bin",
+      "lut_sha256": "e14c209bca0996ff2bb12d71fa024e2723053aab4ce98cd6661b43048a22c8cd"
+    },
+    {
+      "layer": 11,
+      "s10": 0.00976834904651143,
+      "qparam_binary_path": "diagnostics/gpalu_fullscale_downaware_pilot/gate_qparams/layer_11_gate_qb.bin",
+      "qparam_sha256": "2227d2ad920ed9fc0e30fb68bc7d71407b3a179984b540938c0fcfd403a6f60f",
+      "lut_path": "diagnostics/gpalu_fullscale_downaware_pilot/gelu_tables/layer_11_gelu.bin",
+      "lut_sha256": "831c992bbecedb56d31fe1b8ea0d9be818112e037298de28aca1e34a6edfb294"
+    },
+    {
+      "layer": 12,
+      "s10": 0.012660647710527738,
+      "qparam_binary_path": "diagnostics/gpalu_fullscale_downaware_pilot/gate_qparams/layer_12_gate_qb.bin",
+      "qparam_sha256": "6208b54ccaf0bf1b0e0d5a21c7eb8af6675d8d6b7a428c68cbd0c67a2758306c",
+      "lut_path": "diagnostics/gpalu_fullscale_downaware_pilot/gelu_tables/layer_12_gelu.bin",
+      "lut_sha256": "bc805619b186d2c7f43d44aa22bacf9784e4239434b77984d1cf2320bd241d0c"
+    },
+    {
+      "layer": 13,
+      "s10": 0.016641516600613335,
+      "qparam_binary_path": "diagnostics/gpalu_fullscale_downaware_pilot/gate_qparams/layer_13_gate_qb.bin",
+      "qparam_sha256": "4cb27d06a05c465aa912222823fc713b01a5da9d9d5b2056698a5e3278e3d724",
+      "lut_path": "diagnostics/gpalu_fullscale_downaware_pilot/gelu_tables/layer_13_gelu.bin",
+      "lut_sha256": "2ac845c97d4f69e417654273381da663f3f69b32a569ea8b4ef785b8503efd58"
+    },
+    {
+      "layer": 14,
+      "s10": 0.013093092891791539,
+      "qparam_binary_path": "diagnostics/gpalu_fullscale_downaware_pilot/gate_qparams/layer_14_gate_qb.bin",
+      "qparam_sha256": "9d51fc434fa8ca7e299526788fdd8475d607063f878ab4513ef70599854e5295",
+      "lut_path": "diagnostics/gpalu_fullscale_downaware_pilot/gelu_tables/layer_14_gelu.bin",
+      "lut_sha256": "ecba35cba1ed9cbd432f793102bd03f246ff4abaa7efefef8aa62bca690d3a4c"
+    },
+    {
+      "layer": 15,
+      "s10": 0.01392064902425012,
+      "qparam_binary_path": "diagnostics/gpalu_fullscale_downaware_pilot/gate_qparams/layer_15_gate_qb.bin",
+      "qparam_sha256": "84cff0dc6b164558f33c81223bc311836e5dcc59d8f08622917bd84243a522ed",
+      "lut_path": "diagnostics/gpalu_fullscale_downaware_pilot/gelu_tables/layer_15_gelu.bin",
+      "lut_sha256": "3ed23ae40e97ec177cec0e4d90b03ca7e790e4be7002364ec1fecdac7d88c4a2"
+    },
+    {
+      "layer": 16,
+      "s10": 0.018896568569735303,
+      "qparam_binary_path": "diagnostics/gpalu_fullscale_downaware_pilot/gate_qparams/layer_16_gate_qb.bin",
+      "qparam_sha256": "fef273049f87e4c34562229d530e93c8d2070e38b3f15ad49d541a64410af1bc",
+      "lut_path": "diagnostics/gpalu_fullscale_downaware_pilot/gelu_tables/layer_16_gelu.bin",
+      "lut_sha256": "7d877585619e1c6ab6fd14d1892332cec38bd61fb384d38c8f837a17b8782217"
+    },
+    {
+      "layer": 17,
+      "s10": 0.05982226451313303,
+      "qparam_binary_path": "diagnostics/gpalu_fullscale_downaware_pilot/gate_qparams/layer_17_gate_qb.bin",
+      "qparam_sha256": "41322f03f6bf6141d48fcea83e4c85758adf85a58b0adde4e90c7e1c8a91f103",
+      "lut_path": "diagnostics/gpalu_fullscale_downaware_pilot/gelu_tables/layer_17_gelu.bin",
+      "lut_sha256": "8d275986e762c2a6b2b7dcbbca5ff504d19b9c02cf67e033beae847f4d16a74b"
+    }
+  ]
+}

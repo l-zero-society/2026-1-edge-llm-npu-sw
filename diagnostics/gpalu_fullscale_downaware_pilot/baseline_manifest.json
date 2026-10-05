@@ -1,0 +1,15 @@
+{
+  "required_commits": [
+    "2d77cf52907d8b1f910e26a1952c69248090190f",
+    "f92fafb2db225165a2eb9064b5073e6f212fac54",
+    "cbc545ddc00cf3ed697217de0748f9a396f479dc"
+  ],
+  "artifact_hashes": {
+    "diagnostics/mixed_linear_gelu_calibration/linear_parameters.json": "381382f3fb99dec24b0b9a6b3a136107e1d8587c0f151a534fa07278e6d63bf8",
+    "diagnostics/mixed_linear_gelu_calibration/capture_manifest.json": "0ed9f59dfa67d0c0dc3265ff3c0b85f5d0ea35e42b16045cc1c1a81e7d0ecf6f",
+    "diagnostics/fusion_aware_gate_s10_pilot/gate_parameters.json": "f4b58447eb94e10ba37748a84ce237fd43c3df8475adfab920d08d9b39f3eab8",
+    "diagnostics/gpalu_pot_fusion_pilot/gpalu_parameters.json": "19a9b9a49df61ff22abd3259f44d48eec67e07537de8434ec3c6112f467c9be8",
+    "diagnostics/gpalu_pot_fusion_pilot/e2e_dataset_manifest.json": "397e47a3537b8fa2b81dab8badeee2382094775e257fd21912b608e55aa06233"
+  },
+  "status": "READ_ONLY_BASELINES"
+}
