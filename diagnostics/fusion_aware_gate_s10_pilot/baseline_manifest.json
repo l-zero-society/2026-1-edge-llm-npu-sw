@@ -1,0 +1,10 @@
+{
+  "baseline_commit": "2d77cf52907d8b1f910e26a1952c69248090190f",
+  "artifact_hashes": {
+    "diagnostics/mixed_linear_gelu_calibration/linear_parameters.json": "381382f3fb99dec24b0b9a6b3a136107e1d8587c0f151a534fa07278e6d63bf8",
+    "diagnostics/mixed_linear_gelu_calibration/gelu_selection.csv": "a6fc1cc60e4d02e8ad033e56d584b929691c8e2895ee181d6380491ac591eb03",
+    "diagnostics/mixed_linear_gelu_calibration/capture_manifest.json": "0ed9f59dfa67d0c0dc3265ff3c0b85f5d0ea35e42b16045cc1c1a81e7d0ecf6f",
+    "diagnostics/mixed_linear_gelu_calibration/e2e_dataset_manifest.json": "397e47a3537b8fa2b81dab8badeee2382094775e257fd21912b608e55aa06233"
+  },
+  "status": "READ_ONLY_BASELINE"
+}

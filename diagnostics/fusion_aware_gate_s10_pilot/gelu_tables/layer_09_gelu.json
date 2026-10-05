@@ -1,0 +1,11 @@
+{
+  "layer": 9,
+  "s10_incumbent": 0.011526146463491874,
+  "s10_selected": 0.009692295242839596,
+  "selected_j": -2,
+  "s_act_selected": 0.03899813035154827,
+  "retained_percentile": 100.0,
+  "clipping_fraction": 0.0,
+  "saturation_rate": 0.0,
+  "LUT_SHA256": "08a4634a12b3db8ea5fd57fb5e8870ec91178090a96e3d71fd23e66068da3cdb"
+}
