@@ -1,0 +1,130 @@
+{
+  "layers": [
+    {
+      "layer": 0,
+      "s_act": 0.09445526341655984,
+      "percentile": 99.995,
+      "lut": "diagnostics/joint_mlp_consumer_pilot/gelu_tables/layer_00_gelu.bin",
+      "sha256": "1a04cfa8b8cc5bc4b3ed3981582413267e4450231dccdee90fe9fa87700b009c"
+    },
+    {
+      "layer": 1,
+      "s_act": 0.05856573953227474,
+      "percentile": 99.95,
+      "lut": "diagnostics/joint_mlp_consumer_pilot/gelu_tables/layer_01_gelu.bin",
+      "sha256": "809085ad8c265a16ff81b23e881c6d0406b9fc33534dd735b126a877b2e0fb5e"
+    },
+    {
+      "layer": 2,
+      "s_act": 0.04072300285404824,
+      "percentile": 99.995,
+      "lut": "diagnostics/joint_mlp_consumer_pilot/gelu_tables/layer_02_gelu.bin",
+      "sha256": "434fbf833a58afaded9af251ef4aa20e65dfe0d9896a18e5a6d2ba88c5473e57"
+    },
+    {
+      "layer": 3,
+      "s_act": 0.04269726194339294,
+      "percentile": 100.0,
+      "lut": "diagnostics/joint_mlp_consumer_pilot/gelu_tables/layer_03_gelu.bin",
+      "sha256": "5ef98cd9e58b32b440a9ed1acd272a9a4c5bda867e289a757f2b6c010031c800"
+    },
+    {
+      "layer": 4,
+      "s_act": 0.03402890549652569,
+      "percentile": 100.0,
+      "lut": "diagnostics/joint_mlp_consumer_pilot/gelu_tables/layer_04_gelu.bin",
+      "sha256": "637eff5ecbd252249f615e2a1bb69f1dd67a21116f24da19541a908c919f2d29"
+    },
+    {
+      "layer": 5,
+      "s_act": 0.028378738550294144,
+      "percentile": 99.99,
+      "lut": "diagnostics/joint_mlp_consumer_pilot/gelu_tables/layer_05_gelu.bin",
+      "sha256": "2fdca3b52e7270fcb38f3653f6de4b01493c3ab13170a10c6db0717562e58a8c"
+    },
+    {
+      "layer": 6,
+      "s_act": 0.05417754388530859,
+      "percentile": 100.0,
+      "lut": "diagnostics/joint_mlp_consumer_pilot/gelu_tables/layer_06_gelu.bin",
+      "sha256": "c9fa4b47f16a5d8dddb32c53e105143cd78b8f3e72ea502deaab8fea7dc314da"
+    },
+    {
+      "layer": 7,
+      "s_act": 0.026607928614057096,
+      "percentile": 99.99,
+      "lut": "diagnostics/joint_mlp_consumer_pilot/gelu_tables/layer_07_gelu.bin",
+      "sha256": "79907e7e4224c2d046bd786bf13e575d62d8ebffb27d6762087b923686762a37"
+    },
+    {
+      "layer": 8,
+      "s_act": 0.028114319865666527,
+      "percentile": 99.995,
+      "lut": "diagnostics/joint_mlp_consumer_pilot/gelu_tables/layer_08_gelu.bin",
+      "sha256": "1fff45afead3c4f3e3ab0ad40f1b0fb4c637f3b884ce6aa9279df221b5c35593"
+    },
+    {
+      "layer": 9,
+      "s_act": 0.032793144140292434,
+      "percentile": 100.0,
+      "lut": "diagnostics/joint_mlp_consumer_pilot/gelu_tables/layer_09_gelu.bin",
+      "sha256": "b14c66a6b164d1c9982ef2dd9363810e8755f47c1b4c658e9b34eaf6ddda964d"
+    },
+    {
+      "layer": 10,
+      "s_act": 0.03995968830625943,
+      "percentile": 100.0,
+      "lut": "diagnostics/joint_mlp_consumer_pilot/gelu_tables/layer_10_gelu.bin",
+      "sha256": "e14c209bca0996ff2bb12d71fa024e2723053aab4ce98cd6661b43048a22c8cd"
+    },
+    {
+      "layer": 11,
+      "s_act": 0.042861473527126125,
+      "percentile": 100.0,
+      "lut": "diagnostics/joint_mlp_consumer_pilot/gelu_tables/layer_11_gelu.bin",
+      "sha256": "52cfb69669400c3ef235c79921a389a21cc85f67633da3af2ee0fe5bf3de038d"
+    },
+    {
+      "layer": 12,
+      "s_act": 0.03393269728439543,
+      "percentile": 99.995,
+      "lut": "diagnostics/joint_mlp_consumer_pilot/gelu_tables/layer_12_gelu.bin",
+      "sha256": "5cd50da761c69c4d4102c3e7af06fdc2b8d0074e1a80993c222de3f2b68cb227"
+    },
+    {
+      "layer": 13,
+      "s_act": 0.0516325808028135,
+      "percentile": 100.0,
+      "lut": "diagnostics/joint_mlp_consumer_pilot/gelu_tables/layer_13_gelu.bin",
+      "sha256": "21b018a8731fa47870aedbd27bdec5e8e157b5619f6f7ccd9353d21ad87e6568"
+    },
+    {
+      "layer": 14,
+      "s_act": 0.057449754574603405,
+      "percentile": 100.0,
+      "lut": "diagnostics/joint_mlp_consumer_pilot/gelu_tables/layer_14_gelu.bin",
+      "sha256": "4d44a9b26740934582ba8d0180006658f3fde3b8b6e20d6ed3d7cba4ba30ed4c"
+    },
+    {
+      "layer": 15,
+      "s_act": 0.05601143032591977,
+      "percentile": 100.0,
+      "lut": "diagnostics/joint_mlp_consumer_pilot/gelu_tables/layer_15_gelu.bin",
+      "sha256": "3ed23ae40e97ec177cec0e4d90b03ca7e790e4be7002364ec1fecdac7d88c4a2"
+    },
+    {
+      "layer": 16,
+      "s_act": 0.07603264991444678,
+      "percentile": 100.0,
+      "lut": "diagnostics/joint_mlp_consumer_pilot/gelu_tables/layer_16_gelu.bin",
+      "sha256": "7d877585619e1c6ab6fd14d1892332cec38bd61fb384d38c8f837a17b8782217"
+    },
+    {
+      "layer": 17,
+      "s_act": 0.07780303099047714,
+      "percentile": 99.99,
+      "lut": "diagnostics/joint_mlp_consumer_pilot/gelu_tables/layer_17_gelu.bin",
+      "sha256": "b3e87391eb466756be257e70a49b5253fbe4284137321bf9bbc25dae5ce2284a"
+    }
+  ]
+}

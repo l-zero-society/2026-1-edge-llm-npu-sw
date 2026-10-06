@@ -1,0 +1,16 @@
+{
+  "required_commits": [
+    "2d77cf52907d8b1f910e26a1952c69248090190f",
+    "f92fafb2db225165a2eb9064b5073e6f212fac54",
+    "cbc545ddc00cf3ed697217de0748f9a396f479dc",
+    "df47d1aa05662e2dad54e4c851dcf84b4428ab75"
+  ],
+  "artifact_hashes": {
+    "diagnostics/gpalu_fullscale_downaware_pilot/gate_parameters.json": "6ca390790b4d31191aa565ea97c692abf32755594cdb1511c83852af77fbd4a6",
+    "diagnostics/gpalu_fullscale_downaware_pilot/gpalu_parameters.json": "d7ee42318139832a745d38ac69cd249857d3ccd762deb28e5c57760eee7b2dc3",
+    "diagnostics/gpalu_fullscale_downaware_pilot/down_requant_parameters.json": "c97ccb559536b6a0aa6540403abb897df716b42398ff90ce752c0d853dc0f7d6",
+    "diagnostics/gpalu_fullscale_downaware_pilot/e2e_summary.json": "df68262a87e7fc06b80101c7c8c3732fa6f8f378abbe342c372eb409e9f49ce4",
+    "diagnostics/gpalu_fullscale_downaware_pilot/layer_selection.csv": "e2a3a0b626113ec33ee1883e57cc271503b523cd97bccb6ae212bd89fe999d43"
+  },
+  "status": "READ_ONLY"
+}
