@@ -1,0 +1,23 @@
+{
+  "diagnostic_subset": "first calibration chat, first two response predictors",
+  "gamma_adapter": "FP multiply (1+weight) after literal RTL output reconstruction",
+  "hashes": {
+    "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/diagnostics/gpalu_width_sweep_pilot/e2e_summary.json": "1e592b4fafaa02b18d13a9cdb33ceeb720e59150142959da1ed9b6a4570eeb59",
+    "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/diagnostics/gpalu_width_sweep_pilot/int10/gpalu_parameters.json": "93ee36bf850eaac5b36c1feb5fc9223596be74da289483f486108d35715c84ff",
+    "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/diagnostics/vpu10_e2e_pilot/e2e_summary.json": "7712bf86cb67d7e863ea925cb65fb6fbf8927d90ed29f4bbef11db2787e40a68",
+    "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/diagnostics/vpu10_e2e_pilot/norm10_coeff16_parameters.json": "80b036a935014ff3b9ccf596ee1679c62fd61ffa1e014a74ecf248de2d7d3e14"
+  },
+  "rtl_hashes": {
+    "src/main/scala/npu/core/NormUnit.scala": "f7c84b1e44a93d0c9f2ac241e2d1f42aa7a92965b549d6e877fd70b9a0018611",
+    "src/main/scala/npu/top/VPU.scala": "fc3b9c95968cd4fcd56874bda0cd21efba31595fddab1a4e6274b54f420d1de2",
+    "src/test/scala/NormUnit_Distributed_Test.scala": "732022f2fef41a663902615f4ccc8040d3ab5c09a52865028989255af1c5fa02",
+    "src/test/scala/NormUnit_Test.scala": "8eaa8b58c4f954bc129c6d3e22d00ca03e5b820adbc0e7ce9c1d3650391278fc"
+  },
+  "softmax": "FP, deliberately isolated from previous combined Norm+Softmax experiment",
+  "source_HEAD": "9c37773cd7842681d9d972c2d1947f406eff8378",
+  "source_hashes": {
+    "scripts/launch_norm10_debug_pilot.sh": "ebcb8122503c4244d3786d645e605d5d7d05223404dab1a903949b12224f53ac",
+    "scripts/run_norm10_debug_pilot.py": "130d387a15b3f7fbfaf236c874e12786e34d7c3350dfc16e918d1cf1ca829de3",
+    "tests/test_norm10_debug_pilot.py": "95feb06bdc29b0c61078bfb50ebbeeaf979e0616f2e182071506f89788774963"
+  }
+}

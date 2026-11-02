@@ -1,1 +1,6 @@
-{"state":"RUNNING","stage":"INITIALIZING"}
+{
+  "error": "unrelated staged files at start",
+  "exception_type": "RuntimeError",
+  "stage": "INITIALIZING",
+  "state": "FAILED"
+}
