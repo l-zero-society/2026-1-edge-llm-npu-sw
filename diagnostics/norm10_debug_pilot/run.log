@@ -1112655,3 +1112655,1797 @@ Traceback (most recent call last):
   File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/run_norm10_debug_pilot.py", line 322, in main
     if subprocess.check_output(['git','diff','--cached','--name-only'],text=True).strip():raise RuntimeError('unrelated staged files at start')
 RuntimeError: unrelated staged files at start
+INITIALIZING
+Traceback (most recent call last):
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/run_norm10_debug_pilot.py", line 378, in <module>
+    try:main()
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/run_norm10_debug_pilot.py", line 322, in main
+    if subprocess.check_output(['git','diff','--cached','--name-only'],text=True).strip():raise RuntimeError('unrelated staged files at start')
+RuntimeError: unrelated staged files at start
+INITIALIZING
+Traceback (most recent call last):
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/run_norm10_debug_pilot.py", line 378, in <module>
+    try:main()
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/run_norm10_debug_pilot.py", line 322, in main
+    if subprocess.check_output(['git','diff','--cached','--name-only'],text=True).strip():raise RuntimeError('unrelated staged files at start')
+RuntimeError: unrelated staged files at start
+INITIALIZING
+Traceback (most recent call last):
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/run_norm10_debug_pilot.py", line 378, in <module>
+    try:main()
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/run_norm10_debug_pilot.py", line 322, in main
+    if subprocess.check_output(['git','diff','--cached','--name-only'],text=True).strip():raise RuntimeError('unrelated staged files at start')
+RuntimeError: unrelated staged files at start
+INITIALIZING
+UNIT_TESTS
+MODEL_LOAD
+/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/.venv-calibration/lib/python3.9/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+ACTUAL_CAPTURE
+RTL_TRACE
+SINGLE_NORM_SWEEP
+CUMULATIVE_SWEEP
+Traceback (most recent call last):
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/run_norm10_debug_pilot.py", line 378, in <module>
+    try:main()
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/run_norm10_debug_pilot.py", line 336, in main
+    example=mixed.calibration_examples(exp.source)[0];divergence,single,cumulative=sweeps(exp,example)
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/run_norm10_debug_pilot.py", line 238, in sweeps
+    label=f'cumulative_{i}';result=exp.diagnostic(example,exp.names[:i+1],label,True);m=measure(exp,result,baseline,example,name);ic,oc=telemetry_rates(exp,label)
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/run_norm10_debug_pilot.py", line 178, in measure
+    metrics=response.merged([scores.raw()])
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/evaluate_response_quant.py", line 223, in merged
+    result['ppl'] = math.exp(result['nll'])
+OverflowError: math range error
+INITIALIZING
+UNIT_TESTS
+MODEL_LOAD
+/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/.venv-calibration/lib/python3.9/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+ACTUAL_CAPTURE
+RTL_TRACE
+SINGLE_NORM_SWEEP
+CUMULATIVE_SWEEP
+Traceback (most recent call last):
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/run_norm10_debug_pilot.py", line 378, in <module>
+    try:main()
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/run_norm10_debug_pilot.py", line 336, in main
+    example=mixed.calibration_examples(exp.source)[0];divergence,single,cumulative=sweeps(exp,example)
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/run_norm10_debug_pilot.py", line 238, in sweeps
+    label=f'cumulative_{i}';result=exp.diagnostic(example,exp.names[:i+1],label,True);m=measure(exp,result,baseline,example,name);ic,oc=telemetry_rates(exp,label)
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/run_norm10_debug_pilot.py", line 178, in measure
+    metrics=response.merged([scores.raw()])
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/evaluate_response_quant.py", line 223, in merged
+    result['ppl'] = math.exp(result['nll'])
+OverflowError: math range error
+INITIALIZING
+UNIT_TESTS
+MODEL_LOAD
+/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/.venv-calibration/lib/python3.9/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+ACTUAL_CAPTURE
+RTL_TRACE
+SINGLE_NORM_SWEEP
+CUMULATIVE_SWEEP
+Traceback (most recent call last):
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/run_norm10_debug_pilot.py", line 378, in <module>
+    try:main()
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/run_norm10_debug_pilot.py", line 336, in main
+    example=mixed.calibration_examples(exp.source)[0];divergence,single,cumulative=sweeps(exp,example)
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/run_norm10_debug_pilot.py", line 238, in sweeps
+    label=f'cumulative_{i}';result=exp.diagnostic(example,exp.names[:i+1],label,True);m=measure(exp,result,baseline,example,name);ic,oc=telemetry_rates(exp,label)
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/run_norm10_debug_pilot.py", line 178, in measure
+    metrics=response.merged([scores.raw()])
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/evaluate_response_quant.py", line 223, in merged
+    result['ppl'] = math.exp(result['nll'])
+OverflowError: math range error
+INITIALIZING
+UNIT_TESTS
+MODEL_LOAD
+/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/.venv-calibration/lib/python3.9/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+ACTUAL_CAPTURE
+RTL_TRACE
+SINGLE_NORM_SWEEP
+CUMULATIVE_SWEEP
+Traceback (most recent call last):
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/run_norm10_debug_pilot.py", line 378, in <module>
+    try:main()
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/run_norm10_debug_pilot.py", line 336, in main
+    example=mixed.calibration_examples(exp.source)[0];divergence,single,cumulative=sweeps(exp,example)
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/run_norm10_debug_pilot.py", line 238, in sweeps
+    label=f'cumulative_{i}';result=exp.diagnostic(example,exp.names[:i+1],label,True);m=measure(exp,result,baseline,example,name);ic,oc=telemetry_rates(exp,label)
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/run_norm10_debug_pilot.py", line 178, in measure
+    metrics=response.merged([scores.raw()])
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/evaluate_response_quant.py", line 223, in merged
+    result['ppl'] = math.exp(result['nll'])
+OverflowError: math range error
+INITIALIZING
+UNIT_TESTS
+MODEL_LOAD
+/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/.venv-calibration/lib/python3.9/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+ACTUAL_CAPTURE
+RTL_TRACE
+SINGLE_NORM_SWEEP
+CUMULATIVE_SWEEP
+Traceback (most recent call last):
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/run_norm10_debug_pilot.py", line 378, in <module>
+    try:main()
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/run_norm10_debug_pilot.py", line 336, in main
+    example=mixed.calibration_examples(exp.source)[0];divergence,single,cumulative=sweeps(exp,example)
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/run_norm10_debug_pilot.py", line 238, in sweeps
+    label=f'cumulative_{i}';result=exp.diagnostic(example,exp.names[:i+1],label,True);m=measure(exp,result,baseline,example,name);ic,oc=telemetry_rates(exp,label)
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/run_norm10_debug_pilot.py", line 178, in measure
+    metrics=response.merged([scores.raw()])
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/evaluate_response_quant.py", line 223, in merged
+    result['ppl'] = math.exp(result['nll'])
+OverflowError: math range error
+INITIALIZING
+UNIT_TESTS
+MODEL_LOAD
+/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/.venv-calibration/lib/python3.9/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+ACTUAL_CAPTURE
+RTL_TRACE
+SINGLE_NORM_SWEEP
+CUMULATIVE_SWEEP
+Traceback (most recent call last):
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/run_norm10_debug_pilot.py", line 378, in <module>
+    try:main()
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/run_norm10_debug_pilot.py", line 336, in main
+    example=mixed.calibration_examples(exp.source)[0];divergence,single,cumulative=sweeps(exp,example)
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/run_norm10_debug_pilot.py", line 238, in sweeps
+    label=f'cumulative_{i}';result=exp.diagnostic(example,exp.names[:i+1],label,True);m=measure(exp,result,baseline,example,name);ic,oc=telemetry_rates(exp,label)
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/run_norm10_debug_pilot.py", line 178, in measure
+    metrics=response.merged([scores.raw()])
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/evaluate_response_quant.py", line 223, in merged
+    result['ppl'] = math.exp(result['nll'])
+OverflowError: math range error
+INITIALIZING
+UNIT_TESTS
+MODEL_LOAD
+/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/.venv-calibration/lib/python3.9/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+ACTUAL_CAPTURE
+RTL_TRACE
+SINGLE_NORM_SWEEP
+CUMULATIVE_SWEEP
+Traceback (most recent call last):
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/run_norm10_debug_pilot.py", line 378, in <module>
+    try:main()
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/run_norm10_debug_pilot.py", line 336, in main
+    example=mixed.calibration_examples(exp.source)[0];divergence,single,cumulative=sweeps(exp,example)
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/run_norm10_debug_pilot.py", line 238, in sweeps
+    label=f'cumulative_{i}';result=exp.diagnostic(example,exp.names[:i+1],label,True);m=measure(exp,result,baseline,example,name);ic,oc=telemetry_rates(exp,label)
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/run_norm10_debug_pilot.py", line 178, in measure
+    metrics=response.merged([scores.raw()])
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/evaluate_response_quant.py", line 223, in merged
+    result['ppl'] = math.exp(result['nll'])
+OverflowError: math range error
+INITIALIZING
+UNIT_TESTS
+MODEL_LOAD
+/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/.venv-calibration/lib/python3.9/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+ACTUAL_CAPTURE
+RTL_TRACE
+SINGLE_NORM_SWEEP
+CUMULATIVE_SWEEP
+Traceback (most recent call last):
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/run_norm10_debug_pilot.py", line 378, in <module>
+    try:main()
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/run_norm10_debug_pilot.py", line 336, in main
+    example=mixed.calibration_examples(exp.source)[0];divergence,single,cumulative=sweeps(exp,example)
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/run_norm10_debug_pilot.py", line 238, in sweeps
+    label=f'cumulative_{i}';result=exp.diagnostic(example,exp.names[:i+1],label,True);m=measure(exp,result,baseline,example,name);ic,oc=telemetry_rates(exp,label)
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/run_norm10_debug_pilot.py", line 178, in measure
+    metrics=response.merged([scores.raw()])
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/evaluate_response_quant.py", line 223, in merged
+    result['ppl'] = math.exp(result['nll'])
+OverflowError: math range error
+INITIALIZING
+UNIT_TESTS
+MODEL_LOAD
+/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/.venv-calibration/lib/python3.9/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+ACTUAL_CAPTURE
+RTL_TRACE
+SINGLE_NORM_SWEEP
+CUMULATIVE_SWEEP
+Traceback (most recent call last):
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/run_norm10_debug_pilot.py", line 378, in <module>
+    try:main()
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/run_norm10_debug_pilot.py", line 336, in main
+    example=mixed.calibration_examples(exp.source)[0];divergence,single,cumulative=sweeps(exp,example)
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/run_norm10_debug_pilot.py", line 238, in sweeps
+    label=f'cumulative_{i}';result=exp.diagnostic(example,exp.names[:i+1],label,True);m=measure(exp,result,baseline,example,name);ic,oc=telemetry_rates(exp,label)
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/run_norm10_debug_pilot.py", line 178, in measure
+    metrics=response.merged([scores.raw()])
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/evaluate_response_quant.py", line 223, in merged
+    result['ppl'] = math.exp(result['nll'])
+OverflowError: math range error
+INITIALIZING
+UNIT_TESTS
+MODEL_LOAD
+/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/.venv-calibration/lib/python3.9/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+ACTUAL_CAPTURE
+RTL_TRACE
+SINGLE_NORM_SWEEP
+CUMULATIVE_SWEEP
+Traceback (most recent call last):
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/run_norm10_debug_pilot.py", line 378, in <module>
+    try:main()
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/run_norm10_debug_pilot.py", line 336, in main
+    example=mixed.calibration_examples(exp.source)[0];divergence,single,cumulative=sweeps(exp,example)
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/run_norm10_debug_pilot.py", line 238, in sweeps
+    label=f'cumulative_{i}';result=exp.diagnostic(example,exp.names[:i+1],label,True);m=measure(exp,result,baseline,example,name);ic,oc=telemetry_rates(exp,label)
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/run_norm10_debug_pilot.py", line 178, in measure
+    metrics=response.merged([scores.raw()])
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/evaluate_response_quant.py", line 223, in merged
+    result['ppl'] = math.exp(result['nll'])
+OverflowError: math range error
+INITIALIZING
+UNIT_TESTS
+MODEL_LOAD
+/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/.venv-calibration/lib/python3.9/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+ACTUAL_CAPTURE
+RTL_TRACE
+SINGLE_NORM_SWEEP
+CUMULATIVE_SWEEP
+Traceback (most recent call last):
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/run_norm10_debug_pilot.py", line 378, in <module>
+    try:main()
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/run_norm10_debug_pilot.py", line 336, in main
+    example=mixed.calibration_examples(exp.source)[0];divergence,single,cumulative=sweeps(exp,example)
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/run_norm10_debug_pilot.py", line 238, in sweeps
+    label=f'cumulative_{i}';result=exp.diagnostic(example,exp.names[:i+1],label,True);m=measure(exp,result,baseline,example,name);ic,oc=telemetry_rates(exp,label)
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/run_norm10_debug_pilot.py", line 178, in measure
+    metrics=response.merged([scores.raw()])
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/evaluate_response_quant.py", line 223, in merged
+    result['ppl'] = math.exp(result['nll'])
+OverflowError: math range error
+INITIALIZING
+UNIT_TESTS
+MODEL_LOAD
+/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/.venv-calibration/lib/python3.9/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+ACTUAL_CAPTURE
+RTL_TRACE
+SINGLE_NORM_SWEEP
+CUMULATIVE_SWEEP
+Traceback (most recent call last):
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/run_norm10_debug_pilot.py", line 378, in <module>
+    try:main()
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/run_norm10_debug_pilot.py", line 336, in main
+    example=mixed.calibration_examples(exp.source)[0];divergence,single,cumulative=sweeps(exp,example)
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/run_norm10_debug_pilot.py", line 238, in sweeps
+    label=f'cumulative_{i}';result=exp.diagnostic(example,exp.names[:i+1],label,True);m=measure(exp,result,baseline,example,name);ic,oc=telemetry_rates(exp,label)
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/run_norm10_debug_pilot.py", line 178, in measure
+    metrics=response.merged([scores.raw()])
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/evaluate_response_quant.py", line 223, in merged
+    result['ppl'] = math.exp(result['nll'])
+OverflowError: math range error
+INITIALIZING
+UNIT_TESTS
+MODEL_LOAD
+/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/.venv-calibration/lib/python3.9/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+ACTUAL_CAPTURE
+RTL_TRACE
+SINGLE_NORM_SWEEP
+CUMULATIVE_SWEEP
+Traceback (most recent call last):
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/run_norm10_debug_pilot.py", line 378, in <module>
+    try:main()
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/run_norm10_debug_pilot.py", line 336, in main
+    example=mixed.calibration_examples(exp.source)[0];divergence,single,cumulative=sweeps(exp,example)
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/run_norm10_debug_pilot.py", line 238, in sweeps
+    label=f'cumulative_{i}';result=exp.diagnostic(example,exp.names[:i+1],label,True);m=measure(exp,result,baseline,example,name);ic,oc=telemetry_rates(exp,label)
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/run_norm10_debug_pilot.py", line 178, in measure
+    metrics=response.merged([scores.raw()])
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/evaluate_response_quant.py", line 223, in merged
+    result['ppl'] = math.exp(result['nll'])
+OverflowError: math range error
+INITIALIZING
+UNIT_TESTS
+MODEL_LOAD
+/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/.venv-calibration/lib/python3.9/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+ACTUAL_CAPTURE
+RTL_TRACE
+SINGLE_NORM_SWEEP
+CUMULATIVE_SWEEP
+Traceback (most recent call last):
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/run_norm10_debug_pilot.py", line 378, in <module>
+    try:main()
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/run_norm10_debug_pilot.py", line 336, in main
+    example=mixed.calibration_examples(exp.source)[0];divergence,single,cumulative=sweeps(exp,example)
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/run_norm10_debug_pilot.py", line 238, in sweeps
+    label=f'cumulative_{i}';result=exp.diagnostic(example,exp.names[:i+1],label,True);m=measure(exp,result,baseline,example,name);ic,oc=telemetry_rates(exp,label)
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/run_norm10_debug_pilot.py", line 178, in measure
+    metrics=response.merged([scores.raw()])
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/evaluate_response_quant.py", line 223, in merged
+    result['ppl'] = math.exp(result['nll'])
+OverflowError: math range error
+INITIALIZING
+UNIT_TESTS
+MODEL_LOAD
+/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/.venv-calibration/lib/python3.9/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+ACTUAL_CAPTURE
+RTL_TRACE
+SINGLE_NORM_SWEEP
+CUMULATIVE_SWEEP
+Traceback (most recent call last):
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/run_norm10_debug_pilot.py", line 378, in <module>
+    try:main()
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/run_norm10_debug_pilot.py", line 336, in main
+    example=mixed.calibration_examples(exp.source)[0];divergence,single,cumulative=sweeps(exp,example)
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/run_norm10_debug_pilot.py", line 238, in sweeps
+    label=f'cumulative_{i}';result=exp.diagnostic(example,exp.names[:i+1],label,True);m=measure(exp,result,baseline,example,name);ic,oc=telemetry_rates(exp,label)
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/run_norm10_debug_pilot.py", line 178, in measure
+    metrics=response.merged([scores.raw()])
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/evaluate_response_quant.py", line 223, in merged
+    result['ppl'] = math.exp(result['nll'])
+OverflowError: math range error
+INITIALIZING
+UNIT_TESTS
+MODEL_LOAD
+/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/.venv-calibration/lib/python3.9/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+ACTUAL_CAPTURE
+RTL_TRACE
+SINGLE_NORM_SWEEP
+CUMULATIVE_SWEEP
+Traceback (most recent call last):
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/run_norm10_debug_pilot.py", line 378, in <module>
+    try:main()
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/run_norm10_debug_pilot.py", line 336, in main
+    example=mixed.calibration_examples(exp.source)[0];divergence,single,cumulative=sweeps(exp,example)
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/run_norm10_debug_pilot.py", line 238, in sweeps
+    label=f'cumulative_{i}';result=exp.diagnostic(example,exp.names[:i+1],label,True);m=measure(exp,result,baseline,example,name);ic,oc=telemetry_rates(exp,label)
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/run_norm10_debug_pilot.py", line 178, in measure
+    metrics=response.merged([scores.raw()])
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/evaluate_response_quant.py", line 223, in merged
+    result['ppl'] = math.exp(result['nll'])
+OverflowError: math range error
+INITIALIZING
+UNIT_TESTS
+MODEL_LOAD
+/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/.venv-calibration/lib/python3.9/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+ACTUAL_CAPTURE
+RTL_TRACE
+SINGLE_NORM_SWEEP
+CUMULATIVE_SWEEP
+Traceback (most recent call last):
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/run_norm10_debug_pilot.py", line 378, in <module>
+    try:main()
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/run_norm10_debug_pilot.py", line 336, in main
+    example=mixed.calibration_examples(exp.source)[0];divergence,single,cumulative=sweeps(exp,example)
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/run_norm10_debug_pilot.py", line 238, in sweeps
+    label=f'cumulative_{i}';result=exp.diagnostic(example,exp.names[:i+1],label,True);m=measure(exp,result,baseline,example,name);ic,oc=telemetry_rates(exp,label)
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/run_norm10_debug_pilot.py", line 178, in measure
+    metrics=response.merged([scores.raw()])
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/evaluate_response_quant.py", line 223, in merged
+    result['ppl'] = math.exp(result['nll'])
+OverflowError: math range error
+INITIALIZING
+UNIT_TESTS
+MODEL_LOAD
+/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/.venv-calibration/lib/python3.9/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+ACTUAL_CAPTURE
+RTL_TRACE
+SINGLE_NORM_SWEEP
+CUMULATIVE_SWEEP
+Traceback (most recent call last):
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/run_norm10_debug_pilot.py", line 378, in <module>
+    try:main()
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/run_norm10_debug_pilot.py", line 336, in main
+    example=mixed.calibration_examples(exp.source)[0];divergence,single,cumulative=sweeps(exp,example)
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/run_norm10_debug_pilot.py", line 238, in sweeps
+    label=f'cumulative_{i}';result=exp.diagnostic(example,exp.names[:i+1],label,True);m=measure(exp,result,baseline,example,name);ic,oc=telemetry_rates(exp,label)
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/run_norm10_debug_pilot.py", line 178, in measure
+    metrics=response.merged([scores.raw()])
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/evaluate_response_quant.py", line 223, in merged
+    result['ppl'] = math.exp(result['nll'])
+OverflowError: math range error
+INITIALIZING
+UNIT_TESTS
+MODEL_LOAD
+/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/.venv-calibration/lib/python3.9/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+ACTUAL_CAPTURE
+RTL_TRACE
+SINGLE_NORM_SWEEP
+CUMULATIVE_SWEEP
+Traceback (most recent call last):
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/run_norm10_debug_pilot.py", line 378, in <module>
+    try:main()
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/run_norm10_debug_pilot.py", line 336, in main
+    example=mixed.calibration_examples(exp.source)[0];divergence,single,cumulative=sweeps(exp,example)
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/run_norm10_debug_pilot.py", line 238, in sweeps
+    label=f'cumulative_{i}';result=exp.diagnostic(example,exp.names[:i+1],label,True);m=measure(exp,result,baseline,example,name);ic,oc=telemetry_rates(exp,label)
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/run_norm10_debug_pilot.py", line 178, in measure
+    metrics=response.merged([scores.raw()])
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/evaluate_response_quant.py", line 223, in merged
+    result['ppl'] = math.exp(result['nll'])
+OverflowError: math range error
+INITIALIZING
+UNIT_TESTS
+MODEL_LOAD
+/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/.venv-calibration/lib/python3.9/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+ACTUAL_CAPTURE
+RTL_TRACE
+SINGLE_NORM_SWEEP
+CUMULATIVE_SWEEP
+Traceback (most recent call last):
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/run_norm10_debug_pilot.py", line 378, in <module>
+    try:main()
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/run_norm10_debug_pilot.py", line 336, in main
+    example=mixed.calibration_examples(exp.source)[0];divergence,single,cumulative=sweeps(exp,example)
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/run_norm10_debug_pilot.py", line 238, in sweeps
+    label=f'cumulative_{i}';result=exp.diagnostic(example,exp.names[:i+1],label,True);m=measure(exp,result,baseline,example,name);ic,oc=telemetry_rates(exp,label)
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/run_norm10_debug_pilot.py", line 178, in measure
+    metrics=response.merged([scores.raw()])
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/evaluate_response_quant.py", line 223, in merged
+    result['ppl'] = math.exp(result['nll'])
+OverflowError: math range error
+INITIALIZING
+UNIT_TESTS
+MODEL_LOAD
+/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/.venv-calibration/lib/python3.9/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+ACTUAL_CAPTURE
+RTL_TRACE
+SINGLE_NORM_SWEEP
+CUMULATIVE_SWEEP
+Traceback (most recent call last):
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/run_norm10_debug_pilot.py", line 378, in <module>
+    try:main()
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/run_norm10_debug_pilot.py", line 336, in main
+    example=mixed.calibration_examples(exp.source)[0];divergence,single,cumulative=sweeps(exp,example)
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/run_norm10_debug_pilot.py", line 238, in sweeps
+    label=f'cumulative_{i}';result=exp.diagnostic(example,exp.names[:i+1],label,True);m=measure(exp,result,baseline,example,name);ic,oc=telemetry_rates(exp,label)
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/run_norm10_debug_pilot.py", line 178, in measure
+    metrics=response.merged([scores.raw()])
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/evaluate_response_quant.py", line 223, in merged
+    result['ppl'] = math.exp(result['nll'])
+OverflowError: math range error
+INITIALIZING
+UNIT_TESTS
+MODEL_LOAD
+/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/.venv-calibration/lib/python3.9/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+ACTUAL_CAPTURE
+RTL_TRACE
+SINGLE_NORM_SWEEP
+CUMULATIVE_SWEEP
+Traceback (most recent call last):
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/run_norm10_debug_pilot.py", line 378, in <module>
+    try:main()
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/run_norm10_debug_pilot.py", line 336, in main
+    example=mixed.calibration_examples(exp.source)[0];divergence,single,cumulative=sweeps(exp,example)
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/run_norm10_debug_pilot.py", line 238, in sweeps
+    label=f'cumulative_{i}';result=exp.diagnostic(example,exp.names[:i+1],label,True);m=measure(exp,result,baseline,example,name);ic,oc=telemetry_rates(exp,label)
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/run_norm10_debug_pilot.py", line 178, in measure
+    metrics=response.merged([scores.raw()])
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/evaluate_response_quant.py", line 223, in merged
+    result['ppl'] = math.exp(result['nll'])
+OverflowError: math range error
+INITIALIZING
+UNIT_TESTS
+MODEL_LOAD
+/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/.venv-calibration/lib/python3.9/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+ACTUAL_CAPTURE
+RTL_TRACE
+SINGLE_NORM_SWEEP
+CUMULATIVE_SWEEP
+Traceback (most recent call last):
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/run_norm10_debug_pilot.py", line 378, in <module>
+    try:main()
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/run_norm10_debug_pilot.py", line 336, in main
+    example=mixed.calibration_examples(exp.source)[0];divergence,single,cumulative=sweeps(exp,example)
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/run_norm10_debug_pilot.py", line 238, in sweeps
+    label=f'cumulative_{i}';result=exp.diagnostic(example,exp.names[:i+1],label,True);m=measure(exp,result,baseline,example,name);ic,oc=telemetry_rates(exp,label)
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/run_norm10_debug_pilot.py", line 178, in measure
+    metrics=response.merged([scores.raw()])
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/evaluate_response_quant.py", line 223, in merged
+    result['ppl'] = math.exp(result['nll'])
+OverflowError: math range error
+INITIALIZING
+UNIT_TESTS
+MODEL_LOAD
+/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/.venv-calibration/lib/python3.9/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+ACTUAL_CAPTURE
+RTL_TRACE
+SINGLE_NORM_SWEEP
+CUMULATIVE_SWEEP
+Traceback (most recent call last):
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/run_norm10_debug_pilot.py", line 378, in <module>
+    try:main()
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/run_norm10_debug_pilot.py", line 336, in main
+    example=mixed.calibration_examples(exp.source)[0];divergence,single,cumulative=sweeps(exp,example)
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/run_norm10_debug_pilot.py", line 238, in sweeps
+    label=f'cumulative_{i}';result=exp.diagnostic(example,exp.names[:i+1],label,True);m=measure(exp,result,baseline,example,name);ic,oc=telemetry_rates(exp,label)
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/run_norm10_debug_pilot.py", line 178, in measure
+    metrics=response.merged([scores.raw()])
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/evaluate_response_quant.py", line 223, in merged
+    result['ppl'] = math.exp(result['nll'])
+OverflowError: math range error
+INITIALIZING
+UNIT_TESTS
+MODEL_LOAD
+/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/.venv-calibration/lib/python3.9/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+ACTUAL_CAPTURE
+RTL_TRACE
+SINGLE_NORM_SWEEP
+CUMULATIVE_SWEEP
+Traceback (most recent call last):
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/run_norm10_debug_pilot.py", line 378, in <module>
+    try:main()
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/run_norm10_debug_pilot.py", line 336, in main
+    example=mixed.calibration_examples(exp.source)[0];divergence,single,cumulative=sweeps(exp,example)
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/run_norm10_debug_pilot.py", line 238, in sweeps
+    label=f'cumulative_{i}';result=exp.diagnostic(example,exp.names[:i+1],label,True);m=measure(exp,result,baseline,example,name);ic,oc=telemetry_rates(exp,label)
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/run_norm10_debug_pilot.py", line 178, in measure
+    metrics=response.merged([scores.raw()])
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/evaluate_response_quant.py", line 223, in merged
+    result['ppl'] = math.exp(result['nll'])
+OverflowError: math range error
+INITIALIZING
+UNIT_TESTS
+MODEL_LOAD
+/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/.venv-calibration/lib/python3.9/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+ACTUAL_CAPTURE
+RTL_TRACE
+SINGLE_NORM_SWEEP
+CUMULATIVE_SWEEP
+Traceback (most recent call last):
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/run_norm10_debug_pilot.py", line 378, in <module>
+    try:main()
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/run_norm10_debug_pilot.py", line 336, in main
+    example=mixed.calibration_examples(exp.source)[0];divergence,single,cumulative=sweeps(exp,example)
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/run_norm10_debug_pilot.py", line 238, in sweeps
+    label=f'cumulative_{i}';result=exp.diagnostic(example,exp.names[:i+1],label,True);m=measure(exp,result,baseline,example,name);ic,oc=telemetry_rates(exp,label)
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/run_norm10_debug_pilot.py", line 178, in measure
+    metrics=response.merged([scores.raw()])
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/evaluate_response_quant.py", line 223, in merged
+    result['ppl'] = math.exp(result['nll'])
+OverflowError: math range error
+INITIALIZING
+UNIT_TESTS
+MODEL_LOAD
+/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/.venv-calibration/lib/python3.9/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+ACTUAL_CAPTURE
+RTL_TRACE
+SINGLE_NORM_SWEEP
+CUMULATIVE_SWEEP
+Traceback (most recent call last):
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/run_norm10_debug_pilot.py", line 378, in <module>
+    try:main()
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/run_norm10_debug_pilot.py", line 336, in main
+    example=mixed.calibration_examples(exp.source)[0];divergence,single,cumulative=sweeps(exp,example)
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/run_norm10_debug_pilot.py", line 238, in sweeps
+    label=f'cumulative_{i}';result=exp.diagnostic(example,exp.names[:i+1],label,True);m=measure(exp,result,baseline,example,name);ic,oc=telemetry_rates(exp,label)
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/run_norm10_debug_pilot.py", line 178, in measure
+    metrics=response.merged([scores.raw()])
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/evaluate_response_quant.py", line 223, in merged
+    result['ppl'] = math.exp(result['nll'])
+OverflowError: math range error
+INITIALIZING
+UNIT_TESTS
+MODEL_LOAD
+/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/.venv-calibration/lib/python3.9/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+ACTUAL_CAPTURE
+RTL_TRACE
+SINGLE_NORM_SWEEP
+CUMULATIVE_SWEEP
+Traceback (most recent call last):
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/run_norm10_debug_pilot.py", line 378, in <module>
+    try:main()
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/run_norm10_debug_pilot.py", line 336, in main
+    example=mixed.calibration_examples(exp.source)[0];divergence,single,cumulative=sweeps(exp,example)
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/run_norm10_debug_pilot.py", line 238, in sweeps
+    label=f'cumulative_{i}';result=exp.diagnostic(example,exp.names[:i+1],label,True);m=measure(exp,result,baseline,example,name);ic,oc=telemetry_rates(exp,label)
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/run_norm10_debug_pilot.py", line 178, in measure
+    metrics=response.merged([scores.raw()])
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/evaluate_response_quant.py", line 223, in merged
+    result['ppl'] = math.exp(result['nll'])
+OverflowError: math range error
+INITIALIZING
+UNIT_TESTS
+MODEL_LOAD
+/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/.venv-calibration/lib/python3.9/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+ACTUAL_CAPTURE
+RTL_TRACE
+SINGLE_NORM_SWEEP
+CUMULATIVE_SWEEP
+Traceback (most recent call last):
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/run_norm10_debug_pilot.py", line 378, in <module>
+    try:main()
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/run_norm10_debug_pilot.py", line 336, in main
+    example=mixed.calibration_examples(exp.source)[0];divergence,single,cumulative=sweeps(exp,example)
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/run_norm10_debug_pilot.py", line 238, in sweeps
+    label=f'cumulative_{i}';result=exp.diagnostic(example,exp.names[:i+1],label,True);m=measure(exp,result,baseline,example,name);ic,oc=telemetry_rates(exp,label)
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/run_norm10_debug_pilot.py", line 178, in measure
+    metrics=response.merged([scores.raw()])
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/evaluate_response_quant.py", line 223, in merged
+    result['ppl'] = math.exp(result['nll'])
+OverflowError: math range error
+INITIALIZING
+UNIT_TESTS
+MODEL_LOAD
+/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/.venv-calibration/lib/python3.9/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+ACTUAL_CAPTURE
+RTL_TRACE
+SINGLE_NORM_SWEEP
+CUMULATIVE_SWEEP
+Traceback (most recent call last):
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/run_norm10_debug_pilot.py", line 378, in <module>
+    try:main()
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/run_norm10_debug_pilot.py", line 336, in main
+    example=mixed.calibration_examples(exp.source)[0];divergence,single,cumulative=sweeps(exp,example)
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/run_norm10_debug_pilot.py", line 238, in sweeps
+    label=f'cumulative_{i}';result=exp.diagnostic(example,exp.names[:i+1],label,True);m=measure(exp,result,baseline,example,name);ic,oc=telemetry_rates(exp,label)
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/run_norm10_debug_pilot.py", line 178, in measure
+    metrics=response.merged([scores.raw()])
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/evaluate_response_quant.py", line 223, in merged
+    result['ppl'] = math.exp(result['nll'])
+OverflowError: math range error
+INITIALIZING
+UNIT_TESTS
+MODEL_LOAD
+/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/.venv-calibration/lib/python3.9/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+ACTUAL_CAPTURE
+RTL_TRACE
+SINGLE_NORM_SWEEP
+CUMULATIVE_SWEEP
+Traceback (most recent call last):
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/run_norm10_debug_pilot.py", line 378, in <module>
+    try:main()
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/run_norm10_debug_pilot.py", line 336, in main
+    example=mixed.calibration_examples(exp.source)[0];divergence,single,cumulative=sweeps(exp,example)
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/run_norm10_debug_pilot.py", line 238, in sweeps
+    label=f'cumulative_{i}';result=exp.diagnostic(example,exp.names[:i+1],label,True);m=measure(exp,result,baseline,example,name);ic,oc=telemetry_rates(exp,label)
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/run_norm10_debug_pilot.py", line 178, in measure
+    metrics=response.merged([scores.raw()])
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/evaluate_response_quant.py", line 223, in merged
+    result['ppl'] = math.exp(result['nll'])
+OverflowError: math range error
+INITIALIZING
+UNIT_TESTS
+MODEL_LOAD
+/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/.venv-calibration/lib/python3.9/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+ACTUAL_CAPTURE
+RTL_TRACE
+SINGLE_NORM_SWEEP
+CUMULATIVE_SWEEP
+Traceback (most recent call last):
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/run_norm10_debug_pilot.py", line 378, in <module>
+    try:main()
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/run_norm10_debug_pilot.py", line 336, in main
+    example=mixed.calibration_examples(exp.source)[0];divergence,single,cumulative=sweeps(exp,example)
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/run_norm10_debug_pilot.py", line 238, in sweeps
+    label=f'cumulative_{i}';result=exp.diagnostic(example,exp.names[:i+1],label,True);m=measure(exp,result,baseline,example,name);ic,oc=telemetry_rates(exp,label)
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/run_norm10_debug_pilot.py", line 178, in measure
+    metrics=response.merged([scores.raw()])
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/evaluate_response_quant.py", line 223, in merged
+    result['ppl'] = math.exp(result['nll'])
+OverflowError: math range error
+INITIALIZING
+UNIT_TESTS
+MODEL_LOAD
+/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/.venv-calibration/lib/python3.9/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+ACTUAL_CAPTURE
+RTL_TRACE
+SINGLE_NORM_SWEEP
+CUMULATIVE_SWEEP
+Traceback (most recent call last):
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/run_norm10_debug_pilot.py", line 378, in <module>
+    try:main()
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/run_norm10_debug_pilot.py", line 336, in main
+    example=mixed.calibration_examples(exp.source)[0];divergence,single,cumulative=sweeps(exp,example)
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/run_norm10_debug_pilot.py", line 238, in sweeps
+    label=f'cumulative_{i}';result=exp.diagnostic(example,exp.names[:i+1],label,True);m=measure(exp,result,baseline,example,name);ic,oc=telemetry_rates(exp,label)
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/run_norm10_debug_pilot.py", line 178, in measure
+    metrics=response.merged([scores.raw()])
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/evaluate_response_quant.py", line 223, in merged
+    result['ppl'] = math.exp(result['nll'])
+OverflowError: math range error
+INITIALIZING
+UNIT_TESTS
+MODEL_LOAD
+/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/.venv-calibration/lib/python3.9/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+ACTUAL_CAPTURE
+RTL_TRACE
+SINGLE_NORM_SWEEP
+CUMULATIVE_SWEEP
+Traceback (most recent call last):
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/run_norm10_debug_pilot.py", line 378, in <module>
+    try:main()
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/run_norm10_debug_pilot.py", line 336, in main
+    example=mixed.calibration_examples(exp.source)[0];divergence,single,cumulative=sweeps(exp,example)
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/run_norm10_debug_pilot.py", line 238, in sweeps
+    label=f'cumulative_{i}';result=exp.diagnostic(example,exp.names[:i+1],label,True);m=measure(exp,result,baseline,example,name);ic,oc=telemetry_rates(exp,label)
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/run_norm10_debug_pilot.py", line 178, in measure
+    metrics=response.merged([scores.raw()])
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/evaluate_response_quant.py", line 223, in merged
+    result['ppl'] = math.exp(result['nll'])
+OverflowError: math range error
+INITIALIZING
+UNIT_TESTS
+MODEL_LOAD
+/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/.venv-calibration/lib/python3.9/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+ACTUAL_CAPTURE
+RTL_TRACE
+SINGLE_NORM_SWEEP
+CUMULATIVE_SWEEP
+Traceback (most recent call last):
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/run_norm10_debug_pilot.py", line 378, in <module>
+    try:main()
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/run_norm10_debug_pilot.py", line 336, in main
+    example=mixed.calibration_examples(exp.source)[0];divergence,single,cumulative=sweeps(exp,example)
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/run_norm10_debug_pilot.py", line 238, in sweeps
+    label=f'cumulative_{i}';result=exp.diagnostic(example,exp.names[:i+1],label,True);m=measure(exp,result,baseline,example,name);ic,oc=telemetry_rates(exp,label)
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/run_norm10_debug_pilot.py", line 178, in measure
+    metrics=response.merged([scores.raw()])
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/evaluate_response_quant.py", line 223, in merged
+    result['ppl'] = math.exp(result['nll'])
+OverflowError: math range error
+INITIALIZING
+UNIT_TESTS
+MODEL_LOAD
+/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/.venv-calibration/lib/python3.9/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+ACTUAL_CAPTURE
+RTL_TRACE
+SINGLE_NORM_SWEEP
+CUMULATIVE_SWEEP
+Traceback (most recent call last):
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/run_norm10_debug_pilot.py", line 378, in <module>
+    try:main()
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/run_norm10_debug_pilot.py", line 336, in main
+    example=mixed.calibration_examples(exp.source)[0];divergence,single,cumulative=sweeps(exp,example)
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/run_norm10_debug_pilot.py", line 238, in sweeps
+    label=f'cumulative_{i}';result=exp.diagnostic(example,exp.names[:i+1],label,True);m=measure(exp,result,baseline,example,name);ic,oc=telemetry_rates(exp,label)
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/run_norm10_debug_pilot.py", line 178, in measure
+    metrics=response.merged([scores.raw()])
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/evaluate_response_quant.py", line 223, in merged
+    result['ppl'] = math.exp(result['nll'])
+OverflowError: math range error
+INITIALIZING
+UNIT_TESTS
+MODEL_LOAD
+/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/.venv-calibration/lib/python3.9/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+ACTUAL_CAPTURE
+RTL_TRACE
+SINGLE_NORM_SWEEP
+CUMULATIVE_SWEEP
+Traceback (most recent call last):
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/run_norm10_debug_pilot.py", line 378, in <module>
+    try:main()
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/run_norm10_debug_pilot.py", line 336, in main
+    example=mixed.calibration_examples(exp.source)[0];divergence,single,cumulative=sweeps(exp,example)
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/run_norm10_debug_pilot.py", line 238, in sweeps
+    label=f'cumulative_{i}';result=exp.diagnostic(example,exp.names[:i+1],label,True);m=measure(exp,result,baseline,example,name);ic,oc=telemetry_rates(exp,label)
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/run_norm10_debug_pilot.py", line 178, in measure
+    metrics=response.merged([scores.raw()])
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/evaluate_response_quant.py", line 223, in merged
+    result['ppl'] = math.exp(result['nll'])
+OverflowError: math range error
+INITIALIZING
+UNIT_TESTS
+MODEL_LOAD
+/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/.venv-calibration/lib/python3.9/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+ACTUAL_CAPTURE
+RTL_TRACE
+SINGLE_NORM_SWEEP
+CUMULATIVE_SWEEP
+Traceback (most recent call last):
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/run_norm10_debug_pilot.py", line 378, in <module>
+    try:main()
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/run_norm10_debug_pilot.py", line 336, in main
+    example=mixed.calibration_examples(exp.source)[0];divergence,single,cumulative=sweeps(exp,example)
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/run_norm10_debug_pilot.py", line 238, in sweeps
+    label=f'cumulative_{i}';result=exp.diagnostic(example,exp.names[:i+1],label,True);m=measure(exp,result,baseline,example,name);ic,oc=telemetry_rates(exp,label)
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/run_norm10_debug_pilot.py", line 178, in measure
+    metrics=response.merged([scores.raw()])
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/evaluate_response_quant.py", line 223, in merged
+    result['ppl'] = math.exp(result['nll'])
+OverflowError: math range error
+INITIALIZING
+UNIT_TESTS
+MODEL_LOAD
+/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/.venv-calibration/lib/python3.9/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+ACTUAL_CAPTURE
+RTL_TRACE
+SINGLE_NORM_SWEEP
+CUMULATIVE_SWEEP
+Traceback (most recent call last):
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/run_norm10_debug_pilot.py", line 378, in <module>
+    try:main()
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/run_norm10_debug_pilot.py", line 336, in main
+    example=mixed.calibration_examples(exp.source)[0];divergence,single,cumulative=sweeps(exp,example)
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/run_norm10_debug_pilot.py", line 238, in sweeps
+    label=f'cumulative_{i}';result=exp.diagnostic(example,exp.names[:i+1],label,True);m=measure(exp,result,baseline,example,name);ic,oc=telemetry_rates(exp,label)
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/run_norm10_debug_pilot.py", line 178, in measure
+    metrics=response.merged([scores.raw()])
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/evaluate_response_quant.py", line 223, in merged
+    result['ppl'] = math.exp(result['nll'])
+OverflowError: math range error
+INITIALIZING
+UNIT_TESTS
+MODEL_LOAD
+/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/.venv-calibration/lib/python3.9/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+ACTUAL_CAPTURE
+RTL_TRACE
+SINGLE_NORM_SWEEP
+CUMULATIVE_SWEEP
+Traceback (most recent call last):
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/run_norm10_debug_pilot.py", line 378, in <module>
+    try:main()
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/run_norm10_debug_pilot.py", line 336, in main
+    example=mixed.calibration_examples(exp.source)[0];divergence,single,cumulative=sweeps(exp,example)
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/run_norm10_debug_pilot.py", line 238, in sweeps
+    label=f'cumulative_{i}';result=exp.diagnostic(example,exp.names[:i+1],label,True);m=measure(exp,result,baseline,example,name);ic,oc=telemetry_rates(exp,label)
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/run_norm10_debug_pilot.py", line 178, in measure
+    metrics=response.merged([scores.raw()])
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/evaluate_response_quant.py", line 223, in merged
+    result['ppl'] = math.exp(result['nll'])
+OverflowError: math range error
+INITIALIZING
+UNIT_TESTS
+MODEL_LOAD
+/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/.venv-calibration/lib/python3.9/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+ACTUAL_CAPTURE
+RTL_TRACE
+SINGLE_NORM_SWEEP
+CUMULATIVE_SWEEP
+Traceback (most recent call last):
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/run_norm10_debug_pilot.py", line 378, in <module>
+    try:main()
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/run_norm10_debug_pilot.py", line 336, in main
+    example=mixed.calibration_examples(exp.source)[0];divergence,single,cumulative=sweeps(exp,example)
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/run_norm10_debug_pilot.py", line 238, in sweeps
+    label=f'cumulative_{i}';result=exp.diagnostic(example,exp.names[:i+1],label,True);m=measure(exp,result,baseline,example,name);ic,oc=telemetry_rates(exp,label)
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/run_norm10_debug_pilot.py", line 178, in measure
+    metrics=response.merged([scores.raw()])
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/evaluate_response_quant.py", line 223, in merged
+    result['ppl'] = math.exp(result['nll'])
+OverflowError: math range error
+INITIALIZING
+UNIT_TESTS
+MODEL_LOAD
+/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/.venv-calibration/lib/python3.9/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+ACTUAL_CAPTURE
+RTL_TRACE
+SINGLE_NORM_SWEEP
+CUMULATIVE_SWEEP
+Traceback (most recent call last):
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/run_norm10_debug_pilot.py", line 378, in <module>
+    try:main()
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/run_norm10_debug_pilot.py", line 336, in main
+    example=mixed.calibration_examples(exp.source)[0];divergence,single,cumulative=sweeps(exp,example)
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/run_norm10_debug_pilot.py", line 238, in sweeps
+    label=f'cumulative_{i}';result=exp.diagnostic(example,exp.names[:i+1],label,True);m=measure(exp,result,baseline,example,name);ic,oc=telemetry_rates(exp,label)
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/run_norm10_debug_pilot.py", line 178, in measure
+    metrics=response.merged([scores.raw()])
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/evaluate_response_quant.py", line 223, in merged
+    result['ppl'] = math.exp(result['nll'])
+OverflowError: math range error
+INITIALIZING
+UNIT_TESTS
+MODEL_LOAD
+/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/.venv-calibration/lib/python3.9/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+ACTUAL_CAPTURE
+RTL_TRACE
+SINGLE_NORM_SWEEP
+CUMULATIVE_SWEEP
+Traceback (most recent call last):
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/run_norm10_debug_pilot.py", line 378, in <module>
+    try:main()
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/run_norm10_debug_pilot.py", line 336, in main
+    example=mixed.calibration_examples(exp.source)[0];divergence,single,cumulative=sweeps(exp,example)
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/run_norm10_debug_pilot.py", line 238, in sweeps
+    label=f'cumulative_{i}';result=exp.diagnostic(example,exp.names[:i+1],label,True);m=measure(exp,result,baseline,example,name);ic,oc=telemetry_rates(exp,label)
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/run_norm10_debug_pilot.py", line 178, in measure
+    metrics=response.merged([scores.raw()])
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/evaluate_response_quant.py", line 223, in merged
+    result['ppl'] = math.exp(result['nll'])
+OverflowError: math range error
+INITIALIZING
+UNIT_TESTS
+MODEL_LOAD
+/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/.venv-calibration/lib/python3.9/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+ACTUAL_CAPTURE
+RTL_TRACE
+SINGLE_NORM_SWEEP
+CUMULATIVE_SWEEP
+Traceback (most recent call last):
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/run_norm10_debug_pilot.py", line 378, in <module>
+    try:main()
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/run_norm10_debug_pilot.py", line 336, in main
+    example=mixed.calibration_examples(exp.source)[0];divergence,single,cumulative=sweeps(exp,example)
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/run_norm10_debug_pilot.py", line 238, in sweeps
+    label=f'cumulative_{i}';result=exp.diagnostic(example,exp.names[:i+1],label,True);m=measure(exp,result,baseline,example,name);ic,oc=telemetry_rates(exp,label)
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/run_norm10_debug_pilot.py", line 178, in measure
+    metrics=response.merged([scores.raw()])
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/evaluate_response_quant.py", line 223, in merged
+    result['ppl'] = math.exp(result['nll'])
+OverflowError: math range error
+INITIALIZING
+UNIT_TESTS
+MODEL_LOAD
+/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/.venv-calibration/lib/python3.9/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+ACTUAL_CAPTURE
+RTL_TRACE
+SINGLE_NORM_SWEEP
+CUMULATIVE_SWEEP
+Traceback (most recent call last):
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/run_norm10_debug_pilot.py", line 378, in <module>
+    try:main()
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/run_norm10_debug_pilot.py", line 336, in main
+    example=mixed.calibration_examples(exp.source)[0];divergence,single,cumulative=sweeps(exp,example)
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/run_norm10_debug_pilot.py", line 238, in sweeps
+    label=f'cumulative_{i}';result=exp.diagnostic(example,exp.names[:i+1],label,True);m=measure(exp,result,baseline,example,name);ic,oc=telemetry_rates(exp,label)
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/run_norm10_debug_pilot.py", line 178, in measure
+    metrics=response.merged([scores.raw()])
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/evaluate_response_quant.py", line 223, in merged
+    result['ppl'] = math.exp(result['nll'])
+OverflowError: math range error
+INITIALIZING
+UNIT_TESTS
+MODEL_LOAD
+/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/.venv-calibration/lib/python3.9/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+ACTUAL_CAPTURE
+RTL_TRACE
+SINGLE_NORM_SWEEP
+CUMULATIVE_SWEEP
+Traceback (most recent call last):
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/run_norm10_debug_pilot.py", line 378, in <module>
+    try:main()
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/run_norm10_debug_pilot.py", line 336, in main
+    example=mixed.calibration_examples(exp.source)[0];divergence,single,cumulative=sweeps(exp,example)
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/run_norm10_debug_pilot.py", line 238, in sweeps
+    label=f'cumulative_{i}';result=exp.diagnostic(example,exp.names[:i+1],label,True);m=measure(exp,result,baseline,example,name);ic,oc=telemetry_rates(exp,label)
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/run_norm10_debug_pilot.py", line 178, in measure
+    metrics=response.merged([scores.raw()])
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/evaluate_response_quant.py", line 223, in merged
+    result['ppl'] = math.exp(result['nll'])
+OverflowError: math range error
+INITIALIZING
+UNIT_TESTS
+MODEL_LOAD
+/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/.venv-calibration/lib/python3.9/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+ACTUAL_CAPTURE
+RTL_TRACE
+SINGLE_NORM_SWEEP
+CUMULATIVE_SWEEP
+Traceback (most recent call last):
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/run_norm10_debug_pilot.py", line 378, in <module>
+    try:main()
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/run_norm10_debug_pilot.py", line 336, in main
+    example=mixed.calibration_examples(exp.source)[0];divergence,single,cumulative=sweeps(exp,example)
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/run_norm10_debug_pilot.py", line 238, in sweeps
+    label=f'cumulative_{i}';result=exp.diagnostic(example,exp.names[:i+1],label,True);m=measure(exp,result,baseline,example,name);ic,oc=telemetry_rates(exp,label)
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/run_norm10_debug_pilot.py", line 178, in measure
+    metrics=response.merged([scores.raw()])
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/evaluate_response_quant.py", line 223, in merged
+    result['ppl'] = math.exp(result['nll'])
+OverflowError: math range error
+INITIALIZING
+UNIT_TESTS
+MODEL_LOAD
+/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/.venv-calibration/lib/python3.9/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+ACTUAL_CAPTURE
+RTL_TRACE
+SINGLE_NORM_SWEEP
+CUMULATIVE_SWEEP
+Traceback (most recent call last):
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/run_norm10_debug_pilot.py", line 378, in <module>
+    try:main()
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/run_norm10_debug_pilot.py", line 336, in main
+    example=mixed.calibration_examples(exp.source)[0];divergence,single,cumulative=sweeps(exp,example)
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/run_norm10_debug_pilot.py", line 238, in sweeps
+    label=f'cumulative_{i}';result=exp.diagnostic(example,exp.names[:i+1],label,True);m=measure(exp,result,baseline,example,name);ic,oc=telemetry_rates(exp,label)
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/run_norm10_debug_pilot.py", line 178, in measure
+    metrics=response.merged([scores.raw()])
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/evaluate_response_quant.py", line 223, in merged
+    result['ppl'] = math.exp(result['nll'])
+OverflowError: math range error
+INITIALIZING
+UNIT_TESTS
+MODEL_LOAD
+/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/.venv-calibration/lib/python3.9/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+ACTUAL_CAPTURE
+RTL_TRACE
+SINGLE_NORM_SWEEP
+CUMULATIVE_SWEEP
+Traceback (most recent call last):
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/run_norm10_debug_pilot.py", line 378, in <module>
+    try:main()
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/run_norm10_debug_pilot.py", line 336, in main
+    example=mixed.calibration_examples(exp.source)[0];divergence,single,cumulative=sweeps(exp,example)
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/run_norm10_debug_pilot.py", line 238, in sweeps
+    label=f'cumulative_{i}';result=exp.diagnostic(example,exp.names[:i+1],label,True);m=measure(exp,result,baseline,example,name);ic,oc=telemetry_rates(exp,label)
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/run_norm10_debug_pilot.py", line 178, in measure
+    metrics=response.merged([scores.raw()])
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/evaluate_response_quant.py", line 223, in merged
+    result['ppl'] = math.exp(result['nll'])
+OverflowError: math range error
+INITIALIZING
+UNIT_TESTS
+MODEL_LOAD
+/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/.venv-calibration/lib/python3.9/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+ACTUAL_CAPTURE
+RTL_TRACE
+SINGLE_NORM_SWEEP
+CUMULATIVE_SWEEP
+Traceback (most recent call last):
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/run_norm10_debug_pilot.py", line 378, in <module>
+    try:main()
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/run_norm10_debug_pilot.py", line 336, in main
+    example=mixed.calibration_examples(exp.source)[0];divergence,single,cumulative=sweeps(exp,example)
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/run_norm10_debug_pilot.py", line 238, in sweeps
+    label=f'cumulative_{i}';result=exp.diagnostic(example,exp.names[:i+1],label,True);m=measure(exp,result,baseline,example,name);ic,oc=telemetry_rates(exp,label)
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/run_norm10_debug_pilot.py", line 178, in measure
+    metrics=response.merged([scores.raw()])
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/evaluate_response_quant.py", line 223, in merged
+    result['ppl'] = math.exp(result['nll'])
+OverflowError: math range error
+INITIALIZING
+UNIT_TESTS
+MODEL_LOAD
+/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/.venv-calibration/lib/python3.9/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+ACTUAL_CAPTURE
+RTL_TRACE
+SINGLE_NORM_SWEEP
+CUMULATIVE_SWEEP
+Traceback (most recent call last):
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/run_norm10_debug_pilot.py", line 378, in <module>
+    try:main()
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/run_norm10_debug_pilot.py", line 336, in main
+    example=mixed.calibration_examples(exp.source)[0];divergence,single,cumulative=sweeps(exp,example)
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/run_norm10_debug_pilot.py", line 238, in sweeps
+    label=f'cumulative_{i}';result=exp.diagnostic(example,exp.names[:i+1],label,True);m=measure(exp,result,baseline,example,name);ic,oc=telemetry_rates(exp,label)
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/run_norm10_debug_pilot.py", line 178, in measure
+    metrics=response.merged([scores.raw()])
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/evaluate_response_quant.py", line 223, in merged
+    result['ppl'] = math.exp(result['nll'])
+OverflowError: math range error
+INITIALIZING
+UNIT_TESTS
+MODEL_LOAD
+/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/.venv-calibration/lib/python3.9/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+ACTUAL_CAPTURE
+RTL_TRACE
+SINGLE_NORM_SWEEP
+CUMULATIVE_SWEEP
+Traceback (most recent call last):
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/run_norm10_debug_pilot.py", line 378, in <module>
+    try:main()
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/run_norm10_debug_pilot.py", line 336, in main
+    example=mixed.calibration_examples(exp.source)[0];divergence,single,cumulative=sweeps(exp,example)
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/run_norm10_debug_pilot.py", line 238, in sweeps
+    label=f'cumulative_{i}';result=exp.diagnostic(example,exp.names[:i+1],label,True);m=measure(exp,result,baseline,example,name);ic,oc=telemetry_rates(exp,label)
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/run_norm10_debug_pilot.py", line 178, in measure
+    metrics=response.merged([scores.raw()])
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/evaluate_response_quant.py", line 223, in merged
+    result['ppl'] = math.exp(result['nll'])
+OverflowError: math range error
+INITIALIZING
+UNIT_TESTS
+MODEL_LOAD
+/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/.venv-calibration/lib/python3.9/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+ACTUAL_CAPTURE
+RTL_TRACE
+SINGLE_NORM_SWEEP
+CUMULATIVE_SWEEP
+Traceback (most recent call last):
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/run_norm10_debug_pilot.py", line 378, in <module>
+    try:main()
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/run_norm10_debug_pilot.py", line 336, in main
+    example=mixed.calibration_examples(exp.source)[0];divergence,single,cumulative=sweeps(exp,example)
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/run_norm10_debug_pilot.py", line 238, in sweeps
+    label=f'cumulative_{i}';result=exp.diagnostic(example,exp.names[:i+1],label,True);m=measure(exp,result,baseline,example,name);ic,oc=telemetry_rates(exp,label)
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/run_norm10_debug_pilot.py", line 178, in measure
+    metrics=response.merged([scores.raw()])
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/evaluate_response_quant.py", line 223, in merged
+    result['ppl'] = math.exp(result['nll'])
+OverflowError: math range error
+INITIALIZING
+UNIT_TESTS
+MODEL_LOAD
+/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/.venv-calibration/lib/python3.9/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+ACTUAL_CAPTURE
+RTL_TRACE
+SINGLE_NORM_SWEEP
+CUMULATIVE_SWEEP
+Traceback (most recent call last):
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/run_norm10_debug_pilot.py", line 378, in <module>
+    try:main()
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/run_norm10_debug_pilot.py", line 336, in main
+    example=mixed.calibration_examples(exp.source)[0];divergence,single,cumulative=sweeps(exp,example)
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/run_norm10_debug_pilot.py", line 238, in sweeps
+    label=f'cumulative_{i}';result=exp.diagnostic(example,exp.names[:i+1],label,True);m=measure(exp,result,baseline,example,name);ic,oc=telemetry_rates(exp,label)
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/run_norm10_debug_pilot.py", line 178, in measure
+    metrics=response.merged([scores.raw()])
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/evaluate_response_quant.py", line 223, in merged
+    result['ppl'] = math.exp(result['nll'])
+OverflowError: math range error
+INITIALIZING
+UNIT_TESTS
+MODEL_LOAD
+/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/.venv-calibration/lib/python3.9/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+ACTUAL_CAPTURE
+RTL_TRACE
+SINGLE_NORM_SWEEP
+CUMULATIVE_SWEEP
+Traceback (most recent call last):
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/run_norm10_debug_pilot.py", line 378, in <module>
+    try:main()
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/run_norm10_debug_pilot.py", line 336, in main
+    example=mixed.calibration_examples(exp.source)[0];divergence,single,cumulative=sweeps(exp,example)
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/run_norm10_debug_pilot.py", line 238, in sweeps
+    label=f'cumulative_{i}';result=exp.diagnostic(example,exp.names[:i+1],label,True);m=measure(exp,result,baseline,example,name);ic,oc=telemetry_rates(exp,label)
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/run_norm10_debug_pilot.py", line 178, in measure
+    metrics=response.merged([scores.raw()])
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/evaluate_response_quant.py", line 223, in merged
+    result['ppl'] = math.exp(result['nll'])
+OverflowError: math range error
+INITIALIZING
+UNIT_TESTS
+MODEL_LOAD
+/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/.venv-calibration/lib/python3.9/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+ACTUAL_CAPTURE
+RTL_TRACE
+SINGLE_NORM_SWEEP
+CUMULATIVE_SWEEP
+Traceback (most recent call last):
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/run_norm10_debug_pilot.py", line 378, in <module>
+    try:main()
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/run_norm10_debug_pilot.py", line 336, in main
+    example=mixed.calibration_examples(exp.source)[0];divergence,single,cumulative=sweeps(exp,example)
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/run_norm10_debug_pilot.py", line 238, in sweeps
+    label=f'cumulative_{i}';result=exp.diagnostic(example,exp.names[:i+1],label,True);m=measure(exp,result,baseline,example,name);ic,oc=telemetry_rates(exp,label)
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/run_norm10_debug_pilot.py", line 178, in measure
+    metrics=response.merged([scores.raw()])
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/evaluate_response_quant.py", line 223, in merged
+    result['ppl'] = math.exp(result['nll'])
+OverflowError: math range error
+INITIALIZING
+UNIT_TESTS
+MODEL_LOAD
+/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/.venv-calibration/lib/python3.9/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+ACTUAL_CAPTURE
+RTL_TRACE
+SINGLE_NORM_SWEEP
+CUMULATIVE_SWEEP
+Traceback (most recent call last):
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/run_norm10_debug_pilot.py", line 378, in <module>
+    try:main()
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/run_norm10_debug_pilot.py", line 336, in main
+    example=mixed.calibration_examples(exp.source)[0];divergence,single,cumulative=sweeps(exp,example)
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/run_norm10_debug_pilot.py", line 238, in sweeps
+    label=f'cumulative_{i}';result=exp.diagnostic(example,exp.names[:i+1],label,True);m=measure(exp,result,baseline,example,name);ic,oc=telemetry_rates(exp,label)
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/run_norm10_debug_pilot.py", line 178, in measure
+    metrics=response.merged([scores.raw()])
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/evaluate_response_quant.py", line 223, in merged
+    result['ppl'] = math.exp(result['nll'])
+OverflowError: math range error
+INITIALIZING
+UNIT_TESTS
+MODEL_LOAD
+/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/.venv-calibration/lib/python3.9/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+ACTUAL_CAPTURE
+RTL_TRACE
+SINGLE_NORM_SWEEP
+CUMULATIVE_SWEEP
+Traceback (most recent call last):
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/run_norm10_debug_pilot.py", line 378, in <module>
+    try:main()
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/run_norm10_debug_pilot.py", line 336, in main
+    example=mixed.calibration_examples(exp.source)[0];divergence,single,cumulative=sweeps(exp,example)
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/run_norm10_debug_pilot.py", line 238, in sweeps
+    label=f'cumulative_{i}';result=exp.diagnostic(example,exp.names[:i+1],label,True);m=measure(exp,result,baseline,example,name);ic,oc=telemetry_rates(exp,label)
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/run_norm10_debug_pilot.py", line 178, in measure
+    metrics=response.merged([scores.raw()])
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/evaluate_response_quant.py", line 223, in merged
+    result['ppl'] = math.exp(result['nll'])
+OverflowError: math range error
+INITIALIZING
+UNIT_TESTS
+MODEL_LOAD
+/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/.venv-calibration/lib/python3.9/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+ACTUAL_CAPTURE
+RTL_TRACE
+SINGLE_NORM_SWEEP
+CUMULATIVE_SWEEP
+Traceback (most recent call last):
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/run_norm10_debug_pilot.py", line 378, in <module>
+    try:main()
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/run_norm10_debug_pilot.py", line 336, in main
+    example=mixed.calibration_examples(exp.source)[0];divergence,single,cumulative=sweeps(exp,example)
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/run_norm10_debug_pilot.py", line 238, in sweeps
+    label=f'cumulative_{i}';result=exp.diagnostic(example,exp.names[:i+1],label,True);m=measure(exp,result,baseline,example,name);ic,oc=telemetry_rates(exp,label)
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/run_norm10_debug_pilot.py", line 178, in measure
+    metrics=response.merged([scores.raw()])
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/evaluate_response_quant.py", line 223, in merged
+    result['ppl'] = math.exp(result['nll'])
+OverflowError: math range error
+INITIALIZING
+UNIT_TESTS
+MODEL_LOAD
+/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/.venv-calibration/lib/python3.9/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+ACTUAL_CAPTURE
+RTL_TRACE
+SINGLE_NORM_SWEEP
+CUMULATIVE_SWEEP
+Traceback (most recent call last):
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/run_norm10_debug_pilot.py", line 378, in <module>
+    try:main()
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/run_norm10_debug_pilot.py", line 336, in main
+    example=mixed.calibration_examples(exp.source)[0];divergence,single,cumulative=sweeps(exp,example)
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/run_norm10_debug_pilot.py", line 238, in sweeps
+    label=f'cumulative_{i}';result=exp.diagnostic(example,exp.names[:i+1],label,True);m=measure(exp,result,baseline,example,name);ic,oc=telemetry_rates(exp,label)
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/run_norm10_debug_pilot.py", line 178, in measure
+    metrics=response.merged([scores.raw()])
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/evaluate_response_quant.py", line 223, in merged
+    result['ppl'] = math.exp(result['nll'])
+OverflowError: math range error
+INITIALIZING
+UNIT_TESTS
+MODEL_LOAD
+/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/.venv-calibration/lib/python3.9/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+ACTUAL_CAPTURE
+RTL_TRACE
+SINGLE_NORM_SWEEP
+CUMULATIVE_SWEEP
+Traceback (most recent call last):
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/run_norm10_debug_pilot.py", line 378, in <module>
+    try:main()
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/run_norm10_debug_pilot.py", line 336, in main
+    example=mixed.calibration_examples(exp.source)[0];divergence,single,cumulative=sweeps(exp,example)
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/run_norm10_debug_pilot.py", line 238, in sweeps
+    label=f'cumulative_{i}';result=exp.diagnostic(example,exp.names[:i+1],label,True);m=measure(exp,result,baseline,example,name);ic,oc=telemetry_rates(exp,label)
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/run_norm10_debug_pilot.py", line 178, in measure
+    metrics=response.merged([scores.raw()])
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/evaluate_response_quant.py", line 223, in merged
+    result['ppl'] = math.exp(result['nll'])
+OverflowError: math range error
+INITIALIZING
+UNIT_TESTS
+MODEL_LOAD
+/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/.venv-calibration/lib/python3.9/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+ACTUAL_CAPTURE
+RTL_TRACE
+SINGLE_NORM_SWEEP
+CUMULATIVE_SWEEP
+Traceback (most recent call last):
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/run_norm10_debug_pilot.py", line 378, in <module>
+    try:main()
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/run_norm10_debug_pilot.py", line 336, in main
+    example=mixed.calibration_examples(exp.source)[0];divergence,single,cumulative=sweeps(exp,example)
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/run_norm10_debug_pilot.py", line 238, in sweeps
+    label=f'cumulative_{i}';result=exp.diagnostic(example,exp.names[:i+1],label,True);m=measure(exp,result,baseline,example,name);ic,oc=telemetry_rates(exp,label)
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/run_norm10_debug_pilot.py", line 178, in measure
+    metrics=response.merged([scores.raw()])
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/evaluate_response_quant.py", line 223, in merged
+    result['ppl'] = math.exp(result['nll'])
+OverflowError: math range error
+INITIALIZING
+UNIT_TESTS
+MODEL_LOAD
+/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/.venv-calibration/lib/python3.9/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+ACTUAL_CAPTURE
+RTL_TRACE
+SINGLE_NORM_SWEEP
+CUMULATIVE_SWEEP
+Traceback (most recent call last):
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/run_norm10_debug_pilot.py", line 378, in <module>
+    try:main()
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/run_norm10_debug_pilot.py", line 336, in main
+    example=mixed.calibration_examples(exp.source)[0];divergence,single,cumulative=sweeps(exp,example)
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/run_norm10_debug_pilot.py", line 238, in sweeps
+    label=f'cumulative_{i}';result=exp.diagnostic(example,exp.names[:i+1],label,True);m=measure(exp,result,baseline,example,name);ic,oc=telemetry_rates(exp,label)
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/run_norm10_debug_pilot.py", line 178, in measure
+    metrics=response.merged([scores.raw()])
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/evaluate_response_quant.py", line 223, in merged
+    result['ppl'] = math.exp(result['nll'])
+OverflowError: math range error
+INITIALIZING
+UNIT_TESTS
+MODEL_LOAD
+/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/.venv-calibration/lib/python3.9/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+ACTUAL_CAPTURE
+RTL_TRACE
+SINGLE_NORM_SWEEP
+CUMULATIVE_SWEEP
+Traceback (most recent call last):
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/run_norm10_debug_pilot.py", line 378, in <module>
+    try:main()
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/run_norm10_debug_pilot.py", line 336, in main
+    example=mixed.calibration_examples(exp.source)[0];divergence,single,cumulative=sweeps(exp,example)
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/run_norm10_debug_pilot.py", line 238, in sweeps
+    label=f'cumulative_{i}';result=exp.diagnostic(example,exp.names[:i+1],label,True);m=measure(exp,result,baseline,example,name);ic,oc=telemetry_rates(exp,label)
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/run_norm10_debug_pilot.py", line 178, in measure
+    metrics=response.merged([scores.raw()])
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/evaluate_response_quant.py", line 223, in merged
+    result['ppl'] = math.exp(result['nll'])
+OverflowError: math range error
+INITIALIZING
+UNIT_TESTS
+MODEL_LOAD
+/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/.venv-calibration/lib/python3.9/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+ACTUAL_CAPTURE
+RTL_TRACE
+SINGLE_NORM_SWEEP
+CUMULATIVE_SWEEP
+Traceback (most recent call last):
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/run_norm10_debug_pilot.py", line 378, in <module>
+    try:main()
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/run_norm10_debug_pilot.py", line 336, in main
+    example=mixed.calibration_examples(exp.source)[0];divergence,single,cumulative=sweeps(exp,example)
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/run_norm10_debug_pilot.py", line 238, in sweeps
+    label=f'cumulative_{i}';result=exp.diagnostic(example,exp.names[:i+1],label,True);m=measure(exp,result,baseline,example,name);ic,oc=telemetry_rates(exp,label)
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/run_norm10_debug_pilot.py", line 178, in measure
+    metrics=response.merged([scores.raw()])
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/evaluate_response_quant.py", line 223, in merged
+    result['ppl'] = math.exp(result['nll'])
+OverflowError: math range error
+INITIALIZING
+UNIT_TESTS
+MODEL_LOAD
+/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/.venv-calibration/lib/python3.9/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+ACTUAL_CAPTURE
+RTL_TRACE
+SINGLE_NORM_SWEEP
+CUMULATIVE_SWEEP
+Traceback (most recent call last):
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/run_norm10_debug_pilot.py", line 378, in <module>
+    try:main()
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/run_norm10_debug_pilot.py", line 336, in main
+    example=mixed.calibration_examples(exp.source)[0];divergence,single,cumulative=sweeps(exp,example)
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/run_norm10_debug_pilot.py", line 238, in sweeps
+    label=f'cumulative_{i}';result=exp.diagnostic(example,exp.names[:i+1],label,True);m=measure(exp,result,baseline,example,name);ic,oc=telemetry_rates(exp,label)
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/run_norm10_debug_pilot.py", line 178, in measure
+    metrics=response.merged([scores.raw()])
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/evaluate_response_quant.py", line 223, in merged
+    result['ppl'] = math.exp(result['nll'])
+OverflowError: math range error
+INITIALIZING
+UNIT_TESTS
+MODEL_LOAD
+/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/.venv-calibration/lib/python3.9/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+ACTUAL_CAPTURE
+RTL_TRACE
+SINGLE_NORM_SWEEP
+CUMULATIVE_SWEEP
+Traceback (most recent call last):
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/run_norm10_debug_pilot.py", line 378, in <module>
+    try:main()
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/run_norm10_debug_pilot.py", line 336, in main
+    example=mixed.calibration_examples(exp.source)[0];divergence,single,cumulative=sweeps(exp,example)
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/run_norm10_debug_pilot.py", line 238, in sweeps
+    label=f'cumulative_{i}';result=exp.diagnostic(example,exp.names[:i+1],label,True);m=measure(exp,result,baseline,example,name);ic,oc=telemetry_rates(exp,label)
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/run_norm10_debug_pilot.py", line 178, in measure
+    metrics=response.merged([scores.raw()])
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/evaluate_response_quant.py", line 223, in merged
+    result['ppl'] = math.exp(result['nll'])
+OverflowError: math range error
+INITIALIZING
+UNIT_TESTS
+MODEL_LOAD
+/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/.venv-calibration/lib/python3.9/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+ACTUAL_CAPTURE
+RTL_TRACE
+SINGLE_NORM_SWEEP
+CUMULATIVE_SWEEP
+Traceback (most recent call last):
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/run_norm10_debug_pilot.py", line 378, in <module>
+    try:main()
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/run_norm10_debug_pilot.py", line 336, in main
+    example=mixed.calibration_examples(exp.source)[0];divergence,single,cumulative=sweeps(exp,example)
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/run_norm10_debug_pilot.py", line 238, in sweeps
+    label=f'cumulative_{i}';result=exp.diagnostic(example,exp.names[:i+1],label,True);m=measure(exp,result,baseline,example,name);ic,oc=telemetry_rates(exp,label)
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/run_norm10_debug_pilot.py", line 178, in measure
+    metrics=response.merged([scores.raw()])
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/evaluate_response_quant.py", line 223, in merged
+    result['ppl'] = math.exp(result['nll'])
+OverflowError: math range error
+INITIALIZING
+UNIT_TESTS
+MODEL_LOAD
+/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/.venv-calibration/lib/python3.9/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+ACTUAL_CAPTURE
+RTL_TRACE
+SINGLE_NORM_SWEEP
+CUMULATIVE_SWEEP
+Traceback (most recent call last):
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/run_norm10_debug_pilot.py", line 378, in <module>
+    try:main()
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/run_norm10_debug_pilot.py", line 336, in main
+    example=mixed.calibration_examples(exp.source)[0];divergence,single,cumulative=sweeps(exp,example)
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/run_norm10_debug_pilot.py", line 238, in sweeps
+    label=f'cumulative_{i}';result=exp.diagnostic(example,exp.names[:i+1],label,True);m=measure(exp,result,baseline,example,name);ic,oc=telemetry_rates(exp,label)
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/run_norm10_debug_pilot.py", line 178, in measure
+    metrics=response.merged([scores.raw()])
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/evaluate_response_quant.py", line 223, in merged
+    result['ppl'] = math.exp(result['nll'])
+OverflowError: math range error
+INITIALIZING
+UNIT_TESTS
+MODEL_LOAD
+/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/.venv-calibration/lib/python3.9/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+ACTUAL_CAPTURE
+RTL_TRACE
+SINGLE_NORM_SWEEP
+CUMULATIVE_SWEEP
+Traceback (most recent call last):
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/run_norm10_debug_pilot.py", line 378, in <module>
+    try:main()
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/run_norm10_debug_pilot.py", line 336, in main
+    example=mixed.calibration_examples(exp.source)[0];divergence,single,cumulative=sweeps(exp,example)
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/run_norm10_debug_pilot.py", line 238, in sweeps
+    label=f'cumulative_{i}';result=exp.diagnostic(example,exp.names[:i+1],label,True);m=measure(exp,result,baseline,example,name);ic,oc=telemetry_rates(exp,label)
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/run_norm10_debug_pilot.py", line 178, in measure
+    metrics=response.merged([scores.raw()])
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/evaluate_response_quant.py", line 223, in merged
+    result['ppl'] = math.exp(result['nll'])
+OverflowError: math range error
+INITIALIZING
+UNIT_TESTS
+MODEL_LOAD
+/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/.venv-calibration/lib/python3.9/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+ACTUAL_CAPTURE
+RTL_TRACE
+SINGLE_NORM_SWEEP
+CUMULATIVE_SWEEP
+Traceback (most recent call last):
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/run_norm10_debug_pilot.py", line 378, in <module>
+    try:main()
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/run_norm10_debug_pilot.py", line 336, in main
+    example=mixed.calibration_examples(exp.source)[0];divergence,single,cumulative=sweeps(exp,example)
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/run_norm10_debug_pilot.py", line 238, in sweeps
+    label=f'cumulative_{i}';result=exp.diagnostic(example,exp.names[:i+1],label,True);m=measure(exp,result,baseline,example,name);ic,oc=telemetry_rates(exp,label)
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/run_norm10_debug_pilot.py", line 178, in measure
+    metrics=response.merged([scores.raw()])
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/evaluate_response_quant.py", line 223, in merged
+    result['ppl'] = math.exp(result['nll'])
+OverflowError: math range error
+INITIALIZING
+UNIT_TESTS
+MODEL_LOAD
+/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/.venv-calibration/lib/python3.9/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+ACTUAL_CAPTURE
+RTL_TRACE
+SINGLE_NORM_SWEEP
+CUMULATIVE_SWEEP
+Traceback (most recent call last):
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/run_norm10_debug_pilot.py", line 378, in <module>
+    try:main()
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/run_norm10_debug_pilot.py", line 336, in main
+    example=mixed.calibration_examples(exp.source)[0];divergence,single,cumulative=sweeps(exp,example)
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/run_norm10_debug_pilot.py", line 238, in sweeps
+    label=f'cumulative_{i}';result=exp.diagnostic(example,exp.names[:i+1],label,True);m=measure(exp,result,baseline,example,name);ic,oc=telemetry_rates(exp,label)
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/run_norm10_debug_pilot.py", line 178, in measure
+    metrics=response.merged([scores.raw()])
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/evaluate_response_quant.py", line 223, in merged
+    result['ppl'] = math.exp(result['nll'])
+OverflowError: math range error
+INITIALIZING
+UNIT_TESTS
+MODEL_LOAD
+/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/.venv-calibration/lib/python3.9/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+ACTUAL_CAPTURE
+RTL_TRACE
+SINGLE_NORM_SWEEP
+CUMULATIVE_SWEEP
+Traceback (most recent call last):
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/run_norm10_debug_pilot.py", line 378, in <module>
+    try:main()
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/run_norm10_debug_pilot.py", line 336, in main
+    example=mixed.calibration_examples(exp.source)[0];divergence,single,cumulative=sweeps(exp,example)
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/run_norm10_debug_pilot.py", line 238, in sweeps
+    label=f'cumulative_{i}';result=exp.diagnostic(example,exp.names[:i+1],label,True);m=measure(exp,result,baseline,example,name);ic,oc=telemetry_rates(exp,label)
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/run_norm10_debug_pilot.py", line 178, in measure
+    metrics=response.merged([scores.raw()])
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/evaluate_response_quant.py", line 223, in merged
+    result['ppl'] = math.exp(result['nll'])
+OverflowError: math range error
+INITIALIZING
+UNIT_TESTS
+MODEL_LOAD
+/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/.venv-calibration/lib/python3.9/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+ACTUAL_CAPTURE
+RTL_TRACE
+SINGLE_NORM_SWEEP
+CUMULATIVE_SWEEP
+Traceback (most recent call last):
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/run_norm10_debug_pilot.py", line 378, in <module>
+    try:main()
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/run_norm10_debug_pilot.py", line 336, in main
+    example=mixed.calibration_examples(exp.source)[0];divergence,single,cumulative=sweeps(exp,example)
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/run_norm10_debug_pilot.py", line 238, in sweeps
+    label=f'cumulative_{i}';result=exp.diagnostic(example,exp.names[:i+1],label,True);m=measure(exp,result,baseline,example,name);ic,oc=telemetry_rates(exp,label)
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/run_norm10_debug_pilot.py", line 178, in measure
+    metrics=response.merged([scores.raw()])
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/evaluate_response_quant.py", line 223, in merged
+    result['ppl'] = math.exp(result['nll'])
+OverflowError: math range error
+INITIALIZING
+UNIT_TESTS
+MODEL_LOAD
+/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/.venv-calibration/lib/python3.9/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+ACTUAL_CAPTURE
+RTL_TRACE
+SINGLE_NORM_SWEEP
+CUMULATIVE_SWEEP
+Traceback (most recent call last):
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/run_norm10_debug_pilot.py", line 378, in <module>
+    try:main()
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/run_norm10_debug_pilot.py", line 336, in main
+    example=mixed.calibration_examples(exp.source)[0];divergence,single,cumulative=sweeps(exp,example)
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/run_norm10_debug_pilot.py", line 238, in sweeps
+    label=f'cumulative_{i}';result=exp.diagnostic(example,exp.names[:i+1],label,True);m=measure(exp,result,baseline,example,name);ic,oc=telemetry_rates(exp,label)
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/run_norm10_debug_pilot.py", line 178, in measure
+    metrics=response.merged([scores.raw()])
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/evaluate_response_quant.py", line 223, in merged
+    result['ppl'] = math.exp(result['nll'])
+OverflowError: math range error
+INITIALIZING
+UNIT_TESTS
+MODEL_LOAD
+/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/.venv-calibration/lib/python3.9/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+ACTUAL_CAPTURE
+RTL_TRACE
+SINGLE_NORM_SWEEP
+CUMULATIVE_SWEEP
+Traceback (most recent call last):
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/run_norm10_debug_pilot.py", line 378, in <module>
+    try:main()
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/run_norm10_debug_pilot.py", line 336, in main
+    example=mixed.calibration_examples(exp.source)[0];divergence,single,cumulative=sweeps(exp,example)
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/run_norm10_debug_pilot.py", line 238, in sweeps
+    label=f'cumulative_{i}';result=exp.diagnostic(example,exp.names[:i+1],label,True);m=measure(exp,result,baseline,example,name);ic,oc=telemetry_rates(exp,label)
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/run_norm10_debug_pilot.py", line 178, in measure
+    metrics=response.merged([scores.raw()])
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/evaluate_response_quant.py", line 223, in merged
+    result['ppl'] = math.exp(result['nll'])
+OverflowError: math range error
+INITIALIZING
+UNIT_TESTS
+MODEL_LOAD
+/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/.venv-calibration/lib/python3.9/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+ACTUAL_CAPTURE
+RTL_TRACE
+SINGLE_NORM_SWEEP
+CUMULATIVE_SWEEP
+Traceback (most recent call last):
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/run_norm10_debug_pilot.py", line 378, in <module>
+    try:main()
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/run_norm10_debug_pilot.py", line 336, in main
+    example=mixed.calibration_examples(exp.source)[0];divergence,single,cumulative=sweeps(exp,example)
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/run_norm10_debug_pilot.py", line 238, in sweeps
+    label=f'cumulative_{i}';result=exp.diagnostic(example,exp.names[:i+1],label,True);m=measure(exp,result,baseline,example,name);ic,oc=telemetry_rates(exp,label)
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/run_norm10_debug_pilot.py", line 178, in measure
+    metrics=response.merged([scores.raw()])
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/evaluate_response_quant.py", line 223, in merged
+    result['ppl'] = math.exp(result['nll'])
+OverflowError: math range error
+INITIALIZING
+UNIT_TESTS
+MODEL_LOAD
+/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/.venv-calibration/lib/python3.9/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+ACTUAL_CAPTURE
+RTL_TRACE
+SINGLE_NORM_SWEEP
+CUMULATIVE_SWEEP
+Traceback (most recent call last):
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/run_norm10_debug_pilot.py", line 378, in <module>
+    try:main()
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/run_norm10_debug_pilot.py", line 336, in main
+    example=mixed.calibration_examples(exp.source)[0];divergence,single,cumulative=sweeps(exp,example)
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/run_norm10_debug_pilot.py", line 238, in sweeps
+    label=f'cumulative_{i}';result=exp.diagnostic(example,exp.names[:i+1],label,True);m=measure(exp,result,baseline,example,name);ic,oc=telemetry_rates(exp,label)
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/run_norm10_debug_pilot.py", line 178, in measure
+    metrics=response.merged([scores.raw()])
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/evaluate_response_quant.py", line 223, in merged
+    result['ppl'] = math.exp(result['nll'])
+OverflowError: math range error
+INITIALIZING
+UNIT_TESTS
+MODEL_LOAD
+/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/.venv-calibration/lib/python3.9/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+ACTUAL_CAPTURE
+RTL_TRACE
+SINGLE_NORM_SWEEP
+CUMULATIVE_SWEEP
+Traceback (most recent call last):
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/run_norm10_debug_pilot.py", line 378, in <module>
+    try:main()
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/run_norm10_debug_pilot.py", line 336, in main
+    example=mixed.calibration_examples(exp.source)[0];divergence,single,cumulative=sweeps(exp,example)
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/run_norm10_debug_pilot.py", line 238, in sweeps
+    label=f'cumulative_{i}';result=exp.diagnostic(example,exp.names[:i+1],label,True);m=measure(exp,result,baseline,example,name);ic,oc=telemetry_rates(exp,label)
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/run_norm10_debug_pilot.py", line 178, in measure
+    metrics=response.merged([scores.raw()])
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/evaluate_response_quant.py", line 223, in merged
+    result['ppl'] = math.exp(result['nll'])
+OverflowError: math range error
+INITIALIZING
+UNIT_TESTS
+MODEL_LOAD
+/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/.venv-calibration/lib/python3.9/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+ACTUAL_CAPTURE
+RTL_TRACE
+SINGLE_NORM_SWEEP
+CUMULATIVE_SWEEP
+Traceback (most recent call last):
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/run_norm10_debug_pilot.py", line 378, in <module>
+    try:main()
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/run_norm10_debug_pilot.py", line 336, in main
+    example=mixed.calibration_examples(exp.source)[0];divergence,single,cumulative=sweeps(exp,example)
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/run_norm10_debug_pilot.py", line 238, in sweeps
+    label=f'cumulative_{i}';result=exp.diagnostic(example,exp.names[:i+1],label,True);m=measure(exp,result,baseline,example,name);ic,oc=telemetry_rates(exp,label)
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/run_norm10_debug_pilot.py", line 178, in measure
+    metrics=response.merged([scores.raw()])
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/evaluate_response_quant.py", line 223, in merged
+    result['ppl'] = math.exp(result['nll'])
+OverflowError: math range error
+INITIALIZING
+UNIT_TESTS
+MODEL_LOAD
+/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/.venv-calibration/lib/python3.9/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+ACTUAL_CAPTURE
+RTL_TRACE
+SINGLE_NORM_SWEEP
+CUMULATIVE_SWEEP
+Traceback (most recent call last):
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/run_norm10_debug_pilot.py", line 378, in <module>
+    try:main()
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/run_norm10_debug_pilot.py", line 336, in main
+    example=mixed.calibration_examples(exp.source)[0];divergence,single,cumulative=sweeps(exp,example)
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/run_norm10_debug_pilot.py", line 238, in sweeps
+    label=f'cumulative_{i}';result=exp.diagnostic(example,exp.names[:i+1],label,True);m=measure(exp,result,baseline,example,name);ic,oc=telemetry_rates(exp,label)
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/run_norm10_debug_pilot.py", line 178, in measure
+    metrics=response.merged([scores.raw()])
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/evaluate_response_quant.py", line 223, in merged
+    result['ppl'] = math.exp(result['nll'])
+OverflowError: math range error
+INITIALIZING
+UNIT_TESTS
+MODEL_LOAD
+/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/.venv-calibration/lib/python3.9/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+ACTUAL_CAPTURE
+RTL_TRACE
+SINGLE_NORM_SWEEP
+CUMULATIVE_SWEEP
+Traceback (most recent call last):
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/run_norm10_debug_pilot.py", line 378, in <module>
+    try:main()
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/run_norm10_debug_pilot.py", line 336, in main
+    example=mixed.calibration_examples(exp.source)[0];divergence,single,cumulative=sweeps(exp,example)
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/run_norm10_debug_pilot.py", line 238, in sweeps
+    label=f'cumulative_{i}';result=exp.diagnostic(example,exp.names[:i+1],label,True);m=measure(exp,result,baseline,example,name);ic,oc=telemetry_rates(exp,label)
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/run_norm10_debug_pilot.py", line 178, in measure
+    metrics=response.merged([scores.raw()])
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/evaluate_response_quant.py", line 223, in merged
+    result['ppl'] = math.exp(result['nll'])
+OverflowError: math range error
+INITIALIZING
+UNIT_TESTS
+MODEL_LOAD
+/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/.venv-calibration/lib/python3.9/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+ACTUAL_CAPTURE
+RTL_TRACE
+SINGLE_NORM_SWEEP
+CUMULATIVE_SWEEP
+Traceback (most recent call last):
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/run_norm10_debug_pilot.py", line 378, in <module>
+    try:main()
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/run_norm10_debug_pilot.py", line 336, in main
+    example=mixed.calibration_examples(exp.source)[0];divergence,single,cumulative=sweeps(exp,example)
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/run_norm10_debug_pilot.py", line 238, in sweeps
+    label=f'cumulative_{i}';result=exp.diagnostic(example,exp.names[:i+1],label,True);m=measure(exp,result,baseline,example,name);ic,oc=telemetry_rates(exp,label)
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/run_norm10_debug_pilot.py", line 178, in measure
+    metrics=response.merged([scores.raw()])
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/evaluate_response_quant.py", line 223, in merged
+    result['ppl'] = math.exp(result['nll'])
+OverflowError: math range error
+INITIALIZING
+UNIT_TESTS
+MODEL_LOAD
+/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/.venv-calibration/lib/python3.9/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+ACTUAL_CAPTURE
+RTL_TRACE
+SINGLE_NORM_SWEEP
+CUMULATIVE_SWEEP
+Traceback (most recent call last):
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/run_norm10_debug_pilot.py", line 378, in <module>
+    try:main()
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/run_norm10_debug_pilot.py", line 336, in main
+    example=mixed.calibration_examples(exp.source)[0];divergence,single,cumulative=sweeps(exp,example)
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/run_norm10_debug_pilot.py", line 238, in sweeps
+    label=f'cumulative_{i}';result=exp.diagnostic(example,exp.names[:i+1],label,True);m=measure(exp,result,baseline,example,name);ic,oc=telemetry_rates(exp,label)
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/run_norm10_debug_pilot.py", line 178, in measure
+    metrics=response.merged([scores.raw()])
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/evaluate_response_quant.py", line 223, in merged
+    result['ppl'] = math.exp(result['nll'])
+OverflowError: math range error
+INITIALIZING
+UNIT_TESTS
+MODEL_LOAD
+/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/.venv-calibration/lib/python3.9/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+ACTUAL_CAPTURE
+RTL_TRACE
+SINGLE_NORM_SWEEP
+CUMULATIVE_SWEEP

@@ -1,6 +1,5 @@
 {
-  "error": "unrelated staged files at start",
-  "exception_type": "RuntimeError",
-  "stage": "INITIALIZING",
-  "state": "FAILED"
+  "elapsed_seconds": 434.931530333,
+  "stage": "CUMULATIVE_SWEEP",
+  "state": "RUNNING"
 }

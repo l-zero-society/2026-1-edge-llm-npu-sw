@@ -11,6 +11,56 @@ import run_norm10_scale_probe as probe
 
 
 class Norm10ScaleProbeTests(unittest.TestCase):
+    def test_original_ppl_overflow_reproduces(self):
+        score=probe.response.Scores()
+        score.metric.add(np.ones((1,8)),np.ones((1,8)))
+        score.n=1;score.nll=1000.
+        with self.assertRaises(OverflowError):
+            probe.response.merged([score.raw()])
+
+    def test_large_finite_nll_survives_summary(self):
+        score=probe.response.Scores()
+        score.metric.add(np.ones((1,8)),np.ones((1,8)))
+        score.n=1;score.nll=1000.
+        result=probe.merge_scores([score.raw()])
+        self.assertEqual(result['nll'],1000.)
+        self.assertEqual(result['log_ppl'],1000.)
+        self.assertIsNone(result['ppl'])
+        self.assertEqual(result['ppl_status'],'exceeds_float64_range')
+
+    def test_representable_ppl_unchanged(self):
+        score=probe.response.Scores()
+        score.metric.add(np.ones((1,8)),np.ones((1,8)))
+        score.n=1;score.nll=5.
+        a=probe.merge_scores([score.raw()]);b=probe.response.merged([score.raw()])
+        for key,value in b.items():self.assertEqual(a[key],value)
+
+    def test_input_quantization_saturates_before_integer_cast(self):
+        q,clip=probe.quantize_input10(np.array([1e30,-1e30]),.01)
+        np.testing.assert_array_equal(q,[511,-512]);self.assertEqual(clip,1.)
+
+    def test_original_fixed_width_conversion_exceeds_int64(self):
+        with np.errstate(invalid='ignore'):
+            intermediate=probe.old.round_even(np.array([1e30])/.01)
+        self.assertNotEqual(float(intermediate[0]),float(np.rint(1e30/.01)))
+        fixed,_=probe.quantize_input10(np.array([1e30]),.01)
+        self.assertEqual(int(fixed[0]),511)
+
+    def test_invalid_output_scale(self):
+        for scale in (0.,-1.,np.inf,np.nan):
+            with self.assertRaises(ValueError):probe.static_gain(np.ones(4),scale)
+
+    def test_genuine_statistic_width_violation_is_retained(self):
+        result=probe.statistic([0]*256,1<<35)
+        self.assertTrue(result['overflow'])
+        self.assertFalse(result['intermediate_checks']['epsilon_uint35'])
+        self.assertEqual(result['normalized_index'],0)
+
+    def test_nonfinite_input_rejected(self):
+        for invalid in (np.inf,-np.inf,np.nan):
+            with self.assertRaises(FloatingPointError):
+                probe.quantize_input10(np.array([invalid]),1.)
+
     def test_int10_bounds(self):
         np.testing.assert_array_equal(probe.sat10(np.array([-1000, 1000])), [-512, 511])
 

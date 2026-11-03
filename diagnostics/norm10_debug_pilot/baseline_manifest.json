@@ -14,7 +14,7 @@
     "src/test/scala/NormUnit_Test.scala": "8eaa8b58c4f954bc129c6d3e22d00ca03e5b820adbc0e7ce9c1d3650391278fc"
   },
   "softmax": "FP, deliberately isolated from previous combined Norm+Softmax experiment",
-  "source_HEAD": "9c37773cd7842681d9d972c2d1947f406eff8378",
+  "source_HEAD": "1bea2a3f2852a900094ad455f4c2757b7073e11b",
   "source_hashes": {
     "scripts/launch_norm10_debug_pilot.sh": "ebcb8122503c4244d3786d645e605d5d7d05223404dab1a903949b12224f53ac",
     "scripts/run_norm10_debug_pilot.py": "130d387a15b3f7fbfaf236c874e12786e34d7c3350dfc16e918d1cf1ca829de3",

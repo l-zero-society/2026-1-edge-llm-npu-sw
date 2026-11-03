@@ -17,16 +17,6 @@ import tempfile
 import time
 import traceback
 
-# Separate the background interpreter from the invoking shell's process group.
-# nohup handles SIGHUP; a new session additionally avoids shell-group cleanup.
-# This does not fork, so the launcher's saved PID remains the experiment PID.
-if __name__ == '__main__':
-    try:
-        os.setsid()
-    except PermissionError:
-        if os.getsid(0) != os.getpid():
-            raise
-
 import numpy as np
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -48,7 +38,8 @@ TARGET_MODULES = ('model.layers.0.input_layernorm', 'model.layers.0.post_attenti
                   'model.layers.9.input_layernorm', 'model.layers.17.post_attention_layernorm', 'model.norm')
 SOURCE_FILES = ('scripts/run_norm10_scale_probe.py', 'scripts/launch_norm10_scale_probe.sh', 'tests/test_norm10_scale_probe.py')
 RESULT_FILES = ('accumulator_verification.json', 'norm_local_comparison.csv', 'output_code_distribution.csv',
-                'scaling_trace.json', 'e2e_small_summary.json', 'verification.json', 'report.md', 'unit_test.log')
+                'scaling_trace.json', 'e2e_small_summary.json', 'verification.json', 'report.md', 'unit_test.log',
+                'debugging_history.md', 'foreground_run.log')
 PUBLISH_FILES = SOURCE_FILES + tuple('diagnostics/norm10_scale_probe/' + p for p in RESULT_FILES)
 
 
@@ -74,7 +65,39 @@ def sha(path):
 
 
 def sat10(values):
+    if not np.isfinite(np.asarray(values,dtype=np.float64)).all():
+        raise FloatingPointError('nonfinite output codes')
     return np.clip(values, -512, 511).astype(np.int16)
+
+
+def quantize_input10(value, scale):
+    value=np.asarray(value,np.float64)
+    if not math.isfinite(scale) or scale<=0:raise ValueError('invalid input scale')
+    if not np.isfinite(value).all():raise FloatingPointError('nonfinite activation')
+    with np.errstate(over='ignore'):
+        raw=np.rint(value/scale)
+    # A finite activation/positive finite scale may exceed float64 quotient range.
+    # Its saturation sign remains exact, and no narrow integer cast precedes clip.
+    clipping=float(np.mean((raw < -512)|(raw > 511)))
+    return sat10(np.clip(raw,-512,511)),clipping
+
+
+def merge_scores(records):
+    """Reuse metric aggregation, with explicit representation of exp(NLL) overflow.
+
+    NLL/log-PPL remain finite scientific data even when PPL exceeds float64.
+    Historical response.merged stays unchanged for reproducibility.
+    """
+    n=sum(r['n'] for r in records)
+    if not n:raise ValueError('empty score records')
+    result=dict(tokens=n,**base.merge_metrics([r['metric'] for r in records]))
+    result.update({k:sum(r[k] for r in records)/n for k in ('nll','kl','top1','in5','overlap')})
+    if not all(math.isfinite(v) for v in result.values()):raise FloatingPointError('nonfinite score aggregate')
+    result['log_ppl']=result['nll']
+    max_log=math.log(sys.float_info.max)
+    result['ppl']=math.exp(result['nll']) if result['nll']<=max_log else None
+    result['ppl_status']='finite' if result['ppl'] is not None else 'exceeds_float64_range'
+    return result
 
 
 def rounded_shift(value, shift):
@@ -138,9 +161,10 @@ def static_gain(gamma, sout):
     recorded; they are never replaced with floating point in the integer mode.
     """
     gamma = np.asarray(gamma, np.float64)
-    factors = abs(gamma) / float(sout)
-    if sout <= 0 or not np.isfinite(factors).all():
+    if not math.isfinite(sout) or sout <= 0 or not np.isfinite(gamma).all():
         raise ValueError('invalid static output gain')
+    factors = abs(gamma) / float(sout)
+    if not np.isfinite(factors).all():raise ValueError('unrepresentable static output gain')
     shifts = np.arange(32, dtype=np.int64)
     candidates = np.rint(factors[:, None] * np.exp2(shifts))
     valid = (candidates >= 1) & (candidates <= 65535)
@@ -159,6 +183,7 @@ def static_gain(gamma, sout):
 
 
 def quantized(value, sout):
+    if not math.isfinite(sout) or sout<=0:raise ValueError('invalid output scale')
     raw = np.rint(np.asarray(value, np.float64) / sout)
     return sat10(raw), float(np.mean((raw < -512) | (raw > 511)))
 
@@ -169,7 +194,7 @@ def mode_row(x, spec, gamma, mode, gain=None, trace=False):
     si, so, eps = spec['input_scale'], spec['output_scale'], spec['eps']
     if not np.isfinite(x).all():
         raise FloatingPointError('nonfinite propagated RMSNorm input')
-    q, input_clip = old.quantize10(x, si)
+    q, input_clip = quantize_input10(x, si)
     info = statistic(q, debug.epsilon_q(eps, si))
     actual_q = q.astype(np.float64) * si
     true_factor = si / math.sqrt(float(np.mean(actual_q**2)) + eps)
@@ -260,7 +285,7 @@ def accumulator_checks(samples, exp):
         spec = exp.specs[name]
         for group, values in group_samples.items():
             for i, x in enumerate(values):
-                q, _ = old.quantize10(x, spec['input_scale'])
+                q, _ = quantize_input10(x, spec['input_scale'])
                 rows.append(dict(identity=f'{name}:{group}:{i}', **statistic(q, debug.epsilon_q(spec['eps'], spec['input_scale']))))
     result = dict(accumulator_bits=35, tests=rows, overflow_detected=any(r['overflow'] for r in rows),
                   maximum_square_sum=max(r['square_sum'] for r in rows),
@@ -420,14 +445,14 @@ def small_e2e(exp, calibration, run_identity):
                 if len(set(map(id,caches.values())))!=6:raise RuntimeError('shared KV cache')
             value={m:scores[m].raw() for m in E2E_MODES}
             write_json(f'work/e2e_{i:02d}.json',dict(identity=key,value=value));records.append(value)
-        result['modes']={m:response.merged([r[m] for r in records]) for m in E2E_MODES}
-        if any(m['tokens']!=24 or not all(math.isfinite(v) for v in m.values()) for m in result['modes'].values()):
+        result['modes']={m:merge_scores([r[m] for r in records]) for m in E2E_MODES}
+        if any(m['tokens']!=24 for m in result['modes'].values()):
             raise FloatingPointError('invalid final E2E metric/count')
         result['completed_targets']=24
     except Exception as exc:
         result['error']=dict(type=type(exc).__name__,message=str(exc))
         result['completed_targets']=8*len(records)
-        if records:result['partial_modes']={m:response.merged([r[m] for r in records]) for m in E2E_MODES}
+        if records:result['partial_modes']={m:merge_scores([r[m] for r in records]) for m in E2E_MODES}
         traceback.print_exc()
     write_json('e2e_small_summary.json',result)
     return result
@@ -487,7 +512,7 @@ def write_report(local, decomposition, accumulator, e2e, diagnosis):
     else:
         keys=('nll','ppl','kl','nmse','mae','cosine','top1','in5','overlap')
         lines += ['', '| Mode | '+' | '.join(keys)+' |','|---|'+'---:|'*len(keys)]
-        for mode,m in e2e['modes'].items():lines.append('| '+mode+' | '+' | '.join(f'{m[k]:.9g}' for k in keys)+' |')
+        for mode,m in e2e['modes'].items():lines.append('| '+mode+' | '+' | '.join(f'{m[k]:.9g}' if m[k] is not None else 'above float64 range (see log_ppl)' for k in keys)+' |')
     lines += ['', '## 10. Primary diagnosis','',diagnosis['primary'],
         'Supported descriptive cases: '+', '.join(diagnosis['supported_cases'])+'.',
         json.dumps(diagnosis['descriptive_checks'],sort_keys=True),
@@ -504,6 +529,77 @@ def write_report(local, decomposition, accumulator, e2e, diagnosis):
 
 def scientific_done(required, tests_ok):
     return bool(tests_ok and all(Path(p).is_file() for p in required))
+
+
+def write_debugging_history(e2e,accumulator):
+    text='''# Norm10 scale probe debugging history
+
+## Original recorded failure
+
+The requested scale-probe directory initially contained only `pid` and an empty
+`run.log`; it had no status, FAILED, capture or numeric traceback. PID 98026 was
+not alive. Therefore no scale-probe-specific original overflow can be asserted.
+
+The preserved historical `diagnostics/norm10_debug_pilot/run.log`, lines 10–21,
+does record `OverflowError: math range error` at
+`scripts/evaluate_response_quant.py:223`, function `merged`, from `math.exp(nll)`.
+Its callers were `run_norm10_debug_pilot.py:178` (`measure`) and line 238
+(`sweeps`), in CUMULATIVE_SWEEP. This is derived-PPL float64 range exhaustion,
+not evidence of accumulator overflow. Exact original NLL/logits were not saved
+at the failing point; they cannot be recovered from the traceback. The code
+uses torch float64 log-softmax and Python float aggregation; the diagnostic had
+two target predictors. The actual failing logits shape and numeric NLL are
+unknown, rather than guessed from the architecture.
+
+A deterministic minimal score record with shape (1,8) float64 operands and
+NLL=1000 reproduces the original aggregation OverflowError. Float64 exp has
+maximum finite log input approximately 709.782712893384. This reproducer is
+independent of model loading and hardware arithmetic.
+
+## Debug iteration 1: derived metric and integer-boundary fixes
+
+Regression tests were written first. The original response.merged demonstrably
+raises on the finite NLL=1000 record. The new merge_scores adapter reuses the
+existing accumulators and preserves NLL as log_ppl; PPL is null with an explicit
+`exceeds_float64_range` label when mathematically outside float64. No NLL or
+logit is clipped, and a nonfinite primary metric still fails explicitly.
+The historical scoring implementation is unchanged.
+
+Audit also found that the inherited input quantizer casts to np.int64 before
+INT10 saturation: finite input +1e30 exceeds the intermediate's representation.
+The exact cast behavior is platform dependent; on this Mac it clips at INT64_MAX
+and the final INT10 sign happens to remain correct. The regression demonstrates
+the out-of-range intermediate, not an observed wrong-sign model activation.
+The probe's new input
+quantizer rounds and saturates before integer conversion. Nonfinite activations
+are rejected explicitly; finite quotient overflow saturates with its exact sign.
+OLD_EMULATOR remains unmodified as requested. Static output gains validate
+positive finite s_out before division. Signed arbitrary-precision integer
+products, RNE, RTL shifts and all hardware widths are retained.
+
+## Execution and scope
+
+The runner's os.setsid call was removed. The foreground command directly owns
+the interpreter and is awaited. An identified old launchd job,
+gui/501/com.lzero.norm10-debug-pilot (then PID 33980, command
+run_norm10_debug_pilot.py), was booted out to stop its automatic restarts and
+concurrent historical-log mutation. No unrelated process was terminated.
+
+Existing staged/unstaged changes and historical artifacts are preserved.
+Publication uses a detached Git worktree only after scientific DONE. The worktree
+is a Git checkout, not a detached experiment process.
+
+## Remaining limitations
+
+The original failing NLL and logits were not logged. Historical combined Norm
+modes also changed Softmax. This probe keeps Softmax and RoPE FP, uses 24 aligned
+targets, and does not establish production RTL integration or broad accuracy.
+Null PPL is a representational limitation with finite log_ppl, not fabricated
+finite precision. Hardware findings, if any, remain in accumulator_verification.
+'''
+    text+=f"\nObserved hardware overflow: {accumulator['overflow_detected']}.\n"
+    text+=f"Final small E2E completed targets: {e2e['completed_targets']}; error: {e2e['error']}.\n"
+    (OUT/'debugging_history.md').write_text(text)
 
 
 def mark_experiment_done():
@@ -587,7 +683,7 @@ def main():
     set_stage('MODEL_LOAD');exp=debug.load()
     if str(next(exp.source.model.parameters()).device)!='cpu':raise RuntimeError('CPU-only experiment')
     calibration=mixed.calibration_examples(exp.source)
-    capture_identity=old.digest(dict(baseline=before,sources=sources,rtl=rtl_hashes,
+    capture_identity=old.digest(dict(baseline=before,capture_config=dict(version=1,predecessor='FP',rows=mixed.RESERVOIR,response_limit=mixed.CAL_LIMIT),rtl=rtl_hashes,
             model=exp.source.metadata if hasattr(exp.source,'metadata') else 'recovered model loader',
             weights={n:hashlib.sha256(exp.weights[n].tobytes()).hexdigest() for n in exp.names},
             examples=[dict(identity=mixed.identity(e),prompt=e['prompt_ids'],targets=e['targets'][:mixed.CAL_LIMIT]) for e in calibration]))
@@ -609,6 +705,7 @@ def main():
         full_192_token_baseline_not_compared_to_24_token_percentage=True,
         tests_command=cmd,test_return_code=test_rc,diagnosis=diagnosis,elapsed_seconds=time.monotonic()-START)
     write_json('verification.json',verification);write_report(local,decomposition,accumulator,e2e,diagnosis)
+    write_debugging_history(e2e,accumulator)
     mark_experiment_done()
     publish(source_head,index_before)
 
