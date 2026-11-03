@@ -1,0 +1,61 @@
+module,group,mode,zero_percent,distinct_codes,code_p1,code_p50,code_p99,max_magnitude,code_domain
+model.layers.0.input_layernorm,prefill,INPUT_QUANT_ORACLE,11.2060546875,420,-134.0,0.0,136.17000000000007,510,final INT10 output
+model.layers.0.input_layernorm,prefill,OLD_EMULATOR,11.2060546875,422,-135.0,0.0,137.0,509,final INT10 output
+model.layers.0.input_layernorm,prefill,RTL_LITERAL,43.59130859375,20,-3.0,0.0,2.0,31,literal normalized core before FP gamma adapter
+model.layers.0.input_layernorm,prefill,POST_GAIN_DIAGNOSTIC,44.5556640625,416,-211.0,0.0,109.0,512,final INT10 output
+model.layers.0.input_layernorm,prefill,FUSED_IDEAL_COEFFICIENT,11.187744140625,421,-135.0,0.0,137.17000000000007,511,final INT10 output
+model.layers.0.input_layernorm,prefill,FUSED_REQUANT_ORACLE,11.187744140625,421,-135.0,0.0,137.17000000000007,511,final INT10 output
+model.layers.0.input_layernorm,decode,INPUT_QUANT_ORACLE,10.003662109375,415,-135.0,0.0,140.0,506,final INT10 output
+model.layers.0.input_layernorm,decode,OLD_EMULATOR,10.003662109375,423,-135.17,0.0,139.17000000000007,504,final INT10 output
+model.layers.0.input_layernorm,decode,RTL_LITERAL,41.7236328125,16,-3.0,0.0,2.0,8,literal normalized core before FP gamma adapter
+model.layers.0.input_layernorm,decode,POST_GAIN_DIAGNOSTIC,42.71240234375,403,-213.17,0.0,112.0,502,final INT10 output
+model.layers.0.input_layernorm,decode,FUSED_IDEAL_COEFFICIENT,10.003662109375,414,-136.0,0.0,140.0,510,final INT10 output
+model.layers.0.input_layernorm,decode,FUSED_REQUANT_ORACLE,10.003662109375,415,-136.0,0.0,140.0,510,final INT10 output
+model.layers.0.post_attention_layernorm,prefill,INPUT_QUANT_ORACLE,15.777587890625,247,-51.0,0.0,45.0,511,final INT10 output
+model.layers.0.post_attention_layernorm,prefill,OLD_EMULATOR,15.777587890625,247,-50.0,0.0,44.0,510,final INT10 output
+model.layers.0.post_attention_layernorm,prefill,RTL_LITERAL,48.42529296875,23,-3.0,0.0,2.0,31,literal normalized core before FP gamma adapter
+model.layers.0.post_attention_layernorm,prefill,POST_GAIN_DIAGNOSTIC,48.42529296875,197,-67.0,0.0,34.0,512,final INT10 output
+model.layers.0.post_attention_layernorm,prefill,FUSED_IDEAL_COEFFICIENT,15.777587890625,249,-51.16999999999999,0.0,45.17000000000007,512,final INT10 output
+model.layers.0.post_attention_layernorm,prefill,FUSED_REQUANT_ORACLE,15.777587890625,249,-51.16999999999999,0.0,45.17000000000007,512,final INT10 output
+model.layers.0.post_attention_layernorm,decode,INPUT_QUANT_ORACLE,15.924072265625,259,-52.16999999999999,0.0,46.0,365,final INT10 output
+model.layers.0.post_attention_layernorm,decode,OLD_EMULATOR,15.924072265625,253,-52.0,0.0,46.0,364,final INT10 output
+model.layers.0.post_attention_layernorm,decode,RTL_LITERAL,41.717529296875,20,-3.0,0.0,2.0,11,literal normalized core before FP gamma adapter
+model.layers.0.post_attention_layernorm,decode,POST_GAIN_DIAGNOSTIC,41.717529296875,209,-70.0,0.0,37.0,373,final INT10 output
+model.layers.0.post_attention_layernorm,decode,FUSED_IDEAL_COEFFICIENT,15.924072265625,258,-55.0,0.0,48.0,384,final INT10 output
+model.layers.0.post_attention_layernorm,decode,FUSED_REQUANT_ORACLE,15.924072265625,257,-55.0,0.0,48.0,384,final INT10 output
+model.layers.9.input_layernorm,prefill,INPUT_QUANT_ORACLE,80.84716796875,242,-45.0,0.0,49.0,511,final INT10 output
+model.layers.9.input_layernorm,prefill,OLD_EMULATOR,80.84716796875,132,-22.0,0.0,24.0,287,final INT10 output
+model.layers.9.input_layernorm,prefill,RTL_LITERAL,84.674072265625,20,-1.0,0.0,1.0,31,literal normalized core before FP gamma adapter
+model.layers.9.input_layernorm,prefill,POST_GAIN_DIAGNOSTIC,84.674072265625,150,-46.0,0.0,23.170000000000073,288,final INT10 output
+model.layers.9.input_layernorm,prefill,FUSED_IDEAL_COEFFICIENT,80.84716796875,132,-22.0,0.0,24.0,287,final INT10 output
+model.layers.9.input_layernorm,prefill,FUSED_REQUANT_ORACLE,80.84716796875,132,-22.0,0.0,24.0,287,final INT10 output
+model.layers.9.input_layernorm,decode,INPUT_QUANT_ORACLE,83.33740234375,260,-60.0,0.0,62.0,395,final INT10 output
+model.layers.9.input_layernorm,decode,OLD_EMULATOR,83.33740234375,143,-33.0,0.0,32.0,204,final INT10 output
+model.layers.9.input_layernorm,decode,RTL_LITERAL,83.33740234375,15,-1.0,0.0,1.0,9,literal normalized core before FP gamma adapter
+model.layers.9.input_layernorm,decode,POST_GAIN_DIAGNOSTIC,83.33740234375,143,-33.0,0.0,32.0,204,final INT10 output
+model.layers.9.input_layernorm,decode,FUSED_IDEAL_COEFFICIENT,83.33740234375,143,-33.0,0.0,32.0,204,final INT10 output
+model.layers.9.input_layernorm,decode,FUSED_REQUANT_ORACLE,83.33740234375,143,-33.0,0.0,32.0,204,final INT10 output
+model.layers.17.post_attention_layernorm,prefill,INPUT_QUANT_ORACLE,43.914794921875,133,-18.0,0.0,19.0,511,final INT10 output
+model.layers.17.post_attention_layernorm,prefill,OLD_EMULATOR,43.914794921875,131,-19.0,0.0,20.0,511,final INT10 output
+model.layers.17.post_attention_layernorm,prefill,RTL_LITERAL,54.400634765625,41,-2.0,0.0,2.0,32,literal normalized core before FP gamma adapter
+model.layers.17.post_attention_layernorm,prefill,POST_GAIN_DIAGNOSTIC,54.400634765625,133,-24.0,0.0,23.0,512,final INT10 output
+model.layers.17.post_attention_layernorm,prefill,FUSED_IDEAL_COEFFICIENT,43.914794921875,143,-23.0,0.0,23.0,512,final INT10 output
+model.layers.17.post_attention_layernorm,prefill,FUSED_REQUANT_ORACLE,43.914794921875,143,-23.0,0.0,23.0,512,final INT10 output
+model.layers.17.post_attention_layernorm,decode,INPUT_QUANT_ORACLE,30.70068359375,116,-26.0,0.0,26.0,142,final INT10 output
+model.layers.17.post_attention_layernorm,decode,OLD_EMULATOR,30.70068359375,119,-25.169999999999987,0.0,26.0,155,final INT10 output
+model.layers.17.post_attention_layernorm,decode,RTL_LITERAL,44.525146484375,25,-3.0,0.0,2.0,19,literal normalized core before FP gamma adapter
+model.layers.17.post_attention_layernorm,decode,POST_GAIN_DIAGNOSTIC,44.525146484375,122,-34.0,0.0,24.0,198,final INT10 output
+model.layers.17.post_attention_layernorm,decode,FUSED_IDEAL_COEFFICIENT,30.70068359375,131,-31.0,0.0,30.0,198,final INT10 output
+model.layers.17.post_attention_layernorm,decode,FUSED_REQUANT_ORACLE,30.70068359375,131,-31.0,0.0,30.0,198,final INT10 output
+model.norm,prefill,INPUT_QUANT_ORACLE,27.34375,274,-39.0,0.0,40.17000000000007,511,final INT10 output
+model.norm,prefill,OLD_EMULATOR,27.34375,262,-41.0,0.0,41.0,511,final INT10 output
+model.norm,prefill,RTL_LITERAL,51.11083984375,33,-2.0,0.0,2.0,21,literal normalized core before FP gamma adapter
+model.norm,prefill,POST_GAIN_DIAGNOSTIC,51.11083984375,218,-48.0,0.0,39.0,512,final INT10 output
+model.norm,prefill,FUSED_IDEAL_COEFFICIENT,27.34375,271,-43.0,0.0,44.0,512,final INT10 output
+model.norm,prefill,FUSED_REQUANT_ORACLE,27.34375,271,-43.0,0.0,44.0,512,final INT10 output
+model.norm,decode,INPUT_QUANT_ORACLE,18.133544921875,235,-53.0,0.0,51.0,293,final INT10 output
+model.norm,decode,OLD_EMULATOR,18.133544921875,226,-52.0,0.0,51.0,292,final INT10 output
+model.norm,decode,RTL_LITERAL,42.498779296875,24,-3.0,0.0,2.0,17,literal normalized core before FP gamma adapter
+model.norm,decode,POST_GAIN_DIAGNOSTIC,42.498779296875,206,-66.0,0.0,44.0,326,final INT10 output
+model.norm,decode,FUSED_IDEAL_COEFFICIENT,18.133544921875,243,-55.0,0.0,53.0,326,final INT10 output
+model.norm,decode,FUSED_REQUANT_ORACLE,18.133544921875,243,-55.0,0.0,53.0,326,final INT10 output
