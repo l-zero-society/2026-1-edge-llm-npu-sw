@@ -1,0 +1,32 @@
+UNIT_TESTS
+MODEL_LOAD
+/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/.venv-calibration/lib/python3.9/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+CAPTURE
+ACCUMULATOR
+LOCAL_SCALE
+E2E_SMALL
+REPORT
+REPORT
+PUBLICATION
+Preparing worktree (detached HEAD 1bea2a3)
+HEAD is now at 1bea2a3 test:norm scale lut output scale test
+[detached HEAD b663271] test: diagnose INT10 RMSNorm output scale
+ 12 files changed, 6698 insertions(+), 20 deletions(-)
+ create mode 100644 diagnostics/norm10_scale_probe/accumulator_verification.json
+ create mode 100644 diagnostics/norm10_scale_probe/debugging_history.md
+ create mode 100644 diagnostics/norm10_scale_probe/e2e_small_summary.json
+ create mode 100644 diagnostics/norm10_scale_probe/foreground_run.log
+ create mode 100644 diagnostics/norm10_scale_probe/norm_local_comparison.csv
+ create mode 100644 diagnostics/norm10_scale_probe/output_code_distribution.csv
+ create mode 100644 diagnostics/norm10_scale_probe/report.md
+ create mode 100644 diagnostics/norm10_scale_probe/scaling_trace.json
+ create mode 100644 diagnostics/norm10_scale_probe/unit_test.log
+ create mode 100644 diagnostics/norm10_scale_probe/verification.json
+remote: 
+remote: Create a pull request for 'norm10-scale-probe-results' on GitHub by visiting:        
+remote:      https://github.com/l-zero-society/2026-1-edge-llm-npu-sw/pull/new/norm10-scale-probe-results        
+remote: 
+To https://github.com/l-zero-society/2026-1-edge-llm-npu-sw.git
+ * [new branch]      HEAD -> norm10-scale-probe-results
+PUBLICATION

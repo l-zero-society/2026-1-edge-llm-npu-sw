@@ -1,0 +1,7 @@
+{
+  "elapsed_seconds": 5154.97142625,
+  "error": "Command '['git', 'diff', '--cached', '--check']' returned non-zero exit status 2.",
+  "exception_type": "CalledProcessError",
+  "stage": "GIT",
+  "state": "FAILED"
+}

@@ -1,0 +1,10 @@
+{
+  "raw_product_bits": 16,
+  "multiplier_bits": 16,
+  "theoretical_max_abs_product_times_multiplier": 2147450880,
+  "theoretical_minimum_signed_intermediate_bits": 32,
+  "observed_max_abs_p16": 16256,
+  "observed_max_M_G": 62757,
+  "observed_max_abs_product_times_multiplier": 1020177792,
+  "observed_minimum_signed_intermediate_bits": 31
+}

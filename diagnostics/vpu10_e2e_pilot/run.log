@@ -1,0 +1,188 @@
+UNIT_TEST_START
+UNIT_TEST_DONE
+/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/.venv-calibration/lib/python3.9/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+CAPTURE_START
+CAPTURE_READY
+E2E_START
+/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/run_vpu10_e2e_pilot.py:79: RuntimeWarning: invalid value encountered in cast
+  def round_even(values): return np.rint(np.asarray(values, np.float64)).astype(np.int64)
+E2E_MODE_BATCH_1_DONE
+E2E_MODE_BATCH_2_DONE
+E2E_MODE_BATCH_3_DONE
+E2E_MODE_BATCH_4_DONE
+E2E_MODE_BATCH_5_DONE
+E2E_MODE_BATCH_6_DONE
+E2E_MODE_BATCH_7_DONE
+E2E_MODE_BATCH_8_DONE
+REPORT_WRITTEN
+diagnostics/vpu10_e2e_pilot/norm_local_summary.csv:1: trailing whitespace.
++module,index,coeff16_nmse,coeff10_nmse,coeff16_clip,coeff10_clip,input_scale,output_scale,coeff16_scale_lut_mse,coeff10_scale_lut_mse
+diagnostics/vpu10_e2e_pilot/norm_local_summary.csv:2: trailing whitespace.
++model.layers.0.input_layernorm,0,0.0005237108672384096,0.003887419028079804,0.00048828125,0.0003662109375,0.8635917409758745,0.03236135717940657,1.630550449241004e-09,5.310193076045872e-07
+diagnostics/vpu10_e2e_pilot/norm_local_summary.csv:3: trailing whitespace.
++model.layers.0.post_attention_layernorm,1,0.00025656583334759915,0.003478070653918853,0.0,0.0,0.8684790325724682,0.15282676084634142,1.6544771741356705e-09,5.023850744772012e-07
+diagnostics/vpu10_e2e_pilot/norm_local_summary.csv:4: trailing whitespace.
++model.layers.1.input_layernorm,2,0.00010947398746350453,0.0050456353685044844,0.0,0.0,0.8732050766916891,0.0800679723810543,9.85837767170964e-10,7.83246538338082e-07
+diagnostics/vpu10_e2e_pilot/norm_local_summary.csv:5: trailing whitespace.
++model.layers.1.post_attention_layernorm,3,8.842051648308851e-05,0.004601757460943421,0.0,0.0,0.8724983349704929,0.0938263611317614,4.4344300952073826e-10,7.185673164064996e-07
+diagnostics/vpu10_e2e_pilot/norm_local_summary.csv:6: trailing whitespace.
++model.layers.2.input_layernorm,4,0.00012305569179517947,0.005338519200780776,0.0,0.0,0.8730329599399156,0.07650701593746177,1.6701030626980121e-09,8.340177088290005e-07
+diagnostics/vpu10_e2e_pilot/norm_local_summary.csv:7: trailing whitespace.
++model.layers.2.post_attention_layernorm,5,8.90024131206929e-05,0.004047498574259523,0.0,0.0,0.8725310025149828,0.09756992287831763,6.662121534385777e-10,6.225005799338218e-07
+diagnostics/vpu10_e2e_pilot/norm_local_summary.csv:8: trailing whitespace.
++model.layers.3.input_layernorm,6,0.00015903611931791738,0.0027376967886811447,0.0,0.0,0.8733097681094055,0.07993941484365445,7.377466935567793e-10,3.97318730388421e-07
+diagnostics/vpu10_e2e_pilot/norm_local_summary.csv:9: trailing whitespace.
++model.layers.3.post_attention_layernorm,7,9.40424840931145e-05,0.005234552493157551,0.0,0.0,0.8723612148934381,0.09904813673164979,1.1318906571634252e-09,8.210328518810368e-07
+diagnostics/vpu10_e2e_pilot/norm_local_summary.csv:10: trailing whitespace.
++model.layers.4.input_layernorm,8,0.00014814809879456855,0.004218811749942424,0.0,0.0,0.8725435439854452,0.07833369604062194,5.322302857613341e-10,6.504529933284758e-07
+diagnostics/vpu10_e2e_pilot/norm_local_summary.csv:11: trailing whitespace.
++model.layers.4.post_attention_layernorm,9,0.0001010477621269224,0.005572150322274155,0.0,0.0,0.8714186338062623,0.10420389791290821,6.968703904046136e-10,8.794326784134116e-07
+diagnostics/vpu10_e2e_pilot/norm_local_summary.csv:12: trailing whitespace.
++model.layers.5.input_layernorm,10,6.749309565020814e-05,0.005894429604349912,0.0,0.0,0.8730317655141573,0.05248461310877492,1.1674514482522693e-09,9.500807037522934e-07
+diagnostics/vpu10_e2e_pilot/norm_local_summary.csv:13: trailing whitespace.
++model.layers.5.post_attention_layernorm,11,8.890358419394151e-05,0.0034238618327193777,0.0,0.0,0.8726683017559014,0.10526221139090401,2.2724595825594172e-10,5.191536913564545e-07
+diagnostics/vpu10_e2e_pilot/norm_local_summary.csv:14: trailing whitespace.
++model.layers.6.input_layernorm,12,4.638099649080197e-05,0.004927005930262329,0.0,0.0,0.874306635847297,0.05130743933750458,6.562213274910763e-10,7.752341583504111e-07
+diagnostics/vpu10_e2e_pilot/norm_local_summary.csv:15: trailing whitespace.
++model.layers.6.post_attention_layernorm,13,0.00010352550941772443,0.004397313814675061,0.0,0.0,0.8732312943370841,0.11551120556497294,6.605073316563337e-10,6.922494400562771e-07
+diagnostics/vpu10_e2e_pilot/norm_local_summary.csv:16: trailing whitespace.
++model.layers.7.input_layernorm,14,6.844740678057367e-05,0.004658454516911602,0.0,0.0,0.8745461182118396,0.05262703718271274,1.3489826409727812e-09,7.393467498089292e-07
+diagnostics/vpu10_e2e_pilot/norm_local_summary.csv:17: trailing whitespace.
++model.layers.7.post_attention_layernorm,15,0.0001252398528345433,0.005272883264363351,0.0,0.0,0.8739578038045804,0.12120945999533696,8.429377086903309e-10,8.265128511308961e-07
+diagnostics/vpu10_e2e_pilot/norm_local_summary.csv:18: trailing whitespace.
++model.layers.8.input_layernorm,16,6.175503974373424e-05,0.0052455855899172,0.0,0.0,0.8912327238258317,0.05430721350145433,1.874407229128012e-09,8.506838585294979e-07
+diagnostics/vpu10_e2e_pilot/norm_local_summary.csv:19: trailing whitespace.
++model.layers.8.post_attention_layernorm,17,0.0001531425057660599,0.0044223503305911545,0.0,0.0,0.8908055374533697,0.13031713556636804,9.276181100116391e-10,6.78756330936313e-07
+diagnostics/vpu10_e2e_pilot/norm_local_summary.csv:20: trailing whitespace.
++model.layers.9.input_layernorm,18,9.953898167556861e-05,0.003895845076307541,0.0,0.0,0.9183833949019997,0.07030771483180574,1.45902857328262e-09,5.989276502592053e-07
+diagnostics/vpu10_e2e_pilot/norm_local_summary.csv:21: trailing whitespace.
++model.layers.9.post_attention_layernorm,19,0.00016169713179476025,0.005046628763525467,0.0,0.0,0.918051105656036,0.13243943604471164,9.99196163769713e-10,7.835432893286648e-07
+diagnostics/vpu10_e2e_pilot/norm_local_summary.csv:22: trailing whitespace.
++model.layers.10.input_layernorm,20,7.106560075733794e-05,0.0036056170943195476,0.0,0.0,0.9185187233404171,0.060176087918813445,1.5947441751878152e-09,5.543933109454973e-07
+diagnostics/vpu10_e2e_pilot/norm_local_summary.csv:23: trailing whitespace.
++model.layers.10.post_attention_layernorm,21,0.00018095098854678426,0.004094921926536515,0.0,0.0,0.9183350803800758,0.13903938487551218,1.914572733234276e-09,6.30404011562382e-07
+diagnostics/vpu10_e2e_pilot/norm_local_summary.csv:24: trailing whitespace.
++model.layers.11.input_layernorm,22,7.74410916932275e-05,0.0038905099286339995,0.0,0.0,0.9184689157862953,0.06357354240641436,1.727735434071222e-09,5.983037313263312e-07
+diagnostics/vpu10_e2e_pilot/norm_local_summary.csv:25: trailing whitespace.
++model.layers.11.post_attention_layernorm,23,0.00016399364636786768,0.002837303761617527,0.0,0.0,0.9184192276747493,0.12376583718973597,1.1988484578454416e-09,4.1065807093935915e-07
+diagnostics/vpu10_e2e_pilot/norm_local_summary.csv:26: trailing whitespace.
++model.layers.12.input_layernorm,24,7.388532525494402e-05,0.004708965288554933,0.0,0.0,0.9186021539796355,0.06138351425499366,7.556902464306047e-10,7.400989272325328e-07
+diagnostics/vpu10_e2e_pilot/norm_local_summary.csv:27: trailing whitespace.
++model.layers.12.post_attention_layernorm,25,0.0001813442718112945,0.0028853752738889787,0.0,0.0,0.918442100928021,0.13592775647187652,1.2932217879543802e-09,4.151285174118205e-07
+diagnostics/vpu10_e2e_pilot/norm_local_summary.csv:28: trailing whitespace.
++model.layers.13.input_layernorm,26,0.00013718427939438352,0.0035400582031427826,0.0,0.0,0.9186335673770792,0.07552846023947758,1.2454194741008851e-09,5.302802344473925e-07
+diagnostics/vpu10_e2e_pilot/norm_local_summary.csv:29: trailing whitespace.
++model.layers.13.post_attention_layernorm,27,0.0001658292492427603,0.004422477117899023,0.0,0.0,0.9184526118746942,0.1377842374977067,4.043837962048331e-10,6.706849143701209e-07
+diagnostics/vpu10_e2e_pilot/norm_local_summary.csv:30: trailing whitespace.
++model.layers.14.input_layernorm,28,0.00016570482352841115,0.005135760461512348,0.0,0.0,0.9187992342297578,0.09944921743613166,1.3901223691251992e-10,8.182153044857386e-07
+diagnostics/vpu10_e2e_pilot/norm_local_summary.csv:31: trailing whitespace.
++model.layers.14.post_attention_layernorm,29,0.00021513080798197444,0.004847259509215994,0.0,0.0,0.9186588892031555,0.16572460316398605,2.0486060975620692e-09,7.442699397788803e-07
+diagnostics/vpu10_e2e_pilot/norm_local_summary.csv:32: trailing whitespace.
++model.layers.15.input_layernorm,30,0.0001547592963413753,0.004099758168819407,0.0,0.0,0.9189075686460372,0.09150100827450389,3.9271253844245295e-10,6.209409407091637e-07
+diagnostics/vpu10_e2e_pilot/norm_local_summary.csv:33: trailing whitespace.
++model.layers.15.post_attention_layernorm,31,0.0003131021119162264,0.004082233501378468,0.0,0.0,0.9188748413802593,0.21656208075655883,2.5627625428869407e-09,5.994221975439057e-07
+diagnostics/vpu10_e2e_pilot/norm_local_summary.csv:34: trailing whitespace.
++model.layers.16.input_layernorm,32,0.00017326275835263357,0.0034470930279944714,0.0,0.0,0.9171615570725293,0.09546762903142582,1.1603213812634863e-09,5.093939181694666e-07
+diagnostics/vpu10_e2e_pilot/norm_local_summary.csv:35: trailing whitespace.
++model.layers.16.post_attention_layernorm,33,0.0004023777521486235,0.007086837450184216,0.0,0.0,0.9170858902007399,0.24936269920632798,6.047906481369561e-10,1.099756596849106e-06
+diagnostics/vpu10_e2e_pilot/norm_local_summary.csv:36: trailing whitespace.
++model.layers.17.input_layernorm,34,0.00033365014572417216,0.0036602657013007395,0.0,0.0,0.9008218126987525,0.1562143613214362,1.467745000248086e-09,5.221509432056316e-07
+diagnostics/vpu10_e2e_pilot/norm_local_summary.csv:37: trailing whitespace.
++model.layers.17.post_attention_layernorm,35,0.0007357721953462834,0.0043427124149998065,0.0,0.0,0.9003780835295376,0.34305827818271467,1.5974139002843646e-09,5.687887039502434e-07
+diagnostics/vpu10_e2e_pilot/norm_local_summary.csv:38: trailing whitespace.
++model.norm,36,0.00021748425877058617,0.004183483046965213,0.0,0.0,0.6049146558907167,0.07280907378971227,2.31736091723631e-09,6.298416601766366e-07
+diagnostics/vpu10_e2e_pilot/rope_local_summary.csv:1: trailing whitespace.
++layer,activation_index_nmse,q214_nmse,coefficient_increment_nmse,saturation_rate,scale
+diagnostics/vpu10_e2e_pilot/rope_local_summary.csv:2: trailing whitespace.
++0,5.3163580166697614e-05,5.3163580166697614e-05,0.0,0.0,0.05714370593166165
+diagnostics/vpu10_e2e_pilot/rope_local_summary.csv:3: trailing whitespace.
++1,5.3312667660723577e-05,5.3312667660723577e-05,0.0,0.0,0.028178409121041196
+diagnostics/vpu10_e2e_pilot/rope_local_summary.csv:4: trailing whitespace.
++2,5.366313551443844e-05,5.366313551443844e-05,0.0,0.0,0.021399729405830518
+diagnostics/vpu10_e2e_pilot/rope_local_summary.csv:5: trailing whitespace.
++3,5.292850185776085e-05,5.292850185776085e-05,0.0,0.0,0.024565022985529292
+diagnostics/vpu10_e2e_pilot/rope_local_summary.csv:6: trailing whitespace.
++4,5.488362779814977e-05,5.488362779814977e-05,0.0,0.0,0.02866565644624415
+diagnostics/vpu10_e2e_pilot/rope_local_summary.csv:7: trailing whitespace.
++5,5.311309274860962e-05,5.311309274860962e-05,0.0,0.0,0.02602330485901954
+diagnostics/vpu10_e2e_pilot/rope_local_summary.csv:8: trailing whitespace.
++6,5.229727370940768e-05,5.229727370940768e-05,0.0,0.0,0.02293241467261268
+diagnostics/vpu10_e2e_pilot/rope_local_summary.csv:9: trailing whitespace.
++7,5.50712929930255e-05,5.50712929930255e-05,0.0,0.0,0.018848508771384997
+diagnostics/vpu10_e2e_pilot/rope_local_summary.csv:10: trailing whitespace.
++8,5.22035119044829e-05,5.22035119044829e-05,0.0,0.0,0.016026674184780532
+diagnostics/vpu10_e2e_pilot/rope_local_summary.csv:11: trailing whitespace.
++9,5.46434451694203e-05,5.46434451694203e-05,0.0,0.0,0.017563080834315948
+diagnostics/vpu10_e2e_pilot/rope_local_summary.csv:12: trailing whitespace.
++10,5.4128613672691196e-05,5.4128613672691196e-05,0.0,0.0,0.026009546567315925
+diagnostics/vpu10_e2e_pilot/rope_local_summary.csv:13: trailing whitespace.
++11,5.3578912516355285e-05,5.3578912516355285e-05,0.0,0.0,0.029441333330307455
+diagnostics/vpu10_e2e_pilot/rope_local_summary.csv:14: trailing whitespace.
++12,5.398995733849854e-05,5.398995733849854e-05,0.0,0.0,0.020153913479261903
+diagnostics/vpu10_e2e_pilot/rope_local_summary.csv:15: trailing whitespace.
++13,5.375978411157285e-05,5.375978411157285e-05,0.0,0.0,0.02487338079165106
+diagnostics/vpu10_e2e_pilot/rope_local_summary.csv:16: trailing whitespace.
++14,5.4604716217322924e-05,5.4604716217322924e-05,0.0,0.0,0.021326557764101868
+diagnostics/vpu10_e2e_pilot/rope_local_summary.csv:17: trailing whitespace.
++15,5.3200705657258645e-05,5.3200705657258645e-05,0.0,0.0,0.02516179168760893
+diagnostics/vpu10_e2e_pilot/rope_local_summary.csv:18: trailing whitespace.
++16,5.442336676179294e-05,5.442336676179294e-05,0.0,0.0,0.026673595032813264
+diagnostics/vpu10_e2e_pilot/rope_local_summary.csv:19: trailing whitespace.
++17,5.425911442643939e-05,5.425911442643939e-05,0.0,0.0,0.0198531738699299
+diagnostics/vpu10_e2e_pilot/softmax_local_summary.csv:1: trailing whitespace.
++layer,coeff16_nmse,coeff10_nmse,coeff16_mae,coeff10_mae,coeff16_exp_lut_mse,coeff10_exp_lut_mse,coeff16_recip_lut_mse,coeff10_recip_lut_mse
+diagnostics/vpu10_e2e_pilot/softmax_local_summary.csv:2: trailing whitespace.
++0,0.00021262133486010088,0.0002997152161057099,0.0005139124279157559,0.0005931440075307845,2.8740539371731615e-10,1.0717766268521352e-06,6.359505882220271e-08,2.152026520408565e-06
+diagnostics/vpu10_e2e_pilot/softmax_local_summary.csv:3: trailing whitespace.
++1,0.0003707916243016241,0.00046686321754556786,0.0005662842661681656,0.0006103889165098911,3.1725369592373325e-10,1.1838394292144088e-06,2.9178353297168117e-08,1.2089887821257282e-06
+diagnostics/vpu10_e2e_pilot/softmax_local_summary.csv:4: trailing whitespace.
++2,0.0006556207544205408,0.000718063449458928,0.000521246243518925,0.000553703988626905,2.670443247684411e-10,1.1688650744283874e-06,5.063049717682587e-09,5.11434430312113e-06
+diagnostics/vpu10_e2e_pilot/softmax_local_summary.csv:5: trailing whitespace.
++3,0.00018093555779262653,0.00030193324195424776,0.0005286081157963861,0.0006166080468970325,3.016776585875567e-10,1.1812600878588166e-06,5.955116624874632e-08,3.822117306001522e-06
+diagnostics/vpu10_e2e_pilot/softmax_local_summary.csv:6: trailing whitespace.
++4,0.0003533908266092688,0.00039265934666257523,0.0005637446100092841,0.0005892268532168965,2.8997331780338547e-10,1.2365352297865183e-06,1.4731959141465341e-08,3.905738344935766e-06
+diagnostics/vpu10_e2e_pilot/softmax_local_summary.csv:7: trailing whitespace.
++5,0.0004146689034318718,0.000422605377269579,0.0005819461266475223,0.0006337989533510915,3.17208760925851e-10,1.074442894249258e-06,5.6905402156200454e-08,1.5690590588842798e-06
+diagnostics/vpu10_e2e_pilot/softmax_local_summary.csv:8: trailing whitespace.
++6,0.000878068403983358,0.000884144780574201,0.0004895705804570925,0.00048508511982869504,2.8955801752699627e-10,1.3299518911388362e-06,8.38011892983327e-10,3.955263831099073e-06
+diagnostics/vpu10_e2e_pilot/softmax_local_summary.csv:9: trailing whitespace.
++7,0.0008248045499309232,0.0008880917212408194,0.0004953986821805971,0.0005064619107027823,3.0346079914225165e-10,1.2783502241814285e-06,2.843367889490351e-09,5.971152931930678e-06
+diagnostics/vpu10_e2e_pilot/softmax_local_summary.csv:10: trailing whitespace.
++8,0.0007427058394186867,0.0007506944514573651,0.0005076466995496917,0.0005006025458268611,2.9102560002447857e-10,1.369937850014186e-06,4.828389635092688e-09,2.947219885106608e-06
+diagnostics/vpu10_e2e_pilot/softmax_local_summary.csv:11: trailing whitespace.
++9,0.0007364832669890463,0.0007856070647711427,0.0005039014093667705,0.0005147368061763646,2.8335886359576175e-10,1.2326264793470447e-06,3.270475153702929e-09,4.268745131161812e-06
+diagnostics/vpu10_e2e_pilot/softmax_local_summary.csv:12: trailing whitespace.
++10,0.00045875877265286614,0.0005186883407653984,0.0005108313219087743,0.0005387477001035671,2.990559454360483e-10,1.215354234680252e-06,3.7137251569483096e-09,2.776784615790705e-06
+diagnostics/vpu10_e2e_pilot/softmax_local_summary.csv:13: trailing whitespace.
++11,0.0005626086055535075,0.0006747541944323261,0.0005007675608985419,0.0005279387907336473,2.8769301207020243e-10,1.1581158422361552e-06,3.647381918626561e-09,4.940844044879448e-06
+diagnostics/vpu10_e2e_pilot/softmax_local_summary.csv:14: trailing whitespace.
++12,0.0009655845813683559,0.0010514836016626513,0.0004997073482649038,0.0005109568363930673,3.0055664112685054e-10,1.2380851958110254e-06,1.0258857090503714e-09,5.453163120679936e-06
+diagnostics/vpu10_e2e_pilot/softmax_local_summary.csv:15: trailing whitespace.
++13,0.0007889813555071816,0.0007880098738226621,0.0005080899449242575,0.0005028368127973998,2.7805420983389327e-10,1.3956973170983832e-06,3.6093101088528995e-09,3.216710775433281e-06
+diagnostics/vpu10_e2e_pilot/softmax_local_summary.csv:16: trailing whitespace.
++14,0.00043360989918051553,0.00048452782499095316,0.0005096763022600106,0.000535091567784673,2.7566418063126843e-10,1.1684891207662542e-06,1.264606986565215e-08,3.7017148505093437e-06
+diagnostics/vpu10_e2e_pilot/softmax_local_summary.csv:17: trailing whitespace.
++15,0.0005595128231374366,0.0006015955687368412,0.0005007232832131448,0.0005187829918376671,3.2744072979406915e-10,1.2318122407838351e-06,1.6204609516126572e-08,2.193410675075728e-06
+diagnostics/vpu10_e2e_pilot/softmax_local_summary.csv:18: trailing whitespace.
++16,0.000391720829824804,0.0006036081329775364,0.000552269763185626,0.0006182431090109989,3.1999557619051666e-10,1.2450800190814827e-06,6.312177905989021e-08,2.8060527839681816e-06
+diagnostics/vpu10_e2e_pilot/softmax_local_summary.csv:19: trailing whitespace.
++17,0.0007724657093964236,0.0008105656663095614,0.0004898573712143626,0.0004962642238546774,3.074596348752165e-10,1.1391104410697543e-06,2.3049838809180513e-09,3.5260163496746796e-06
+Traceback (most recent call last):
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/run_vpu10_e2e_pilot.py", line 445, in entrypoint
+    try: main()
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/run_vpu10_e2e_pilot.py", line 434, in main
+    subprocess.run(["git","diff","--cached","--check"],cwd=ROOT,check=True)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/subprocess.py", line 528, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['git', 'diff', '--cached', '--check']' returned non-zero exit status 2.
+Traceback (most recent call last):
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/run_vpu10_e2e_pilot.py", line 452, in <module>
+    if __name__ == "__main__": entrypoint()
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/run_vpu10_e2e_pilot.py", line 445, in entrypoint
+    try: main()
+  File "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/scripts/run_vpu10_e2e_pilot.py", line 434, in main
+    subprocess.run(["git","diff","--cached","--check"],cwd=ROOT,check=True)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/subprocess.py", line 528, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['git', 'diff', '--cached', '--check']' returned non-zero exit status 2.

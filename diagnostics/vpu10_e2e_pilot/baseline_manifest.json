@@ -1,0 +1,17 @@
+{
+  "source_commit": "b7daf5ad1fa7bde89e92bbf6d66d692d5ad77108",
+  "gpalu_hashes": {
+    "diagnostics/gpalu_width_sweep_pilot/int10/gpalu_parameters.json": "93ee36bf850eaac5b36c1feb5fc9223596be74da289483f486108d35715c84ff",
+    "diagnostics/gpalu_width_sweep_pilot/e2e_summary.json": "1e592b4fafaa02b18d13a9cdb33ceeb720e59150142959da1ed9b6a4570eeb59",
+    "diagnostics/gpalu_width_sweep_pilot/baseline_manifest.json": "a7fa6e88e0514b320fde3f4734081c148b0c9b75fe0cec91e0fd738552efec43"
+  },
+  "rtl_branch": "feat/tpu-rocc-driver",
+  "rtl_hashes": {
+    "src/main/scala/npu/top/VPU.scala": "fc3b9c95968cd4fcd56874bda0cd21efba31595fddab1a4e6274b54f420d1de2",
+    "src/main/scala/npu/core/NormUnit.scala": "f7c84b1e44a93d0c9f2ac241e2d1f42aa7a92965b549d6e877fd70b9a0018611",
+    "src/main/scala/npu/core/Rope.scala": "315fc6e4e8442ae916d53e617efe178d5360555c4154c15eaab5487ac4ea6f16",
+    "src/test/scala/NormUnit_Test.scala": "8eaa8b58c4f954bc129c6d3e22d00ca03e5b820adbc0e7ce9c1d3650391278fc",
+    "src/test/scala/NormUnit_Distributed_Test.scala": "732022f2fef41a663902615f4ccc8040d3ab5c09a52865028989255af1c5fa02",
+    "src/test/scala/Rope_Test.scala": "846ab3e86a276156bf32c69286c1eac0cbe975b107cc8674f1865c6567ec0d67"
+  }
+}

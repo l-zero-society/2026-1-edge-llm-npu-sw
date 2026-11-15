@@ -1,0 +1,163 @@
+{
+  "ANE_used": false,
+  "CUDA_used": false,
+  "E2E_used_for_selection": false,
+  "MPS_used": false,
+  "activation_modules": [
+    "model.layers.0.input_layernorm",
+    "model.layers.0.post_attention_layernorm",
+    "model.layers.9.input_layernorm",
+    "model.layers.17.post_attention_layernorm",
+    "model.norm"
+  ],
+  "active_index_after_science": "55ee8a6172469e0d9ad3862ba6016d1e88886194a86ce0fe36a15c1a52a07a07",
+  "active_index_before": "55ee8a6172469e0d9ad3862ba6016d1e88886194a86ce0fe36a15c1a52a07a07",
+  "all_e2e_norm_modules": [
+    "model.layers.0.input_layernorm",
+    "model.layers.0.post_attention_layernorm",
+    "model.layers.1.input_layernorm",
+    "model.layers.1.post_attention_layernorm",
+    "model.layers.2.input_layernorm",
+    "model.layers.2.post_attention_layernorm",
+    "model.layers.3.input_layernorm",
+    "model.layers.3.post_attention_layernorm",
+    "model.layers.4.input_layernorm",
+    "model.layers.4.post_attention_layernorm",
+    "model.layers.5.input_layernorm",
+    "model.layers.5.post_attention_layernorm",
+    "model.layers.6.input_layernorm",
+    "model.layers.6.post_attention_layernorm",
+    "model.layers.7.input_layernorm",
+    "model.layers.7.post_attention_layernorm",
+    "model.layers.8.input_layernorm",
+    "model.layers.8.post_attention_layernorm",
+    "model.layers.9.input_layernorm",
+    "model.layers.9.post_attention_layernorm",
+    "model.layers.10.input_layernorm",
+    "model.layers.10.post_attention_layernorm",
+    "model.layers.11.input_layernorm",
+    "model.layers.11.post_attention_layernorm",
+    "model.layers.12.input_layernorm",
+    "model.layers.12.post_attention_layernorm",
+    "model.layers.13.input_layernorm",
+    "model.layers.13.post_attention_layernorm",
+    "model.layers.14.input_layernorm",
+    "model.layers.14.post_attention_layernorm",
+    "model.layers.15.input_layernorm",
+    "model.layers.15.post_attention_layernorm",
+    "model.layers.16.input_layernorm",
+    "model.layers.16.post_attention_layernorm",
+    "model.layers.17.input_layernorm",
+    "model.layers.17.post_attention_layernorm",
+    "model.norm"
+  ],
+  "baseline_after": {
+    "diagnostics/gpalu_width_sweep_pilot/baseline_manifest.json": "a7fa6e88e0514b320fde3f4734081c148b0c9b75fe0cec91e0fd738552efec43",
+    "diagnostics/gpalu_width_sweep_pilot/int10/gpalu_parameters.json": "93ee36bf850eaac5b36c1feb5fc9223596be74da289483f486108d35715c84ff",
+    "diagnostics/vpu10_e2e_pilot/norm10_coeff16_parameters.json": "80b036a935014ff3b9ccf596ee1679c62fd61ffa1e014a74ecf248de2d7d3e14",
+    "scripts/run_gpalu_width_sweep_pilot.py": "c32f1c0569b0f0775c676c893b6d9f2eaf8c9405d145837a28645f1b281e3b5f",
+    "scripts/run_norm10_debug_pilot.py": "130d387a15b3f7fbfaf236c874e12786e34d7c3350dfc16e918d1cf1ca829de3",
+    "scripts/run_vpu10_e2e_pilot.py": "0f7c70c57a503a3ae9b06b05371e7fa66ad03c935dc58eef3db6bb5b6c0c75ea"
+  },
+  "baseline_before": {
+    "diagnostics/gpalu_width_sweep_pilot/baseline_manifest.json": "a7fa6e88e0514b320fde3f4734081c148b0c9b75fe0cec91e0fd738552efec43",
+    "diagnostics/gpalu_width_sweep_pilot/int10/gpalu_parameters.json": "93ee36bf850eaac5b36c1feb5fc9223596be74da289483f486108d35715c84ff",
+    "diagnostics/vpu10_e2e_pilot/norm10_coeff16_parameters.json": "80b036a935014ff3b9ccf596ee1679c62fd61ffa1e014a74ecf248de2d7d3e14",
+    "scripts/run_gpalu_width_sweep_pilot.py": "c32f1c0569b0f0775c676c893b6d9f2eaf8c9405d145837a28645f1b281e3b5f",
+    "scripts/run_norm10_debug_pilot.py": "130d387a15b3f7fbfaf236c874e12786e34d7c3350dfc16e918d1cf1ca829de3",
+    "scripts/run_vpu10_e2e_pilot.py": "0f7c70c57a503a3ae9b06b05371e7fa66ad03c935dc58eef3db6bb5b6c0c75ea"
+  },
+  "baseline_unchanged": true,
+  "branch": "lut_cali",
+  "calibration_capture": {
+    "examples": [
+      {
+        "anchor_id": "c91d187c-eef6-4e21-bb13-02fa2d1de54d",
+        "index": 2,
+        "response_id": "c91d187c-eef6-4e21-bb13-02fa2d1de54d",
+        "tree_id": "39670037-563d-4297-9552-24ae8d7a2478"
+      },
+      {
+        "anchor_id": "fc9a0de2-90b5-46a2-9e37-ff5a23d4f33f",
+        "index": 11,
+        "response_id": "fc9a0de2-90b5-46a2-9e37-ff5a23d4f33f",
+        "tree_id": "7714d51d-2628-4f99-ad6f-bd79e436136e"
+      },
+      {
+        "anchor_id": "fbaaecf0-8ad5-45e6-ade3-cbd2abb3751b",
+        "index": 20,
+        "response_id": "fbaaecf0-8ad5-45e6-ade3-cbd2abb3751b",
+        "tree_id": "fa9368ce-1bfd-412f-be8f-bebe05a0a09a"
+      },
+      {
+        "anchor_id": "e5037ca8-a1f4-46fe-a6dd-af1b101be5f4",
+        "index": 31,
+        "response_id": "e5037ca8-a1f4-46fe-a6dd-af1b101be5f4",
+        "tree_id": "32a60526-9085-4c1d-a597-c100d60d0301"
+      }
+    ],
+    "identity": "f141ac6a9d486dd61c8305dd7227cd12ff6a72fc0d8287c714cd3e48a3e976da",
+    "previous_debug_capture_reuse": "not trusted: missing model/config/content-hash binding",
+    "response_limit": 8,
+    "reused": false,
+    "rows_per_module_group": 8,
+    "sha256": "637f501d68508b13d8f6bd82e23ca0c5057c529729997370678c3e53ac285907"
+  },
+  "calibration_evaluation_overlap": false,
+  "diagnosis": {
+    "descriptive_checks": {
+      "input_oracle_nmse_above_5pct": true,
+      "literal_amplitude_below_half_oracle": true,
+      "local_fused_reduces_literal_error_50pct": true,
+      "post_gain_error_more_than_twice_fused": true,
+      "small_e2e_fused_improves_literal": true
+    },
+    "mean_local_nmse": {
+      "FP_REFERENCE": 0.0,
+      "FUSED_IDEAL_COEFFICIENT": 0.12963552299797315,
+      "FUSED_REQUANT_ORACLE": 0.12963568544721327,
+      "INPUT_QUANT_ORACLE": 0.09314437602380374,
+      "OLD_EMULATOR": 0.11918638114463373,
+      "POST_GAIN_DIAGNOSTIC": 0.4003806713951005,
+      "RTL_LITERAL": 0.7710012114796438
+    },
+    "mean_output_rms_ratio": {
+      "FP_REFERENCE": 1.0,
+      "FUSED_IDEAL_COEFFICIENT": 0.9444239909990545,
+      "FUSED_REQUANT_ORACLE": 0.9444276671445498,
+      "INPUT_QUANT_ORACLE": 0.9795720268491881,
+      "OLD_EMULATOR": 0.8937085072567026,
+      "POST_GAIN_DIAGNOSTIC": 1.0702799163389982,
+      "RTL_LITERAL": 0.15056750207114658
+    },
+    "primary": "MIXED_OR_INCONCLUSIVE",
+    "supported_cases": [
+      "OUTPUT_SCALE_CONTRACT_CONFIRMED",
+      "EARLY_TRUNCATION_IS_DOMINANT",
+      "INT10_PRECISION_LIMIT_SUSPECTED"
+    ],
+    "thresholds": "Descriptive rules fixed in source before execution; no scale/parameter acceptance depends on E2E."
+  },
+  "e2e_complete": true,
+  "e2e_dataset_identity": "85ad855ce9d6ef5148a80edafddd26db6bd6b6669ca1050ac535c95cadf7b038",
+  "e2e_error": null,
+  "elapsed_seconds": 808.2308997920001,
+  "execution_device": "CPU",
+  "fixed_scale_source": "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/diagnostics/vpu10_e2e_pilot/norm10_coeff16_parameters.json",
+  "full_192_token_baseline_not_compared_to_24_token_percentage": true,
+  "independent_KV_caches": true,
+  "rtl_hashes": {
+    "src/main/scala/npu/core/NormUnit.scala": "f7c84b1e44a93d0c9f2ac241e2d1f42aa7a92965b549d6e877fd70b9a0018611",
+    "src/test/scala/NormUnit_Test.scala": "8eaa8b58c4f954bc129c6d3e22d00ca03e5b820adbc0e7ce9c1d3650391278fc"
+  },
+  "scale_search_performed": false,
+  "source_HEAD": "1bea2a3f2852a900094ad455f4c2757b7073e11b",
+  "test_return_code": 0,
+  "tests_command": [
+    "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/.venv-calibration/bin/python",
+    "-m",
+    "unittest",
+    "tests.test_norm10_scale_probe",
+    "tests.test_norm10_debug_pilot"
+  ]
+}

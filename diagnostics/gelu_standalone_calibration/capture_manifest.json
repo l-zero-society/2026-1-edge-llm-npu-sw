@@ -1,0 +1,89 @@
+{
+  "reused": true,
+  "source": "diagnostics/activation_lut_calibration_pilot/work/capture.npz",
+  "source_sha256": "413be51e30138ec63f0081d16cd86e8bd77ea87e84766594ba82b41816c3d05b",
+  "source_manifest_sha256": "4aabb770637c2bba15ed76cee1f5cd5c14acd5cedff1a3a13c979fdd5b59f95d",
+  "examples": [
+    {
+      "index": 2,
+      "anchor_id": "c91d187c-eef6-4e21-bb13-02fa2d1de54d",
+      "response_id": "c91d187c-eef6-4e21-bb13-02fa2d1de54d",
+      "tree_id": "39670037-563d-4297-9552-24ae8d7a2478"
+    },
+    {
+      "index": 3,
+      "anchor_id": "127f7eb2-b7e6-4625-acac-1bbd227f110e",
+      "response_id": "127f7eb2-b7e6-4625-acac-1bbd227f110e",
+      "tree_id": "e928db64-3eab-482f-acfe-852c4f7d8888"
+    },
+    {
+      "index": 6,
+      "anchor_id": "e0d70803-e2fa-4fb5-8eaf-6214dc5d91ba",
+      "response_id": "e0d70803-e2fa-4fb5-8eaf-6214dc5d91ba",
+      "tree_id": "b4baca93-2a1f-45a4-83cb-d8788492355c"
+    },
+    {
+      "index": 7,
+      "anchor_id": "0414fdde-ae13-49ec-b4f2-93991a218279",
+      "response_id": "0414fdde-ae13-49ec-b4f2-93991a218279",
+      "tree_id": "522d2961-5017-484f-b96f-55db9f7add1a"
+    },
+    {
+      "index": 9,
+      "anchor_id": "3d156b29-6034-4b99-b1c2-b2964ea45772",
+      "response_id": "3d156b29-6034-4b99-b1c2-b2964ea45772",
+      "tree_id": "56f0f4d2-a1f5-4627-982d-e7451af21748"
+    },
+    {
+      "index": 11,
+      "anchor_id": "fc9a0de2-90b5-46a2-9e37-ff5a23d4f33f",
+      "response_id": "fc9a0de2-90b5-46a2-9e37-ff5a23d4f33f",
+      "tree_id": "7714d51d-2628-4f99-ad6f-bd79e436136e"
+    },
+    {
+      "index": 13,
+      "anchor_id": "109d9b8b-1150-40d1-ae4e-8212c90d0da8",
+      "response_id": "109d9b8b-1150-40d1-ae4e-8212c90d0da8",
+      "tree_id": "ab79c52a-0608-45dc-94d5-2802c8230229"
+    },
+    {
+      "index": 14,
+      "anchor_id": "1fe3fb7b-1295-4320-afc4-88e5e22508b8",
+      "response_id": "1fe3fb7b-1295-4320-afc4-88e5e22508b8",
+      "tree_id": "91188958-10ff-490a-bb5f-d7792c1ac6a1"
+    },
+    {
+      "index": 15,
+      "anchor_id": "a35b40a0-4346-4008-83c5-e28b6b0ebccf",
+      "response_id": "a35b40a0-4346-4008-83c5-e28b6b0ebccf",
+      "tree_id": "da2a1a50-5147-4528-8855-aecba41e1e54"
+    },
+    {
+      "index": 17,
+      "anchor_id": "e3ee9c7e-e862-498c-9e34-291ccdc8f63c",
+      "response_id": "e3ee9c7e-e862-498c-9e34-291ccdc8f63c",
+      "tree_id": "c62655e5-0978-42f5-989a-d5e36eafab51"
+    },
+    {
+      "index": 20,
+      "anchor_id": "fbaaecf0-8ad5-45e6-ade3-cbd2abb3751b",
+      "response_id": "fbaaecf0-8ad5-45e6-ade3-cbd2abb3751b",
+      "tree_id": "fa9368ce-1bfd-412f-be8f-bebe05a0a09a"
+    },
+    {
+      "index": 22,
+      "anchor_id": "e826c053-8b28-4d57-be5c-e57eecbbf40e",
+      "response_id": "9caac356-9c07-4daa-889d-63202a9e2656",
+      "tree_id": "365645ea-6e06-4902-a23d-44abf710dcba"
+    }
+  ],
+  "response_limit": 16,
+  "reservoir_capacity": 64,
+  "activation_graph": "gate_proj output -> GELUTanh",
+  "fingerprint_checks": [
+    "frozen_linear",
+    "capture_hash",
+    "dataset_manifest",
+    "activation_graph"
+  ]
+}

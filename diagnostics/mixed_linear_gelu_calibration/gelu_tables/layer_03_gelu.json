@@ -1,0 +1,18 @@
+{
+  "layer": 3,
+  "gate_op_name": "model.layers.3.mlp.gate_proj",
+  "s10": 0.013761605246231738,
+  "s_act": 0.055371498274208,
+  "retained_percentile": 100.0,
+  "clipping_fraction": 0.0,
+  "input_q_range": [
+    -512,
+    511
+  ],
+  "output_q_range": [
+    -127,
+    127
+  ],
+  "entries": 1024,
+  "lut_sha256": "ad4bd064ee43dcc80b5eb5bca73ba92e935e0c02589103fb506c832792dc4120"
+}

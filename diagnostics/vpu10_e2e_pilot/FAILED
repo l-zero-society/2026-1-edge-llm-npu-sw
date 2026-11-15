@@ -1,0 +1,1 @@
+CalledProcessError: Command '['git', 'diff', '--cached', '--check']' returned non-zero exit status 2.

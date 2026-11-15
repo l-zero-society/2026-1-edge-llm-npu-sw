@@ -1,0 +1,112 @@
+{
+  "layers": [
+    {
+      "layer": 0,
+      "s10": 0.02653732831448623,
+      "qparams": "diagnostics/joint_mlp_consumer_pilot/gate_qparams/layer_00_gate_qb.bin",
+      "sha256": "d8df2806b154776486cd524b6a16033f6a47aa228df9d10dd73a74fb02673e83"
+    },
+    {
+      "layer": 1,
+      "s10": 0.0164190925399534,
+      "qparams": "diagnostics/joint_mlp_consumer_pilot/gate_qparams/layer_01_gate_qb.bin",
+      "sha256": "0354f5dbf776813b2144e016e4d0f2d3d328ffa8cc35dbd5caf61feed6d732cf"
+    },
+    {
+      "layer": 2,
+      "s10": 0.015962411827328143,
+      "qparams": "diagnostics/joint_mlp_consumer_pilot/gate_qparams/layer_02_gate_qb.bin",
+      "sha256": "6d1ef9ea972dc376cc3684bbb93c72a5ae3633e3e799f0d43b33fdbeda6035a5"
+    },
+    {
+      "layer": 3,
+      "s10": 0.010611648292864649,
+      "qparams": "diagnostics/joint_mlp_consumer_pilot/gate_qparams/layer_03_gate_qb.bin",
+      "sha256": "246d11943986293140b23a76a4de6c92e227d4ac20ed74b91a3d7f5a24bb24fd"
+    },
+    {
+      "layer": 4,
+      "s10": 0.008457308764750598,
+      "qparams": "diagnostics/joint_mlp_consumer_pilot/gate_qparams/layer_04_gate_qb.bin",
+      "sha256": "354ffd83d44f6aa6f3d7f3013ad7472151daa7725b000b93c0a73da77632382e"
+    },
+    {
+      "layer": 5,
+      "s10": 0.007852951708328797,
+      "qparams": "diagnostics/joint_mlp_consumer_pilot/gate_qparams/layer_05_gate_qb.bin",
+      "sha256": "c8ded18423cc7b92027a142ca281c0f6e713f66e8a2e2b4da23e59c7dd5b7b20"
+    },
+    {
+      "layer": 6,
+      "s10": 0.013464869028246966,
+      "qparams": "diagnostics/joint_mlp_consumer_pilot/gate_qparams/layer_06_gate_qb.bin",
+      "sha256": "0d859afe79addaf9cb38bfdb4ae48018c3f964fe43be186cfeeaaf9eb08cef57"
+    },
+    {
+      "layer": 7,
+      "s10": 0.012912023190167194,
+      "qparams": "diagnostics/joint_mlp_consumer_pilot/gate_qparams/layer_07_gate_qb.bin",
+      "sha256": "65531aa8c5ee87d8153a56dca3d9f4d8bd03967fe5f051563172df5d533a6717"
+    },
+    {
+      "layer": 8,
+      "s10": 0.023648893376486513,
+      "qparams": "diagnostics/joint_mlp_consumer_pilot/gate_qparams/layer_08_gate_qb.bin",
+      "sha256": "4ea23f3322fb0c9312cd3418368f2f91258e37ffcbb7a0f00a22fc3dd126837c"
+    },
+    {
+      "layer": 9,
+      "s10": 0.008150216325284447,
+      "qparams": "diagnostics/joint_mlp_consumer_pilot/gate_qparams/layer_09_gate_qb.bin",
+      "sha256": "2aa2001610ef62494210e00ae7071f5d3c65d8a00e82bd1f2ca87db5297b15f3"
+    },
+    {
+      "layer": 10,
+      "s10": 0.009931273096526697,
+      "qparams": "diagnostics/joint_mlp_consumer_pilot/gate_qparams/layer_10_gate_qb.bin",
+      "sha256": "33bdb758ea15541ec4140359bf7f1acd25e337f7411016d944582cb04a36c864"
+    },
+    {
+      "layer": 11,
+      "s10": 0.01065246017059401,
+      "qparams": "diagnostics/joint_mlp_consumer_pilot/gate_qparams/layer_11_gate_qb.bin",
+      "sha256": "2453baba4bc3b8901d2d42478653ae12ba700dee13480e4b0027a431ef851b12"
+    },
+    {
+      "layer": 12,
+      "s10": 0.010646293274572923,
+      "qparams": "diagnostics/joint_mlp_consumer_pilot/gate_qparams/layer_12_gate_qb.bin",
+      "sha256": "18c55cf62ea365e9bf178e3c7de4ee3d8c56933119d7e2edfd112638b0334b27"
+    },
+    {
+      "layer": 13,
+      "s10": 0.012832363526335922,
+      "qparams": "diagnostics/joint_mlp_consumer_pilot/gate_qparams/layer_13_gate_qb.bin",
+      "sha256": "16b7210bc13c41ca800b17f51869ca3649f96619f56ceb6e0b0ff86a19570a7c"
+    },
+    {
+      "layer": 14,
+      "s10": 0.014278119043003194,
+      "qparams": "diagnostics/joint_mlp_consumer_pilot/gate_qparams/layer_14_gate_qb.bin",
+      "sha256": "c0d3bd06a1ac5ea431a3fc48514f13e5ec331e0776deb783fb8638c64e8ed4fa"
+    },
+    {
+      "layer": 15,
+      "s10": 0.01392064902425012,
+      "qparams": "diagnostics/joint_mlp_consumer_pilot/gate_qparams/layer_15_gate_qb.bin",
+      "sha256": "84cff0dc6b164558f33c81223bc311836e5dcc59d8f08622917bd84243a522ed"
+    },
+    {
+      "layer": 16,
+      "s10": 0.018896568569735303,
+      "qparams": "diagnostics/joint_mlp_consumer_pilot/gate_qparams/layer_16_gate_qb.bin",
+      "sha256": "fef273049f87e4c34562229d530e93c8d2070e38b3f15ad49d541a64410af1bc"
+    },
+    {
+      "layer": 17,
+      "s10": 0.0355705312972963,
+      "qparams": "diagnostics/joint_mlp_consumer_pilot/gate_qparams/layer_17_gate_qb.bin",
+      "sha256": "775a409b608d344a00abf7b95ce5411f81085503ee12a13aca745bfaaab4c96c"
+    }
+  ]
+}

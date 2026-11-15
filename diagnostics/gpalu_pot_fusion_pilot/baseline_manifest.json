@@ -1,0 +1,17 @@
+{
+  "required_commits": [
+    "2d77cf52907d8b1f910e26a1952c69248090190f",
+    "f92fafb2db225165a2eb9064b5073e6f212fac54"
+  ],
+  "artifact_hashes": {
+    "diagnostics/mixed_linear_gelu_calibration/linear_parameters.json": "381382f3fb99dec24b0b9a6b3a136107e1d8587c0f151a534fa07278e6d63bf8",
+    "diagnostics/mixed_linear_gelu_calibration/gelu_selection.csv": "a6fc1cc60e4d02e8ad033e56d584b929691c8e2895ee181d6380491ac591eb03",
+    "diagnostics/mixed_linear_gelu_calibration/capture_manifest.json": "0ed9f59dfa67d0c0dc3265ff3c0b85f5d0ea35e42b16045cc1c1a81e7d0ecf6f",
+    "diagnostics/mixed_linear_gelu_calibration/e2e_dataset_manifest.json": "397e47a3537b8fa2b81dab8badeee2382094775e257fd21912b608e55aa06233",
+    "diagnostics/fusion_aware_gate_s10_pilot/gate_parameters.json": "f4b58447eb94e10ba37748a84ce237fd43c3df8475adfab920d08d9b39f3eab8",
+    "diagnostics/fusion_aware_gate_s10_pilot/layer_selection.csv": "3a4651fec5b9b2f9d53bb2f8086b2f60abd8c4502046b1b434d74990ce102470",
+    "diagnostics/fusion_aware_gate_s10_pilot/e2e_dataset_manifest.json": "397e47a3537b8fa2b81dab8badeee2382094775e257fd21912b608e55aa06233"
+  },
+  "search_center": "fusion_aware_gate_s10_pilot",
+  "status": "READ_ONLY_BASELINES"
+}

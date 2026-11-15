@@ -1,0 +1,194 @@
+{
+  "activation_bits": 10,
+  "index_bits": 10,
+  "coefficient_format": "Q2.8",
+  "physical_container_bits": 16,
+  "effective_bits": 10,
+  "specs": {
+    "model.layers.0.input_layernorm": {
+      "input_scale": 0.8635917409758745,
+      "output_scale": 0.03236135717940657,
+      "eps": 9.999999974752427e-07
+    },
+    "model.layers.0.post_attention_layernorm": {
+      "input_scale": 0.8684790325724682,
+      "output_scale": 0.15282676084634142,
+      "eps": 9.999999974752427e-07
+    },
+    "model.layers.1.input_layernorm": {
+      "input_scale": 0.8732050766916891,
+      "output_scale": 0.0800679723810543,
+      "eps": 9.999999974752427e-07
+    },
+    "model.layers.1.post_attention_layernorm": {
+      "input_scale": 0.8724983349704929,
+      "output_scale": 0.0938263611317614,
+      "eps": 9.999999974752427e-07
+    },
+    "model.layers.2.input_layernorm": {
+      "input_scale": 0.8730329599399156,
+      "output_scale": 0.07650701593746177,
+      "eps": 9.999999974752427e-07
+    },
+    "model.layers.2.post_attention_layernorm": {
+      "input_scale": 0.8725310025149828,
+      "output_scale": 0.09756992287831763,
+      "eps": 9.999999974752427e-07
+    },
+    "model.layers.3.input_layernorm": {
+      "input_scale": 0.8733097681094055,
+      "output_scale": 0.07993941484365445,
+      "eps": 9.999999974752427e-07
+    },
+    "model.layers.3.post_attention_layernorm": {
+      "input_scale": 0.8723612148934381,
+      "output_scale": 0.09904813673164979,
+      "eps": 9.999999974752427e-07
+    },
+    "model.layers.4.input_layernorm": {
+      "input_scale": 0.8725435439854452,
+      "output_scale": 0.07833369604062194,
+      "eps": 9.999999974752427e-07
+    },
+    "model.layers.4.post_attention_layernorm": {
+      "input_scale": 0.8714186338062623,
+      "output_scale": 0.10420389791290821,
+      "eps": 9.999999974752427e-07
+    },
+    "model.layers.5.input_layernorm": {
+      "input_scale": 0.8730317655141573,
+      "output_scale": 0.05248461310877492,
+      "eps": 9.999999974752427e-07
+    },
+    "model.layers.5.post_attention_layernorm": {
+      "input_scale": 0.8726683017559014,
+      "output_scale": 0.10526221139090401,
+      "eps": 9.999999974752427e-07
+    },
+    "model.layers.6.input_layernorm": {
+      "input_scale": 0.874306635847297,
+      "output_scale": 0.05130743933750458,
+      "eps": 9.999999974752427e-07
+    },
+    "model.layers.6.post_attention_layernorm": {
+      "input_scale": 0.8732312943370841,
+      "output_scale": 0.11551120556497294,
+      "eps": 9.999999974752427e-07
+    },
+    "model.layers.7.input_layernorm": {
+      "input_scale": 0.8745461182118396,
+      "output_scale": 0.05262703718271274,
+      "eps": 9.999999974752427e-07
+    },
+    "model.layers.7.post_attention_layernorm": {
+      "input_scale": 0.8739578038045804,
+      "output_scale": 0.12120945999533696,
+      "eps": 9.999999974752427e-07
+    },
+    "model.layers.8.input_layernorm": {
+      "input_scale": 0.8912327238258317,
+      "output_scale": 0.05430721350145433,
+      "eps": 9.999999974752427e-07
+    },
+    "model.layers.8.post_attention_layernorm": {
+      "input_scale": 0.8908055374533697,
+      "output_scale": 0.13031713556636804,
+      "eps": 9.999999974752427e-07
+    },
+    "model.layers.9.input_layernorm": {
+      "input_scale": 0.9183833949019997,
+      "output_scale": 0.07030771483180574,
+      "eps": 9.999999974752427e-07
+    },
+    "model.layers.9.post_attention_layernorm": {
+      "input_scale": 0.918051105656036,
+      "output_scale": 0.13243943604471164,
+      "eps": 9.999999974752427e-07
+    },
+    "model.layers.10.input_layernorm": {
+      "input_scale": 0.9185187233404171,
+      "output_scale": 0.060176087918813445,
+      "eps": 9.999999974752427e-07
+    },
+    "model.layers.10.post_attention_layernorm": {
+      "input_scale": 0.9183350803800758,
+      "output_scale": 0.13903938487551218,
+      "eps": 9.999999974752427e-07
+    },
+    "model.layers.11.input_layernorm": {
+      "input_scale": 0.9184689157862953,
+      "output_scale": 0.06357354240641436,
+      "eps": 9.999999974752427e-07
+    },
+    "model.layers.11.post_attention_layernorm": {
+      "input_scale": 0.9184192276747493,
+      "output_scale": 0.12376583718973597,
+      "eps": 9.999999974752427e-07
+    },
+    "model.layers.12.input_layernorm": {
+      "input_scale": 0.9186021539796355,
+      "output_scale": 0.06138351425499366,
+      "eps": 9.999999974752427e-07
+    },
+    "model.layers.12.post_attention_layernorm": {
+      "input_scale": 0.918442100928021,
+      "output_scale": 0.13592775647187652,
+      "eps": 9.999999974752427e-07
+    },
+    "model.layers.13.input_layernorm": {
+      "input_scale": 0.9186335673770792,
+      "output_scale": 0.07552846023947758,
+      "eps": 9.999999974752427e-07
+    },
+    "model.layers.13.post_attention_layernorm": {
+      "input_scale": 0.9184526118746942,
+      "output_scale": 0.1377842374977067,
+      "eps": 9.999999974752427e-07
+    },
+    "model.layers.14.input_layernorm": {
+      "input_scale": 0.9187992342297578,
+      "output_scale": 0.09944921743613166,
+      "eps": 9.999999974752427e-07
+    },
+    "model.layers.14.post_attention_layernorm": {
+      "input_scale": 0.9186588892031555,
+      "output_scale": 0.16572460316398605,
+      "eps": 9.999999974752427e-07
+    },
+    "model.layers.15.input_layernorm": {
+      "input_scale": 0.9189075686460372,
+      "output_scale": 0.09150100827450389,
+      "eps": 9.999999974752427e-07
+    },
+    "model.layers.15.post_attention_layernorm": {
+      "input_scale": 0.9188748413802593,
+      "output_scale": 0.21656208075655883,
+      "eps": 9.999999974752427e-07
+    },
+    "model.layers.16.input_layernorm": {
+      "input_scale": 0.9171615570725293,
+      "output_scale": 0.09546762903142582,
+      "eps": 9.999999974752427e-07
+    },
+    "model.layers.16.post_attention_layernorm": {
+      "input_scale": 0.9170858902007399,
+      "output_scale": 0.24936269920632798,
+      "eps": 9.999999974752427e-07
+    },
+    "model.layers.17.input_layernorm": {
+      "input_scale": 0.9008218126987525,
+      "output_scale": 0.1562143613214362,
+      "eps": 9.999999974752427e-07
+    },
+    "model.layers.17.post_attention_layernorm": {
+      "input_scale": 0.9003780835295376,
+      "output_scale": 0.34305827818271467,
+      "eps": 9.999999974752427e-07
+    },
+    "model.norm": {
+      "input_scale": 0.6049146558907167,
+      "output_scale": 0.07280907378971227,
+      "eps": 9.999999974752427e-07
+    }
+  }
+}

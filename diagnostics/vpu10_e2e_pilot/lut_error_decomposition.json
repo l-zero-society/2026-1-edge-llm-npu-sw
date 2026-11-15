@@ -1,0 +1,15 @@
+{
+  "normalizer": {
+    "activation_plus_index_coeff16_mean_nmse": 0.000173826121116427,
+    "activation_plus_index_coeff10_mean_nmse": 0.004384246006517004
+  },
+  "softmax": {
+    "coeff16_mean_nmse": 0.0005724074243532854,
+    "coeff10_mean_nmse": 0.0006357561705965594
+  },
+  "rope": {
+    "activation_index_mean_nmse": 5.3734738901369335e-05,
+    "q214_mean_nmse": 5.3734738901369335e-05,
+    "coefficient_increment_mean_nmse": 0.0
+  }
+}

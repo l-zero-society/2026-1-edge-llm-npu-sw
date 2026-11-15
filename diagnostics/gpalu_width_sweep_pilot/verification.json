@@ -1,0 +1,41 @@
+{
+  "branch": "lut_cali",
+  "source_HEAD": "6182a777c96da5b50b5c872825354c6e5e9dfb85",
+  "execution_device": "CPU",
+  "MPS_used": false,
+  "ANE_used": false,
+  "CUDA_used": false,
+  "host": "macOS-15.7.4-arm64-arm-64bit",
+  "model_hash": "dae8a0a75dda3553c06af737adfff0c003ed1b6393932964cce72bb4f0fd41f6",
+  "calibration_capture_identity": "81a8946ddd022ae1ec6865edcc8ef6cf8dce30f257c52746a0b0a01e9e4efc25",
+  "E2E_dataset_identity": "8faec9523bafa8956346215b6b8508ca2f5faa5ec8afd0e33ec6cfa15cbf9369",
+  "Gate_parameters_frozen": true,
+  "Up_parameters_frozen": true,
+  "GELU_parameters_frozen": true,
+  "GPALU_raw_product_bits": 16,
+  "tested_output_widths": [
+    8,
+    10,
+    12
+  ],
+  "multiplier_format": "UInt16",
+  "shift_format": "UInt5",
+  "dynamic_GPALU_scale": false,
+  "downstream_after_GPALU": "FP",
+  "Down_quantized_for_width_test": false,
+  "Normalizer_quantized": false,
+  "RoPE_quantized": false,
+  "E2E_used_for_selection": false,
+  "baseline_artifacts_unchanged": true,
+  "test_command": [
+    "/Users/mac/LZERO_workspace/2026-1-edge-llm-npu-sw/.venv-calibration/bin/python",
+    "-m",
+    "unittest",
+    "tests.test_gpalu_width_sweep_pilot",
+    "tests.test_gpalu_fullscale_downaware_pilot",
+    "tests.test_fusion_aware_gate_s10_pilot",
+    "tests.test_mixed_linear_gelu_calibration"
+  ],
+  "return_code": 0,
+  "elapsed_seconds": 3758.416681625
+}
